@@ -5,9 +5,7 @@
 
 资料更新中...
 
-![开箱套装](4.images/开箱套装.png)
-
-Each product is numbered and detailed to ensure you can accurately refer to your listing. -->
+![开箱套装](../../resources/2-BasicSettings/4.FirstTimeInstallation/UnpackingSet.png)
 
 ## 产品标准清单对照表
 
@@ -34,11 +32,7 @@ Each product is numbered and detailed to ensure you can accurately refer to your
 
 - **1** 检查包装箱是否损坏。如有损坏或配件缺失，请及时联系物流公司和您所在地区的供应商。
 
-  
-
 - **2** 打开包装盒，取出产品宣传册、海绵包装盖、myCobot 机器人手臂、配套电源、平板底座和附件包。
-
-  
 
 - **3** 确保每一步都完成后再进行下一步，以防止不必要的损坏或遗漏。
 
@@ -46,14 +40,8 @@ Each product is numbered and detailed to ensure you can accurately refer to your
 
 ## 产品开箱视频引导
 
-资料更新中...
+[OpenGuide.mp4](../../resources/2-BasicSettings/4.FirstTimeInstallation/OpenGuide.mp4)
 
-<!-- <video id="my-video" class="video-js" controls preload="auto" width="100%"
-poster="" data-setup='{"aspectRatio":"16:9"}'>
-
-## <source src="https://static.elephantrobotics.com/wp-content/uploads/2022/04/%E4%B8%AD%E6%96%87%E6%94%B92.mp4"></video> -->
-
----
 # 3. 开机检测指南
 
 ## 3.1 结构安装和固定
@@ -63,23 +51,21 @@ poster="" data-setup='{"aspectRatio":"16:9"}'>
 **常见的固定机械臂的方式有三种**：
 
 1) 使用乐高插键固定在具有乐高接口的底座上
-我们销售的底座有 2 种：平面吸盘底座与 G 型夹底座，可以在 myCobot 周边底座找到
+我们销售的底座有 2 种：平面吸盘底座与 G 型夹底座
+![底座](../../resources/2-BasicSettings/4.FirstTimeInstallation/stand.jpg)
+​	平面底座 适配型号：myCobot 280
 
-平面底座 适配型号：myCobot 280
+* 在底座的四角安装吸盘并拧紧。
+* 用附带的乐高科技件，连接平面底座和机械臂底部。
+* 将四个吸盘固定在平整光滑平面后方可开始使用。
+* 技巧： 可以适当在吸盘下加入少量不导电液体，以填补吸盘与桌面的缝隙，以获得最佳吸附效果。
+![底座2](../../resources/2-BasicSettings/4.FirstTimeInstallation/stand_2.jpg)
 
-图12
-
-在底座的四角安装吸盘并拧紧。
-
-用附带的乐高科技件，连接平面底座和机械臂底部。
-将四个吸盘固定在平整光滑平面后方可开始使用。
-技巧： 可以适当在吸盘下加入少量不导电液体，以填补吸盘与桌面的缝隙，以获得最佳吸附效果。
-
-图12
+---
 
 G型底座 适配型号：myCobot 280、myPalletizer 260
 
- ![图12](../resourse/4-BasicApplication/4.3/图12.jpg)
+![G底座](../../resources/2-BasicSettings/4.FirstTimeInstallation/GStand.jpg)
 
    - 用G形夹将底座固定在桌子边沿
 
@@ -87,20 +73,7 @@ G型底座 适配型号：myCobot 280、myPalletizer 260
 
    - 确定稳固后方可开始使用
 
-  ![图12](../resourse/4-BasicApplication/4.3/图13.jpg)
-2) 使用自带螺丝穿过 机械臂 底座，固定在有螺纹的底座上
-
-吸盘底座 适配型号：myCobot 320
-
-图12
-
-适用平整光滑表面
-
-首先将自吸泵吸盘拆开，将底座底盘四个孔对准自吸泵吸盘放好，将螺母放在四个孔位并拧紧，固定好底座底盘和自吸泵吸盘。
-
-将自吸泵吸盘底部的盖子拆开，放置在一个光滑的桌面上，按压自吸泵吸盘即可进行抽气。将四个自吸泵吸盘都抽气后，可以测试一下底座底盘是否已经固定好，可再次拧紧螺母进行加固。
-
-接下来将机械臂固定到底座底盘上，将机械臂对准底座底盘的凹槽，放置好后，将三个M6x90的螺丝放置在机械臂的三个孔位中，对应的将螺母放置在相同位置的底座底盘上，使用内六角扳手将螺丝拧紧，即可将机械臂固定在底座底盘上。 图12
+![G底座2](../../resources/2-BasicSettings/4.FirstTimeInstallation/GStand2.jpg)
 
 2 myCobot 底座的螺丝孔位连接
 
@@ -110,62 +83,48 @@ G型底座 适配型号：myCobot 280、myPalletizer 260
 
 正式进行安装前，请确认：
 
-待安装环境符合以上《工作环境与条件》表格的要求。
-安装位置不小于机器人工作范围，且留有足够大的安装、使用、维护、维修的空间。
-将机座放置到合适位置。
-安装相关工具已准备好，如螺丝、扳手等。
-确认以上内容后，请将机器人搬运至机座安装台面上，调整机器人位置，将机器人基座固定孔位与机座安装台面上的孔位对准。对准孔位后，将螺丝对准孔位，拧紧即可。
+* 待安装环境符合以上《工作环境与条件》表格的要求。
+*  安装位置不小于机器人工作范围，且留有足够大的安装、使用、维护、维修的空间。
+*  将机座放置到合适位置。
+*  安装相关工具已准备好，如螺丝、扳手等。
+  **确认以上内容后**，请将机器人搬运至机座安装台面上，调整机器人位置，将机器人基座固定孔位与机座安装台面上的孔位对准。对准孔位后，将螺丝对准孔位，拧紧即可。
 
-注意：在机座安装台面上调整机器人位置时，请尽量避免在机座安装台面上直接推拉机器人，以免产生划痕。人工移动机器人时请尽量避免对机器人本体脆弱部分施加外力，以免造成机器人不必要的损伤。
-
-### 图文引导
-
-#### 基本接口尺寸
-
-- 底座固定孔是机器人与其他底座或平面之间的接口。具体孔径如下图所示。有 4 个直径为 4.5 毫米的沉孔，可用 M6 螺栓固定。
-
-<img src="../../../myArm_Controller_650_docs\resources\3-BasicSettings\4-FirstTimeInstallation\底座尺寸.png" alt="img-1" width="400" height=“auto” /> <br>
-
-- 末端安装有法兰，可与乐高组件孔和螺纹孔兼容。安装前请确保固定底座上有相应的螺纹孔。
-
-#### 安装前，请确认
-
-- 环境条件符合所列要求。
-- 安装位置不小于机器人的工作范围，并有足够的安装、使用、维护和修理空间。
-- 将底座放在合适的位置。
-- 准备好与安装有关的工具，如螺丝、扳手等。
-- 确认上述步骤后，请将机器人移至底座安装台上，调整机器人位置，并将机器人底座的固定孔与底座安装台上的孔对齐。对齐孔位后，将螺钉对准孔位并拧紧。
-
-> **注意：** 在底座安装台上调整机器人位置时，请勿在底座安装台上直接推拉机器人，以免造成划伤。手动移动机器人时，请勿对机身易损部位施加外力，以免对机器人造成不必要的损坏。
-
-- 安装好机器人后，可以进行线缆连接并使用。
-
-### 视频引导
-
-如需了解更多安装细节，请扫描代码观看视频：
-
-资料更新中...
-<!-- ![image-20220524105531296](../../resources/4-FirstInstallAndUse/QRcode.png) -->
+* 注意：在机座安装台面上调整机器人位置时，请尽量避免在机座安装台面上直接推拉机器人，以免产生划痕。人工移动机器人时请尽量避免对机器人本体脆弱部分施加外力，以免造成机器人不必要的损伤。
 
 ---
+## 3.3 上电与初步检测
 
-
----
-## 3.3 开机状态显示
+**myCobot 必须使用外部电源进行供电，以提供足够的电量：**
+	Rated voltage: 12V
+	Rated current: 3-5A
+	Plug Type: DC 5.5mm x 2.1
+**注意，不能仅仅使用插入M5Stack-basic的TypeC进行供电。使用官方适配的电源，以免对机械臂造成损害。**
 
 ### 图文引导
+![链接](../../resources/2-BasicSettings/4.FirstTimeInstallation/box_connect_PC.jpg)
 
 #### 3.3.1 连接电源
 
 连接电源线之后即启动。
 
-#### 3.3.2 机器启动
+使用Type-C线连接到电脑和机械臂M5Stack-basic的对应USB接口，并进行连接检测。连接检测是一项用于机械臂中电机以及 **Atom** 连接状态的检测功能。这项功能便于客户排除设备故障
 
-启动期间，屏幕出现延时等待界面。
+#### 3.3.2 链接检测
 
-#### 3.3.3 状态展示
+**Step 1:** **Atom**烧录最新版的**atomMain**。
 
-显示屏显示系统桌面相关信息。
+**Step 2:** **M5Stack-basic**烧录**minirobot**，选择**Information**功能。
+![链接检测1](../../resources/2-BasicSettings/4.FirstTimeInstallation/ConnectCheck1.jpg)
+**Step 3**: 按下**A**键，开始连接检测。屏幕显示**Atom**以及六个电机连接状态。
+![链接检测2](../../resources/2-BasicSettings/4.FirstTimeInstallation/pushA.jpg)
+![链接检测3](../../resources/2-BasicSettings/4.FirstTimeInstallation/connectOK.jpg)
+如图所示即为电机链接状态良好
+**Step 4**: 按下**B**键，开始检测版本信息。屏幕显示机器人版本以及**Basic**固件版本。
+![链接检测4](../../resources/2-BasicSettings/4.FirstTimeInstallation/BaseVersion.jpg)
+**Step 5**: 按下**C**键，退出此功能
+![链接检测5](../../resources/2-BasicSettings/4.FirstTimeInstallation/pushC.jpg)
+
+即可完成开机检测。
 
 
 ---

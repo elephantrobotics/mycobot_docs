@@ -4,7 +4,7 @@
 
 ## 1.机器人规格参数
 
-![封面](2.images/main.jpg)
+![封面](../../resources/1-ProductInformation/2.ProductParameter/main.jpg)
 
 | 指标       | 参数 |
 | :-----------: | :---------: |
@@ -56,8 +56,8 @@
 ## 3.结构尺寸参数
 > ！本章以毫米为距离单位，以度为角度单位。
 ### 产品尺寸和工作空间
-![工作范围](2.images/工作范围.png)
-![尺寸规格](2.images/规格尺寸.png)
+![工作范围](../../resources/1-ProductInformation/2.ProductParameter/WorkingRange.png)
+![尺寸规格](../../resources/1-ProductInformation/2.ProductParameter/size.png)
 ### 关节运动范围
 | 关节       | 范围 |
 | :--------: | :----------:|
@@ -69,21 +69,21 @@
 | J6   | -180 ~ +180         |
 ### 孔位安装
 - 机器人底座安装法兰，底座同时兼容乐高科技件安装方式和M4螺丝安装方式。
-![孔位安装](2.images/孔位安装1.jpg)
+![孔位安装](../../resources/1-ProductInformation/2.ProductParameter/HoleInstallation1.jpg)
 - 机器人末端安装法兰，机械臂末端同时兼容乐高科技件孔与螺丝螺纹孔。
-![孔位安装](2.images/孔位安装2.jpg)
+![孔位安装](../../resources/1-ProductInformation/2.ProductParameter/HoleInstallation2.jpg)
 ## 4.电气特性参数
 ### 1 机械臂底座电气接口
 ### 1.1 底座介绍
 
 * A. 底座的正面如下图所示：
-  ![底座正面](2.images/底座正.png)
+  ![底座正面](../../resources/1-ProductInformation/2.ProductParameter/BaseFront.png)
   - ① 功能接口组一
   - ② Basic显示屏
   - ③ 按钮1 , 按钮2 , 按钮3
   
 * B. 底座的左侧面如下图所示:
-  ![底座左侧](2.images/底座左侧.png)
+  ![底座左侧](../../resources/1-ProductInformation/2.ProductParameter/BaseLeft.png)
 
   - ① Grove 1 , Grove 2
   - ② 电源DC接口
@@ -93,12 +93,12 @@
   - ⑥ Grove 3
 
 * C. 底座的右侧面如下图所示:
- ![底座右侧](2.images/底座右侧.png)
+ ![底座右侧](../../resources/1-ProductInformation/2.ProductParameter/BaseRight.png)
 
  ① 功能接口组三
 
  * D. 底座的底部接口面如下图所示:
- ![底座底面](2.images/底座底面.png)
+ ![底座底面](../../resources/1-ProductInformation/2.ProductParameter/underside.png)
     ① 功能接口组四
 
 ### 1.2 底座接口说明
@@ -150,11 +150,11 @@
 > 
 > 5. 如果某个GPIO被设置为输出模式时，输出高电平信号，电路连接如图 2.1.1.2-5 所示，LED灯将点亮。
 > 
->  ![GPIO](2.images/GPIO.png)
+>  ![GPIO](../../resources/1-ProductInformation/2.ProductParameter/GPIO.png)
 > 
 > 6. 关于功能接口的其他功能表如下图所示,使用其他功能的情况下，IO功能不可用。
 > 
->  ![图片6](2.images/图片6.png)
+>  ![图片6](../../resources/1-ProductInformation/2.ProductParameter/IO.png)
 > 
 > 
 
@@ -164,15 +164,15 @@
 * D. Grove接口：Grove接口定义图A、图 B、图C 所示
   
 
- ![A](2.images/A.png)
+ ![A](../../resources/1-ProductInformation/2.ProductParameter/A.png)
 
   图 A Grove 1 
 
- ![B](2.images/B.png)
+ ![B](../../resources/1-ProductInformation/2.ProductParameter/B.png)
 
   图 B Grove 2
 
- ![C](2.images/C.png)
+ ![C](../../resources/1-ProductInformation/2.ProductParameter/C.png)
 
   图 C Grove 3
 
@@ -190,13 +190,13 @@
 
 * A. 机械臂末端如图 D和图 E 所示:
 
- ![末端D](2.images/末端D.png)
+ ![末端D](../../resources/1-ProductInformation/2.ProductParameter/END-D.png)
 
   图 D 机械臂末端
   - ① 舵机接口
   - ② Atom
 
- ![末端E](2.images/末端E.png)
+ ![末端E](../../resources/1-ProductInformation/2.ProductParameter/END-E.png)
 
   图 E 机械臂末端
   - ① 功能接口组五
@@ -228,13 +228,13 @@
 > 
 > 5. 如果某个GPIO被设置为输出模式时，输出高电平信号，电路连接如下图 所示，LED灯将点亮。
 > 
-> ![GPIO](2.images/GPIO.png)
+> ![GPIO](../../resources/1-ProductInformation/2.ProductParameter/GPIO.png)
 > 
 
 * B. Type C接口：可用于和PC端连接通讯，更新固件使用。
 
 * C. Grove 4: 定义如图F 所示
-   ![F](2.images/F.png)
+   ![F](../../resources/1-ProductInformation/2.ProductParameter/F.png)
   
   图 F Grove 4
 
@@ -245,23 +245,9 @@
 
 ## 5. 笛卡尔坐标参数
 
-![DH参数](2.images/280DH参数.jpg)
+![DH参数](../../resources/1-ProductInformation/2.ProductParameter/280DH.jpg)
 
-### 3D 模型下载
 
-资料更新中...
-
-<!-- Download link: [https://download.elephantrobotics.com/Product_3d_files/myCobot_320_M5_2022v1.2_230708.STEP](https://download.elephantrobotics.com/Product_3d_files/myCobot_320_M5_2022v1.2_230708.STEP) -->
-
-<!-- <iframe
-    src=""
-    width="100%"
-    height="600px"
-    allowfullscreen="true"
-    webkitallowfullscreen="true"
-    mozallowfullscreen="true"
-    frameborder="0">
-</iframe> -->
 
 ---
 

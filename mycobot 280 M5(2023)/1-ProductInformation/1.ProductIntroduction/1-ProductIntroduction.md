@@ -2,7 +2,7 @@
 
 ##### myCobot 280 M5
 
-![封面](1.images/main.jpg)
+![封面](../../resources/1-ProductInformation/1.ProductIntroduction/main.jpg)
 ##### 世界最小最轻的六轴协作机器人
 
 ### 产品简介
@@ -12,7 +12,7 @@ myCobot 由**大象机器人**和**M5stack**联合出品，是**世界最小最�
 myCobot 自重850g，有效载荷250g，有效工作半径280mm；体积小巧但功能强大，既可搭配多种末端执行器适配多种应用场景，也可支持多平台软件的二次开发，满足**科研教育、智能家居，商业探索**等各种场景需求。
 
 ### 设计理念
-![理念](1.images/双屏幕.jpg)
+![理念](../../resources/1-ProductInformation/1.ProductIntroduction/DualScreen.jpg)
 myCobot 280 系列机械臂是大象机器人专为：科研教育、创科应⽤、商业展示等场景开发的六自由度协作机器人。机械臂外观结构设计小巧精致，⼀体式全包裹的机 身设计，无任何外漏线缆。内置大象机器人自主研发的机器⼈运动控制算法，支持角度、坐标、电位值、 弧度值多种控制模式，便于用户理解机器⼈复杂的⼯作原理和机器人应用原理。支持开发应用配合，可以扩展多种如 PC、工控机、嵌入式设备主控，适合多种应用场景。
 
 ### 设计目标
@@ -26,7 +26,7 @@ myCobot 280 系列机械臂是大象机器人专为：科研教育、创科应�
 
 ### 产品特点
 
-![特点](1.images/产品特点.png)
+![特点](../../resources/1-ProductInformation/1.ProductIntroduction/ProductFeature.png)
 
 |                                    |                                                              |
 | ---------------------------------- | ------------------------------------------------------------ |
@@ -40,7 +40,7 @@ myCobot 280 系列机械臂是大象机器人专为：科研教育、创科应�
 
 ## 2. 产品应用
 
-![应用场景](1.images/应用场景.png)
+![应用场景](../../resources/1-ProductInformation/1.ProductIntroduction/ApplicationScenario.png)
 ### 用户群体
 
 |                              |                                                              |
@@ -52,7 +52,7 @@ myCobot 280 系列机械臂是大象机器人专为：科研教育、创科应�
 
 
 ### 应用场景
-![应用场景](1.images/应用.gif)
+![应用场景](../../resources/1-ProductInformation/1.ProductIntroduction/Application.gif)
 
 | **用户组**                 | **应用场景**                                                 | **优势目标**                                                 |
 | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -63,7 +63,7 @@ myCobot 280 系列机械臂是大象机器人专为：科研教育、创科应�
 ---
 
 ## 3. 支持的扩展开发
-![拓展开发](1.images/拓展开发.png)
+![拓展开发](../../resources/1-ProductInformation/1.ProductIntroduction/ExpansionAndDevelopment.png)
 mycobot 系列机械臂在教育和科研领域中极具价值，特别是在 Python 和 ROS（Robot Operating System)这两个广泛使用的开发环境中。这些环境提供了强大的支持，使得 mycobot  系列产品能够广泛应用于机器学习、人工智能研究、复杂运动控制以及视觉处理任务中。同时搭配自适应夹爪、摄像头法兰、吸泵等数十种配件，可以尽情发挥myCobot的创意想法。
 
 |   |  |
