@@ -36,9 +36,9 @@ pymycobot 是一个和 myCobot 进行串口通讯的 Python 包，支持 Python2
 
 > **注意：**安装之前，请先确认您的电脑是64位还是32位。右键点击`我的电脑`，选择`属性`。如下图显示是64位的操作系统，所以选择64位的Python安装包。
 >
-> <img src="../resourse/7-ApplicationBasePython/电脑位数1.jpg" style="zoom: 67%;" />
+> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/电脑位数1.jpg" style="zoom: 67%;" />
 >
-> <img src="../resourse/7-ApplicationBasePython/电脑位数2.jpg" style="zoom: 67%;" />
+> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/电脑位数2.jpg" style="zoom: 67%;" />
 
 
 
@@ -46,17 +46,17 @@ pymycobot 是一个和 myCobot 进行串口通讯的 Python 包，支持 Python2
 
 * **点击`Downloads`选项，开始下载Python，点击`Add Python 3.10 to PATH`,点击`Install Now`，开始安装Python**
 
-<img src="../resourse/7-ApplicationBasePython/pythondownload1.jpg" style="zoom: 33%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload1.jpg" style="zoom: 33%;" />
 
-<img src="../resourse/7-ApplicationBasePython/pythondownload2.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload2.jpg" style="zoom: 50%;" />
 
-<img src="../resourse/7-ApplicationBasePython/pythondownload3.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload3.jpg" style="zoom: 50%;" />
 
 
 
 * **出现“Setup was successful”提示，说明安装完成**
 
-<img src="../resourse/7-ApplicationBasePython/pythondownload4.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload4.jpg" style="zoom: 50%;" />
 
 
 
@@ -65,7 +65,7 @@ pymycobot 是一个和 myCobot 进行串口通讯的 Python 包，支持 Python2
 
 **情况一：**
 
-<img src="../resourse/7-ApplicationBasePython/运行python1.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/运行python1.jpg" style="zoom: 50%;" />
 
 出现图片中的提示表示Python安装成功。
 
@@ -75,7 +75,7 @@ pymycobot 是一个和 myCobot 进行串口通讯的 Python 包，支持 Python2
 
 假如输入错误（比如输入pythonn），则会出现错误提示：
 
-<img src="../resourse/7-ApplicationBasePython/运行python2.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/运行python2.jpg" style="zoom: 50%;" />
 
 >  **注意：**出现错误的信息一般都是没有配置环境变量导致的，可以参考**1.3 配置环境变量**修改环境变量。
 
@@ -88,29 +88,29 @@ pymycobot 是一个和 myCobot 进行串口通讯的 Python 包，支持 Python2
 
 * 右键我的电脑–>选择属性–>选择高级系统设置–>选择右下角的环境变量：
 
-<img src="../resourse/7-ApplicationBasePython/环境变量.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/环境变量.jpg" style="zoom: 50%;" />
 
 
 
 * 环境变量主要有包括用户变量和系统变量，需要设置的环境变量就在这两个变量中。如下图所示：
 
-<img src="../resourse/7-ApplicationBasePython/系统变量+用户变量.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/系统变量+用户变量.jpg" style="zoom: 50%;" />
 
 
 
 * 用户变量是将自己的下载的程序可以在cmd命令中使用。把程序的绝对路径写到用户变量中即可使用，如下图所示：
 
-<img src="../resourse/7-ApplicationBasePython/绝对路径.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/绝对路径.jpg" style="zoom: 50%;" />
 
 
 
-<img src="../resourse/7-ApplicationBasePython/添加path.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/添加path.jpg" style="zoom: 50%;" />
 
 
 
 * 以上步骤完成后，打开命令提示符窗口（Win+R，再输入cmd，回车），敲入Python，出现下图中的提示表示成功：
 
-<img src="../resourse/7-ApplicationBasePython/路径添加成功.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/路径添加成功.jpg" style="zoom: 50%;" />
 
 
 
@@ -124,25 +124,25 @@ PyCharm是一款功能强大的Python编辑器，具有跨平台性。首先介�
 
 * 进入该网站后，我们会看到如下界面：
 
-<img src="../resourse/7-ApplicationBasePython/pycharm界面.jpg" style="zoom: 40%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pycharm界面.jpg" style="zoom: 40%;" />
 
 根据界面介绍下载文件，Professional表示专业版，Community是社区版，推荐安装社区版，因为是免费使用的。
 
 * 下载好之后开始安装，点击`Next`：
 
-<img src="../resourse/7-ApplicationBasePython/pycharm下载1.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pycharm下载1.jpg" style="zoom: 50%;" />
 
 * 按照个人喜好选择相应选项，然后点击`Next`：
 
-<img src="../resourse/7-ApplicationBasePython/pycharm下载2.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pycharm下载2.jpg" style="zoom: 50%;" />
 
 * 出现下图界面继续点击`Next`：
 
-<img src="../resourse/7-ApplicationBasePython/pycharm下载3.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pycharm下载3.jpg" style="zoom: 50%;" />
 
 * 点击`Finish`结束安装：
 
-<img src="../resourse/7-ApplicationBasePython/pycharm下载4.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pycharm下载4.jpg" style="zoom: 50%;" />
 
 
 
@@ -152,43 +152,43 @@ PyCharm安装完成之后进入该软件，创建第一个程序。
 
 * 单击桌面上的PyCharm图标，进入到PyCharm中，如下图所示，点击`New Project`：
 
-<img src="../resourse/7-ApplicationBasePython/创建新项目1.jpg" style="zoom: 33%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/创建新项目1.jpg" style="zoom: 33%;" />
 
 
 
 * 点击之后找到`Interpreter`，开始对解释器进行设置，点击`Add Interpreter`：
 
-<img src="../resourse/7-ApplicationBasePython/解释器1.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/解释器1.jpg" style="zoom: 50%;" />
 
 
 
 * 点击`New`，找到python.exe存储位置，勾选`Inherit global site-package`选项：
 
-<img src="../resourse/7-ApplicationBasePython/解释器2.jpg" style="zoom: 33%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/解释器2.jpg" style="zoom: 33%;" />
 
 
 
 * 设置`Location`。Location是存储PyCharm项目的地方，可根据需要自行选择。
 
-<img src="../resourse/7-ApplicationBasePython/location1.jpg" style="zoom: 33%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/location1.jpg" style="zoom: 33%;" />
 
 
 
 * 新建PyCharm文件。右击箭头指向的文档图标，点击`New`，点击`Python File`，新建成功。
 
-<img src="../resourse/7-ApplicationBasePython/pycharmfile1.jpg" style="zoom: 33%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pycharmfile1.jpg" style="zoom: 33%;" />
 
 
 
 * 命名Python File：
 
-<img src="../resourse/7-ApplicationBasePython/pycharmfile2.jpg" style="zoom: 67%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pycharmfile2.jpg" style="zoom: 67%;" />
 
 
 
 * 文件创建成功后便进入如下的界面，便可以编写自己的程序了
 
-<img src="../resourse/7-ApplicationBasePython/pycharm界面展示.jpg" style="zoom: 33%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pycharm界面展示.jpg" style="zoom: 33%;" />
 
 
 
@@ -203,7 +203,7 @@ PyCharm安装完成之后进入该软件，创建第一个程序。
 pip install pymycobot --upgrade --user
 ```
 
-<img src="../resourse/7-ApplicationBasePython/pymycobot安装.jpg" style="zoom: 67%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pymycobot安装.jpg" style="zoom: 67%;" />
 
 
 
@@ -243,7 +243,7 @@ from pymycobot.mypalletizer import MyPalletizer
 
    首先，进入项目地址：**https://github.com/elephantrobotics/pymycobot**。然后点击网页右边Code按钮，再点击Download ZIP下载到本地，将压缩包pymycobot文件项目中的 pymycobot文件夹放入你python依赖库目录中，就可以直接导入使用。
 
-   <img src="../resourse/7-ApplicationBasePython/pymycobotgithub.jpg" style="zoom: 33%;" />
+   <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pymycobotgithub.jpg" style="zoom: 33%;" />
 
 
 

@@ -3,7 +3,7 @@
 ## 产品列表图片
 > 感谢您选择大象机器人myCobot 280 M5机械臂，本章节内容旨在帮助您轻松上手大象机器人产品，享受产品带来的每一个精彩瞬间。
 
-资料更新中...
+
 
 ![开箱套装](../../resources/2-BasicSettings/4.FirstTimeInstallation/UnpackingSet.png)
 

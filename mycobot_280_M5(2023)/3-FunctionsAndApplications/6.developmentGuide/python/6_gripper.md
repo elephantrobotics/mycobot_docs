@@ -6,11 +6,11 @@
 >
 > MyCobot 280自适应夹爪将夹爪插在Atom上面的引脚上，具体看下图：
 >
-> <img src="../resourse/7-ApplicationBasePython/夹爪1.jpg" style="zoom: 67%;" />
+> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\Jaw/夹爪1.jpg" style="zoom: 67%;" />
 >
 > 电动夹爪插在顶端上的485接口处，具体看下图：
 >
-> <img src="../resourse/7-ApplicationBasePython/夹爪2.jpg" style="zoom: 67%;" />
+> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\Jaw/夹爪2.jpg" style="zoom: 67%;" />
 >
 > ***** **myCobot 280-m5无电动夹爪，只有myCobot 320-m5有电动夹爪**
 

@@ -6,7 +6,7 @@
 
 > 注意：机械臂末端和笔夹使用乐高科技件连接。
 
-> <img src="../resourse/7-ApplicationBasePython/7.15.1.jpg" alt="7.1.1-1" style="zoom: 80%;" />
+> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\draw/7.15.1.jpg" alt="7.1.1-1" style="zoom: 80%;" />
 
 ## 使用说明
 

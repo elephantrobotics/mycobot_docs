@@ -1,6 +1,6 @@
 # Arduino
 
-![arduino](../resourse/10-ArduinoEnv/10.0/10-0-001.jpg)
+![arduino](../../../resources\3-FunctionsAndApplications\6.developmentGuide\Arduino/ard-01.jpg)
 
 ## Arduino是什么？  
 

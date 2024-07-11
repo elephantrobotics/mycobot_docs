@@ -4,7 +4,7 @@
 
 > 注意：手柄需要单独购买，详情请咨询官方客服
 
-> <img src="../resourse/7-ApplicationBasePython/7.8.1.jpg" alt="7.1.1-1" style="zoom: 80%;" />
+> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\handle/7.8.1.jpg" alt="7.1.1-1" style="zoom: 80%;" />
 
 
 ## 手柄按键对应功能如下:
@@ -97,26 +97,5 @@ mc = MyCobot("com7")
 python3 handle_control.py
 ```
 
-### myArm
-编辑 myarm_handle_control.py 文件
-
-```python
-import pygame
-import time
-from pymycobot import MyArm
-import threading
-# 将com7修改为你的电脑检测到的实际端口号
-
-mc = MyArm("/dev/ttyAMA0",115200)
-...
-```
-
-运行程序即可。
-
-```bash
-python3 myarm_handle_control.py
-```
-
 > 注意：在运行程序以后，首先要先点击**14**按钮，检查机器连接状态，机器连接状态正常(若为异常，将无法进行其他的操作，请先解决连接异常问题)，再点击**Right 1**按钮，机器到达初始点位以后，才可以进行其他的操作。
-
 
