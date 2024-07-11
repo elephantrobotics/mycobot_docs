@@ -25,7 +25,7 @@
 - 下载末端 **Atom** 串口驱动程序 
   - [ **Windows10** ](https://download.elephantrobotics.com/software/drivers/CDM21228_Setup.zip)
 
-
+请根据此图来完成驱动程序的安装
 ![P210X_install](../../../resources/3-FunctionsAndApplications/5.1-Functionlnstruction/CP210X_install.gif)
 
 ###  [1.2 更新设备固件](4.1-myStudio/4.1.2-myStudio_flash_firmwares.md)

@@ -18,21 +18,21 @@ myCobot 280 m5 机械臂使用TCP/IP时，会用默认密码“mycobot123”去�
 
 需要注意的一点，myCobot 280 m5 机械臂，仅支持2.4 GHz的网络频带。支持不了5 GHz的网络频带，下面以手机热点为例。
 
-<img src="../resourse/7-ApplicationBasePython/TCPIP/热点设置2.jpg" style="zoom: 25%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/热点设置2.jpg" style="zoom: 25%;" />
 
-<img src="../resourse/7-ApplicationBasePython/TCPIP/热点设置1.jpg" style="zoom: 25%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/热点设置1.jpg" style="zoom: 25%;" />
 
 #### 1.2 TCP/IP功能开启
 
 如图所示，机械臂通过按键点击Transponder->WLAN Server，连接成功的话会显示IP和端口号。如果连接失败，请检测网络名称和密码有没有设置正确。
 
-![](../resourse/7-ApplicationBasePython/TCPIP/Transponder.jpg)
+![](../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP//Transponder.jpg)
 
-<img src="../resourse/7-ApplicationBasePython/TCPIP/WLAN Server1.jpg" style="zoom: 25%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/WLAN Server1.jpg" style="zoom: 25%;" />
 
-<img src="../resourse/7-ApplicationBasePython/TCPIP/wificonnecting.jpg" style="zoom: 25%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP//wificonnecting.jpg" style="zoom: 25%;" />
 
-<img src="../resourse/7-ApplicationBasePython/TCPIP/移动链接.jpg" style="zoom: 25%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/移动链接.jpg" style="zoom: 25%;" />
 
 #### 1.3 连接其他网络
 
@@ -42,27 +42,27 @@ myCobot 280 m5 机械臂使用TCP/IP时，会用默认密码“mycobot123”去�
 
 **Step 1:** 将PC和myCobot 280 m5进行连接
 
-![](../resourse/7-ApplicationBasePython/TCPIP/OtherNetworks.png)
+![](../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/OtherNetworks.png)
 
-![](../resourse/7-ApplicationBasePython/TCPIP/OtherNetworks2.png)
+![](../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/OtherNetworks2.png)
 
 **Step 2:** 打开myBlockly，设置280 m5要连接的WIFI账号和密码，然后点击运行。
 
-![](../resourse/7-ApplicationBasePython/TCPIP/OtherNetworks3.png)
+![](../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/OtherNetworks3.png)
 
-![](../resourse/7-ApplicationBasePython/TCPIP/OtherNetworks4.png)
+![](../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/OtherNetworks4.png)
 
 **Step 3:** 操作步骤如下：Transponder -> WLAN Server，此时机械臂就会去连接“agilex-desktop”的网络。
 
-![](../resourse/7-ApplicationBasePython/TCPIP/Transponder.jpg)
+![](../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/Transponder.jpg)
 
-<img src="../resourse/7-ApplicationBasePython/TCPIP/WLAN Server1.jpg" style="zoom: 25%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/WLAN Server1.jpg" style="zoom: 25%;" />
 
 ### 2 案例
 
 在手机热点下，机械臂成功启动TCP/IP功能后，机械臂会显示出IP和端口。需要记住该IP和端口。
 
-<img src="../resourse/7-ApplicationBasePython/TCPIP/移动链接.jpg" style="zoom: 25%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/移动链接.jpg" style="zoom: 25%;" />
 
 PC电脑，连上跟机械臂同一个手机热点，调用python的驱动库，就可以通过机械臂的IP地址连接机械臂，达到无需连接USB端口也可以远程操作机械臂的效果。
 
@@ -87,7 +87,7 @@ print(res)
    2.服务器文件需要先在树莓派中执行（具体操作见下方gif操作图）
    3、服务器文件执行后，提示“Binding succeeded” 和 “waiting connect ”表示开启成功，控制端可参考**2 案例**进行控制
 
-![Server](../resourse/7-ApplicationBasePython/TCPIP/Server.gif)
+![Server](../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/Server.gif)
 
 *具体操作为：*
 
@@ -102,57 +102,4 @@ print(res)
    - serial_num：/dev/ttyAMA0
    - baud：1000000
 
-使用 python执行*
-
-## myArm
-### 使用案例
-
-```python
-from pymycobot import MyArmSocket
-# 默认使用9000端口
-#其中"192.168.11.15"为机械臂IP，请自行输入你的机械臂IP
-mc = MyArmSocket("192.168.11.15",9000)  
-
-#连接正常就可以对机械臂进行控制操作
-mc.send_angles([0,0,0,0,0,0,0],20)
-res = mc.get_angles()
-print(res)
-
-...
-```
-
-
-## myBuddy
-> 注意：此功能必须在同一网络下使用，例如服务端和客户端都是使用手机热点
-
-### 1 开启服务器
-1.双击打开桌面上的mybuddy软件
-
-<img src =../resourse/17-myBuddy/Python/p1.jpg
-width ="600"  align = "center">
-
-2.选择 “Transponder”, 端口选择 “/dev/ttyACM0”, 点击 “Connect”
-
-<img src =../resourse/17-myBuddy/Python/p2.jpg
-width ="600"  align = "center">
-
-3.选择 "Wlan Socket"
-
-<img src =../resourse/17-myBuddy/Python/p3.jpg
-width ="600"  align = "center">
-
-4.点击 "OPEN" 打开服务器
-
-<img src =../resourse/17-myBuddy/Python/p4.jpg
-width ="600"  align = "center">
-
-### 2 客户端
-
-```python
-from pymycobot import MyBuddySocket
-
-mst = MyBuddySocket("192.168.0.1", 9000)
-mst.connect("/dev/ttyACM0", "115200")
-
-print(mst.get_angles(1))
-```
+使用 python执行

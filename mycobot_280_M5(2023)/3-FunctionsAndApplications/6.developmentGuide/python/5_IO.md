@@ -3,13 +3,13 @@ IO即数据的输入与输出，在我们的机械臂的Basic和Atom上有多个
 
 * **myCobot：**
 
-<img src="../resourse/7-ApplicationBasePython/mycobotIO.jpg" style="zoom: 67%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\io/mycobotIO.jpg" style="zoom: 67%;" />
 
 
 
 * **MyPalletizer：**
 
-<img src="../resourse/7-ApplicationBasePython/mypalletizerIO.jpg" style="zoom: 40%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\io/mypalletizerIO.jpg" style="zoom: 40%;" />
 
 ## mechArm
 

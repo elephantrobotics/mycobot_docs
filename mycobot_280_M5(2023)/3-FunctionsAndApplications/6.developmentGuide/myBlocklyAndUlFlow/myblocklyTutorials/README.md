@@ -1,6 +1,6 @@
 ## myBlockly是什么？
 
-![](../../resourse/5-ProgramingApplication-myblockly-uiflow-mind/image/myblockly/myblockly界面.jpg)
+![](../../../../resources/3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/myblockly界面.jpg)
 
 **myBlockly** 是一个完全可视化的模块化编程软件，属于图形化编程语言。
 
@@ -14,7 +14,7 @@
 
 
 ## myBlockly安装
-![](../../resourse/5-ProgramingApplication-myblockly-uiflow-mind/image/myblockly/myblockly下载.jpg)
+![](../../../../resources/3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/myblockly下载.jpg)
 
 **myBlockly的下载地址：**
 - GitHub 地址：https://github.com/elephantrobotics/myblockly-package/releases
@@ -42,5 +42,4 @@
 - **Pi \ jetsonnano** 系列，**ATOM** 烧录最新版的 **atomMain** (出厂默认已烧录)
 
 - 配置 **Python 环境**，可参考 [Python ▶](https://docs.elephantrobotics.com/docs/gitbook/7-ApplicationBasePython/7.1_download.html) 章节
-
 

@@ -56,8 +56,9 @@ while i > 0:
 
 <video id="my-video" class="video-js" controls preload="auto" width="100%"
 poster="" data-setup='{"aspectRatio":"16:9"}'>
-  <source src="../resourse/7-ApplicationBasePython/myArm/2.1python控制RGB灯板01.mp4" type='video/mp4' >
+  <source src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\example/2.1python控制RGB灯板01.mp4" type='video/mp4' >
 </video>
+
 
 ### myArm
 
@@ -129,7 +130,7 @@ mc.send_angles([0, 0, 0, 0, 0, 0], 30)
 
 <video id="my-video" class="video-js" controls preload="auto" width="100%"
 poster="" data-setup='{"aspectRatio":"16:9"}'>
-  <source src="../resourse/7-ApplicationBasePython/myArm/2.2python控制机械回原点01.mp4"></video>
+  <source src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\example/2.2python控制机械回原点01.mp4"></video>
 
 
 
@@ -224,7 +225,7 @@ time.sleep(3)
 
 <video id="my-video" class="video-js" controls preload="auto" width="100%"
 poster="" data-setup='{"aspectRatio":"16:9"}'>
-  <source src="../resourse/7-ApplicationBasePython/myArm/2.3控制单关节运动01.mp4"></video>
+  <source src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\example/2.3控制单关节运动01.mp4"></video>
 
 
 
@@ -275,7 +276,7 @@ time.sleep(2.5)
 
 <video id="my-video" class="video-js" controls preload="auto" width="100%"
 poster="" data-setup='{"aspectRatio":"16:9"}'>
-  <source src="../resourse/7-ApplicationBasePython/myArm/2.4控制多个关节01.mp4"></video>
+  <source src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\example/2.4控制多个关节01.mp4"></video>
 
 
 
@@ -336,7 +337,7 @@ mc.release_all_servos()
 
 <video id="my-video" class="video-js" controls preload="auto" width="100%"
 poster="" data-setup='{"aspectRatio":"16:9"}'>
-  <source src="../resourse/7-ApplicationBasePython/myArm/2.5python控制机械臂左右摆动01.mp4"></video>
+  <source src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\example/2.5python控制机械臂左右摆动01.mp4"></video>
 
 
 
@@ -405,7 +406,7 @@ if __name__ == '__main__':
 
 <video id="my-video" class="video-js" controls preload="auto" width="100%"
 poster="" data-setup='{"aspectRatio":"16:9"}'>
-  <source src="../resourse/7-ApplicationBasePython/myArm/2.6控制机械臂跳舞01.mp4"></video>
+  <source src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\example/2.6控制机械臂跳舞01.mp4"></video>
 
 
 
@@ -503,7 +504,7 @@ if __name__ == "__main__":
 
 <video id="my-video" class="video-js" controls preload="auto" width="100%"
 poster="" data-setup='{"aspectRatio":"16:9"}'>
-  <source src="../resourse/7-ApplicationBasePython/myArm/2.7夹爪的安装与使用01.mp4"></video>
+  <source src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\example/2.7夹爪的安装与使用01.mp4"></video>
 
 
 
@@ -666,4 +667,4 @@ time.sleep(1.5)
 
 <video id="my-video" class="video-js" controls preload="auto" width="100%"
 poster="" data-setup='{"aspectRatio":"16:9"}'>
-  <source src="../resourse/7-ApplicationBasePython/myArm/2.8吸泵的安装与使用01.mp4"></video>
+  <source src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\example/2.8吸泵的安装与使用01.mp4"></video>

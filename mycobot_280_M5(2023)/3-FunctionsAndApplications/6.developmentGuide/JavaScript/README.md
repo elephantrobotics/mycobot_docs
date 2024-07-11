@@ -2,7 +2,7 @@
 
 **JavaScript是一种运行在客户端的脚本语言；不需要编译，运行过程中由js解释器逐个进行解释并执行。**<br>
 
-<img src=../resourse/11-ApplicationBaseJavaScript/js.png width="600" align="center">
+<img src=../../../resources/3-FunctionsAndApplications/6.developmentGuide/JavaScript/js.png width="600" align="center">
 <br>
 
 # JavaScript是什么？

@@ -4,7 +4,7 @@
 
 > **注意：** 在设置坐标时，不同系列的机械臂关节构造有所不同，同一组坐标，不同系列的机械臂会展示不同的姿态。
 >
-> <img src="../resourse/7-ApplicationBasePython/坐标.jpg" style="zoom: 67%;" />
+> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\axis/坐标.jpg" style="zoom: 67%;" />
 
 ## mechArm
 

@@ -2,7 +2,7 @@
 
 **使用c++语言，您可以通过我们公司开发的c++动态库，进行自由开发（坐标控制、角度控制、io控制、夹爪控制等），控制我们公司已经研发出来的部分机器人。**<br>
 
-![pic](../resourse/8-ApplicationBaseCPlus/8.0/8.0.jpg)
+![pic](../../../resources/3-FunctionsAndApplications/6.developmentGuide/C++/C++.jpg)
 
 ## C++是什么？
 
