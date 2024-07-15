@@ -1,4 +1,5 @@
-## 1. 产品概述
+# 第一章 产品简介
+## 1.产品概述
 
 ##### myCobot 280 M5
 
@@ -92,4 +93,4 @@ Shopify：[https://shop.elephantrobotics.com/](https://shop.elephantrobotics.com
 
 ---
 
-[下一章 →](../2-ProductParameters/2-ProductParameters.md)
+[下一章 →](../2.ProductParameter/2-ProductParameters.md)
