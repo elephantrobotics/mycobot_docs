@@ -1,4 +1,4 @@
-# 用户须知
+# 第三章 用户须知
 
 > 第三章《用户须知》是为了确保用户在使用产品时能够达到既定的安全标准和效率，因此对每个用户而言都是必读的。本章节不仅提供了有关产品使用、运输、储存和维护的基本信息，以确保产品的安全运行和效率最大化，还详细阐述了因不遵守这些准则而可能导致的产品故障或损坏的责任问题。
 
@@ -158,4 +158,4 @@ https://www.elephantrobotics.com
 
 
 如果您已经阅读了本章的所有内容，请继续阅读下一章。 <br>
-[← 上一章](../../2-ProductInformation/2-ProductParameters/2-ProductParameters.md) | [下一章 →](../4-FirstTimeInstallation/4-FirstTimeInstallation.md)
+[← 上一章](../../1-ProductInformation/2.ProductParameter/2-ProductParameters.md)| [下一章 →](../4.FirstTimeInstallation/4-FirstTimeInstallation.md)

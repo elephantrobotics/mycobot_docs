@@ -19,11 +19,5 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中，**myBlockly** [▶](5.1-myblockly/README.md)是基于python环境以及pymycobot依赖库的拼图式编程软件，可以让用户以搭积木式的方法进行编程控制mycobot。特别适合初学者学习编程，锻炼编程思维。myblockly还提供了python展示界面，将用户搭建的myblockly程序转换为python语言程序，以此帮助用户学习python语句。
 
-<div align=center>
-<img src="../resourse/5-ProgramingApplication-myblockly-uiflow-mind/image/myblockly/pic/uiflow.jpg"  height="120px"/>
-</div>
 
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;而 **UIFlow** [▶](5.2-UIFlow/README.md)是一款专为M5硬件体系设计的编程工具，采用Blockly图形化编程与Python代码编程方式，带给编程初学者友善的编程体验同时，传递更为专业与硬核的编程知识。
 
