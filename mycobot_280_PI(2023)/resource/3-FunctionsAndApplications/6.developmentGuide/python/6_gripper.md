@@ -1,0 +1,489 @@
+# 夹爪控制
+
+使用Python控制夹爪之前，需要先在机械臂上安装连接好夹爪。不同夹爪适配不同的机械臂（具体适配信息请参考**[2.8 产品配件](https://docs.elephantrobotics.com/docs/gitbook/2-serialproduct/2.7-accessories/2.7-accessories.html)**。
+
+> **注意：**
+>
+> MyCobot 280自适应夹爪将夹爪插在Atom上面的引脚上，具体看下图：
+>
+> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\Jaw/夹爪1.jpg" style="zoom: 67%;" />
+>
+> 电动夹爪插在顶端上的485接口处，具体看下图：
+>
+> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\Jaw/夹爪2.jpg" style="zoom: 67%;" />
+>
+> ***** **myCobot 280-m5无电动夹爪，只有myCobot 320-m5有电动夹爪**
+
+## mechArm
+
+### 夹爪控制
+
+**`is_gripper_moving( )`**
+
+- **功能：** 判断夹爪是否正在运行
+- **返回值：**
+  - `0 ` ：表示机械臂的夹爪没有运行
+  - `1` ：表示机械臂的夹爪正在运行
+  - `-1`：表示出错
+
+**`set_gripper_value(value, speed, gripper_type=None)`**
+
+- **功能：** 让夹爪以指定的速度转动到指定的位置
+- **参数说明：**
+  - `value`：表示夹爪所要到达的位置，取值范围 0~100
+  - `speed`：表示以多少的速度转动，取值范围 0~100
+  - `gripper_type`：夹爪类型，默认是自适应夹爪
+    - `1`: 自适应夹爪
+    - `3`: 平行夹爪
+    - `4`: 柔性夹爪
+- **返回值：** 无
+
+**`get_gripper_value(gripper_type=None)`**
+
+- **功能：** 获取夹爪的当前位置数据信息
+- **参数说明：**
+  - `gripper_type`：夹爪类型，默认是自适应夹爪
+    - `1`: 自适应夹爪
+    - `3`: 平行夹爪
+    - `4`: 柔性夹爪
+- **返回值：** 夹爪的数据信息
+
+**`set_gripper_state(flag, speed， _type=None)`**
+
+- **功能：** 让夹爪以指定的速度进入到指定的状态
+- **参数说明：**
+  - `flag`：1 表示夹爪合拢状态，0 表示夹爪打开状态。
+  - `speed`：表示以多快的速度达到指定的状态，取值范围 0~100
+  - `_type`: 夹爪类型，默认是自适应夹爪
+    - `1`: 自适应夹爪
+    - `2`: 五指灵巧手
+    - `3`: 平行夹爪
+    - `4`: 柔性夹爪
+- **返回值：** 无
+
+
+**`set_eletric_gripper(status)`**
+
+- **功能：** 设置夹爪模式(仅作用于350)
+- **参数说明：**  `status`：1 表示夹爪合拢状态，0 表示夹爪打开状态。
+- **返回值：** 无
+
+**`set_gripper_mode(status)`**
+
+- **功能：** 设置夹爪模式
+- **参数说明：**  `status`：1 透传模式，0 I/O模式
+- **返回值：** 无
+
+
+**`get_gripper_mode()`**
+
+- **功能：** 获取夹爪状态
+- **返回值：** `status(int)`：0 - 透传模式  1 - I/O模式
+
+**`set_HTS_gripper_torque(torque)`**
+
+- **功能：** 设置自适应夹爪力矩
+- **参数说明：**
+  - `torque`：150 ~ 900
+- **返回值：** 0 - 设置失败；1 - 设置成功
+
+**`get_HTS_gripper_torque()`**
+
+- **功能：** 获取自适应夹爪力矩
+- **返回值：** 150 ~ 900
+
+**`get_gripper_protect_current()`**
+
+- **功能：** 获取夹爪保护电流
+- **返回值：** 1 ~ 500
+
+**`init_gripper()`**
+
+- **功能：** 初始化夹爪
+- **返回值：** 0 - 初始化失败；1 -初始化成功
+
+**`set_gripper_protect_current(current)`**
+
+- **功能：** 设置夹爪保护电流
+- **参数说明：**
+  - `current`：1 ~ 500
+- **返回值：** 0 - 初始化失败；1 -初始化成功
+
+### 案例
+
+```python
+from pymycobot.mecharm import MechArm		
+from pymycobot import PI_PORT, PI_BAUD  #当使用树莓派版本的MechArm时，可以引用这两个变量进行MechArm初始化
+import time
+#输入以上代码导入工程所需要的包
+
+def gripper_test(mc):
+    print("Start check IO part of api\n")
+    # 检测夹爪是否正在移动
+    flag = mc.is_gripper_moving()
+    print("Is gripper moving: {}".format(flag))
+    time.sleep(1)
+
+    # Set the current position to (2048).
+    # Use it when you are sure you need it.
+    # Gripper has been initialized for a long time. Generally, there
+    # is no need to change the method.
+    # mc.set_gripper_ini()
+    # 设置关节点1，让其转动到2048这个位置
+    mc.set_encoder(1, 2048)
+    time.sleep(2)
+    # 设置六个关节位，让机械臂以20的速度转动到该位置
+    mc.set_encoders([1024, 1024, 1024, 1024, 1024, 1024], 20)
+    time.sleep(3)
+
+    # 以70的速度让夹爪到达100状态
+    mc.set_gripper_value(100, 70)
+    time.sleep(3)
+    # 以70的速度让夹爪到达0状态
+    mc.set_gripper_value(0, 70)
+    time.sleep(3)
+
+    # 设置夹爪的状态，让其以70的速度快速打开爪子
+    mc.set_gripper_state(0, 70)
+    time.sleep(3)
+    # 设置夹爪的状态，让其以70的速度快速收拢爪子
+    mc.set_gripper_state(1, 70)
+    time.sleep(3)
+
+    # 获取夹爪的值
+    print("")
+    print(mc.get_gripper_value())
+
+
+if __name__ == "__main__":
+    # MechArm 类初始化需要两个参数：
+    #   第一个是串口字符串， 如：
+    #       linux： "/dev/ttyAMA0"
+    #       windows: "COM3"
+    #   第二个是波特率：
+    #       M5版本为： 115200
+    #
+    #   Example:
+    #       mecharm-M5:
+    #           linux:
+    #              mc = MechArm("/dev/ttyAMA0", 1000000)
+    #           windows:
+    #              mc = MechArm("COM3", 115200)
+    #       mycobot-raspi:
+    #           mc = MechArm(PI_PORT, PI_BAUD)
+    #
+    # 初始化一个MechArm对象
+    # 下面为树莓派版本创建对象代码
+    mc = MechArm(PI_PORT, PI_BAUD)
+    # 让其移动到零位
+    mc.set_encoders([2048, 2048, 2048, 2048, 2048, 2048], 20)
+    time.sleep(3)
+    gripper_test(mc)
+```
+
+## myCobot
+
+### 夹爪控制
+
+**`is_gripper_moving( )`**
+
+- **功能：** 判断夹爪是否正在运行
+- **返回值：**
+  - `0 ` ：表示机械臂的夹爪没有运行
+  - `1` ：表示机械臂的夹爪正在运行
+  - `-1`：表示出错
+
+**`set_gripper_value(value, speed, gripper_type=None)`**
+
+- **功能：** 让夹爪以指定的速度转动到指定的位置
+- **参数说明：**
+  - `value`：表示夹爪所要到达的位置，取值范围 0~256
+  - `speed`：表示以多少的速度转动，取值范围 0~100
+  - `gripper_type`：夹爪类型，默认是自适应夹爪
+    - `1`: 自适应夹爪
+    - `3`: 平行夹爪
+    - `4`: 柔性夹爪
+- **返回值：** 无
+
+**`get_gripper_value(gripper_type=None)`**
+
+- **功能：** 获取夹爪的当前位置数据信息
+- **参数说明：**
+  - `gripper_type`：夹爪类型，默认是自适应夹爪
+    - `1`: 自适应夹爪
+    - `3`: 平行夹爪
+    - `4`: 柔性夹爪
+- **返回值：** 夹爪的数据信息
+
+**`set_gripper_state(flag, speed， _type=None)`**
+
+- **功能：** 让夹爪以指定的速度进入到指定的状态
+- **参数说明：**
+  - `flag`：1 表示夹爪合拢状态，0 表示夹爪打开状态。
+  - `speed`：表示以多快的速度达到指定的状态，取值范围 0~100
+  - `_type`: 夹爪类型，默认是自适应夹爪
+    - `1`: 自适应夹爪
+    - `2`: 五指灵巧手
+    - `3`: 平行夹爪
+    - `4`: 柔性夹爪
+- **返回值：** 无
+
+
+**`set_eletric_gripper(status)`**
+
+- **功能：** 设置夹爪模式(仅作用于350)
+- **参数说明：**  `status`：1 表示夹爪合拢状态，0 表示夹爪打开状态。
+- **返回值：** 无
+
+**`set_gripper_mode(status)`**
+
+- **功能：** 设置夹爪模式
+- **参数说明：**  `status`：1 透传模式，0 I/O模式
+- **返回值：** 无
+
+
+**`get_gripper_mode()`**
+
+- **功能：** 获取夹爪状态
+- **返回值：** `status(int)`：0 - 透传模式  1 - I/O模式
+
+**`set_HTS_gripper_torque(torque)`**
+
+- **功能：** 设置自适应夹爪力矩
+- **参数说明：**
+  - `torque`：150 ~ 900
+- **返回值：** 0 - 设置失败；1 - 设置成功
+
+**`get_HTS_gripper_torque()`**
+
+- **功能：** 获取自适应夹爪力矩
+- **返回值：** 150 ~ 900
+
+**`get_gripper_protect_current()`**
+
+- **功能：** 获取夹爪保护电流
+- **返回值：** 1 ~ 500
+
+**`init_gripper()`**
+
+- **功能：** 初始化夹爪
+- **返回值：** 0 - 初始化失败；1 -初始化成功
+
+**`set_gripper_protect_current(current)`**
+
+- **功能：** 设置夹爪保护电流
+- **参数说明：**
+  - `current`：1 ~ 500
+- **返回值：** 0 - 初始化失败；1 -初始化成功
+
+### 案例
+
+```python
+from pymycobot.mycobot import MyCobot		
+from pymycobot import PI_PORT, PI_BAUD  #当使用树莓派版本的mycobot时，可以引用这两个变量进行MyCobot初始化
+import time
+#输入以上代码导入工程所需要的包
+
+def gripper_test(mc):
+    print("Start check IO part of api\n")
+    # 检测夹爪是否正在移动
+    flag = mc.is_gripper_moving()
+    print("Is gripper moving: {}".format(flag))
+    time.sleep(1)
+
+    # Set the current position to (2048).
+    # Use it when you are sure you need it.
+    # Gripper has been initialized for a long time. Generally, there
+    # is no need to change the method.
+    # mc.set_gripper_ini()
+    # 设置关节点1，让其转动到2048这个位置
+    mc.set_encoder(1, 2048)
+    time.sleep(2)
+    # 设置六个关节位，让机械臂以20的速度转动到该位置
+    mc.set_encoders([1024, 1024, 1024, 1024, 1024, 1024], 20)
+    time.sleep(3)
+ 
+
+    # 以70的速度让夹爪到达100状态
+    mc.set_gripper_value(100, 70)
+    time.sleep(3)
+    # 以70的速度让夹爪到达0状态
+    mc.set_gripper_value(0, 70)
+    time.sleep(3)
+
+    # 设置夹爪的状态，让其以70的速度快速打开爪子
+    mc.set_gripper_state(0, 70)
+    time.sleep(3)
+    # 设置夹爪的状态，让其以70的速度快速收拢爪子
+    mc.set_gripper_state(1, 70)
+    time.sleep(3)
+
+    # 获取夹爪的值
+    print("")
+    print(mc.get_gripper_value())
+
+
+if __name__ == "__main__":
+    # MyCobot 类初始化需要两个参数：
+    #   第一个是串口字符串， 如：
+    #       linux： "/dev/ttyAMA0"
+    #       windows: "COM3"
+    #   第二个是波特率：
+    #       M5版本为： 115200
+    #
+    #   Example:
+    #       mycobot-M5:
+    #           linux:
+    #              mc = MyCobot("/dev/ttyAMA0", 1000000)
+    #           windows:
+    #              mc = MyCobot("COM3", 115200)
+    #       mycobot-raspi:
+    #           mc = MyCobot(PI_PORT, PI_BAUD)
+    #
+    # 初始化一个MyCobot对象
+    # 下面为树莓派版本创建对象代码
+    mc = MyCobot(PI_PORT, PI_BAUD)
+    # 让其移动到零位
+    mc.set_encoders([2048, 2048, 2048, 2048, 2048, 2048], 20)
+    time.sleep(3)
+    gripper_test(mc)
+```
+
+
+## myBuddy
+### 夹爪控制
+**is_gripper_moving(id)**
+
+* **功能：** 判断夹爪是否正在运行。
+
+* **参数**
+
+    **id** – 1/2 (左臂/右臂)
+
+- **返回**
+
+    0 - 不动
+    1 - 正在移动
+    -1 - 错误数据
+
+**set_gripper_value(id, value, speed)**
+
+* **功能：** 让夹爪以指定的速度转动到指定的位置。
+
+* **参数**
+
+  * **id** – 1/2 (L/R)
+
+  * **value** (_int_) – 0 ~ 100
+
+  * **speed** (_int_) – 0 ~ 100
+
+**get_gripper_value(id)**
+
+* **功能：** 获取夹爪的encoder数据信息
+
+* **参数**
+
+    **id** – 1/2 (左臂/右臂)
+
+* **Returns**
+
+    encoder值 (int)
+
+**set_gripper_state(id, flag)**
+
+* **功能：** 设置夹爪开关状态
+
+- **参数**
+
+  - **id** - 1/2（左/右）
+
+  - **flag** (_int_) - 0 - 关闭，1 - 打开
+
+
+## myPalletizer
+### 案例
+```python
+from pymycobot.mypalletizer import MyPalletizer
+from pymycobot.genre import Angle
+import time
+#输入以上代码导入工程所需要的包
+
+# 初始化一个MyPalletizer对象
+mc = MyPalletizer("COM3", 115200)
+
+# 让关节2移动到30这个位置，速度为50
+mc.send_angle(2,30,50)
+# 设置等待时间
+time.sleep(2)
+
+#设置一个循环，首先设置一个num变量
+num = 5
+while num > 0:
+    #设置夹爪状态，使其以70的速度打开
+    mc.set_gripper_state(0,70)
+    # 设置等待时间
+    time.sleep(2)
+    # 设置夹爪状态，使其以70的速度收拢
+    mc.set_gripper_state(1, 70)
+    # 设置等待时间
+    time.sleep(2)
+    num -= 1
+```
+## myArm
+### 案例
+```python
+from pymycobot.myarm import MyArm
+import time
+#输入以上代码导入工程所需要的包
+
+def gripper_test(mc):
+    print("Start check IO part of api\n")
+    # 检测夹爪是否正在移动
+    flag = mc.is_gripper_moving()
+    print("Is gripper moving: {}".format(flag))
+    time.sleep(1)
+
+    # Set the current position to (2048).
+    # Use it when you are sure you need it.
+    # Gripper has been initialized for a long time. Generally, there
+    # is no need to change the method.
+    # mc.set_gripper_ini()
+    # 设置关节点1，让其转动到2048这个位置
+    mc.set_encoder(1, 2048)
+    time.sleep(2)
+    # 设置六个关节位，让机械臂以20的速度转动到该位置
+    mc.set_encoders([1024, 1024, 1024, 1024, 1024, 1024,1024], 20)
+    time.sleep(3)
+
+    # 以70的速度让夹爪到达100状态
+    mc.set_gripper_value(100, 70)
+    time.sleep(3)
+    # 以70的速度让夹爪到达0状态
+    mc.set_gripper_value(0, 70)
+    time.sleep(3)
+
+    # 设置夹爪的状态，让其以70的速度快速打开爪子
+    mc.set_gripper_state(0, 70)
+    time.sleep(3)
+    # 设置夹爪的状态，让其以70的速度快速收拢爪子
+    mc.set_gripper_state(1, 70)
+    time.sleep(3)
+
+    # 获取夹爪的值
+    print("")
+    print(mc.get_gripper_value())
+
+
+if __name__ == "__main__":
+    #   Example:
+    #       myarm-raspi:
+    #           mc = MyArm(PI_PORT, PI_BAUD)
+    #
+    # 初始化一个MyArm对象
+    mc = MyArm("/dev/ttyAMA0", 115200)
+    # 让其移动到零位
+    mc.set_encoders([2048, 2048,2048, 2048, 2048, 2048, 2048], 20)
+    time.sleep(3)
+    gripper_test(mc)
+```

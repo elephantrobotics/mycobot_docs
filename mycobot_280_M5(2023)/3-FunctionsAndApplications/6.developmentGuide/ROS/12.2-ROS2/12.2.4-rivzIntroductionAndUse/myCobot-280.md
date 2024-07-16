@@ -25,7 +25,7 @@ width ="500"  align = "center">
 width ="500"  align = "center">
 
 然后运行命令：
-  
+
 ```bash
 # mycobot 280-PI版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
 ros2 launch mycobot_280pi slider_control.launch.py
@@ -45,7 +45,7 @@ width ="500"  align = "center">
 width ="500"  align = "center">
 
 然后运行命令：
-  
+
 ```bash
 # mycobot 280-JetsonNano版本默认串口名为"/dev/ttyTHS1"，波特率为1000000.
 ros2 launch mycobot_280jn slider_control.launch.py
@@ -108,7 +108,7 @@ width ="500"  align = "center">
 width ="500"  align = "center">
 
 然后运行命令：
-  
+
 ```bash
 # mycobot 280-JetsonNano版本默认串口名为"/dev/ttyTHS1"，波特率为1000000.
 ros2 launch mycobot_280jn mycobot_follow.launch.py
@@ -165,7 +165,7 @@ width ="500"  align = "center">
 width ="500"  align = "center">
 
 然后运行命令：
-  
+
 ```bash
 # mycobot 280-JetsonNano版本默认串口名为"/dev/ttyTHS1"，波特率为1000000.
 ros2 launch mycobot_280jn simple_gui.launch.py
@@ -190,6 +190,7 @@ ros2 launch mycobot_280 teleop_keyboard.launch.py
 
 - mycobot 280-PI版本：
   
+
 点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
 
 <img src =../../../resourse/12-ApplicationBaseROS/12.2.7-10.jpg
@@ -222,7 +223,7 @@ width ="500"  align = "center">
 width ="500"  align = "center">
 
 然后运行命令：
-  
+
 ```bash
 # mycobot 280-JetsonNano版本默认串口名为"/dev/ttyTHS1"，波特率为1000000.
 ros2 launch mycobot_280jn teleop_keyboard.launch.py
@@ -305,7 +306,7 @@ width ="500"  align = "center">
 width ="500"  align = "center">
 
 然后运行命令：
-  
+
 ```bash
 ros2 run mycobot_280jn teleop_keyboard
 ```
@@ -370,7 +371,7 @@ width ="500"  align = "center">
 width ="500"  align = "center">
 
 然后运行命令：
-  
+
 ```bash
 ros2 launch mycobot_280pi test_pump.launch.py
 ```
@@ -407,7 +408,7 @@ width ="500"  align = "center">
 width ="500"  align = "center">
 
 然后运行命令：
-  
+
 ```bash
 # mycobot 280-PI版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
 ros2 launch mycobot_280pi slider_control_pump.launch.py
@@ -467,7 +468,7 @@ width ="500"  align = "center">
 width ="500"  align = "center">
 
 然后运行命令：
-  
+
 ```bash
 ros2 launch mycobot_280pi test_camera_flange.launch.py
 ```
@@ -504,7 +505,7 @@ width ="500"  align = "center">
 width ="500"  align = "center">
 
 然后运行命令：
-  
+
 ```bash
 # mycobot 280-PI版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
 ros2 launch mycobot_280pi slider_control_camera_flange.launch.py
@@ -546,7 +547,7 @@ width ="500"  align = "center">
 width ="500"  align = "center">
 
 然后运行命令：
-  
+
 ```bash
 ros2 launch mycobot_280pi test_camera_flange_pump.launch.py
 ```
