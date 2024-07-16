@@ -22,8 +22,7 @@
 **注：** 包装箱到位后，请确认机器人包装完好无损。如有损坏，请及时联系物流公司和您所在地区的供应商。开箱后，请根据物品清单检查箱内的实际物品。
 
 ---
-# 2. 产品开箱指南
-
+## 2. 产品开箱指南
 ## 产品开箱图文引导
 
 **为什么需要按照步骤拆卸产品**
@@ -40,9 +39,13 @@
 
 ## 产品开箱视频引导
 
-[OpenGuide.mp4](../../resources/2-BasicSettings/4.FirstTimeInstallation/OpenGuide.mp4)
+<video controls>
+  <source src="../../resources/2-BasicSettings/4.FirstTimeInstallation/OpenGuide.mp4" type="video/mp4">
+  您的浏览器不支持 HTML5 视频。
+</video>
 
-# 3. 开机检测指南
+
+## 3. 开机检测指南
 
 ## 3.1 结构安装和固定
 
@@ -120,23 +123,25 @@ G型底座 适配型号：myCobot 280、myPalletizer 260
 ![链接检测3](../../resources/2-BasicSettings/4.FirstTimeInstallation/connectOK.jpg)
 如图所示即为电机链接状态良好
 **Step 4**: 按下**B**键，开始检测版本信息。屏幕显示机器人版本以及**Basic**固件版本。
+
 ![链接检测4](../../resources/2-BasicSettings/4.FirstTimeInstallation/BaseVersion.jpg)
+
 **Step 5**: 按下**C**键，退出此功能
+
 ![链接检测5](../../resources/2-BasicSettings/4.FirstTimeInstallation/pushC.jpg)
 
 即可完成开机检测。
 
-## 3.4 常见问题解决
+## 4.常见问题解决
 本小节旨在帮助用户解决在使用过程中所遇到的常见问题，涵盖硬件、软件、驱动以及如何在论坛中提问这几个方面，如您在使用机械臂的过程中遇到问题，请首先阅读本小节的内容来寻求解决办法。如果列举出的问题无法帮助您解决并且您有更多售后问题想要咨询请添加售后小管家微信。
 
-如何优雅的提问
+[如何优雅的提问](../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.md)
 
-常见的驱动问题以及解决方案
+[常见的驱动问题以及解决方案](../../4-SupportAndService/9.Troubleshooting/9.1-driver.md)
 
-常见的软件问题以及解决方案
+[常见的软件问题以及解决方案](../../4-SupportAndService/9.Troubleshooting/9.2-software.md)
 
-常见的硬件问题以及解决方案
-
+[常见的硬件问题以及解决方案](../../4-SupportAndService/9.Troubleshooting/9.3-hardware.md)
 
 ---
 

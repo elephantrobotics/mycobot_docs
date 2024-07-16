@@ -94,7 +94,7 @@ pymycobot 是一个和 myCobot 进行串口通讯的 Python 包，支持 Python2
 
 * 环境变量主要有包括用户变量和系统变量，需要设置的环境变量就在这两个变量中。如下图所示：
 
-<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/系统变量+用户变量.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/添加path.jpg" style="zoom: 50%;" />
 
 
 

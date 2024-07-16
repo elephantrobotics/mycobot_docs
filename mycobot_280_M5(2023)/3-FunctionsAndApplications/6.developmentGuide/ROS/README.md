@@ -30,7 +30,11 @@
 
 与仅支持Linux系统的**ROS**相比，**ROS2**还支持windows、mac甚至RTOS平台。
 
-**适用设备：**
+**[ROS1开发指引](./12.1-ROS1/12.1.1-Introduction.md)**
+
+**[ROS2开发指引](./12.2-ROS2/12.2.3-ROS2Introduction.md)**
+
+**ROS适用设备：**
 
 - myCobot 280
   - myCobot 280 M5
@@ -62,7 +66,7 @@
 
 - 以上使用设备中，myCobot 280-Pi、myCobot 280-JetsonNano、myCobot 320-Pi、mechArm-270 PI等版本自带Ubuntu（V-18.04）系统，已经内置了开发环境，所以无需搭建管理，直接使用即可。
 
-- myCobot 280-M5、myCobot 320-M5、myCobot 280-Arduino、myPalletizer 260、mechArm-270-M5等版本需要搭建环境使用，但在ROS/ROS2中，只需 [搭建ROS环境](12.1-ROS1/12.1.2-环境搭建.md) 或者 [搭建ROS2环境](12.2-ROS2/12.2.1-ROS2的安装.md)即可。
+- myCobot 280-M5、myCobot 320-M5、myCobot 280-Arduino、myPalletizer 260、mechArm-270-M5等版本需要搭建环境使用，但在ROS/ROS2中，只需搭建ROS环境或者搭建ROS2环境即可。
 
 # MoveIt 简介
 

@@ -65,7 +65,9 @@ myCobot 280 系列机械臂是大象机器人专为：科研教育、创客应�
 
 ## 3. 支持的扩展开发
 ![拓展开发](../../resources/1-ProductInformation/1.ProductIntroduction/ExpansionAndDevelopment.png)
+
 mycobot 系列机械臂在教育和科研领域中极具价值，特别是在 Python 和 ROS（Robot Operating System)这两个广泛使用的开发环境中。这些环境提供了强大的支持，使得 mycobot  系列产品能够广泛应用于机器学习、人工智能研究、复杂运动控制以及视觉处理任务中。同时搭配自适应夹爪、摄像头法兰、吸泵等数十种配件，可以尽情发挥myCobot的创意想法。
+
 ![拓展开发2](../../resources/1-ProductInformation/1.ProductIntroduction/ExpansionAndDevelopment2.jpg)
 
 |   |  |

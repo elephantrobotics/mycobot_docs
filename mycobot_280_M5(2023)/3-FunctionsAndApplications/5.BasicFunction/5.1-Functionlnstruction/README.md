@@ -1,9 +1,9 @@
 # 基础功能应用
 
-## [**1 myStudio**](4.1-myStudio/README.md)
+## **1 myStudio**
 在开始使用设备前，您首先需要**安装驱动以及更新设备固件**。
 
-### [1.1 安装驱动](4.1-myStudio/4.1.1-myStudio_download_driverinstalled.md)
+### 1.1 安装驱动
 
 用户可根据自己所使用的操作系统，点击下方按钮下载相应的 **CP210X** 或 **CP34X** 驱动程序压缩包，在解压压缩包后，选择对应操作系统位数的安装包进行安装。
 
@@ -28,13 +28,13 @@
 请根据此图来完成驱动程序的安装
 ![P210X_install](../../../resources/3-FunctionsAndApplications/5.1-Functionlnstruction/CP210X_install.gif)
 
-###  [1.2 更新设备固件](4.1-myStudio/4.1.2-myStudio_flash_firmwares.md)
+### 1.2 更新设备固件
 
 在开发前，用户请确认自己所使用的设备固件是否为最新版的固件，以便于用户在后续开发中更好的使用该设备。
 
 用户可通过 **myStudio**进行设备固件的更新。
 
-##  [**2 出厂固件介绍**](4.2-firmwares_intro/README.md)
+##  **2 出厂固件介绍**
 
 ###  [2.1 拖动示教](4.2-firmwares_intro/4.2.1-moving/README.md)
 

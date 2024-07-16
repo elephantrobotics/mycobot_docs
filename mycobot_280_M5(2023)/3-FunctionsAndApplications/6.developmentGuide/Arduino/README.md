@@ -27,3 +27,12 @@ MyCobotBasic库是我们公司开发的一款开源机器人控制库，需要�
 **使用前提：**
 
 - **M5** 系列版本， 底部**M5Stack-basic**烧录 **miniRobot**，选择 **Transponder** 功能，末端 **ATOM** 烧录最新版的 **atomMain** (出厂默认已烧录)
+
+
+
+## Arduino开发使用引导
+
+您可以根据以下指引来使用 Arduino对我们的机械臂进行开发
+1.[环境搭建](./10.1-arduino_download.md)
+2.[简单使用](./10.2-arduino_use.md)
+3.[API说明](./10.3-api.md)
