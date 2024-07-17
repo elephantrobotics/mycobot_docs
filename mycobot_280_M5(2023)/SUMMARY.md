@@ -1,5 +1,6 @@
 # Summary
 
+* [Introduction](README.md)
 * 产品信息
     * [1. 产品简介](1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.md)
         * [1.1 产品概述](1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.md#产品概述)
@@ -12,7 +13,6 @@
         * [2.3 结构尺寸参数](1-ProductInformation/2.ProductParameter/2-ProductParameters.md#结构尺寸参数)
         * [2.4 电气特性参数](1-ProductInformation/2.ProductParameter/2-ProductParameters.md#电气特性参数)
         * [2.5 笛卡尔坐标系](1-ProductInformation/2.ProductParameter/2-ProductParameters.md#笛卡尔坐标系)
-
 * 基础设置
     * [3. 用户须知](2-BasicSettings/3.UserNotice/3-UserInstructions.md)
         * [3.1 安全须知](2-BasicSettings/3.UserNotice/3-UserInstructions.md#安全须知)
@@ -24,7 +24,6 @@
         * [4.2 产品开箱指南](2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.md#产品开箱指南)
         * [4.3 开机检测指南](2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.md#开机检测指南)
         * [4.4 安装视频教程](2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.md#安装视频教程)
-
 * 功能与应用
     * [5. 基础功能](3-FunctionsAndApplications/5.BasicFunction/README.md)
         * [5.1 系统（功能）使用说明](3-FunctionsAndApplications/5.BasicFunction/5.1-Functionlnstruction/README.md)
@@ -45,14 +44,13 @@
         * [8.1 产品资料](3-FunctionsAndApplications/8.SupportingResources/8.1-ProductInformation/README.md)
         * [8.2 产品图纸](3-FunctionsAndApplications/8.SupportingResources/8.2-ProductDrawings/README.md)
         * [8.3 软件资料及源码](3-FunctionsAndApplications/8.SupportingResources/8.3-SoftwareInformationAndSourceCode/README.md)
-        * [8.4 系统资料](3-FunctionsAndApplications\8.SupportingResources\8.4-SystemInformation/README.md)
-        * [8.5 宣传资料](3-FunctionsAndApplications\8.SupportingResources\8.5-PromotionalMaterials/README.md)
-
+        * [8.4 系统资料](3-FunctionsAndApplications/8.SupportingResources/8.4-SystemInformation/README.md)
+        * [8.5 宣传资料](3-FunctionsAndApplications/8.SupportingResources/8.5-PromotionalMaterials/README.md)
 * 支持与服务
     * [9. 故障排除](support-services/troubleshooting.md)
     * [10. 购买信息](support-services/purchasing-info.md)
     * [11. 关于我们](support-services/about-us.md)
         * [11.1 大象机器人](support-services/elephant-robotics.md)
         * [11.2 联系我们](support-services/contact-us.md)
-    
 * [致谢](5-Acknowledgments/5-Acknowledgments.md)
+

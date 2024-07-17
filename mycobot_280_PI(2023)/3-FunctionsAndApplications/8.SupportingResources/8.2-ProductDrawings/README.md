@@ -5,14 +5,14 @@
 
 |       机器       |                          3D模型文件                          |
 | :--------------: | :----------------------------------------------------------: |
-|  myCobot 280 M5  | [下载](https://download.elephantrobotics.com/Product_3d_files/mycobot_280_M5_230708.STEP) |
+| myCobot 280 PI | [下载](https://download.elephantrobotics.com/Product_3d_files/myCobot_280_PI_230708.STEP) |
 
 ### 机器2D图纸
 
 |  机器 | 机器2D图纸 |
 | :---------: | :--------------:|
 | myCobot 280 末端| [下载](https://download.elephantrobotics.com/Product_3d_files/230918/myCobot_280_Atom_230918.PDF) |
-| myCobot 280 M5 底座| [下载](https://download.elephantrobotics.com/Product_3d_files/230918/myCobot_280_M5_base_230918.PDF) |
+
 
 ### 配件3D模型
 

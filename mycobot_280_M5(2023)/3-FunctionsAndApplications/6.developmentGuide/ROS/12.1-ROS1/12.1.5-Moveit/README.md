@@ -6,7 +6,7 @@ MoveIt 是ROS中的一个集成开发平台，由多种用于操纵机械臂的�
 
 下图所示为 Moveit 提供的主要节点 **move_group** 的高层结构，它像一个组合器：把所有单独的组件集成在一起，提供一系列的 actions 和 services 供用户使用。
 
-<img src =../../../resourse/12-ApplicationBaseROS/moveit-3.png
+<img src =../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/moveit/moveit-1.png
 width ="500"  align = "center">
 
 ### 2 用户界面
@@ -59,12 +59,12 @@ roslaunch mycobot_280arduino_moveit mycobot_moveit.launch
 
 运行效果如下：  
 
-<img src =../../../resourse/12-ApplicationBaseROS/moveit-1.png
+<img src =../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/moveit/moveit-2.png
 width ="500"  align = "center">
 
 可以计划并执行，演示效果：
 
-<img src =../../../resourse/12-ApplicationBaseROS/moveit-2.gif
+<img src =../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/moveit/moveit-3.gif
 width ="500"  align = "center">
 
 如果需要让真实的机械臂同步执行计划，需要再打开一个命令行，运行：
