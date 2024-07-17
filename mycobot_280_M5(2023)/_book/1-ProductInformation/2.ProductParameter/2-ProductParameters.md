@@ -54,7 +54,9 @@
 ---
 
 ## 3.结构尺寸参数
+
 > ！本章以毫米为距离单位，以度为角度单位。
+
 ### 产品尺寸和工作空间
 ![工作范围](../../resources/1-ProductInformation/2.ProductParameter/WorkingRange.png)
 ![尺寸规格](../../resources/1-ProductInformation/2.ProductParameter/size.png)
