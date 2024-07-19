@@ -87,4 +87,4 @@ Shopify：[https://shop.elephantrobotics.com/](https://shop.elephantrobotics.com
 
 ---
 
-[下一章 →](../2-ProductParameters/2-ProductParameters.md)
+[下一章 →](../2.ProductParameters/2-ProductParameters.md)
