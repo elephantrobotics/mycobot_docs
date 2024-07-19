@@ -10,7 +10,7 @@
 
 **ROS 图标** ：
 
-![ROS图标](../resourse/12-ApplicationBaseROS/icon.png)
+![ROS图标](../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS/ROSicon.png)
 
 **ROS** 是开源的，是用于机器人控制的一种后操作系统，或者说次级操作系统。它提供类似操作系统所提供的功能，包含硬件抽象描述、底层驱动程序管理、共用功能的执行、程序间的消息传递、程序发行包管理，它也提供一些工具程序和库用于获取、建 立、编写和运行多机整合的程序。
 
@@ -70,7 +70,7 @@
 
 **MoveIt 图标** :
 
-![moveit图标](../resourse/12-ApplicationBaseROS/moveit-icon.png)
+![moveit图标](../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS/moveiticon.png)
 
 **适用设备：**
 

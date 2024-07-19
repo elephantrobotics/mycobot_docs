@@ -2,9 +2,7 @@
 
 **我司产品对于python的支持较为友好，对于pythonAPI库的开发也日益完善，通过python能对机器人的关节角度，坐标，夹爪等多方面进行操控，选择性较多，如果你想通过Python编程来控制我们的机械臂，那么您可学习该章节。**
 
-
-
-## ![README1](../../../resources/3-FunctionsAndApplications/6.developmentGuide/python/python.jpg)
+## ![README1](../../../resource\3-FunctionsAndApplications\6.developmentGuide\python/python.jpg)
 
 **Python** 由荷兰数学和计算机科学研究学会的 Guido van Rossum 于1990 年代初设计，作为一门叫做 ABC 语言的替代品。
 

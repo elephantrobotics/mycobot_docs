@@ -21,21 +21,12 @@
 您可以根据以下指引来使用python对我们的机械臂进行开发
 
 1.[环境搭建](./1_download.md)
-
 2.[api说明](./2_API.md)
-
 3.[关节控制](./3_angle.md)
-
 4.[坐标控制](./4_coord.md)
-
 5.[IO控制](./5_IO.md)
-
 6.[夹爪控制](./6_gripper.md)
-
 7.[TCP&IP](./7_TCPIP.md)
-
 8.[手柄控制](./9_HandleControl.md)
-
 9.[绘制图案](./15_280_gcode_draw.md)
-
 10.[演示代码与视频](./8_example.md)

@@ -34,7 +34,7 @@
 | **输入**     | 1, 2, 3, 5, 18, 19, 21, 22, 23, 25, 26, 35, 36                    |
 | **输出**     | 同输入共用                                                        |
 | **LCD 显示器**         | 2.0" @ 320*240 ILI9342C IPS panel, maximum brightness 853nit         |
-| **实体按键**           | 
+| **实体按键**           ||
 
 ### 辅助控制器规格表
 
@@ -49,12 +49,11 @@
 | **LCD 显示**           | 2.0"@320\*240 ILI9342C IPS 面板，<br> 最大亮度 853nit           |
 | **C 型**                | \*1                                                             |
 | **辅控扩展IO**      | G19, G21, G22, G23, G25, G33                          |
-|</center>
+
 
 ---
 
 ## 3.结构尺寸参数
-
 > ！本章以毫米为距离单位，以度为角度单位。
 
 ### 产品尺寸和工作空间
@@ -71,20 +70,27 @@
 | J6   | -180 ~ +180         |
 ### 孔位安装
 - 机器人底座安装法兰，底座同时兼容乐高科技件安装方式和M4螺丝安装方式。
+
 ![孔位安装](../../resources/1-ProductInformation/2.ProductParameter/HoleInstallation1.jpg)
+
 - 机器人末端安装法兰，机械臂末端同时兼容乐高科技件孔与螺丝螺纹孔。
+
 ![孔位安装](../../resources/1-ProductInformation/2.ProductParameter/HoleInstallation2.jpg)
+
 ## 4.电气特性参数
 ### 1 机械臂底座电气接口
 ### 1.1 底座介绍
 
 * A. 底座的正面如下图所示：
+
   ![底座正面](../../resources/1-ProductInformation/2.ProductParameter/BaseFront.png)
+  
   - ① 功能接口组一
   - ② Basic显示屏
   - ③ 按钮1 , 按钮2 , 按钮3
   
 * B. 底座的左侧面如下图所示:
+
   ![底座左侧](../../resources/1-ProductInformation/2.ProductParameter/BaseLeft.png)
 
   - ① Grove 1 , Grove 2
@@ -95,13 +101,16 @@
   - ⑥ Grove 3
 
 * C. 底座的右侧面如下图所示:
+
  ![底座右侧](../../resources/1-ProductInformation/2.ProductParameter/BaseRight.png)
 
  ① 功能接口组三
 
- * D. 底座的底部接口面如下图所示:
- ![底座底面](../../resources/1-ProductInformation/2.ProductParameter/underside.png)
-    ① 功能接口组四
+* D. 底座的底部接口面如下图所示:
+
+![底座底面](../../resources/1-ProductInformation/2.ProductParameter/underside.png)
+
+ ① 功能接口组四
 
 ### 1.2 底座接口说明
 
@@ -253,4 +262,4 @@
 
 ---
 
-[← 上一章](../1.ProductIntroduction/1-ProductIntroduction.md) | [下一章 →](../2-BasicSettings/3.UserNotice/3-UserInstructions.md)
+[← 上一章](../1.ProductIntroduction/1-ProductIntroduction.md) | [下一章 →](../../2-BasicSettings/3.UserNotice/3-UserInstructions.md)

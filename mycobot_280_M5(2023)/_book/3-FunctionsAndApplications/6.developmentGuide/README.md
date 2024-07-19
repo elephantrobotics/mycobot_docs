@@ -29,4 +29,4 @@ mycobot280 M5 是基于 PC 开发和使用的。由于机械臂内没有内置�
 
 ---
 
-[← 上一章](../5.BasicFunction/README.md) | [下一章 →](../7.SuccessfulCases/7-SuccessfulCases.md)
+[← 上一章](../5.BasicFunction/README.md) | [下一章 →](../7.SuccessfulCase/7-SuccessfulCases.md)
