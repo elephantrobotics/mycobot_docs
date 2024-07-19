@@ -539,7 +539,7 @@ ros2 launch mycobot_280pi slider_control_pump.launch.py
 
 它将**打开 rviz 和一个滑块组件**，你将看到如下画面（树莓派版本画面略有差异，不影响使用）：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.1.4-16.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.1.4-16.png
 width ="500"  align = "center">
 
 接着你可以**通过拖动滑块来控制 rviz 中的模型移动**。真实的 mycobot 将跟着一起运动.

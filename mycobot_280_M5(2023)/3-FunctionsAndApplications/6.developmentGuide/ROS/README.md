@@ -5,8 +5,7 @@
 
 **注意**：
 
-- 现阶段，**myCobot 280系列** 、 **myCobot 320系列**、**myPalletizer260系列**、**mechArm270系列** 均支持 **ROS** 的使用，具体情况各种设备的开发情况可参考[**设备的开发**](../4-BasicApplication/README.md)。
-- 通过使用 [**mystudio**](../4-BasicApplication/4.1-myStudio/README.md) 烧录相应的固件。其中，在basic中烧录minirobot，选择transponder功能，在atom中烧录最新版的atomMain。
+- 通过使用**mystudio** 烧录相应的固件。其中，在basic中烧录minirobot，选择transponder功能，在atom中烧录最新版的atomMain。
 
 **ROS 图标** ：
 
