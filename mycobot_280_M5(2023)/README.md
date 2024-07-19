@@ -38,28 +38,13 @@
 # Summary
 * * 产品信息
     * [1. 产品简介](1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.md)
-        * [1.1 产品概述](1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.md#产品概述)
-        * [1.2 产品应用](1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.md#产品应用)
-        * [1.3 支持的扩展开发](1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.md#支持的扩展开发)
-        * [1.4 购买地址](1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.md#购买地址)
+
     * [2. 产品参数](1-ProductInformation/2.ProductParameter/2-ProductParameters.md)
-        * [2.1 机器规格参数](1-ProductInformation/2.ProductParameter/2-ProductParameters.md#机器规格参数)
-        * [2.2 控制核心参数](1-ProductInformation/2.ProductParameter/2-ProductParameters.md#控制核心参数)
-        * [2.3 结构尺寸参数](1-ProductInformation/2.ProductParameter/2-ProductParameters.md#结构尺寸参数)
-        * [2.4 电气特性参数](1-ProductInformation/2.ProductParameter/2-ProductParameters.md#电气特性参数)
-        * [2.5 笛卡尔坐标系](1-ProductInformation/2.ProductParameter/2-ProductParameters.md#笛卡尔坐标系)
 
 * 基础设置
     * [3. 用户须知](2-BasicSettings/3.UserNotice/3-UserInstructions.md)
-        * [3.1 安全须知](2-BasicSettings/3.UserNotice/3-UserInstructions.md#安全须知)
-        * [3.2 运输和储存](2-BasicSettings/3.UserNotice/3-UserInstructions.md#运输和储存)
-        * [3.3 维护和保养](2-BasicSettings/3.UserNotice/3-UserInstructions.md#维护和保养)
-        * [3.4 常见问题解决](2-BasicSettings/3.UserNotice/3-UserInstructions.md#常见问题解决)
+
     * [4. 首次安装](2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.md)
-        * [4.1 产品标准清单](2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.md#产品标准清单)
-        * [4.2 产品开箱指南](2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.md#产品开箱指南)
-        * [4.3 开机检测指南](2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.md#开机检测指南)
-        * [4.4 安装视频教程](2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.md#安装视频教程)
 
 * 功能与应用
     * [5. 基础功能](3-FunctionsAndApplications/5.BasicFunction/README.md)
@@ -85,10 +70,5 @@
         * [8.5 宣传资料](3-FunctionsAndApplications\8.SupportingResources\8.5-PromotionalMaterials/README.md)
 
 * 支持与服务
-    * [9. 故障排除](support-services/troubleshooting.md)
-    * [10. 购买信息](support-services/purchasing-info.md)
-    * [11. 关于我们](support-services/about-us.md)
-        * [11.1 大象机器人](support-services/elephant-robotics.md)
-        * [11.2 联系我们](support-services/contact-us.md)
-
-* [致谢](acknowledgements.md)
+       * [联系我们](4-SupportAndService/11.AboutUs/11.AboutUs.md)
+* [致谢](5-Acknowledgments/5-Acknowledgments.md)
