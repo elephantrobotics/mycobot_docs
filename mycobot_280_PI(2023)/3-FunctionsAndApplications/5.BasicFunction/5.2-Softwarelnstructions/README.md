@@ -1,6 +1,6 @@
 # myStudio
 
-![封面](../../../resources/3-FunctionsAndApplications/5.2-Softwarelnstructions/mystudioShow.jpg)
+![封面](../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.2-Softwarelnstructions/mystudioShow.jpg)
 
 **[myStudio视频教程](https://www.bilibili.com/video/BV1Qr4y1N7B5/)**
 
@@ -111,10 +111,10 @@ myCobot 280系列共4个版本：M5版本、PI版本、ardunio版本以及jetson
 
 第一步：与PC连接。用 USB 连接末端的Atom。
 
-![Atom链接](G:\elephant robotics\gitbook(new)\mycobot_docs\mycobot_docs\mycobot_280_PI(2023)\resources\3-FunctionsAndApplications\5.2-Softwarelnstructions\atom_PC.jpg)
+![Atom链接](../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.2-Softwarelnstructions\atom_PC.jpg)
 
 
 第二步：在`Board`一栏可以选择`ATOM`,侧边栏`Basic`就会出现 Atom 的固件。Atom 的固件就只有一个，点击烧入即可（下图以myCobot 280为例）。
 
-![Atom链接](G:\elephant robotics\gitbook(new)\mycobot_docs\mycobot_docs\mycobot_280_PI(2023)\resources\3-FunctionsAndApplications\5.2-Softwarelnstructions\atom2.jpg)
+![Atom链接](../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.2-Softwarelnstructions\atom2.jpg)
 

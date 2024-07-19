@@ -49,10 +49,17 @@ JavaScript易于学习但很难掌握并用于各种用途，从简单地增强�
 您可以根据以下指引来使用JavaScript对我们的机械臂进行开发
 
 1.[开发前准备](./11.1-PreparationsBeforeDevelopment.md)
+
 2.[开发准备](./11.2-PreparationsForDevelopment.md)
+
 3.[IO控制](./11.3-IO_Control.md)
+
 4.[关节控制](./11.4-Joint_Control.md)
+
 5.[夹爪控制](./11.5-Gripper_Control.md)
+
 6.[什么是js](./11.6-What_is_JS.md)
+
 7.[使用案例](./11.7-Use_Cases.md)
+
 8.[api说明](./11.8-API_Description.md)

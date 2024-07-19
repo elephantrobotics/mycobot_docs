@@ -2,7 +2,7 @@
 
 注意：使用通信协议直接通信，需要在basic中烧录transponder，在atom中烧录最新版的atomMain
 
-![communication](../../../resources/3-FunctionsAndApplications/6.developmentGuide/CommunicationProtocolPackage/box_connect_PC.jpg)
+![communication](../../../resource/3-FunctionsAndApplications/6.developmentGuide/CommunicationProtocolPackage/box_connect_PC.jpg)
 
 ### 1 机械臂运动参数
 

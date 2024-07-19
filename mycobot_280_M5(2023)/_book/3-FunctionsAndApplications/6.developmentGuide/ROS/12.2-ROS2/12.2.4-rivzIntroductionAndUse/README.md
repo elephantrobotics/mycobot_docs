@@ -14,7 +14,7 @@ rviz2
 
 打开rviz2,显示如下界面：
 
-<img src =../../../resourse/12-ApplicationBaseROS/rviz-1.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz-1.png
 width ="500"  align = "center">
 
 ## 2 各个区域介绍
@@ -41,13 +41,13 @@ width ="500"  align = "center">
 
 点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-10.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-11.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-12.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-12.png
 width ="500"  align = "center">
 
 然后输入以下指令：
@@ -87,11 +87,11 @@ source install/setup.bash
 ros2 launch mycobot_280 test.launch.py
 ```
 
-![image-20220519154315585](../../../resourse/12-ApplicationBaseROS/ros2_open1.png)
+![image-20220519154315585](../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/ros2_open1.png)
 
 打开rviz2，并得到如下结果：
 
-<img src =../../../resourse/12-ApplicationBaseROS/open-2.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/open-2.png
 width ="500"  align = "center">
 
 如果您想了解更多rviz的相关资料信息，您可以前往[官方文档](http://wiki.ros.org/rviz2)进行查看
@@ -139,13 +139,13 @@ ros2 launch mycobot_280 slider_control.launch.py
 
 点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-10.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-11.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-12.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-12.png
 width ="500"  align = "center">
 
 然后运行命令：
@@ -159,13 +159,13 @@ ros2 launch mycobot_280pi slider_control.launch.py
 
 点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-10.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-11.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-12.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-12.png
 width ="500"  align = "center">
 
 然后运行命令：
@@ -177,7 +177,7 @@ ros2 launch mycobot_280jn slider_control.launch.py
 
 它将**打开 rviz 和一个滑块组件**，你将看到如下画面（树莓派版本画面略有差异，不影响使用）：
 
-<img src =../../../resourse/12-ApplicationBaseROS/caf-1.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/caf-1.png
 width ="500"  align = "center">
 
 接着你可以**通过拖动滑块来控制 rviz 中的模型移动**。真实的 mycobot 将跟着一起运动.
@@ -202,13 +202,13 @@ ros2 launch mycobot_280 mycobot_follow.launch.py
 
 点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-12.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
 width ="500"  align = "center">
 
 然后运行命令：
@@ -222,13 +222,13 @@ ros2 launch mycobot_280pi mycobot_follow.launch.py
 
 点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-12.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
 width ="500"  align = "center">
 
 然后运行命令：
@@ -259,13 +259,13 @@ ros2 launch mycobot_280 simple_gui.launch.py
 
 点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-12.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
 width ="500"  align = "center">
 
 然后运行命令：
@@ -279,13 +279,13 @@ ros2 launch mycobot_280pi simple_gui.launch.py
 
 点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-12.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
 width ="500"  align = "center">
 
 然后运行命令：
@@ -295,8 +295,7 @@ width ="500"  align = "center">
 ros2 launch mycobot_280jn simple_gui.launch.py
 ```
 
-
-<img src =../../../resourse/12-ApplicationBaseROS/gui-1.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//gui-1.png
 width ="500"  align = "center">
 
 ### 4 键盘控制
@@ -317,13 +316,13 @@ ros2 launch mycobot_280 teleop_keyboard.launch.py
 
 点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-12.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
 width ="500"  align = "center">
 
 然后运行命令：
@@ -337,13 +336,13 @@ ros2 launch mycobot_280pi teleop_keyboard.launch.py
 
 点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-12.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
 width ="500"  align = "center">
 
 然后运行命令：
@@ -355,7 +354,7 @@ ros2 launch mycobot_280jn teleop_keyboard.launch.py
 
 运行效果如下：
 
-<img src =../../../resourse/12-ApplicationBaseROS/kb-1.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//kb-1.png
 width ="500"  align = "center">
 
 命令行中将会输出 mycobot 信息，如下：
@@ -401,13 +400,13 @@ ros2 run mycobot_280 teleop_keyboard
 
 点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-12.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
 width ="500"  align = "center">
 
 然后运行命令：
@@ -420,13 +419,13 @@ ros2 run mycobot_280pi teleop_keyboard
 
 点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-12.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
 width ="500"  align = "center">
 
 然后运行命令：
@@ -485,13 +484,13 @@ ros2 launch mycobot_280 test_pump.launch.py
 
 点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-12.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
 width ="500"  align = "center">
 
 然后运行命令：
@@ -522,13 +521,13 @@ ros2 launch mycobot_280 slider_control_pump.launch.py
 
 点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-12.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
 width ="500"  align = "center">
 
 然后运行命令：
@@ -563,7 +562,7 @@ ros2 launch mycobot_280 simple_gui_pump.launch.py
 
 它将**打开rviz和一个GUI界面**，你将看到如下画面：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.1.4-14.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.1.4-14.png
 width ="500"  align = "center">
 
 #### 5.2 摄像头法兰
@@ -582,13 +581,13 @@ ros2 launch mycobot_280 test_camera_flange.launch.py
 
 点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-12.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
 width ="500"  align = "center">
 
 然后运行命令：
@@ -599,7 +598,7 @@ ros2 launch mycobot_280pi test_camera_flange.launch.py
 
 它将**打开 rviz**，你将看到如下画面（树莓派版本画面略有差异，不影响使用）：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.1.4-15.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.1.4-15.png
 width ="500"  align = "center">
 
 ##### 2 滑块控制
@@ -619,13 +618,13 @@ ros2 launch mycobot_280 slider_control_camera_flange.launch.py
 
 点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-12.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
 width ="500"  align = "center">
 
 然后运行命令：
@@ -637,7 +636,7 @@ ros2 launch mycobot_280pi slider_control_camera_flange.launch.py
 
 它将**打开 rviz 和一个滑块组件**，你将看到如下画面（树莓派版本画面略有差异，不影响使用）：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.1.4-17.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.1.4-17.png
 width ="500"  align = "center">
 
 接着你可以**通过拖动滑块来控制 rviz 中的模型移动**。真实的 mycobot 将跟着一起运动.
@@ -661,13 +660,13 @@ ros2 launch mycobot_280 test_camera_flange_pump.launch.py
 
 点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
 width ="500"  align = "center">
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.2.7-12.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
 width ="500"  align = "center">
 
 然后运行命令：
@@ -678,7 +677,7 @@ ros2 launch mycobot_280pi test_camera_flange_pump.launch.py
 
 它将**打开 rviz**，你将看到如下画面（树莓派版本画面略有差异，不影响使用）：
 
-<img src =../../../resourse/12-ApplicationBaseROS/12.1.4-18.png
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.1.4-18.png
 width ="500"  align = "center">
 
 #### 5.3 URDF模型地址

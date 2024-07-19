@@ -1,12 +1,12 @@
 ## myBlockly是什么？
 
-![](../../../../resources/3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/myblockly界面.jpg)
+![](../../../../resource\3-FunctionsAndApplications\6.developmentGuide\myBlocklyAndUlFlow/myblockly界面.jpg)
 
 **myBlockly** 是基于python环境以及pymycobot依赖库的拼图式编程软件，是一种拖拽式编程。可以让用户以搭积木式的方法进行编程控制mycobot。它允许通过拖拽代码构建块或者其他视觉线索，而不是手动编写基于文本的代码。如此一来，复杂又抽象的编程语言就变得容易理解。特别适合初学者学习编程，锻炼编程思维。myblockly还提供了python展示界面，将用户搭建的myblockly程序转换为python语言程序，以此帮助用户学习python语句。**myBlockly** 在功能/设计上和MIT的儿童编程语言Scratch类似。
 
 
 ## myBlockly安装
-![](../../../../resources/3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/myblockly下载.jpg)
+![](../../../../resource\3-FunctionsAndApplications\6.developmentGuide\myBlocklyAndUlFlow/myblockly下载.jpg)
 
 **myBlockly的下载地址：**
 - GitHub 地址：https://github.com/elephantrobotics/myblockly-package/releases

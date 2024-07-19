@@ -23,10 +23,18 @@
 ## 2. 微处理类设备出厂固件：python demo
 目前微处理类设备已开放的python demo有：
 - [drag_trial_teaching](https://github.com/elephantrobotics/pymycobot/blob/main/demo/drag_trial_teaching.py) 
-- [拖动示教](4.2.1-moving/4.2.1.2-micro_CPU.md)。操作员可以直接拖着机器人各关节，运动到理想的姿态，通过键盘按键操作将动作保存在机器中。协作机器人是较早具有该功能的系统。这种示教方式可以避免传统示教的各种缺点，是机器人中一项很有应用前景的技术。
+
+- [拖动示教](4.2.1-moving/4.2.1.2-micro_CPU.md)。
+
+  操作员可以直接拖着机器人各关节，运动到理想的姿态，通过键盘按键操作将动作保存在机器中。协作机器人是较早具有该功能的系统。这种示教方式可以避免传统示教的各种缺点，是机器人中一项很有应用前景的技术。
+
 - [rasp_mycobot_test_gui](https://github.com/elephantrobotics/pymycobot/blob/main/tests/rasp_mycobot_test_gui.py) 
-  - 此python demo为微处理类设备的测试工具，包含功能校准机械臂和连接检测。
+  
+  此python demo为微处理类设备的测试工具，包含功能校准机械臂和连接检测。
+  
 - [校准机械臂](4.2.2-calibration/4.2.2.2-micro_CPU.md)是对机械臂精准控制的前提，设置关节零位，初始化电机的电位值是后续进行进阶开发的基础。
+
 - [连接检测](4.2.4-connection/4.2.4.2-micro_CPU.md)是一项用机械臂中电机以及Atom连接状态的检测功能。这项功能便于客户排除设备故障。连接检测中看到机械臂的设备连接状态，包括舵机的连接以及Atom 的通讯状态**。**微控制器类设备中M5Stack-basic上会显示设备的当前固件版本。
-  - [电脑控制]
+  
+- 电脑控制
   目前可以使用VNC和SSH对280pi机械臂进行远程控制。
