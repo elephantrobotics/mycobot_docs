@@ -5,8 +5,8 @@
 
 **注意**：
 
-- 现阶段，**myCobot 280系列** 、 **myCobot 320系列**、**myPalletizer260系列**、**mechArm270系列** 均支持 **ROS** 的使用，具体情况各种设备的开发情况可参考[**设备的开发**](../4-BasicApplication/README.md)。
-- 通过使用 [**mystudio**](../4-BasicApplication/4.1-myStudio/README.md) 烧录相应的固件。其中，在basic中烧录minirobot，选择transponder功能，在atom中烧录最新版的atomMain。
+- 现阶段，**myCobot 280系列** 、 **myCobot 320系列**、**myPalletizer260系列**、**mechArm270系列** 均支持 **ROS** 的使用
+- 通过使用 **mystudio** 烧录相应的固件。其中，在basic中烧录minirobot，选择transponder功能，在atom中烧录最新版的atomMain。
 
 **ROS 图标** ：
 
@@ -60,9 +60,7 @@
 
 **设备说明：**
 
-- 以上使用设备中，myCobot 280-Pi、myCobot 280-JetsonNano、myCobot 320-Pi、mechArm-270 PI等版本自带Ubuntu（V-18.04）系统，已经内置了开发环境，所以无需搭建管理，直接使用即可。
-
-- myCobot 280-M5、myCobot 320-M5、myCobot 280-Arduino、myPalletizer 260、mechArm-270-M5等版本需要搭建环境使用，但在ROS/ROS2中，只需 [搭建ROS环境](12.1-ROS1/12.1.2-环境搭建.md) 或者 [搭建ROS2环境](12.2-ROS2/12.2.1-ROS2的安装.md)即可。
+- **以上使用设备中，myCobot 280-Pi、myCobot 280-JetsonNano、myCobot 320-Pi、mechArm-270 PI等版本自带Ubuntu（V-18.04）系统，已经内置了开发环境，所以无需搭建管理，直接使用即可。
 
 # MoveIt 简介
 

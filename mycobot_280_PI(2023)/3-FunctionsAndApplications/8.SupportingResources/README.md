@@ -21,5 +21,4 @@
 宣传资料部分包含280 pi机械臂的产品宣传册、展示视频及客户案例。这些资料不仅展示了机械臂的核心优势和应用场景，还提供了实际应用中的成功案例，帮助潜在客户更直观地了解产品的价值。
 
 ---
-
-[上一章](../7.SuccessfulCase/7-SuccessfulCases.md) | [下一章](../../4-SupportAndService/11.AboutUs/11.AboutUs.md)
+- [上一章](../7.SuccessfulCase/7-SuccessfulCases.md)- /[下一章](../../4-SupportAndService/11.AboutUs/11.AboutUs.md)

@@ -41,7 +41,7 @@
   <img src="../resourse/2-serialproduct/2.0/trans-3.jpg" style="zoom:55%;" />
   </div>
 
-- 适用的开发方式有：[myBlockly](../5-ProgramingApplication-myblockly-uiflow-mind/5.1-myblockly/README.md), [Python](../7-ApplicationBasePython/README.md), [C++](../8-ApplicationBaseCPlus/README.md), [C#](../9-ApplicationBaseCSharp/README.md), [Arduino](../10-ArduinoEnv/README.md), [JavaScript](../11-ApplicationBaseJavaScript/README.md), [ROS](../12-ApplicationBaseROS/README.md)，具体如何编程操作请点击查看以上对应链接
+- 适用的开发方式有：myBlockly, Python, C++, C#, Arduino, JavaScript, ROS。
 
 
 ## PI
@@ -98,4 +98,4 @@
   <img src="../resourse/2-serialproduct/myCobot 280/Pi/2.1.2.3开箱与首次使用/PI连接1.jpg" style="zoom:25%;" />
   </div>
 
-- 适用的开发方式有：[myBlockly](../5-ProgramingApplication-myblockly-uiflow-mind/5.1-myblockly/README.md), [Python](../7-ApplicationBasePython/README.md), [C++](../8-ApplicationBaseCPlus/README.md), [C#](../9-ApplicationBaseCSharp/README.md), [ROS](../12-ApplicationBaseROS/README.md)，具体如何编程操作请点击查看以上对应链接
+- 适用的开发方式有：myBlockly, Python, ROS。
