@@ -20,4 +20,4 @@ mycobot 280 pi版本机器无需搭配PC、笔记本等设备，连接显示器�
 
 ---
 
-[← 上一章](../5.BasicFunction/README.md) | [下一章 →](../7.SuccessfulCases/7-SuccessfulCases.md)
+[← 上一章](../5.BasicFunction/README.md) | [下一章 →](../7.SuccessfulCase/7-SuccessfulCases.md)

@@ -164,4 +164,4 @@ poster="" data-setup='{"aspectRatio":"16:9"}'>
 ---
 
 如果您已经阅读了本章的所有内容，请继续阅读下一章。 <br>
-[← 上一章](../3.UserNotice/3-UserInstructions.md) | [下一章 →](../../3-FunctionsAndApplications/5-BasicFunctions/README.md)
+[← 上一章](../3.UserNotice/3-UserInstructions.md) | [下一章 →](../../3-FunctionsAndApplications/5.BasicFunction/README.md)

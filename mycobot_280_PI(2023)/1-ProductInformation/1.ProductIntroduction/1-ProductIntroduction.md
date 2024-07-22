@@ -53,8 +53,6 @@ myCobot 280 pi机械臂是大象机器人专为：科研教育、创客应用、
 
 
 ### 应用场景
-![应用场景](../../resource/1-ProductInformation/1.ProductIntroduction/Application.gif)
-
 | 适用人群                   | **应用场景**                                                 | **优势目标**                                                 |
 | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **教育领域的教师和学生**   | - STEM 教育<br>- 机器人项目<br>- 跨学科研究项目<br>- 教育与研究 | - 提高学生对科技的兴趣<br>- 增强动手能力和解决问题的能力<br>- 促进创新思维和团队合作<br>- 为数据收集和机器人学提供实践平台 |
@@ -87,4 +85,4 @@ Shopify：[https://shop.elephantrobotics.com/](https://shop.elephantrobotics.com
 
 ---
 
-[下一章 →](../2.ProductParameters/2-ProductParameters.md)
+[下一章 →](../2.ProductParameter/2-ProductParameters.md)

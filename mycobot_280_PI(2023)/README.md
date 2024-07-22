@@ -30,7 +30,6 @@
 #### 致谢
 我们非常感谢您花时间阅读myCobot 280 pi 用户手册。我们希望本文档能够帮助您更好地了解并有效使用这款机器人，从而激发您的创造力。如果您有任何疑问或需要进一步帮助，请随时联系我们的客户支持团队。我们期待看到您使用 myCobot 280 pi完成创新项目，并欢迎您加入我们快速发展的开发者社区。
 
-
 文档目录  
 
 ---
@@ -39,17 +38,23 @@
 * [Introduction](README.md)
 * 产品信息
     * [1. 产品简介](1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.md)
-
     * [2. 产品参数](1-ProductInformation/2.ProductParameter/2-ProductParameters.md)
 * 基础设置
     * [3. 用户须知](2-BasicSettings/3.UserNotice/3-UserInstructions.md)
-
+    
     * [4. 首次安装](2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.md)
+        * [4.1如何正确寻求帮助](2-BasicSettings/4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.md)
+        * [4.2常见的驱动问题以及解决方案](2-BasicSettings/4-SupportAndService/9.Troubleshooting/9.1-driver.md)
+        * [4.3常见的软件问题以及解决方案](2-BasicSettings/4-SupportAndService/9.Troubleshooting/9.2-software.md)
+        * [4.4常见的硬件问题以及解决方案](2-BasicSettings/4-SupportAndService/9.Troubleshooting/9.3-hardware.md)
 * 功能与应用
     * [5. 基础功能](3-FunctionsAndApplications/5.BasicFunction/README.md)
         * [5.1 pi版本机械臂入门](3-FunctionsAndApplications/5.BasicFunction/5.1-Functionlnstruction/README.md)
         * [5.2 系统基础功能说明](3-FunctionsAndApplications/5.BasicFunction/5.2-Softwarelnstructions/README.md)
         * [5.3 固件功能说明](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/README.md)
+            * [5.3.1拖动示教](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.1-moving/4.2.1.2-micro_CPU.md)
+            * [5.3.2机械臂校准](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.2-calibration/4.2.2.2-micro_CPU.md)
+            * [5.3.3链接检查](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.4-connection/4.2.4.2-micro_CPU.md)
     * [6. 软件开发指南](3-FunctionsAndApplications/6.developmentGuide/README.md)
         * [6.1 基于python开发使用](3-FunctionsAndApplications/6.developmentGuide/python/README.md)
             * [6.1.1环境搭建](3-FunctionsAndApplications/6.developmentGuide/python/1_download.md)
