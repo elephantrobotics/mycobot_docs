@@ -1,0 +1,1666 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6.8.4关节控制 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="11.5-Gripper_Control.html" />
+    
+    
+    <link rel="prev" href="11.3-IO_Control.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    产品信息
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../../1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.html">
+            
+                <a href="../../../1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.html">
+            
+                    
+                    1. 产品简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../../1-ProductInformation/2.ProductParameter/2-ProductParameters.html">
+            
+                <a href="../../../1-ProductInformation/2.ProductParameter/2-ProductParameters.html">
+            
+                    
+                    2. 产品参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    基础设置
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../../2-BasicSettings/3.UserNotice/3-UserInstructions.html">
+            
+                <a href="../../../2-BasicSettings/3.UserNotice/3-UserInstructions.html">
+            
+                    
+                    3. 用户须知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../../2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.html">
+            
+                <a href="../../../2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.html">
+            
+                    
+                    4. 首次安装
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.html">
+            
+                <a href="../../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.html">
+            
+                    
+                    4. 1问题解决思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../../4-SupportAndService/9.Troubleshooting/9.1-driver.html">
+            
+                <a href="../../../4-SupportAndService/9.Troubleshooting/9.1-driver.html">
+            
+                    
+                    4. 2常见的驱动问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../../4-SupportAndService/9.Troubleshooting/9.2-software.html">
+            
+                <a href="../../../4-SupportAndService/9.Troubleshooting/9.2-software.html">
+            
+                    
+                    4. 3常见的软件问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../../4-SupportAndService/9.Troubleshooting/9.3-hardware.html">
+            
+                <a href="../../../4-SupportAndService/9.Troubleshooting/9.3-hardware.html">
+            
+                    
+                    4. 3常见的硬件问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    功能与应用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../5.BasicFunction/">
+            
+                <a href="../../5.BasicFunction/">
+            
+                    
+                    5. 基础功能
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../5.BasicFunction/5.1-Functionlnstruction/">
+            
+                <a href="../../5.BasicFunction/5.1-Functionlnstruction/">
+            
+                    
+                    5.1 系统（功能）使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../5.BasicFunction/5.2-Softwarelnstructions/">
+            
+                <a href="../../5.BasicFunction/5.2-Softwarelnstructions/">
+            
+                    
+                    5.2 软件使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../5.BasicFunction/5.3-FirmwareFunctionDescription/">
+            
+                <a href="../../5.BasicFunction/5.3-FirmwareFunctionDescription/">
+            
+                    
+                    5.3 固件功能说明
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.3.1" data-path="../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.1-moving/5.3.1.1-micro_controller.html">
+            
+                <a href="../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.1-moving/5.3.1.1-micro_controller.html">
+            
+                    
+                    5.3.1拖动示教
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.2" data-path="../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.2-calibration/5.3.2.1-micro_controller.html">
+            
+                <a href="../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.2-calibration/5.3.2.1-micro_controller.html">
+            
+                    
+                    5.3.2校准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.3" data-path="../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.3-transponder/5.3.3.1-micro_controller.html">
+            
+                <a href="../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.3-transponder/5.3.3.1-micro_controller.html">
+            
+                    
+                    5.3.3电脑控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.4" data-path="../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.4-connection/5.3.4.1-micro_controller.html">
+            
+                <a href="../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.4-connection/5.3.4.1-micro_controller.html">
+            
+                    
+                    5.3.4链接检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    6. 软件开发指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../python/">
+            
+                <a href="../python/">
+            
+                    
+                    6.1 基于python开发使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1.1" data-path="../python/1_download.html">
+            
+                <a href="../python/1_download.html">
+            
+                    
+                    6.1.1环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2" data-path="../python/2_API.html">
+            
+                <a href="../python/2_API.html">
+            
+                    
+                    6.1.2api说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3" data-path="../python/3_angle.html">
+            
+                <a href="../python/3_angle.html">
+            
+                    
+                    6.1.3关节控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.4" data-path="../python/4_coord.html">
+            
+                <a href="../python/4_coord.html">
+            
+                    
+                    6.1.4坐标控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.5" data-path="../python/5_IO.html">
+            
+                <a href="../python/5_IO.html">
+            
+                    
+                    6.1.5 IO控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.6" data-path="../python/6_gripper.html">
+            
+                <a href="../python/6_gripper.html">
+            
+                    
+                    6.1.6夹爪控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.7" data-path="../python/7_TCPIP.html">
+            
+                <a href="../python/7_TCPIP.html">
+            
+                    
+                    6.1.7 TCP&IP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.8" data-path="../python/9_HandleControl.html">
+            
+                <a href="../python/9_HandleControl.html">
+            
+                    
+                    6.1.8手柄控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.9" data-path="../python/15_280_gcode_draw.html">
+            
+                <a href="../python/15_280_gcode_draw.html">
+            
+                    
+                    6.1.9绘制图案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.10" data-path="../python/8_example.html">
+            
+                <a href="../python/8_example.html">
+            
+                    
+                    6.1.10演示代码与视频
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../ROS/12.1-ROS1/12.1.1-Introduction.html">
+            
+                <a href="../ROS/12.1-ROS1/12.1.1-Introduction.html">
+            
+                    
+                    6.2 基于ROS1 开发使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.2.1" data-path="../ROS/12.1-ROS1/12.1.2-EnvironmentBuilding.html">
+            
+                <a href="../ROS/12.1-ROS1/12.1.2-EnvironmentBuilding.html">
+            
+                    
+                    6.2.1 ROS1环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.2" data-path="../ROS/12.1-ROS1/12.1.3-ROS_Basics.html">
+            
+                <a href="../ROS/12.1-ROS1/12.1.3-ROS_Basics.html">
+            
+                    
+                    6.2.2 ROS1基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.3" data-path="../ROS/12.1-ROS1/12.1.4-rivzIntroductionAndUse/">
+            
+                <a href="../ROS/12.1-ROS1/12.1.4-rivzIntroductionAndUse/">
+            
+                    
+                    6.2.3 rivz介绍以及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.4" data-path="../ROS/12.1-ROS1/12.1.5-Moveit/">
+            
+                <a href="../ROS/12.1-ROS1/12.1.5-Moveit/">
+            
+                    
+                    6.2.4 Moveit介绍以及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../ROS/12.2-ROS2/12.2.3-ROS2Introduction.html">
+            
+                <a href="../ROS/12.2-ROS2/12.2.3-ROS2Introduction.html">
+            
+                    
+                    6.3 基于ROS2 开发使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.3.1" data-path="../ROS/12.2-ROS2/12.2.1-InstallationOfROS2.html">
+            
+                <a href="../ROS/12.2-ROS2/12.2.1-InstallationOfROS2.html">
+            
+                    
+                    6.3.1 ROS2环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.2" data-path="../ROS/12.2-ROS2/12.2.2-BasicTutorial.html">
+            
+                <a href="../ROS/12.2-ROS2/12.2.2-BasicTutorial.html">
+            
+                    
+                    6.3.2 ROS2基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.3" data-path="../ROS/12.2-ROS2/12.2.4-rivzIntroductionAndUse/">
+            
+                <a href="../ROS/12.2-ROS2/12.2.4-rivzIntroductionAndUse/">
+            
+                    
+                    6.3.3 rivz介绍以及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/">
+            
+                    
+                    6.4 基于Blockly 开发使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.4.1" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.1-myBlocklyFirstUse.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.1-myBlocklyFirstUse.html">
+            
+                    
+                    6.4.1myBlockly初始使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.2" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.2-ControlRGB.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.2-ControlRGB.html">
+            
+                    
+                    6.4.2控制RGB灯板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.3" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.3-ControlRoboticArmBackZero.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.3-ControlRoboticArmBackZero.html">
+            
+                    
+                    6.4.3控制机械臂回到原点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.4" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.4-ControlSingleJoint.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.4-ControlSingleJoint.html">
+            
+                    
+                    6.4.4控制单关节运动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.5" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.5-ControlSinglesJoint.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.5-ControlSinglesJoint.html">
+            
+                    
+                    6.4.5控制多个关节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.6" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.6-ControlRoboticSwingLeft&Right.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.6-ControlRoboticSwingLeft&Right.html">
+            
+                    
+                    6.4.6控制机械臂左右摆动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.7" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.7-ControlRoboticArmDance.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.7-ControlRoboticArmDance.html">
+            
+                    
+                    6.4.7控制机械臂跳舞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.8" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.html">
+            
+                    
+                    6.4.8夹爪的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.9" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.html">
+            
+                    
+                    6.4.9吸泵的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.10" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.html">
+            
+                    
+                    6.4.10夹爪测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.11" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.14-ioTest.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.14-ioTest.html">
+            
+                    
+                    6.4.11 IO测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.12" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.html">
+            
+                    
+                    6.4.12Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Cplus/">
+            
+                <a href="../Cplus/">
+            
+                    
+                    6.5 基于C++ 开发使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.5.1" data-path="../Cplus/8.1-download.html">
+            
+                <a href="../Cplus/8.1-download.html">
+            
+                    
+                    6.5.1环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5.2" data-path="../Cplus/8.2-build.html">
+            
+                <a href="../Cplus/8.2-build.html">
+            
+                    
+                    6.5.2编译运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5.3" data-path="../Cplus/8.3-angle.html">
+            
+                <a href="../Cplus/8.3-angle.html">
+            
+                    
+                    6.5.3关节控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5.4" data-path="../Cplus/8.4-coord.html">
+            
+                <a href="../Cplus/8.4-coord.html">
+            
+                    
+                    6.5.4坐标控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5.5" data-path="../Cplus/8.5-io.html">
+            
+                <a href="../Cplus/8.5-io.html">
+            
+                    
+                    6.5.5 IO控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5.6" data-path="../Cplus/8.6-gripper.html">
+            
+                <a href="../Cplus/8.6-gripper.html">
+            
+                    
+                    6.5.6 夹爪控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5.7" data-path="../Cplus/8.7-API.html">
+            
+                <a href="../Cplus/8.7-API.html">
+            
+                    
+                    6.5.7 api说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5.8" data-path="../Cplus/8.8-example.html">
+            
+                <a href="../Cplus/8.8-example.html">
+            
+                    
+                    6.5.8使用案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Csharp/">
+            
+                <a href="../Csharp/">
+            
+                    
+                    6.6 基于C# 开发使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.6.1" data-path="../Csharp/9.1-environment.html">
+            
+                <a href="../Csharp/9.1-environment.html">
+            
+                    
+                    6.6.1环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6.2" data-path="../Csharp/9.2-build.html">
+            
+                <a href="../Csharp/9.2-build.html">
+            
+                    
+                    6.6.2编译运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6.3" data-path="../Csharp/9.3-angle.html">
+            
+                <a href="../Csharp/9.3-angle.html">
+            
+                    
+                    6.6.3关节控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6.4" data-path="../Csharp/9.4-coord.html">
+            
+                <a href="../Csharp/9.4-coord.html">
+            
+                    
+                    6.6.4坐标控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6.5" data-path="../Csharp/9.5-io.html">
+            
+                <a href="../Csharp/9.5-io.html">
+            
+                    
+                    6.6.5 IO控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6.6" data-path="../Csharp/9.6-gripper.html">
+            
+                <a href="../Csharp/9.6-gripper.html">
+            
+                    
+                    6.6.6夹爪控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6.7" data-path="../Csharp/9.7-API.html">
+            
+                <a href="../Csharp/9.7-API.html">
+            
+                    
+                    6.6.7api说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6.8" data-path="../Csharp/9.8-example.html">
+            
+                <a href="../Csharp/9.8-example.html">
+            
+                    
+                    6.6.8使用案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="../Arduino/">
+            
+                <a href="../Arduino/">
+            
+                    
+                    6.7 基于Arduino 开发使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.7.1" data-path="../Arduino/10.1-arduino_download.html">
+            
+                <a href="../Arduino/10.1-arduino_download.html">
+            
+                    
+                    6.7.1环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7.2" data-path="../Arduino/10.2-arduino_use.html">
+            
+                <a href="../Arduino/10.2-arduino_use.html">
+            
+                    
+                    6.7.2简单使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7.3" data-path="../Arduino/10.3-api.html">
+            
+                <a href="../Arduino/10.3-api.html">
+            
+                    
+                    6.7.3API说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    6.8 基于JavaScript开发使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.8.1" data-path="11.1-PreparationsBeforeDevelopment.html">
+            
+                <a href="11.1-PreparationsBeforeDevelopment.html">
+            
+                    
+                    6.8.1开发前准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8.2" data-path="11.2-PreparationsForDevelopment.html">
+            
+                <a href="11.2-PreparationsForDevelopment.html">
+            
+                    
+                    6.8.2开发准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8.3" data-path="11.3-IO_Control.html">
+            
+                <a href="11.3-IO_Control.html">
+            
+                    
+                    6.8.3 IO控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2.8.4" data-path="11.4-Joint_Control.html">
+            
+                <a href="11.4-Joint_Control.html">
+            
+                    
+                    6.8.4关节控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8.5" data-path="11.5-Gripper_Control.html">
+            
+                <a href="11.5-Gripper_Control.html">
+            
+                    
+                    6.8.5夹爪控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8.6" data-path="11.6-What_is_JS.html">
+            
+                <a href="11.6-What_is_JS.html">
+            
+                    
+                    6.8.6什么是js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8.7" data-path="11.7-Use_Cases.html">
+            
+                <a href="11.7-Use_Cases.html">
+            
+                    
+                    6.8.7使用案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8.8" data-path="11.8-API_Description.html">
+            
+                <a href="11.8-API_Description.html">
+            
+                    
+                    6.8.8 api说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.9" data-path="../CommunicationProtocolPackage/18-communication.html">
+            
+                <a href="../CommunicationProtocolPackage/18-communication.html">
+            
+                    
+                    6.9 基于串口通信协议开发使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../7.SuccessfulCase/7-SuccessfulCases.html">
+            
+                <a href="../../7.SuccessfulCase/7-SuccessfulCases.html">
+            
+                    
+                    7. 成功案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../8.SupportingResources/">
+            
+                <a href="../../8.SupportingResources/">
+            
+                    
+                    8. 配套资源
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../8.SupportingResources/8.1-ProductInformation/">
+            
+                <a href="../../8.SupportingResources/8.1-ProductInformation/">
+            
+                    
+                    8.1 产品资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../../8.SupportingResources/8.2-ProductDrawings/">
+            
+                <a href="../../8.SupportingResources/8.2-ProductDrawings/">
+            
+                    
+                    8.2 产品图纸
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../../8.SupportingResources/8.3-SoftwareInformationAndSourceCode/">
+            
+                <a href="../../8.SupportingResources/8.3-SoftwareInformationAndSourceCode/">
+            
+                    
+                    8.3 软件资料及源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../../8.SupportingResources/8.4-SystemInformation/">
+            
+                <a href="../../8.SupportingResources/8.4-SystemInformation/">
+            
+                    
+                    8.4 系统资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../../8.SupportingResources/8.5-PromotionalMaterials/">
+            
+                <a href="../../8.SupportingResources/8.5-PromotionalMaterials/">
+            
+                    
+                    8.5 宣传资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    支持与服务
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../../4-SupportAndService/11.AboutUs/11.AboutUs.html">
+            
+                <a href="../../../4-SupportAndService/11.AboutUs/11.AboutUs.html">
+            
+                    
+                     联系我们
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../../5-Acknowledgments/5-Acknowledgments.html">
+            
+                <a href="../../../5-Acknowledgments/5-Acknowledgments.html">
+            
+                    
+                    致谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >6.8.4关节控制</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#1-&#x5355;&#x5173;&#x8282;&#x63A7;&#x5236;"><b>1.1.1. </b>1 &#x5355;&#x5173;&#x8282;&#x63A7;&#x5236;</a></li><li><span class="title-icon "></span><a href="#2-&#x591A;&#x5173;&#x8282;&#x63A7;&#x5236;"><b>1.1.2. </b>2 &#x591A;&#x5173;&#x8282;&#x63A7;&#x5236;</a></li><li><span class="title-icon "></span><a href="#3-&#x56DB;&#x516D;&#x8F74;&#x673A;&#x68B0;&#x81C2;&#x89D2;&#x5EA6;&#x5750;&#x6807;&#x53C2;&#x6570;&#x6807;&#x51C6;"><b>1.1.3. </b>3 &#x56DB;&#x516D;&#x8F74;&#x673A;&#x68B0;&#x81C2;&#x89D2;&#x5EA6;&#x5750;&#x6807;&#x53C2;&#x6570;&#x6807;&#x51C6;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="1-&#x5355;&#x5173;&#x8282;&#x63A7;&#x5236;"><a name="1-&#x5355;&#x5173;&#x8282;&#x63A7;&#x5236;" class="anchor-navigation-ex-anchor" href="#1-&#x5355;&#x5173;&#x8282;&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. 1 &#x5355;&#x5173;&#x8282;&#x63A7;&#x5236;</h3>
+<pre><code>&lt;!-- &#x521D;&#x59CB;&#x5316;&#x7A0B;&#x5E8F; --&gt;
+const mycobot = require(&apos;mycobot&apos;)
+
+const obj = mycobot.connect(&apos;COM15&apos;,115200)
+
+&lt;!-- &#x8BBE;&#x7F6E;&#x5355;&#x72EC;&#x673A;&#x68B0;&#x81C2;&#x7684;&#x89D2;&#x5EA6; mycobot.sendAngle(&#x673A;&#x68B0;&#x81C2;ID,&#x89D2;&#x5EA6;&#x503C;,&#x673A;&#x68B0;&#x81C2;&#x8C03;&#x6574;&#x89D2;&#x5EA6;&#x65F6;&#x8FD0;&#x8F6C;&#x7684;&#x901F;&#x5EA6;)--&gt;
+&lt;!-- &#x6CE8;&#x610F;:&#x5728;&#x8BBE;&#x7F6E;&#x66F4;&#x6362;&#x89D2;&#x5EA6;&#x7684;&#x503C;&#x5F97;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x673A;&#x68B0;&#x81C2;&#x5173;&#x8282;&#x7684;&#x6570;&#x91CF;,4&#x8282;&#x5219;&#x8F93;&#x5165;1~4;6&#x8282;&#x5219;&#x8F93;&#x5165;1~6,&#x5426;&#x5219;&#x62A5;&#x9519; --&gt;
+&lt;!-- &#x56DB;&#x8F74;&#x516D;&#x8F74;&#x673A;&#x68B0;&#x81C2;&#x89D2;&#x5EA6;&#x8BBE;&#x7F6E;&#x8BE6;&#x89C1;1-3&#x56FE;&#x8868; --&gt;
+obj.write(mycobot.sendAngle(1,110,10))
+
+&lt;!-- &#x8BBE;&#x7F6E;&#x5355;&#x72EC;&#x673A;&#x68B0;&#x81C2;&#x7684;&#x5750;&#x6807; mycobot.sendCoord(&#x673A;&#x68B0;&#x81C2;ID,&#x5750;&#x6807;&#x503C;,&#x673A;&#x68B0;&#x81C2;&#x8C03;&#x6574;&#x5750;&#x6807;&#x65F6;&#x7684;&#x8FD0;&#x52A8;&#x901F;&#x5EA6;)--&gt;
+obj.write(mycobot.sendCoord(1,20,10))
+</code></pre><h3 id="2-&#x591A;&#x5173;&#x8282;&#x63A7;&#x5236;"><a name="2-&#x591A;&#x5173;&#x8282;&#x63A7;&#x5236;" class="anchor-navigation-ex-anchor" href="#2-&#x591A;&#x5173;&#x8282;&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. 2 &#x591A;&#x5173;&#x8282;&#x63A7;&#x5236;</h3>
+<h4 id="&#x6CE8;&#x610F;&#xFF1A;&#x5728;&#x64CD;&#x4F5C;&#x591A;&#x5173;&#x8282;&#x65F6;&#xFF0C;&#x5E94;&#x6309;&#x7167;&#x673A;&#x68B0;&#x81C2;&#x5173;&#x8282;&#x6570;&#xFF0C;&#x586B;&#x5165;&#x76F8;&#x5BF9;&#x5E94;&#x6570;&#x91CF;&#x7684;&#x53C2;&#x6570;"><a name="&#x6CE8;&#x610F;&#xFF1A;&#x5728;&#x64CD;&#x4F5C;&#x591A;&#x5173;&#x8282;&#x65F6;&#xFF0C;&#x5E94;&#x6309;&#x7167;&#x673A;&#x68B0;&#x81C2;&#x5173;&#x8282;&#x6570;&#xFF0C;&#x586B;&#x5165;&#x76F8;&#x5BF9;&#x5E94;&#x6570;&#x91CF;&#x7684;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x610F;&#xFF1A;&#x5728;&#x64CD;&#x4F5C;&#x591A;&#x5173;&#x8282;&#x65F6;&#xFF0C;&#x5E94;&#x6309;&#x7167;&#x673A;&#x68B0;&#x81C2;&#x5173;&#x8282;&#x6570;&#xFF0C;&#x586B;&#x5165;&#x76F8;&#x5BF9;&#x5E94;&#x6570;&#x91CF;&#x7684;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6CE8;&#x610F;&#xFF1A;&#x5728;&#x64CD;&#x4F5C;&#x591A;&#x5173;&#x8282;&#x65F6;&#xFF0C;&#x5E94;&#x6309;&#x7167;&#x673A;&#x68B0;&#x81C2;&#x5173;&#x8282;&#x6570;&#xFF0C;&#x586B;&#x5165;&#x76F8;&#x5BF9;&#x5E94;&#x6570;&#x91CF;&#x7684;&#x53C2;&#x6570;</h4>
+<pre><code>&lt;!-- &#x521D;&#x59CB;&#x5316;&#x7A0B;&#x5E8F; --&gt;
+const mycobot = require(&apos;mycobot&apos;)
+
+const obj = mycobot.connect(&apos;COM15&apos;,115200)
+
+&lt;!-- &#x8BBE;&#x7F6E;&#x591A;&#x5173;&#x8282;&#x673A;&#x68B0;&#x81C2;&#x89D2;&#x5EA6; mycobot.sendAngles([&#x5173;&#x8282;&#x4E00;&#x89D2;&#x5EA6;,&#x5173;&#x8282;&#x4E8C;&#x89D2;&#x5EA6;,&#x5173;&#x8282;&#x4E09;&#x89D2;&#x5EA6;,&#x5173;&#x8282;&#x56DB;&#x89D2;&#x5EA6;,&#x5173;&#x8282;&#x4E94;&#x89D2;&#x5EA6;,&#x5173;&#x8282;&#x516D;&#x89D2;&#x5EA6;],&#x5173;&#x8282;&#x8FD0;&#x4F5C;&#x901F;&#x5EA6;) --&gt;
+obj.write(mycobot.sendAngles([-110,23,-22,110],20))
+
+&lt;!-- &#x8BBE;&#x7F6E;&#x591A;&#x5173;&#x8282;&#x673A;&#x68B0;&#x81C2;&#x5750;&#x6807; mycobot.sendCoords([&#x5173;&#x8282;&#x4E00;&#x5750;&#x6807;,&#x5173;&#x8282;&#x4E8C;&#x5750;&#x6807;,&#x5173;&#x8282;&#x4E09;&#x5750;&#x6807;,&#x5173;&#x8282;&#x56DB;&#x5750;&#x6807;,&#x5173;&#x8282;&#x4E94;&#x5750;&#x6807;,&#x5173;&#x8282;&#x516D;&#x5750;&#x6807;],&#x5173;&#x8282;&#x8FD0;&#x4F5C;&#x901F;&#x5EA6;) --&gt;
+obj.write(mycobot.sendCoords([22.5,12,-22,45],20))
+</code></pre><h3 id="3-&#x56DB;&#x516D;&#x8F74;&#x673A;&#x68B0;&#x81C2;&#x89D2;&#x5EA6;&#x5750;&#x6807;&#x53C2;&#x6570;&#x6807;&#x51C6;"><a name="3-&#x56DB;&#x516D;&#x8F74;&#x673A;&#x68B0;&#x81C2;&#x89D2;&#x5EA6;&#x5750;&#x6807;&#x53C2;&#x6570;&#x6807;&#x51C6;" class="anchor-navigation-ex-anchor" href="#3-&#x56DB;&#x516D;&#x8F74;&#x673A;&#x68B0;&#x81C2;&#x89D2;&#x5EA6;&#x5750;&#x6807;&#x53C2;&#x6570;&#x6807;&#x51C6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. 3 &#x56DB;&#x516D;&#x8F74;&#x673A;&#x68B0;&#x81C2;&#x89D2;&#x5EA6;&#x5750;&#x6807;&#x53C2;&#x6570;&#x6807;&#x51C6;</h3>
+<ul>
+<li>&#x56DB;&#x8F74;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x5173;&#x8282;ID</th>
+<th>&#x9650;&#x503C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>-160~160</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0~90</td>
+</tr>
+<tr>
+<td>3</td>
+<td>-90~45</td>
+</tr>
+<tr>
+<td>4</td>
+<td>&#x65E0;&#x9650;&#x503C;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x516D;&#x8F74;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x5173;&#x8282;ID</th>
+<th>&#x9650;&#x503C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>-170~170</td>
+</tr>
+<tr>
+<td>2</td>
+<td>-170~170</td>
+</tr>
+<tr>
+<td>3</td>
+<td>-170~170</td>
+</tr>
+<tr>
+<td>4</td>
+<td>-170~170</td>
+</tr>
+<tr>
+<td>5</td>
+<td>-170~170</td>
+</tr>
+<tr>
+<td>6</td>
+<td>&#x65E0;&#x9650;&#x503C;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="11.3-IO_Control.html" class="navigation navigation-prev " aria-label="Previous page: 6.8.3 IO控制">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="11.5-Gripper_Control.html" class="navigation navigation-next " aria-label="Next page: 6.8.5夹爪控制">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.8.4关节控制","level":"1.4.2.8.4","depth":4,"next":{"title":"6.8.5夹爪控制","level":"1.4.2.8.5","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/JavaScript/11.5-Gripper_Control.md","ref":"3-FunctionsAndApplications/6.developmentGuide/JavaScript/11.5-Gripper_Control.md","articles":[]},"previous":{"title":"6.8.3 IO控制","level":"1.4.2.8.3","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/JavaScript/11.3-IO_Control.md","ref":"3-FunctionsAndApplications/6.developmentGuide/JavaScript/11.3-IO_Control.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","livereload"],"pluginsConfig":{"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":true,"insertAnchor":true,"showGoTop":true,"mini":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":"","bottom":"20px","offset":{"top":10,"left":10},"minWidth":"70px","floatIcon":"fa fa-navicon","zIndex":"1000","trigger":"click","right":"20px","show":true}},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-FunctionsAndApplications/6.developmentGuide/JavaScript/11.4-Joint_Control.md","mtime":"2024-07-15T02:35:54.615Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-23T08:04:29.982Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

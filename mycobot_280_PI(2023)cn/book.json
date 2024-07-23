@@ -1,0 +1,8 @@
+{
+  "plugins": ["toc"],
+  "pluginsConfig": {
+    "toc": {
+      "position": "right"
+    }
+  }
+}
