@@ -6,9 +6,9 @@
 
 本文档包含从产品简介、详细的技术参数到用户须知和产品开发指导的全面信息。文档将深入介绍myCobot 280 pi机械臂的基础功能，并提供软件开发指南，展示成功的应用案例，帮助您了解如何将myCobot 280 pi有效整合进各种应用中。此外，我们还提供了丰富的支持与服务信息，确保您在遇到任何技术挑战时能够获得必要的帮助。
 ### gitbook-en
-英文版本: https://docs.elephantrobotics.com/docs/gitbook-en/2-serialproduct/2.1-280/2.1.1-M5.html
+英文版本: https://docs.elephantrobotics.com/docs/mycobot-pi-en/
 ### gitbook-cn
-中文版本:https://docs.elephantrobotics.com/docs/mycobot-m5-cn/2-serialproduct/2.1-280/2.1.6-M5-2023.html
+中文版本:https://docs.elephantrobotics.com/docs/mycobot-pi-cn/
 
 文档说明
 ---
@@ -57,17 +57,17 @@
             * [5.3.3链接检查](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.4-connection/4.2.4.2-micro_CPU.md)
     * [6. 软件开发指南](3-FunctionsAndApplications/6.developmentGuide/README.md)
         * [6.1 基于python开发使用](3-FunctionsAndApplications/6.developmentGuide/python/README.md)
-            * [6.1.1环境搭建](3-FunctionsAndApplications/6.developmentGuide/python/1_download.md)
-        	* [6.1.2api说明](3-FunctionsAndApplications/6.developmentGuide/python/2_API.md)
-        	* [6.1.3关节控制](3-FunctionsAndApplications/6.developmentGuide/python/3_angle.md)
-        	* [6.1.4坐标控制](3-FunctionsAndApplications/6.developmentGuide/python/4_coord.md)
-        	* [6.1.5 IO控制](3-FunctionsAndApplications/6.developmentGuide/python/5_IO.md)
-        	* [6.1.6夹爪控制](3-FunctionsAndApplications/6.developmentGuide/python/6_gripper.md)
-        	* [6.1.7 TCP&IP](3-FunctionsAndApplications/6.developmentGuide/python/7_TCPIP.md)
-        	* [6.1.8手柄控制](3-FunctionsAndApplications/6.developmentGuide/python/9_HandleControl.md)
-        	* [6.1.9绘制图案](3-FunctionsAndApplications/6.developmentGuide/python/15_280_gcode_draw.md)
-        	* [6.1.10演示代码与视频](3-FunctionsAndApplications/6.developmentGuide/python/8_example.md)
-        * [6.2 基于ROS1 开发使用](3-FunctionsAndApplications/6.developmentGuide/ROS/README.md)
+            * [6.1.1环境搭建](3-FunctionsAndApplications/6.developmentGuide/python/7.1_download.md)
+        	* [6.1.2api说明](3-FunctionsAndApplications/6.developmentGuide/python/7.2_API.md)
+        	* [6.1.3关节控制](3-FunctionsAndApplications/6.developmentGuide/python/7.3_angle.md)
+        	* [6.1.4坐标控制](3-FunctionsAndApplications/6.developmentGuide/python/7.4_coord.md)
+        	* [6.1.5 IO控制](3-FunctionsAndApplications/6.developmentGuide/python/7.5_IO.md)
+        	* [6.1.6夹爪控制](3-FunctionsAndApplications/6.developmentGuide/python/7.6_gripper.md)
+        	* [6.1.7 TCP&IP](3-FunctionsAndApplications/6.developmentGuide/python/7.7_TCPIP.md)
+        	* [6.1.8手柄控制](3-FunctionsAndApplications/6.developmentGuide/python/7.9_HandleControl.md)
+        	* [6.1.9绘制图案](3-FunctionsAndApplications/6.developmentGuide/python/7.15_280_gcode_draw.md)
+        	* [6.1.10演示代码与视频](3-FunctionsAndApplications/6.developmentGuide/python/7.8_example.md)
+        * [6.2 基于ROS1 开发使用](3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.1-Introduction.md)
             * [6.2.1 ROS1环境搭建](3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.2-EnvironmentBuilding.md)
             * [6.2.2 ROS1基础](3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.3-ROS_Basics.md)
             * [6.2.3 rivz介绍以及使用](3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.4-rivzIntroductionAndUse/README.md)
