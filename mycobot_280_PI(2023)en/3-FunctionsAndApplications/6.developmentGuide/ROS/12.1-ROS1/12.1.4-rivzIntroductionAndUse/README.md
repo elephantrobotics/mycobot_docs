@@ -2,7 +2,7 @@
 
 rviz is a 3D visualization platform in ROS. On the one hand, it can realize the graphical display of external information. On the other hand, it can also release control information to objects through rviz, thereby realizing the monitoring and control of robots.
 
-## 1 Introduction to the installation and interface of rviz
+## Introduction to the installation and interface of rviz
 
 When installing ros, if you perform a complete installation, rviz has been installed, and you can try to run it directly; if it is not fully installed, you can install rviz separately:
 
@@ -37,7 +37,7 @@ Open rviz and the following interface will be displayed:
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/rviz-1.png
 width ="500" align = "center">
 
-### 1.1 Introduction to each area
+### Introduction to each area
 
 + On the left is the display list. A display is something that draws something in the 3D world and may have some options available in the display list.
 
@@ -51,7 +51,7 @@ width ="500" align = "center">
 
 In this section, we will only give a rough introduction. If you want to know more details, you can go to the [User Guide](http://wiki.ros.org/rviz/UserGuide) to check it out.
 
-## 2 mycobot_ros installation and update
+## mycobot_ros installation and update
 
 - **M5 version:** Please see the end of the [13.1.2 Environment Setup](../12.2.1-ROS2的安装.md) section.
 
@@ -87,7 +87,7 @@ source devel/setup.bash # Add environment variables
 
 Note: If the `mycobot_ros` folder already exists in the `/home/er/catkin_ws/src (equivalent to ~/catkin_ws/src)` directory, you need to delete the original `mycobot_ros` first, and then execute the above command. Among them, `er` in the directory path is the user name of the virtual machine. If it is inconsistent, please modify it.
 
-## 3 Simple use
+## Simple use
 
 **Start through the launch file**
 
@@ -128,7 +128,7 @@ width ="500" align = "center">
 
 If you want to learn more about rviz, you can go to the [official document](http://wiki.ros.org/rviz) to view it
 
-## 4 M5 version prerequisites
+## M5 version prerequisites
 
 - Open the console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>), open the terminal window to view the device name:
 
@@ -155,7 +155,7 @@ Then enter the user password (**Note:** The password will not be displayed, just
 
 ## Robot arm control
 
-### 1 Slider control
+### Slider control
 
 Open a command line and run:
 
@@ -224,7 +224,7 @@ rosrun mycobot_280arduino slider_control.py _port:=/dev/ttyACM0 _baud:=115200
 **Please note: due to the commandThe robot arm will move to the current position of the model while inputting. Before you use the command, please make sure that the model in rviz does not have any penetration**
 **Do not drag the slider quickly after connecting the robot arm to prevent damage to the robot arm**
 
-### 2 Model following
+### Model following
 
 In addition to the above controls, we can also **let the model follow the real robot arm movement**. Open a command line and run:
 - mycobot 280-M5 version:
@@ -273,7 +273,7 @@ roslaunch mycobot_280arduino mycobot_follow.launch
 ```
 It will **open rviz to show the model following effect**.
 
-### 3 GUI control
+### GUI control
 
 Based on the previous, this package also **provides a simple Gui control interface**. This method is intended for real robotic arms to interact with each other, please connect mycobot.
 
@@ -305,7 +305,7 @@ roslaunch mycobot_280arduino simple_gui.launch port:=/dev/ttyACM0 baud:=115200
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/gui-1.png
 width ="500" align = "center">
 
-### 4 Keyboard control
+### Keyboard control
 
 **Added the keyboard control function** in the `mycobot_280` package, and synchronized it in real time in rviz. This function depends on pythonApi, so make sure it is connected to the real robot arm.
 
@@ -467,13 +467,13 @@ Parameters supported by this script:
 
 + _change_percent: movement distance percentage.
 
-### 5 Vision
+### Vision
 > Install the camera at the end of mycobot. This vision part uses the eye-in-hand method.
 
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/camera_connect-1.jpg
 width ="500" align = "center">
 
-#### 5.1 Identify and display
+####  Identify and display
 Command line operation:
 - mycobot 280-M5 version:
 ```bash
@@ -505,7 +505,7 @@ Recognize the QR code and obtain the relative position relationship with the cam
 
 You can refer to [Slider Control](##1421-Slider Control) and use `slider_control.py` to control the robot arm
 
-#### 5.2 Visual Tracking and Grasping
+####  Visual Tracking and Grasping
 >This section requires the use of a vertical suction pump.
 
 Run from command line:
@@ -578,7 +578,7 @@ After the marker is recognized, follow it for a while, then try to absorb and en
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/vision-4.png
 width ="500" align = "center">
 
-### 6 End effector
+### End effector
 
 - **Supported end effectors:** myCobot Adaptive Gripper, myCobot Vertical Suction Pump V2.0, Camera Flange
 
@@ -586,7 +586,7 @@ width ="500" align = "center">
 
 > Note: myCobot Adaptive Gripper only supports myCobot 280 M5 devices
 
-#### 6.1 myCobot Adaptive Gripper
+#### myCobot Adaptive Gripper
 
 ##### 1 Load the model
 
@@ -788,7 +788,7 @@ Parameters supported by this script:
 + _speed: robot movement speed.
 + _change_percent: percentage of moving distance.
 
-#### 6.2 myCobot vertical pump V2.0
+#### myCobot vertical pump V2.0
 
 ##### 1 Load the model
 
@@ -940,7 +940,7 @@ Parameters supported by this script:
 
 + _change_percent: movement distance percentage.
 
-#### 6.3 Camera Flange
+#### Camera Flange
 
 ##### 1 Load the model
 
@@ -1007,7 +1007,7 @@ rosrun mycobot_280pi slider_control.py _port:=/dev/ttyAMA0 _baud:=1000000
 **Please note: Since the robot will move to the current position of the model when the command is input, please make sure that the model in rviz does not have any penetration before you use the command**.
 **Do not drag the slider quickly after connecting the robot to prevent damage to the robot**.
 
-#### 6.4 Camera Flange && Pump
+#### Camera Flange && Pump
 
 ##### 1 Load the model
 
@@ -1030,7 +1030,7 @@ It will **open rviz** and you will see the following:
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/12.1.4-18.png
 width ="500" align = "center">
 
-#### 6.5 URDF model address
+#### URDF model address
 
 ##### 1 myCobot adaptive gripper
 

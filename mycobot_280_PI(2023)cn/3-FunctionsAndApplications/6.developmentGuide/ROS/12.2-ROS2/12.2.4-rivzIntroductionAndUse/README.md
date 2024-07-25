@@ -2,7 +2,7 @@
 
 rviz是ROS中一款三维可视化平台，一方面能够实现对外部信息的图形化显示，另外还可以通过 rviz 给对象发布控制信息，从而实现对机器人的监测与控制。
 
-## 1 rviz2的简介
+## rviz2的简介
 
 ros2安装成功表明rviz2也一起安装成功了，因为ros2的安装包含了rviz2。
 
@@ -17,7 +17,7 @@ rviz2
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/rviz-1.png
 width ="500"  align = "center">
 
-## 2 各个区域介绍
+## 各个区域介绍
 
 + 左侧为显示器列表，显示器是在3D世界中绘制某些内容的东西，并且可能在显示列表中具有一些可用的选项。
 + 上方是工具栏，允许用户用各种功能按键选择多种功能的工具
@@ -27,7 +27,7 @@ width ="500"  align = "center">
 
 本部分我们只进行粗略的介绍，如果您想了解更多详细的内容，可以前往[用户指南](http://wiki.ros.org/rviz/UserGuide)进行查看。
 
-## 3 mycobot_ros2安装与更新
+## mycobot_ros2安装与更新
 
 - **PI版本(Ubuntu 20.04)：**
 
@@ -62,7 +62,7 @@ source install/setup.bash # 添加环境变量
 **注意：** 若`/home/er/colcon_ws/src (等效于 ~/colcon_ws/src)`目录中已经存在`mycobot_ros2`文件夹，则需要先删除原有的 `mycobot_ros2`，再执行以上命令。
 
 
-## 4 简单使用
+## 简单使用
 
 **通过launch.py文件启动**
 
@@ -98,7 +98,7 @@ width ="500"  align = "center">
 
 ## 机械臂的控制
 
-### 1 滑块控制
+### 滑块控制
 
 打开一个命令行，运行：
 
@@ -159,7 +159,7 @@ width ="500"  align = "center">
 **请注意：由于在命令输入的同时机械臂会移动到模型目前的位置，在您使用命令之前请确保rviz中的模型没有出现穿模现象**
 **不要在连接机械臂后做出快速拖动滑块的行为，防止机械臂损坏**
 
-### 2 模型跟随
+### 模型跟随
 
 除了上面的控制，我们也可以**让模型跟随真实的机械臂运动**。打开一个命令行运行：
 
@@ -212,7 +212,7 @@ ros2 launch mycobot_280jn mycobot_follow.launch.py
 
 它将**打开 rviz 展示模型跟随效果**。
 
-### 3 GUI 控制
+### GUI 控制
 
 在前面的基础上，本包还**提供了简单的 Gui 控制界面**。 该方式意在于真实机械臂相互联动，请连接 mycobot。
 
@@ -268,7 +268,7 @@ ros2 launch mycobot_280jn simple_gui.launch.py
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/gui-1.png
 width ="500"  align = "center">
 
-### 4 键盘控制
+### 键盘控制
 
 在 `mycobot_280` 的包中**添加了键盘控制的功能**，并在 rviz 中实时同步。本功能依赖 pythonApi，所以确保与真实机械臂连接。
 
@@ -433,12 +433,12 @@ currently:	speed: 10	change percent: 2
 
 在该终端中，您可以通过命令行中的按键控制机械臂的状态和对机械臂进行移动操作。
 
-### 5 末端执行器
+### 末端执行器
 
 - **支持的末端执行器：** myCobot垂直吸泵V2.0、摄像头法兰
 - **适用设备：** myCobot 280 M5、myCobot 280 PI
 
-#### 5.1 myCobot垂直吸泵V2.0
+#### myCobot垂直吸泵V2.0
 
 ##### 1 加载模型
 
@@ -535,7 +535,7 @@ ros2 launch mycobot_280 simple_gui_pump.launch.py
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.1.4-14.png
 width ="500"  align = "center">
 
-#### 5.2 摄像头法兰
+#### 摄像头法兰
 
 ##### 1 加载模型
 
@@ -614,7 +614,7 @@ width ="500"  align = "center">
 **请注意：由于在命令输入的同时机械臂会移动到模型目前的位置，在您使用命令之前请确保rviz中的模型没有出现穿模现象**。
 **不要在连接机械臂后做出快速拖动滑块的行为，防止机械臂损坏**。
 
-#### 5.3 摄像头法兰 && 吸泵
+#### 摄像头法兰 && 吸泵
 
 ##### 1 加载模型
 
@@ -650,7 +650,7 @@ ros2 launch mycobot_280pi test_camera_flange_pump.launch.py
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.1.4-18.png
 width ="500"  align = "center">
 
-#### 5.3 URDF模型地址
+#### URDF模型地址
 
 ##### 1 myCobot 垂直吸泵V2.0
 

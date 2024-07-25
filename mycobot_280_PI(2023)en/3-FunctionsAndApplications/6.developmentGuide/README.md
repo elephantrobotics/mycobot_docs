@@ -1,10 +1,10 @@
 # Chapter 6 Software Development Guide
 
-## 1 Usage Environment
+## Usage Environment
 
 The mycobot 280 pi version does not require a PC, laptop or other devices. You can connect a monitor to develop applications (**Tip⚠: Please use the HDMI cable shipped with the robot to connect the monitor and use the built-in system for development**.
 
-## 2 Development Environment
+## Development Environment
 
 In order to meet the diverse application needs of robots in different scenarios, we have adapted the robot to multiple programming languages. So far, we have adapted the following mainstream programming languages, and we believe that you can use any of the following languages ​​for development. Please be sure to follow the instructions strictly. Any omitted steps may cause the corresponding language to fail to run successfully. I wish you a smooth use of the robot.
 

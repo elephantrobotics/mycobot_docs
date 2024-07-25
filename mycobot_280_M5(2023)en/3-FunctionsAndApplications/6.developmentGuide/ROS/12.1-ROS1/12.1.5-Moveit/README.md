@@ -1,6 +1,6 @@
 ## MoveIt
 
-### 1 Introduction to MoveIt
+### Introduction to MoveIt
 
 MoveIt is an integrated development platform in ROS, consisting of a variety of function packages for manipulating robotic arms, including: motion planning, manipulation, control, inverse kinematics, 3D perception, and collision detection.
 
@@ -9,7 +9,7 @@ The figure below shows the high-level structure of the main node **move_group** 
 <img src =../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/moveit/moveit-1.png
 width ="500" align = "center">
 
-### 2 User Interface
+### User Interface
 Users can access the operations and services provided by move_group in three ways:
 
 * In C++: Use the move_group_interface package to facilitate the practical use of move_group.
@@ -19,7 +19,7 @@ Users can access the operations and services provided by move_group in three way
 
 move_group can be configured using the ROS parameter server, from which it can also get the robot's URDF and SRDF.
 
-### 3 Configuration
+### Configuration
 move_group is a ROS node. It uses the ROS parameter server to get three kinds of information:
 
 1. URDF - move_group looks up the robot_description parameter on the ROS parameter server to get the robot's URDF.

@@ -2,9 +2,7 @@
 
 **我司产品对于python的支持较为友好，对于pythonAPI库的开发也日益完善，通过python能对机器人的关节角度，坐标，夹爪等多方面进行操控，选择性较多，如果你想通过Python编程来控制我们的机械臂，那么您可学习该章节。**
 
-
-
-## ![README1](../../../resources/3-FunctionsAndApplications/6.developmentGuide/python/python.jpg)
+## ![README1](../../../resource\3-FunctionsAndApplications\6.developmentGuide\python/python.jpg)
 
 **Python** 由荷兰数学和计算机科学研究学会的 Guido van Rossum 于1990 年代初设计，作为一门叫做 ABC 语言的替代品。
 
@@ -16,26 +14,22 @@
 
 **Python** 也可用于可定制化软件中的扩展程序语言。**Python** 丰富的标准库，提供了适用于各个主要系统平台的源码或机器码。
 
-## python开发使用引导
+1.[环境搭建](7.1_download.md)
 
-您可以根据以下指引来使用python对我们的机械臂进行开发
+2.[api说明](7.2_API.md)
 
-1.[环境搭建](1_download.md)
+3.[关节控制](7.3_angle.md)
 
-2.[api说明](2_API.md)
+4.[坐标控制](7.4_coord.md)
 
-3.[关节控制](3_angle.md)
+5.[IO控制](7.5_IO.md)
 
-4.[坐标控制](4_coord.md)
+6.[夹爪控制](7.6_gripper.md)
 
-5.[IO控制](5_IO.md)
+7.[TCP&IP](7.7_TCPIP.md)
 
-6.[夹爪控制](6_gripper.md)
+8.[手柄控制](7.9_HandleControl.md)
 
-7.[TCP&IP](7_TCPIP.md)
+9.[绘制图案](7.15_280_gcode_draw.md)
 
-8.[手柄控制](9_HandleControl.md)
-
-9.[绘制图案](15_280_gcode_draw.md)
-
-10.[演示代码与视频](8_example.md)
+10.[演示代码与视频](7.8_example.md)

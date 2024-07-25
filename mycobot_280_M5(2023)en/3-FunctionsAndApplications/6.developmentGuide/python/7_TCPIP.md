@@ -26,7 +26,11 @@ One thing to note is that the myCobot 280 m5 robot arm only supports the 2.4 GHz
 
 As shown in the figure, the robot arm clicks Transponder->WLAN Server through the button. If the connection is successful, the IP and port number will be displayed. If the connection fails, please check whether the network name and password are set correctly.
 
-![](../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP//Transponder.jpg) <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/WLAN Server1.jpg" style="zoom: 25%;" /> <img src=" ../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP//wificonnecting.jpg" style="zoom: 25%;" /> ## 1.3 Connect to other networks
+![](../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP//Transponder.jpg) 
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/WLAN Server1.jpg" style="zoom: 25%;" /> 
+<img src=" ../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP//wificonnecting.jpg" style="zoom: 25%;" /> 
+
+## 1.3 Connect to other networks
 
 If you need to connect to other networks, you can download the [myBlockly software](https://www.elephantrobotics.com/download/) provided by our company to connect to other networks.
 

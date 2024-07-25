@@ -37,7 +37,7 @@ The myCobot 280 pi robotic arm is a six-degree-of-freedom collaborative robot de
 | **Unique industrial design, extremely compact** | Integrated design, the overall body structure is compact, the net weight is only 860g, and it is very easy to carry. <br/> Modular design, few spare parts, low maintenance cost, can be quickly disassembled and replaced, and plug-and-play is realized. |
 | **High-configuration joint module, support LEGO interface** | Contains 6 high-performance servo motors, fast response, small inertia, and smooth rotation. <br>The base and the end are equipped with LEGO technology parts interface, which is suitable for the development of various micro embedded devices. |
 
-## 2. Product Application
+## Product Application
 
 ![Application Scenario](../../resource/1-ProductInformation/1.ProductIntroduction/ApplicationScenario.png)
 ### User Group
@@ -58,7 +58,7 @@ The myCobot 280 pi robotic arm is a six-degree-of-freedom collaborative robot de
 
 ---
 
-## 3. Supported extended development
+## Supported extended development
 ![Extended development](../../resource/1-ProductInformation/1.ProductIntroduction/peijian2.png)
 The mycobot series of robotic arms are extremely valuable in the fields of education and scientific research, especially in Python and ROS (Robot Operating System), two widely used development environments. These environments provide strong support, allowing the mycobot series of products to be widely used in machine learning, artificial intelligence research, complex motion control, and visual processing tasks. At the same time, with dozens of accessories such as adaptive grippers, camera flanges, suction pumps, etc., you can give full play to myCobot's creative ideas.
 
@@ -72,7 +72,7 @@ The mycobot series of robotic arms are extremely valuable in the fields of educa
 
 ---
 
-## 4. Where to buy
+## Where to buy
 
 If you are interested in purchasing the device, please click on the link below:
 Taobao: [https://shop504055678.taobao.com](https://shop504055678.taobao.com)<br>

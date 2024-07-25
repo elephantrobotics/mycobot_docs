@@ -86,7 +86,7 @@ The mycobot series of robotic arms are extremely valuable in the fields of educa
 ---
 
 
-## 4.purchase address
+## purchase address
 
 If you are interested in purchasing this device, please click on the link below
 

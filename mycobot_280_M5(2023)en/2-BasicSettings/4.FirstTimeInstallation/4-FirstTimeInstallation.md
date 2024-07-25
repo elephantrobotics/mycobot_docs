@@ -135,7 +135,7 @@ As shown in the figure, the motor connection is in good condition
 
 The power-on detection is completed.
 
-## 4. Common Problem Solving
+## Common Problem Solving
 This section aims to help users solve common problems encountered during use, covering hardware, software, drivers, and how to ask questions in the forum. If you encounter problems while using the robotic arm, please read the contents of this section first to find solutions. If the listed problems cannot help you solve and you have more after-sales questions to consult, please add the after-sales butler WeChat.
 
 [How to ask questions elegantly](../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.md)

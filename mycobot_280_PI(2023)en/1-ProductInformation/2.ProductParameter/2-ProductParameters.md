@@ -2,9 +2,9 @@
 
 > In the first chapter, we discussed the selling points of the product and its design concept, providing you with a panoramic perspective of the high-level understanding of the product. Now, let's move on to the second chapter - Robot Parameters. This chapter will be the key to your understanding of the product's technical details. A detailed understanding of these technical parameters will not only help you fully realize the advancement and practicality of our products, but also ensure that you can use these technologies more effectively to meet your specific needs.
 
-## 1 Structural parameters
+## Structural parameters
 
-### 1.1 Robotic arm parameters
+### Robotic arm parameters
 
 | Index | Parameters |
 | :-----------: | :---------: |
@@ -19,12 +19,12 @@
 | Working temperature | -5-45℃ |
 | Communication | Type-C |
 
-### 1.2 Workspace
+### Workspace
 ![Workspace](../../resource/1-ProductInformation/2.ProductParameter/工作范围1.png)
-### 1.3 Specifications and dimensions
+### Specifications and dimensions
 ![Workspace](../../resource/1-ProductInformation/2.ProductParameter/280PI尺寸.png)
 
-### 1.4 Joint range of motion
+### Joint range of motion
 
 | Joint | Range |
 | :--------: | :----------:|
@@ -35,7 +35,7 @@
 | J5 | -165 ~ +165 |
 | J6 | -180 ~ +180 |
 
-### 1.5 Hole installation
+### Hole installation
 
 - The robot base is mounted with flanges. The base is compatible with both LEGO technology and M4 screw installation.
 
@@ -45,7 +45,7 @@
 
 <img src="../../resource/1-ProductInformation/2.ProductParameter/末端2.png" style="zoom:60%;" />
 
-## 2 Electronic parameters
+## Electronic parameters
 
 | Indicators | Parameters |
 | :---------: | :--------------:|
@@ -58,9 +58,9 @@
 | Custom buttons | No |
 | IO interface | 40 |
 
-## 4. Electrical characteristic parameters
-### 1 Electrical interface of the robotic arm base
-### 1.1 Base introduction
+## Electrical characteristic parameters
+### Electrical interface of the robotic arm base
+### Base introduction
 
 * A. The front of the base is shown in the figure below:
 ![Front of the base](../../resource/1-ProductInformation/2.ProductParameter/basefront.png)
@@ -76,7 +76,7 @@
 - ③ HDMI
 - ④ Audio interface
 
-### 1.2 Base interface description
+### Base interface description
 
 > **Note:** The function interface groups are all 2.54mm DuPont interfaces, and 2.54mm DuPont cables can be used externally.
 
@@ -147,9 +147,9 @@ Figure 2.1.5.2-6
 
 * I. SD card slot: SD card can be inserted and removed. The size of the SD card is 32mm×24mmx2.1mm
 
-## 2 Electrical interface of the end of the robot
+## Electrical interface of the end of the robot
 
-### 2.1 Introduction to the end of the robot
+### Introduction to the end of the robot
 
 * A. The end of the robot is shown in Figure 2.1.5.2-7 and Figure 2.1.5.2-8:
 
@@ -166,7 +166,7 @@ Figure 2.1.5.2-8 End of the robot
 - ② Grove
 - ③ Type C
 
-### 2.2 Terminal Interface Description
+### Terminal Interface Description
 
 * A. The definitions of each interface of Function Interface Group 2 are shown in the following table:
 
@@ -207,7 +207,7 @@ Figure 2.1.5.2-10 Grove
 
 * E. Atom: for 5X5 RGB LED (G27) display and key function (G39)
 
-## 5. Cartesian coordinate parameters
+## Cartesian coordinate parameters
 <img src="../../resource/1-ProductInformation/2.ProductParameter/280DH.jpg" style="zoom" style="zoom:60%;" />
 
 SDH parameters are shown in the figure below

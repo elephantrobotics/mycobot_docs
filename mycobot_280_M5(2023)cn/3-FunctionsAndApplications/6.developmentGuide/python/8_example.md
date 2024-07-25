@@ -6,7 +6,7 @@
 
 
 
-## 1 控制RGB灯板
+##  控制RGB灯板
 
 ### myCobot
 
@@ -85,7 +85,7 @@ while i > 0:
 ```
 
 
-## 2 控制机械回原点
+## 控制机械回原点
 
 ```python
 from pymycobot.mycobot import MyCobot

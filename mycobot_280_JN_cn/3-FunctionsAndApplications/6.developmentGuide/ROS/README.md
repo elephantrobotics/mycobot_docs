@@ -5,11 +5,12 @@
 
 **注意**：
 
-- 通过使用**mystudio** 烧录相应的固件。其中，在basic中烧录minirobot，选择transponder功能，在atom中烧录最新版的atomMain。
+- 现阶段，**myCobot 280系列** 、 **myCobot 320系列**、**myPalletizer260系列**、**mechArm270系列** 均支持 **ROS** 的使用
+- 通过使用 **mystudio** 烧录相应的固件。其中，在basic中烧录minirobot，选择transponder功能，在atom中烧录最新版的atomMain。
 
 **ROS 图标** ：
 
-![ROS图标](../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROSicon.png)
+![ROS图标](../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS/ROSicon.png)
 
 **ROS** 是开源的，是用于机器人控制的一种后操作系统，或者说次级操作系统。它提供类似操作系统所提供的功能，包含硬件抽象描述、底层驱动程序管理、共用功能的执行、程序间的消息传递、程序发行包管理，它也提供一些工具程序和库用于获取、建 立、编写和运行多机整合的程序。
 
@@ -29,11 +30,7 @@
 
 与仅支持Linux系统的**ROS**相比，**ROS2**还支持windows、mac甚至RTOS平台。
 
-**[ROS1开发指引](./12.1-ROS1/12.1.1-Introduction.md)**
-
-**[ROS2开发指引](./12.2-ROS2/12.2.3-ROS2Introduction.md)**
-
-**ROS适用设备：**
+**适用设备：**
 
 - myCobot 280
   - myCobot 280 M5
@@ -63,9 +60,7 @@
 
 **设备说明：**
 
-- 以上使用设备中，myCobot 280-Pi、myCobot 280-JetsonNano、myCobot 320-Pi、mechArm-270 PI等版本自带Ubuntu（V-18.04）系统，已经内置了开发环境，所以无需搭建管理，直接使用即可。
-
-- myCobot 280-M5、myCobot 320-M5、myCobot 280-Arduino、myPalletizer 260、mechArm-270-M5等版本需要搭建环境使用，但在ROS/ROS2中，只需搭建ROS环境或者搭建ROS2环境即可。
+- **以上使用设备中，myCobot 280-Pi、myCobot 280-JetsonNano、myCobot 320-Pi、mechArm-270 PI等版本自带Ubuntu（V-18.04）系统，已经内置了开发环境，所以无需搭建管理，直接使用即可。
 
 # MoveIt 简介
 
@@ -73,7 +68,7 @@
 
 **MoveIt 图标** :
 
-![moveit图标](../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/moveiticon.png)
+![moveit图标](../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS/moveiticon.png)
 
 **适用设备：**
 

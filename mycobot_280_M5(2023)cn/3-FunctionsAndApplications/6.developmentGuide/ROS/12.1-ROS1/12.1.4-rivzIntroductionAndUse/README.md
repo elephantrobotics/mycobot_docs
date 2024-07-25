@@ -2,7 +2,7 @@
 
 rviz是ROS中一款三维可视化平台，一方面能够实现对外部信息的图形化显示，另外还可以通过 rviz 给对象发布控制信息，从而实现对机器人的监测与控制。
 
-## 1 rviz的安装及界面简介
+## rviz的安装及界面简介
 
 在安装ros时，如果执行的完全安装，rviz已经安装好了,您可以直接尝试运行；如果没有完全安装，可单独安装rviz:
 
@@ -37,7 +37,7 @@ rviz
 <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz-1.png
 width ="500"  align = "center">
 
-### 1.1 各个区域介绍
+### 各个区域介绍
 
 + 左侧为显示器列表，显示器是在3D世界中绘制某些内容的东西，并且可能在显示列表中具有一些可用的选项。
 + 上方是工具栏，允许用户用各种功能按键选择多种功能的工具
@@ -47,7 +47,7 @@ width ="500"  align = "center">
 
 本部分我们只进行粗略的介绍，如果您想了解更多详细的内容，可以前往[用户指南](http://wiki.ros.org/rviz/UserGuide)进行查看。
 
-## 2 mycobot_ros安装与更新
+## mycobot_ros安装与更新
 
 - **M5版本：** 请查看 6.2.1ROS1环境搭建 章节末尾。
 
@@ -83,7 +83,7 @@ source devel/setup.bash # 添加环境变量
 
 注意： 若`/home/er/catkin_ws/src (等效于 ~/catkin_ws/src)`目录中已经存在`mycobot_ros`文件夹，则需要先删除原有的 `mycobot_ros`，再执行以上命令。其中，目录路径中的`er`为虚拟机的用户名，若不一致请修改。
 
-## 3 简单使用
+## 简单使用
 
 **通过launch文件启动**
 
@@ -127,7 +127,7 @@ width ="500"  align = "center">
 如果您想了解更多rviz的相关资料信息，您可以前往[官方文档](http://wiki.ros.org/rviz)进行查看
 
 
-## 4 M5版本前提条件
+## M5版本前提条件
 
 - 打开控制台终端（ 快捷键 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd> )，打开终端窗口查看设备名称：
 
@@ -158,7 +158,7 @@ sudo chmod 777 /dev/ttyACM0 # 新版本 myCobot280 M5
 
 ## 机械臂的控制
 
-### 1 滑块控制
+### 滑块控制
 
 打开一个命令行，运行：
 
@@ -228,7 +228,7 @@ rosrun mycobot_280arduino slider_control.py _port:=/dev/ttyACM0 _baud:=115200
 **请注意：由于在命令输入的同时机械臂会移动到模型目前的位置，在您使用命令之前请确保rviz中的模型没有出现穿模现象**
 **不要在连接机械臂后做出快速拖动滑块的行为，防止机械臂损坏**
 
-### 2 模型跟随
+### 模型跟随
 
 除了上面的控制，我们也可以**让模型跟随真实的机械臂运动**。打开一个命令行运行：
 - mycobot 280-M5版本：
@@ -280,7 +280,7 @@ roslaunch mycobot_280arduino mycobot_follow.launch
 ```
 它将**打开 rviz 展示模型跟随效果**。
 
-### 3 GUI 控制
+### GUI 控制
 
 在前面的基础上，本包还**提供了简单的 Gui 控制界面**。 该方式意在于真实机械臂相互联动，请连接 mycobot。
 
@@ -312,7 +312,7 @@ roslaunch mycobot_280arduino simple_gui.launch port:=/dev/ttyACM0 baud:=115200
 <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/gui-1.png
 width ="500"  align = "center">
 
-### 4 键盘控制
+### 键盘控制
 
 在 `mycobot_280` 的包中**添加了键盘控制的功能**，并在 rviz 中实时同步。本功能依赖 pythonApi，所以确保与真实机械臂连接。
 
@@ -477,13 +477,13 @@ currently:      speed: 50       change percent 5
 
 + _change_percent：移动距离百分比。
 
-### 5 视觉
+### 视觉
 >将相机安装在 mycobot 的末端。 本视觉部分使用 eye-in-hand 的方式。
 
 <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/camera_connect-1.jpg
 width ="500"  align = "center">
 
-#### 5.1识别并显示
+#### 识别并显示
 命令行运行：
 - mycobot 280-M5版本：
 ```bash
@@ -515,7 +515,7 @@ width ="500"  align = "center">
 
 可以参考 [滑块控制](##1421-滑块控制),使用 `slider_control.py` 来控制机械臂
 
-#### 5.2视觉追踪与抓取
+#### 视觉追踪与抓取
 >本部分需要使用垂直吸泵。
 
 命令行运行：
@@ -589,16 +589,16 @@ width ="500"  align = "center">
 <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/vision-4.png
 width ="500"  align = "center">
 
-### 6 末端执行器
+### 末端执行器
 
 - **支持的末端执行器：** myCobot自适应夹爪、myCobot垂直吸泵V2.0、摄像头法兰
 - **适用设备：** myCobot 280 M5、myCobot 280 PI
 
 > 注意：myCobot自适应夹爪仅支持 myCobot 280 M5 设备
 
-#### 6.1 myCobot自适应夹爪
+#### myCobot自适应夹爪
 
-##### 1 加载模型
+##### 加载模型
 
 打开一个命令行，运行：
 
@@ -613,7 +613,7 @@ roslaunch mycobot_280 test_gripper.launch
 <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-10.png
 width ="500"  align = "center">
 
-##### 2 滑块控制
+#####  滑块控制
 
 打开一个命令行，运行：
 
@@ -641,7 +641,7 @@ rosrun mycobot_280 slider_control_gripper.py _port:=/dev/ttyUSB0 _baud:=115200
 **请注意：由于在命令输入的同时机械臂会移动到模型目前的位置，在您使用命令之前请确保rviz中的模型没有出现穿模现象**。
 **不要在连接机械臂后做出快速拖动滑块的行为，防止机械臂损坏**。
 
-##### 3 模型跟随
+##### 模型跟随
 
 除了上面的控制，我们也可以**让模型跟随真实的机械臂运动**。打开一个命令行运行：
 
@@ -662,7 +662,7 @@ roslaunch mycobot_280 mycobot_follow_gripper.launch
 
 它将**打开 rviz 展示模型跟随效果**。
 
-##### 4 GUI控制
+##### GUI控制
 
 在前面的基础上，本包还**提供了简单的 Gui 控制界面**。 该方式意在于真实机械臂相互联动，请连接 myCobot。
 
@@ -680,7 +680,7 @@ roslaunch mycobot_280 simple_gui_gripper.launch port:=/dev/ttyUSB0 baud:=115200
 <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-12.png
 width ="500"  align = "center">
 
-##### 5 键盘控制
+#####  键盘控制
 
 在 `mycobot_280` 的包中**添加了键盘控制的功能**，并在 rviz 中实时同步。本功能依赖 pythonApi，所以确保与真实机械臂连接。
 
@@ -867,7 +867,7 @@ rosrun mycobot_280pi slider_control.py _port:=/dev/ttyAMA0 _baud:=1000000
 **请注意：由于在命令输入的同时机械臂会移动到模型目前的位置，在您使用命令之前请确保rviz中的模型没有出现穿模现象**。
 **不要在连接机械臂后做出快速拖动滑块的行为，防止机械臂损坏**。
 
-##### 3 GUI控制
+##### GUI控制
 
 在前面的基础上，本包还**提供了简单的 Gui 控制界面**。 该方式意在于真实机械臂相互联动，请连接 myCobot。
 
@@ -885,7 +885,7 @@ roslaunch mycobot_280 simple_gui_pump.launch port:=/dev/ttyUSB0 baud:=115200
 <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-14.png
 width ="500"  align = "center">
 
-##### 4 键盘控制
+##### 键盘控制
 
 在 `mycobot_280` 的包中**添加了键盘控制的功能**，并在 rviz 中实时同步。本功能依赖 python API，所以确保与真实机械臂连接。
 
@@ -950,7 +950,7 @@ currently:      speed: 50       change percent 5
 + _speed：机械臂移动速度。
 + _change_percent：移动距离百分比。
 
-#### 6.3 摄像头法兰
+#### 摄像头法兰
 
 ##### 1 加载模型
 
@@ -1017,7 +1017,7 @@ rosrun mycobot_280pi slider_control.py _port:=/dev/ttyAMA0 _baud:=1000000
 **请注意：由于在命令输入的同时机械臂会移动到模型目前的位置，在您使用命令之前请确保rviz中的模型没有出现穿模现象**。
 **不要在连接机械臂后做出快速拖动滑块的行为，防止机械臂损坏**。
 
-#### 6.4 摄像头法兰 && 吸泵
+####  摄像头法兰 && 吸泵
 
 ##### 1 加载模型
 
@@ -1040,7 +1040,7 @@ roslaunch mycobot_280pi test_camera_flange_pump.launch
 <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-18.png
 width ="500"  align = "center">
 
-#### 6.5 URDF模型地址
+#### URDF模型地址
 
 ##### 1 myCobot 自适应夹爪
 

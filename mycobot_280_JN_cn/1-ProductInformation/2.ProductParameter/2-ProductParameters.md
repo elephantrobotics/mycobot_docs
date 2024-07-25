@@ -2,64 +2,62 @@
 
 > 第一章中，我们探讨了产品的卖点及其设计理念，为您提供了对产品高层次理解的全景视角。现在，让我们进入第二章——机器人参数说明。这一章节将是您理解产品技术细节的关键。详细了解这些技术参数，不仅可以帮助您充分认识到我们产品的先进性和实用性，而且还能够确保您能够更有效地利用这些技术来满足您的具体需求。
 
-## 1.机器人规格参数
+<img src="../../resourse/2-serialproduct/myCobot 280/280JNtu.png" style="zoom:100%;" />
 
-![封面](../../resources/1-ProductInformation/2.ProductParameter/main.jpg)
+
+## 1 机器人规格参数
+
+### 机械臂参数
 
 | 指标       | 参数 |
 | :-----------: | :---------: |
 | 名称         | 小象协作机械臂 |
-| 型号         | myCobot 280 for M5 |
+| 型号         | myCobot 280 for Jetson Nano 2020 |
 | 自由度       | 6          |
 | 有效负载     | 250g       |
 | 工作半径     | 280mm      |
 | 重复定位精度 | ±0.5mm  |
-| 重量         | 800g       |
-| 电源输入     | 12V，5A       |
+| 重量         | 1030g   |
+| 电源输入     | 8-12V   |
 | 工作温度     | -5-45℃     |
 | 通信         | Type-C     |
 
 
-## 2.控制核心参数
-
-### 主控制器规格表
-
-| **指标** | **参数**                                                          |
-| :------- | :---------------------------------------------------------------- |
-| **主控制**   | M5Stack-basic                                                     |
-| **主控型号** | ESP32                                                             |
-| **CPU**      | 240MHz 双核心。<br> 600 DMIPS、520KB SRAM。<br> Wi-Fi、双模式蓝牙 |
-| **蓝牙**     | 2.4G/5G                                                           |
-| **无线**     | 2.4G 3D Antenna                                                   |
-| **输入**     | 1, 2, 3, 5, 18, 19, 21, 22, 23, 25, 26, 35, 36                    |
-| **输出**     | 同输入共用                                                        |
-| **LCD 显示器**         | 2.0" @ 320*240 ILI9342C IPS panel, maximum brightness 853nit         |
-| **实体按键**           ||
-
-### 辅助控制器规格表
 
 
-| **指标**           | **参数**                                                        |
-| :----------------- | :-------------------------------------------------------------- |
-| **辅助控制**            | Atom                                                            |
-| **辅助控制型号**        | ESP32                                                           |
-| **辅助控制器核心参数**  | 240MHz 双核。<br> 600 DMIPS，520KB SRAM。<br> Wi-Fi、双模式蓝牙 |
-| **辅助控制器闪光灯**    | 4MB                                                             |
-| **LED矩阵**         | 5*5 LED灯矩阵                                         |
-| **LCD 显示**           | 2.0"@320\*240 ILI9342C IPS 面板，<br> 最大亮度 853nit           |
-| **C 型**                | \*1                                                             |
-| **辅控扩展IO**      | G19, G21, G22, G23, G25, G33                          |
+## 2 控制核心参数
 
+| 指标       | 参数 |
+| :---------: | :------------: |
+| 电源接口 | DC 8.4 v -14 v |
+| 辅控 | ESP32×1 |
+| 核心参数 | 240 MHz dual core. 600 DMIPS, 520KB SRAM. Wi-Fi dual mode Bluetooth |
+| 核心Flash | 4MB |
+| 核心IO | G19、G21、G22、G23、G25、G33 |
+| 主控 | JetsonNano2G |
+| SOC        | Broadcom BCM2711     |
+| 核心CPU      | Quad-core ARM®A57 @1.43 GHz |
+| 核心GPU | 128-core  NVIDIA Maxwell™ |
+| 核心Memory | 2 GB 64-bit LPDDR4 25.6 GB/s |
+| 核心蓝牙 | 2.4G/5G            |
+| 核心网口 | ×1 |
+| 核心无线 | 802.11ac |
+| 核心视频接口 | HDMI×1 |
+| 音频接口 | 3.5mm接口 |
+| USB        | USB 3.0×1<br/>USB 2.0×2 |
+| IO接口     | 2,3,4,5,6,7,9,11,12,13,16,17,18,19,20,21,22,23,24,25,26,27  |
 
----
+## 结构尺寸参数
+### 工作空间
 
-## 3.结构尺寸参数
-> ！本章以毫米为距离单位，以度为角度单位。
+<img src="../../resourse/2-serialproduct/myCobot 280/JN/2.1.3.1产品参数介绍/工作范围.png" style="zoom:100%;" />
 
-### 产品尺寸和工作空间
-![工作范围](../../resources/1-ProductInformation/2.ProductParameter/WorkingRange.png)
-![尺寸规格](../../resources/1-ProductInformation/2.ProductParameter/size.png)
+### 规格尺寸
+
+<img src="../../resourse/2-serialproduct/myCobot 280/JN/2.1.3.1产品参数介绍/jetsonnano规格尺寸.jpg" style="zoom:35%;" />
+
 ### 关节运动范围
+
 | 关节       | 范围 |
 | :--------: | :----------:|
 | J1        | -168 ~ +168     |
@@ -68,87 +66,89 @@
 | J4        | -145 ~ +145 |
 | J5   | -165 ~ +165                   |
 | J6   | -180 ~ +180         |
+
+
 ### 孔位安装
+
 - 机器人底座安装法兰，底座同时兼容乐高科技件安装方式和M4螺丝安装方式。
 
-![孔位安装](../../resources/1-ProductInformation/2.ProductParameter/HoleInstallation1.jpg)
+<img src="../../resourse/2-serialproduct/myCobot 280/JN/2.1.3.1产品参数介绍/jetsonnano底座.jpg" style="zoom:100%;" />
+
 
 - 机器人末端安装法兰，机械臂末端同时兼容乐高科技件孔与螺丝螺纹孔。
 
-![孔位安装](../../resources/1-ProductInformation/2.ProductParameter/HoleInstallation2.jpg)
+<img src="../../resourse/2-serialproduct/myCobot 280/JN/2.1.3.1产品参数介绍/末端.png" style="zoom:60%;" />
 
-## 4.电气特性参数
-### 1 机械臂底座电气接口
-### 1.1 底座介绍
+## 电气特性参数
+## 机械臂底座电气接口
 
-* A. 底座的正面如下图所示：
+### 底座介绍
 
-  ![底座正面](../../resources/1-ProductInformation/2.ProductParameter/BaseFront.png)
-  
-  - ① 功能接口组一
-  - ② Basic显示屏
-  - ③ 按钮1 , 按钮2 , 按钮3
-  
-* B. 底座的左侧面如下图所示:
+A. 底座接口如图 2.1.3.2-1 所示：
 
-  ![底座左侧](../../resources/1-ProductInformation/2.ProductParameter/BaseLeft.png)
+  <img src="../../resourse/2-serialproduct/myCobot 280/JN/2.1.7.2机械臂电器接口/2.1.7.2-1.png" style="zoom:100%;" />
 
-  - ① Grove 1 , Grove 2
+  图 2.1.3.2-1 底座接口
+  - ① 开关按钮
   - ② 电源DC接口
-  - ③ 功能接口组二
-  - ④ 复位按钮
-  - ⑤ Type C 接口
-  - ⑥ Grove 3
+  - ③ 功能接口组一
+  - ④ Type C
+  - ⑤ HDMI
+  - ⑥ USB3.0
+  - ⑦ USB2.0 
+  - ⑧ 网口
+  - ⑨ Micro USB
 
-* C. 底座的右侧面如下图所示:
-
- ![底座右侧](../../resources/1-ProductInformation/2.ProductParameter/BaseRight.png)
-
- ① 功能接口组三
-
-* D. 底座的底部接口面如下图所示:
-
-![底座底面](../../resources/1-ProductInformation/2.ProductParameter/underside.png)
-
- ① 功能接口组四
-
-### 1.2 底座接口说明
+### 底座接口说明
 
 > **注意:** 功能接口组均为2.54mm杜邦接口，外部可使用2.54mm杜邦线。
 
-* A. 功能接口组一与功能接口组四各个接口的定义一致，每个接口的定义如下表所示:
-  
-| 标签 | 信号名 | 类型 | 功能 | 备注 |
-| :---: | :----: | :--: | :------: | :----: |
-| 18 | G18 | I/O | GPIO18 | 在使用TF卡时不可用 |
-| 19 | G19 | I/O | GPIO19 | 在使用TF卡时不可用 |
-| 23 | G23 | I/O | GPIO23 | 在使用TF卡时不可用 |
-| 22 | G22 | I/O | GPIO22 |  |
-| 21 | G21 | I/O | GPIO21 |  |
-| G | GND | P | GND |  |
-| 3V3 | 3V3 | P | DC 3.3V |  |
-| 5V | 5V | P | DC 5V |  |
+* A. 底座功能接口组一的各个接口定义如表 2.1.3.2-1 所示：
 
-
-* B. 功能接口组二与功能接口组三各个接口的定义一致，每个接口的定义如下表所示:
+<center>表 2.1.3.2-1</center>
 
 | 标签 | 信号名 | 类型 | 功能 | 备注 |
 | :---: | :----: | :--: | :------: | :----: |
-| 3 | G3 | I/O | GPIO3 | 在使用TypeC 或 Grove 2 时不可用 |
-| 1 | G1 | I/O | GPIO1 | 在使用TypeC 或 Grove 2 时不可用 |
-| 16 | G16 | I/O | GPIO16 | 暂不支持 |
-| 17 | G17 | I/O | GPIO17 | 暂不支持 |
-| 2 | G2 | I/O | GPIO2 |  |
-| 5 | G5 | I/O | GPIO5 |  |
-| 25 | G25 | I/O | GPIO25 | 暂不支持 |
-| 26 | G26 | I/O | GPIO26 | 在使用Grove 1 时不可用 |
-| 35 | G35 | I/O | GPIO35 | 暂不支持 |
-| 36 | G36 | I/O | GPIO36 | 在使用Grove 1 时不可用 |
-| RST | RST | - | Controller reset | 暂不支持 |
-| BAT | BAT | - | BTTERY | 暂不支持 |
-| 3V3 | 3V3 | P | DC 3.3V |  |
+| GND | GND  | p | GND |  |
+| 26 | GPIO26 | I/O | GPIO26 |  |
+| 19 | GPIO19 | I/O | GPIO19 |  |
+| 13 | GPIO13 | I/O | GPIO13 |  |
+| 06 | GPIO6 | I/O | GPIO6 |  |
+| 05 | GPIO5 | I/O | GPIO5 |  |
+| 00 | GPIO0 | I/O | GPIO0 |  |
+| GND | GND  | p | GND |  |
+| 11 | GPIO11 | I/O | GPIO11 |  |
+| 09 | GPIO9 | I/O | GPIO9 |  |
+| 10 | GPIO10 | I/O | GPIO10 |  |
+|3.3 | 3.3V | P | DC 3.3V |  |
+| 22 | GPIO22 | I/O | GPIO22 |  |
+| 27 | GPIO27 | I/O | GPIO27 |  |
+| 17 | GPIO17 | I/O | GPIO17 | PAD 占用 |
+| GND | GND  | p | GND |  |
+| 04 | GPIO4 | I/O | GPIO4 |  |
+| 03 | GPIO3 | I/O | GPIO3 | SCL I2C总线(串行时钟线)占用 |
+| NC | NC | - | - | 暂不支持 |
+|3.3 | 3.3V | P | DC 3.3V |  |
+| 21 | GPIO21 | I/O | GPIO21 |  |
+| 20 | GPIO20 | I/O | GPIO20 |  |
+| 16 | GPIO16 | I/O | GPIO16 |  |
+| GND | GND  | p | GND |  |
+| 12 | GPIO12 | I/O | GPIO12 |  |
+| GND | GND  | p | GND |  |
+| 01 | GPIO1 | I/O | GPIO1 |  |
+| 07 | GPIO7 | I/O | GPIO7 |  |
+| 08 | GPIO8 | I/O | GPIO8 |  |
+| 25 | GPIO25 | I/O | GPIO25 |  |
+| GND | GND  | p | GND |  |
+| 24  | GPIO24 | I/O | GPIO24 |  |
+| 23 | GPIO23 | I/O | GPIO23 |  |
+| GND | GND  | p | GND |  |
+| 18 | GPIO18 | I/O | GPIO18 | PAD 占用 |
+| NC | NC | - | - | 暂不支持 |
+| NC | NC | - | - | 暂不支持 |
+| GND | GND  | p | GND |  |
 | 5V | 5V | P | DC 5V |  |
-| G | GND | P | GND |  |
+| 5V | 5V | P | DC 5V |  |
 
 > **注意:** 
 > 1. I: 仅作为输入。
@@ -159,64 +159,67 @@
 > 
 > 4. 1、单个管角的拉电流随管脚数量增加而减小，从约40mA减小到29mA。
 > 
-> 5. 如果某个GPIO被设置为输出模式时，输出高电平信号，电路连接如图 2.1.1.2-5 所示，LED灯将点亮。
+> 5. 如果某个GPIO被设置为输出模式时，输出高电平信号，电路连接如图 2.1.3.2-2 所示，LED灯将点亮。
 > 
->  ![GPIO](../../resources/1-ProductInformation/2.ProductParameter/GPIO.png)
+> <img src="../../resourse/2-serialproduct/myCobot 280/JN/2.1.7.2机械臂电器接口/2.1.7.2-2.png" style="zoom:100%;" />
 > 
-> 6. 关于功能接口的其他功能表如下图所示,使用其他功能的情况下，IO功能不可用。
+> 图 2.1.3.2-2
 > 
->  ![图片6](../../resources/1-ProductInformation/2.ProductParameter/IO.png)
+> 5. 关于功能接口的其他功能表如图 2.1.3-3 所示,使用其他功能的情况下，IO功能不可用。
 > 
+> <img src="../../resourse/2-serialproduct/myCobot 280/JN/2.1.7.2机械臂电器接口/2.1.7.2-3.png" style="zoom:100%;" />
 > 
+> 图 2.1.3.2-3
 
+* B. 电源DC接口：使用DC电源插座，外径6.5mm，内径2.0mm；可使用厂家配备的8.4V 5A  DC电源适配器给 myCobot 280 进行供电。
 
-* C. 电源DC接口：使用DC电源插座，外径6.5mm，内径2.0mm；可使用厂家配备的8.4V 5A  DC电源适配器给 myCobot 280 进行供电。
-
-* D. Grove接口：Grove接口定义图A、图 B、图C 所示
+* C. 按键开关：按下后内部上电，按键亮白光；再次按下，白光熄灭，内部断电。
   
+* D. Jetson nano 自带供电口，仅给Jetson nano自身供电，无法给整个机器供电，所以电源DC接口可以正常使用的时候无需接此接口。
 
- ![A](../../resources/1-ProductInformation/2.ProductParameter/A.png)
+* E. HDMI ：该接口为HDMI A型接口，如需显示机器人操作界面，用户可以通过连接HDMI显示接口，将操作页面显示到其他设备终端。
 
-  图 A Grove 1 
+* F. USB2.0：以串口总线标准2.0进行数据连接的接口；用户可以使用USB接口拷贝程序文件，也可以使用USB接口连接鼠标、键盘等外设。
 
- ![B](../../resources/1-ProductInformation/2.ProductParameter/B.png)
 
-  图 B Grove 2
+* G. USB3.0：以串口总线标准3.0进行数据连接的接口；用户可以使用USB接口拷贝程序文件，也可以使用USB接口连接鼠标、键盘等外设。
 
- ![C](../../resources/1-ProductInformation/2.ProductParameter/C.png)
+  <img src="../../resourse/2-serialproduct/myCobot 280/JN/2.1.7.2机械臂电器接口/2.1.7.2-4.png" style="zoom:100%;" /> 
 
-  图 C Grove 3
+  图 2.1.3.2-4
 
-* E. Type C 接口：可用于和PC端连接通讯，使用该接口时，G1、G3接口被占用。
-  
-* F. 复位按钮：用于主控系统复位时使用。
+* H. 网口：网络数据连接的端口，用户使用Ethernet接口可以用于PC端与机器人系统的通信交互，也可以用于与其他设备进行以太网通信。
 
-* G. 按钮A、按钮B和按钮C：配合显示屏进行功能操作使用。
+  <img src="../../resourse/2-serialproduct/myCobot 280/JN/2.1.7.2机械臂电器接口/2.1.7.2-5.png" style="zoom:100%;" />
 
-* H. 显示屏：使用2 inch的IPS屏幕,可用于显示 myCobot 通讯状态/配合按钮校正机器人原点等功能。
+  图 2.1.3.2-5
 
-## 2 机械臂末端电气接口
+* I. Micro USB：以串口总线标准2.0进行数据连接的接口；用户可以使用安卓线拷贝程序文件。
 
-### 2.1 机械臂末端介绍
+## 机械臂末端电气接口
 
-* A. 机械臂末端如图 D和图 E 所示:
+### 机械臂末端介绍
 
- ![末端D](../../resources/1-ProductInformation/2.ProductParameter/END-D.png)
+* A. 机械臂末端如图 2.1.3.2-6 和图 2.1.3.2-7 所示:
 
-  图 D 机械臂末端
+  <img src="../../resourse/2-serialproduct/myCobot 280/JN/2.1.7.2机械臂电器接口/2.1.7.2-6.png" style="zoom:100%;" /> 
+
+  图 2.1.3.2-6 机械臂末端
   - ① 舵机接口
   - ② Atom
 
- ![末端E](../../resources/1-ProductInformation/2.ProductParameter/END-E.png)
+  <img src="../../resourse/2-serialproduct/myCobot 280/JN/2.1.7.2机械臂电器接口/2.1.7.2-7.png" style="zoom:100%;" />	
 
-  图 E 机械臂末端
-  - ① 功能接口组五
-  - ② Grove 4
+  图 2.1.3.2-7 机械臂末端
+  - ① 功能接口组二
+  - ② Grove
   - ③ Type C
 
-### 2.2 末端接口说明
+### 末端接口说明
 
-* A. 功能接口组五各个接口的定义如下表所示:
+* A. 功能接口组二各个接口的定义如表 2.1.3.2-2 所示:
+  
+<center>表 2.1.3.2-2</center>
 
 | 标签 | 信号名 | 类型 | 功能 | 备注 |
 | :---: | :----: | :--: | :------: | :----: |
@@ -237,27 +240,31 @@
 > 
 > 4. 1、单个管角的拉电流随管脚数量增加而减小，从约40mA减小到29mA。
 > 
-> 5. 如果某个GPIO被设置为输出模式时，输出高电平信号，电路连接如下图 所示，LED灯将点亮。
+> 5. 如果某个GPIO被设置为输出模式时，输出高电平信号，电路连接如图 2.1.3.2-8 所示，LED灯将点亮。
 > 
-> ![GPIO](../../resources/1-ProductInformation/2.ProductParameter/GPIO.png)
+> <img src="../../resourse/2-serialproduct/myCobot 280/JN/2.1.7.2机械臂电器接口/2.1.7.2-8.png" style="zoom:100%;" /> 
 > 
+> 图 2.1.3.2-8
 
-* B. Type C接口：可用于和PC端连接通讯，更新固件使用。
+* B. Type C：可用于和PC端连接通讯，更新固件使用。
 
-* C. Grove 4: 定义如图F 所示
-   ![F](../../resources/1-ProductInformation/2.ProductParameter/F.png)
+* C. Grove : 定义如图 2.1.3.2-9 所示
   
-  图 F Grove 4
+  <img src="../../resourse/2-serialproduct/myCobot 280/JN/2.1.7.2机械臂电器接口/2.1.7.2-9.png" style="zoom:100%;" /> 
+
+  图 2.1.3.2-9 Grove 
 
 * D. 舵机接口：用于末端拓展夹爪时使用，当前支持配套的自适应夹爪使用。
 
 * E. Atom：用于 5X5 RGB LED（G27）显示和按键功能（G39）
 
+## 5 DH参数
 
-## 5. 笛卡尔坐标参数
+<img src="../../resourse/2-serialproduct/myCobot 280/JN/2.1.3.1产品参数介绍/280DH参数.jpg" style="zoom:15%;" />
 
-![DH参数](../../resources/1-ProductInformation/2.ProductParameter/280DH.jpg)
+SDH参数表：
 
+<div align=center><img src="../../resourse/2-serialproduct/myCobot 280/M5/2.1.1.1产品参数介绍/SDH参数表.png"></div>
 
 
 ---

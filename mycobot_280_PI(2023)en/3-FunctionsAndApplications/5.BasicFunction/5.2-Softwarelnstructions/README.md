@@ -4,25 +4,25 @@
 
 **[myStudio video tutorial](https://www.bilibili.com/video/BV1Qr4y1N7B5/)**
 
-## 1 Original intention of myStudio
+## Original intention of myStudio
 
 - myStudio is a one-stop platform for using robots such as myRobot/myCobot.
 
 - It is convenient for users to select different firmware and download them according to their own usage scenarios, and at the same time learn related teaching materials and browse tutorial videos online.
 
-## 2 Latest version of myStudio and supported platforms
+##  Latest version of myStudio and supported platforms
 
 - Latest version: V3.5.8
 
 - Applicable to: Windows, Mac, Linux
 
-## 3 myStudio functions
+## myStudio functions
 
 - Burn and update firmware
 - Provide robot tutorials, such as user manuals, video tutorials, Q&A, etc.
 - Information on maintenance and repairs
 
-## 4 Applicable devices for myStudio
+## Applicable devices for myStudio
 
 - myCobot 280
 - myCobot 280 M5
@@ -41,7 +41,7 @@
 - myCobot Pro 600
 - myBuddy 280
 
-## 5 Firmware version recommendation
+## Firmware version recommendation
 
 Different models of robotic arms require different firmware to be burned. The following are the firmware versions recommended for burning different models of robotic arms.
 
@@ -106,7 +106,7 @@ The myCobot 280 series has 4 versions: M5 version, PI version, ardunio version a
 </tr>
 </table>
 
-## 6. Update and burn Atom firmware
+## Update and burn Atom firmware
 
 Step 1: Connect to PC. Use USB to connect the Atom at the end.
 

@@ -4,7 +4,7 @@ The following are various use cases and operation result videos. You can copy th
 
 **Note: ** The corresponding baud rates of various devices are different. Please refer to the information to understand their baud rates when using them. The serial port number can be viewed through [Calculator Device Manager](https://docs.elephantrobotics.com/docs/gitbook/4-BasicApplication/4.1-myStudio/4.1.1-myStudio_download_driverinstalled.html#4113-%E5%A6%82%E4%BD%95%E5%8C%BA%E5%88%86cp210x%E5%92%8Ccp34x%E8%8A%AF%E7%89%87) or the serial port assistant.
 
-## 1 Control RGB light board
+## Control RGB light board
 
 ### myCobot
 
@@ -46,7 +46,7 @@ while i > 0:
     i -= 1
 ```
 
-## 2 Control the machine to return to the origin
+## Control the machine to return to the origin
 
 ```python
 from pymycobot.mycobot import MyCobot
@@ -87,7 +87,7 @@ mc.send_angles([0, 0, 0, 0, 0, 0], 30)
 	#mc.set_servo_calibration(i)
 ```
 
-## 3 Single joint movement
+## Single joint movement
 
 ```python
 from pymycobot import MyCobot
@@ -176,7 +176,7 @@ time.sleep(3)
 
 
 
-## **4 Multi-joint exercise**
+## **Multi-joint exercise**
 
 ```python
 import time
@@ -222,7 +222,7 @@ time.sleep(2.5)
 
 
 
-## 5 Control the robot arm to swing left and right
+##  Control the robot arm to swing left and right
 
 ```python
 from pymycobot.mycobot import MyCobot
@@ -278,7 +278,7 @@ mc.release_all_servos()
 ```
 
 
-## 6Controlling the robotic arm to dances
+## Controlling the robotic arm to dances
 
 ```python
 from pymycobot.mycobot import MyCobot
@@ -340,7 +340,7 @@ if __name__ == '__main__':
 ```
 
 
-## 7 Gripper control
+## Gripper control
 
 ```python
 from pymycobot import PI_PORT, PI_BAUD  # 当使用树莓派版本的mycobot时,可以引用这两个变量进行MyCobot初始化
@@ -429,7 +429,7 @@ if __name__ == "__main__":
 ```
 
 
-## 8 Suction pump control
+## Suction pump control
 
 280-M5版本
 

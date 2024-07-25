@@ -34,7 +34,7 @@ rviz
 
 打开rviz,显示如下界面：
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz-1.png
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/rviz-1.png
 width ="500"  align = "center">
 
 ### 1.1 各个区域介绍
@@ -49,8 +49,6 @@ width ="500"  align = "center">
 
 ## 2 mycobot_ros安装与更新
 
-- **M5版本：** 请查看 6.2.1ROS1环境搭建 章节末尾。
-
 - **PI版本(Ubuntu 20.04)：**
 
 `mycobot_ros` 是 ElephantRobotics 推出的，适配旗下各类型桌面型机械臂的 ROS 包。
@@ -61,13 +59,13 @@ width ="500"  align = "center">
 
 点击桌面上的`ROS1 Shell`图标或者桌面下方栏的对应图标，打开ROS1环境终端：
 
- <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz111.JPG
+ <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/rviz-21.jpg
  align = "center">
 
- <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz222.JPG
+ <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/rviz-22.jpg
  align = "center">
 
- <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rivz333.jpg
+ <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/rviz-4.png
  align = "center">
 
  然后输入以下指令：
@@ -87,7 +85,7 @@ source devel/setup.bash # 添加环境变量
 
 **通过launch文件启动**
 
-本例子建立在您已经完成[环境搭建](../12.1.2-环境搭建.md)，并成功将本公司的代码从GitHub上复制下来的基础上。
+本例子建立在您已经完成环境搭建，并成功将本公司的代码从GitHub上复制下来的基础上。
 
 打开一个控制台终端(快捷键<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>)
 输入一下命令进行**ROS的环境配置**。
@@ -121,42 +119,14 @@ roslaunch mycobot_280jn test.launch
 
 打开rviz，并得到如下结果：
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz-5.png
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/open-2.png
 width ="500"  align = "center">
 
 如果您想了解更多rviz的相关资料信息，您可以前往[官方文档](http://wiki.ros.org/rviz)进行查看
 
+---
 
-## 4 M5版本前提条件
-
-- 打开控制台终端（ 快捷键 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd> )，打开终端窗口查看设备名称：
-
-```bash
-# 查看机械臂的设备名称
-ls /dev/ttyUSB* # 旧版本 myCobot280 M5   
-
-# 如果终端没有显示/dev/ttyUSB相关名称，需要使用如下命令
-ls /dev/ttyACM* # 新版本 myCobot280 M5
-```
-
-- 授予机械臂串口权限：
-
-```bash
-# 默认设备名是/dev/ttyUSB0，如果设备名不是默认值，需要修改。
-sudo chmod 777 /dev/ttyUSB0 # 旧版本 myCobot280 M5 
-
-sudo chmod 777 /dev/ttyACM0 # 新版本 myCobot280 M5
-```
-
-然后输入用户密码（**注意：** 输入密码是不显示的，输入正确即可）。
-
-
-
-# 280系列rviz使用指南
-
-
-
-## 机械臂的控制
+# 机械臂的控制
 
 ### 1 滑块控制
 
@@ -191,7 +161,7 @@ roslaunch mycobot_280arduino slider_control.launch port:=/dev/ttyACM0 baud:=1152
 
 它将**打开 rviz 和一个滑块组件**，你将看到如下画面：
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/caf-1.png
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/caf-1.png
 width ="500"  align = "center">
 
 接着你可以**通过拖动滑块来控制 rviz 中的模型移动**。如果你想让真实的 mycobot 跟着一起运动，需要再打开一个命令行，运行：
@@ -309,7 +279,7 @@ roslaunch mycobot_280jn simple_gui.launch port:=/dev/ttyTHS1 baud:=1000000
 roslaunch mycobot_280arduino simple_gui.launch port:=/dev/ttyACM0 baud:=115200
 ```
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/gui-1.png
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/gui-1.png
 width ="500"  align = "center">
 
 ### 4 键盘控制
@@ -348,7 +318,7 @@ roslaunch mycobot_280arduino teleop_keyboard.launch port:=/dev/ttyACM0 baud:=115
 
 运行效果如下：
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/kb-1.png
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/kb-1.png
 width ="500"  align = "center">
 
 命令行中将会输出 mycobot 信息，如下：
@@ -480,7 +450,7 @@ currently:      speed: 50       change percent 5
 ### 5 视觉
 >将相机安装在 mycobot 的末端。 本视觉部分使用 eye-in-hand 的方式。
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/camera_connect-1.jpg
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/camera_connect-1.jpg
 width ="500"  align = "center">
 
 #### 5.1识别并显示
@@ -508,12 +478,12 @@ roslaunch mycobot_280arduino detect_marker.launch
 
 启动后效果图：
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/vision-1.png
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/vision-1.png
 width ="500"  align = "center">
 
 识别二维码，获取与相机的相对位置关系。根据 rviz 中mycobot的末端位置，进行坐标转换，最后显示在 rviz 中。
 
-可以参考 [滑块控制](##1421-滑块控制),使用 `slider_control.py` 来控制机械臂
+可以参考滑块控制,使用 `slider_control.py` 来控制机械臂
 
 #### 5.2视觉追踪与抓取
 >本部分需要使用垂直吸泵。
@@ -555,7 +525,7 @@ roslaunch mycobot_280arduino detect_marker_with_topic.launch port:=/dev/ttyACM0 
 
 将实时显示 mycobot 的状态。
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/vision-2.gif
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/vision-2.gif
 width ="500"  align = "center">
 
 紧接着运行，追踪和抓取的脚本。打开新的命令行：
@@ -581,12 +551,12 @@ rosrun mycobot_280arduino follow_and_pump.py
 ```
 启动后，mycobot 会去到它的初始位置
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/vision-3.gif
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/vision-3.gif
 width ="500"  align = "center">
 
 当识别到 marker 后，跟随一段时间，然后尝试去吸取并结束程序。
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/vision-4.png
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/vision-4.png
 width ="500"  align = "center">
 
 ### 6 末端执行器
@@ -610,7 +580,7 @@ roslaunch mycobot_280 test_gripper.launch
 
 它将**打开rviz**，你将看到如下画面：
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-10.png
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/12.1.4-10.png
 width ="500"  align = "center">
 
 ##### 2 滑块控制
@@ -626,7 +596,7 @@ roslaunch mycobot_280 slider_control_gripper.launch port:=/dev/ttyUSB0 baud:=115
 
 它将**打开rviz和一个滑块组件**，你将看到如下画面：
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-11.png
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/12.1.4-11.png
 width ="500"  align = "center">
 
 接着你可以**通过拖动滑块来控制 rviz 中的模型移动。** 如果你想让真实的 myCobot 跟着一起运动，需要**再打开一个命令行**，运行：
@@ -677,7 +647,7 @@ roslaunch mycobot_280 simple_gui_gripper.launch port:=/dev/ttyUSB0 baud:=115200
 
 它将**打开rviz和一个GUI界面**，你将看到如下画面：
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-12.png
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/12.1.4-12.png
 width ="500"  align = "center">
 
 ##### 5 键盘控制
@@ -695,7 +665,7 @@ roslaunch mycobot_280 teleop_keyboard_gripper.launch port:=/dev/ttyUSB0 baud:=11
 
 运行效果如下：
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-10.png
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/12.1.4-10.png
 width ="500"  align = "center">
 
 命令行中将会输出 mycobot 信息，如下：
@@ -820,7 +790,7 @@ roslaunch mycobot_280pi test_pump.launch
 
 它将**打开rviz**，你将看到如下画面：
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-13.png
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/12.1.4-13.png
 width ="500"  align = "center">
 
 ##### 2 滑块控制
@@ -845,7 +815,7 @@ roslaunch mycobot_280pi slider_control_pump.launch port:=/dev/ttyAMA0 baud:=1000
 
 它将**打开rviz和一个滑块组件**，你将看到如下画面：
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-16.png
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/12.1.4-16.png
 width ="500"  align = "center">
 
 接着你可以**通过拖动滑块来控制 rviz 中的模型移动。** 如果你想让真实的 myCobot 跟着一起运动，需要**再打开一个命令行**，运行：
@@ -882,7 +852,7 @@ roslaunch mycobot_280 simple_gui_pump.launch port:=/dev/ttyUSB0 baud:=115200
 
 它将**打开rviz和一个GUI界面**，你将看到如下画面：
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-14.png
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/12.1.4-14.png
 width ="500"  align = "center">
 
 ##### 4 键盘控制
@@ -900,7 +870,7 @@ roslaunch mycobot_280 teleop_keyboard_pump.launch port:=/dev/ttyUSB0 baud:=11520
 
 运行效果如下：
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-13.png
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/12.1.4-13.png
 width ="500"  align = "center">
 
 接着，打开另一个命令行，运行：
@@ -970,7 +940,7 @@ roslaunch mycobot_280pi test_camera_flange.launch
 
 它将**打开rviz**，你将看到如下画面：
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-15.png
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/12.1.4-15.png
 width ="500"  align = "center">
 
 ##### 2 滑块控制
@@ -995,7 +965,7 @@ roslaunch mycobot_280pi slider_control_camera_flange.launch port:=/dev/ttyAMA0 b
 
 它将**打开rviz和一个滑块组件**，你将看到如下画面：
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-17.png
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/12.1.4-17.png
 width ="500"  align = "center">
 
 接着你可以**通过拖动滑块来控制 rviz 中的模型移动。** 如果你想让真实的 myCobot 跟着一起运动，需要**再打开一个命令行**，运行：
@@ -1037,7 +1007,7 @@ roslaunch mycobot_280pi test_camera_flange_pump.launch
 
 它将**打开rviz**，你将看到如下画面：
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-18.png
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/12.1.4-18.png
 width ="500"  align = "center">
 
 #### 6.5 URDF模型地址

@@ -20,7 +20,7 @@ The difference between microprocessors and microcontrollers is mainly concentrat
 
 - Instruction set characteristics. Due to different applications, the instruction sets of microcontrollers and microprocessors are also different. The instruction set of microprocessors enhances processing capabilities, giving them powerful addressing modes and instructions suitable for operating large-scale data. Microprocessor instructions can operate on nibbles, bytes, words, and even double words. By using address pointers and address offsets, microprocessors provide addressing modes that can access large amounts of data. The self-increment and self-decrement modes make it very easy to access data in units of bytes, words, or double words.
 
-## 2. Factory firmware for microprocessor devices: python demo
+## Factory firmware for microprocessor devices: python demo
 Currently, the python demos available for microprocessor devices are:
 - Drag teaching routine [drag_trial_teaching](https://github.com/elephantrobotics/pymycobot/blob/main/demo/drag_trial_teaching.py)
 
@@ -173,7 +173,7 @@ Side of the base
 - ③ HDMI
 - ④ Audio interface
 
-### 1.2 Detailed description of the robot base interface
+### Detailed description of the robot base interface
 
 * A. Power DC interface: Use a DC power socket with an outer diameter of 6.5mm and an inner diameter of 2.0mm; the 12V 5A DC power adapter provided by the manufacturer can be used to power myCobot280.
 
