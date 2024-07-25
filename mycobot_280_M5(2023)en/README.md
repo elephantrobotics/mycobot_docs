@@ -132,7 +132,7 @@ Document Directory
   * [8.2 Product Drawings](3-FunctionsAndApplications/8.SupportingResources/8.2-ProductDrawings/README.md)
   * [8.3 Software Information and Source Code ](3-FunctionsAndApplications/8.SupportingResources/8.3-SoftwareInformationAndSourceCode/README.md)
   * [8.4 System Information](3-FunctionsAndApplications/8.SupportingResources/8.4-SystemInformation/README.md)
-  * [8.5 Promotional Materials](3- FunctionsAndApplications/8.SupportingResources/8.5-PromotionalMaterials/README.md)
+  * [8.5 Promotional Materials](3-FunctionsAndApplications/8.SupportingResources/8.5-PromotionalMaterials/README.md)
 * Support and Services
 *  [ Contact Us](4-SupportAndService/11.AboutUs/11.AboutUs.md)
 

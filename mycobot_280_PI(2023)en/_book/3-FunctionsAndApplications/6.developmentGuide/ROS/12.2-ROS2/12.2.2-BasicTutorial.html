@@ -1,0 +1,1721 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6.3.2 ROS2 basics · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="12.2.4-rivzIntroductionAndUse/" />
+    
+    
+    <link rel="prev" href="12.2.1-InstallationOfROS2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../../">
+            
+                <a href="../../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Product Information
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../../1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.html">
+            
+                <a href="../../../../1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.html">
+            
+                    
+                    1. Product Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../../1-ProductInformation/2.ProductParameter/2-ProductParameters.html">
+            
+                <a href="../../../../1-ProductInformation/2.ProductParameter/2-ProductParameters.html">
+            
+                    
+                    2. Product Parameters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Basic Settings
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../../../2-BasicSettings/3.UserNotice/3-UserInstructions.html">
+            
+                <a href="../../../../2-BasicSettings/3.UserNotice/3-UserInstructions.html">
+            
+                    
+                    3. User Notice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../../../2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.html">
+            
+                <a href="../../../../2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.html">
+            
+                    
+                    4. First Time Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.html">
+            
+                <a href="../../../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.html">
+            
+                    
+                    4.1 How to Ask for Help Correctly
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../../../4-SupportAndService/9.Troubleshooting/9.1-driver.html">
+            
+                <a href="../../../../4-SupportAndService/9.Troubleshooting/9.1-driver.html">
+            
+                    
+                    4.2 Common Driver Problems and Solutions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../../../4-SupportAndService/9.Troubleshooting/9.2-software.html">
+            
+                <a href="../../../../4-SupportAndService/9.Troubleshooting/9.2-software.html">
+            
+                    
+                    4.3 Common software problems and solutions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../../../4-SupportAndService/9.Troubleshooting/9.3-hardware.html">
+            
+                <a href="../../../../4-SupportAndService/9.Troubleshooting/9.3-hardware.html">
+            
+                    
+                    4.4 Common hardware problems and solutions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    Functions and applications
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../../5.BasicFunction/">
+            
+                <a href="../../../5.BasicFunction/">
+            
+                    
+                    5. Basic functions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../../5.BasicFunction/5.1-Functionlnstruction/3.5.1-SW-description.html">
+            
+                <a href="../../../5.BasicFunction/5.1-Functionlnstruction/3.5.1-SW-description.html">
+            
+                    
+                    5.1 Introduction to pi version robot arm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../../5.BasicFunction/5.2-Softwarelnstructions/3.5.2-SW-detail-description.html">
+            
+                <a href="../../../5.BasicFunction/5.2-Softwarelnstructions/3.5.2-SW-detail-description.html">
+            
+                    
+                    5.2 System basic function description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../../5.BasicFunction/5.3-FirmwareFunctionDescription/">
+            
+                <a href="../../../5.BasicFunction/5.3-FirmwareFunctionDescription/">
+            
+                    
+                    5.3 Firmware Function Description
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.3.1" data-path="../../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.1-moving/4.2.1.2-micro_CPU.html">
+            
+                <a href="../../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.1-moving/4.2.1.2-micro_CPU.html">
+            
+                    
+                    5.3.1 Drag teaching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.2" data-path="../../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.2-calibration/4.2.2.2-micro_CPU.html">
+            
+                <a href="../../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.2-calibration/4.2.2.2-micro_CPU.html">
+            
+                    
+                    5.3.2 Robot arm calibration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.3" data-path="../../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.4-connection/4.2.4.2-micro_CPU.html">
+            
+                <a href="../../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.4-connection/4.2.4.2-micro_CPU.html">
+            
+                    
+                    5.3.3 Link Check
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4" data-path="../../../5.BasicFunction/5.2-Softwarelnstructions/">
+            
+                <a href="../../../5.BasicFunction/5.2-Softwarelnstructions/">
+            
+                    
+                    5.3.4 mystudio
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    6. Software Development Guide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../python/">
+            
+                <a href="../../python/">
+            
+                    
+                    6.1 Development and Use Based on Python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" data-path="../../python/1_download.html">
+            
+                <a href="../../python/1_download.html">
+            
+                    
+                    6.1.1 Environment Construction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2" data-path="../../python/2_API.html">
+            
+                <a href="../../python/2_API.html">
+            
+                    
+                    6.1.2api description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3" data-path="../../python/3_angle.html">
+            
+                <a href="../../python/3_angle.html">
+            
+                    
+                    6.1.3 joint control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.4" data-path="../../python/4_coord.html">
+            
+                <a href="../../python/4_coord.html">
+            
+                    
+                    6.1.4 coordinate control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.5" data-path="../../python/5_IO.html">
+            
+                <a href="../../python/5_IO.html">
+            
+                    
+                    6.1.5 IO control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.6" data-path="../../python/6_gripper.html">
+            
+                <a href="../../python/6_gripper.html">
+            
+                    
+                    6.1.6 gripper control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.7" data-path="../../python/7_TCPIP.html">
+            
+                <a href="../../python/7_TCPIP.html">
+            
+                    
+                    6.1.7 TCP&IP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.8" data-path="../../python/9_HandleControl.html">
+            
+                <a href="../../python/9_HandleControl.html">
+            
+                    
+                    6.1.8 Handle Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.9" data-path="../../python/15_280_gcode_draw.html">
+            
+                <a href="../../python/15_280_gcode_draw.html">
+            
+                    
+                    6.1.9 Drawing Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.10" data-path="../../python/8_example.html">
+            
+                <a href="../../python/8_example.html">
+            
+                    
+                    6.1.10 Demonstration Code and Video
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../12.1-ROS1/12.1.1-Introduction.html">
+            
+                <a href="../12.1-ROS1/12.1.1-Introduction.html">
+            
+                    
+                    6.2 Development and Use Based on ROS1
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.2.1" data-path="../12.1-ROS1/12.1.2-EnvironmentBuilding.html">
+            
+                <a href="../12.1-ROS1/12.1.2-EnvironmentBuilding.html">
+            
+                    
+                    6.2.1 ROS1 Environment Building
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2" data-path="../12.1-ROS1/12.1.3-ROS_Basics.html">
+            
+                <a href="../12.1-ROS1/12.1.3-ROS_Basics.html">
+            
+                    
+                    6.2.2 ROS1 Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.3" data-path="../12.1-ROS1/12.1.4-rivzIntroductionAndUse/">
+            
+                <a href="../12.1-ROS1/12.1.4-rivzIntroductionAndUse/">
+            
+                    
+                    6.2.3 rivz Introduction and Use
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.4" data-path="../12.1-ROS1/12.1.5-Moveit/">
+            
+                <a href="../12.1-ROS1/12.1.5-Moveit/">
+            
+                    
+                    6.2.4 Moveit Introduction and Use
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="12.2.3-ROS2Introduction.html">
+            
+                <a href="12.2.3-ROS2Introduction.html">
+            
+                    
+                    6.3 Development and use based on ROS2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.3.1" data-path="12.2.1-InstallationOfROS2.html">
+            
+                <a href="12.2.1-InstallationOfROS2.html">
+            
+                    
+                    6.3.1 ROS2 environment construction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10.3.2" data-path="12.2.2-BasicTutorial.html">
+            
+                <a href="12.2.2-BasicTutorial.html">
+            
+                    
+                    6.3.2 ROS2 basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3.3" data-path="12.2.4-rivzIntroductionAndUse/">
+            
+                <a href="12.2.4-rivzIntroductionAndUse/">
+            
+                    
+                    6.3.3 rivz Introduction and Use
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/">
+            
+                    
+                    6.4 Development and Use Based on Blockly
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.4.1" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.1-myBlocklyFirstUse.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.1-myBlocklyFirstUse.html">
+            
+                    
+                    6.4.1 Initial Use of myBlockly
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.2" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.2-ControlRGB.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.2-ControlRGB.html">
+            
+                    
+                    6.4.2 Control RGB Light Board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.3" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.3-ControlRoboticArmBackZero.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.3-ControlRoboticArmBackZero.html">
+            
+                    
+                    6.4.3 Control the robot arm back to the origin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.4" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.4-ControlSingleJoint.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.4-ControlSingleJoint.html">
+            
+                    
+                    6.4.4 Control single joint motion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.5" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.5-ControlSinglesJoint.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.5-ControlSinglesJoint.html">
+            
+                    
+                    6.4.5 Control multiple joints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.6" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.6-ControlRoboticSwingLeft&Right.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.6-ControlRoboticSwingLeft&Right.html">
+            
+                    
+                    6.4.6 Control the robot arm to swing left and right
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.7" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.7-ControlRoboticArmDance.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.7-ControlRoboticArmDance.html">
+            
+                    
+                    6.4.7 Control the robot arm to dance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.8" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.html">
+            
+                    
+                    6.4.8 Gripper Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.9" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.html">
+            
+                    
+                    6.4.9 Pump Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.10" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.html">
+            
+                    
+                    6.4.10 Gripper Test
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.11" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.14-ioTest.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.14-ioTest.html">
+            
+                    
+                    6.4.11 IO Test
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.12" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.html">
+            
+                    
+                    6.4.12Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../../CommunicationProtocolPackage/18-communication.html">
+            
+                <a href="../../CommunicationProtocolPackage/18-communication.html">
+            
+                    
+                    6.5 Development and use based on serial communication protocol
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../../7.SuccessfulCase/7-SuccessfulCases.html">
+            
+                <a href="../../../7.SuccessfulCase/7-SuccessfulCases.html">
+            
+                    
+                    7. Successful Cases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../../8.SupportingResources/">
+            
+                <a href="../../../8.SupportingResources/">
+            
+                    
+                    8. Supporting Resources
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../../8.SupportingResources/8.1-ProductInformation/">
+            
+                <a href="../../../8.SupportingResources/8.1-ProductInformation/">
+            
+                    
+                    8.1 Product Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../../../8.SupportingResources/8.2-ProductDrawings/">
+            
+                <a href="../../../8.SupportingResources/8.2-ProductDrawings/">
+            
+                    
+                    8.2 Product Drawings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../../../8.SupportingResources/8.3-SoftwareInformationAndSourceCode/">
+            
+                <a href="../../../8.SupportingResources/8.3-SoftwareInformationAndSourceCode/">
+            
+                    
+                    8.3 Software Information and Source Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../../../8.SupportingResources/8.4-SystemInformation/">
+            
+                <a href="../../../8.SupportingResources/8.4-SystemInformation/">
+            
+                    
+                    8.4 System Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../../../8.SupportingResources/8.5-PromotionalMaterials/">
+            
+                <a href="../../../8.SupportingResources/8.5-PromotionalMaterials/">
+            
+                    
+                    8.5 Promotional Materials
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    Support and Service
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../../../4-SupportAndService/11.AboutUs/11.AboutUs.html">
+            
+                <a href="../../../../4-SupportAndService/11.AboutUs/11.AboutUs.html">
+            
+                    
+                     Contact Us
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../../../../5-Acknowledgments/5-Acknowledgments.html">
+            
+                <a href="../../../../5-Acknowledgments/5-Acknowledgments.html">
+            
+                    
+                    Acknowledgments
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../../.." >6.3.2 ROS2 basics</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#basic-tools"><b>1. </b>Basic Tools</a></li><ul><li><span class="title-icon "></span><a href="#1-topics"><b>1.1. </b>1 Topics</a></li><li><span class="title-icon "></span><a href="#2-nodes"><b>1.2. </b>2 Nodes</a></li><li><span class="title-icon "></span><a href="#3-services"><b>1.3. </b>3 Services</a></li><li><span class="title-icon "></span><a href="#4-parameters"><b>1.4. </b>4 Parameters</a></li><li><span class="title-icon "></span><a href="#5-actions"><b>1.5. </b>5 Actions</a></li><li><span class="title-icon "></span><a href="#6-rqt"><b>1.6. </b>6 RQt</a></li><li><span class="title-icon "></span><a href="#7-tf2"><b>1.7. </b>7 TF2</a></li><li><span class="title-icon "></span><a href="#8-urdf"><b>1.8. </b>8 URDF</a></li><li><span class="title-icon "></span><a href="#9-launch"><b>1.9. </b>9 Launch</a></li><li><span class="title-icon "></span><a href="#10-run"><b>1.10. </b>10 Run</a></li><li><span class="title-icon "></span><a href="#11-package"><b>1.11. </b>11 Package</a></li></ul></ul></div><a href="#basic-tools" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="basic-tools"><a name="basic-tools" class="anchor-navigation-ex-anchor" href="#basic-tools"><i class="fa fa-link" aria-hidden="true"></i></a>1. Basic Tools</h1>
+<p>In this chapter, you will learn about the common command tools of ROS2.</p>
+<h2 id="1-topics"><a name="1-topics" class="anchor-navigation-ex-anchor" href="#1-topics"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. 1 Topics</h2>
+<p>ROS 2 breaks down complex systems into many modular nodes. Topics are an important element of the ROS graph, acting as a bus for nodes to exchange messages.
+Topics are one of the main ways data moves between nodes, and therefore between different parts of the system.</p>
+<p>Specific reference: <a href="https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html" target="_blank">Official tutorial</a></p>
+<ul>
+<li><strong>topics help</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 topics -h
+</code></pre>
+<ul>
+<li><strong>Start turtlesim and keyboard control</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 run turtlesim turtlesim_node
+ros2 run turtlesim turtle_teleop_key
+</code></pre>
+<ul>
+<li><strong>Node relationship graph</strong></li>
+</ul>
+<pre><code class="lang-bash">rqt_graph
+</code></pre>
+<ul>
+<li><strong>Understand topics related commands</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 topics -h
+</code></pre>
+<ul>
+<li><strong>Topic list</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 topic list
+ros2 topic list -t <span class="hljs-comment"># Display the corresponding message type</span>
+</code></pre>
+<ul>
+<li><strong>View topic content</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 topic <span class="hljs-built_in">echo</span> &lt;topic_name&gt;
+ros2 topic <span class="hljs-built_in">echo</span> /turtle1/cmd_vel
+</code></pre>
+<ul>
+<li><strong>Display topic related information, type</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 topic info &lt;topic_name&gt;
+<span class="hljs-comment"># Output /turtle1/cmd_vel topic interface related information</span>
+ros2 topic info /turtle1/cmd_vel
+</code></pre>
+<ul>
+<li><strong>Display interface related information</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 interface show &lt;msg_<span class="hljs-built_in">type</span>&gt;
+<span class="hljs-comment"># Output geometry_msgs/msg/Twist interface related information</span>
+ros2 interface show geometry_msgs/msg/Twist
+</code></pre>
+<ul>
+<li><strong>Publish command</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 topic pub &lt;topic_name&gt; &lt;msg_<span class="hljs-built_in">type</span>&gt; <span class="hljs-string">&apos;&lt;args&gt;&apos;</span>
+<span class="hljs-comment"># Publish speed command</span>
+ros2 topic pub --once /turtle1/cmd_vel geometry_msgs/msg/Twist <span class="hljs-string">&quot;{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}&quot;</span>
+<span class="hljs-comment"># Publish speed commands at a certain frequency</span>
+ros2 topic pub --rate 1 /turtle1/cmd_vel geometry_msgs/msg/Twist <span class="hljs-string">&quot;{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}&quot;</span>
+</code></pre>
+<ul>
+<li><strong>View the frequency of topic publishing</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 topic hz &lt;topic_name&gt;
+<span class="hljs-comment">#Output/turtle1/cmd_vel publishing frequency</span>
+ros2 topic pub --rate 1 /turtle1/cmd_vel geometry_msgs/msg/Twist <span class="hljs-string">&quot;{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}&quot;</span>
+</code></pre>
+<h2 id="2-nodes"><a name="2-nodes" class="anchor-navigation-ex-anchor" href="#2-nodes"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. 2 Nodes</h2>
+<p>Each node in ROS should be responsible for a single module purpose (e.g., one node for controlling wheel motors, one node for controlling laser rangefinders, etc.). Each node can send and receive data to other nodes through topics, services, actions, or parameters.
+A complete robotic system consists of many nodes working together. In ROS 2, a single executable file (C++ program, Python program, etc.) can contain one or more nodes.</p>
+<p>Specific reference: <a href="https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html" target="_blank">Official tutorial</a></p>
+<ul>
+<li><strong>nodes help</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 nodes -h
+</code></pre>
+<ul>
+<li><strong>Start turtlesim and keyboard control</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 run turtlesim turtlesim_node
+ros2 run turtlesim turtle_teleop_key
+</code></pre>
+<ul>
+<li><strong>View the node list</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 node list
+</code></pre>
+<ul>
+<li><strong>View the node relationship graph</strong></li>
+</ul>
+<pre><code class="lang-bash">rqt_graph
+</code></pre>
+<ul>
+<li><strong>Remap</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 run turtlesim turtlesim_node --ros-args --remap __node:=my_turtle
+ros2 node list
+</code></pre>
+<ul>
+<li><strong>View node information</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 node info &lt;node_name&gt;
+ros2 node info /my_turtle
+</code></pre>
+<h2 id="3-services"><a name="3-services" class="anchor-navigation-ex-anchor" href="#3-services"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. 3 Services</h2>
+<p>Services are another way for nodes in the ROS graph to communicate. Services are based on a call and response model, rather than the publisher-subscriber model of topics. While topics allow nodes to subscribe to a stream of data and get continuous updates, services only provide data when specifically called by a client.</p>
+<p>Specific reference: <a href="https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html" target="_blank">Official tutorial</a></p>
+<ul>
+<li><strong>services help</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 service -h
+</code></pre>
+<ul>
+<li><strong>Start turtlesim and keyboard control</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 run turtlesim turtlesim_node
+ros2 run turtlesim turtle_teleop_key
+</code></pre>
+<ul>
+<li><strong>View the service list</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 service list
+<span class="hljs-comment"># Display service list and message type</span>
+ros2 service list -t
+</code></pre>
+<ul>
+<li><strong>View the message type received by the service</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 service <span class="hljs-built_in">type</span> &lt;service_name&gt;
+ros2 service <span class="hljs-built_in">type</span> /clear
+</code></pre>
+<ul>
+<li><strong>Find services that use a certain message type</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 service find &lt;<span class="hljs-built_in">type</span>_name&gt;
+ros2 service find std_srvs/srv/Empty
+</code></pre>
+<ul>
+<li><strong>View service message type definition</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 interface show &lt;<span class="hljs-built_in">type</span>_name&gt;.srv
+ros2 interface show std_srvs/srv/Empty.srv
+</code></pre>
+<ul>
+<li><strong>Call service command, clear walking track</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 service call &lt;service_name&gt; &lt;service_<span class="hljs-built_in">type</span>&gt;
+ros2 service call /clear std_srvs/srv/Empty
+</code></pre>
+<ul>
+<li><strong>Generate a new turtle</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 service call /spawn turtlesim/srv/Spawn <span class="hljs-string">&quot;{x: 2, y: 2, theta: 0.2, name: &apos;turtle2&apos;}&quot;</span>
+</code></pre>
+<h2 id="4-parameters"><a name="4-parameters" class="anchor-navigation-ex-anchor" href="#4-parameters"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. 4 Parameters</h2>
+<p>Parameters are configuration values &#x200B;&#x200B;for a node. You can think of parameters as node settings. Nodes can store parameters as integers, floating point numbers, Boolean values, strings, and lists. In ROS 2, each node maintains its own parameters. For more background on parameters, see the concepts documentation.</p>
+<p>Specific reference: <a href="https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html" target="_blank">Official tutorial</a></p>
+<ul>
+<li><strong>parameters help</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 param -h
+</code></pre>
+<ul>
+<li><strong>Start turtlesim and keyboard control</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 run turtlesim turtlesim_node
+ros2 run turtlesim turtle_teleop_key
+</code></pre>
+<ul>
+<li><strong>View service list</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 param list
+</code></pre>
+<ul>
+<li><strong>Get parameter value</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 param get &lt;node_name&gt; &lt;parameter_name&gt;
+ros2 param get /turtlesim background_g
+</code></pre>
+<ul>
+<li><strong>Set parameter value</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 param <span class="hljs-built_in">set</span> &lt;node_name&gt; &lt;parameter_name&gt; &lt;value&gt;
+ros2 param <span class="hljs-built_in">set</span> /turtlesim background_r 150
+</code></pre>
+<ul>
+<li><strong>Export parameter values</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 param dump &lt;node_name&gt;
+ros2 param dump /turtlesim
+</code></pre>
+<ul>
+<li><strong>Import parameters independently</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 param load &lt;node_name&gt; &lt;parameter_file&gt;
+ros2 param load /turtlesim ./turtlesim.yaml
+</code></pre>
+<ul>
+<li><strong>Start node and import parameters</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 run &lt;package_name&gt; &lt;executable_name&gt; --ros-args --params-file &lt;file_name&gt;
+ros2 run turtlesim turtlesim_node --ros-args --params-file ./turtlesim.yaml
+</code></pre>
+<h2 id="5-actions"><a name="5-actions" class="anchor-navigation-ex-anchor" href="#5-actions"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. 5 Actions</h2>
+<p>Actions are a type of communication in ROS 2 used for long-running tasks. They consist of three parts: a goal, a response, and a result.</p>
+<p>Actions are based on topics and services. They function like services, except that actions are preemptible (you can cancel them while they are executing). They also provide steady feedback, rather than services that return a single response.</p>
+<p>Actions use a client-server model, similar to the publisher-subscriber model (described in the topic tutorial). An &quot;action client&quot; node sends a target to an &quot;action server&quot; node, which confirms the target and returns a stream of feedback and results.</p>
+<p>Specific reference: <a href="https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions.html" target="_blank">Official tutorial</a></p>
+<ul>
+<li><strong>action help</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 action -h
+</code></pre>
+<ul>
+<li><strong>Start turtlesim and keyboard control</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 run turtlesim turtlesim_node
+ros2 run turtlesim turtle_teleop_key
+</code></pre>
+<p>Press G|B|V|C|D|E|R|T to rotate, press F to cancel</p>
+<ul>
+<li><strong>View the server and client of the node action</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 node info /turtlesim
+</code></pre>
+<ul>
+<li><strong>View the action list</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 action list
+ros2 action list -t <span class="hljs-comment"># DisplayAction type</span>
+</code></pre>
+<ul>
+<li><strong>View action information</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 action info &lt;action&gt;
+ros2 action info /turtle1/rotate_absolute
+</code></pre>
+<ul>
+<li><strong>View action message content</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 interface show turtlesim/action/RotateAbsolute
+</code></pre>
+<ul>
+<li><strong>Send action target information</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 action send_goal &lt;action_name&gt; &lt;action_<span class="hljs-built_in">type</span>&gt;
+ros2 action send_goal /turtle1/rotate_absolute turtlesim/action/RotateAbsolute <span class="hljs-string">&quot;{theta: 1.57}&quot;</span>
+<span class="hljs-comment"># With feedback information</span>
+ros2 action send_goal /turtle1/rotate_absolute turtlesim/action/RotateAbsolute <span class="hljs-string">&quot;{theta: 0}&quot;</span> --feedback
+</code></pre>
+<h2 id="6-rqt"><a name="6-rqt" class="anchor-navigation-ex-anchor" href="#6-rqt"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. 6 RQt</h2>
+<p>RQt is a graphical user interface framework that implements various tools and interfaces in the form of plugins. You can run all your existing GUI tools as dockable windows in RQt! The tools can still be run in the traditional standalone way, but RQt makes it easier to manage all the different windows in a single screen layout.</p>
+<p>Specific reference: <a href="https://docs.ros.org/en/foxy/Concepts/About-RQt.html" target="_blank">Official Tutorial</a></p>
+<p>You can easily run any RQt tool/plugin by:</p>
+<pre><code class="lang-bash">rqt
+</code></pre>
+<ul>
+<li><strong>rqt help</strong></li>
+</ul>
+<pre><code class="lang-bash">rqt -h
+</code></pre>
+<ul>
+<li><strong>Start turtlesim and keyboard control</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 run turtlesim turtlesim_node
+ros2 run turtlesim turtle_teleop_key
+</code></pre>
+<ul>
+<li><p>Action browser: / Plugins -&gt; Actions -&gt;Action Type Browser</p>
+</li>
+<li><p>Parameter reconfiguration: / Plugins -&gt; configuration -&gt;Parameter Reconfigure</p>
+</li>
+<li><p>Node graph: /Node Graph</p>
+</li>
+<li><p>Control steering: /Plugins -&gt; Robot Tools -&gt; Robot Steering</p>
+</li>
+<li><p>Service call: /Plugins -&gt; Services -&gt; Service Caller</p>
+</li>
+<li><p>Service type browser: Plugins -&gt; Services -&gt; Service Type Browser</p>
+</li>
+<li><p>Message publishing: Plugins -&gt; Topics -&gt; Message Publisher</p>
+</li>
+<li><p>Message type browser: Plugins -&gt; Topics -&gt; Message Type Browser</p>
+</li>
+<li><p>Topic list: Plugins -&gt; Topics -&gt; Topic Monitor</p>
+</li>
+<li><p>Draw a curve: Plugins -&gt; Visualization -&gt; Plot</p>
+</li>
+<li><p><strong>View log: rqt_console</strong></p>
+</li>
+</ul>
+<pre><code class="lang-bash">ros2 run rqt_console rqt_console
+ros2 run turtlesim turtlesim_node
+ros2 topic pub -r 1 /turtle1/cmd_vel geometry_msgs/msg/Twist <span class="hljs-string">&quot;{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.0}}&quot;</span>
+</code></pre>
+<h2 id="7-tf2"><a name="7-tf2" class="anchor-navigation-ex-anchor" href="#7-tf2"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. 7 TF2</h2>
+<p>tf2 It is a transformation library that allows users to track multiple coordinate systems over time. tf2 maintains the relationship between coordinate systems in a time-buffered tree structure and lets users transform points, vectors, etc. between any two coordinate systems at any desired time point.</p>
+<p>Specific reference: <a href="https://docs.ros.org/en/foxy/Tutorials/Intermediate/Tf2/Introduction-To-Tf2.html" target="_blank">Official Tutorial</a></p>
+<p>Let&apos;s start by installing the demo package and its dependencies.</p>
+<pre><code class="lang-bash">sudo apt-get install ros-foxy-turtle-tf2-py ros-foxy-tf2-tools ros-foxy-tf-transformations
+</code></pre>
+<ul>
+<li><p><strong>Follow</strong></p>
+</li>
+<li><p>launch starts two turtles, the first turtle automatically follows the second</p>
+</li>
+</ul>
+<pre><code class="lang-bash">ros2 launch turtle_tf2_py turtle_tf2_demo.launch.py
+</code></pre>
+<ul>
+<li>Control the movement of the first turtle through the keyboard</li>
+</ul>
+<pre><code class="lang-bash">ros2 run turtlesim turtle_teleop_key
+</code></pre>
+<ul>
+<li><strong>View TF tree</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 run tf2_tools view_frames.py
+evince frames.pdf
+</code></pre>
+<ul>
+<li><strong>View the relationship between the two coordinate systems</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 run tf2_ros tf2_<span class="hljs-built_in">echo</span> [reference_frame] [target_frame]
+ros2 run tf2_ros tf2_<span class="hljs-built_in">echo</span> turtle2 turtle1
+</code></pre>
+<ul>
+<li><strong>View TF relations on rviz</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 run rviz2 rviz2 <span class="hljs-_">-d</span> $(ros2 pkg prefix --share turtle_tf2_py)/rviz/turtle_rviz.rviz
+</code></pre>
+<h2 id="8-urdf"><a name="8-urdf" class="anchor-navigation-ex-anchor" href="#8-urdf"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. 8 URDF</h2>
+<p>URDF is the Unified Robot Description Format, which is used to specify robot geometry and organization in ROS.</p>
+<p>Specific reference: <a href="https://docs.ros.org/en/foxy/Tutorials/Intermediate/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html" target="_blank">Official tutorial</a></p>
+<ul>
+<li><strong>Full syntax</strong></li>
+</ul>
+<pre><code class="lang-bash">&lt;robot&gt;
+    <span class="hljs-comment"># describe:</span>
+    <span class="hljs-comment"># Parameters: name=&quot;&quot;</span>
+    <span class="hljs-comment">#  Child node:</span>
+        &lt;link&gt;
+            <span class="hljs-comment"># Description:</span>
+            <span class="hljs-comment"># Parameters&#xFF1A;name=&quot;&quot;</span>
+            <span class="hljs-comment"># Child node:</span>
+                &lt;visual&gt;
+                    <span class="hljs-comment"># describe:</span>
+                    <span class="hljs-comment"># Parameters:</span>
+                    <span class="hljs-comment"># child nodes: </span>
+                        &lt;geometry&gt;
+                            <span class="hljs-comment"># description</span>
+                            <span class="hljs-comment"># parameters</span>
+                            <span class="hljs-comment"># Child node: </span>
+                                &lt;cylinder /&gt;
+                                    <span class="hljs-comment"># Description:</span>
+                                    <span class="hljs-comment"># Parameters:</span>
+                                        <span class="hljs-comment"># length=&quot;0.6&quot;</span>
+                                        <span class="hljs-comment"># radius=&quot;0.2&quot;</span>
+                                &lt;box /&gt;
+                                    <span class="hljs-comment"># description</span>
+                                    <span class="hljs-comment"># Parameters:size=&quot;0.6 0.1 0.2&quot;</span>
+                                &lt;mesh /&gt;
+                                    <span class="hljs-comment">#  Description</span>
+                                    <span class="hljs-comment">#Parameters: filename=&quot;package://urdf_tutorial/meshes/l_finger_tip.dae&quot;</span>
+                        &lt;collision&gt;
+                            <span class="hljs-comment"># Description: collision element, prioritized</span>
+                            <span class="hljs-comment"># parameters</span>
+                            <span class="hljs-comment"># child node </span>
+                                &lt;geometry&gt;
+                        &lt;inertial&gt;
+                            <span class="hljs-comment"># description</span>
+                            <span class="hljs-comment"># parameters</span>
+                            <span class="hljs-comment"># Child nodes: </span>
+                                &lt;mass /&gt;
+                                    <span class="hljs-comment"># description: mass</span>
+                                    <span class="hljs-comment"># Parameters: value=10</span>
+                                &lt;inertia /&gt;
+                                    <span class="hljs-comment"># Description: Inertia</span>
+                                    <span class="hljs-comment"># Parameters: i+&quot;Cartesian product of xyz&quot; (9 in total)=&quot;0.4&quot;</span>
+                        &lt;origin /&gt;
+                            <span class="hljs-comment"># Description:</span>
+                            <span class="hljs-comment"># Parameters:</span>
+                                <span class="hljs-comment"># rpy=&quot;0 1.5 0&quot;</span>
+                                <span class="hljs-comment"># xyz=&quot;0 0 -0.3&quot;</span>
+                        &lt;material /&gt;
+                            <span class="hljs-comment"># Description</span>
+                            <span class="hljs-comment"># Parameters&#xFF1A;name=&quot;blue&quot;</span>
+        &lt;joint&gt;
+            <span class="hljs-comment"># Description</span>
+            <span class="hljs-comment"># Parameters&#xFF1A;</span>
+                <span class="hljs-comment"># name=&quot;&quot;</span>
+                <span class="hljs-comment"># type=&quot;&quot;</span>
+                    <span class="hljs-comment"># fixed</span>
+                    <span class="hljs-comment"># prismatic</span>
+            <span class="hljs-comment"># child node</span>
+                &lt;parent /&gt;
+                    <span class="hljs-comment"># Description</span>
+                    <span class="hljs-comment"># Parameters&#xFF1A;link=&quot;&quot;</span>
+                &lt;child /&gt;
+                    <span class="hljs-comment"># Description&#xFF1A;</span>
+                    <span class="hljs-comment"># Parameters&#xFF1A;link=&quot;&quot;</span>
+                &lt;origin /&gt;
+                    <span class="hljs-comment"># Description&#xFF1A;</span>
+                    <span class="hljs-comment"># Parameters&#xFF1A;xyz=&quot;0 -0.2 0.25&quot;</span>
+                &lt;<span class="hljs-built_in">limit</span> /&gt;
+                    <span class="hljs-comment"># Description</span>
+                    <span class="hljs-comment"># Parameters&#xFF1A;</span>
+                        <span class="hljs-comment"># effort=&quot;1000.0&quot;    maximum effort</span>
+                        <span class="hljs-comment"># lower=&quot;-0.38&quot;      Joint upper limit (radians)</span>
+                        <span class="hljs-comment"># upper=&quot;0&quot;          Joint lower limit (radians)</span>
+                        <span class="hljs-comment"># velocity=&quot;0.5&quot;     Maximum velocity </span>
+                &lt;axis /&gt;
+                    <span class="hljs-comment"># Description&#xFF1A; Press ? axis rotation</span>
+                    <span class="hljs-comment"># Parameters&#xFF1A;xyz=&quot;0 0 1&quot;&#xFF0C;along the Z axis</span>
+        &lt;material&gt;
+            <span class="hljs-comment"># Description&#xFF1A;</span>
+            <span class="hljs-comment"># Parameters&#xFF1A;name=&quot;blue&quot;</span>
+            <span class="hljs-comment"># child node&#xFF1A;</span>
+                &lt;color /&gt;
+                    <span class="hljs-comment"># description&#xFF1A;</span>
+                    <span class="hljs-comment"># Parameters&#xFF1A;rgba=&quot;0 0 0.8 1&quot;</span>
+</code></pre>
+<ul>
+<li><strong>Download source code</strong></li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> ~/dev_ws
+git <span class="hljs-built_in">clone</span> - b ros2 https://github.com/ros/urdf_tutorial.git src/urdf_tutorial
+</code></pre>
+<ul>
+<li><strong>Compile source code</strong></li>
+</ul>
+<pre><code class="lang-bash">colcon build --packages-select urdf_tutorial
+</code></pre>
+<ul>
+<li><strong>Run the example</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 launch urdf_tutorial display.launch.py &#x200B;&#x200B;model:=urdf/01-myfirst.urdf
+</code></pre>
+<h2 id="9-launch"><a name="9-launch" class="anchor-navigation-ex-anchor" href="#9-launch"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. 9 Launch</h2>
+<p>The launch system in ROS 2 is responsible for helping users describe the configuration of their system and then executing it accordingly.The configuration of the system consists of the programs to run, where to run them, the arguments to pass to them, and ROS-specific conventions that make it easy to reuse components throughout the system by providing different configurations for each component. It is also responsible for monitoring the status of launched processes and reporting and/or responding to changes in the status of those processes.</p>
+<p>Launch files written in Python, XML, or YAML can start and stop different nodes, as well as trigger and handle various events.</p>
+<p>Specific reference: <a href="https://docs.ros.org/en/foxy/Tutorials/Intermediate/Launch/Creating-Launch-Files.html" target="_blank">Official Tutorial</a></p>
+<p><strong>Setup</strong></p>
+<p>Create a new directory to store your launch file:</p>
+<p>` ``bash
+mkdir launch</p>
+<pre><code>from launch import LaunchDescription
+from launch_ros.actions import Node
+
+def generate_launch_description():
+    return LaunchDescription([
+        Node(
+            package=&apos;turtlesim&apos;,
+            namespace=&apos;turtlesim1&apos;,
+            executable=&apos;turtlesim_node&apos;,
+            name=&apos;sim&apos;
+        ),
+        Node(
+            package=&apos;turtlesim&apos;,
+            namespace=&apos;turtlesim2&apos;,
+            executable=&apos;turtlesim_node&apos;,
+            name=&apos;sim&apos;
+        ),
+        Node(
+            package=&apos;turtlesim&apos;,
+            executable=&apos;mimic&apos;,
+            name=&apos;mimic&apos;,
+            remappings=[
+                (&apos;/input/pose&apos;, &apos;/turtlesim1/turtle1/pose&apos;),
+                (&apos;/output/cmd_vel&apos;, &apos;/turtlesim2/turtle1/cmd_vel&apos;),
+            ]
+        )
+    ])
+</code></pre><p><strong>Run the ros2 launch file</strong></p>
+<p>To run the launch file created above, go to the directory you created earlier and run the following command:</p>
+<p>The syntax format is:</p>
+<p><code>ros2 launch &lt;package_name&gt; &lt;launch_file_name&gt;</code></p>
+<pre><code>cd launch
+ros2 launch turtlesim_mimic_launch.py
+</code></pre><ul>
+<li><strong>launch help</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 launch -h
+</code></pre>
+<ul>
+<li><strong>Run Node</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 launch turtlesim multisim.launch.py
+</code></pre>
+<ul>
+<li><strong>Check the parameters of the launch file</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 launch turtlebot3_fake_node turtlebot3_fake_node.launch.py &#x200B;&#x200B;<span class="hljs-_">-s</span>
+ros2 launch turtlebot3_fake_node turtlebot3_fake_node.launch. py --show-arguments
+ros2 launch turtlebot3_bringup robot.launch.launch.py &#x200B;&#x200B;<span class="hljs-_">-s</span>
+</code></pre>
+<ul>
+<li><strong>Run launch file with parameters</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 launch turtlebot3_bringup robot.launch.launch.py &#x200B;&#x200B;usb_port:=/dev/ opencr
+</code></pre>
+<ul>
+<li><strong>Run the node and debug</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 launch turtlesim turtlesim_node.launch.py &#x200B;&#x200B;<span class="hljs-_">-d</span>
+</code></pre>
+<ul>
+<li><strong>Only output node description</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 launch turtlesim turtlesim_node.launch. py -p
+</code></pre>
+<ul>
+<li><strong>Run component</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 launch composition composition_demo.launch.py
+</code></pre>
+<h2 id="10-run"><a name="10-run" class="anchor-navigation-ex-anchor" href="#10-run"><i class="fa fa-link" aria-hidden="true"></i></a>1.10. 10 Run</h2>
+<p>run is used to run a single node, component program.</p>
+<ul>
+<li><strong>run help</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 run -h
+</code></pre>
+<ul>
+<li><strong>run node</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 run turtlesim turtlesim_node
+</code></pre>
+<ul>
+<li><strong>run node with parameters</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 run turtlesim turtlesim_node --ros-args -r __node:=turtle2 -r __ns:=/ns2
+</code></pre>
+<ul>
+<li><strong>Run component container</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 run rclcpp_components component_container
+</code></pre>
+<ul>
+<li><p><strong>Run component</strong> ```bash
+ros2 run composition manual_composition</p>
+<h2 id="11-package"><a name="11-package" class="anchor-navigation-ex-anchor" href="#11-package"><i class="fa fa-link" aria-hidden="true"></i></a>1.11. 11 Package</h2>
+<p>A package can be thought of as a container for your ROS 2 code. If you want to be able to install your code or share it with others, you need to organize it in a Packages allow you to publish your ROS 2 work and allow others to easily build and use it.</p>
+<p>Package creation in ROS 2 uses ament as its build system and colcon as its build tool. You can create packages using the officially supported CMake or Python, but other build types do exist.</p>
+<p>Specific parameters: <a href="https: //docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html" target="_blank">Official tutorial</a></p>
+<p><strong>Creating a Workspace</strong></p>
+<p>Create a new directory for each new workspace. The name is not important, but it helps indicate the purpose of the workspace. Let&apos;s choose the directory name ros2_ws for the &quot;development workspace&quot;:</p>
+<pre><code>mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws/src
+</code></pre></li>
+<li><p><strong>pkg help</strong></p>
+<p><code>ros2 pkg -h</code></p>
+</li>
+<li><p><strong>List function packages</strong></p>
+</li>
+</ul>
+<pre><code class="lang-bash">ros2 pkg executable turtlesim
+</code></pre>
+<ul>
+<li><strong>Output a function package executable program</strong></li>
+</ul>
+<pre><code class="lang-bash">ros2 pkg executable turtlesim
+</code></pre>
+<ul>
+<li><strong>Create Python Packages</strong></li>
+</ul>
+<p>Before running the package creation command, make sure you are in the src folder.</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> ~/ros2_ws/src
+</code></pre>
+<p>The command syntax for creating a new package in ROS 2 is:</p>
+<pre><code class="lang-bash">ros2 pkg create --build-type ament_python &lt;package_name&gt;
+<span class="hljs-comment"># You will use the optional parameter -- node-name Create a simple Hello World type executable file in the package.</span>
+ros2 pkg create --build-type ament_python --node-name my_node my_package
+</code></pre>
+<ul>
+<li><strong>Build package</strong></li>
+</ul>
+<p>Put the package in the workspace Especially valuable because you can build many packages at once by running colcon build in the workspace root. Otherwise, you would have to build each package individually.</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># Return to the workspace directory:</span>
+<span class="hljs-built_in">cd</span> ~/ros2_ws<span class="hljs-comment"># Now you can build your package:</span>
+colcon build
+</code></pre>
+<ul>
+<li><strong>Source setup file</strong></li>
+</ul>
+<p>To use your new package and executable, first open a new terminal and source your main ROS 2 installation.</p>
+<p>Then, from the ros2_ws directory, run the following command to source your workspace:</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">source</span> install/setup.bash
+</code></pre>
+<p>Now that your workspace is added to your path, you will be able to use your new package&apos;s executable.</p>
+<ul>
+<li><strong>Use package</strong></li>
+</ul>
+<p>To run the executable you created during package creation using the --node-name parameter, enter the following command:</p>
+<pre><code class="lang-bash">ros2 run my_package my_node
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="12.2.1-InstallationOfROS2.html" class="navigation navigation-prev " aria-label="Previous page: 6.3.1 ROS2 environment construction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="12.2.4-rivzIntroductionAndUse/" class="navigation navigation-next " aria-label="Next page: 6.3.3 rivz Introduction and Use">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.3.2 ROS2 basics","level":"1.10.3.2","depth":3,"next":{"title":"6.3.3 rivz Introduction and Use","level":"1.10.3.3","depth":3,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.4-rivzIntroductionAndUse/README.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.4-rivzIntroductionAndUse/README.md","articles":[]},"previous":{"title":"6.3.1 ROS2 environment construction","level":"1.10.3.1","depth":3,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.1-InstallationOfROS2.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.1-InstallationOfROS2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","livereload"],"pluginsConfig":{"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":true,"insertAnchor":true,"showGoTop":true,"mini":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":"","bottom":"20px","offset":{"top":10,"left":10},"minWidth":"70px","floatIcon":"fa fa-navicon","zIndex":"1000","trigger":"click","right":"20px","show":true}},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.2-BasicTutorial.md","mtime":"2024-07-24T10:04:49.770Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-24T11:06:05.516Z"},"basePath":"../../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../../gitbook/gitbook.js"></script>
+    <script src="../../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

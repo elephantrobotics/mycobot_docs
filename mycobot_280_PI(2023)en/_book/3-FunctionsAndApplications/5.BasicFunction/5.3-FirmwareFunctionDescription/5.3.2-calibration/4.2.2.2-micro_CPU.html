@@ -1,0 +1,1602 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5.3.2 Robot arm calibration · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../5.3.4-connection/4.2.4.2-micro_CPU.html" />
+    
+    
+    <link rel="prev" href="../5.3.1-moving/4.2.1.2-micro_CPU.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../../">
+            
+                <a href="../../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Product Information
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../../1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.html">
+            
+                <a href="../../../../1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.html">
+            
+                    
+                    1. Product Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../../1-ProductInformation/2.ProductParameter/2-ProductParameters.html">
+            
+                <a href="../../../../1-ProductInformation/2.ProductParameter/2-ProductParameters.html">
+            
+                    
+                    2. Product Parameters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Basic Settings
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../../../2-BasicSettings/3.UserNotice/3-UserInstructions.html">
+            
+                <a href="../../../../2-BasicSettings/3.UserNotice/3-UserInstructions.html">
+            
+                    
+                    3. User Notice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../../../2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.html">
+            
+                <a href="../../../../2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.html">
+            
+                    
+                    4. First Time Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.html">
+            
+                <a href="../../../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.html">
+            
+                    
+                    4.1 How to Ask for Help Correctly
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../../../4-SupportAndService/9.Troubleshooting/9.1-driver.html">
+            
+                <a href="../../../../4-SupportAndService/9.Troubleshooting/9.1-driver.html">
+            
+                    
+                    4.2 Common Driver Problems and Solutions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../../../4-SupportAndService/9.Troubleshooting/9.2-software.html">
+            
+                <a href="../../../../4-SupportAndService/9.Troubleshooting/9.2-software.html">
+            
+                    
+                    4.3 Common software problems and solutions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../../../4-SupportAndService/9.Troubleshooting/9.3-hardware.html">
+            
+                <a href="../../../../4-SupportAndService/9.Troubleshooting/9.3-hardware.html">
+            
+                    
+                    4.4 Common hardware problems and solutions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    Functions and applications
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    5. Basic functions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../5.1-Functionlnstruction/3.5.1-SW-description.html">
+            
+                <a href="../../5.1-Functionlnstruction/3.5.1-SW-description.html">
+            
+                    
+                    5.1 Introduction to pi version robot arm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../5.2-Softwarelnstructions/3.5.2-SW-detail-description.html">
+            
+                <a href="../../5.2-Softwarelnstructions/3.5.2-SW-detail-description.html">
+            
+                    
+                    5.2 System basic function description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    5.3 Firmware Function Description
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.3.1" data-path="../5.3.1-moving/4.2.1.2-micro_CPU.html">
+            
+                <a href="../5.3.1-moving/4.2.1.2-micro_CPU.html">
+            
+                    
+                    5.3.1 Drag teaching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.3.2" data-path="4.2.2.2-micro_CPU.html">
+            
+                <a href="4.2.2.2-micro_CPU.html">
+            
+                    
+                    5.3.2 Robot arm calibration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.3" data-path="../5.3.4-connection/4.2.4.2-micro_CPU.html">
+            
+                <a href="../5.3.4-connection/4.2.4.2-micro_CPU.html">
+            
+                    
+                    5.3.3 Link Check
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4" data-path="../../5.2-Softwarelnstructions/">
+            
+                <a href="../../5.2-Softwarelnstructions/">
+            
+                    
+                    5.3.4 mystudio
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../../6.developmentGuide/">
+            
+                <a href="../../../6.developmentGuide/">
+            
+                    
+                    6. Software Development Guide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../../6.developmentGuide/python/">
+            
+                <a href="../../../6.developmentGuide/python/">
+            
+                    
+                    6.1 Development and Use Based on Python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" data-path="../../../6.developmentGuide/python/1_download.html">
+            
+                <a href="../../../6.developmentGuide/python/1_download.html">
+            
+                    
+                    6.1.1 Environment Construction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2" data-path="../../../6.developmentGuide/python/2_API.html">
+            
+                <a href="../../../6.developmentGuide/python/2_API.html">
+            
+                    
+                    6.1.2api description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3" data-path="../../../6.developmentGuide/python/3_angle.html">
+            
+                <a href="../../../6.developmentGuide/python/3_angle.html">
+            
+                    
+                    6.1.3 joint control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.4" data-path="../../../6.developmentGuide/python/4_coord.html">
+            
+                <a href="../../../6.developmentGuide/python/4_coord.html">
+            
+                    
+                    6.1.4 coordinate control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.5" data-path="../../../6.developmentGuide/python/5_IO.html">
+            
+                <a href="../../../6.developmentGuide/python/5_IO.html">
+            
+                    
+                    6.1.5 IO control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.6" data-path="../../../6.developmentGuide/python/6_gripper.html">
+            
+                <a href="../../../6.developmentGuide/python/6_gripper.html">
+            
+                    
+                    6.1.6 gripper control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.7" data-path="../../../6.developmentGuide/python/7_TCPIP.html">
+            
+                <a href="../../../6.developmentGuide/python/7_TCPIP.html">
+            
+                    
+                    6.1.7 TCP&IP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.8" data-path="../../../6.developmentGuide/python/9_HandleControl.html">
+            
+                <a href="../../../6.developmentGuide/python/9_HandleControl.html">
+            
+                    
+                    6.1.8 Handle Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.9" data-path="../../../6.developmentGuide/python/15_280_gcode_draw.html">
+            
+                <a href="../../../6.developmentGuide/python/15_280_gcode_draw.html">
+            
+                    
+                    6.1.9 Drawing Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.10" data-path="../../../6.developmentGuide/python/8_example.html">
+            
+                <a href="../../../6.developmentGuide/python/8_example.html">
+            
+                    
+                    6.1.10 Demonstration Code and Video
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../../../6.developmentGuide/ROS/12.1-ROS1/12.1.1-Introduction.html">
+            
+                <a href="../../../6.developmentGuide/ROS/12.1-ROS1/12.1.1-Introduction.html">
+            
+                    
+                    6.2 Development and Use Based on ROS1
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.2.1" data-path="../../../6.developmentGuide/ROS/12.1-ROS1/12.1.2-EnvironmentBuilding.html">
+            
+                <a href="../../../6.developmentGuide/ROS/12.1-ROS1/12.1.2-EnvironmentBuilding.html">
+            
+                    
+                    6.2.1 ROS1 Environment Building
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2" data-path="../../../6.developmentGuide/ROS/12.1-ROS1/12.1.3-ROS_Basics.html">
+            
+                <a href="../../../6.developmentGuide/ROS/12.1-ROS1/12.1.3-ROS_Basics.html">
+            
+                    
+                    6.2.2 ROS1 Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.3" data-path="../../../6.developmentGuide/ROS/12.1-ROS1/12.1.4-rivzIntroductionAndUse/">
+            
+                <a href="../../../6.developmentGuide/ROS/12.1-ROS1/12.1.4-rivzIntroductionAndUse/">
+            
+                    
+                    6.2.3 rivz Introduction and Use
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.4" data-path="../../../6.developmentGuide/ROS/12.1-ROS1/12.1.5-Moveit/">
+            
+                <a href="../../../6.developmentGuide/ROS/12.1-ROS1/12.1.5-Moveit/">
+            
+                    
+                    6.2.4 Moveit Introduction and Use
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../../../6.developmentGuide/ROS/12.2-ROS2/12.2.3-ROS2Introduction.html">
+            
+                <a href="../../../6.developmentGuide/ROS/12.2-ROS2/12.2.3-ROS2Introduction.html">
+            
+                    
+                    6.3 Development and use based on ROS2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.3.1" data-path="../../../6.developmentGuide/ROS/12.2-ROS2/12.2.1-InstallationOfROS2.html">
+            
+                <a href="../../../6.developmentGuide/ROS/12.2-ROS2/12.2.1-InstallationOfROS2.html">
+            
+                    
+                    6.3.1 ROS2 environment construction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3.2" data-path="../../../6.developmentGuide/ROS/12.2-ROS2/12.2.2-BasicTutorial.html">
+            
+                <a href="../../../6.developmentGuide/ROS/12.2-ROS2/12.2.2-BasicTutorial.html">
+            
+                    
+                    6.3.2 ROS2 basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3.3" data-path="../../../6.developmentGuide/ROS/12.2-ROS2/12.2.4-rivzIntroductionAndUse/">
+            
+                <a href="../../../6.developmentGuide/ROS/12.2-ROS2/12.2.4-rivzIntroductionAndUse/">
+            
+                    
+                    6.3.3 rivz Introduction and Use
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/">
+            
+                <a href="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/">
+            
+                    
+                    6.4 Development and Use Based on Blockly
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.4.1" data-path="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.1-myBlocklyFirstUse.html">
+            
+                <a href="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.1-myBlocklyFirstUse.html">
+            
+                    
+                    6.4.1 Initial Use of myBlockly
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.2" data-path="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.2-ControlRGB.html">
+            
+                <a href="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.2-ControlRGB.html">
+            
+                    
+                    6.4.2 Control RGB Light Board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.3" data-path="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.3-ControlRoboticArmBackZero.html">
+            
+                <a href="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.3-ControlRoboticArmBackZero.html">
+            
+                    
+                    6.4.3 Control the robot arm back to the origin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.4" data-path="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.4-ControlSingleJoint.html">
+            
+                <a href="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.4-ControlSingleJoint.html">
+            
+                    
+                    6.4.4 Control single joint motion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.5" data-path="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.5-ControlSinglesJoint.html">
+            
+                <a href="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.5-ControlSinglesJoint.html">
+            
+                    
+                    6.4.5 Control multiple joints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.6" data-path="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.6-ControlRoboticSwingLeft&Right.html">
+            
+                <a href="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.6-ControlRoboticSwingLeft&Right.html">
+            
+                    
+                    6.4.6 Control the robot arm to swing left and right
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.7" data-path="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.7-ControlRoboticArmDance.html">
+            
+                <a href="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.7-ControlRoboticArmDance.html">
+            
+                    
+                    6.4.7 Control the robot arm to dance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.8" data-path="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.html">
+            
+                <a href="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.html">
+            
+                    
+                    6.4.8 Gripper Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.9" data-path="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.html">
+            
+                <a href="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.html">
+            
+                    
+                    6.4.9 Pump Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.10" data-path="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.html">
+            
+                <a href="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.html">
+            
+                    
+                    6.4.10 Gripper Test
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.11" data-path="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.14-ioTest.html">
+            
+                <a href="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.14-ioTest.html">
+            
+                    
+                    6.4.11 IO Test
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.12" data-path="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.html">
+            
+                <a href="../../../6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.html">
+            
+                    
+                    6.4.12Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../../../6.developmentGuide/CommunicationProtocolPackage/18-communication.html">
+            
+                <a href="../../../6.developmentGuide/CommunicationProtocolPackage/18-communication.html">
+            
+                    
+                    6.5 Development and use based on serial communication protocol
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../../7.SuccessfulCase/7-SuccessfulCases.html">
+            
+                <a href="../../../7.SuccessfulCase/7-SuccessfulCases.html">
+            
+                    
+                    7. Successful Cases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../../8.SupportingResources/">
+            
+                <a href="../../../8.SupportingResources/">
+            
+                    
+                    8. Supporting Resources
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../../8.SupportingResources/8.1-ProductInformation/">
+            
+                <a href="../../../8.SupportingResources/8.1-ProductInformation/">
+            
+                    
+                    8.1 Product Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../../../8.SupportingResources/8.2-ProductDrawings/">
+            
+                <a href="../../../8.SupportingResources/8.2-ProductDrawings/">
+            
+                    
+                    8.2 Product Drawings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../../../8.SupportingResources/8.3-SoftwareInformationAndSourceCode/">
+            
+                <a href="../../../8.SupportingResources/8.3-SoftwareInformationAndSourceCode/">
+            
+                    
+                    8.3 Software Information and Source Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../../../8.SupportingResources/8.4-SystemInformation/">
+            
+                <a href="../../../8.SupportingResources/8.4-SystemInformation/">
+            
+                    
+                    8.4 System Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../../../8.SupportingResources/8.5-PromotionalMaterials/">
+            
+                <a href="../../../8.SupportingResources/8.5-PromotionalMaterials/">
+            
+                    
+                    8.5 Promotional Materials
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    Support and Service
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../../../4-SupportAndService/11.AboutUs/11.AboutUs.html">
+            
+                <a href="../../../../4-SupportAndService/11.AboutUs/11.AboutUs.html">
+            
+                    
+                     Contact Us
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../../../../5-Acknowledgments/5-Acknowledgments.html">
+            
+                <a href="../../../../5-Acknowledgments/5-Acknowledgments.html">
+            
+                    
+                    Acknowledgments
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../../.." >5.3.2 Robot arm calibration</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#implement-robot-arm-calibration"><b>1. </b>Implement robot arm calibration</a></li><ul><li><span class="title-icon "></span><a href="#1-applicable-devices"><b>1.1. </b>1 Applicable devices</a></li><li><span class="title-icon "></span><a href="#2-operation-steps"><b>1.2. </b>2 Operation steps</a></li></ul></ul></div><a href="#implement-robot-arm-calibration" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="implement-robot-arm-calibration"><a name="implement-robot-arm-calibration" class="anchor-navigation-ex-anchor" href="#implement-robot-arm-calibration"><i class="fa fa-link" aria-hidden="true"></i></a>1. Implement robot arm calibration</h1>
+<h2 id="1-applicable-devices"><a name="1-applicable-devices" class="anchor-navigation-ex-anchor" href="#1-applicable-devices"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. 1 Applicable devices</h2>
+<ul>
+<li>myCobot 280 Pi</li>
+<li>myCobot 320 Pi</li>
+<li>mechArm 270 Pi</li>
+</ul>
+<h2 id="2-operation-steps"><a name="2-operation-steps" class="anchor-navigation-ex-anchor" href="#2-operation-steps"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. 2 Operation steps</h2>
+<p><strong>Step 1:</strong> <strong>Atom</strong> burns the latest version of <strong>atomMain</strong>.</p>
+<p><strong>Step 2:</strong> Create a new Python file *.py on the desktop, copy the following code into it and save it.</p>
+<blockquote>
+<p><strong>Note:</strong> The file is named: rasp_mycobot_test_gui.py.</p>
+</blockquote>
+<p><em><a href="https://github.com/elephantrobotics/pymycobot/tree/main/tests" target="_blank">Github download address</a></em></p>
+<pre><code class="lang-python"><span class="hljs-comment">#!/usr/bin/env python3</span>
+<span class="hljs-keyword">import</span> socket
+<span class="hljs-keyword">import</span> tkinter
+<span class="hljs-keyword">from</span> tkinter <span class="hljs-keyword">import</span> ttk
+<span class="hljs-keyword">import</span> time
+<span class="hljs-keyword">import</span> threading
+<span class="hljs-keyword">import</span> os
+<span class="hljs-keyword">import</span> textwrap
+<span class="hljs-keyword">import</span> serial
+<span class="hljs-keyword">import</span> serial.tools.list_ports
+
+<span class="hljs-keyword">from</span> pymycobot.mycobot <span class="hljs-keyword">import</span> MyCobot
+<span class="hljs-keyword">from</span> pymycobot <span class="hljs-keyword">import</span> PI_PORT, PI_BAUD
+
+
+LOG_NUM = <span class="hljs-number">0</span>
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MycobotTest</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        self.mycobot = <span class="hljs-keyword">None</span>
+
+        self.win = tkinter.Tk()
+        self.win.title(<span class="hljs-string">&quot;&#x6811;&#x8393;&#x6D3E;&#x7248; Mycobot &#x6D4B;&#x8BD5;&#x5DE5;&#x5177;&quot;</span>)
+        self.win.geometry(<span class="hljs-string">&quot;918x511+10+10&quot;</span>)  <span class="hljs-comment"># 290 160&#x4E3A;&#x7A97;&#x53E3;&#x5927;&#x5C0F;&#xFF0C;+10 +10 &#x5B9A;&#x4E49;&#x7A97;&#x53E3;&#x5F39;&#x51FA;&#x65F6;&#x7684;&#x9ED8;&#x8BA4;&#x5C55;&#x793A;&#x4F4D;&#x7F6E;</span>
+
+        self.port_label = tkinter.Label(self.win, text=<span class="hljs-string">&quot;&#x9009;&#x62E9;&#x4E32;&#x53E3;&#xFF1A;&quot;</span>)
+        self.port_label.grid(row=<span class="hljs-number">0</span>)
+        self.port_list = ttk.Combobox(
+            self.win, width=<span class="hljs-number">15</span>, postcommand=self.get_serial_port_list
+        )  <span class="hljs-comment"># #&#x521B;&#x5EFA;&#x4E0B;&#x62C9;&#x83DC;&#x5355;</span>
+        self.get_serial_port_list()  <span class="hljs-comment"># #&#x7ED9;&#x4E0B;&#x62C9;&#x83DC;&#x5355;&#x8BBE;&#x5B9A;&#x503C;</span>
+        self.port_list.current(<span class="hljs-number">0</span>)
+        self.port_list.grid(row=<span class="hljs-number">0</span>, column=<span class="hljs-number">1</span>)
+
+        self.baud_label = tkinter.Label(self.win, text=<span class="hljs-string">&quot;&#x9009;&#x62E9;&#x6CE2;&#x7279;&#x7387;&#xFF1A;&quot;</span>)
+        self.baud_label.grid(row=<span class="hljs-number">1</span>)
+        self.baud_list = ttk.Combobox(self.win, width=<span class="hljs-number">15</span>)
+        self.baud_list[<span class="hljs-string">&quot;value&quot;</span>] = (<span class="hljs-string">&quot;115200&quot;</span>, <span class="hljs-string">&quot;1000000&quot;</span>)
+        self.baud_list.current(<span class="hljs-number">0</span>)
+        self.baud_list.grid(row=<span class="hljs-number">1</span>, column=<span class="hljs-number">1</span>)
+
+        <span class="hljs-comment"># Connect</span>
+        self.connect_label = tkinter.Label(self.win, text=<span class="hljs-string">&quot;&#x8FDE;&#x63A5;mycobot&#xFF1A;&quot;</span>)
+        self.connect_label.grid(row=<span class="hljs-number">2</span>)
+        self.connect = tkinter.Button(self.win, text=<span class="hljs-string">&quot;&#x8FDE;&#x63A5;&quot;</span>, command=self.connect_mycobot)
+        self.disconnect = tkinter.Button(
+            self.win, text=<span class="hljs-string">&quot;&#x65AD;&#x5F00;&quot;</span>, command=self.disconnect_mycobot
+        )
+        self.connect.grid(row=<span class="hljs-number">3</span>)
+        self.disconnect.grid(row=<span class="hljs-number">3</span>, column=<span class="hljs-number">1</span>)
+
+        <span class="hljs-comment"># Check servo.</span>
+        self.check_label = tkinter.Label(self.win, text=<span class="hljs-string">&quot;&#x68C0;&#x6D4B;&#x8FDE;&#x63A5;&#xFF1A;&quot;</span>)
+        self.check_label.grid(row=<span class="hljs-number">4</span>)
+        self.check_btn = tkinter.Button(
+            self.win, text=<span class="hljs-string">&quot;&#x5F00;&#x59CB;&#x68C0;&#x6D4B;&quot;</span>, command=self.check_mycobot_servos
+        )
+        self.check_btn.grid(row=<span class="hljs-number">4</span>, column=<span class="hljs-number">1</span>)
+
+        <span class="hljs-comment"># Calibration.</span>
+        self.calibration_num = <span class="hljs-keyword">None</span>
+        self.calibration_label = tkinter.Label(self.win, text=<span class="hljs-string">&quot;&#x6821;&#x51C6;&#x8235;&#x673A;&#xFF1A;&quot;</span>)
+        self.calibration_label.grid(row=<span class="hljs-number">5</span>)
+        self.calibration_btn = tkinter.Button(
+            self.win, text=<span class="hljs-string">&quot;&#x5F00;&#x59CB;&#x6821;&#x51C6;&quot;</span>, command=self.calibration_mycobot
+        )
+        self.calibration_btn.grid(row=<span class="hljs-number">5</span>, column=<span class="hljs-number">1</span>)
+
+        <span class="hljs-comment"># LED.</span>
+        self.set_color_label = tkinter.Label(self.win, text=<span class="hljs-string">&quot;&#x6D4B;&#x8BD5;Atom&#x706F;&#x677F;&#xFF1A;&quot;</span>)
+        self.set_color_label.grid(row=<span class="hljs-number">6</span>, columnspan=<span class="hljs-number">2</span>)
+        self.color_red = tkinter.Button(
+            self.win, text=<span class="hljs-string">&quot;&#x8BBE;&#x7F6E;&#x7EA2;&#x8272;&quot;</span>, command=<span class="hljs-keyword">lambda</span>: self.send_color(<span class="hljs-string">&quot;red&quot;</span>)
+        )
+        self.color_green = tkinter.Button(
+            self.win, text=<span class="hljs-string">&quot;&#x8BBE;&#x7F6E;&#x7EFF;&#x8272;&quot;</span>, command=<span class="hljs-keyword">lambda</span>: self.send_color(<span class="hljs-string">&quot;green&quot;</span>)
+        )
+        self.color_red.grid(row=<span class="hljs-number">7</span>)
+        self.color_green.grid(row=<span class="hljs-number">7</span>, column=<span class="hljs-number">1</span>)
+
+        <span class="hljs-comment"># Aging test.</span>
+        self.aging_stop = <span class="hljs-keyword">False</span>
+        self.movement_label = tkinter.Label(self.win, text=<span class="hljs-string">&quot;&#x8001;&#x5316;&#x5FAA;&#x73AF;&#x52A8;&#x4F5C;&#xFF1A;&quot;</span>)
+        self.movement_label.grid(row=<span class="hljs-number">8</span>)
+        self.start_btn = tkinter.Button(
+            self.win, text=<span class="hljs-string">&quot;&#x5F00;&#x59CB;&quot;</span>, command=self.start_aging_test
+        )
+        self.start_btn.grid(row=<span class="hljs-number">9</span>)
+        self.stop_btn = tkinter.Button(
+            self.win, text=<span class="hljs-string">&quot;&#x505C;&#x6B62;&quot;</span>, command=self.stop_aging_test
+        )
+        self.stop_btn.grid(row=<span class="hljs-number">9</span>, column=<span class="hljs-number">1</span>)
+
+        <span class="hljs-comment"># Release</span>
+        self.release_btn = tkinter.Button(
+            self.win, text=<span class="hljs-string">&quot;&#x653E;&#x677E;&#x6240;&#x6709;&#x7535;&#x673A;&quot;</span>, command=self.release_mycobot
+        )
+        self.release_btn.grid(row=<span class="hljs-number">10</span>)
+
+        <span class="hljs-comment"># rectify</span>
+        self.rectify_btn = tkinter.Button(
+            self.win, text=<span class="hljs-string">&quot;&#x6821;&#x51C6;pid&quot;</span>, command=self.rectify_mycobot
+        )
+        self.rectify_btn.grid(row=<span class="hljs-number">10</span>, column=<span class="hljs-number">1</span>)
+
+        <span class="hljs-comment"># Log output.</span>
+        self.log_label = tkinter.Label(self.win, text=<span class="hljs-string">&quot;&#x65E5;&#x5FD7;&#xFF1A;&quot;</span>)
+        self.log_label.grid(row=<span class="hljs-number">0</span>, column=<span class="hljs-number">12</span>)
+        _f = tkinter.Frame(self.win)
+        _bar = tkinter.Scrollbar(_f, orient=tkinter.VERTICAL)
+        self.log_data_Text = tkinter.Text(
+            _f, width=<span class="hljs-number">100</span>, height=<span class="hljs-number">35</span>, yscrollcommand=_bar.set
+        )
+        _bar.pack(side=tkinter.RIGHT, fill=tkinter.Y)
+        _bar.config(command=self.log_data_Text.yview)
+        self.log_data_Text.pack()
+        <span class="hljs-comment"># self.log_data_Text.grid(row=1, column=12, rowspan=15, columnspan=10)</span>
+        _f.grid(row=<span class="hljs-number">1</span>, column=<span class="hljs-number">12</span>, rowspan=<span class="hljs-number">15</span>, columnspan=<span class="hljs-number">10</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">run</span><span class="hljs-params">(self)</span>:</span>
+        self.win.mainloop()  <span class="hljs-comment"># run</span>
+
+    <span class="hljs-comment"># ============================================================</span>
+    <span class="hljs-comment"># Connect method</span>
+    <span class="hljs-comment"># ============================================================</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">connect_mycobot</span><span class="hljs-params">(self)</span>:</span>
+        self.prot = port = self.port_list.get()
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> port:
+            self.write_log_to_Text(<span class="hljs-string">&quot;&#x8BF7;&#x9009;&#x62E9;&#x4E32;&#x53E3;&quot;</span>)
+            <span class="hljs-keyword">return</span>
+        self.baud = baud = self.baud_list.get()
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> baud:
+            self.write_log_to_Text(<span class="hljs-string">&quot;&#x8BF7;&#x9009;&#x62E9;&#x6CE2;&#x7279;&#x7387;&quot;</span>)
+            <span class="hljs-keyword">return</span>
+        baud = int(baud)
+
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-comment"># self.mycobot = MyCobot(PI_PORT, PI_BAUD)</span>
+            self.mycobot = MyCobot(port, baud)
+            <span class="hljs-comment"># self.mycobot = MyCobot(&quot;/dev/cu.usbserial-0213245D&quot;, 115200)</span>
+            self.write_log_to_Text(<span class="hljs-string">&quot;&#x8FDE;&#x63A5;&#x6210;&#x529F; !&quot;</span>)
+        <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+            err_log = <span class="hljs-string">&quot;&quot;&quot;\
+                \r&#x8FDE;&#x63A5;&#x5931;&#x8D25; !!!
+                \r=================================================
+                {}
+                \r=================================================
+            &quot;&quot;&quot;</span>.format(
+                e
+            )
+            self.write_log_to_Text(err_log)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">disconnect_mycobot</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.has_mycobot():
+            <span class="hljs-keyword">return</span>
+
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-keyword">del</span> self.mycobot
+            self.mycobot = <span class="hljs-keyword">None</span>
+            self.write_log_to_Text(<span class="hljs-string">&quot;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#x6210;&#x529F; !&quot;</span>)
+        <span class="hljs-keyword">except</span> AttributeError:
+            self.write_log_to_Text(<span class="hljs-string">&quot;&#x8FD8;&#x6CA1;&#x6709;&#x8FDE;&#x63A5;mycobot&#xFF01;&#xFF01;&#xFF01;&quot;</span>)
+
+    <span class="hljs-comment"># ============================================================</span>
+    <span class="hljs-comment">#  Function method</span>
+    <span class="hljs-comment"># ============================================================</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">release_mycobot</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.has_mycobot():
+            <span class="hljs-keyword">return</span>
+        self.mycobot.release_all_servos()
+        self.write_log_to_Text(<span class="hljs-string">&quot;Release over.&quot;</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">check_mycobot_servos</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.has_mycobot():
+            <span class="hljs-keyword">return</span>
+
+        ping_commands = [
+            [<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">251</span>],
+            [<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">250</span>],
+            [<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">249</span>],
+            [<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">248</span>],
+            [<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">247</span>],
+            [<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">6</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">246</span>],
+            [<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">7</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">246</span>],
+        ]
+        res = []
+        <span class="hljs-keyword">for</span> idx, command <span class="hljs-keyword">in</span> enumerate(ping_commands, start=<span class="hljs-number">1</span>):
+            self.mycobot._write(command)
+            time.sleep(<span class="hljs-number">0.1</span>)
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.mycobot._read(<span class="hljs-number">1</span>):
+                res.append(idx)
+            time.sleep(<span class="hljs-number">0.1</span>)
+
+        <span class="hljs-keyword">if</span> res:
+            self.write_log_to_Text(<span class="hljs-string">&quot;&#x5173;&#x8282; {} &#x65E0;&#x6CD5;&#x901A;&#x4FE1;&#xFF01;&#xFF01;&#xFF01;&quot;</span>.format(res))
+        <span class="hljs-keyword">else</span>:
+            self.write_log_to_Text(<span class="hljs-string">&quot;&#x6240;&#x6709;&#x5173;&#x8282;&#x8FDE;&#x63A5;&#x6B63;&#x5E38;&#x3002;&quot;</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calibration_mycobot</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;Calibration button click event.
+        Click to calibrate one motor at a time and calibrate in turn. After all
+        calibration, resume initialization.
+        &quot;&quot;&quot;</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.has_mycobot():
+            <span class="hljs-keyword">return</span>
+
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.calibration_num:
+            self.calibration_num = <span class="hljs-number">0</span>
+
+        self.calibration_num += <span class="hljs-number">1</span>
+
+        self.mycobot.set_servo_calibration(self.calibration_num)
+        time.sleep(<span class="hljs-number">0.1</span>)
+        self.mycobot.send_angle(self.calibration_num, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+        time.sleep(<span class="hljs-number">0.1</span>)
+        self.write_log_to_Text(<span class="hljs-string">&quot;&#x6821;&#x51C6;&#x7535;&#x673A; %s &#x7ED3;&#x675F;.&quot;</span> % self.calibration_num)
+
+        <span class="hljs-keyword">if</span> self.calibration_num == <span class="hljs-number">6</span>:
+            self.write_log_to_Text(<span class="hljs-string">&quot;&#x5168;&#x90E8;&#x6821;&#x51C6;&#x5B8C;&#x6210;.&quot;</span>)
+            self.calibration_num = <span class="hljs-keyword">None</span>
+            self.rectify_mycobot()
+            self._calibration_test()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">send_color</span><span class="hljs-params">(self, color: str)</span>:</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.has_mycobot():
+            <span class="hljs-keyword">return</span>
+
+        color_dict = {
+            <span class="hljs-string">&quot;red&quot;</span>: [<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>],
+            <span class="hljs-string">&quot;green&quot;</span>: [<span class="hljs-number">0</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0</span>],
+            <span class="hljs-string">&quot;blue&quot;</span>: [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>],
+        }
+        self.mycobot.set_color(*color_dict[color])
+        self.write_log_to_Text(<span class="hljs-string">&quot;&#x53D1;&#x9001;&#x989C;&#x8272;: {}.&quot;</span>.format(color))
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">start_aging_test</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.has_mycobot():
+            <span class="hljs-keyword">return</span>
+
+        self.aging_stop = <span class="hljs-keyword">False</span>
+        self.aging = threading.Thread(target=self._aging_test, daemon=<span class="hljs-keyword">True</span>)
+        self.aging.start()
+        <span class="hljs-comment"># self._aging_test()</span>
+        self.write_log_to_Text(<span class="hljs-string">&quot;&#x5F00;&#x59CB;&#x5FAA;&#x73AF;&#x8001;&#x5316;&#x6D4B;&#x8BD5; ...&quot;</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">stop_aging_test</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">try</span>:
+            os.system(<span class="hljs-string">&quot;sudo systemctl stop aging_test.service&quot;</span>)
+            os.system(<span class="hljs-string">&quot;sudo rm /home/pi/aging_test.sh&quot;</span>)
+            os.system(<span class="hljs-string">&quot;sudo rm /home/pi/Desktop/aging_test.py&quot;</span>)
+            os.system(<span class="hljs-string">&quot;sudo rm /etc/systemd/system/aging_test.service&quot;</span>)
+            os.system(<span class="hljs-string">&quot;sudo systemctl daemon-reload&quot;</span>)
+            self.write_log_to_Text(<span class="hljs-string">&quot;&#x7ED3;&#x675F;&#x5FAA;&#x73AF;&#x8001;&#x5316;&#x6D4B;&#x8BD5;.&quot;</span>)
+        <span class="hljs-keyword">except</span>:
+            self.write_log_to_Text(<span class="hljs-string">&quot;&#x7ED3;&#x675F;&#x8001;&#x5316;&#x6D4B;&#x8BD5;&#x5931;&#x8D25; &#xFF01;&#xFF01;&#xFF01;&quot;</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">rectify_mycobot</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.has_mycobot():
+            <span class="hljs-keyword">return</span>
+
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">7</span>):
+            self.mycobot.set_servo_data(i, <span class="hljs-number">24</span>, <span class="hljs-number">0</span>)
+            time.sleep(<span class="hljs-number">0.1</span>)
+            self.mycobot.set_servo_data(i, <span class="hljs-number">26</span>, <span class="hljs-number">3</span>)
+            time.sleep(<span class="hljs-number">0.1</span>)
+            self.mycobot.set_servo_data(i, <span class="hljs-number">27</span>, <span class="hljs-number">3</span>)
+            time.sleep(<span class="hljs-number">0.1</span>)
+        time.sleep(<span class="hljs-number">0.1</span>)
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">7</span>):
+            self.write_log_to_Text(
+                <span class="hljs-string">&quot;Read servo {} pid data, 24:{}, 26:{}, 27:{}.&quot;</span>.format(
+                    i,
+                    self.mycobot.get_servo_data(i, <span class="hljs-number">24</span>),
+                    self.mycobot.get_servo_data(i, <span class="hljs-number">26</span>),
+                    self.mycobot.get_servo_data(i, <span class="hljs-number">27</span>),
+                )
+            )
+            time.sleep(<span class="hljs-number">0.1</span>)
+
+    <span class="hljs-comment"># ============================================================</span>
+    <span class="hljs-comment"># Utils method</span>
+    <span class="hljs-comment"># ============================================================</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">has_mycobot</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;Check whether it is connected on mycobot&quot;&quot;&quot;</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.mycobot:
+            self.write_log_to_Text(<span class="hljs-string">&quot;&#x8FD8;&#x6CA1;&#x6709;&#x8FDE;&#x63A5;mycobot&#xFF01;&#xFF01;&#xFF01;&quot;</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">False</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">True</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_aging_test</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        Aging test thread target.
+        By using in `start_aging_test()` and `stop_aging_test()`.
+        &quot;&quot;&quot;</span>
+        <span class="hljs-comment"># if socket.gethostname() != &quot;pi&quot;:</span>
+        <span class="hljs-comment">#     self.write_log_to_Text(&quot;&#x8001;&#x5316;&#x6D4B;&#x8BD5;&#x652F;&#x6301; Raspberry OS.&quot;)</span>
+        <span class="hljs-comment">#     return</span>
+
+        aging_test_content_py = textwrap.dedent(
+            <span class="hljs-string">&quot;&quot;&quot;\
+            #!/usr/bin/python3
+            from pymycobot.mycobot import MyCobot
+            from pymycobot import PI_PORT, PI_BAUD
+            import time
+            mycobot = MyCobot(&apos;%s&apos;, %s)
+            def aging_test():
+                # fast
+                mycobot.set_color(255, 0, 0)
+                mycobot.wait(5).send_angles([0, 0, 0, 0, 0, 0], 95)
+                mycobot.wait(3).send_angles([170, 0, 0, 0, 0, 0], 95)
+                mycobot.wait(3).send_angles([-170, 0, 0, 0, 0, 0], 95)
+                mycobot.wait(3).send_angles([0, 0, 0, 0, 0, 0], 95)
+                mycobot.wait(3).send_angles([0, 90, 0, 0, 0, 0], 95)
+                mycobot.wait(3).send_angles([0, -90, 0, 0, 0, 0], 95)
+                mycobot.wait(3).send_angles([0, 0, 0, 0, 0, 0], 95)
+                mycobot.wait(3).send_angles([0, 0, 140, 0, 0, 0], 95)
+                mycobot.wait(3).send_angles([0, 0, -140, 0, 0, 0], 95)
+                mycobot.wait(3).send_angles([0, 0, 0, 0, 0, 0], 95)
+                mycobot.wait(3).send_angles([0, 0, 0, 130, 0, 0], 95)
+                mycobot.wait(3).send_angles([0, 0, 0, -110, 0, 0], 95)
+                mycobot.wait(3).send_angles([0, 0, 0, 0, 0, 0], 95)
+                mycobot.wait(3).send_angles([0, 0, 0, 0, 165, 0], 95)
+                mycobot.wait(3).send_angles([0, 0, 0, 0, -165, 0], 95)
+                mycobot.wait(3).send_angles([0, 0, 0, 0, 0, 0], 95)
+                mycobot.wait(3).send_angles([0, 0, 0, 0, 0, 180], 95)
+                mycobot.wait(3).send_angles([0, 0, 0, 0, 0, -180], 95)
+                # middle
+                mycobot.set_color(0, 255, 0)
+                mycobot.wait(3).send_angles([0, 0, 0, 0, 0, 0], 55)
+                mycobot.wait(5).send_angles([170, 0, 0, 0, 0, 0], 55)
+                mycobot.wait(6.5).send_angles([-170, 0, 0, 0, 0, 0], 55)
+                mycobot.wait(5).send_angles([0, 0, 0, 0, 0, 0], 55)
+                mycobot.wait(5).send_angles([0, 90, 0, 0, 0, 0], 55)
+                mycobot.wait(5).send_angles([0, -90, 0, 0, 0, 0], 55)
+                mycobot.wait(5).send_angles([0, 0, 0, 0, 0, 0], 55)
+                mycobot.wait(5).send_angles([0, 0, 140, 0, 0, 0], 55)
+                mycobot.wait(5).send_angles([0, 0, -140, 0, 0, 0], 55)
+                mycobot.wait(5).send_angles([0, 0, 0, 0, 0, 0], 55)
+                mycobot.wait(5).send_angles([0, 0, 0, 130, 0, 0], 55)
+                mycobot.wait(5).send_angles([0, 0, 0, -110, 0, 0], 55)
+                mycobot.wait(5).send_angles([0, 0, 0, 0, 0, 0], 55)
+                mycobot.wait(5).send_angles([0, 0, 0, 0, 165, 0], 55)
+                mycobot.wait(5).send_angles([0, 0, 0, 0, -165, 0], 55)
+                mycobot.wait(5).send_angles([0, 0, 0, 0, 0, 0], 55)
+                mycobot.wait(5).send_angles([0, 0, 0, 0, 0, 180], 55)
+                mycobot.wait(5).send_angles([0, 0, 0, 0, 0, -180], 55)
+                # slow
+                mycobot.set_color(0, 0, 255)
+                mycobot.wait(5).send_angles([0, 0, 0, 0, 0, 0], 15)
+                mycobot.wait(7).send_angles([170, 0, 0, 0, 0, 0], 15)
+                mycobot.wait(7).send_angles([-170, 0, 0, 0, 0, 0], 15)
+                mycobot.wait(11).send_angles([0, 0, 0, 0, 0, 0], 15)
+                mycobot.wait(7).send_angles([0, 90, 0, 0, 0, 0], 15)
+                mycobot.wait(7).send_angles([0, -90, 0, 0, 0, 0], 15)
+                mycobot.wait(0).send_angles([0, 0, 0, 0, 0, 0], 15)
+                mycobot.wait(7).send_angles([0, 0, 140, 0, 0, 0], 15)
+                mycobot.wait(7).send_angles([0, 0, -140, 0, 0, 0], 15)
+                mycobot.wait(11).send_angles([0, 0, 0, 0, 0, 0], 15)
+                mycobot.wait(7).send_angles([0, 0, 0, 130, 0, 0], 15)
+                mycobot.wait(7).send_angles([0, 0, 0, -110, 0, 0], 15)
+                mycobot.wait(11).send_angles([0, 0, 0, 0, 0, 0], 15)
+                mycobot.wait(7).send_angles([0, 0, 0, 0, 165, 0], 15)
+                mycobot.wait(7).send_angles([0, 0, 0, 0, -165, 0], 15)
+                mycobot.wait(11).send_angles([0, 0, 0, 0, 0, 0], 15)
+                mycobot.wait(7).send_angles([0, 0, 0, 0, 0, 180], 15)
+                mycobot.wait(7).send_angles([0, 0, 0, 0, 0, -180], 15)
+            if __name__ == &apos;__main__&apos;:
+                while True:
+                    aging_test()
+            &quot;&quot;&quot;</span>
+            % (self.prot, self.baud)
+        )
+
+        aging_test_content_sh = textwrap.dedent(
+            <span class="hljs-string">&quot;&quot;&quot;\
+            #!/bin/bash
+            /usr/bin/python3 /home/pi/Desktop/aging_test.py
+            &quot;&quot;&quot;</span>
+        )
+
+        aging_test_content_service = textwrap.dedent(
+            <span class="hljs-string">&quot;&quot;&quot;\
+            [Unit]
+            Description=aging-test
+            [Service]
+            Type=forking
+            User=pi
+            Restart=on-failure
+            RestartSec=2
+            ExecStart=/home/pi/aging_test.sh
+            [Install]
+            WantedBy=multi-user.target
+            &quot;&quot;&quot;</span>
+        )
+
+        os.system(
+            <span class="hljs-string">&apos;echo &quot;&apos;</span> + aging_test_content_py + <span class="hljs-string">&apos;&quot; &gt;&gt; /home/pi/Desktop/aging_test.py&apos;</span>
+        )
+        os.system(<span class="hljs-string">&apos;echo &quot;&apos;</span> + aging_test_content_sh + <span class="hljs-string">&apos;&quot; &gt;&gt; /home/pi/aging_test.sh&apos;</span>)
+        os.system(<span class="hljs-string">&quot;sudo chmod +x /home/pi/aging_test.sh&quot;</span>)
+        os.system(
+            <span class="hljs-string">&apos;echo &quot;&apos;</span>
+            + aging_test_content_service
+            + <span class="hljs-string">&apos;&quot; &gt;&gt; /home/pi/Desktop/aging_test.service&apos;</span>
+        )
+        os.system(
+            <span class="hljs-string">&quot;sudo mv /home/pi/Desktop/aging_test.service /etc/systemd/system/aging_test.service&quot;</span>
+        )
+        os.system(<span class="hljs-string">&quot;sudo systemctl enable aging_test.service&quot;</span>)
+        os.system(<span class="hljs-string">&quot;sudo systemctl start aging_test.service&quot;</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_calibration_test</span><span class="hljs-params">(self)</span>:</span>
+        self.write_log_to_Text(<span class="hljs-string">&quot;&#x5F00;&#x59CB;&#x6D4B;&#x8BD5;&#x6821;&#x51C6;.&quot;</span>)
+        angles = [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]
+        test_angle = [<span class="hljs-number">-20</span>, <span class="hljs-number">20</span>, <span class="hljs-number">0</span>]
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">6</span>):
+            <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):
+                angles[i] = test_angle[j]
+                self.mycobot.send_angles(angles, <span class="hljs-number">0</span>)
+                time.sleep(<span class="hljs-number">0.7</span>)
+        self.write_log_to_Text(<span class="hljs-string">&quot;&#x6D4B;&#x8BD5;&#x6821;&#x51C6;&#x7ED3;&#x675F;.&quot;</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_serial_port_list</span><span class="hljs-params">(self)</span>:</span>
+        plist = [
+            str(x).split(<span class="hljs-string">&quot; - &quot;</span>)[<span class="hljs-number">0</span>].strip() <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> serial.tools.list_ports.comports()
+        ]
+        print(plist)
+        self.port_list[<span class="hljs-string">&quot;value&quot;</span>] = plist
+        <span class="hljs-keyword">return</span> plist
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_current_time</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;Get current time with format.&quot;&quot;&quot;</span>
+        current_time = time.strftime(<span class="hljs-string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>, time.localtime(time.time()))
+        <span class="hljs-keyword">return</span> current_time
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write_log_to_Text</span><span class="hljs-params">(self, logmsg: str)</span>:</span>
+        <span class="hljs-keyword">global</span> LOG_NUM
+        current_time = self.get_current_time()
+        logmsg_in = str(current_time) + <span class="hljs-string">&quot; &quot;</span> + str(logmsg) + <span class="hljs-string">&quot;\n&quot;</span>  <span class="hljs-comment"># &#x6362;&#x884C;</span>
+
+        <span class="hljs-keyword">if</span> LOG_NUM &lt;= <span class="hljs-number">18</span>:
+            self.log_data_Text.insert(tkinter.END, logmsg_in)
+            LOG_NUM += len(logmsg_in.split(<span class="hljs-string">&quot;\n&quot;</span>))
+            <span class="hljs-comment"># print(LOG_NUM)</span>
+        <span class="hljs-keyword">else</span>:
+            self.log_data_Text.insert(tkinter.END, logmsg_in)
+            self.log_data_Text.yview(<span class="hljs-string">&quot;end&quot;</span>)
+
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+    MycobotTest().run()
+</code></pre>
+<p><strong>Step 3:</strong> Open the terminal (shortcut CTRL+ALT+t), enter the following command, and then press Enter:</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> Desktop
+python3 rasp_mycobot_<span class="hljs-built_in">test</span>_gui.py
+</code></pre>
+<p><strong>Step 4:</strong> Select the corresponding baud rate and click Connect.</p>
+<ul>
+<li><em>myCobot 280-Pi: 1000000</em></li>
+<li><em>myCobot 320-Pi: 115200</em></li>
+</ul>
+<p><img src="../../../../resource/3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.2-calibration/2.jpg" alt=""></p>
+<p><strong>Step 5:</strong> Manually return each joint of the robot arm to zero position and click <strong>Start Calibration</strong>. <strong>Calibration End</strong> appears on the interface, and the robot arm calibration is completed.</p>
+<p><img src="../../../../resource/3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.2-calibration/4.jpg" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../5.3.1-moving/4.2.1.2-micro_CPU.html" class="navigation navigation-prev " aria-label="Previous page: 5.3.1 Drag teaching">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../5.3.4-connection/4.2.4.2-micro_CPU.html" class="navigation navigation-next " aria-label="Next page: 5.3.3 Link Check">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5.3.2 Robot arm calibration","level":"1.9.3.2","depth":3,"next":{"title":"5.3.3 Link Check","level":"1.9.3.3","depth":3,"path":"3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.4-connection/4.2.4.2-micro_CPU.md","ref":"3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.4-connection/4.2.4.2-micro_CPU.md","articles":[]},"previous":{"title":"5.3.1 Drag teaching","level":"1.9.3.1","depth":3,"path":"3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.1-moving/4.2.1.2-micro_CPU.md","ref":"3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.1-moving/4.2.1.2-micro_CPU.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","livereload"],"pluginsConfig":{"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":true,"insertAnchor":true,"showGoTop":true,"mini":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":"","bottom":"20px","offset":{"top":10,"left":10},"minWidth":"70px","floatIcon":"fa fa-navicon","zIndex":"1000","trigger":"click","right":"20px","show":true}},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.2-calibration/4.2.2.2-micro_CPU.md","mtime":"2024-07-24T07:44:17.214Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-24T11:06:05.516Z"},"basePath":"../../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../../gitbook/gitbook.js"></script>
+    <script src="../../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
