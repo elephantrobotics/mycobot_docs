@@ -1,5 +1,5 @@
 # Chapter 4 First Installation
-## 1. Product Standard List
+## Product Standard List
 ## Product List Image
 > Thank you for choosing the Elephant Robot myCobot 280 M5 robot arm. This chapter is designed to help you easily get started with Elephant Robot products and enjoy every wonderful moment brought by the product.
 
@@ -20,7 +20,7 @@
 **Note:** After the packing box arrives, please confirm that the robot packaging is intact. If there is any damage, please contact the logistics company and the supplier in your area in time. After unpacking, please check the actual items in the box according to the item list.
 
 ---
-## 2. Product Unpacking Guide
+## Product Unpacking Guide
 ## Product Unpacking Graphic Guide
 
 **Why do you need to follow the steps to disassemble the product**
@@ -42,9 +42,9 @@ In this section, we strongly recommend that you follow the specified steps to di
 Your browser does not support HTML5 video.
 </video>
 
-## 3. Power-on inspection guide
+## Power-on inspection guide
 
-## 3.1 Structural installation and fixation
+## Structural installation and fixation
 
 During the movement of the **robot arm**, if the **bottom surface of myCobot is not connected to the desktop or other bottom surface**, myCobot will still **shake or overturn**.
 
@@ -98,7 +98,7 @@ Before formal installation, please confirm:
 * Note: When adjusting the robot position on the base installation table, please try to avoid pushing and pulling the robot directly on the base installation table to avoid scratches. When manually moving the robot, please try to avoid applying external force to the fragile parts of the robot body to avoid unnecessary damage to the robot.
 
 ---
-## 3.3 Power on and preliminary test
+## Power on and preliminary test
 
 **myCobot must be powered by an external power supply to provide sufficient power:**
 Rated voltage: 12V
@@ -109,13 +109,13 @@ Plug Type: DC 5.5mm x 2.1
 ### Graphic guide
 ![link](../../resources/2-BasicSettings/4.FirstTimeInstallation/box_connect_PC.jpg)
 
-#### 3.3.1 Connect the power supply
+#### Connect the power supply
 
 Start after connecting the power cord.
 
 Use the Type-C cable to connect to the corresponding USB port of the computer and the robot M5Stack-basic, and perform a connection test. The connection test is a detection function for the motor and **Atom** connection status in the robot. This function is convenient for customers to troubleshoot equipment failures
 
-#### 3.3.2 Connection detection
+#### Connection detection
 
 **Step 1:** **Atom** burns the latest version of **atomMain**.
 
@@ -135,7 +135,7 @@ As shown in the figure, the motor connection is in good condition
 
 The power-on detection is completed.
 
-## 4. Common Problem Solving
+## Common Problem Solving
 This section aims to help users solve common problems encountered during use, covering hardware, software, drivers, and how to ask questions in the forum. If you encounter problems while using the robotic arm, please read the contents of this section first to find solutions. If the listed problems cannot help you solve and you have more after-sales questions to consult, please add the after-sales butler WeChat.
 
 [How to ask questions elegantly](../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.md)

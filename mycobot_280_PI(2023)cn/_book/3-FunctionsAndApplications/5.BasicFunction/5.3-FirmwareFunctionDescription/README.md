@@ -20,7 +20,7 @@
 
 - 指令集特征。由于应用场合不同，微控制器和微处理器的指令集也有所不同。微处理器的指令集增强了处理功能，使其拥有强大的寻址模式和适于操作大规模数据的指令。微处理器的指令可以对半字节、字节、字，甚至双字进行操作。通过使用地址指针和地址偏移，微处理器提供了可以访问大批数据的寻址模式。自增和自减模式使得以字节、字或双字为单位访问数据变得非常容易。
 
-## 2. 微处理类设备出厂固件：python demo
+## 微处理类设备出厂固件：python demo
 目前微处理类设备已开放的python demo有：
 -拖动示教例程 [drag_trial_teaching](https://github.com/elephantrobotics/pymycobot/blob/main/demo/drag_trial_teaching.py) 
 
@@ -175,7 +175,7 @@
 > <img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.3-FirmwareFunctionDescription/GPIO2.png" style="zoom:50%;" />
 
 
-### 3.2 机械臂底座接口介绍
+### 机械臂底座接口介绍
 
 * A. 底座的正面如图所示：
 
@@ -198,7 +198,7 @@
   - ③ HDMI
   - ④ 音频接口
 
-### 1.2 机械臂底座接口详细说明
+### 机械臂底座接口详细说明
 
 * A. 电源DC接口: 使用DC电源插座，外径6.5mm，内径2.0mm；可使用厂家配备的12V 5A  DC电源适配器给 myCobot280 进行供电。
   

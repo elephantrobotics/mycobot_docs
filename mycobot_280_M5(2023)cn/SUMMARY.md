@@ -12,7 +12,7 @@
       *  [4. 1问题解决思路](4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.md)
       *  [4. 2常见的驱动问题](4-SupportAndService/9.Troubleshooting/9.1-driver.md)
       *  [4. 3常见的软件问题](4-SupportAndService/9.Troubleshooting/9.2-software.md)
-      *  [4. 3常见的硬件问题](4-SupportAndService/9.Troubleshooting/9.3-hardware.md)
+      *  [4. 4常见的硬件问题](4-SupportAndService/9.Troubleshooting/9.3-hardware.md)
     
 * 功能与应用
     * [5. 基础功能](3-FunctionsAndApplications/5.BasicFunction/README.md)

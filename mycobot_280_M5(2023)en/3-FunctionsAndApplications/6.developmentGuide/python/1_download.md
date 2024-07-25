@@ -4,7 +4,7 @@ pymycobot is a Python package for serial communication with myCobot, supporting 
 
 Before using pymycobot to control the robot arm, you need to build a Python environment. The following is a detailed description of Python download and installation.
 
-## 1 Download and install Python
+## Download and install Python
 
 **Applicable devices:**
 
@@ -38,24 +38,25 @@ Before using pymycobot to control the robot arm, you need to build a Python envi
 
 Currently, there are two versions of Python, one is `2.x` version and the other is `3.x` version. These two versions are incompatible. As `3.x` version is becoming more and more popular, our tutorial will take the latest `3.10.7` version as an example.
 
-### 1.1 Install Python
+###  Install Python
 
 > **Note: **Before installing, please confirm whether your computer is 64-bit or 32-bit. Right-click `My Computer` and select `Properties`. As shown in the figure below, it is a 64-bit operating system, so select the 64-bit Python installation package.
 >
-> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/电脑位1.jpg" style="zoom: 67%;" />
+> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/operatingsystemchecking1.jpg" style="zoom: 67%;" />
 >
-> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/电脑位2.jpg" style="zoom: 67%;" />
+> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/operatingsystemchecking2.jpg" style="zoom: 67%;" />
 
 * **Python official download address: https://www.python.org/downloads/**
 
 * **Click the `Downloads` option to start downloading Python, click `Add Python 3.10 to PATH`, click `Install Now` to start installing Python**
 
-<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload1.jpg" style="zoom: 33%;" /> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload2.jpg" style="zoom: 50%;" /> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload3.jpg" style="zoom : 50%;" /> * **The prompt "Setup was successful" appears, indicating that the installation is complete** <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload4.jpg" style="zoom: 50%;" /> ### 1.2 Run Python
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload1.jpg" style="zoom: 33%;" /> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload2.jpg" style="zoom: 50%;" /> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload3.jpg" style="zoom : 50%;" /> * **The prompt "Setup was successful" appears, indicating that the installation is complete** <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload4.jpg" style="zoom: 50%;" />
+### Run Python
 After successful installation, open the command prompt window (Win+R, enter cmd and press Enter), and type `python`. Two situations will occur.
 
 **Situation 1:**
 
-<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/执行python1.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/successfulinstallation.jpg" style="zoom: 50%;" />
 
 The prompt in the picture indicates that Python has been successfully installed.
 
@@ -65,40 +66,38 @@ The prompt `>>>` indicates that we are already in the Python interactive environ
 
 If the input is wrong (for example, enter pythonn), an error message will appear:
 
-<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/执行python2.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/installerror.jpg" style="zoom: 50%;" />
 
 > **Note:** The error message is generally caused by not configuring the environment variables. You can refer to **1.3 Configure environment variables** to modify the environment variables.
 
-### 1.3 Configure environment variables
+### Configure environment variables
 Since Windows will search for python.exe according to the path set by a Path environment variable, if it is not found, an error will be reported. Therefore, if you miss checking `Add Python 3.10 to PATH` during installation, you need to manually add the path where python.exe is located to Path, or reinstall Python and remember to check the `Add Python 3.10 to PATH` option.
 
 The following are the steps to manually add the path where python.exe is located.
 
 * Right-click My Computer –> Select Properties –> Select Advanced System Settings –> Select Environment Variables in the lower right corner:
 
-<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/Environment Variables.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/environment configuration.jpg" style="zoom: 50%;" />
 
 * Environment variables mainly include user variables and system variables. The environment variables that need to be set are in these two variables. As shown in the figure below:
 
-<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/Add path.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/user variable1.jpg" style="zoom: 50%;" />
 
 * User variables are used to download programs that can be used in cmd commands. Write the absolute path of the program to the user variable and you can use it, as shown in the figure below:
 
-<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/Absolute path.jpg" style="zoom: 50%;" />
-
-<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/Add path.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/user variable2.jpg" style="zoom: 50%;" />
 
 * After completing the above steps, open the command prompt window (Win+R, then enter cmd, press Enter), type Python, and the prompt in the figure below indicates success:
 
-<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/Path added successfully.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/user variable3.jpg" style="zoom: 50%;" />
 
-## 2 PyCharm installation and use
+## PyCharm installation and use
 
 PyCharm is a powerful Python editor with cross-platform capabilities. First, let's introduce the installation steps of PyCharm in Windows system.
 
 **Download address:** **https://www.jetbrains.com/pycharm/download/#section=windows**
 
-### 2.1 Download and install
+### Download and install
 
 * After entering the website, we will see the following interface:
 
@@ -122,21 +121,21 @@ Download the file according to the interface introduction. Professional means pr
 
 <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pycharm下载4.jpg" style="zoom: 50%;" />
 
-### 2.2 Create a project
+### Create a project
 
 After PyCharm is installed, enter the software and create the first program.
 
 * Click the PyCharm icon on the desktop to enter PyCharm, as shown in the figure below, and click `New Project`:
 
-<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/Create a new project 1.jpg" style="zoom: 33%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/createproject1.jpg" style="zoom: 33%;" />
 
 * After clicking, find `Interpreter`, start setting the interpreter, and click `Add Interpreter`:
 
-<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/Interpreter 1.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/interpreter1.jpg" style="zoom: 50%;" />
 
 * Click `New`, find the python.exe storage location, and check the `Inherit global site-package` option:
 
-<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/Interpreter2.jpg" style="zoom: 33%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/interpreter3.jpg" style="zoom: 33%;" />
 
 * Set `Location`. Location is where the PyCharm project is stored. You can choose it according to your needs.
 
@@ -154,7 +153,7 @@ After PyCharm is installed, enter the software and create the first program.
 
 <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pycharm界面展示.jpg" style="zoom: 33%;" />
 
-### 2.3 Before use
+### Before use
 
 * Firmware burning. Firmware refers to the device "driver" stored inside the device. Only through firmware can the operating system implement the operation of a specific machine according to the standard device driver. Different versions of the robot arm need to burn different firmware (refer to the [**MyStudio**](https://docs.elephantrobotics.com/docs/gitbook/4-BasicApplication/4.1-myStudio/) chapter).
 * **M5 version** The Basic at the bottom needs to burn minirobot. After the burning is completed, select the **Transponder** function (this function is used to receive and forward the instructions sent by the Basic at the bottom to perform the target action), click `Press A`, and the **Atom: OK** prompt message appears, which means success. In addition, the latest version of atomMain is burned in the Atom at the end of the M5 version. It is burned by default at the factory, and there is no need to burn it yourself.
@@ -183,7 +182,7 @@ python2 setup.py install
 python3 setup.py install
 ```
 
-## 3 Simple use of Python
+## Simple use of Python
 
 After the above preparations are completed, start to control the robot arm through Python code. Here, the myPalletizer 260 M5 version is used as an example for demonstration.
 
@@ -201,9 +200,9 @@ from pymycobot.mypalletizer import MyPalletizer
 
 First, go to the project address: **https://github.com/elephantrobotics/pymycobot**. Then click the Code button on the right side of the webpage, and then click Download ZIP to download it locally. Put the pymycobot folder in the compressed package pymycobot file project into your python dependency library directory, and you can directly import and use it.
 
-<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pymycobotgithub.jpg" style="zoom: 33%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pymycobotdownload.jpg" style="zoom: 33%;" />
 
-### 3.1 Simple Demonstration
+### Simple Demonstration
 
 Create a new Python file in PyCharm and enter the following code to execute the LED flashing (myCobot 280-M5, myCobot 320-M5 and myPalletizer 260 can refer to the following code).
 
@@ -214,40 +213,44 @@ The following are the corresponding codes for myCobot and myPalletizer.
 * **myCobot**
 
 ```python
+# demo.py
 from pymycobot.mycobot import MyCobot
 
-from pymycobot import PI_PORT, PI_BAUD  	# 当使用树莓派版本的mycobot时，可以引用这两个变量进行MyCobot初始化，如不是可不填该行代码
+from pymycobot import PI_PORT, PI_BAUD      # When using the Raspberry Pi version of mycobot, you can refer to these two variables to initialize MyCobot, if not, you can omit this line of code
 import time
-#以上需写在代码开头，意为导入项目包
+#The above codes are required to be written, which means importing the project package
 
-# MyCobot 类初始化需要两个参数：串口和波特率
-#   第一个是串口字符串， 如：
-#       linux： "/dev/ttyUSB0"
+# MyCobot class initialization requires two parameters:
+#   The first is the serial port string, such as:
+#       linux:  "/dev/ttyUSB0"
+#          or "/dev/ttyAMA0"
 #       windows: "COM3"
-#   第二个是波特率：
-#       M5版本为： 115200
-#   以下为如:
+#   The second is the baud rate:: 
+#       M5 version is:  115200
+#
+#    Example:
 #       mycobot-M5:
 #           linux:
 #              mc = MyCobot("/dev/ttyUSB0", 115200)
+#          or mc = MyCobot("/dev/ttyAMA0", 115200)
 #           windows:
 #              mc = MyCobot("COM3", 115200)
 #       mycobot-raspi:
 #           mc = MyCobot(PI_PORT, PI_BAUD)
 #
-# 初始化一个MyCobot对象
-# 下面为 windows版本创建对象代码
+# Initiate MyCobot
+# Create object code here for windows version
 mc = MyCobot("COM3", 115200)
 
 i = 7
-#循环7次
-while i > 0:							
-    mc.set_color(0,0,255) #蓝灯亮
-    time.sleep(2)	#等2秒				
-    mc.set_color(255,0,0) #红灯亮
-    time.sleep(2)	#等2秒
-    mc.set_color(0,255,0) #绿灯亮
-    time.sleep(2)	#等2秒
+#loop 7 times
+while i > 0:                            
+    mc.set_color(0,0,255) #blue light on
+    time.sleep(2)    #wait for 2 seconds                
+    mc.set_color(255,0,0) #red light on
+    time.sleep(2)    #wait for 2 seconds
+    mc.set_color(0,255,0) #green light on
+    time.sleep(2)    #wait for 2 seconds
     i -= 1
 ```
 

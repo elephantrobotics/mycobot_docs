@@ -1,0 +1,1618 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6.7.1 Environment Construction · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="10.2-arduino_use.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Product Information
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.html">
+            
+                <a href="../../../1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.html">
+            
+                    
+                    1. Product Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../1-ProductInformation/2.ProductParameter/2-ProductParameters.html">
+            
+                <a href="../../../1-ProductInformation/2.ProductParameter/2-ProductParameters.html">
+            
+                    
+                    2. Product Parameters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Basic Settings
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../../2-BasicSettings/3.UserNotice/3-UserInstructions.html">
+            
+                <a href="../../../2-BasicSettings/3.UserNotice/3-UserInstructions.html">
+            
+                    
+                    3. User Notice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../../2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.html">
+            
+                <a href="../../../2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.html">
+            
+                    
+                    4. First Time Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.html">
+            
+                <a href="../../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.html">
+            
+                    
+                    4. 1 Problem Solving Ideas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../../4-SupportAndService/9.Troubleshooting/9.1-driver.html">
+            
+                <a href="../../../4-SupportAndService/9.Troubleshooting/9.1-driver.html">
+            
+                    
+                    4. 2 Common Driver Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../../4-SupportAndService/9.Troubleshooting/9.2-software.html">
+            
+                <a href="../../../4-SupportAndService/9.Troubleshooting/9.2-software.html">
+            
+                    
+                    4. 3 Common software problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../../4-SupportAndService/9.Troubleshooting/9.3-hardware.html">
+            
+                <a href="../../../4-SupportAndService/9.Troubleshooting/9.3-hardware.html">
+            
+                    
+                    4. 4 Common hardware problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    Functions and applications
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../5.BasicFunction/">
+            
+                <a href="../../5.BasicFunction/">
+            
+                    
+                    5. Basic functions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../5.BasicFunction/5.1-Functionlnstruction/">
+            
+                <a href="../../5.BasicFunction/5.1-Functionlnstruction/">
+            
+                    
+                    5.1 System (function) instructions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../5.BasicFunction/5.2-Softwarelnstructions/">
+            
+                <a href="../../5.BasicFunction/5.2-Softwarelnstructions/">
+            
+                    
+                    5.2 Software instructions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../5.BasicFunction/5.3-FirmwareFunctionDescription/">
+            
+                <a href="../../5.BasicFunction/5.3-FirmwareFunctionDescription/">
+            
+                    
+                    5.3 Firmware Function Description
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.3.1" data-path="../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.1-moving/5.3.1.1-micro_controller.html">
+            
+                <a href="../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.1-moving/5.3.1.1-micro_controller.html">
+            
+                    
+                    5.3.1 Drag teaching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.2" data-path="../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.2-calibration/5.3.2.1-micro_controller.html">
+            
+                <a href="../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.2-calibration/5.3.2.1-micro_controller.html">
+            
+                    
+                    5.3.2 Calibration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.3" data-path="../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.3-transponder/5.3.3.1-micro_controller.html">
+            
+                <a href="../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.3-transponder/5.3.3.1-micro_controller.html">
+            
+                    
+                    5.3.3 Computer control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4" data-path="../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.4-connection/5.3.4.1-micro_controller.html">
+            
+                <a href="../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.4-connection/5.3.4.1-micro_controller.html">
+            
+                    
+                    5.3.4 Connection detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.3.4.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    6. Software development guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.2" data-path="../python/">
+            
+                <a href="../python/">
+            
+                    
+                    6.1 Development and use based on python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.3" data-path="../python/1_download.html">
+            
+                <a href="../python/1_download.html">
+            
+                    
+                    6.1.1 Environment Construction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.4" data-path="../python/2_API.html">
+            
+                <a href="../python/2_API.html">
+            
+                    
+                    6.1.2 API Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.5" data-path="../python/3_angle.html">
+            
+                <a href="../python/3_angle.html">
+            
+                    
+                    6.1.3 Joint Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.6" data-path="../python/4_coord.html">
+            
+                <a href="../python/4_coord.html">
+            
+                    
+                    6.1.4 Coordinate Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.7" data-path="../python/5_IO.html">
+            
+                <a href="../python/5_IO.html">
+            
+                    
+                    6.1.5 IO Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.8" data-path="../python/6_gripper.html">
+            
+                <a href="../python/6_gripper.html">
+            
+                    
+                    6.1.6 Gripper Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.9" data-path="../python/7_TCPIP.html">
+            
+                <a href="../python/7_TCPIP.html">
+            
+                    
+                    6.1.7 TCP&IP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.10" data-path="../python/9_HandleControl.html">
+            
+                <a href="../python/9_HandleControl.html">
+            
+                    
+                    6.1.8 Handle Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.11" data-path="../python/15_280_gcode_draw.html">
+            
+                <a href="../python/15_280_gcode_draw.html">
+            
+                    
+                    6.1.9 Drawing Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.12" data-path="../python/8_example.html">
+            
+                <a href="../python/8_example.html">
+            
+                    
+                    6.1.10 Demonstration Code and Video
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.13" data-path="../ROS/12.1-ROS1/12.1.1-Introduction.html">
+            
+                <a href="../ROS/12.1-ROS1/12.1.1-Introduction.html">
+            
+                    
+                    6.2 Development and Use Based on ROS1
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.5" data-path="../ROS/12.1-ROS1/12.1.2-EnvironmentBuilding.html">
+            
+                <a href="../ROS/12.1-ROS1/12.1.2-EnvironmentBuilding.html">
+            
+                    
+                    6.2.1 ROS1 Environment Building
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.6" data-path="../ROS/12.1-ROS1/12.1.3-ROS_Basics.html">
+            
+                <a href="../ROS/12.1-ROS1/12.1.3-ROS_Basics.html">
+            
+                    
+                    6.2.2 ROS1 Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.7" data-path="../ROS/12.1-ROS1/12.1.4-rivzIntroductionAndUse/">
+            
+                <a href="../ROS/12.1-ROS1/12.1.4-rivzIntroductionAndUse/">
+            
+                    
+                    6.2.3 rivz Introduction and Use
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.8" data-path="../ROS/12.1-ROS1/12.1.5-Moveit/">
+            
+                <a href="../ROS/12.1-ROS1/12.1.5-Moveit/">
+            
+                    
+                    6.2.4 Moveit Introduction and Use
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../ROS/12.2-ROS2/12.2.3-ROS2Introduction.html">
+            
+                <a href="../ROS/12.2-ROS2/12.2.3-ROS2Introduction.html">
+            
+                    
+                    6.3 Development and use based on ROS2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.4.1" data-path="../ROS/12.2-ROS2/12.2.1-InstallationOfROS2.html">
+            
+                <a href="../ROS/12.2-ROS2/12.2.1-InstallationOfROS2.html">
+            
+                    
+                    6.3.1 ROS2 environment construction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4.2" data-path="../ROS/12.2-ROS2/12.2.2-BasicTutorial.html">
+            
+                <a href="../ROS/12.2-ROS2/12.2.2-BasicTutorial.html">
+            
+                    
+                    6.3.2 ROS2 basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4.3" data-path="../ROS/12.2-ROS2/12.2.4-rivzIntroductionAndUse/">
+            
+                <a href="../ROS/12.2-ROS2/12.2.4-rivzIntroductionAndUse/">
+            
+                    
+                    6.3.3 rivz Introduction and Use
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/">
+            
+                    
+                    6.4 Development and Use Based on Blockly
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.5.1" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.1-myBlocklyFirstUse.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.1-myBlocklyFirstUse.html">
+            
+                    
+                    6.4.1 Initial Use of myBlockly
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.2" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.2-ControlRGB.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.2-ControlRGB.html">
+            
+                    
+                    6.4.2 Control RGB Light Board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.3" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.3-ControlRoboticArmBackZero.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.3-ControlRoboticArmBackZero.html">
+            
+                    
+                    6.4.3 Control the robot arm back to the origin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.4" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.4-ControlSingleJoint.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.4-ControlSingleJoint.html">
+            
+                    
+                    6.4.4 Control single joint motion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.5" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.5-ControlSinglesJoint.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.5-ControlSinglesJoint.html">
+            
+                    
+                    6.4.5 Control multiple joints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.6" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.6-ControlRoboticSwingLeft&Right.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.6-ControlRoboticSwingLeft&Right.html">
+            
+                    
+                    6.4.6 Control the robot arm to swing left and right
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.7" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.7-ControlRoboticArmDance.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.7-ControlRoboticArmDance.html">
+            
+                    
+                    6.4.7 Control the robot arm to dance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.8" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.html">
+            
+                    
+                    6.4.8 Use of the gripper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.9" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.html">
+            
+                    
+                    6.4.9 Use of suction pump
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.10" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.html">
+            
+                    
+                    6.4.10 Gripper Test
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.11" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.14 -ioTest.md">
+            
+                <span>
+            
+                    
+                    6.4.11 IO Test
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.12" data-path="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.html">
+            
+                <a href="../myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.html">
+            
+                    
+                    6.4.12Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../Cplus/">
+            
+                <a href="../Cplus/">
+            
+                    
+                    6.5 Development and use based on C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.6.1" data-path="../Cplus/8.1-download.html">
+            
+                <a href="../Cplus/8.1-download.html">
+            
+                    
+                    6.5 .1 Environment Construction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.2" data-path="../Cplus/8.2-build.html">
+            
+                <a href="../Cplus/8.2-build.html">
+            
+                    
+                    6.5.2 Compile and Run
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.3" data-path="../Cplus/8.3-angle.html">
+            
+                <a href="../Cplus/8.3-angle.html">
+            
+                    
+                    6.5 .3 Joint Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.4" data-path="../Cplus/8.4-coord.html">
+            
+                <a href="../Cplus/8.4-coord.html">
+            
+                    
+                    6.5.4 Coordinate Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.5" data-path="../Cplus/8.5-io.html">
+            
+                <a href="../Cplus/8.5-io.html">
+            
+                    
+                    6.5.5 IO Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.6" data-path="../Cplus/8.6-gripper.html">
+            
+                <a href="../Cplus/8.6-gripper.html">
+            
+                    
+                    6.5.6 Gripper control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.7" data-path="../Cplus/8.7-API.html">
+            
+                <a href="../Cplus/8.7-API.html">
+            
+                    
+                    6.5.7 API description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.8" data-path="../Cplus/8.8-example.html">
+            
+                <a href="../Cplus/8.8-example.html">
+            
+                    
+                    6.5.8 Use Case
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../Csharp/">
+            
+                <a href="../Csharp/">
+            
+                    
+                    6.6 Based on C# Development and use
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.7.1" data-path="../Csharp/9.1-environment.html">
+            
+                <a href="../Csharp/9.1-environment.html">
+            
+                    
+                    6.6.1 Environment construction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7.2" data-path="../Csharp/9.2-build.html">
+            
+                <a href="../Csharp/9.2-build.html">
+            
+                    
+                    6.6.2 Compile and run 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7.3" data-path="../Csharp/9.3-angle.html">
+            
+                <a href="../Csharp/9.3-angle.html">
+            
+                    
+                    6.6.3 Joint Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7.4" data-path="../Csharp/9.4-coord.html">
+            
+                <a href="../Csharp/9.4-coord.html">
+            
+                    
+                    6.6.4 Coordinate Control 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7.5" data-path="../Csharp/9.5-io.html">
+            
+                <a href="../Csharp/9.5-io.html">
+            
+                    
+                    6.6.5 IO control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7.6" data-path="../Csharp/9.6-gripper.html">
+            
+                <a href="../Csharp/9.6-gripper.html">
+            
+                    
+                    6.6.6 Gripper control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7.7" data-path="../Csharp/9.7-API.html">
+            
+                <a href="../Csharp/9.7-API.html">
+            
+                    
+                    6.6.7api description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7.8" data-path="../Csharp/9.8-example.html">
+            
+                <a href="../Csharp/9.8-example.html">
+            
+                    
+                    6.6.8 Use Case
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    6.7 Based on Arduino Development and Use
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.9.8.1" data-path="10.1-arduino_download.html">
+            
+                <a href="10.1-arduino_download.html">
+            
+                    
+                    6.7.1 Environment Construction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8.2" data-path="10.2-arduino_use.html">
+            
+                <a href="10.2-arduino_use.html">
+            
+                    
+                    6.7.2 Simple Use
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8.3" data-path="10.3-api.html">
+            
+                <a href="10.3-api.html">
+            
+                    
+                    6.7.3 API Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../JavaScript/">
+            
+                <a href="../JavaScript/">
+            
+                    
+                    6.8 Development and use based on JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.9.1" data-path="../JavaScript/11.1-PreparationsBeforeDevelopment.html">
+            
+                <a href="../JavaScript/11.1-PreparationsBeforeDevelopment.html">
+            
+                    
+                    6.8.1 Preparation before development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9.2" data-path="../JavaScript/11.2-PreparationsForDevelopment.html">
+            
+                <a href="../JavaScript/11.2-PreparationsForDevelopment.html">
+            
+                    
+                    6.8.2 Preparation for Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9.3" data-path="../JavaScript/11.3-IO_Control.html">
+            
+                <a href="../JavaScript/11.3-IO_Control.html">
+            
+                    
+                    6.8.3 IO Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9.4" data-path="../JavaScript/11.4-Joint_Control.html">
+            
+                <a href="../JavaScript/11.4-Joint_Control.html">
+            
+                    
+                    6.8.4 Joint Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9.5" data-path="../JavaScript/11.5-Gripper_Control.html">
+            
+                <a href="../JavaScript/11.5-Gripper_Control.html">
+            
+                    
+                    6.8.5 Gripper Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9.6" data-path="../JavaScript/11.6-What_is_JS.html">
+            
+                <a href="../JavaScript/11.6-What_is_JS.html">
+            
+                    
+                    6.8.6 What is JS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9.7" data-path="../JavaScript/11.7-Use_Cases.html">
+            
+                <a href="../JavaScript/11.7-Use_Cases.html">
+            
+                    
+                    6.8.7 Use Cases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9.8" data-path="../JavaScript/11.8-API_Description.html">
+            
+                <a href="../JavaScript/11.8-API_Description.html">
+            
+                    
+                    6.8.8 API Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../CommunicationProtocolPackage/18-communication.html">
+            
+                <a href="../CommunicationProtocolPackage/18-communication.html">
+            
+                    
+                    6.9 Development and use based on serial communication protocol
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../7.SuccessfulCase/7-SuccessfulCases.html">
+            
+                <a href="../../7.SuccessfulCase/7-SuccessfulCases.html">
+            
+                    
+                    7. Successful Cases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../8.SupportingResources/">
+            
+                <a href="../../8.SupportingResources/">
+            
+                    
+                     8. Supporting Resources
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../8.SupportingResources/8.1-ProductInformation/">
+            
+                <a href="../../8.SupportingResources/8.1-ProductInformation/">
+            
+                    
+                    8.1 Product Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../../8.SupportingResources/8.2-ProductDrawings/">
+            
+                <a href="../../8.SupportingResources/8.2-ProductDrawings/">
+            
+                    
+                    8.2 Product Drawings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../../8.SupportingResources/8.3-SoftwareInformationAndSourceCode/">
+            
+                <a href="../../8.SupportingResources/8.3-SoftwareInformationAndSourceCode/">
+            
+                    
+                    8.3 Software Information and Source Code 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../../8.SupportingResources/8.4-SystemInformation/">
+            
+                <a href="../../8.SupportingResources/8.4-SystemInformation/">
+            
+                    
+                    8.4 System Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../../../3- FunctionsAndApplications/8.SupportingResources/8.5-PromotionalMaterials/README.md">
+            
+                <span>
+            
+                    
+                    8.5 Promotional Materials
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    Support and Services
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../../4-SupportAndService/11.AboutUs/11.AboutUs.html">
+            
+                <a href="../../../4-SupportAndService/11.AboutUs/11.AboutUs.html">
+            
+                    
+                     Contact Us
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../../5-Acknowledgments/5-Acknowledgments.html">
+            
+                <a href="../../../5-Acknowledgments/5-Acknowledgments.html">
+            
+                    
+                    Acknowledgments
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >6.7.1 Environment Construction</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#arduino-environment-setup"><b>1. </b>Arduino environment setup</a></li><ul><li><span class="title-icon "></span><a href="#arduino-ide-download"><b>1.1. </b>Arduino IDE download</a></li><li><span class="title-icon "></span><a href="#install-the-driver"><b>1.2. </b>Install the driver</a></li><li><span class="title-icon "></span><a href="#add-development-board"><b>1.3. </b>Add development board</a></li><li><span class="title-icon "></span><a href="#add-related-libraries"><b>1.4. </b>Add related libraries</a></li></ul></ul></div><a href="#arduino-environment-setup" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="arduino-environment-setup"><a name="arduino-environment-setup" class="anchor-navigation-ex-anchor" href="#arduino-environment-setup"><i class="fa fa-link" aria-hidden="true"></i></a>1. Arduino environment setup</h1>
+<h2 id="arduino-ide-download"><a name="arduino-ide-download" class="anchor-navigation-ex-anchor" href="#arduino-ide-download"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Arduino IDE download</h2>
+<p><img src="../../../resources/3-FunctionsAndApplications/6.developmentGuide/Arduino/build/10-1-1-001.jpg" alt="arduino"></p>
+<p>Download <strong>Arduino IDE</strong> You can click <a href="https://www.arduino.cc/en/software" target="_blank"><strong>Arduino official website</strong></a> to download and install the version corresponding to the computer system.</p>
+<ul>
+<li><p><a href="https://downloads.arduino.cc/arduino-1.8.16-windows.exe" target="_blank">Windows X64</a></p>
+</li>
+<li><p><a href="https://downloads.arduino.cc/arduino-1.8.16-macosx.zip" target="_blank">Mac OS X</a></p>
+</li>
+<li><p><a href="https://downloads.arduino.cc/arduino-1.8.16-linuxaarch64.tar.xz" target="_blank">Linux ARM 64</a></p>
+</li>
+</ul>
+<h2 id="install-the-driver"><a name="install-the-driver" class="anchor-navigation-ex-anchor" href="#install-the-driver"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Install the driver</h2>
+<p>Before burning the program, users of M5Core host (including BASIC/GRAY/M5GO/FIRE/FACES)/ <strong>microcontroller devices</strong> please click the button below to download the corresponding <strong>CP210X</strong> driver package according to your operating system. After decompressing the package, select the installation package corresponding to the operating system bit number to install.</p>
+<p>For <strong>Mac OS</strong>, before installing, make sure <strong>System Preferences--&gt;Security &amp; Privacy--&gt;General</strong> and allow <strong>CP2104</strong> drivers to be downloaded from the App Store and approved developers</p>
+<ul>
+<li><p><a href="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/drivers/CP210x_VCP_Windows.zip" target="_blank">Windows10</a></p>
+</li>
+<li><p><a href="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/drivers/CP210x_VCP_MacOS.zip" target="_blank">MacOS</a></p>
+</li>
+<li><p><a href="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/drivers/CP210x_VCP_Linux.zip" target="_blank">Linux</a></p>
+</li>
+</ul>
+<p>After unzipping the compressed package, select the corresponding installation package according to the <strong>operating system</strong> of the computer for installation (select x64 or x86 for win10 and win11).
+<img src="../../../resources/3-FunctionsAndApplications/6.developmentGuide/Arduino/build/10-1-2-001.png" alt="arduino"></p>
+<p><strong>CP34X</strong></p>
+<ul>
+<li><p><a href="https://download.elephantrobotics.com/software/drivers/CH9102_VCP_SER_Windows.exe" target="_blank"> <strong>Windows10</strong> </a></p>
+</li>
+<li><p><a href="https://download.elephantrobotics.com/software/drivers/CH9102_VCP_MacOS.zip" target="_blank"> <strong>MacOS</strong> </a></p>
+<h2 id="add-development-board"><a name="add-development-board" class="anchor-navigation-ex-anchor" href="#add-development-board"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. Add development board</h2>
+</li>
+<li><p>Open Arduino IDE, select <strong>File --&gt; Preferences --&gt; Settings</strong>, add the URL below to the additional development board manager
+<a href="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/arduino/package_m5stack_index.json" target="_blank">https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/arduino/package_m5stack_index.json</a>
+<img src="../../../resources/3-FunctionsAndApplications/6.developmentGuide/Arduino/build/10-1-3-001.png" alt="arduino"></p>
+</li>
+</ul>
+<p><img src="../../../resources/3-FunctionsAndApplications/6.developmentGuide/Arduino/build/10-1-3-002.png" alt="arduino"></p>
+<ul>
+<li><p>After adding, select <strong>Tools --&gt; Development Edition --&gt; Development Board Manager</strong>, enter and search <strong>M5Stack</strong> in the new pop-up dialog box, and click Install (if the search fails, you can try restarting the <strong>Arduino</strong> program; if an error occurs during downloading, click Install again), as shown below:
+<img src="../../../resources/3-FunctionsAndApplications/6.developmentGuide/Arduino/build/10-1-3-003.png" alt="arduino"></p>
+</li>
+<li><p>After adding, select <strong>Tools --&gt; Development Board</strong> , check if it is successful, as shown below:
+<img src="../../../resources/3-FunctionsAndApplications/6.developmentGuide/Arduino/build/10-1-3-004.png" alt="arduino"></p>
+</li>
+</ul>
+<h2 id="add-related-libraries"><a name="add-related-libraries" class="anchor-navigation-ex-anchor" href="#add-related-libraries"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. Add related libraries</h2>
+<p>4.1 Install M5Stack library<br></p>
+<ol>
+<li><p>Tools --&gt; Development Board --&gt; M5Stack Arduino Select <strong>M5Stack-Core-ESP32</strong>, as shown below:<br>
+<img src="../../../resources/3-FunctionsAndApplications/6.developmentGuide/Arduino/build/10-1-4.1-001.png" alt="arduino"></p>
+</li>
+<li><p>Project --&gt; Load Library --&gt; Manage Library Enter <strong>M5Stack</strong> in the search box, as shown in the following figure:<br>
+<img src="../../../resources/3-FunctionsAndApplications/6.developmentGuide/Arduino/build/10-1-4.1-002.png" alt="arduino"></p>
+</li>
+<li><p>Click Install after finding it, scroll down, <strong>M5Stack</strong> is at the back, and you can see the location of the drop-down slider in the picture, as shown in the following figure:<br>
+<img src="../../../resources/3-FunctionsAndApplications/6.developmentGuide/Arduino/build/10-1-4.1-003.png" alt="arduino"></p>
+</li>
+</ol>
+<p>4.2 Install MyCobotBasic library<br></p>
+<p><strong>Note:</strong> Please download the latest library, the first version is v0.0.1.</p>
+<ul>
+<li>Click to download related dependency libraries</li>
+<li><p><a href="https://github.com/elephantrobotics/MyCobotBasic/tags" target="_blank"><strong>MycobotBasic</strong></a>(After importing the Mycobot280-Arduino model, you can refer to <a href="10.3-arduinolib_use.md">10.3-arduinolib_use</a> for use). Please see the figure below for details. .zip is suitable for Windows system, and .tar.gz is suitable for Linux system:<br>
+<img src="../../../resources/3-FunctionsAndApplications/6.developmentGuide/Arduino/build/10-1-4.2-001.png" alt="arduino"></p>
+</li>
+<li><p>Dependent library installation instructions</p>
+</li>
+</ul>
+<p>First check the location of the Arduino project folder. You can view it by clicking File --&gt; Preferences (you can copy the path to the hard disk path to find the libraries folder)
+<img src="../../../resources/3-FunctionsAndApplications/6.developmentGuide/Arduino/build/10-1-4.2-002.png" alt="arduino"></p>
+<hr>
+<p><img src="../../../resources/3-FunctionsAndApplications/6.developmentGuide/Arduino/build/10-1-4.2-003.png" alt="arduino"></p>
+<hr>
+<p><img src="../../../resources/3-FunctionsAndApplications/6.developmentGuide/Arduino/build/10-1-4.2-004.jpg" alt="arduino"></p>
+<p>1 Copy the path here and press enter to find the libraries folder</p>
+<p>Unzip to the corresponding folder <strong>libraries</strong> directory. If you are using <strong>Arduino</strong>, please do not overwrite, just add it to the existing <strong>Library</strong>.
+<img src="../../../resources/3-FunctionsAndApplications/6.developmentGuide/Arduino/build/10-1-4.2-005.png" alt="arduino"></p>
+<p>At this point, congratulations, you have built the <strong>Arduino</strong> related development environment.</p>
+<p>Note: For Arduino environment configuration and case compilation, you can watch our video on Bilibili (<a href="https://www.bilibili.com/video/BV1Vi4y1c7DQ/" target="_blank">https://www.bilibili.com/video/BV1Vi4y1c7DQ/</a>).</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 6.7 Based on Arduino Development and Use">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="10.2-arduino_use.html" class="navigation navigation-next " aria-label="Next page: 6.7.2 Simple Use">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.7.1 Environment Construction","level":"1.9.8.1","depth":3,"next":{"title":"6.7.2 Simple Use","level":"1.9.8.2","depth":3,"path":"3-FunctionsAndApplications/6.developmentGuide/Arduino/10.2-arduino_use.md","ref":"3-FunctionsAndApplications/6.developmentGuide/Arduino/10.2-arduino_use.md","articles":[]},"previous":{"title":"6.7 Based on Arduino Development and Use","level":"1.9.8","depth":2,"path":"3-FunctionsAndApplications/6.developmentGuide/Arduino/README.md","ref":"3-FunctionsAndApplications/6.developmentGuide/Arduino/README.md","articles":[{"title":"6.7.1 Environment Construction","level":"1.9.8.1","depth":3,"path":"3-FunctionsAndApplications/6.developmentGuide/Arduino/10.1-arduino_download.md","ref":"3-FunctionsAndApplications/6.developmentGuide/Arduino/10.1-arduino_download.md","articles":[]},{"title":"6.7.2 Simple Use","level":"1.9.8.2","depth":3,"path":"3-FunctionsAndApplications/6.developmentGuide/Arduino/10.2-arduino_use.md","ref":"3-FunctionsAndApplications/6.developmentGuide/Arduino/10.2-arduino_use.md","articles":[]},{"title":"6.7.3 API Description","level":"1.9.8.3","depth":3,"path":"3-FunctionsAndApplications/6.developmentGuide/Arduino/10.3-api.md","ref":"3-FunctionsAndApplications/6.developmentGuide/Arduino/10.3-api.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","livereload"],"pluginsConfig":{"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":true,"insertAnchor":true,"showGoTop":true,"mini":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":"","bottom":"20px","offset":{"top":10,"left":10},"minWidth":"70px","floatIcon":"fa fa-navicon","zIndex":"1000","trigger":"click","right":"20px","show":true}},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-FunctionsAndApplications/6.developmentGuide/Arduino/10.1-arduino_download.md","mtime":"2024-07-25T01:43:04.605Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-25T02:38:31.553Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

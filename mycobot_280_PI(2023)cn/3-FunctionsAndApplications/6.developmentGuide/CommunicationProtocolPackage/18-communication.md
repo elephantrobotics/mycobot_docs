@@ -4,7 +4,7 @@
 
 ![communication](../../../resource/3-FunctionsAndApplications/6.developmentGuide/CommunicationProtocolPackage/box_connect_PC.jpg)
 
-### 1 机械臂运动参数
+### 机械臂运动参数
 
 | **关节** | **关节最小值°* | **关节最大值°** | **关节最大速度°/s**                     |**关节最大加速度°/s²**|
 | -------- | ------------ | ------------ | ---------------------------- |--------------------------------------|

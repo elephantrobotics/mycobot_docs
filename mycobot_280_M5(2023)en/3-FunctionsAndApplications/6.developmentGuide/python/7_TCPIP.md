@@ -18,15 +18,19 @@ The same is true for the router. Set the network name and password of the router
 
 One thing to note is that the myCobot 280 m5 robot arm only supports the 2.4 GHz network band. It does not support the 5 GHz network band. The following takes the mobile phone hotspot as an example.
 
-<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/Hotspot Settings 2.jpg" style="zoom: 25%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/hotspot1.jpg" style="zoom: 25%;" />
 
-<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/Hotspot Settings 1.jpg" style="zoom: 25%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/hotspot2.jpg" style="zoom: 25%;" />
 
 #### 1.2 TCP/IP function turned on
 
 As shown in the figure, the robot arm clicks Transponder->WLAN Server through the button. If the connection is successful, the IP and port number will be displayed. If the connection fails, please check whether the network name and password are set correctly.
 
-![](../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP//Transponder.jpg) <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/WLAN Server1.jpg" style="zoom: 25%;" /> <img src=" ../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP//wificonnecting.jpg" style="zoom: 25%;" /> ## 1.3 Connect to other networks
+![](../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP//Transponder.jpg) 
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/WLAN Server1.jpg" style="zoom: 25%;" /> 
+<img src=" ../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP//wificonnecting.jpg" style="zoom: 25%;" /> 
+
+## 1.3 Connect to other networks
 
 If you need to connect to other networks, you can download the [myBlockly software](https://www.elephantrobotics.com/download/) provided by our company to connect to other networks.
 
@@ -54,7 +58,7 @@ If you need to connect to other networks, you can download the [myBlockly softwa
 
 Under the mobile phone hotspot, after the robot arm successfully starts the TCP/IP function, the robot arm will display the IP and port. You need to remember the IP and port.
 
-<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/Mobile Link.jpg" style="zoom: 25%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/successfulconnected.jpg" style="zoom: 25%;" />
 
 Connect the PC to the same mobile phone hotspot as the robotic arm, call the python driver library, and you can connect to the robotic arm through the IP address of the robotic arm, so that you can remotely operate the robotic arm without connecting to the USB port.
 

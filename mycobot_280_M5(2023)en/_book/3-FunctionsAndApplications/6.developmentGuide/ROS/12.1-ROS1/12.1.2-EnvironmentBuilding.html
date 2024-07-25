@@ -1,0 +1,1923 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6.2.1 ROS1 Environment Building · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="12.1.3-ROS_Basics.html" />
+    
+    
+    <link rel="prev" href="12.1.1-Introduction.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../../">
+            
+                <a href="../../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Product Information
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../../1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.html">
+            
+                <a href="../../../../1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.html">
+            
+                    
+                    1. Product Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../../1-ProductInformation/2.ProductParameter/2-ProductParameters.html">
+            
+                <a href="../../../../1-ProductInformation/2.ProductParameter/2-ProductParameters.html">
+            
+                    
+                    2. Product Parameters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Basic Settings
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../../../2-BasicSettings/3.UserNotice/3-UserInstructions.html">
+            
+                <a href="../../../../2-BasicSettings/3.UserNotice/3-UserInstructions.html">
+            
+                    
+                    3. User Notice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../../../2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.html">
+            
+                <a href="../../../../2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.html">
+            
+                    
+                    4. First Time Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.html">
+            
+                <a href="../../../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.html">
+            
+                    
+                    4. 1 Problem Solving Ideas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../../../4-SupportAndService/9.Troubleshooting/9.1-driver.html">
+            
+                <a href="../../../../4-SupportAndService/9.Troubleshooting/9.1-driver.html">
+            
+                    
+                    4. 2 Common Driver Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../../../4-SupportAndService/9.Troubleshooting/9.2-software.html">
+            
+                <a href="../../../../4-SupportAndService/9.Troubleshooting/9.2-software.html">
+            
+                    
+                    4. 3 Common software problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../../../4-SupportAndService/9.Troubleshooting/9.3-hardware.html">
+            
+                <a href="../../../../4-SupportAndService/9.Troubleshooting/9.3-hardware.html">
+            
+                    
+                    4. 4 Common hardware problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    Functions and applications
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../../5.BasicFunction/">
+            
+                <a href="../../../5.BasicFunction/">
+            
+                    
+                    5. Basic functions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../../5.BasicFunction/5.1-Functionlnstruction/">
+            
+                <a href="../../../5.BasicFunction/5.1-Functionlnstruction/">
+            
+                    
+                    5.1 System (function) instructions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../../5.BasicFunction/5.2-Softwarelnstructions/">
+            
+                <a href="../../../5.BasicFunction/5.2-Softwarelnstructions/">
+            
+                    
+                    5.2 Software instructions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../../5.BasicFunction/5.3-FirmwareFunctionDescription/">
+            
+                <a href="../../../5.BasicFunction/5.3-FirmwareFunctionDescription/">
+            
+                    
+                    5.3 Firmware Function Description
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.3.1" data-path="../../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.1-moving/5.3.1.1-micro_controller.html">
+            
+                <a href="../../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.1-moving/5.3.1.1-micro_controller.html">
+            
+                    
+                    5.3.1 Drag teaching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.2" data-path="../../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.2-calibration/5.3.2.1-micro_controller.html">
+            
+                <a href="../../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.2-calibration/5.3.2.1-micro_controller.html">
+            
+                    
+                    5.3.2 Calibration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.3" data-path="../../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.3-transponder/5.3.3.1-micro_controller.html">
+            
+                <a href="../../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.3-transponder/5.3.3.1-micro_controller.html">
+            
+                    
+                    5.3.3 Computer control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4" data-path="../../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.4-connection/5.3.4.1-micro_controller.html">
+            
+                <a href="../../../5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.4-connection/5.3.4.1-micro_controller.html">
+            
+                    
+                    5.3.4 Connection detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.3.4.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    6. Software development guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.2" data-path="../../python/">
+            
+                <a href="../../python/">
+            
+                    
+                    6.1 Development and use based on python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.3" data-path="../../python/1_download.html">
+            
+                <a href="../../python/1_download.html">
+            
+                    
+                    6.1.1 Environment Construction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.4" data-path="../../python/2_API.html">
+            
+                <a href="../../python/2_API.html">
+            
+                    
+                    6.1.2 API Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.5" data-path="../../python/3_angle.html">
+            
+                <a href="../../python/3_angle.html">
+            
+                    
+                    6.1.3 Joint Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.6" data-path="../../python/4_coord.html">
+            
+                <a href="../../python/4_coord.html">
+            
+                    
+                    6.1.4 Coordinate Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.7" data-path="../../python/5_IO.html">
+            
+                <a href="../../python/5_IO.html">
+            
+                    
+                    6.1.5 IO Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.8" data-path="../../python/6_gripper.html">
+            
+                <a href="../../python/6_gripper.html">
+            
+                    
+                    6.1.6 Gripper Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.9" data-path="../../python/7_TCPIP.html">
+            
+                <a href="../../python/7_TCPIP.html">
+            
+                    
+                    6.1.7 TCP&IP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.10" data-path="../../python/9_HandleControl.html">
+            
+                <a href="../../python/9_HandleControl.html">
+            
+                    
+                    6.1.8 Handle Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.11" data-path="../../python/15_280_gcode_draw.html">
+            
+                <a href="../../python/15_280_gcode_draw.html">
+            
+                    
+                    6.1.9 Drawing Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.12" data-path="../../python/8_example.html">
+            
+                <a href="../../python/8_example.html">
+            
+                    
+                    6.1.10 Demonstration Code and Video
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4.13" data-path="12.1.1-Introduction.html">
+            
+                <a href="12.1.1-Introduction.html">
+            
+                    
+                    6.2 Development and Use Based on ROS1
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.3.5" data-path="12.1.2-EnvironmentBuilding.html">
+            
+                <a href="12.1.2-EnvironmentBuilding.html">
+            
+                    
+                    6.2.1 ROS1 Environment Building
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.6" data-path="12.1.3-ROS_Basics.html">
+            
+                <a href="12.1.3-ROS_Basics.html">
+            
+                    
+                    6.2.2 ROS1 Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.7" data-path="12.1.4-rivzIntroductionAndUse/">
+            
+                <a href="12.1.4-rivzIntroductionAndUse/">
+            
+                    
+                    6.2.3 rivz Introduction and Use
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.8" data-path="12.1.5-Moveit/">
+            
+                <a href="12.1.5-Moveit/">
+            
+                    
+                    6.2.4 Moveit Introduction and Use
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../12.2-ROS2/12.2.3-ROS2Introduction.html">
+            
+                <a href="../12.2-ROS2/12.2.3-ROS2Introduction.html">
+            
+                    
+                    6.3 Development and use based on ROS2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.4.1" data-path="../12.2-ROS2/12.2.1-InstallationOfROS2.html">
+            
+                <a href="../12.2-ROS2/12.2.1-InstallationOfROS2.html">
+            
+                    
+                    6.3.1 ROS2 environment construction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4.2" data-path="../12.2-ROS2/12.2.2-BasicTutorial.html">
+            
+                <a href="../12.2-ROS2/12.2.2-BasicTutorial.html">
+            
+                    
+                    6.3.2 ROS2 basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4.3" data-path="../12.2-ROS2/12.2.4-rivzIntroductionAndUse/">
+            
+                <a href="../12.2-ROS2/12.2.4-rivzIntroductionAndUse/">
+            
+                    
+                    6.3.3 rivz Introduction and Use
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/">
+            
+                    
+                    6.4 Development and Use Based on Blockly
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.5.1" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.1-myBlocklyFirstUse.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.1-myBlocklyFirstUse.html">
+            
+                    
+                    6.4.1 Initial Use of myBlockly
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.2" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.2-ControlRGB.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.2-ControlRGB.html">
+            
+                    
+                    6.4.2 Control RGB Light Board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.3" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.3-ControlRoboticArmBackZero.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.3-ControlRoboticArmBackZero.html">
+            
+                    
+                    6.4.3 Control the robot arm back to the origin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.4" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.4-ControlSingleJoint.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.4-ControlSingleJoint.html">
+            
+                    
+                    6.4.4 Control single joint motion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.5" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.5-ControlSinglesJoint.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.5-ControlSinglesJoint.html">
+            
+                    
+                    6.4.5 Control multiple joints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.6" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.6-ControlRoboticSwingLeft&Right.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.6-ControlRoboticSwingLeft&Right.html">
+            
+                    
+                    6.4.6 Control the robot arm to swing left and right
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.7" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.7-ControlRoboticArmDance.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.7-ControlRoboticArmDance.html">
+            
+                    
+                    6.4.7 Control the robot arm to dance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.8" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.html">
+            
+                    
+                    6.4.8 Use of the gripper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.9" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.html">
+            
+                    
+                    6.4.9 Use of suction pump
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.10" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.html">
+            
+                    
+                    6.4.10 Gripper Test
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.11" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.14 -ioTest.md">
+            
+                <span>
+            
+                    
+                    6.4.11 IO Test
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.12" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.html">
+            
+                    
+                    6.4.12Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../../Cplus/">
+            
+                <a href="../../Cplus/">
+            
+                    
+                    6.5 Development and use based on C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.6.1" data-path="../../Cplus/8.1-download.html">
+            
+                <a href="../../Cplus/8.1-download.html">
+            
+                    
+                    6.5 .1 Environment Construction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.2" data-path="../../Cplus/8.2-build.html">
+            
+                <a href="../../Cplus/8.2-build.html">
+            
+                    
+                    6.5.2 Compile and Run
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.3" data-path="../../Cplus/8.3-angle.html">
+            
+                <a href="../../Cplus/8.3-angle.html">
+            
+                    
+                    6.5 .3 Joint Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.4" data-path="../../Cplus/8.4-coord.html">
+            
+                <a href="../../Cplus/8.4-coord.html">
+            
+                    
+                    6.5.4 Coordinate Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.5" data-path="../../Cplus/8.5-io.html">
+            
+                <a href="../../Cplus/8.5-io.html">
+            
+                    
+                    6.5.5 IO Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.6" data-path="../../Cplus/8.6-gripper.html">
+            
+                <a href="../../Cplus/8.6-gripper.html">
+            
+                    
+                    6.5.6 Gripper control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.7" data-path="../../Cplus/8.7-API.html">
+            
+                <a href="../../Cplus/8.7-API.html">
+            
+                    
+                    6.5.7 API description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.8" data-path="../../Cplus/8.8-example.html">
+            
+                <a href="../../Cplus/8.8-example.html">
+            
+                    
+                    6.5.8 Use Case
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../../Csharp/">
+            
+                <a href="../../Csharp/">
+            
+                    
+                    6.6 Based on C# Development and use
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.7.1" data-path="../../Csharp/9.1-environment.html">
+            
+                <a href="../../Csharp/9.1-environment.html">
+            
+                    
+                    6.6.1 Environment construction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7.2" data-path="../../Csharp/9.2-build.html">
+            
+                <a href="../../Csharp/9.2-build.html">
+            
+                    
+                    6.6.2 Compile and run 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7.3" data-path="../../Csharp/9.3-angle.html">
+            
+                <a href="../../Csharp/9.3-angle.html">
+            
+                    
+                    6.6.3 Joint Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7.4" data-path="../../Csharp/9.4-coord.html">
+            
+                <a href="../../Csharp/9.4-coord.html">
+            
+                    
+                    6.6.4 Coordinate Control 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7.5" data-path="../../Csharp/9.5-io.html">
+            
+                <a href="../../Csharp/9.5-io.html">
+            
+                    
+                    6.6.5 IO control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7.6" data-path="../../Csharp/9.6-gripper.html">
+            
+                <a href="../../Csharp/9.6-gripper.html">
+            
+                    
+                    6.6.6 Gripper control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7.7" data-path="../../Csharp/9.7-API.html">
+            
+                <a href="../../Csharp/9.7-API.html">
+            
+                    
+                    6.6.7api description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7.8" data-path="../../Csharp/9.8-example.html">
+            
+                <a href="../../Csharp/9.8-example.html">
+            
+                    
+                    6.6.8 Use Case
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../../Arduino/">
+            
+                <a href="../../Arduino/">
+            
+                    
+                    6.7 Based on Arduino Development and Use
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.8.1" data-path="../../Arduino/10.1-arduino_download.html">
+            
+                <a href="../../Arduino/10.1-arduino_download.html">
+            
+                    
+                    6.7.1 Environment Construction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8.2" data-path="../../Arduino/10.2-arduino_use.html">
+            
+                <a href="../../Arduino/10.2-arduino_use.html">
+            
+                    
+                    6.7.2 Simple Use
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8.3" data-path="../../Arduino/10.3-api.html">
+            
+                <a href="../../Arduino/10.3-api.html">
+            
+                    
+                    6.7.3 API Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../../JavaScript/">
+            
+                <a href="../../JavaScript/">
+            
+                    
+                    6.8 Development and use based on JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.9.1" data-path="../../JavaScript/11.1-PreparationsBeforeDevelopment.html">
+            
+                <a href="../../JavaScript/11.1-PreparationsBeforeDevelopment.html">
+            
+                    
+                    6.8.1 Preparation before development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9.2" data-path="../../JavaScript/11.2-PreparationsForDevelopment.html">
+            
+                <a href="../../JavaScript/11.2-PreparationsForDevelopment.html">
+            
+                    
+                    6.8.2 Preparation for Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9.3" data-path="../../JavaScript/11.3-IO_Control.html">
+            
+                <a href="../../JavaScript/11.3-IO_Control.html">
+            
+                    
+                    6.8.3 IO Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9.4" data-path="../../JavaScript/11.4-Joint_Control.html">
+            
+                <a href="../../JavaScript/11.4-Joint_Control.html">
+            
+                    
+                    6.8.4 Joint Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9.5" data-path="../../JavaScript/11.5-Gripper_Control.html">
+            
+                <a href="../../JavaScript/11.5-Gripper_Control.html">
+            
+                    
+                    6.8.5 Gripper Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9.6" data-path="../../JavaScript/11.6-What_is_JS.html">
+            
+                <a href="../../JavaScript/11.6-What_is_JS.html">
+            
+                    
+                    6.8.6 What is JS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9.7" data-path="../../JavaScript/11.7-Use_Cases.html">
+            
+                <a href="../../JavaScript/11.7-Use_Cases.html">
+            
+                    
+                    6.8.7 Use Cases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9.8" data-path="../../JavaScript/11.8-API_Description.html">
+            
+                <a href="../../JavaScript/11.8-API_Description.html">
+            
+                    
+                    6.8.8 API Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../../CommunicationProtocolPackage/18-communication.html">
+            
+                <a href="../../CommunicationProtocolPackage/18-communication.html">
+            
+                    
+                    6.9 Development and use based on serial communication protocol
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../../7.SuccessfulCase/7-SuccessfulCases.html">
+            
+                <a href="../../../7.SuccessfulCase/7-SuccessfulCases.html">
+            
+                    
+                    7. Successful Cases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../../8.SupportingResources/">
+            
+                <a href="../../../8.SupportingResources/">
+            
+                    
+                     8. Supporting Resources
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../../8.SupportingResources/8.1-ProductInformation/">
+            
+                <a href="../../../8.SupportingResources/8.1-ProductInformation/">
+            
+                    
+                    8.1 Product Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../../../8.SupportingResources/8.2-ProductDrawings/">
+            
+                <a href="../../../8.SupportingResources/8.2-ProductDrawings/">
+            
+                    
+                    8.2 Product Drawings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../../../8.SupportingResources/8.3-SoftwareInformationAndSourceCode/">
+            
+                <a href="../../../8.SupportingResources/8.3-SoftwareInformationAndSourceCode/">
+            
+                    
+                    8.3 Software Information and Source Code 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../../../8.SupportingResources/8.4-SystemInformation/">
+            
+                <a href="../../../8.SupportingResources/8.4-SystemInformation/">
+            
+                    
+                    8.4 System Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../../../../3- FunctionsAndApplications/8.SupportingResources/8.5-PromotionalMaterials/README.md">
+            
+                <span>
+            
+                    
+                    8.5 Promotional Materials
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    Support and Services
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../../../4-SupportAndService/11.AboutUs/11.AboutUs.html">
+            
+                <a href="../../../../4-SupportAndService/11.AboutUs/11.AboutUs.html">
+            
+                    
+                     Contact Us
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../../../5-Acknowledgments/5-Acknowledgments.html">
+            
+                <a href="../../../../5-Acknowledgments/5-Acknowledgments.html">
+            
+                    
+                    Acknowledgments
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../../.." >6.2.1 ROS1 Environment Building</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#m5-version"><b>1. </b>M5 version:</a></li><ul><li><span class="title-icon "></span><a href="#install-different-versions-of-ubuntu-system-in-linux"><b>1.1. </b>Install different versions of Ubuntu system in Linux</a></li><ul><li><span class="title-icon "></span><a href="#1-virtual-machine-installation"><b>1.1.1. </b>1 Virtual machine installation</a></li><li><span class="title-icon "></span><a href="#2-create-a-new-virtual-machine"><b>1.1.2. </b>2 Create a new virtual machine</a></li></ul><li><span class="title-icon "></span><a href="#1-ros-environment-setup"><b>1.2. </b>1 ROS environment setup</a></li><ul><li><span class="title-icon "></span><a href="#11-ros-installation"><b>1.2.1. </b>1.1 ROS installation</a></li></ul><li><span class="title-icon "></span><a href="#2-moveit-installation"><b>1.3. </b>2 MoveIt Installation</a></li><ul><li><span class="title-icon "></span><a href="#21-update-the-software-source-list"><b>1.3.1. </b>2.1 Update the software source list</a></li><li><span class="title-icon "></span><a href="#22-install-moveit"><b>1.3.2. </b>2.2 Install MoveIt</a></li></ul><li><span class="title-icon "></span><a href="#3-git-installation"><b>1.4. </b>3 git installation</a></li><ul><li><span class="title-icon "></span><a href="#31-add-software-source"><b>1.4.1. </b>3.1 Add software source</a></li><li><span class="title-icon "></span><a href="#32-update-the-software-source-list"><b>1.4.2. </b>3.2 Update the software source list</a></li><li><span class="title-icon "></span><a href="#33-install-git"><b>1.4.3. </b>3.3 Install git</a></li><li><span class="title-icon "></span><a href="#34-verify-installation"><b>1.4.4. </b>3.4 Verify installation</a></li><li><span class="title-icon "></span><a href="#35-usage"><b>1.4.5. </b>3.5 Usage</a></li></ul><li><span class="title-icon "></span><a href="#4-mycobotros-installation"><b>1.5. </b>4 mycobot_ros installation</a></li><ul><li><span class="title-icon "></span><a href="#41-prerequisites"><b>1.5.1. </b>4.1 Prerequisites</a></li><li><span class="title-icon "></span><a href="#42-installation"><b>1.5.2. </b>4.2 Installation</a></li></ul><li><span class="title-icon "></span><a href="#import-system-image-for-m5-versionhow-to-use-ros-for-pro600"><b>1.6. </b>Import system image for M5 version/How to use ros for Pro600:</a></li><li><span class="title-icon "></span><a href="#1-install-the-virtual-machine"><b>1.7. </b>1 Install the virtual machine</a></li><li><span class="title-icon "></span><a href="#2-download-linux-system-image"><b>1.8. </b>2 Download Linux system image</a></li><li><span class="title-icon "></span><a href="#3-import-linux-system-image"><b>1.9. </b>3 Import Linux system image</a></li></ul></ul></div><a href="#m5-version" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="m5-version"><a name="m5-version" class="anchor-navigation-ex-anchor" href="#m5-version"><i class="fa fa-link" aria-hidden="true"></i></a>1. M5 version:</h1>
+<h2 id="install-different-versions-of-ubuntu-system-in-linux"><a name="install-different-versions-of-ubuntu-system-in-linux" class="anchor-navigation-ex-anchor" href="#install-different-versions-of-ubuntu-system-in-linux"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Install different versions of Ubuntu system in Linux</h2>
+<h3 id="1-virtual-machine-installation"><a name="1-virtual-machine-installation" class="anchor-navigation-ex-anchor" href="#1-virtual-machine-installation"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. 1 Virtual machine installation</h3>
+<p>Go to the <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">official website</a> to download the virtual machine Virtual Box</p>
+<p>Or go to the <a href="https://www.vmware.com/cn/products/workstation-pro.html" target="_blank">official website</a> to download the virtual machine VM ware</p>
+<p>VirtualBox installation package: <a href="https://download.virtualbox.org/virtualbox/7.0.10/VirtualBox-7.0.10-158379-Win.exe" target="_blank">Windows hosts</a></p>
+<p>VirtualBox expansion package: <a href="https://download.virtualbox.org/virtualbox/7.0.10/Oracle_VM_VirtualBox_Extension_Pack-7.0.10.vbox-extpack" target="_blank">VirtualBox 7.0.10 Oracle VM VirtualBox Extension Pack</a></p>
+<p><strong>Of course, if you already have your virtual machine, you can skip this step. </strong></p>
+<p>We chose to download Virtual box because it is free.</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/installbox-1.png" width="500" align="center"></p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/einstallbox.gif" width="500" align="center"></p>
+<h3 id="2-create-a-new-virtual-machine"><a name="2-create-a-new-virtual-machine" class="anchor-navigation-ex-anchor" href="#2-create-a-new-virtual-machine"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. 2 Create a new virtual machine</h3>
+<h4 id="21-create-a-virtual-machine"><a name="21-create-a-virtual-machine" class="anchor-navigation-ex-anchor" href="#21-create-a-virtual-machine"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 Create a virtual machine</h4>
+<p><strong>Select New in the control</strong></p>
+<p>Enter the virtual machine name and the location where the virtual machine is stored, select the virtual machine type as <strong>Linux</strong>, select Ubuntu 64-bit version, and proceed to the next step.</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/evbox-1.png" width="500" height="300" align="center"></p>
+<p>Configure the memory size according to your needs and proceed to the next step.</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/evbox-4.png" width="500" height="400" align="center"></p>
+<p>Select <strong>Create a virtual hard disk now</strong> and create it.</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/evbox-5.png" width="500" height="400" align="center"></p>
+<p>Select the <strong>VDI</strong> type for the virtual hard disk type and proceed to the next step.</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/evbox-6.png" width="500" height="400" align="center"></p>
+<p>Allocate the size of the virtual hard disk. Since you need to install the Ubuntu system and will also operate in the system, it is recommended that the size should not be less than 20G.</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/evbox-7.png" width="500" height="300" align="center"></p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/vbox-6.png" align="center"></p>
+<h4 id="22-import-ubuntu-system"><a name="22-import-ubuntu-system" class="anchor-navigation-ex-anchor" href="#22-import-ubuntu-system"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 Import Ubuntu system</h4>
+<h5 id="221-download-ubuntu-system"><a name="221-download-ubuntu-system" class="anchor-navigation-ex-anchor" href="#221-download-ubuntu-system"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.1 Download Ubuntu system.</h5>
+<p>Please choose the Ubuntu version to install according to your needs</p>
+<p><strong>Note:</strong> <strong>ROS2</strong> needs to download <strong>20.04 version</strong>.</p>
+<ul>
+<li><a href="https://releases.ubuntu.com/16.04.7/" target="_blank">16.04 version</a></li>
+<li><a href="https://releases.ubuntu.com/18.04.6/" target="_blank">18.04 version</a></li>
+<li><a href="https://releases.ubuntu.com/20.04.3/" target="_blank">20.04 version</a></li>
+</ul>
+<p><strong>The installation methods and processes of the three versions are the same. Here, the 18.04 version is used as an example for installation</strong></p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/u-1.png" width="500" align="center"></p>
+<p>After downloading, there is a file as shown in the figure:</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/u-2.png" width="500" align="center"></p>
+<h5 id="222-import-ubuntu-into-the-virtual-machine"><a name="222-import-ubuntu-into-the-virtual-machine" class="anchor-navigation-ex-anchor" href="#222-import-ubuntu-into-the-virtual-machine"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.2 Import Ubuntu into the virtual machine</h5>
+<p>Find the previously installed virtual machine in Virtual Box, enter <strong>Settings</strong>, and assign the CD to the controller in <strong>Storage</strong>:</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/evbox-2.png" width="500" align="center"></p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/eros-1.png" width="500" align="center"></p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/evbox-3" width="500" align="center"></p>
+<p>Then open the virtual machine to install Ubuntu and click Start.</p>
+<h5 id="223-ubuntu-installation"><a name="223-ubuntu-installation" class="anchor-navigation-ex-anchor" href="#223-ubuntu-installation"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.3 Ubuntu installation</h5>
+<p>Wait for the system to start, enter the <strong>Welcome</strong> interface, select &quot;Chinese (Simplified)&quot;, and click the &quot;Install Ubuntu&quot; button;</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/u-6.png" width="500" align="center"></p>
+<p>Click the &quot;Continue&quot; button;</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/u-7.png" width="500" align="center"></p>
+<p>Select the &quot;Erase the entire disk and install Ubuntu&quot; option, and click the &quot;Install Now&quot; button;</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/u-8.png" width="500" align="center"></p>
+<p>Click the &quot;Continue&quot; button in the pop-up dialog box;</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/u-9.png" width="500" align="center"></p>
+<p>Set the geographic location and click the &quot;Continue&quot; button;</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/u-10.png" width="500" align="center"></p>
+<p>Set the user name and password and click the &quot;Continue&quot; button;</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/u-11.png" width="500" align="center"></p>
+<p>Enter the system installation interface, please wait patiently;</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/u-12.png" width="500" align="center"></p>
+<p>After the installation is complete, in the pop-up dialog box, click the &quot;Restart Now&quot; button to complete the installation.</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/u-13.png" width="500" align="center"></p>
+<h2 id="1-ros-environment-setup"><a name="1-ros-environment-setup" class="anchor-navigation-ex-anchor" href="#1-ros-environment-setup"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. 1 ROS environment setup</h2>
+<h3 id="11-ros-installation"><a name="11-ros-installation" class="anchor-navigation-ex-anchor" href="#11-ros-installation"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. 1.1 ROS installation</h3>
+<p>The basic development environment setup requires the installation of the robot operating system ROS, MoveIt, and git version manager. The following describes their installation methods and processes.</p>
+<p>For <strong>myCobot 280-M5</strong> and <strong>myCobot 320-M5</strong> devices, please refer to the installation methods and processes described below. <strong>myCobot 280-PI</strong> and <strong>myCobot 320-PI</strong> devices only need to execute the installation of the <strong>mycobot_ros</strong> installation package.</p>
+<h4 id="111-version-selection"><a name="111-version-selection" class="anchor-navigation-ex-anchor" href="#111-version-selection"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1 Version selection</h4>
+<p>ROS has a one-to-one correspondence with Ubuntu. Different versions of Ubuntu correspond to different versions of ROS. For reference, see the following website: <a href="http://wiki.ros.org/Distributions" target="_blank">http://wiki.ros.org/Distributions</a></p>
+<ul>
+<li>Here are the ROS versions supported by Ubuntu:</li>
+<li>Ubuntu 16.04 / ROS Kinetic</li>
+<li>Ubuntu 18.04 / ROS Melodic</li>
+<li>Ubuntu 20.04 / ROS Noetic</li>
+</ul>
+<p><strong>Please install the corresponding ROS version according to the Ubuntu version you installed</strong></p>
+<p>If the versions are different, the download will fail. Here we choose Ubuntu 18.04, and the corresponding ROS version is ROS Melodic</p>
+<blockquote>
+<p>NOTE: We currently do not provide any reference for installing ROS on Windows. If necessary, please refer to <a href="https://www.ros.org/install/" target="_blank">https://www.ros.org/install/</a></p>
+</blockquote>
+<h4 id="112-start-installation"><a name="112-start-installation" class="anchor-navigation-ex-anchor" href="#112-start-installation"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2 Start installation</h4>
+<h5 id="1-add-source"><a name="1-add-source" class="anchor-navigation-ex-anchor" href="#1-add-source"><i class="fa fa-link" aria-hidden="true"></i></a>1 Add source</h5>
+<p>There is no ROS software source in the software source list of Ubuntu itself, so you need to <strong>configure the ROS software source to the software list warehouse</strong> before you can download ROS. Open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>), enter the following command:</p>
+<ul>
+<li><p>Official source:</p>
+<pre><code class="lang-bash">sudo sh -c <span class="hljs-string">&apos;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&apos;</span>
+</code></pre>
+</li>
+<li><p>If the download speed is slow, it is recommended to select a mirror source nearby to replace the above command. For example, Tsinghua University is:</p>
+</li>
+</ul>
+<pre><code class="lang-bash">sudo sh -c <span class="hljs-string">&apos;. /etc/lsb-release &amp;&amp; echo &quot;deb http://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ `lsb_release -cs` main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&apos;</span>
+</code></pre>
+<p>You will be asked to enter the user password here. Just enter the user password you set when installing Ubuntu.</p>
+<h5 id="2-set-up-the-secret-key"><a name="2-set-up-the-secret-key" class="anchor-navigation-ex-anchor" href="#2-set-up-the-secret-key"><i class="fa fa-link" aria-hidden="true"></i></a>2 Set up the secret key</h5>
+<p><strong>Configure the public network secret key</strong>. This step is to let the system confirm that our path is safe, so that there is no problem downloading the file, otherwise it will be deleted immediately after downloading:</p>
+<pre><code class="lang-bash">sudo apt-key adv --keyserver <span class="hljs-string">&apos;hkp://keyserver.ubuntu.com:80&apos;</span> --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+</code></pre>
+<p>The execution results are shown below:&#xFF1A;</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/install-ros-1.png" width="500" align="center"></p>
+<h5 id="3-installation"><a name="3-installation" class="anchor-navigation-ex-anchor" href="#3-installation"><i class="fa fa-link" aria-hidden="true"></i></a>3 Installation</h5>
+<p>After adding a new software source, you need to <strong>update the software source list</strong>, open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>), and enter the following command:</p>
+<pre><code class="lang-bash">sudo apt-get update
+</code></pre>
+<p>Execute <strong>Install ROS</strong>, open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>), and enter the following command according to your Ubuntu version:</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 16.04</span>
+sudo apt install ros-kinetic-desktop-full
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 18.04</span>
+sudo apt install ros-melodic-desktop-full
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 20.04</span>
+sudo apt install ros-noetic-desktop-full
+</code></pre>
+<p>It is recommended to install the complete ROS to prevent missing libraries and dependencies.</p>
+<p><strong>The installation process takes a long time, please be patient</strong></p>
+<ul>
+<li>If the following error message appears in the console terminal during the installation, you need to change the software source list in /etc/apt/sources.list.</li>
+<li><p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/ros-2.png" width="500" align="center"></p>
+</li>
+<li><p>Open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>), and enter the following command:</p>
+</li>
+</ul>
+<pre><code class="lang-bash">sudo gedit /etc/apt/sources.list
+</code></pre>
+<ul>
+<li>Replace all official software sources in sources.list with the following Alibaba Cloud software sources:</li>
+</ul>
+<p><strong>Ubuntu 16.04&#xFF1A;</strong></p>
+<pre><code class="lang-bash">deb http://mirrors.aliyun.com/ubuntu/ xenial main
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial main
+
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main
+
+deb http://mirrors.aliyun.com/ubuntu/ xenial universe
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates universe
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates universe
+
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security main
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security universe
+</code></pre>
+<p><strong>Ubuntu 18.04&#xFF1A;</strong></p>
+<pre><code class="lang-bash">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+</code></pre>
+<p><strong>Ubuntu 20.04&#xFF1A;</strong></p>
+<pre><code class="lang-bash">deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
+</code></pre>
+<ul>
+<li>After the configuration is complete, the contents of the sources.list file are as follows. Click Save and Exit.</li>
+</ul>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/install-ros-3.png" width="500" align="center"></p>
+<ul>
+<li>Update the software source list and enter in the console terminal:</li>
+</ul>
+<pre><code class="lang-bash">sudo apt-get update
+</code></pre>
+<ul>
+<li>Enter the command to install ROS in the console terminal:</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 16.04</span>
+sudo apt install ros-kinetic-desktop-full
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 18.04</span>
+sudo apt install ros-melodic-desktop-full
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 20.04</span>
+sudo apt install ros-noetic-desktop-full
+</code></pre>
+<p><strong>The installation process takes a long time, please wait patiently</strong></p>
+<h5 id="4-configure-ros-environment-to-the-system"><a name="4-configure-ros-environment-to-the-system" class="anchor-navigation-ex-anchor" href="#4-configure-ros-environment-to-the-system"><i class="fa fa-link" aria-hidden="true"></i></a>4 Configure ROS environment to the system</h5>
+<p>rosdep allows you to easily install the source code you want to compile or the system dependencies required by some ROS core components. Execute the following commands in the terminal in sequence to open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>).</p>
+<p>If rosdep is not installed on your system, please use the command <code>sudo apt install python-rosdep</code> to install it.</p>
+<p>If your installed Ubuntu system is version 20.04, please use the command <code>sudo apt install python3-rosdep</code> to install it, and execute the rosdep initialization command after completion.
+<img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/install-ros-5.png" width="500" align="center"></p>
+<p><strong>Initialize rosdep</strong>:</p>
+<pre><code class="lang-bash">sudo rosdep init
+</code></pre>
+<p>If the error message shown below appears:</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/install-ros-6.png" width="500" align="center"></p>
+<p><strong>Solution:</strong> Modify the hosts file and enter the following command in the console terminal:</p>
+<pre><code class="lang-bash">sudo gedit /etc/hosts
+</code></pre>
+<p>At the end of the file content, add the IP addresses of the following two websites to access:</p>
+<pre><code class="lang-bash">199.232.28.133 raw.githubusercontent.com
+151.101.228.133 raw.github.com
+</code></pre>
+<p>After the modification is completed, execute in the console terminal:</p>
+<pre><code class="lang-bash">sudo rosdep init
+</code></pre>
+<pre><code class="lang-bash">rosdep update
+</code></pre>
+<p>After initialization is completed, in order to avoid the need to re-validate the ROS function path every time the terminal window is closed, we can <strong>configure the path to the environment variable</strong>, so that the ROS function path can be automatically validated every time a new terminal is opened.
+Execute the following commands in the terminal in sequence to open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>):</p>
+<h4 id="113-set-up-the-ros-environment"><a name="113-set-up-the-ros-environment" class="anchor-navigation-ex-anchor" href="#113-set-up-the-ros-environment"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3 Set up the ros environment</h4>
+<h5 id="bash"><a name="bash" class="anchor-navigation-ex-anchor" href="#bash"><i class="fa fa-link" aria-hidden="true"></i></a>Bash</h5>
+<p>Execute the following command:</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 16.04</span>
+<span class="hljs-comment"># &#x5C06; ros &#x73AF;&#x5883;&#x52A0;&#x5165;&#x5230;&#x5F53;&#x524D;&#x63A7;&#x5236;&#x53F0;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;source /opt/ros/kinetic/setup.bash&quot;</span> &gt;&gt; ~/.bashrc
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 18.04</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;source /opt/ros/melodic/setup.bash&quot;</span> &gt;&gt; ~/.bashrc
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 20.04</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;source /opt/ros/noetic/setup.bash&quot;</span> &gt;&gt; ~/.bashrc
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-built_in">source</span> ~/.bashrc
+</code></pre>
+<h5 id="install-ros-additional-dependencies"><a name="install-ros-additional-dependencies" class="anchor-navigation-ex-anchor" href="#install-ros-additional-dependencies"><i class="fa fa-link" aria-hidden="true"></i></a>Install ROS additional dependencies</h5>
+<p>Enter the following command in the terminal to install ROS additional dependencies and open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>):</p>
+<pre><code class="lang-bash">sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential
+</code></pre>
+<p>If your Unbutu system is version 20.04, please execute the following command to install it:</p>
+<pre><code class="lang-bash">sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 16.04</span>
+sudo apt install ros-kinetic-joint-state-publisher-gui
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 18.04 </span>
+sudo apt install ros-melodic-joint-state-publisher-gui
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 20.04 </span>
+sudo apt install ros-noetic-joint-state-publisher-gui
+</code></pre>
+<h4 id="114-verify-the-installation"><a name="114-verify-the-installation" class="anchor-navigation-ex-anchor" href="#114-verify-the-installation"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4 Verify the installation</h4>
+<p>The startup of the ROS system requires a ROS Master, i.e., a node manager. We can start the ROS Master by entering the roscore command in the terminal.</p>
+<p>To verify whether ROS is successfully installed, open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>), and execute the following command in the terminal:</p>
+<pre><code class="lang-bash">roscore
+</code></pre>
+<p>When the following interface is displayed, it means that ROS is installed successfully</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/install-ros-7.png" width="500" align="center"></p>
+<p>The roscore command starts a node manager, which is used for node management. In a ros system, there is only one node manager, which is the prerequisite for the operation of the ros node. Therefore, before starting the ros node, the first step is to execute roscore.</p>
+<p>_For more detailed installation instructions, please refer to the official installation guide at: <a href="http://wiki.ros.org/ROS/Installation" target="_blank">http://wiki.ros.org/ROS/Installation</a></p>
+<h2 id="2-moveit-installation"><a name="2-moveit-installation" class="anchor-navigation-ex-anchor" href="#2-moveit-installation"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. 2 MoveIt Installation</h2>
+<p>MoveIt is a functional package of a series of mobile operations in ROS, mainly including motion planning, collision detection, kinematics, 3D perception, operation control and other functions.</p>
+<h3 id="21-update-the-software-source-list"><a name="21-update-the-software-source-list" class="anchor-navigation-ex-anchor" href="#21-update-the-software-source-list"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. 2.1 Update the software source list</h3>
+<p>Open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>), and enter the following command in the terminal window to <strong>update the software source list</strong>:</p>
+<pre><code class="lang-bash">sudo apt-get update
+</code></pre>
+<h3 id="22-install-moveit"><a name="22-install-moveit" class="anchor-navigation-ex-anchor" href="#22-install-moveit"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.2. 2.2 Install MoveIt</h3>
+<p>Open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>), enter the following command in the terminal window to execute <strong>MoveIt installation</strong>:</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu16.04</span>
+sudo apt-get install ros-kinetic-moveit
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 18.04</span>
+sudo apt-get install ros-melodic-moveit
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu20.04</span>
+sudo apt-get install ros-noetic-moveit
+</code></pre>
+<h2 id="3-git-installation"><a name="3-git-installation" class="anchor-navigation-ex-anchor" href="#3-git-installation"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. 3 git installation</h2>
+<h3 id="31-add-software-source"><a name="31-add-software-source" class="anchor-navigation-ex-anchor" href="#31-add-software-source"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.1. 3.1 Add software source</h3>
+<p><strong>Add the software source installed by git to the software source list of Ubuntu</strong>, open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>), and enter the following command in the terminal window:</p>
+<pre><code class="lang-bash">sudo add-apt-repository ppa:git-core/ppa
+</code></pre>
+<h3 id="32-update-the-software-source-list"><a name="32-update-the-software-source-list" class="anchor-navigation-ex-anchor" href="#32-update-the-software-source-list"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.2. 3.2 Update the software source list</h3>
+<p>Open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>), and enter the following command in the terminal window to <strong>update the software source list</strong>:</p>
+<pre><code class="lang-bash">sudo apt-get update
+</code></pre>
+<h3 id="33-install-git"><a name="33-install-git" class="anchor-navigation-ex-anchor" href="#33-install-git"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.3. 3.3 Install git</h3>
+<p>Open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>), enter the following command in the terminal window, <strong>execute git installation</strong>:</p>
+<pre><code class="lang-bash">sudo apt-get install git
+</code></pre>
+<h3 id="34-verify-installation"><a name="34-verify-installation" class="anchor-navigation-ex-anchor" href="#34-verify-installation"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.4. 3.4 Verify installation</h3>
+<p><strong>Read the git version</strong>, open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>), and enter the following command in the terminal window:</p>
+<pre><code class="lang-bash">git --version
+</code></pre>
+<p>The git version number can be displayed in the terminal, as shown below, indicating a successful installation</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/install-git-1.png" width="500" align="center"></p>
+<h3 id="35-usage"><a name="35-usage" class="anchor-navigation-ex-anchor" href="#35-usage"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.5. 3.5 Usage</h3>
+<p>You will need to use git to download the ros package later. For details on how to use git, please refer to the following link:</p>
+<ul>
+<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%8E%B7%E5%8F%96-Git-%E4%BB%93%E5%BA%93" target="_blank">https://git-scm.com/book/zh/v2</a></li>
+<li><a href="https://www.runoob.com/git/git-tutorial.html" target="_blank">https://www.runoob.com/git/git-tutorial.html</a></li>
+</ul>
+<h2 id="4-mycobotros-installation"><a name="4-mycobotros-installation" class="anchor-navigation-ex-anchor" href="#4-mycobotros-installation"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. 4 mycobot_ros installation</h2>
+<p><code>mycobot_ros</code> is a ROS package launched by ElephantRobotics, which is compatible with its desktop six-axis robot arm mycobot series.</p>
+<p>&#x9879;&#x76EE;&#x5730;&#x5740;&#xFF1A;<a href="http://github.com/elephantrobotics/mycobot_ros" target="_blank">http://github.com/elephantrobotics/mycobot_ros</a></p>
+<h3 id="41-prerequisites"><a name="41-prerequisites" class="anchor-navigation-ex-anchor" href="#41-prerequisites"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.1. 4.1 Prerequisites</h3>
+<p>Before installing the package, please ensure that you have a ros workspace.</p>
+<p>Here we give a sample command for creating a workspace, the default is <code>catkin_ws</code>, open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>), and enter the following command in the command line:</p>
+<pre><code class="lang-bash">mkdir -p ~/catkin_ws/src  <span class="hljs-comment"># &#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939;</span>
+<span class="hljs-built_in">cd</span> ~/catkin_ws/src        <span class="hljs-comment"># &#x8FDB;&#x5165;&#x6587;&#x4EF6;&#x5939;</span>
+catkin_init_workspace     <span class="hljs-comment"># &#x628A;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x521D;&#x59CB;&#x5316;&#x4E3A;&#x4E00;&#x4E2A;ROS&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;</span>
+<span class="hljs-built_in">cd</span> ..                     <span class="hljs-comment"># &#x8FD4;&#x56DE;&#x4E0A;&#x7EA7;&#x76EE;&#x5F55;</span>
+catkin_make               <span class="hljs-comment"># &#x6784;&#x5EFA;&#x5DE5;&#x4F5C;&#x533A;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x3002;</span>
+</code></pre>
+<p><strong>Add workspace environment</strong></p>
+<h5 id="bash_1"><a name="bash_1" class="anchor-navigation-ex-anchor" href="#bash_1"><i class="fa fa-link" aria-hidden="true"></i></a>Bash</h5>
+<p>The official default ROS1 workspace is <code>catkin_ws</code>.</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 16.04</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;source ~/catkin_ws/devel/setup.bash&quot;</span> &gt;&gt; ~/.bashrc
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 18.04</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;source ~/catkin_ws/devel/setup.bash&quot;</span> &gt;&gt; ~/.bashrc
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 20.04</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;source ~/catkin_ws/devel/setup.bash&quot;</span> &gt;&gt; ~/.bashrc
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-built_in">source</span> ~/.bashrc
+</code></pre>
+<h3 id="42-installation"><a name="42-installation" class="anchor-navigation-ex-anchor" href="#42-installation"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.2. 4.2 Installation</h3>
+<p><strong>NOTE:</strong></p>
+<ul>
+<li>This package depends on ROS and MoveIT. Please make sure that ROS and MoveIT are installed successfully before use.</li>
+<li>The interaction between this package and the real robot arm depends on PythonApi - <code>pymycobot</code></li>
+<li>The Api project is: <a href="https://github.com/elephantrobotics/pymycobot" target="_blank">https://github.com/elephantrobotics/pymycobot</a></li>
+<li>Quick installation: <code>pip install pymycobot --upgrade</code></li>
+</ul>
+<p>When executing the pip install pymycobot --upgrade command, if the following error message appears:</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/install-git-2.png" width="500" align="center"></p>
+<p>Enter the following command to install pip according to the prompt</p>
+<pre><code class="lang-bash">sudo apt install python-pip
+</code></pre>
+<ul>
+<li>If your Ubuntu system is version 20.04, please execute the command <code>sudo apt install python3-pip</code> to install pip
+After pip is installed, execute it again in the terminal</li>
+</ul>
+<pre><code class="lang-bash">pip install pymycobot --upgrade
+</code></pre>
+<ul>
+<li>The installation method depends on Git, please make sure Git is installed on your computer.</li>
+</ul>
+<p>The official default ROS1 workspace is <code>catkin_ws</code>.</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> ~/catkin_ws/src <span class="hljs-comment"># Enter the src folder of the workspace</span>
+git <span class="hljs-built_in">clone</span> https://github.com/elephantrobotics/mycobot_ros.git <span class="hljs-comment"># Clone the code on github</span>
+<span class="hljs-built_in">cd</span> .. <span class="hljs-comment"># Return to the workspace</span>
+catkin_make <span class="hljs-comment"># Build the code in the workspace</span>
+<span class="hljs-built_in">cd</span> ..
+<span class="hljs-built_in">source</span> devel/setup.bash <span class="hljs-comment"># Add environment variables</span>
+</code></pre>
+<h2 id="import-system-image-for-m5-versionhow-to-use-ros-for-pro600"><a name="import-system-image-for-m5-versionhow-to-use-ros-for-pro600" class="anchor-navigation-ex-anchor" href="#import-system-image-for-m5-versionhow-to-use-ros-for-pro600"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. Import system image for M5 version/How to use ros for Pro600:</h2>
+<blockquote>
+<p><strong>Note:</strong> In order to reduce the difficulty of environment construction, we will provide Linux system image (Ubuntu 20.04), Virtual Box installation package and its extension package. Next, we will teach you how to install Virtual Box and import the Linux system image (the default password is 123).
+<strong>Built-in environment:</strong> ROS1 + Moveit + Git + pymycobot + mycobot_ros</p>
+</blockquote>
+<h2 id="1-install-the-virtual-machine"><a name="1-install-the-virtual-machine" class="anchor-navigation-ex-anchor" href="#1-install-the-virtual-machine"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. 1 Install the virtual machine</h2>
+<p>Go to the <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">official website</a> to download the virtual machine Virtual Box</p>
+<p>Or go to the <a href="https://www.vmware.com/cn/products/workstation-pro.html" target="_blank">official website</a> to download the virtual machine VM ware</p>
+<p>VirtualBox installation package: <a href="https://download.virtualbox.org/virtualbox/7.0.10/VirtualBox-7.0.10-158379-Win.exe" target="_blank">Windows hosts</a></p>
+<p>VirtualBox expansion package: <a href="https://download.virtualbox.org/virtualbox/7.0.10/Oracle_VM_VirtualBox_Extension_Pack-7.0.10.vbox-extpack" target="_blank">VirtualBox 7.0.10 Oracle VM VirtualBox Extension Pack</a></p>
+<p><strong>Of course, if you already have your virtual machine, you can skip this step. </strong></p>
+<p>We chose to download Virtual box because it is free.</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/v1.png" width="500" align="center"></p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/v2.gif" width="500" align="center"></p>
+<h2 id="2-download-linux-system-image"><a name="2-download-linux-system-image" class="anchor-navigation-ex-anchor" href="#2-download-linux-system-image"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. 2 Download Linux system image</h2>
+<p>Click to download: <a href="http://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/system_images/ubuntu20.04_ROS1_V20230731.ova.zip" target="_blank">Linux ubuntu20.04</a></p>
+<h2 id="3-import-linux-system-image"><a name="3-import-linux-system-image" class="anchor-navigation-ex-anchor" href="#3-import-linux-system-image"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. 3 Import Linux system image</h2>
+<p>Click Manage in the Virtual Box interface -&gt; Import virtual machine -&gt; Select virtual image -&gt; Select installation path and import, and install as follows.</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/v3.png" width="500" align="center"></p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/v4.png" width="500" align="center"></p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/v5.png" width="500" align="center"></p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/v6.png" width="500" align="center"></p>
+<p>Wait for the image to be imported. The installation is successful as shown below.</p>
+<p><img src="../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/v7.png" width="500" align="center"></p>
+<p>Then start the system. The default password is <strong>123</strong></p>
+<p>The ROS1 environment is now complete. For the use of ROS1, please refer to <a href="12.1.4-Introduction%20and%20Use%20of%20rivz/README.md">13.1.3 Introduction and Use of Rviz</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="12.1.1-Introduction.html" class="navigation navigation-prev " aria-label="Previous page: 6.2 Development and Use Based on ROS1">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="12.1.3-ROS_Basics.html" class="navigation navigation-next " aria-label="Next page: 6.2.2 ROS1 Basics">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.2.1 ROS1 Environment Building","level":"1.9.3.5","depth":3,"next":{"title":"6.2.2 ROS1 Basics","level":"1.9.3.6","depth":3,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.3-ROS_Basics.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.3-ROS_Basics.md","articles":[]},"previous":{"title":"6.2 Development and Use Based on ROS1","level":"1.9.3.4.13","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.1-Introduction.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.1-Introduction.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","livereload"],"pluginsConfig":{"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":true,"insertAnchor":true,"showGoTop":true,"mini":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":"","bottom":"20px","offset":{"top":10,"left":10},"minWidth":"70px","floatIcon":"fa fa-navicon","zIndex":"1000","trigger":"click","right":"20px","show":true}},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.2-EnvironmentBuilding.md","mtime":"2024-07-24T06:14:45.799Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-25T02:38:31.553Z"},"basePath":"../../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../../gitbook/gitbook.js"></script>
+    <script src="../../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
