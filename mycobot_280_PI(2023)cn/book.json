@@ -2,7 +2,7 @@
   "plugins": ["anchor-navigation-ex"],
   "pluginsConfig": {
     "anchor-navigation-ex": {
-      "showLevel": true,
+      "showLevel": false,
       "showGoTop": true,
       "mini": true,
       "float": {

@@ -5,7 +5,7 @@
 ![封面](../../resource/1-ProductInformation/1.ProductIntroduction/1-1.png)
 ##### 桌面级六轴协作机器人
 
-### 产品简介
+### 1.产品简介
 
 myCobot 280 Pi 六轴协作机器人是大象机器人精心研发的**多功能轻量型智能机械臂**，隶属“myCobot系列”产品，采用**树莓派微处理器**，是大象机器人面向**机器人及人工智能教育生态**的核心产品之一。
 
@@ -61,7 +61,7 @@ myCobot 280 pi机械臂是大象机器人专为：科研教育、创客应用、
 
 ---
 
-## 支持的扩展开发
+## 3.支持的扩展开发
 ![拓展开发](../../resource/1-ProductInformation/1.ProductIntroduction/配件.png)
 mycobot 系列机械臂在教育和科研领域中极具价值，特别是在 Python 和 ROS（Robot Operating System)这两个广泛使用的开发环境中。这些环境提供了强大的支持，使得 mycobot  系列产品能够广泛应用于机器学习、人工智能研究、复杂运动控制以及视觉处理任务中。同时搭配自适应夹爪、摄像头法兰、吸泵等数十种配件，可以尽情发挥myCobot的创意想法。
 
@@ -76,7 +76,7 @@ mycobot 系列机械臂在教育和科研领域中极具价值，特别是在 Py
 ---
 
 
-## 购买地址
+## 4.购买地址
 
 如果您有兴趣购买该设备，请点击下面的链接：  
 淘宝：[https://shop504055678.taobao.com](https://shop504055678.taobao.com)  

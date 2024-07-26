@@ -2,7 +2,7 @@
 
 > In the first chapter, we discussed the selling points of the product and its design concept, providing you with a panoramic perspective of the high-level understanding of the product. Now, let's move on to the second chapter - Robot Parameters. This chapter will be the key to your understanding of the product's technical details. A detailed understanding of these technical parameters will not only help you fully realize the advancement and practicality of our products, but also ensure that you can use these technologies more effectively to meet your specific needs.
 
-## Robot Specifications
+## 1.Robot Specifications
 
 ![封面](../../resources/1-ProductInformation/2.ProductParameter/main.jpg)
 
@@ -19,9 +19,9 @@
 | Operating Temperature | -5-45℃ |
 | Communication | Type-C |
 
-## Control Core Parameters
+## 2.Control Core Parameters
 
-### Main Controller Specifications
+### 2.1Main Controller Specifications
 
 | **Indicators** | **Parameters** |
 | :------- | :---------------------------------------------------------------- |
@@ -35,7 +35,7 @@
 | **LCD display** | 2.0" @ 320*240 ILI9342C IPS panel, maximum brightness 853nit |
 | **Physical buttons** ||
 
-### Auxiliary controller specification table
+### 2.2Auxiliary controller specification table
 
 | **Indicators** | **Parameters** |
 | :----------------- | :---------------------------------------------- |
@@ -50,13 +50,13 @@
 
 
 ---
-## Structural dimension parameters
+## 3.Structural dimension parameters
 >! This chapter uses millimeters as distance units and degrees as angle units.
 
-### Product dimensions and working space
+### 3.1Product dimensions and working space
 ![工作范围](../../resources/1-ProductInformation/2.ProductParameter/WorkingRange.png)
 ![尺寸规格](../../resources/1-ProductInformation/2.ProductParameter/size.png)
-### Joint range of motion
+### 3.2Joint range of motion
 | Joints | Range |
 | :--------: | :---------:|
 | J1 | -168 ~ +168 |
@@ -65,7 +65,7 @@
 | J4 | -145 ~ +145 |
 | J5 | -165 ~ +165 |
 | J6 | -180 ~ +180 |
-### Hole installation
+### 3.3Hole installation
 - The robot base is mounted with flanges. The base is compatible with both LEGO technology and M4 screw installation.
 
 ![孔位安装](../../resources/1-ProductInformation/2.ProductParameter/HoleInstallation1.jpg)
@@ -76,8 +76,8 @@
 
 
 
-## Electrical characteristic parameters
-###  Electrical interface of the robot base
+## 4.Electrical characteristic parameters
+###  4.1Electrical interface of the robot base
 ###  Introduction to the base
 
 * A. The front of the base is shown in the figure below:
@@ -111,7 +111,7 @@
 
 ① Functional interface group four
 
-### Base interface description
+### 4.2Base interface description
 
 > **Note:** The functional interface groups are all 2.54mm DuPont interfaces, and 2.54mm DuPont cables can be used externally.
 
@@ -191,7 +191,7 @@ Figure C Grove 3
 
 * H. Display screen: Use a 2-inch IPS screen, which can be used to display myCobot communication status/correct the robot origin with buttons, etc.
 
-## Electrical interface of the end of the robot
+## 4.3 Electrical interface of the end of the robot
 
 ###  Introduction to the end of the robot
 
@@ -249,7 +249,7 @@ Figure F Grove 4
 
 * E. Atom: for 5X5 RGB LED (G27) display and key function (G39)
 
-##  Cartesian coordinate parameters
+##  5.Cartesian coordinate parameters
 
 ![DH parameters](../../resources/1-ProductInformation/2.ProductParameter/280DH.jpg)
 

@@ -6,9 +6,9 @@ TCP/IP传输协议，即传输控制/网络协议，也叫作网络通讯协议�
 
 **在使用机械臂之前请确保Basic固件与Atom固件已经烧录（烧录详情请参考：5.2软件使用说明章节）
 
-### 1 连接步骤
+### 连接步骤
 
-#### 1.1 创建一个默认网络
+#### 创建一个默认网络
 
 myCobot 280 m5 机械臂使用TCP/IP时，会用默认密码“mycobot123”去连接“MyCobotWiFi2.4G”的一个网络。
 
@@ -22,7 +22,7 @@ myCobot 280 m5 机械臂使用TCP/IP时，会用默认密码“mycobot123”去�
 
 <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/热点设置1.jpg" style="zoom: 25%;" />
 
-#### 1.2 TCP/IP功能开启
+#### TCP/IP功能开启
 
 如图所示，机械臂通过按键点击Transponder->WLAN Server，连接成功的话会显示IP和端口号。如果连接失败，请检测网络名称和密码有没有设置正确。
 
@@ -34,7 +34,7 @@ myCobot 280 m5 机械臂使用TCP/IP时，会用默认密码“mycobot123”去�
 
 <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/移动链接.jpg" style="zoom: 25%;" />
 
-#### 1.3 连接其他网络
+#### 连接其他网络
 
 如果需要连接其他网络，可以通过下载我司提供的[myBlockly软件](https://www.elephantrobotics.com/download/)去连接其他网络。
 
