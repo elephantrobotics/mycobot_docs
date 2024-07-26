@@ -1,6 +1,6 @@
 ## MoveIt
 
-### 1 MoveIt 简介
+### MoveIt 简介
 
 MoveIt 是ROS中的一个集成开发平台，由多种用于操纵机械臂的功能包组成，包括：运动规划、操作、控制、逆运动学、3D感知和碰撞检测等。
 
@@ -9,7 +9,7 @@ MoveIt 是ROS中的一个集成开发平台，由多种用于操纵机械臂的�
 <img src =../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/moveit/moveit-1.png
 width ="500"  align = "center">
 
-### 2 用户界面
+### 用户界面
 用户可以通过三种方式访问move_group提供的操作和服务：
 
 * 在C++ ： 使用move_group_interface包可以方便实用move_group。
@@ -18,7 +18,7 @@ width ="500"  align = "center">
 
 move_group可以使用ROS参数服务器进行配置，从中还可以获取机器人的URDF和SRDF。
 
-### 3 配置
+###  配置
 move_group是一个 ROS 节点。它使用ROS参数服务器来获取三种信息：
 
 1. URDF - move_group在ROS参数服务器上查找robot_description参数，以获取机器人的URDF。

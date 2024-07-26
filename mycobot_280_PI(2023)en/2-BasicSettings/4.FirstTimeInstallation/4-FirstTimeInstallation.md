@@ -1,6 +1,6 @@
 # Product Standard List
 
-## Product List Image
+## 1.Product List Image
 > Thank you for choosing the Elephant Robot myCobot 280 pi Robotic Arm. This chapter is designed to help you easily get started with the Elephant Robotic product and enjoy every wonderful moment brought by the product.
 
 ![Unpacking Set](../../resource/2-BasicSettings/4.FirstTimeInstallation/UnpackingSet.png)
@@ -18,8 +18,7 @@
 **Note:** After the packaging box arrives, please confirm that the robot packaging is intact. If there is any damage, please contact the logistics company and the supplier in your area in time. After unpacking, please check the actual items in the box according to the item list.
 
 ---
-# Product Unpacking Guide
-
+## 2.Product Unpacking Guide
 ## Product Unpacking Graphic Guide
 
 **Why do you need to disassemble the product according to the steps**
@@ -41,8 +40,7 @@ In this section, we strongly recommend disassembling the product according to th
 Your browser does not support HTML5 video.
 </video>
 
-# Power-on inspection guide
-
+##  3.Power-on inspection guide
 ## Structural installation and fixation
 
 During the movement of the **robot arm**, if the **bottom surface of myCobot is not connected to the desktop or other bottom surface**, myCobot will still **shake or overturn**.
@@ -100,8 +98,7 @@ Before formal installation, please confirm:
 
 
 
-# Power on and preliminary test
-
+## 4.Power on and preliminary test
 ## Power on the robot
 
 Before operation, please make sure that you have read and followed the contents of **Chapter 3 Safety Instructions** to ensure safe operation. At the same time, connect the power adapter to the robot arm and fix the base of the robot arm on the table. The connection method is shown in Figure 3-1:
@@ -157,7 +154,7 @@ After connecting the required external devices, press the red power button to st
   Your browser does not support the video tag.
 </video>
 
-## Common Problem Solving
+## 5.Common Problem Solving
 This section aims to help users solve common problems encountered during use, covering hardware, software, drivers, and how to ask questions in the forum. If you encounter problems while using the robotic arm, please read the contents of this section first to find solutions. If the listed problems cannot help you solve and you have more after-sales questions to consult, please add the after-sales butler WeChat.
 
 [How to ask questions elegantly](../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.md)
