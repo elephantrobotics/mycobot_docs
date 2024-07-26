@@ -1,99 +1,105 @@
-# ROS/ROS2 简介
+# Introduction to ROS/ROS2
 
-**ROS** 是机器人操作系统（Robot Operating System）的英文缩写。
-**ROS** 是用于编写机器人软件程序的一种具有高度灵活性的软件架构。
+**ROS** is the abbreviation of Robot Operating System.
+**ROS** is a highly flexible software architecture used to write robot software programs.
 
-**注意**：
+**Note**:
 
-- 现阶段，**myCobot 280系列** 、 **myCobot 320系列**、**myPalletizer260系列**、**mechArm270系列** 均支持 **ROS** 的使用
-- 通过使用 **mystudio** 烧录相应的固件。其中，在basic中烧录minirobot，选择transponder功能，在atom中烧录最新版的atomMain。
+- At present, **myCobot 280 series**, **myCobot 320 series**, **myPalletizer260 series**, **mechArm270 series** all support the use of **ROS**. For the specific development of various devices, please refer to [**Device Development**](../4-BasicApplication/README.md).
+- Use [**mystudio**](../4-BasicApplication/4.1-myStudio/README.md) to burn the corresponding firmware. Among them, burn minirobot in basic, select the transponder function, and burn the latest version of atomMain in atom.
 
-**ROS 图标** ：
+**ROS Icon** :
 
-![ROS图标](../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS/ROSicon.png)
+![ROS Icon](../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/ROSicon.png)
 
-**ROS** 是开源的，是用于机器人控制的一种后操作系统，或者说次级操作系统。它提供类似操作系统所提供的功能，包含硬件抽象描述、底层驱动程序管理、共用功能的执行、程序间的消息传递、程序发行包管理，它也提供一些工具程序和库用于获取、建 立、编写和运行多机整合的程序。
+**ROS** is open source and is a post-operating system, or secondary operating system, for robot control. It provides functions similar to those provided by an operating system, including hardware abstraction description, low-level driver management, execution of common functions, message passing between programs, and program distribution package management. It also provides some tool programs and libraries for obtaining, building, writing and running multi-machine integrated programs.
 
-**ROS** 的首要设计目标是在机器人研发领域提高代码复用率。**ROS** 是一个分布式的进程（也就是 “节点” ）框架，这些进程被封装在易于被分享和发布的程序包和功能包中。**ROS** 也支持一种类似于代码储存库的联合系统，这个系统也可以实现工程的协作及发布。这个设计可以使一个工程的开发实现从文件系统到用户接口完全独立决策（不受 **ROS** 限制）。同时，所有的工程都可以被 **ROS** 的基础工具整合在一起。
+**ROS**'s primary design goal is to increase code reuse in the field of robotics research and development. **ROS** is a distributed process (that is, "node") framework that is encapsulated in program packages and function packages that are easy to share and publish. **ROS** also supports a federated system similar to a code repository, which can also realize project collaboration and release. This design allows the development of a project to achieve completely independent decisions from the file system to the user interface (not limited by **ROS**). At the same time, all projects can be integrated with the basic tools of **ROS**.
 
-由于ROS存在以下缺点：
+Due to the following shortcomings of ROS:
 
-- 有限的实时通信
-- 系统稳定性尚未达到工业级要求
-- 没有安全措施
-- 只支持 Linux(ubuntu)
-- 核心机制性能未优化占用资源
+- Limited real-time communication
+- System stability has not yet reached industrial-grade requirements
+- No security measures
+- Only supports Linux (ubuntu)
+- Core mechanism performance is not optimized and occupies resources
 
-因此，**ROS**无法真正进入行业，自然也就无法商业化。 为了解决这个问题，社区提出了**ROS 2**。 它使**ROS**具有产品化的特性，包括实时性、全平台适应性、适用于低性能硬件（MCU+RTOS）、分布式、数据加密和支持现代编程语言。
+Therefore, **ROS** cannot really enter the industry, and naturally cannot be commercialized. To solve this problem, the community proposed **ROS 2**. It makes **ROS** have product characteristics, including real-time, full-platform adaptability, suitable for low-performance hardware (MCU+RTOS), distributed, data encryption and support for modern programming languages.
 
-**ROS2**首先移除**ROS**中存在的主节点。 去掉主节点后，各个节点可以通过DDS节点相互发现，各个节点是平等的，可以实现一对一、一对多、多对多的通信。 使用DDS进行通信后，可靠性和稳定性得到了增强。
+**ROS2** first removes the master node existing in **ROS**. After removing the master node, each node can discover each other through the DDS node, and each node is equal, and one-to-one, one-to-many, and many-to-many communication can be achieved. After using DDS for communication, reliability and stability are enhanced.
 
-与仅支持Linux系统的**ROS**相比，**ROS2**还支持windows、mac甚至RTOS平台。
+Compared with **ROS** that only supports Linux systems, **ROS2** also supports windows, mac and even RTOS platforms.
 
-**适用设备：**
+**[ROS1 Development Guide](12.1-ROS1/12.1.1-Introduction.md)**
+
+**[ROS2 Development Guide](12.2-ROS2/12.2.3-ROS2Introduction.md)**
+
+**ROS Applicable Devices:**
 
 - myCobot 280
-  - myCobot 280 M5
-  - myCobot 280 PI
-  - myCobot 280 Jetson Nano
-  - myCobot 280 for Arduino <br>
-  
+- myCobot 280 M5
+- myCobot 280 PI
+- myCobot 280 Jetson Nano
+- myCobot 280 for Arduino <br>
+
 - myCobot 320
-  - myCobot 320 M5
-  - myCobot 320 PI <br>
-  
+- myCobot 320 M5
+- myCobot 320 PI <br>
+
 - myPalletizer 260
-  - myPalletizer 260 M5
-  - myPalletizer 260 PI <br>
+- myPalletizer 260 M5
+- myPalletizer 260 PI <br>
 
 - myCobot PRO 600 <br>
 
 - mechArm-270
-  - mechArm-270 PI
-  - mechArm-270 M5
+- mechArm-270 PI
+- mechArm-270 M5
 
-**使用前提：**
+**Prerequisites:**
 
-- **M5** 系列版本， 底部**M5Stack-basic**烧录 **miniRobot**，选择 **Transponder** 功能，末端 **ATOM** 烧录最新版的 **atomMain** (出厂默认已烧录)
+- **M5** series version, **M5Stack-basic** burn **miniRobot** at the bottom, select **Transponder** function, **ATOM** burn the latest version of **atomMain** at the end (factory default burned)
 
-- **Pi \ jetsonnano** 系列，**ATOM** 烧录最新版的 **atomMain** (出厂默认已烧录)
+- **Pi \ jetsonnano** series, **ATOM** burn the latest version of **atomMain** (factory default burned)
 
-**设备说明：**
+**Device description:**
 
-- **以上使用设备中，myCobot 280-Pi、myCobot 280-JetsonNano、myCobot 320-Pi、mechArm-270 PI等版本自带Ubuntu（V-18.04）系统，已经内置了开发环境，所以无需搭建管理，直接使用即可。
+- Among the above devices, myCobot 280-Pi, myCobot 280-JetsonNano, myCobot 320-Pi, mechArm-270 PI and other versions come with Ubuntu (V-18.04) system, which has built-in development environment, so there is no need to build and manage, just use it directly.
 
-# MoveIt 简介
+- myCobot 280-M5, myCobot 320-M5, myCobot 280-Arduino, myPalletizer 260, mechArm-270-M5 and other versions need to build an environment for use, but in ROS/ROS2, you only need to build a ROS environment or a ROS2 environment.
 
-**MoveIt** 是目前针对机械臂移动操作的最先进的软件，已在 100 多个机器人上使用。它综合了运动规划、控制、3D 感知、运控学、控制和导航的最新成果，提供了开发先进机器人应用的易用平台，为工业、商业和研发等领域的机器人新产品的设计和集成体用评估提供了一个集成化软件平台。
+# MoveIt Introduction
 
-**MoveIt 图标** :
+**MoveIt** is currently the most advanced software for robot arm mobile operations and has been used on more than 100 robots. It integrates the latest achievements in motion planning, control, 3D perception, control science, control and navigation, and provides an easy-to-use platform for developing advanced robot applications. It provides an integrated software platform for the design and integrated use evaluation of new robot products in the fields of industry, commerce and R&D.
 
-![moveit图标](../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS/moveiticon.png)
+**MoveIt Icon** :
 
-**适用设备：**
+![moveit Icon](../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/moveiticon.png)
+
+**Applicable devices:**
 
 - myCobot 280
-  - myCobot 280 M5
-  - myCobot 280 PI
-  - myCobot 280 Jetson Nano
-  - myCobot 280 for Arduino <br>
-  
+- myCobot 280 M5
+- myCobot 280 PI
+- myCobot 280 Jetson Nano
+- myCobot 280 for Arduino <br>
+
 - myCobot 320
-  - myCobot 320 M5
-  - myCobot 320 PI <br>
-  
+- myCobot 320 M5
+- myCobot 320 PI <br>
+
 - myPalletizer 260
-  - myPalletizer 260 M5
-  - myPalletizer 260 PI <br>
+- myPalletizer 260 M5
+- myPalletizer 260 PI <br>
 
 - myCobot PRO 600 <br>
 
 - mechArm-270
-  - mechArm-270 M5
-  - mechArm-270 PI
+- mechArm-270 M5
+- mechArm-270 PI
 
-**使用前提：**
+**Prerequisites:**
 
-- **M5** 系列版本， 底部**M5Stack-basic**烧录 **miniRobot**，选择 **Transponder** 功能，末端 **ATOM** 烧录最新版的 **atomMain** (出厂默认已烧录)
+- **M5** series version, **M5Stack-basic** burn **miniRobot** at the bottom, select **Transponder** function, **ATOM** burn the latest version of **atomMain** at the end (factory default burned)
 
-- **Pi \ jetsonnano** 系列，**ATOM** 烧录最新版的 **atomMain** (出厂默认已烧录)
+- **Pi \ jetsonnano** series, **ATOM** burn the latest version of **atomMain** (factory default burned)

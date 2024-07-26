@@ -6,7 +6,7 @@ ER myCobot 280 Jetson Nano 采用 NVIDIA® Jetson Nano™ 核心开发版作为�
 
 请跟随以下章节，对myCobot 280 JN版本的机械臂进行基础功能学习。
 
-- [系统使用介绍](5.1-Functionlnstruction/README - 1.md)  
+- [系统使用介绍](5.1-Functionlnstruction/README.md)  
   本部分将介绍对myCobot 280 JN机械臂的开发环境以及系统内置软件进行简要介绍。
 
 - [系统基础功能说明](5.2-Softwarelnstructions/3.5.2-SW-detail-description.md)<br>

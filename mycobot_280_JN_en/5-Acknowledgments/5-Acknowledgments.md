@@ -1,23 +1,23 @@
-# 致谢
+# Acknowledgements
 
-我们在这里表达我们对所有参与开发、测试和完善 myCobot 系列产品（包括 myCobot 280 pi、myCobot 280 M5、myCobot 280 JN、myCobot 280 For Arduino以及套件）的人员的深深感激。每一个细节的打磨和每一个功能的创新都离不开背后团队的辛勤工作和献身精神。
+We would like to express our deep gratitude to all the people who have participated in the development, testing and improvement of the myCobot series of products (including myCobot 280 pi, myCobot 280 M5, myCobot 280 JN, myCobot 280 For Arduino and kits). Every detail polished and every feature innovative is inseparable from the hard work and dedication of the team behind it.
 
-### 特别感谢：
+### Special thanks:
 
-**研发团队**：感谢你们的创新思维和无数个日夜的努力，将复杂的技术转化为用户友好的产品。  
-**质量保证与测试团队**：你们对每一个细节的严格把控保证了我们产品的可靠性和用户的最终体验。  
-**客户支持团队**：感谢你们为我们的用户提供专业的支持，帮助他们解决使用过程中的每一个问题。  
-**合作伙伴与供应商**：你们的支持和服务对产品的成功至关重要。感谢你们的高质量原材料和部件，以及时刻准备支持的态度。  
-**投资者和顾问**：没有你们的信任和资金支持，我们无法将这些创新带到市场。你们的洞察和指导也一直是我们前进的动力。
+**R&D Team**: Thank you for your innovative thinking and countless days and nights of hard work to transform complex technology into user-friendly products.
+**QA & Testing Team**: Your strict control of every detail ensures the reliability of our products and the ultimate experience of users.
+**Customer Support Team**: Thank you for providing professional support to our users to help them solve every problem during use.
+**Partners & Suppliers**: Your support and service are crucial to the success of the product. Thank you for your high-quality raw materials and components, and your attitude of being ready to support.
+**Investors and Advisors**: Without your trust and financial support, we would not be able to bring these innovations to the market. Your insights and guidance have always been our driving force.
 
-### 用户感谢：
+### User Thanks:
 
-我们特别感谢选择和信任 myCobot 系列产品的每一位用户。你们的反馈和建议是我们不断前进和改进的动力。我们承诺将继续倾听你们的声音，不断优化我们的产品和服务。
+We are especially grateful to every user who has chosen and trusted the myCobot series of products. Your feedback and suggestions are the driving force for our continuous progress and improvement. We promise to continue to listen to your voice and continuously optimize our products and services.
 
-### 未来展望：
+### Future Outlook:
 
-我们期待与所有的利益相关者一起，继续在机器人技术的道路上探索和进步。让我们携手创造更多的可能，为世界带来更大的便利和创新。
+We look forward to continuing to explore and progress on the road of robotics with all stakeholders. Let us work together to create more possibilities and bring greater convenience and innovation to the world.
 
 ---
 
-[← 上一章](../4-SupportAndService/11.AboutUs/11.AboutUs.md)
+[← Previous Chapter](../5-SupportAndService/5-SupportAndService.md)
