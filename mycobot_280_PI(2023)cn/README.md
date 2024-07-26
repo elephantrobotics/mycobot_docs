@@ -6,9 +6,9 @@
 
 本文档包含从产品简介、详细的技术参数到用户须知和产品开发指导的全面信息。文档将深入介绍myCobot 280 pi机械臂的基础功能，并提供软件开发指南，展示成功的应用案例，帮助您了解如何将myCobot 280 pi有效整合进各种应用中。此外，我们还提供了丰富的支持与服务信息，确保您在遇到任何技术挑战时能够获得必要的帮助。
 ### gitbook-en
-英文版本: https://docs.elephantrobotics.com/docs/mycobot-pi-en/ 
+英文版本: https://docs.elephantrobotics.com/docs/mycobot-280-pi-en/ 
 ### gitbook-cn
-中文版本:https://docs.elephantrobotics.com/docs/mycobot-pi-cn/
+中文版本:https://docs.elephantrobotics.com/docs/mycobot-280-pi-cn/
 
 文档说明
 ---

@@ -5,15 +5,15 @@
 | :------------: | :----------------------------------------------------------: |
 | myCobot 280 M5 | [下载](https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_software/myCobot/brochure/myCobot280M5-brochure-2023031.pdf) |
 
-**产品开箱视频**
-[产品开箱视频](https://www.bilibili.com/video/BV1fb4y1C71s/?spm_id_from=333.999.0.0&vd_source=94a06b98b9af0077c365ec65d59de69f)
+**产品开箱视频**<br>
+[产品开箱视频](https://www.bilibili.com/video/BV1fb4y1C71s/?spm_id_from=333.999.0.0&vd_source=94a06b98b9af0077c365ec65d59de69f)<br>
 
-**产品宣传视频**
+**产品宣传视频**<br>
 
-[产品宣传视频](https://www.bilibili.com/video/BV1wy4y1U7C9/?spm_id_from=333.999.0.0&vd_source=94a06b98b9af0077c365ec65d59de69)
+[产品宣传视频](https://www.bilibili.com/video/BV1wy4y1U7C9/?spm_id_from=333.999.0.0&vd_source=94a06b98b9af0077c365ec65d59de69)<br>
 
-**用户案例**
-[用户案例](https://www.bilibili.com/video/BV1qq4y1z7xp/?t=22.857006&spm_id_from=333.1350.jump_directly&vd_source=94a06b98b9af0077c365ec65d59de69f)
+**用户案例**<br>
+[用户案例](https://www.bilibili.com/video/BV1qq4y1z7xp/?t=22.857006&spm_id_from=333.1350.jump_directly&vd_source=94a06b98b9af0077c365ec65d59de69f)<br>
 
 ---
 

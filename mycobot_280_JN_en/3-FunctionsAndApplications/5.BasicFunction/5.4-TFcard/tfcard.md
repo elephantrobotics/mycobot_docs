@@ -24,15 +24,15 @@ Front view of the device base
 
 - Step 5: Unplug the fan connection cable, power indicator connection cable, and power black and red cable
 
-<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.4-TFcard/3.5.4-5.png" alt="image-20221115161942636" style="zoom: 60%;" />
+<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.4-TFcard/3.5.4-55.png" alt="image-20221115161942636" style="zoom: 80%;" />
 
 - Step 6: Remove the green PCBA board in the picture and the three fixing screws on the board
 
-<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.4-TFcard/3.5.4-6.png" alt="image-20221115161942636" style="zoom: 60%;" />
+<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.4-TFcard/3.5.4-66.png" alt="image-20221115161942636" style="zoom: 80%;" />
 
 - Step 7: Remove the three hexagonal fixing columns
 
-<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.4-TFcard/3.5.4-7.png" alt="image-20221115161942636" style="zoom: 60%;" />
+<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.4-TFcard/3.5.4-77.png" alt="image-20221115161942636" style="zoom: 80%;" />
 
 - Step 8: Remove the main control board (please pay attention to anti-static measures)
 
@@ -50,11 +50,13 @@ Front view of the device base
 
 - Step 11: Assembly points
 
-<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.4-TFcard/3.5.4-11.png" alt="image-20221115161942636" style="zoom: 60%;" />
+<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.4-TFcard/3.5.4-111.png" alt="image-20221115161942636" style="zoom: 60%;" />
 
 - Step 12: Assembly points
 
-<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.4-TFcard/3.5.4-12.1.png" alt="image-20221115161942636" style="zoom: 80%;" /> <img src="../../../resource\3-FunctionsAndApplications\5 .BasicFunction\5.4-TFcard/3.5.4-12.2.png" alt="image-20221115161942636" style="zoom: 80%;" />
+<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.4-TFcard/3.5.4-12.11.png" alt="image-20221115161942636" style="zoom: 80%;" /> 
+
+<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.4-TFcard/3.5.4-12.22.png" alt="image-20221115161942636" style="zoom: 80%;" />
 
 # Image Burning
 

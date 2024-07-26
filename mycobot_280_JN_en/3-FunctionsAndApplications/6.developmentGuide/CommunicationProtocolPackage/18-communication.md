@@ -1,1998 +1,1995 @@
-# 通信与报文命令
+# Communication and message commands
 
-注意：使用通信协议直接通信，需要在basic中烧录transponder，在atom中烧录最新版的atomMain
+Note: To use the communication protocol for direct communication, you need to burn transponder in basic and the latest version of atomMain in atom
 
 ![communication](../../../resource/3-FunctionsAndApplications/6.developmentGuide/CommunicationProtocolPackage/box_connect_PC.jpg)
 
-### 机械臂运动参数
+### Robotic arm motion parameters
 
-| **关节** | **关节最小值°* | **关节最大值°** | **关节最大速度°/s**                     |**关节最大加速度°/s²**|
+| **Joint** | **Joint minimum value °* | **Joint maximum value °** | **Joint maximum speed °/s** |**Joint maximum acceleration °/s²**|
 | -------- | ------------ | ------------ | ---------------------------- |--------------------------------------|
-| J1  | -168      | 168            | 150               |200|
-|       J2   | -135     | 135            |150             |200
-|    J3      | -150 | 150            | 150     |200|
-|     J4     |   -145  | 145            | 150               |200|
-| J5   |     -165   | 165         | 150 |200|
-| J6   |  -180    | 180            | 150                 |200 |
+| J1 | -168 | 168 | 150 |200|
+| J2 | -135 | 135 |150 |200
+| J3 | -150 | 150 | 150 |200|
+| J4 | -145 | 145 | 150 |200|
+| J5 | -165 | 165 | 150 |200|
+| J6 | -180 | 180 | 150 |200 |
 
-| **Axis** | **关坐标最小值mm* | **坐标最大值mm** | **坐标最大速度mm/s**                     |**坐标最大加速度mm/s²**|
+| **Axis** | **Minimum value of coordinate mm* | **Maximum value of coordinate mm** | **Maximum velocity of coordinate mm/s** |**Maximum acceleration of coordinate mm/s²**|
 | -------- | ------------ | ------------ | ---------------------------- |--------------------------------------|
-| x  | -281.45      | 281.45           | 100              |400|
-|      y   | -281.45     | 281.45            |100             |400|
-|    z      | -70 | 412.76           | 100     |400|
-|     rx     |   -180° | 180°            |40°             |66°/s²|
-| ry   |     -180°   | 180°        | 40° |66°/s²|
-| rz   |  -180°    | 180°        | 40°                |66°/s² |
+| x | -281.45 | 281.45 | 100 |400|
+| y | -281.45 | 281.45 |100 |400|
+| z | -70 | 412.76 | 100 |400|
+| rx | -180° | 180° |40° |66°/s²|
+| ry | -180° | 180° | 40° |66°/s²|
+| rz | -180° | 180° | 40° |66°/s² |
 
-### USB通信设置Communication Settings
+### USB Communication Settings
 
 <br>
 
-**请确保您的通信设置如下**
+**Please make sure your communication settings are as follows**
 
-- 总线接口： USB Type-C连接
-- 波特率： 115200
-- 数据位： 8
-- 奇偶校验：无
-- 停止位： 1
+- Bus interface: USB Type-C connection
 
-### 命令帧说明及单一指令解析
+- Baud rate: 115200
+- Data bits: 8
+- Parity: None
+- Stop bits: 1
 
-主机Basic向从机发送数据，从机接收到数据后进行解析，如包含返回值的指令，从机会在500ms内返回给主机。
+### Command frame description and single command analysis
 
-### 命令帧发送与接收格式
+The host Basic sends data to the slave, and the slave parses the data after receiving it. If the command contains a return value, the slave will return it to the host within 500ms.
 
-所有命令为十六进制，发送与接收格式一致。
+### Command frame sending and receiving format
 
-每个通信命令必须包含以下5个部分，其中3、4可为空。
+All commands are in hexadecimal, and the sending and receiving formats are consistent.
 
-- 1 **命令针头**: 0xFE 0xFE
-  - 固定
-  - 必含
-- 2 **有效命令长度**: 0x02 ~ 0x10
-  - 以下所有命令的长度
-  - 必含
-- 3 **命令序号**: 00 ~ 8F
-  - 现已开发了多种命令
-  - 可为空
-- 4 **命令内容**: 若干
-  - 可为空
-- 5 **命令结束**: 0XFA
-  - 固定
-  - 必含
+Each communication command must contain the following 5 parts, of which 3 and 4 can be empty.
 
-### 指令解析
+- 1 **Command header**: 0xFE 0xFE
+- Fixed
+- Required
+- 2 **Effective command length**: 0x02 ~ 0x10
+- Length of all the following commands
+- Required
+- 3 **Command number**: 00 ~ 8F
+- Multiple commands have been developed
+- Can be empty
+- 4 **Command content**: Several
+- Can be empty
+- 5 **Command end**: 0XFA
+- Fixed
+- Required
 
-主机Basic向从机发送数据，从机接收到数据后进行解析，如包含返回值的指令，从机会在500ms内返回给主机。
+### Command parsing
 
-| **类型** | **数据描述** | **数据长度** | **说明**                     |
+The host Basic sends data to the slave, and the slave parses the data after receiving it. If the command contains a return value, the slave will return it to the host within 500ms.
+
+| **Type** | **Data description** | **Data length** | **Description** |
 | -------- | ------------ | ------------ | ---------------------------- |
-| 命令帧   | 头字节0      | 1            | 帧头识别，0XFE               |
-|          | 头字节1      | 1            | 帧头识别，0XFE               |
-|          | 数据长度字节 | 1            | 不同指令对应不同长度数据     |
-|          | 命令字节     | 1            | 视不同命令而定               |
-| 数据帧   | 数据         | 0-16         | 命令附带数据，视不同命令而定 |
-| 结束帧   | 结束字节     | 1            | 停止位，0XFA                 |
+| Command frame | Header byte 0 | 1 | Frame header identification, 0XFE |
+| | Header byte 1 | 1 | Frame header identification, 0XFE |
+| | Data length byte | 1 | Different instructions correspond to different lengths of data |
+| | Command byte | 1 | Depends on different commands |
+| Data frame | Data | 0-16 | Data attached to the command, depending on different commands |
+| End frame | End byte | 1 | Stop bit, 0XFA |
 
-### 单一指令解析
+### Single command analysis
 
-#### 机械臂上电
+#### Robot power on
 
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X10 |
-| Data[4] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Command frame | 0X10 |
+| Data[4] | End frame | 0XFA |
 
-串口发送示例：FE FE 02 10 FA
+Serial port sending example: FE FE 02 10 FA
 
-无返回值
+No return value
 
 ---
 
-#### 机械臂掉电并断开连接
+#### Robotic arm power off and disconnect
 
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X11 |
-| Data[4] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Command frame | 0X11 |
+| Data[4] | End frame | 0XFA |
 
-串口发送示例：FE FE 02 11 FA
+Serial port sending example: FE FE 02 11 FA
 
-无返回值
+No return value
 
 ---
 
-#### Atom状态查询
+#### Atom status query
 
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X12 |
-| Data[4] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Command frame | 0X12 |
+| Data[4] | End frame | 0XFA |
 
-串口发送示例：FE FE 02 12 FA
+Serial port sending example: FE FE 02 12 FA
 
-返回数据结构
+Return data structure
 
-| 数据域  | 说明       | 数据      |
+| Data field | Description | Data |
 | ------- | ---------- | --------- |
-| Data[0] | 返回帧头   | 0XFE      |
-| Data[1] | 返回帧头   | 0XFE      |
-| Data[2] | 返回长度帧 | 0X03      |
-| Data[3] | 返回指令帧 | 0X12      |
-| Data[4] | 上电/断电  | 0X01/0X00 |
-| Data[5] | 结束帧     | 0XFA      |
+| Data[0] | Return frame header | 0XFE |
+| Data[1] | Return frame header | 0XFE |
+| Data[2] | Return length frame | 0X03 |
+| Data[3] | Return command frame | 0X12 |
+| Data[4] | Power on/off | 0X01/0X00 |
+| Data[5] | End frame | 0XFA |
 
-假设Atom处于上电状态
+Assume that Atom is powered on
 
-串口返回示例：FE FE 03 12 01 FA
+Serial port return example: FE FE 03 12 01 FA
+---
+#### Robotic arm only powers off
+
+| Data field | Description | Data |
+| ------- | ---------- | ---- |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Command frame | 0X13 |
+| Data[4] | End frame | 0XFA |
+
+Serial port sending example: FE FE 02 13 FA
+
+No return value
 
 ---
 
-#### 机械臂仅掉电
+#### Robot system detection is normal
 
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X13 |
-| Data[4] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Command frame | 0X14 |
+| Data[4] | End frame | 0XFA |
 
-串口发送示例：FE FE 02 13 FA
+Serial port sending example: FE FE 02 14 FA
 
-无返回值
+Return data structure
 
----
-
-#### 机器人系统检测正常
-
-| 数据域  | 说明       | 数据 |
-| ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X14 |
-| Data[4] | 结束帧     | 0XFA |
-
-串口发送示例：FE FE 02 14 FA
-
-返回数据结构
-
-| 数据域  | 说明              | 数据      |
+| Data field | Description | Data |
 | ------- | ----------------- | --------- |
-| Data[0] | 返回帧头          | 0XFE      |
-| Data[1] | 返回帧头          | 0XFE      |
-| Data[2] | 返回长度帧        | 0X03      |
-| Data[3] | 返回指令帧        | 0X14      |
-| Data[4] | 正常连接/断开连接 | 0X01/0X00 |
-| Data[5] | 结束帧            | 0XFA      |
+| Data[0] | Return frame header | 0XFE |
+| Data[1] | Return frame header | 0XFE |
+| Data[2] | Return length frame | 0X03 |
+| Data[3] | Return command frame | 0X14 |
+| Data[4] | Normal connection/disconnection | 0X01/0X00 |
+| Data[5] | End frame | 0XFA |
 
-假设Atom连接成功
+Assuming Atom connection is successful
 
-串口返回示例：FE FE 03 14 01 FA
+Serial port return example: FE FE 03 14 01 FA
 
 ---
 
-#### 指令刷新模式开关（设置插补/刷新运动模式）
+#### Command refresh mode switch (set interpolation/refresh motion mode)
 
-| 数据域  | 说明       | 数据      |
+| Data field | Description | Data |
 | ------- | ---------- | --------- |
-| Data[0] | 识别帧     | 0XFE      |
-| Data[1] | 识别帧     | 0XFE      |
-| Data[2] | 数据长度帧 | 0X03      |
-| Data[3] | 指令帧     | 0X16      |
-| Data[4] | 指令帧     | 0X01/0X00 |
-| Data[5] | 结束帧     | 0XFA      |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X03 |
+| Data[3] | Command frame | 0X16 |
+| Data[4] | Command frame | 0X01/0X00 |
+| Data[5] | End frame | 0XFA |
 
-设置为刷新运动模式：
+Set to refresh motion mode:
 
-串口发送示例：FE FE 03 16 01 FA
+Serial port sending example: FE FE 03 16 01 FA
 
-设置为插补运动模式：
+Set to interpolation motion mode:
 
-串口发送示例：FE FE 03 16 00 FA
+Serial port sending example: FE FE 03 16 00 FA
 
 ---
 
-#### 机器人自由模式(关闭所有扭力输出)
+#### Robot free mode (turn off all torque output)
 
-| 数据域  | 说明       | 数据  |
+| Data field | Description | Data |
 | ------- | ---------- | ----- |
-| Data[0] | 识别帧     | 0XFE  |
-| Data[1] | 识别帧     | 0XFE  |
-| Data[2] | 数据长度帧 | 0X03  |
-| Data[3] | 指令帧     | 0X1A  |
-| Data[4] | 打开/关闭  | 01/00 |
-| Data[5] | 结束帧     | 0XFA  |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X03 |
+| Data[3] | Command frame | 0X1A |
+| Data[4] | Open/Close | 01/00 |
+| Data[5] | End frame | 0XFA |
 
-设置为自由移动运动模式：
+Set to free movement mode:
 
-串口发送示例：FE FE 03 1A 01 FA
+Serial port sending example: FE FE 03 1A 01 FA
 
 ---
 
-#### 检查是否是自由模式
+#### Check whether it is free mode
 
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X1B |
-| Data[5] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Command frame | 0X1B |
+| Data[5] | End frame | 0XFA |
 
-串口发送示例：FE FE 02 1B FA
+Serial port sending example: FE FE 02 1B FA
 
-返回数据结构
+Return data structure
 
-| 数据域  | 说明       | 数据      |
+| Data field | Description | Data |
 | ------- | ---------- | --------- |
-| Data[0] | 返回帧头   | 0XFE      |
-| Data[1] | 返回帧头   | 0XFE      |
-| Data[2] | 返回长度帧 | 0X03      |
-| Data[3] | 返回指令帧 | 0X1B      |
-| Data[4] | 打开/关闭  | 0X01/0X00 |
-| Data[5] | 结束帧     | 0XFA      |
+| Data[0] | Return frame header | 0XFE |
+| Data[1] | Return frame header | 0XFE |
+| Data[2] | Return length frame | 0X03 |
+| Data[3] | Return instruction frame | 0X1B |
+| Data[4] | Open/Close | 0X01/0X00 |
+| Data[5] | End frame | 0XFA |
 
-假设Atom处于自由移动模式
+Assuming Atom is in free movement mode
 
-串口返回示例：FE FE 03 1B 01 FA
+Serial port return example: FE FE 03 1B 01 FA
 
 ---
 
-#### 读取角度（读取走位信息）
+#### Read angle (read movement information)
 
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X20 |
-| Data[4] | 结束帧     | 0XFA |
+| Data[0] | Identify frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Command frame | 0X20 |
+| Data[4] | End frame | 0XFA |
 
-串口发送示例：FE FE 02 20 FA
+Serial port sending example: FE FE 02 20 FA
 
-返回数据结构
+Return data structure
 
-| 数据域   | 说明            | 数据         |
+| Data field | Description | Data |
 | -------- | --------------- | ------------ |
-| Data[0]  | 返回帧头        | 0XFE         |
-| Data[1]  | 返回帧头        | 0XFE         |
-| Data[2]  | 返回长度帧      | 0X0E         |
-| Data[3]  | 返回指令帧      | 0X20         |
-| Data[4]  | 1号舵机角度高位 | Angle1\_high |
-| Data[5]  | 1号舵机角度低位 | Angle1\_low  |
-| Data[6]  | 2号舵机角度高位 | Angle2\_high |
-| Data[7]  | 2号舵机角度低位 | Angle2\_low  |
-| Data[8]  | 3号舵机角度高位 | Angle3\_high |
-| Data[9]  | 3号舵机角度低位 | Angle3\_low  |
-| Data[10] | 4号舵机角度高位 | Angle4\_high |
-| Data[11] | 4号舵机角度低位 | Angle4\_low  |
-| Data[12] | 5号舵机角度高位 | Angle5\_high |
-| Data[13] | 5号舵机角度低位 | Angle5\_low  |
-| Data[14] | 6号舵机角度高位 | Angle6\_high |
-| Data[15] | 6号舵机角度低位 | Angle6\_low  |
-| Data[16] | 结束帧          | 0XFA         |
+| Data[0] | Return frame header | 0XFE |
+| Data[1] | Return frame header | 0XFE |
+| Data[2] | Return length frame | 0X0E |
+| Data[3] | Return command frame | 0X20 |
+| Data[4] | No. 1 servo angle high | Angle1\_high |
+| Data[5] | No. 1 servo angle low | Angle1\_low |
+| Data[6] | Angle 2 high position | Angle2\_high |
+| Data[7] | Angle 2 low position | Angle2\_low |
+| Data[8] | Angle 3 high position | Angle3\_high |
+| Data[9] | Angle 3 low position | Angle3\_low |
+| Data[10] | Angle 4 high position | Angle4\_high |
+| Data[11] | Angle 4 low position | Angle4\_low |
+| Data[12] | Angle 5 high position | Angle5\_high |
+| Data[13] | Angle 5 low position | Angle5\_low |
+| Data[14] | Angle 6 high position | Angle6\_high |
+| Data[15] | Angle 6 low position | Angle6\_low |
+| Data[16] | End frame | 0XFA |
 
-串口返回示例：FE FE 0E 20 00 8C 00 3D FF E6 FF 3F 00 AF FF 51 FA
+Serial port return example: FE FE 0E 20 00 8C 00 3D FF E6 FF 3F 00 AF FF 51 FA
 
-如何得出1号关节角度
+How to get the angle of joint 1
 
 temp = angle1_low+angle1_high\*256
 
 Angle1=（temp \ 33000 ?(temp – 65536) : temp）/100
 
-计算方式：角度值低位 + 角度高位值乘以256 先判断是否大于33000
-如果大于33000就再减去65536 最后除以100 如果小于33000就直接除以100
+Calculation method: angle value low + angle value high multiplied by 256 First determine whether it is greater than 33000
+If it is greater than 33000, subtract 65536 and finally divide by 100. If it is less than 33000, directly divide by 100
 
-（其余同理）
+(The same applies to the rest)
 
 ---
 
-#### 发送单独角度
+#### Send a single angle
 
-| 数据域  | 说明       | 数据        |
+| Data field | Description | Data |
 | ------- | ---------- | ----------- |
-| Data[0] | 识别帧     | 0XFE        |
-| Data[1] | 识别帧     | 0XFE        |
-| Data[2] | 数据长度帧 | 0X06        |
-| Data[3] | 指令帧     | 0X21        |
-| Data[4] | 舵机序号   | joint_no    |
-| Data[5] | 角度值高位 | angle\_high |
-| Data[6] | 角度值低位 | angle_low   |
-| Data[7] | 指定速度   | sp          |
-| Data[8] | 结束帧     | 0XFA        |
+| Data[0] | Identify frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X06 |
+| Data[3] | Command frame | 0X21 |
+| Data[4] | Servo serial number | joint_no |
+| Data[5] | Angle value high | angle_high |
+| Data[6] | Angle value low | angle_low |
+| Data[7] | Specified speed | sp |
+| Data[8] | End frame | 0XFA |
 
-使1号舵机以20%速度移动到零位
+Move servo No. 1 to zero position at 20% speed
 
-串口发送示例：FE FE 06 21 01 00 00 14 FA
+Serial port sending example: FE FE 06 21 01 00 00 14 FA
 
-joint\_no取值范围: 1~6
+joint_no value range: 1~6
 
-angle_high：数据类型byte
+angle_high: data type byte
 
-计算方式：角度值乘以100 先转换成int形式 再取十六进制的高字节
+Calculation method: multiply the angle value by 100 and convert it to int format first Then take the high byte of the hexadecimal
 
-angle\_low：数据类型byte
+angle\_low: data type byte
 
-计算方式：角度值乘以100 先转换成int形式 再取十六进制的低字节
+Calculation method: multiply the angle value by 100, convert it to int format, and then take the low byte of the hexadecimal
 
-无返回值
-
+No return value
 ---
 
-#### 发送全部角度
+#### Send all angles
 
-| 数据域   | 说明                | 数据          |
+| Data field | Description | Data |
 | -------- | ------------------- | ------------- |
-| Data[0]  | 识别帧              | 0XFE          |
-| Data[1]  | 识别帧              | 0XFE          |
-| Data[2]  | 数据长度帧          | 0X0F          |
-| Data[3]  | 指令帧              | 0X22          |
-| Data[4]  | 1号舵机角度值高字节 | Angle1\_high  |
-| Data[5]  | 1号舵机角度值低字节 | Angle1\_low   |
-| Data[6]  | 2号舵机角度值高字节 | Angle2\_ high |
-| Data[7]  | 2号舵机角度值低字节 | Angle2\_ low  |
-| Data[8]  | 3号舵机角度值高字节 | Angle3\_ high |
-| Data[9]  | 3号舵机角度值低字节 | Angle3\_ low  |
-| Data[10] | 4号舵机角度值高字节 | Angle4\_ high |
-| Data[11] | 4号舵机角度值低字节 | Angle4\_ low  |
-| Data[12] | 5号舵机角度值高字节 | Angle5\_ high |
-| Data[13] | 5号舵机角度值低字节 | Angle5\_ low  |
-| Data[14] | 6号舵机角度值高字节 | Angle6\_ high |
-| Data[15] | 6号舵机角度值低字节 | Angle6\_ low  |
-| Data[16] | 指定速度            | Sp            |
-| Data[17] | 结束帧              | 0XFA          |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X0F |
+| Data[3] | Command frame | 0X22 |
+| Data[4] | No. 1 servo angle value high byte | Angle1\_high |
+| Data[5] | No. 1 servo angle value low byte | Angle1\_low |
+| Data[6] | No. 2 servo angle value high byte | Angle2\_high |
+| Data[7] | No. 2 servo angle value low byte | Angle2\_low |
+| Data[8] | No. 3 servo angle value high byte | Angle3\_high |
+| Data[9] | No. 3 servo angle value low byte | Angle3\_low |
+| Data[10] | High byte of the angle value of Servo No. 4 | Angle4\_ high |
+| Data[11] | Low byte of the angle value of Servo No. 4 | Angle4\_ low |
+| Data[12] | High byte of the angle value of Servo No. 5 | Angle5\_ high |
+| Data[13] | Low byte of the angle value of Servo No. 5 | Angle5\_ low |
+| Data[14] | High byte of the angle value of Servo No. 6 | Angle6\_ high |
+| Data[15] | Low byte of the angle value of Servo No. 6 | Angle6\_ low |
+| Data[16] | Specified speed | Sp |
+| Data[17] | End frame | 0XFA |
 
-发送全部角度均为零/让机械恢复到零位，以30%速度移动
+Send all angles to zero/restore the machine to zero position and move at 30% speed
 
-串口发送示例：FE FE 0F 22 00 00 00 00 00 00 00 00 00 00 00 00 1E FA
+Serial port sending example: FE FE 0F 22 00 00 00 00 00 00 00 00 00 00 00 00 1E FA
 
-angle1\_high：数据类型byte
+angle1\_high: data type byte
 
-计算方式：1号舵机角度值乘以100 先转换成int形式 再取十六进制的高字节
+Calculation method: multiply the angle value of servo No. 1 by 100, convert it to int format first, and then take the high byte of hexadecimal
 
-angle1\_low：数据类型byte
+angle1\_low: data type byte
 
-计算方式：1号舵机角度值乘以100 先转换成int形式 再取十六进制的低字节
+Calculation method: multiply the angle value of servo No. 1 by 100, convert it to int format first, and then take the low byte of hexadecimal
 
-（其余同理）
+(The same applies to the rest)
 
-无返回值
+No return value
 
 ---
 
-#### 读取全部坐标
+#### Read all coordinates
 
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X23 |
-| Data[4] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Command frame | 0X23 |
+| Data[4] | End frame | 0XFA |
 
-串口发送示例：FE FE 02 23 FA
+Serial port sending example: FE FE 02 23 FA
 
-返回数据结构
+Return data structure
 
-| 数据域   | 说明           | 数据    |
+| Data field | Description | Data |
 | -------- | -------------- | ------- |
-| Data[0]  | 返回帧头       | 0XFE    |
-| Data[1]  | 返回帧头       | 0XFE    |
-| Data[2]  | 返回长度帧     | 0X0E    |
-| Data[3]  | 返回指令帧     | 0X23    |
-| Data[4]  | 指定x坐标高位  | x_high  |
-| Data[5]  | 指定x坐标低位  | x_low   |
-| Data[6]  | 指定y坐标高位  | y_high  |
-| Data[7]  | 指定y坐标低位  | y_low   |
-| Data[8]  | 指定z坐标高位  | z_high  |
-| Data[9]  | 指定z坐标低位  | z_low   |
-| Data[10] | 指定rx坐标高位 | rx_high |
-| Data[11] | 指定rx坐标低位 | rx_low  |
-| Data[12] | 指定ry坐标高位 | ry_high |
-| Data[13] | 指定ry坐标低位 | ry_low  |
-| Data[14] | 指定rz坐标高位 | rz_high |
-| Data[15] | 指定rz坐标低位 | rz_low  |
-| Data[16] | 结束帧         | 0XFA    |
+| Data[0] | Return frame header | 0XFE |
+| Data[1] | Return frame header | 0XFE |
+| Data[2] | Return length frame | 0X0E |
+| Data[3] | Return instruction frame | 0X23 |
+| Data[4] | Specify x coordinate high | x_high |
+| Data[5] | Specify x coordinate low | x_low |
+| Data[6] | Specify y coordinate high | y_high |
+| Data[7] | Specify y coordinate low | y_low |
+| Data[8] | Specify z coordinate high | z_high |
+| Data[9] | Specify z coordinate low | z_low |
+| Data[10] | Specify rx coordinate high | rx_high |
+| Data[11] | Specify the low bit of the rx coordinate | rx_low |
+| Data[12] | Specify the high bit of the ry coordinate | ry_high |
+| Data[13] | Specify the low bit of the ry coordinate | ry_low |
+| Data[14] | Specify the high bit of the rz coordinate | rz_high |
+| Data[15] | Specify the low bit of the rz coordinate | rz_low |
+| Data[16] | End frame | 0XFA |
 
-串口返回示例：FE FE 0E 23 01 BC FD A0 10 15 DC 66 FF 54 DE 21 FA
+Serial port return example: FE FE 0E 23 01 BC FD A0 10 15 DC 66 FF 54 DE 21 FA
 
-如何得出x坐标
+How to get the x coordinate
 
 temp = x\_low + x_high\*256
 
-x坐标=（temp \ 33000 ?(temp – 65536) : temp）/10
+x coordinate = (temp \ 33000 ?(temp – 65536) : temp)/10
 
-计算方式：x坐标值低位 +x坐标值高位乘以256 先判断是否大于33000
-如果大于33000就再减去65536 最后除以100 如果小于33000就直接除以10
+Calculation method: x coordinate value low bit + x coordinate value high bit multiplied by 256 First determine whether it is greater than 33000
+If it is greater than 33000, subtract 65536 and finally divide by 100. If it is less than 33000, just divide by 10 directly
 
-（y坐标z坐标同理）
+(The same applies to y coordinates and z coordinates)
 
-如何得出rx坐标
+How to get the rx coordinate
 
 temp = rx\_low + rx_high\*256
 
-x坐标=（temp \ 33000 ?(temp – 65536) : temp）/100
+x coordinate = (temp \ 33000 ?(temp – 65536) : temp)/100
 
-计算方式：x坐标值低位 +x坐标值高位乘以256 先判断是否大于33000
-如果大于33000就再减去65536 最后除以100 如果小于33000就直接除以100
+Calculation method: x coordinate value low bit + x coordinate value high bit multiplied by 256 First determine whether it is greater than 33000
+If it is greater than 33000, subtract 65536 and finally divide by 100. If it is less than 33000, just divide by 100 directly
 
-（ry坐标rz坐标同理）
+(The same applies to ry coordinates and rz coordinates)
 
 ---
 
-#### 发送单独坐标参数
+#### Send individual coordinate parameters
 
-| 数据域  | 说明                   | 数据              |
+| Data field | Description | Data |
 | ------- | ---------------------- | ----------------- |
-| Data[0] | 识别帧                 | 0XFE              |
-| Data[1] | 识别帧                 | 0XFE              |
-| Data[2] | 数据长度帧             | 0X06              |
-| Data[3] | 指令帧                 | 0X24              |
-| Data[4] | axis                   | x/y/z/rx/ry/rz    |
-| Data[5] | 指定xyz/rxryrz参数高位 | xyz/ rxryrz\_high |
-| Data[6] | 指定xyz/rxryrz参数低位 | xyz/rxryrz\_low   |
-| Data[7] | 指定速度               | Sp                |
-| Data[8] | 结束帧                 | 0XFA              |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X06 |
+| Data[3] | Command frame | 0X24 |
+| Data[4] | axis | x/y/z/rx/ry/rz |
+| Data[5] | Specify xyz/rxryrz parameter high | xyz/rxryrz\_high |
+| Data[6] | Specify xyz/rxryrz parameter low | xyz/rxryrz\_low |
+| Data[7] | Specify speed | Sp |
+| Data[8] | End frame | 0XFA |
 
-设定X坐标为200，目标速度为20
+Set X coordinate to 200 and target speed to 20
 
-串口发送示例：FE FE 06 24 01 07 D0 14 FA
+Serial port sending example: FE FE 06 24 01 07 D0 14 FA
 
-指定坐标axis：数据类型byte
+Specify axis: data type byte
 
-取值范围：1~6
+Value range: 1~6
 
-xyz\_high：数据类型byte
+xyz\_high: data type byte
 
-计算方式：x/y/z坐标值乘以10 再取十六进制的高字节
+Calculation method: x/y/z coordinate value multiplied by 10 and then take the high byte of hexadecimal
 
-xyz\_low：数据类型byte
+xyz\_low: data type byte
 
-计算方式：x/y/z坐标值乘以10 再取十六进制的低字节
+Calculation method: x/y/z coordinate value multiplied by 10 and then take the low byte of hexadecimal
 
-rxryrz_high：数据类型byte
+rxryrz_high: data type byte
 
-计算方式：rx/ry/rz乘以100 再取十六进制的高字节
+Calculation method: rx/ry/rz multiplied by 100 and then take the high byte of hexadecimal
 
-rxryrz_low：数据类型byte
+rxryrz_low: data type byte
 
-计算方式：rx/ry/rz乘以100 再取十六进制的低字节
+Calculation method: rx/ry/rz multiplied by 100 and then take the low byte of hexadecimal
 
-无返回值
-
+No return value
 ---
 
-#### 发送全部坐标参数
+#### Send all coordinate parameters
 
-| 数据域   | 说明           | 数据    |
+| Data field | Description | Data |
 | -------- | -------------- | ------- |
-| Data[0]  | 识别帧         | 0XFE    |
-| Data[1]  | 识别帧         | 0XFE    |
-| Data[2]  | 数据长度帧     | 0X10    |
-| Data[3]  | 指令帧         | 0X25    |
-| Data[4]  | 指定x坐标高位  | x_high  |
-| Data[5]  | 指定x坐标低位  | x_low   |
-| Data[6]  | 指定y坐标高位  | y_high  |
-| Data[7]  | 指定y坐标低位  | y_low   |
-| Data[8]  | 指定z坐标高位  | z_high  |
-| Data[9]  | 指定z坐标低位  | z_low   |
-| Data[10] | 指定rx坐标高位 | rx_high |
-| Data[11] | 指定rx坐标低位 | rx_low  |
-| Data[12] | 指定ry坐标高位 | ry_high |
-| Data[13] | 指定ry坐标低位 | ry_low  |
-| Data[14] | 指定rz坐标高位 | rz_high |
-| Data[15] | 指定rz坐标低位 | rz_low  |
-| Data[16] | 指定速度       | Sp      |
-| Data[17] | 模式           | 0X01    |
-| Data[18] | 结束帧         | 0XFA    |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X10 |
+| Data[3] | Command frame | 0X25 |
+| Data[4] | Specify x coordinate high | x_high |
+| Data[5] | Specify x coordinate low | x_low |
+| Data[6] | Specify y coordinate high | y_high |
+| Data[7] | Specify y coordinate low | y_low |
+| Data[8] | Specify z coordinate high | z_high |
+| Data[9] | Specify z coordinate low | z_low |
+| Data[10] | Specify rx coordinate high | rx_high |
+| Data[11] | Specify the low bit of rx coordinate | rx_low |
+| Data[12] | Specify the high bit of ry coordinate | ry_high |
+| Data[13] | Specify the low bit of ry coordinate | ry_low |
+| Data[14] | Specify the high bit of rz coordinate | rz_high |
+| Data[15] | Specify the low bit of rz coordinate | rz_low |
+| Data[16] | Specify the speed | Sp |
+| Data[17] | Mode | 0X01 |
+| Data[18] | End frame | 0XFA |
 
 ---
 
-设定机械臂末端目标点位（150.3，-68.7，101.8，10.18，0，-90），目标速度10
+Set the target position of the end of the robot arm (150.3, -68.7, 101.8, 10.18, 0, -90), target speed 10
 
-串口发送示例：FE FE 10 25 05 DF FD 51 03 FA BC 30 00 00 DC D8 0A 01 FA
+Serial port sending example: FE FE 10 25 05 DF FD 51 03 FA BC 30 00 00 DC D8 0A 01 FA
 
-x\_high：数据类型byte
+x\_high: Data type byte
 
-计算方式：x坐标乘以10 再取十六进制的高字节
+Calculation method: x coordinate multiplied by 10 and then take the high byte of hexadecimal
 
-x\_low：数据类型byte
+x\_low: Data type byte
 
-计算方式：x坐标乘以10 再取十六进制的低字节
+Calculation method: x coordinate multiplied by 10 and then take the low byte of hexadecimal
 
-（y轴坐标z轴坐标同理）
+(The same applies to y-axis coordinates and z-axis coordinates)
 
-rx_high：数据类型byte
+rx_high: Data type byte
 
-计算方式：rx坐标值乘以100 再取十六进制的高字节
+Calculation method: rx coordinate value multiplied by 100 and then take the high byte of hexadecimal
 
-rx_low：数据类型byte
+rx_low: Data type byte
 
-计算方式：rx坐标值乘以100 再取十六进制的低字节
+Calculation method: rx coordinate value multiplied by 100 and then take the low byte of hexadecimal
 
-（ry轴坐标rz轴坐标同理）
+(The same applies to ry-axis coordinates and rz-axis coordinates)
 
-无返回值
+No return value
 
 ---
 
-#### 程序暂停
+#### Program pause
 
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X26 |
-| Data[4] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Command frame | 0X26 |
+| Data[4] | End frame | 0XFA |
 
-串口发送示例：FE FE 02 26 FA
+Serial port sending example: FE FE 02 26 FA
 
-无返回值
+No return value
 
 ---
 
-#### 程序是否暂停
+#### Is the program paused?
 
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X27 |
-| Data[4] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Command frame | 0X27 |
+| Data[4] | End frame | 0XFA |
 
-串口发送示例：FE FE 02 27 FA
+Serial port sending example: FE FE 02 27 FA
 
-返回数据结构
+Return data structure
 
-| 数据域  | 说明        | 数据      |
+| Data field | Description | Data |
 | ------- | ----------- | --------- |
-| Data[0] | 返回帧头    | 0XFE      |
-| Data[1] | 返回帧头    | 0XFE      |
-| Data[2] | 返回长度帧  | 0X03      |
-| Data[3] | 返回指令帧  | 0X27      |
-| Data[4] | 暂停/未暂停 | 0X01/0X00 |
-| Data[5] | 结束帧      | 0XFA      |
+| Data[0] | Return frame header | 0XFE |
+| Data[1] | Return frame header | 0XFE |
+| Data[2] | Return length frame | 0X03 |
+| Data[3] | Return command frame | 0X27 |
+| Data[4] | Pause/unpause | 0X01/0X00 |
+| Data[5] | End frame | 0XFA |
 
-假设程序处于暂停状态
+Assume the program is in pause state
 
-串口返回示例：FE FE 03 12 01 FA
+Serial port return example: FE FE 03 12 01 FA
 
 ---
 
-#### 程序恢复
+#### Program resume
 
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X28 |
-| Data[4] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Command frame | 0X28 |
+| Data[4] | End frame | 0XFA |
 
-串口发送示例：FE FE 02 28 FA
+Serial port sending example: FE FE 02 28 FA
 
-无返回值
+No return value
 
 ---
 
-#### 程序停止
+#### Program stop
 
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X29 |
-| Data[4] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Command frame | 0X29 |
+| Data[4] | End frame | 0XFA |
 
-串口发送示例：FE FE 02 28 FA
+Serial port sending example: FE FE 02 28 FA
 
-无返回值
+No return value
 
 ---
 
-#### 是否达到点位
+#### Whether the point is reached
 
-| 数据域   | 说明                           | 数据                |
+| Data field | Description | Data |
 | -------- | ------------------------------ | ------------------- |
-| Data[0]  | 识别帧                         | 0XFE                |
-| Data[1]  | 识别帧                         | 0XFE                |
-| Data[2]  | 数据长度帧                     | 0X0E/0X0F           |
-| Data[3]  | 指令帧                         | 0X2A                |
-| Data[4]  | 坐标x高位/1号舵机角度值高字节  | x_high/Angle1_high  |
-| Data[5]  | 坐标x低位/1号舵机角度值低字节  | x_low/Angle1_low    |
-| Data[6]  | 坐标y高位/2号舵机角度值高字节  | y_high/Angle2_high  |
-| Data[7]  | 坐标y低位/2号舵机角度值低字节  | y_low/Angle2_low    |
-| Data[8]  | 坐标z高位/3号舵机角度值高字节  | z_high/Angle3_high  |
-| Data[9]  | 坐标z低位/3号舵机角度值低字节  | z_low/Angle3_low    |
-| Data[10] | 坐标rx高位/4号舵机角度值高字节 | rx_high/Angle4_high |
-| Data[11] | 坐标rx低位/4号舵机角度值低字节 | rx_low/Angle4_low   |
-| Data[12] | 坐标ry高位/5号舵机角度值高字节 | ry_high/Angle5_high |
-| Data[13] | 坐标ry低位/5号舵机角度值低字节 | ry_low/Angle5_low   |
-| Data[14] | 坐标rz高位/6号舵机角度值高字节 | rz_high/Angle6_high |
-| Data[15] | 坐标rz低位/6号舵机角度值低字节 | rz_low/Angle6_low   |
-| Data[16] | 坐标/角度                      | 0X01/0X00           |
-| Data[17] | 结束帧                         | 0XFA                |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X0E/0X0F |
+| Data[3] | Command frame | 0X2A |
+| Data[4] | Coordinate x high byte/No. 1 servo angle value high byte | x_high/Angle1_high |
+| Data[5] | Coordinate x low byte/No. 1 servo angle value low byte | x_low/Angle1_low |
+| Data[6] | Coordinate y high byte/No. 2 servo angle value high byte | y_high/Angle2_high |
+| Data[7] | Coordinate y low byte/No. 2 servo angle value low byte | y_low/Angle2_low |
+| Data[8] | Coordinate z high byte/No. 3 servo angle value high byte | z_high/Angle3_high |
+| Data[9] | Coordinate z low byte/No. 3 servo angle value low byte | z_low/Angle3_low |
+| Data[10] | Coordinate rx high bit/No. 4 servo angle value high byte | rx_high/Angle4_high |
+| Data[11] | Coordinate rx low bit/No. 4 servo angle value low byte | rx_low/Angle4_low |
+| Data[12] | Coordinate ry high bit/No. 5 servo angle value high byte | ry_high/Angle5_high |
+| Data[13] | Coordinate ry low bit/No. 5 servo angle value low byte | ry_low/Angle5_low |
+| Data[14] | Coordinate rz high bit/No. 6 servo angle value high byte | rz_high/Angle6_high |
+| Data[15] | Coordinate rz low bit/No. 6 servo angle value low byte | rz_low/Angle6_low |
+| Data[16] | Coordinate/angle | 0X01/0X00 |
+| Data[17] | End frame | 0XFA |
 
-判断机械臂是否到达原点
+Judge whether the robot has reached the origin
 
-串口发送示例： FE FE 0F 2A 00 00 00 00 00 00 00 00 00 00 00 00 00 FA
+Serial port sending example: FE FE 0F 2A 00 00 00 00 00 00 00 00 00 00 00 00 00 FA
 
-x_high：数据类型byte
+x_high: data type byte
 
-计算方式：x坐标乘以10 先转换为int类型 再取十六进制高字节
+Calculation method: x coordinate multiplied by 10, first converted to int type, then take the hexadecimal high byte
 
-x_low：数据类型byte
+x_low: data type byte
 
-计算方式：x坐标乘以10 先转换为int类型 再取十六进制低字节
+Calculation method: x coordinate multiplied by 10, first converted to int type, then take the hexadecimal low byte
 
-（y轴坐标z轴坐标同理）
+(The same applies to y-axis coordinates and z-axis coordinates)
 
-rx_high：数据类型byte
+rx_high: data type byte
 
-计算方式：rx坐标乘以100 先转换为int类型 再取十六进制高字节
+Calculation method: rx coordinate multiplied by 100, first converted to int type, then take the hexadecimal high byte
 
-rx_low：数据类型byte
+rx_low: data type byte
 
-计算方式：rx坐标乘以100 先转换为int类型 再取十六进制低字节
+Calculation method: rx coordinate multiplied by 100, first converted to int type Then take the low byte of hexadecimal
 
-（ry轴坐标rz轴坐标同理）
+(The same applies to the ry axis coordinates and the rz axis coordinates)
 
-angle_high：数据类型byte
+angle_high: data type byte
 
-计算方式：角度值乘以100 先转换成int形式 再取十六进制的高字节
+Calculation method: multiply the angle value by 100, convert it to int format first, and then take the high byte of hexadecimal
 
-angle_low：数据类型byte
+angle_low: data type byte
 
-计算方式：角度值乘以100 先转换成int形式 再取十六进制的低字节
+Calculation method: multiply the angle value by 100, convert it to int format first, and then take the low byte of hexadecimal
 
-Type：数据类型byte（暂未使用）
+Type: data type byte (not used yet)
 
-返回数据结构
+Return data structure
 
-| 数据域  | 说明                | 数据      |
+| Data field | Description | Data |
 | ------- | ------------------- | --------- |
-| Data[0] | 返回帧头            | 0XFE      |
-| Data[1] | 返回帧头            | 0XFE      |
-| Data[2] | 返回长度帧          | 0X03      |
-| Data[3] | 返回指令帧          | 0X2a      |
-| Data[4] | 到达点位/未到达点位 | 0X01/0X00 |
-| Data[5] | 结束帧              | 0XFA      |
+| Data[0] | Return frame header | 0XFE |
+| Data[1] | Return frame header | 0XFE |
+| Data[2] | Return length frame | 0X03 |
+| Data[3] | Return instruction frame | 0X2a |
+| Data[4] | Arrived point/unreached point | 0X01/0X00 |
+| Data[5] | End frame | 0XFA |
 
-假设机械臂未到达指定点位
+Assume the robot arm has not reached the specified point
 
-串口返回示例：FE FE 03 2A 00 FA
+Serial port return example: FE FE 03 2A 00 FA
 
 ---
+#### Robotic arm motion detection
 
-#### 机械臂运动检测
-
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X2B |
-| Data[4] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Command frame | 0X2B |
+| Data[4] | End frame | 0XFA |
 
-串口发送示例：FE FE 02 2B FA
+Serial port sending example: FE FE 02 2B FA
 
-返回数据结构
+Return data structure
 
-| 数据域  | 说明          | 数据      |
+| Data field | Description | Data |
 | ------- | ------------- | --------- |
-| Data[0] | 返回帧头      | 0XFE      |
-| Data[1] | 返回帧头      | 0XFE      |
-| Data[2] | 返回长度帧    | 0X03      |
-| Data[3] | 返回指令帧    | 0X2B      |
-| Data[4] | 运动中/未运动 | 0X01/0X00 |
-| Data[5] | 结束帧        | 0XFA      |
+| Data[0] | Return frame header | 0XFE |
+| Data[1] | Return frame header | 0XFE |
+| Data[2] | Return length frame | 0X03 |
+| Data[3] | Return command frame | 0X2B |
+| Data[4] | Moving/Not Moving | 0X01/0X00 |
+| Data[5] | End Frame | 0XFA |
 
-假设程序处于运动状态
+Assuming the program is in motion
 
-串口返回示例：FE FE 03 2B 01 FA
+Serial port return example: FE FE 03 2B 01 FA
 
 ---
 
-#### jog-关节方向运动
+#### jog-Joint direction movement
 
-| 数据域  | 说明         | 数据      |
+| Data field | Description | Data |
 | ------- | ------------ | --------- |
-| Data[0] | 识别帧       | 0XFE      |
-| Data[1] | 识别帧       | 0XFE      |
-| Data[2] | 数据长度帧   | 0X05      |
-| Data[3] | 指令帧       | 0X30      |
-| Data[4] | 关节舵机序号 | Joint     |
-| Data[5] | 关节舵机方向 | direction |
-| Data[6] | 指定速度     | sp        |
-| Data[7] | 结束帧       | 0XFA      |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X05 |
+| Data[3] | Command frame | 0X30 |
+| Data[4] | Joint servo number | Joint |
+| Data[5] | Joint servo direction | direction |
+| Data[6] | Specified speed | sp |
+| Data[7] | End Frame | 0XFA |
 
-设定1号舵机顺时针方向以20%速度转动
+Set servo No. 1 to rotate clockwise at 20% speed
 
-串口发送示例： FE FE 05 30 01 01 14 FA
+Serial port sending example: FE FE 05 30 01 01 14 FA
 
-关节序号取值范围: 1~6
+Joint number range: 1~6
 
-di：数据类型byte 取值范围 0和1
+di: Data type byte Value range 0 and 1
 
-sp：数据类型byte 取值范围0-100
+sp: Data type byte Value range 0-100
 
-无返回值
+No return value
 
 ---
 
-#### jod-绝对控制
+#### jod-absolute control
 
-| 数据域  | 说明                 | 数据       |
+| Data field | Description | Data |
 | ------- | -------------------- | ---------- |
-| Data[0] | 识别帧               | 0XFE       |
-| Data[1] | 识别帧               | 0XFE       |
-| Data[2] | 数据长度帧           | 0X06       |
-| Data[3] | 指令帧               | 0X31       |
-| Data[4] | 关节舵机序号         | Joint      |
-| Data[5] | 关节舵机角度值高字节 | Angle_high |
-| Data[6] | 关节舵机角度值低字节 | Angle_low  |
-| Data[7] | 指定速度             | sp         |
-| Data[8] | 结束帧               | 0XFA       |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X06 |
+| Data[3] | Command frame | 0X31 |
+| Data[4] | Joint servo number | Joint |
+| Data[5] | Joint servo angle value high byte | Angle_high |
+| Data[6] | Low byte of joint servo angle value | Angle_low |
+| Data[7] | Specified speed | sp |
+| Data[8] | End frame | 0XFA |
 
-设定1号舵机转到45°，速度20
+Set servo No. 1 to 45°, speed 20
 
-串口发送示例： FE FE 06 31 01 11 94 14 FA
+Serial port sending example: FE FE 06 31 01 11 94 14 FA
 
-关节序号取值范围: 1~6
+Joint number value range: 1~6
 
-Angle_high：数据类型byte
+Angle_high: Data type byte
 
-计算方式：角度值乘以100 先转换成int形式 再取十六进制的高字节
+Calculation method: Multiply the angle value by 100, convert it to int format first, and then take the high byte of hexadecimal
 
-Angle_low：数据类型byte
+Angle_low: Data type byte
 
-计算方式：角度值乘以100 先转换成int形式 再取十六进制的低字节
+Calculation method: Multiply the angle value by 100, convert it to int format first, and then take the low byte of hexadecimal
 
-sp：数据类型byte 取值范围0-100
+sp: Data type byte, value range 0-100
 
-无返回值
+No return value
 
 ---
 
-#### jog-坐标方向运动
+#### jog-coordinate direction movement
 
-| 数据域  | 说明         | 数据 |
+| Data field | Description | Data |
 | ------- | ------------ | ---- |
-| Data[0] | 识别帧       | 0XFE |
-| Data[1] | 识别帧       | 0XFE |
-| Data[2] | 数据长度帧   | 0X05 |
-| Data[3] | 指令帧       | 0X32 |
-| Data[4] | 指定坐标     | axis |
-| Data[5] | 关节舵机方向 | di   |
-| Data[6] | 指定速度     | sp   |
-| Data[7] | 结束帧       | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X05 |
+| Data[3] | Command frame | 0X32 |
+| Data[4] | Specified coordinates | axis |
+| Data[5] | Joint servo direction | di |
+| Data[6] | Specified speed | sp |
+| Data[7] | End frame | 0XFA |
 
-设定机械臂往x方向运动，速度20
+Set the robot arm to move in the x direction, speed 20
 
-串口发送示例： FE FE 06 32 01 01 14 FA
+Serial port sending example: FE FE 06 32 01 01 14 FA
 
-axis 取值范围: 1~6，分别代表x,y,z,rx,ry,rz
+axis value range: 1~6, representing x, y, z, rx, ry, rz respectively
 
-di：数据类型byte 取值范围 0和1
+di: data type byte value range 0 and 1
 
-sp：数据类型byte 取值范围0-100
+sp: data type byte value range 0-100
 
-无返回值
+No return value
 
 ---
 
-#### jog-步进模式
+#### jog-stepping mode
 
-| 数据域  | 说明                 | 数据       |
+| Data field | Description | Data |
 | ------- | -------------------- | ---------- |
-| Data[0] | 识别帧               | 0XFE       |
-| Data[1] | 识别帧               | 0XFE       |
-| Data[2] | 数据长度帧           | 0X06       |
-| Data[3] | 指令帧               | 0X33       |
-| Data[4] | 关节舵机序号         | Joint      |
-| Data[5] | 关节舵机角度值高字节 | Angle_high |
-| Data[6] | 关节舵机角度值低字节 | Angle_low  |
-| Data[7] | 指定速度             | sp         |
-| Data[8] | 结束帧               | 0XFA       |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X06 |
+| Data[3] | Command frame | 0X33 |
+| Data[4] | Joint servo serial number | Joint |
+| Data[5] | Joint servo angle value high byte | Angle_high |
+| Data[6] | Joint servo angle value low byte | Angle_low |
+| Data[7] | Specified speed | sp |
+| Data[8] | End frame | 0XFA |
 
-设定1号舵机角度增加45，以20%速度转动
+Set the angle of servo No. 1 to increase by 45 and rotate at 20% speed
 
-串口发送示例： FE FE 06 33 01 11 94 14 FA
+Serial port sending example: FE FE 06 33 01 11 94 14 FA
 
-关节序号取值范围: 1~6
+Joint serial number value range: 1~6
 
-Angle_high：数据类型byte
+Angle_high: Data type byte
 
-计算方式：角度值乘以100 先转换成int形式 再取十六进制的高字节
+Calculation method: Multiply the angle value by 100, convert to int format first, and then take the high byte of hexadecimal
 
-Angle_low：数据类型byte
+Angle_low: Data type byte
 
-计算方式：角度值乘以100 先转换成int形式 再取十六进制的低字节
-sp：数据类型byte 取值范围0-100
+Calculation method: Multiply the angle value by 100, convert to int format first, and then take the low byte of hexadecimal
 
-无返回值
+sp: Data type byte Value range 0-100
+
+No return value
 
 ---
 
+#### Send potential value
 
-#### 发送电位值
-
-| 数据域  | 说明         | 数据          |
+| Data field | Description | Data |
 | ------- | ------------ | ------------- |
-| Data[0] | 识别帧       | 0XFE          |
-| Data[1] | 识别帧       | 0XFE          |
-| Data[2] | 数据长度帧   | 0X05          |
-| Data[3] | 指令帧       | 0X3A          |
-| Data[4] | 关节舵机序号 | Joint         |
-| Data[5] | 电位值高位   | Encoder\_high |
-| Data[6] | 电位值低位   | Encoder\_low  |
-| Data[7] | 指定速度             | sp         |
-| Data[8] | 结束帧       | 0XFA          |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X05 |
+| Data[3] | Command frame | 0X3A |
+| Data[4] | Joint servo serial number | Joint |
+| Data[5] | Potential value high | Encoder\_high |
+| Data[6] | Potential value low | Encoder_low |
+| Data[7] | Specified speed | sp |
+| Data[8] | End frame | 0XFA |
 
-示例，设定5号关节到2048电位，以20%速度转动
+Example, set joint 5 to 2048 potential and rotate at 20% speed
 
-串口发送示例： FE FE 05 3A 05 08 00 14 FA
+Serial port sending example: FE FE 05 3A 05 08 00 14 FA
 
-关节序号取值范围:1~6
+Joint number range: 1~6
 
-Joint：数据类型byte
+Joint: Data type byte
 
-Encoder\_high：数据类型byte
+Encoder_high: Data type byte
 
-计算方式：取电位值（十六进制）的高位
+Calculation method: Take the high bit of the potential value (hexadecimal)
 
-Encoder_low：数据类型byte
+Encoder_low: Data type byte
 
-计算方式：取电位值值（十六进制）的低位
+Calculation method: Take the low bit of the potential value (hexadecimal)
 
-无返回值
+No return value
 
 ---
 
-#### 获取电位值
+#### Get potential value
 
-| 数据域  | 说明       | 数据  |
+| Data field | Description | Data |
 | ------- | ---------- | ----- |
-| Data[0] | 识别帧     | 0XFE  |
-| Data[1] | 识别帧     | 0XFE  |
-| Data[2] | 数据长度帧 | 0X03  |
-| Data[3] | 指令帧     | 0X3B  |
-| Data[4] | 关节序号   | joint |
-| Data[5] | 结束帧     | 0XFA  |
+| Data[0] | Identify frame | 0XFE |
+| Data[1] | Identify frame | 0XFE |
+| Data[2] | Data length frame | 0X03 |
+| Data[3] | Command frame | 0X3B |
+| Data[4] | Joint number | joint |
+| Data[5] | End frame | 0XFA |
 
-获取2号舵机电位值
+Get the potential value of servo No. 2
 
-串口发送示例： FE FE 03 3B 02 FA
+Serial port sending example: FE FE 03 3B 02 FA
 
-关节序号取值范围：1-6
+Joint number range: 1-6
 
-返回数据结构
+Return data structure
 
-| 数据域  | 说明           | 数据         |
+| Data field | Description | Data |
 | ------- | -------------- | ------------ |
-| Data[0] | 返回识别帧     | 0XFE         |
-| Data[1] | 返回识别帧     | 0XFE         |
-| Data[2] | 返回数据长度帧 | 0X04         |
-| Data[3] | 返回指令帧     | 0X3B         |
-| Data[4] | 舵机电位值高位 | Encoder_high |
-| Data[5] | 舵机电位值低位 | Encoders_low |
-| Data[6] | 结束帧         | 0XFA         |
+| Data[0] | Return identification frame | 0XFE |
+| Data[1] | Return identification frame | 0XFE |
+| Data[2] | Return data length frame | 0X04 |
+| Data[3] | Return command frame | 0X3B |
+| Data[4] | Servo potential value high | Encoder_high |
+| Data[5] | Servo potential value low | Encoders_low |
+| Data[6] | End frame | 0XFA |
 
-串口返回示例： FE FE 04 3B 08 07 FA
+Serial port return example: FE FE 04 3B 08 07 FA
 
-如何计算电位值
+How to calculate the potential value
 
-电位值 = 电位值低位 + 电位值高位 \* 256
+Potential value = potential value low bit + potential value high bit \* 256
 
 ---
 
-#### 发送六个舵机的电位值
+#### Send the potential values ​​of six servos
 
-| 数据域   | 说明                | 数据             |
+| Data field | Description | Data |
 | -------- | ------------------- | ---------------- |
-| Data[0]  | 识别帧              | 0XFE             |
-| Data[1]  | 识别帧              | 0XFE             |
-| Data[2]  | 数据长度帧          | 0X0F             |
-| Data[3]  | 指令帧              | 0X3C             |
-| Data[4]  | 1号舵机电位值高字节 | encoder\_1\_high |
-| Data[5]  | 1号舵机电位值低字节 | encoder\_1\_low  |
-| Data[6]  | 2号舵机电位值高字节 | encoder\_2\_high |
-| Data[7]  | 2号舵机电位值低字节 | encoder\_2\_low  |
-| Data[8]  | 3号舵机电位值高字节 | encoder\_3\_high |
-| Data[9]  | 3号舵机电位值低字节 | encoder\_3\_low  |
-| Data[10] | 4号舵机电位值高字节 | encoder\_4\_high |
-| Data[11] | 4号舵机电位值低字节 | encoder\_4\_low  |
-| Data[12] | 5号舵机电位值高字节 | encoder\_5\_high |
-| Data[13] | 5号舵机电位值低字节 | encoder\_5\_low  |
-| Data[14] | 6号舵机电位值高字节 | encoder\_6\_high |
-| Data[15] | 6号舵机电位值低字节 | encoder\_6\_low  |
-| Data[16] | 指定速度            | Sp               |
-| Data[17] | 结束帧              | 0XFA             |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X0F |
+| Data[3] | Command frame | 0X3C |
+| Data[4] | High byte of potential value of servo No. 1 | encoder\_1\_high |
+| Data[5] | Low byte of potential value of servo No. 1 | encoder\_1\_low |
+| Data[6] | High byte of potential value of servo No. 2 | encoder\_2\_high |
+| Data[7] | Low byte of potential value of servo No. 2 | encoder\_2\_low |
+| Data[8] | High byte of potential value of servo No. 3 | encoder\_3\_high |
+| Data[9] | Low byte of potential value of servo No. 3 | encoder\_3\_low |
+| Data[10] | No. 4 servo potential value high byte | encoder\_4\_high |
+| Data[11] | No. 4 servo potential value low byte | encoder\_4\_low |
+| Data[12] | No. 5 servo potential value high byte | encoder\_5\_high |
+| Data[13] | No. 5 servo potential value low byte | encoder\_5\_low |
+| Data[14] | No. 6 servo potential value high byte | encoder\_6\_high |
+| Data[15] | No. 6 servo potential value low byte | encoder\_6\_low |
+| Data[16] | Specified speed | Sp |
+| Data[17] | End frame | 0XFA |
 
-发送所有电机的电位值均为2048，速度为20
+The potential value of all motors sent is 2048, and the speed is 20
 
-串口发送示例：FE FE 0F 3C  08 00  08 00  08 00  08 00  08 00  08 00 14 FA
+Serial port sending example: FE FE 0F 3C 08 00 08 00 08 00 08 00 08 00 08 00 14 FA
 
-（参考上方发送单独电位值）
+(Refer to the above for sending a single potential value)
 
-encoder\_1\_high：数据类型byte
+encoder_1_high: Data type byte
 
-计算方式： 1号舵机电位值先转换为int类型 再取十六进制高字节
+Calculation method: The potential value of servo No. 1 is first converted to int type and then the hexadecimal high byte is taken
 
-encoder\_1\_low：数据类型byte
+encoder_1_low: Data type byte
 
-计算方式： 1号舵机电位值先转换为int类型 再取十六进制低字节
+Calculation method: The potential value of servo No. 1 is first converted to int type and then the hexadecimal low byte is taken
 
-（其余同理）
+(The same applies to the rest)
 
-Sp：数据类型byte 取值范围：0~100
+Sp: Data type byte Value range: 0~100
 
-无返回值
+No return value
 
 ---
 
-#### 读取六个舵机的电位值
+#### Read the potential values ​​of six servos
 
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X3D |
-| Data[4] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Command frame | 0X3D |
+| Data[4] | End frame | 0XFA |
 
-串口发送示例： FE FE 02 3D FA
+Serial port sending example: FE FE 02 3D FA
 
-返回数据结构
+Return data structure
 
-| 数据域   | 说明                | 数据             |
+| Data field | Description | Data |
 | -------- | ------------------- | ---------------- |
-| Data[0]  | 识别帧              | 0XFE             |
-| Data[1]  | 识别帧              | 0XFE             |
-| Data[2]  | 数据长度帧          | 0X0E             |
-| Data[3]  | 指令帧              | 0X3D             |
-| Data[4]  | 1号舵机电位值高字节 | encoder\_1\_high |
-| Data[5]  | 1号舵机电位值低字节 | encoder\_1\_low  |
-| Data[6]  | 2号舵机电位值高字节 | encoder\_2\_high |
-| Data[7]  | 2号舵机电位值低字节 | encoder\_2\_low  |
-| Data[8]  | 3号舵机电位值高字节 | encoder\_3\_high |
-| Data[9]  | 3号舵机电位值低字节 | encoder\_3\_low  |
-| Data[10] | 4号舵机电位值高字节 | encoder\_4\_high |
-| Data[11] | 4号舵机电位值低字节 | encoder\_4\_low  |
-| Data[12] | 5号舵机电位值高字节 | encoder\_5\_high |
-| Data[13] | 5号舵机电位值低字节 | encoder\_5\_low  |
-| Data[14] | 6号舵机电位值高字节 | encoder\_6\_high |
-| Data[15] | 6号舵机电位值低字节 | encoder\_6\_low  |
-| Data[16] | 结束帧              | 0XFA             |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X0E |
+| Data[3] | Command frame | 0X3D |
+| Data[4] | High byte of the potential value of Servo No. 1 | encoder\_1\_high |
+| Data[5] | Low byte of the potential value of Servo No. 1 | encoder\_1\_low |
+| Data[6] | High byte of the potential value of Servo No. 2 | encoder\_2\_high |
+| Data[7] | Low byte of the potential value of Servo No. 2 | encoder\_2\_low |
+| Data[8] | Servo 3 potential value high byte | encoder\_3\_high |
+| Data[9] | Servo 3 potential value low byte | encoder\_3\_low |
+| Data[10] | Servo 4 potential value high byte | encoder\_4\_high |
+| Data[11] | Servo 4 potential value low byte | encoder\_4\_low |
+| Data[12] | Servo 5 potential value high byte | encoder\_5\_high |
+| Data[13] | Servo 5 potential value low byte | encoder\_5\_low |
+| Data[14] | Servo 6 potential value high byte | encoder\_6\_high |
+| Data[15] | Servo 6 potential value low byte | encoder\_6\_low |
+| Data[16] | End frame | 0XFA |
 
-假设当前机械臂各关节都处于0位
+Assume that all joints of the current robot arm are at 0 position
 
-串口返回示例： FE FE 0E 3D 08 00  08 00  08 00  08 00  08 00  08 00  FA
+Serial port return example: FE FE 0E 3D 08 00 08 00 08 00 08 00 08 00 08 00 FA
 
-如何计算电位值
+How to calculate the potential value
 
-电位值 = 电位值低位 + 电位值高位 \* 256
+Potential value = potential value low bit + potential value high bit \* 256
 
 ---
 
+#### Set speed
 
-#### 设置速度
-
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X03 |
-| Data[3] | 指令帧     | 0X41 |
-| Data[4] | 指定速度   | sp   |
-| Data[5] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X03 |
+| Data[3] | Instruction frame | 0X41 |
+| Data[4] | Specified speed | sp |
+| Data[5] | End frame | 0XFA |
 
-Sp：数据类型byte 取值范围：0~100
+Sp: Data type byte Value range: 0~100
 
-设定当前速度为50%
+Set the current speed to 50%
 
-串口发送示例：FE FE 03 41 32 FA
+Serial port sending example: FE FE 03 41 32 FA
 
-无返回值
+No return value
 
 ---
 
-#### 读取关节最小角度
+#### Read the minimum angle of the joint
 
-| 数据域  | 说明         | 数据          |
+| Data field | Description | Data |
 | ------- | ------------ | ------------- |
-| Data[0] | 识别帧       | 0XFE          |
-| Data[1] | 识别帧       | 0XFE          |
-| Data[2] | 数据长度帧   | 0X03          |
-| Data[3] | 指令帧       | 0X4A          |
-| Data[4] | 关节舵机序号 | Joint\_number |
-| Data[5] | 结束帧       | 0XFA          |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X03 |
+| Data[3] | Command frame | 0X4A |
+| Data[4] | Joint servo serial number | Joint_number |
+| Data[5] | End frame | 0XFA |
 
-读取2号关节最小角度
+Read the minimum angle of joint No. 2
 
-串口发送示例： FE FE 03 4A 02 FA
+Serial port sending example: FE FE 03 4A 02 FA
 
-joint\_no取值范围：1-6
+joint_no value range: 1-6
 
-返回数据结构
+Return data structure
 
-| 数据域  | 说明           | 数据          |
+| Data field | Description | Data |
 | ------- | -------------- | ------------- |
-| Data[0] | 返回识别帧     | 0XFE          |
-| Data[1] | 返回识别帧     | 0XFE          |
-| Data[2] | 返回数据长度帧 | 0X05          |
-| Data[3] | 返回指令帧     | 0X4A          |
-| Data[4] | 关节舵机序号   | Joint\_number |
-| Data[5] | 舵机角度值高位 | Angle\_high   |
-| Data[6] | 舵机角度值低位 | Angle_low     |
-| Data[7] | 结束帧         | 0XFA          |
+| Data[0] | Return identification frame | 0XFE |
+| Data[1] | Return identification frame | 0XFE |
+| Data[2] | Return data length frame | 0X05 |
+| Data[3] | Return command frame | 0X4A |
+| Data[4] | Joint servo number | Joint\_number |
+| Data[5] | Servo angle value high | Angle\_high |
+| Data[6] | Servo angle value low | Angle_low |
+| Data[7] | End frame | 0XFA |
 
-串口返回示例： FE FE 05 4A 02 F9 F2 FA
+Serial port return example: FE FE 05 4A 02 F9 F2 FA
 
-如何得出关节最小角度
+How to get the minimum angle of the joint
 
 temp = angle1_low+angle1_high\*256
 
 Angle1=（temp \ 33000 ?(temp – 65536) : temp）/10
 
-计算方式：角度值低位 + 角度高位值乘以256 先判断是否大于33000
-如果大于33000就再减去65536 最后除以10 如果小于33000就直接除以10
+Calculation method: angle value low + angle value high multiplied by 256 First determine whether it is greater than 33000
+If it is greater than 33000, subtract 65536 and finally divide by 10. If it is less than 33000, divide by 10 directly
 
 ---
 
-#### 读取关节最大角度
+#### Read the maximum angle of the joint
 
-| 数据域  | 说明         | 数据          |
+| Data field | Description | Data |
 | ------- | ------------ | ------------- |
-| Data[0] | 识别帧       | 0XFE          |
-| Data[1] | 识别帧       | 0XFE          |
-| Data[2] | 数据长度帧   | 0X03          |
-| Data[3] | 指令帧       | 0X4B          |
-| Data[4] | 关节舵机序号 | joint\_number |
-| Data[5] | 结束帧       | 0XFA          |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X03 |
+| Data[3] | Command frame | 0X4B |
+| Data[4] | Joint servo serial number | joint_number |
+| Data[5] | End frame | 0XFA |
 
-joint\_no取值范围：1-6
+joint_no value range: 1-6
 
-读取2号关节的最大角度
+Read the maximum angle of joint 2
 
-串口发送示例： FE FE 03 4B 02 FA
+Serial port sending example: FE FE 03 4B 02 FA
 
-返回数据结构
+Return data structure
 
-| 数据域  | 说明           | 数据          |
+| Data field | Description | Data |
 | ------- | -------------- | ------------- |
-| Data[0] | 返回识别帧     | 0XFE          |
-| Data[1] | 返回识别帧     | 0XFE          |
-| Data[2] | 返回数据长度帧 | 0X05          |
-| Data[3] | 返回指令帧     | 0X4B          |
-| Data[4] | 关节舵机序号   | joint\_number |
-| Data[5] | 舵机角度值高位 | Angle\_high   |
-| Data[6] | 舵机角度值低位 | Angle_low     |
-| Data[7] | 结束帧         | 0XFA          |
+| Data[0] | Return identification frame | 0XFE |
+| Data[1] | Return identification frame | 0XFE |
+| Data[2] | Return data length frame | 0X05 |
+| Data[3] | Return command frame | 0X4B |
+| Data[4] | Joint servo number | joint\_number |
+| Data[5] | Servo angle value high | Angle\_high |
+| Data[6] | Servo angle value low | Angle_low |
+| Data[7] | End frame | 0XFA |
 
-串口返回示例： FE FE 05 4B 02 06 72 FA
+Serial port return example: FE FE 05 4B 02 06 72 FA
 
-如何得出关节最大角度
+How to get the maximum angle of the joint
 
 temp = angle1_low+angle1_high\*256
 
 Angle1=（temp \ 33000 ?(temp – 65536) : temp）/10
 
-计算方式：角度值低位 + 角度高位值乘以256 先判断是否大于33000
-如果大于33000就再减去65536 最后除以10 如果小于33000就直接除以10
+Calculation method: angle value low bit + angle value high bit multiplied by 256 First determine whether it is greater than 33000
+If it is greater than 33000, subtract 65536 and finally divide by 10. If it is less than 33000, just divide by 10
 
 ---
 
-#### 设置关节最小角度
+#### Set the minimum angle of the joint
 
-| 数据域  | 说明                 | 数据          |
+| Data field | Description | Data |
 | ------- | -------------------- | ------------- |
-| Data[0] | 识别帧               | 0XFE          |
-| Data[1] | 识别帧               | 0XFE          |
-| Data[2] | 数据长度帧           | 0X05          |
-| Data[3] | 指令帧               | 0X4C          |
-| Data[4] | 关节舵机序号         | Joint\_number |
-| Data[5] | 关节舵机角度值高字节 | Angle_high    |
-| Data[6] | 关节舵机角度值低字节 | Angle_low     |
-| Data[7] | 结束帧               | 0XFA          |
+| Data[0] | Identification frame | 0XFE |
+|Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X05 |
+| Data[3] | Command frame | 0X4C |
+| Data[4] | Joint servo number | Joint_number |
+| Data[5] | Joint servo angle value high byte | Angle_high |
+| Data[6] | Joint servo angle value low byte | Angle_low |
+| Data[7] | End frame | 0XFA |
 
-设置2号关节最小角度为0
+Set the minimum angle of joint 2 to 0
 
-joint\_no取值范围：1-6
+joint_no value range: 1-6
 
-angle1\_high：数据类型byte
+angle1_high: data type byte
 
-计算方式：舵机角度值乘以100 先转换成int形式 再取十六进制的高字节
+Calculation method: multiply the servo angle value by 100, convert it to int format first, and then take the high byte of hexadecimal
 
-angle1\_low：数据类型byte
+angle1_low: data type byte
 
-计算方式：舵机角度值乘以100 先转换成int形式 再取十六进制的低字节
+Calculation method: multiply the servo angle value by 100, convert it to int format first, and then take the low byte of hexadecimal
 
-串口发送示例： FE FE 05 4C 02 00 00 FA
+Serial port sending example: FE FE 05 4C 02 00 00 FA
 
-无返回值
-
+No return value
 ---
 
-#### 设置关节最大角度
+#### Set the maximum angle of the joint
 
-| 数据域  | 说明                 | 数据          |
+| Data field | Description | Data |
 | ------- | -------------------- | ------------- |
-| Data[0] | 识别帧               | 0XFE          |
-| Data[1] | 识别帧               | 0XFE          |
-| Data[2] | 数据长度帧           | 0X05          |
-| Data[3] | 指令帧               | 0X4D          |
-| Data[4] | 关节舵机序号         | Joint\_number |
-| Data[5] | 关节舵机角度值高字节 | Angle_high    |
-| Data[6] | 关节舵机角度值低字节 | Angle_low     |
-| Data[7] | 结束帧               | 0XFA          |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X05 |
+| Data[3] | Command frame | 0X4D |
+| Data[4] | Joint servo number | Joint_number |
+| Data[5] | Joint servo angle value high byte | Angle_high |
+| Data[6] | Joint servo angle value low byte | Angle_low |
+| Data[7] | End frame | 0XFA |
 
-设置2号关节最大角度为45
+Set the maximum angle of joint 2 to 45
 
-joint\_no取值范围：1-6
+Joint_no value range: 1-6
 
-angle1\_high：数据类型byte
+angle1_high: data type byte
 
-计算方式：舵机角度值乘以100 先转换成int形式 再取十六进制的高字节
+Calculation method: Multiply the servo angle value by 100 and convert it to int format first Then take the high byte of hexadecimal
 
-angle1\_low：数据类型byte
+angle1\_low: data type byte
 
-计算方式：舵机角度值乘以100 先转换成int形式 再取十六进制的低字节
+Calculation method: Multiply the servo angle value by 100, convert it to int format first, and then take the low byte of hexadecimal
 
-串口发送示例： FE FE 05 4C 02 11 94 FA
+Serial port sending example: FE FE 05 4C 02 11 94 FA
 
-无返回值
+No return value
 
 ---
 
-#### 查看连接
+#### View connection
 
-| 数据域  | 说明         | 数据          |
+| Data field | Description | Data |
 | ------- | ------------ | ------------- |
-| Data[0] | 识别帧       | 0XFE          |
-| Data[1] | 识别帧       | 0XFE          |
-| Data[2] | 数据长度帧   | 0X03          |
-| Data[3] | 指令帧       | 0X50          |
-| Data[4] | 关节舵机序号 | Joint\_number |
-| Data[5] | 结束帧       | 0XFA          |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X03 |
+| Data[3] | Command frame | 0X50 |
+| Data[4] | Joint servo serial number | Joint\_number |
+| Data[5] | End frame | 0XFA |
 
-joint\_no取值范围：1-6
+joint_no value range: 1-6
 
-查看1号舵机是否连接
+Check whether servo No. 1 is connected
 
-串口发送示例：FE FE 03 50 01 FA
+Serial port sending example: FE FE 03 50 01 FA
 
-返回数据结构
+Return data structure
 
-| 数据域  | 说明           | 数据          |
+| Data field | Description | Data |
 | ------- | -------------- | ------------- |
-| Data[0] | 返回识别帧     | 0XFE          |
-| Data[1] | 返回识别帧     | 0XFE          |
-| Data[2] | 返回数据长度帧 | 0X03          |
-| Data[3] | 指令帧         | 0X50          |
-| Data[4] | 关节舵机序号   | Joint\_number |
-| Data[5] | 连接/未连接    | 0X01/0X00     |
-| Data[6] | 结束帧         | 0XFA          |
+| Data[0] | Return identification frame | 0XFE |
+| Data[1] | Return identification frame | 0XFE |
+| Data[2] | Return data length frame | 0X03 |
+| Data[3] | Command frame | 0X50 |
+| Data[4] | Joint servo number | Joint_number |
+| Data[5] | Connected/unconnected | 0X01/0X00 |
+| Data[6] | End frame | 0XFA |
 
-1号舵机连接正常
+Servo No. 1 is connected normally
 
-串口返回示例：FE FE 04 50 01 01 FA
+Serial port return example: FE FE 04 50 01 01 FA
 
 ---
 
-#### 查看舵机是否全部上电
+#### Check if all servos are powered on
 
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X51 |
-| Data[4] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Command frame | 0X51 |
+| Data[4] | End frame | 0XFA |
 
-串口发送示例：FE FE 02 51 FA
+Serial port sending example: FE FE 02 51 FA
 
-返回数据结构
+Return data structure
 
-| 数据域  | 说明           | 数据      |
+| Data field | Description | Data |
 | ------- | -------------- | --------- |
-| Data[0] | 返回识别帧     | 0XFE      |
-| Data[1] | 返回识别帧     | 0XFE      |
-| Data[2] | 返回数据长度帧 | 0X03      |
-| Data[3] | 指令帧         | 0X51      |
-| Data[4] | 上电/未上电    | 0X01/0X00 |
-| Data[5] | 结束帧         | 0XFA      |
+| Data[0] | Return identification frame | 0XFE |
+| Data[1] | Return identification frame | 0XFE |
+| Data[2] | Return data length frame | 0X03 |
+| Data[3] | Command frame | 0X51 |
+| Data[4] | Power on/off | 0X01/0X00 |
+| Data[5] | End frame | 0XFA |
 
-并没有全部舵机上电
-串口返回示例：FE FE 03 51 01 FA
+Not all servos are powered on
+Serial port return example: FE FE 03 51 01 FA
 
 ---
 
-#### 读取伺服参数
+#### Read servo parameters
 
-| 数据域  | 说明         | 数据      |
+| Data field | Description | Data |
 | ------- | ------------ | --------- |
-| Data[0] | 识别帧       | 0XFE      |
-| Data[1] | 识别帧       | 0XFE      |
-| Data[2] | 数据长度帧   | 0X04      |
-| Data[3] | 指令帧       | 0X53      |
-| Data[4] | 关节舵机序号 | joint\_no |
-| Data[5] | 数据地址     | data_id   |
-| Data[6] | 结束帧       | 0XFA      |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X04 |
+| Data[3] | Command frame | 0X53 |
+| Data[4] | Joint servo serial number | joint_no |
+| Data[5] | Data address | data_id |
+| Data[6] | End frame | 0XFA |
 
-读取1号舵机位置P比例参数
+Read the proportional parameters of position P of servo No. 1
 
-串口发送示例：FE FE 04 53 01 15 FA
+Serial port sending example: FE FE 04 53 01 15 FA
 
-joint\_no取值范围 1~6
+joint_no value range 1~6
 
-Data\_id：数据类型byte，取值如下表
+Data_id: data type byte, value as shown in the following table
 
-| 地址 | 功能       | 取值范围 | 初始值 | 取值解析                     |
+| Address | Function | Value range | Initial value | Value analysis |
 | ---- | ---------- | -------- | ------ | ---------------------------- |
-| 20   | LED报警    | 0-254    | 0      | 1\0 = 打开或关闭LED报警      |
-| 21   | 位置环P    | 0-254    | 10     | 控制电机的比例系数           |
-| 22   | 位置环I    | 0-254    | 0      | 控制电机的微分系数           |
-| 23   | 位置环D    | 0-254    | 1      | 控制电机的积分系数           |
-| 24   | 最小启动力 | 0-1000   | 0      | 设置最小输出力矩 1000 = 100% |
+| 20 | LED alarm | 0-254 | 0 | 1\0 = Turn on or off LED alarm |
+| 21 | Position loop P | 0-254 | 10 | Proportional coefficient of controlling motor |
+| 22 | Position loop I | 0-254 | 0 | Differential coefficient of controlling motor |
+| 23 | Position loop D | 0-254 | 1 | Integral coefficient of controlling motor |
+| 24 | Minimum starting force | 0-1000 | 0 | Set the minimum output torque 1000 = 100% |
 
-返回数据结构
+Return data structure
 
-| 数据域  | 说明           | 数据 |
+| Data field | Description | Data |
 | ------- | -------------- | ---- |
-| Data[0] | 返回识别帧     | 0XFE |
-| Data[1] | 返回识别帧     | 0XFE |
-| Data[2] | 返回数据长度帧 | 0X03 |
-| Data[3] | 返回指令帧     | 0X53 |
-| Data[4] | 返回数据       | data |
-| Data[5] | 结束帧         | 0XFA |
+| Data[0] | Return identification frame | 0XFE |
+| Data[1] | Return identification frame | 0XFE |
+| Data[2] | Return data length frame | 0X03 |
+| Data[3] | Return instruction frame | 0X53 |
+| Data[4] | Return data | data |
+| Data[5] | End frame | 0XFA |
 
-串口返回示例：FE FE 03 53 10 FA
+Serial port return example: FE FE 03 53 10 FA
 
 ---
 
-#### 设置舵机伺服参数
+#### Set servo parameters of steering gear
 
-| 数据域  | 说明         | 数据      |
+| Data field | Description | Data |
 | ------- | ------------ | --------- |
-| Data[0] | 识别帧       | 0XFE      |
-| Data[1] | 识别帧       | 0XFE      |
-| Data[2] | 数据长度帧   | 0X05      |
-| Data[3] | 指令帧       | 0X52      |
-| Data[4] | 关节舵机序号 | joint\_no |
-| Data[5] | 数据地址     | data_id   |
-| Data[6] | 数据         | data      |
-| Data[7] | 结束帧       | 0XFA      |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X05 |
+| Data[3] | Command frame | 0X52 |
+| Data[4] | Joint servo serial number | joint_no |
+| Data[5] | Data address | data_id |
+| Data[6] | Data | data |
+| Data[7] | End frame | 0XFA |
 
-设置1号舵机位置P比例参数为1
+Set the position P ratio parameter of servo No. 1 to 1
 
-串口发送示例：FE FE 05 52 01 15 01 FA
+Serial port sending example: FE FE 05 52 01 15 01 FA
 
-joint\_no取值范围:1~6
+joint_no value range: 1~6
 
-无返回值
+No return value
 
 ```
-data_id取值如下表
+data_id value is as follows
 ```
 
-| 地址 | 功能       | 取值范围 | 初始值 | 取值解析                     |
+| Address | Function | Value range | Initial value | Value analysis |
 | ---- | ---------- | -------- | ------ | ---------------------------- |
-| 20   | LED报警    | 0-254    | 0      | 1\0 = 打开或关闭LED报警      |
-| 21   | 位置环P    | 0-254    | 10     | 控制电机的比例系数           |
-| 22   | 位置环I    | 0-254    | 0      | 控制电机的微分系数           |
-| 23   | 位置环D    | 0-254    | 1      | 控制电机的积分系数           |
-| 24   | 最小启动力 | 0-1000   | 0      | 设置最小输出力矩 1000 = 100% |
+| 20 | LED alarm | 0-254 | 0 | 1_0 = Turn LED alarm on or off |
+| 21 | Position loop P | 0-254 | 10 | Proportional coefficient of the control motor |
+| 22 | Position loop I | 0-254 | 0 | Differential coefficient of the control motor |
+| 23 | Position loop D | 0-254 | 1 | Integral coefficient of the control motor |
+| 24 | Minimum starting force | 0-1000 | 0 | Set the minimum output torque 1000 = 100% |
 
 ---
 
-#### 设置舵机零点
+#### Set the servo zero point
 
-| 数据域  | 说明         | 数据          |
+| Data field | Description | Data |
 | ------- | ------------ | ------------- |
-| Data[0] | 识别帧       | 0XFE          |
-| Data[1] | 识别帧       | 0XFE          |
-| Data[2] | 数据长度帧   | 0X03          |
-| Data[3] | 指令帧       | 0X54          |
-| Data[4] | 关节舵机序号 | joint\_number |
-| Data[5] | 结束帧       | 0XFA          |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X03 |
+| Data[3] | Command frame | 0X54 |
+| Data[4] | Joint servo serial number | joint_number |
+| Data[5] | End frame | 0XFA |
 
-设置1号舵机的零位
+Set the zero position of servo No. 1
 
-串口发送示例：FE FE 03 54 01 FA
+Serial port sending example: FE FE 03 54 01 FA
 
-joint\_number:1~6
+joint_number:1~6
 
-无返回值
-
+No return value
 ---
 
-#### 刹车单个电机
+#### Brake a single motor
 
-| 数据域  | 说明         | 数据          |
+| Data field | Description | Data |
 | ------- | ------------ | ------------- |
-| Data[0] | 识别帧       | 0XFE          |
-| Data[1] | 识别帧       | 0XFE          |
-| Data[2] | 数据长度帧   | 0X03          |
-| Data[3] | 指令帧       | 0X55          |
-| Data[4] | 关节舵机序号 | joint\_number |
-| Data[5] | 结束帧       | 0XFA          |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X03 |
+| Data[3] | Command frame | 0X55 |
+| Data[4] | Joint servo number | joint_number |
+| Data[5] | End frame | 0XFA |
 
-刹车1号舵机
+Brake servo No. 1
 
-joint\_number:1~6
+joint_number:1~6
 
-串口发送示例：FE FE 03 55 01 FA
+Serial port sending example: FE FE 03 55 01 FA
 
-无返回值
+No return value
 
 ---
 
-#### 单个电机掉电
+#### Power off a single motor
 
-| 数据域  | 说明       | 数据      |
+| Data field | Description | Data |
 | ------- | ---------- | --------- |
-| Data[0] | 识别帧     | 0XFE      |
-| Data[1] | 识别帧     | 0XFE      |
-| Data[2] | 数据长度帧 | 0X03      |
-| Data[3] | 指令帧     | 0X56      |
-| Data[4] | 舵机序号   | Servo\_no |
-| Data[5] | 结束帧     | 0XFA      |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X03 |
+| Data[3] | Command frame | 0X56 |
+| Data[4] | Servo serial number | Servo_no |
+| Data[5] | End frame | 0XFA |
 
-让3号舵机掉电
+Power off servo No. 3
 
-串口发送示例：FE FE 03 56 03 FA
+Serial port sending example: FE FE 03 56 03 FA
 
-Servo\_no：1~6
+Servo_no: 1~6
 
-无返回值
+No return value
 
 ---
 
-#### 单个电机上电
+#### Power on a single motor
 
-| 数据域  | 说明       | 数据      |
+| Data field | Description | Data |
 | ------- | ---------- | --------- |
-| Data[0] | 识别帧     | 0XFE      |
-| Data[1] | 识别帧     | 0XFE      |
-| Data[2] | 数据长度帧 | 0X03      |
-| Data[3] | 指令帧     | 0X57      |
-| Data[4] | 舵机序号   | Servo\_no |
-| Data[5] | 结束帧     | 0XFA      |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X03 |
+| Data[3] | Command frame | 0X57 |
+| Data[4] | Servo number | Servo_no |
+| Data[5] | End frame | 0XFA |
 
-给1号舵机上电
+Power on servo No. 1
 
-串口发送示例：FE FE 03 57 01 FA
+Serial port sending example: FE FE 03 57 01 FA
 
-Servo\_no:1~6
+Servo_no:1~6
 
-无返回值
+No return value
 
 ---
 
-#### 设置atom引脚模式
+#### Set atom pin mode
 
-| 数据域  | 说明       | 数据        |
+| Data field | Description | Data |
 | ------- | ---------- | ----------- |
-| Data[0] | 识别帧     | 0XFE        |
-| Data[1] | 识别帧     | 0XFE        |
-| Data[2] | 数据长度帧 | 0X04        |
-| Data[3] | 指令帧     | 0X60        |
-| Data[4] | 引脚序号   | pin\_no     |
-| Data[5] | 输入/输出  | 00X00/00X01 |
-| Data[6] | 结束帧     | 0XFA        |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X04 |
+| Data[3] | Command frame | 0X60 |
+| Data[4] | Pin number | pin_no |
+| Data[5] | Input/output | 00X00/00X01 |
+| Data[6] | End frame | 0XFA |
 
-设置atom pin22为输入模式
+Set atom pin22 to input mode
 
-串口发送示例：FE FE 04 60 16 00 FA
+Serial port sending example: FE FE 04 60 16 00 FA
 
-Pin\_no：数据类型byte
+Pin_no: Data type byte
 
-Pin_mode：0/1
+Pin_mode: 0/1
 
-无返回值
+No return value
 
 ---
 
-#### 设置Atom IO(setDigitalOutput)
+#### Set Atom IO (setDigitalOutput)
 
-| 数据域  | 说明       | 数据      |
+| Data field | Description | Data |
 | ------- | ---------- | --------- |
-| Data[0] | 识别帧     | 0XFE      |
-| Data[1] | 识别帧     | 0XFE      |
-| Data[2] | 数据长度帧 | 0X04      |
-| Data[3] | 指令帧     | 0X61      |
-| Data[4] | 引脚序号   | Pin\_no   |
-| Data[5] | 电平信号   | 0X00/0X01 |
-| Data[6] | 结束帧     | 0XFA      |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X04 |
+| Data[3] | Instruction frame | 0X61 |
+| Data[4] | Pin number | Pin_no |
+| Data[5] | Level signal | 0X00/0X01 |
+| Data[6] | End frame | 0XFA |
 
-设置引脚P23为高电平
+Set pin P23 to high level
 
-串口发送示例：FE FE 04 61 17 01 FA
+Serial port sending example: FE FE 04 61 17 01 FA
 
-无返回值
+No return value
 
 ---
 
-#### 读取Atom IO(getDigitalInput)
+#### Read Atom IO (getDigitalInput)
 
-| 数据域  | 说明       | 数据    |
+| Data field | Description | Data |
 | ------- | ---------- | ------- |
-| Data[0] | 识别帧     | 0XFE    |
-| Data[1] | 识别帧     | 0XFE    |
-| Data[2] | 数据长度帧 | 0X03    |
-| Data[3] | 指令帧     | 0X62    |
-| Data[4] | 引脚序号   | pin\_no |
-| Data[5] | 结束帧     | 0XFA    |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X03 |
+| Data[3] | Instruction frame | 0X62 |
+| Data[4] | Pin number | pin\_no |
+| Data[5] | End frame | 0XFA |
 
-读取引脚P22的电平信号
+Read the level signal of pin P22
 
-串口发送示例：FE FE 03 62 16 FA
+Serial port sending example: FE FE 03 62 16 FA
 
-返回数据结构
+Return data structure
 
-| 数据域  | 说明           | 数据      |
+| Data field | Description | Data |
 | ------- | -------------- | --------- |
-| Data[0] | 返回识别帧     | 0XFE      |
-| Data[1] | 返回识别帧     | 0XFE      |
-| Data[2] | 返回数据长度帧 | 0X04      |
-| Data[3] | 返回指令帧     | 0X62      |
-| Data[4] | 引脚序号       | pin\_no   |
-| Data[5] | 电平信号       | 0X00/0X01 |
-| Data[6] | 结束帧         | 0XFA      |
+| Data[0] | Return identification frame | 0XFE |
+| Data[1] | Return identification frame | 0XFE |
+| Data[2] | Return data length frame | 0X04 |
+| Data[3] | Return instruction frame | 0X62 |
+| Data[4] | Pin number | pin\_no |
+| Data[5] | Level signal | 0X00/0X01 |
+| Data[6] | End frame | 0XFA |
 
-假设引脚P22为高电平
+Assume that pin P22 is high level
 
-串口返回示例：FE FE 04 62 16 01 FA
+Serial port return example: FE FE 04 62 16 01 FA
 
 ---
 
-#### 读取夹爪角度
+#### Read the gripper angle
 
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X65 |
-| Data[6] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Command frame | 0X65 |
+| Data[6] | End frame | 0XFA |
 
-串口发送示例：FE FE 02 65 FA
+Serial port sending example: FE FE 02 65 FA
 
-返回数据结构
+Return data structure
 
-| 数据域  | 说明         | 数据  |
+| Data field | Description | Data |
 | ------- | ------------ | ----- |
-| Data[0] | 识别帧       | 0XFE  |
-| Data[1] | 识别帧       | 0XFE  |
-| Data[2] | 数据长度帧   | 0X03  |
-| Data[3] | 指令帧       | 0X65  |
-| Data[4] | 夹爪张开幅度 | value |
-| Data[6] | 结束帧       | 0XFA  |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X03 |
+| Data[3] | Command frame | 0X65 |
+| Data[4] | Gripper opening range | value |
+| Data[6] | End frame | 0XFA |
 
-value：0-100%
+value: 0-100%
 
-假设夹爪处于全张开状态
+Assume the gripper is in full open state
 
-串口返回示例：FE FE 03 65 64 FA
+Serial port return example: FE FE 03 65 64 FA
 
-夹爪张开大小 = 6 * 16 + 4 = 100
+Gripper opening size = 6 * 16 + 4 = 100
 
 ---
 
-#### 设置夹爪模式
+#### Set the gripper mode
 
-| 数据域  | 说明          | 数据      |
+| Data field | Description | Data |
 | ------- | ------------- | --------- |
-| Data[0] | 识别帧        | 0XFE      |
-| Data[1] | 识别帧        | 0XFE      |
-| Data[2] | 数据长度帧    | 0X04      |
-| Data[3] | 指令帧        | 0X66      |
-| Data[4] | 夹爪张开/收拢 | 0X00/0X01 |
-| Data[5] | 速度          | Sp        |
-| Data[6] | 结束帧        | 0XFA      |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X04 |
+| Data[3] | Command frame | 0X66 |
+| Data[4] | Gripper open/close | 0X00/0X01 |
+| Data[5] | Speed ​​| Sp |
+| Data[6] | End frame | 0XFA |
 
-设置夹爪以50速度张开
+Set the gripper to open at a speed of 50
 
-串口发送示例：FE FE 04 66 00 32 FA
+Serial port sending example: FE FE 04 66 00 32 FA
 
-无返回值
+No return value
 
 ---
 
-#### 设置夹爪角度
+#### Set the gripper angle
 
-| 数据域  | 说明         | 数据  |
+| Data field | Description | Data |
 | ------- | ------------ | ----- |
-| Data[0] | 识别帧       | 0XFE  |
-| Data[1] | 识别帧       | 0XFE  |
-| Data[2] | 数据长度帧   | 0X04  |
-| Data[3] | 指令帧       | 0X67  |
-| Data[4] | 夹爪张开幅度 | value |
-| Data[6] | 速度         | Sp    |
-| Data[7] | 结束帧       | 0XFA  |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X04 |
+| Data[3] | Command frame | 0X67 |
+| Data[4] | Gripper opening range | value |
+| Data[6] | Speed ​​| Sp |
+| Data[7] | End frame | 0XFA |
 
-假设夹爪张开50%，速度为20
+Assume the gripper is open 50% and the speed is 20
 
-串口发送示例：FE FE 04 67 32 14 FA
+Serial port sending example: FE FE 04 67 32 14 FA
 
-value直接换算成16进制即可
+value can be directly converted to hexadecimal
 
-无返回值
+No return value
+---
+
+#### Set the gripper to zero point
+
+| Data field | Description | Data |
+| ------- | ---------- | ---- |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Instruction frame | 0X68 |
+| Data[4] | End frame | 0XFA |
+
+Set the gripper's current position to zero point
+
+Serial port sending example: FE FE 02 68 FA
 
 ---
 
-#### 夹爪设置零点
+#### Detect whether the gripper is moving
 
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X68 |
-| Data[4] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Command frame | 0X69 |
+| Data[4] | End frame | 0XFA |
 
-设置夹爪当前位置为零点
+Serial port sending example: FE FE 02 69 FA
 
-串口发送示例：FE FE 02 68 FA
+Return data structure
 
----
-
-#### 检测夹爪是否运动
-
-| 数据域  | 说明       | 数据 |
-| ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X69 |
-| Data[4] | 结束帧     | 0XFA |
-
-串口发送示例：FE FE 02 69 FA
-
-返回数据结构
-
-| 数据域  | 说明       | 数据  |
+| Data field | Description | Data |
 | ------- | ---------- | ----- |
-| Data[0] | 识别帧     | 0XFE  |
-| Data[1] | 识别帧     | 0XFE  |
-| Data[2] | 数据长度帧 | 0X03  |
-| Data[3] | 指令帧     | 0X69  |
-| Data[4] | 停止/运动  | 00/01 |
-| Data[5] | 结束帧     | 0XFA  |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X03 |
+| Data[3] | Command frame | 0X69 |
+| Data[4] | Stop/Move | 00/01 |
+| Data[5] | End frame | 0XFA |
 
-假设夹爪处于停止状态
+Assume the gripper is in the stopped state
 
-串口返回示例：FE FE 03 69 00 FA
+Serial port return example: FE FE 03 69 00 FA
 
 ---
 
-#### 设定atom屏幕RGB灯的颜色
+#### Set the color of the RGB light on the atom screen
 
-| 数据域  | 说明       | 数据      |
+| Data field | Description | Data |
 | ------- | ---------- | --------- |
-| Data[0] | 识别帧     | 0XFE      |
-| Data[1] | 识别帧     | 0XFE      |
-| Data[2] | 数据长度帧 | 0X05      |
-| Data[3] | 指令帧     | 0X6A      |
-| Data[4] | R          | 0X00/0XFF |
-| Data[5] | G          | 0X00/0XFF |
-| Data[6] | B          | 0X00/0XFF |
-| Data[7] | 结束帧     | 0XFA      |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X05 |
+| Data[3] | Command frame | 0X6A |
+| Data[4] | R | 0X00/0XFF |
+| Data[5] | G | 0X00/0XFF |
+| Data[6] | B | 0X00/0XFF |
+| Data[7] | End frame | 0XFA |
 
-设置RGB为蓝色
+Set RGB to blue
 
-串口发送示例：FE FE 05 6A 00 00 FF FA
+Serial port sending example: FE FE 05 6A 00 00 FF FA
 
-无返回值
+No return value
 
 ---
 
-#### 设置底座IO输出
+#### Set the base IO output
 
-| 数据域  | 说明       | 数据      |
+| Data field | Description | Data |
 | ------- | ---------- | --------- |
-| Data[0] | 识别帧     | 0XFE      |
-| Data[1] | 识别帧     | 0XFE      |
-| Data[2] | 数据长度帧 | 0X04      |
-| Data[3] | 指令帧     | 0Xa0      |
-| Data[4] | 引脚序号   | Pin\_no   |
-| Data[5] | 电平信号   | 0X00/0X01 |
-| Data[6] | 结束帧     | 0XFA      |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X04 |
+| Data[3] | Command frame | 0Xa0 |
+| Data[4] | Pin number | Pin\_no |
+| Data[5] | Level signal | 0X00/0X01 |
+| Data[6] | End frame | 0XFA |
 
-设置引脚2输出高电平
+Set pin 2 to output high level
 
-串口发送示例：FE FE 02 a0 02 01 FA
+Serial port sending example: FE FE 02 a0 02 01 FA
 
 ---
 
-#### 读取底座IO输出
+#### Read base IO output
 
-| 数据域  | 说明       | 数据    |
+| Data field | Description | Data |
 | ------- | ---------- | ------- |
-| Data[0] | 识别帧     | 0XFE    |
-| Data[1] | 识别帧     | 0XFE    |
-| Data[2] | 数据长度帧 | 0X03    |
-| Data[3] | 指令帧     | 0Xa1    |
-| Data[4] | 引脚序号   | Pin\_no |
-| Data[5] | 结束帧     | 0XFA    |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X03 |
+| Data[3] | Command frame | 0Xa1 |
+| Data[4] | Pin number | Pin\_no |
+| Data[5] | End frame | 0XFA |
 
-串口发送示例：FE FE 03 a1 02 FA
+Serial port sending example: FE FE 03 a1 02 FA
 
-返回数据结构
+Return data structure
 
-| 数据域  | 说明           | 数据      |
+| Data field | Description | Data |
 | ------- | -------------- | --------- |
-| Data[0] | 返回识别帧     | 0XFE      |
-| Data[1] | 返回识别帧     | 0XFE      |
-| Data[2] | 返回数据长度帧 | 0X04      |
-| Data[3] | 返回指令帧     | 0Xa1      |
-| Data[4] | 引脚序号       | Pin\_no   |
-| Data[5] | 电平信号       | 0X00/0X01 |
-| Data[6] | 结束帧         | 0XFA      |
+| Data[0] | Return identification frame | 0XFE |
+| Data[1] | Return identification frame | 0XFE |
+| Data[2] | Return data length frame | 0X04 |
+| Data[3] | Return instruction frame | 0Xa1 |
+| Data[4] | Pin number | Pin\_no |
+| Data[5] | Level signal | 0X00/0X01 |
+| Data[6] | End frame | 0XFA |
 
-假设引脚2为高电平
+Assume that pin 2 is high level
 
-串口返回示例：FE FE 04 a1 02 01 FA
+Serial port return example: FE FE 04 a1 02 01 FA
 
 ---
 
-#### 获取WiFi账号&密码
+#### Get WiFi account & password
 
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0Xb1 |
-| Data[4] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Command frame | 0Xb1 |
+| Data[4] | End frame | 0XFA |
 
-串口发送示例：FE FE 02 b1 FA
+Serial port sending example: FE FE 02 b1 FA
 
-串口返回示例：ssid: MyCobotWiFi2.4G password: mycobot123
+Serial port return example: ssid: MyCobotWiFi2.4G password: mycobot123
 
-ssid：WiFi账号
+ssid: WiFi account
 
-password：WiFi密码
+password: WiFi password
 
 ---
 
-#### 设置端口号
+#### Set port number
 
-| 数据域  | 说明         | 数据      |
+| Data field | Description | Data |
 | ------- | ------------ | --------- |
-| Data[0] | 识别帧       | 0XFE      |
-| Data[1] | 识别帧       | 0XFE      |
-| Data[2] | 数据长度帧   | 0X04      |
-| Data[3] | 指令帧       | 0Xb2      |
-| Data[4] | 端口号高字节 | port_high |
-| Data[5] | 端口号低字节 | port_low  |
-| Data[6] | 结束帧       | 0XFA      |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X04 |
+| Data[3] | Command frame | 0Xb2 |
+| Data[4] | Port number high byte | port_high |
+| Data[5] | Port number low byte | port_low |
+| Data[6] | End frame | 0XFA |
 
-假设设置端口号为7000
+Assume that the port number is set to 7000
 
-串口发送示例：FE FE 04 b2 1b 58  FA
+Serial port sending example: FE FE 04 b2 1b 58 FA
 
-port_high：端口号十六进制高字节
+port_high: port number hexadecimal high byte
 
-port_low：端口号十六进制低字节
+port_low: port number hexadecimal low byte
 
-无返回值
+No return value
 
 ---
 
-#### 设置工具坐标系
+#### Set tool coordinate system
 
-| 数据域   | 说明           | 数据    |
+| Data field | Description | Data |
 | -------- | -------------- | ------- |
-| Data[0]  | 识别帧         | 0XFE    |
-| Data[1]  | 识别帧         | 0XFE    |
-| Data[2]  | 数据长度帧     | 0X0E    |
-| Data[3]  | 指令帧         | 0X81    |
-| Data[4]  | 指定x坐标高位  | x_high  |
-| Data[5]  | 指定x坐标低位  | x_low   |
-| Data[6]  | 指定y坐标高位  | y_high  |
-| Data[7]  | 指定y坐标低位  | y_low   |
-| Data[8]  | 指定z坐标高位  | z_high  |
-| Data[9]  | 指定z坐标低位  | z_low   |
-| Data[10] | 指定rx坐标高位 | rx_high |
-| Data[11] | 指定rx坐标低位 | rx_low  |
-| Data[12] | 指定ry坐标高位 | ry_high |
-| Data[13] | 指定ry坐标低位 | ry_low  |
-| Data[14] | 指定rz坐标高位 | rz_high |
-| Data[15] | 指定rz坐标低位 | rz_low  |
-| Data[16] | 结束帧         | 0XFA    |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X0E |
+| Data[3] | Command frame | 0X81 |
+| Data[4] | Specify the high bit of the x coordinate | x_high |
+| Data[5] | Specify the low bit of the x coordinate | x_low |
+| Data[6] | Specify the high bit of the y coordinate | y_high |
+| Data[7] | Specify the low bit of the y coordinate | y_low |
+| Data[8] | Specify the high bit of the z coordinate | z_high |
+| Data[9] | Specify the low bit of the z coordinate | z_low |
+| Data[10] | Specify the high bit of the rx coordinate | rx_high |
+| Data[11] | Specify the low bit of the rx coordinate | rx_low |
+| Data[12] | Specify the high bit of the ry coordinate | ry_high |
+| Data[13] | Specify the low bit of the ry coordinate | ry_low |
+| Data[14] | Specify the high bit of the rz coordinate | rz_high |
+| Data[15] | Specify the low bit of the rz coordinate | rz_low |
+| Data[16] | End frame | 0XFA |
 
-假设设置（0，0，50，0，0，0）为工具坐标系
+Assume that (0, 0, 50, 0, 0, 0) is set as the tool coordinate system
 
-串口发送示例：FE FE 0E 81 00 00 00 00 13 88 00 00 00 00 00 00 FA
+Serial port sending example: FE FE 0E 81 00 00 00 00 13 88 00 00 00 00 00 00 FA
 
-无返回值
+No return value
 
 ---
 
-#### 获取工具坐标系
+#### Get tool coordinate system
 
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X82 |
-| Data[6] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Command frame | 0X82 |
+| Data[6] | End frame | 0XFA |
 
-串口发送示例：FE FE 02 82 FA
+Serial port sending example: FE FE 02 82 FA
 
-返回数据结构
+Return data structure
 
-| 数据域   | 说明           | 数据    |
+| Data field | Description | Data |
 | -------- | -------------- | ------- |
-| Data[0]  | 返回帧头       | 0XFE    |
-| Data[1]  | 返回帧头       | 0XFE    |
-| Data[2]  | 返回长度帧     | 0X0E    |
-| Data[3]  | 返回指令帧     | 0X82    |
-| Data[4]  | 指定x坐标高位  | x_high  |
-| Data[5]  | 指定x坐标低位  | x_low   |
-| Data[6]  | 指定y坐标高位  | y_high  |
-| Data[7]  | 指定y坐标低位  | y_low   |
-| Data[8]  | 指定z坐标高位  | z_high  |
-| Data[9]  | 指定z坐标低位  | z_low   |
-| Data[10] | 指定rx坐标高位 | rx_high |
-| Data[11] | 指定rx坐标低位 | rx_low  |
-| Data[12] | 指定ry坐标高位 | ry_high |
-| Data[13] | 指定ry坐标低位 | ry_low  |
-| Data[14] | 指定rz坐标高位 | rz_high |
-| Data[15] | 指定rz坐标低位 | rz_low  |
-| Data[16] | 结束帧         | 0XFA    |
+| Data[0] | Return frame header | 0XFE |
+| Data[1] | Return frame header | 0XFE |
+| Data[2] | Return length frame | 0X0E |
+| Data[3] | Return command frame | 0X82 |
+| Data[4] | Specify the high bit of the x coordinate | x_high |
+| Data[5] | Specify the low bit of the x coordinate | x_low |
+| Data[6] | Specify the high bit of the y coordinate | y_high |
+| Data[7] | Specify the low bit of the y coordinate | y_low |
+| Data[8] | Specify the high bit of the z coordinate | z_high |
+| Data[9] | Specify the low bit of the z coordinate | z_low |
+| Data[10] | Specify the high bit of the rx coordinate | rx_high |
+| Data[11] | Specify the low bit of the rx coordinate | rx_low |
+| Data[12] | Specify the high bit of the ry coordinate | ry_high |
+| Data[13] | Specify the low bit of the ry coordinate | ry_low |
+| Data[14] | Specify the high bit of the rz coordinate | rz_high |
+| Data[15] | Specify the low bit of the rz coordinate | rz_low |
+| Data[16] | End frame | 0XFA |
 
-串口返回示例：FE FE 0E 82 00 00 00 00 13 88 00 00 00 00 00 00 FA
+Serial port return example: FE FE 0E 82 00 00 00 00 13 88 00 00 00 00 00 00 FA
 
-如何得出x坐标
+How to get the x coordinate
 
 temp = x\_low + x_high\*256
 
-x坐标=（temp \ 33000 ?(temp – 65536) : temp）/10
+x coordinate = (temp \ 33000 ? (temp – 65536) : temp) / 10
 
-计算方式：x坐标值低位 +x坐标值高位乘以256 先判断是否大于33000
-如果大于33000就再减去65536 最后除以100 如果小于33000就直接除以10
+Calculation method: x coordinate value low + x coordinate value high multiplied by 256 First determine whether it is greater than 33000
+If it is greater than 33000, subtract 65536 and finally divide by 100. If it is less than 33000, directly divide by 10
 
-（y坐标z坐标同理）
+(The same applies to y coordinate and z coordinate)
 
-如何得出rx坐标
+How to get the rx coordinate
 
 temp = rx\_low + rx_high\*256
 
-x坐标=（temp \ 33000 ?(temp – 65536) : temp）/100
+x coordinate = (temp \ 33000 ? (temp – 65536) : temp）/100
 
-计算方式：x坐标值低位 +x坐标值高位乘以256 先判断是否大于33000
-如果大于33000就再减去65536 最后除以100 如果小于33000就直接除以100
+Calculation method: x coordinate value low bit + x coordinate value high bit multiplied by 256 First determine whether it is greater than 33000
+If it is greater than 33000, subtract 65536 and finally divide by 100. If it is less than 33000, divide by 100 directly
 
-（ry坐标rz坐标同理）
+(ry coordinate and rz coordinate are the same)
 
 ---
 
-#### 设置世界坐标系
+#### Set the world coordinate system
 
-| 数据域   | 说明           | 数据    |
+| Data field | Description | Data |
 | -------- | -------------- | ------- |
-| Data[0]  | 识别帧         | 0XFE    |
-| Data[1]  | 识别帧         | 0XFE    |
-| Data[2]  | 数据长度帧     | 0X0E    |
-| Data[3]  | 指令帧         | 0X83    |
-| Data[4]  | 指定x坐标高位  | x_high  |
-| Data[5]  | 指定x坐标低位  | x_low   |
-| Data[6]  | 指定y坐标高位  | y_high  |
-| Data[7]  | 指定y坐标低位  | y_low   |
-| Data[8]  | 指定z坐标高位  | z_high  |
-| Data[9]  | 指定z坐标低位  | z_low   |
-| Data[10] | 指定rx坐标高位 | rx_high |
-| Data[11] | 指定rx坐标低位 | rx_low  |
-| Data[12] | 指定ry坐标高位 | ry_high |
-| Data[13] | 指定ry坐标低位 | ry_low  |
-| Data[14] | 指定rz坐标高位 | rz_high |
-| Data[15] | 指定rz坐标低位 | rz_low  |
-| Data[16] | 结束帧         | 0XFA    |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X0E |
+| Data[3] | Instruction frame | 0X83 |
+| Data[4] | Specify x coordinate high bit | x_high |
+| Data[5] | Specify x coordinate low bit | x_low |
+| Data[6] | Specify y coordinate high bit | y_high |
+| Data[7] | Specify the low bit of the y coordinate | y_low |
+| Data[8] | Specify the high bit of the z coordinate | z_high |
+| Data[9] | Specify the low bit of the z coordinate | z_low |
+| Data[10] | Specify the high bit of the rx coordinate | rx_high |
+| Data[11] | Specify the low bit of the rx coordinate | rx_low |
+| Data[12] | Specify the high bit of the ry coordinate | ry_high |
+| Data[13] | Specify the low bit of the ry coordinate | ry_low |
+| Data[14] | Specify the high bit of the rz coordinate | rz_high |
+| Data[15] | Specify the low bit of the rz coordinate | rz_low |
+| Data[16] | End frame | 0XFA |
 
-假设设置（0，0，50，0，0，0）为世界坐标系
+Assume that (0, 0, 50, 0, 0, 0) is set as the world coordinate system
 
-串口发送示例：FE FE 0E 83 00 00 00 00 13 88 00 00 00 00 00 00 FA
+Serial port sending example: FE FE 0E 83 00 00 00 00 13 88 00 00 00 00 00 00 FA
 
-无返回值
+No return value
 
 ---
 
-#### 获取世界坐标系
+#### Get the world coordinate system
 
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X84 |
-| Data[4] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Instruction frame | 0X84 |
+| Data[4] | End frame | 0XFA |
 
-串口发送示例：FE FE 02 82 FA
+Serial port sending example: FE FE 02 82 FA
 
-返回数据结构
+Return data structure
 
-| 数据域   | 说明           | 数据    |
+| Data field | Description | Data |
 | -------- | -------------- | ------- |
-| Data[0]  | 返回帧头       | 0XFE    |
-| Data[1]  | 返回帧头       | 0XFE    |
-| Data[2]  | 返回长度帧     | 0X0E    |
-| Data[3]  | 返回指令帧     | 0X84    |
-| Data[4]  | 指定x坐标高位  | x_high  |
-| Data[5]  | 指定x坐标低位  | x_low   |
-| Data[6]  | 指定y坐标高位  | y_high  |
-| Data[7]  | 指定y坐标低位  | y_low   |
-| Data[8]  | 指定z坐标高位  | z_high  |
-| Data[9]  | 指定z坐标低位  | z_low   |
-| Data[10] | 指定rx坐标高位 | rx_high |
-| Data[11] | 指定rx坐标低位 | rx_low  |
-| Data[12] | 指定ry坐标高位 | ry_high |
-| Data[13] | 指定ry坐标低位 | ry_low  |
-| Data[14] | 指定rz坐标高位 | rz_high |
-| Data[15] | 指定rz坐标低位 | rz_low  |
-| Data[16] | 结束帧         | 0XFA    |
+| Data[0] | Return frame header | 0XFE |
+| Data[1] | Return frame header | 0XFE |
+| Data[2] | Return length frame | 0X0E |
+| Data[3] | Return command frame | 0X84 |
+| Data[4] | Specify x coordinate high | x_high |
+| Data[5] | Specify x coordinate low | x_low |
+| Data[6] | Specify y coordinate high | y_high |
+| Data[7] | Specify y coordinate low | y_low |
+| Data[8] | Specify z coordinate high | z_high |
+| Data[9] | Specify z coordinate low | z_low |
+| Data[10] | Specify rx coordinate high | rx_high |
+| Data[11] | Specify rx coordinate low | rx_low |
+| Data[12] | Specify ry coordinate high | ry_high |
+| Data[13] | Specify ry coordinate low | ry_low |
+| Data[14] | Specify rz coordinate high | rz_high |
+| Data[15] | Specify the low bit of the rz coordinate | rz_low |
+| Data[16] | End frame | 0XFA |
 
-串口返回示例：FE FE 0E 84 00 00 00 00 13 88 00 00 00 00 00 00 FA
+Serial port return example: FE FE 0E 84 00 00 00 00 13 88 00 00 00 00 00 00 FA
 
-如何得出x坐标
+How to get the x coordinate
 
 temp = x\_low + x_high\*256
 
-x坐标=（temp \ 33000 ?(temp – 65536) : temp）/10
+x coordinate = (temp \ 33000 ?(temp – 65536) : temp)/10
 
-计算方式：x坐标值低位 +x坐标值高位乘以256 先判断是否大于33000
-如果大于33000就再减去65536 最后除以100 如果小于33000就直接除以10
+Calculation method: x coordinate value low bit + x coordinate value high bit multiplied by 256 First determine whether it is greater than 33000
+If it is greater than 33000, subtract 65536 and finally divide by 100. If it is less than 33000, directly divide by 10
 
-（y坐标z坐标同理）
+(The same applies to the y coordinate and the z coordinate)
 
-如何得出rx坐标
+How to get the rx coordinate
 
 temp = rx\_low + rx_high\*256
 
-x坐标=（temp \ 33000 ?(temp – 65536) : temp）/100
+x coordinate = (temp \ 33000 ? (temp – 65536) : temp) / 100
 
-计算方式：x坐标值低位 +x坐标值高位乘以256 先判断是否大于33000
-如果大于33000就再减去65536 最后除以100 如果小于33000就直接除以100
+Calculation method: x coordinate value low bit + x coordinate value high bit multiplied by 256 First determine whether it is greater than 33000
+If it is greater than 33000, subtract 65536 and finally divide by 100. If it is less than 33000, directly divide by 100
 
-（ry坐标rz坐标同理）
+(ry coordinate and rz coordinate are the same)
 
 ---
 
-#### 设置基坐标系
+#### Set base coordinate system
 
-| 数据域  | 说明            | 数据  |
+| Data field | Description | Data |
 | ------- | --------------- | ----- |
-| Data[0] | 识别帧          | 0XFE  |
-| Data[1] | 识别帧          | 0XFE  |
-| Data[2] | 数据长度帧      | 0X03  |
-| Data[3] | 指令帧          | 0X85  |
-| Data[4] | 基坐标/世界坐标 | 00/01 |
-| Data[5] | 结束帧          | 0XFA  |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X03 |
+| Data[3] | Instruction frame | 0X85 |
+| Data[4] | Base coordinate/world coordinate | 00/01 |
+| Data[5] | End frame | 0XFA |
 
-假设设置坐标系为世界坐标系
+Assume that the coordinate system is set to the world coordinate system
 
-串口发送示例：FE FE 03 85 01 FA
+Serial port sending example: FE FE 03 85 01 FA
 
-无返回值
+No return value
 
 ---
 
-#### 获取基坐标系
+#### Get the base coordinate system
 
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X86 |
-| Data[4] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Instruction frame | 0X86 |
+| Data[4] | End frame | 0XFA |
 
-串口发送示例：FE FE 02 86 FA
+Serial port sending example: FE FE 02 86 FA
 
-返回数据结构
+Return data structure
 
-| 数据域  | 说明            | 数据  |
+| Data field | Description | Data |
 | ------- | --------------- | ----- |
-| Data[0] | 返回帧头        | 0XFE  |
-| Data[1] | 返回帧头        | 0XFE  |
-| Data[2] | 返回长度帧      | 0X03  |
-| Data[3] | 返回指令帧      | 0X86  |
-| Data[4] | 基坐标/世界坐标 | 00/01 |
-| Data[4] | 结束帧          | 0XFA  |
+| Data[0] | Return frame header | 0XFE |
+| Data[1] | Return frame header | 0XFE |
+| Data[2] | Return length frame | 0X03 |
+| Data[3] | Return command frame | 0X86 |
+| Data[4] | Base coordinates/world coordinates | 00/01 |
+| Data[4] | End frame | 0XFA |
 
-串口返回示例：FE FE 03 86 01 FA
+Serial port return example: FE FE 03 86 01 FA
 
 ---
 
-#### 设置末端坐标系
+#### Set end coordinate system
 
-| 数据域  | 说明       | 数据  |
+| Data field | Description | Data |
 | ------- | ---------- | ----- |
-| Data[0] | 识别帧     | 0XFE  |
-| Data[1] | 识别帧     | 0XFE  |
-| Data[2] | 数据长度帧 | 0X03  |
-| Data[3] | 指令帧     | 0X89  |
-| Data[4] | 法兰/工具  | 00/01 |
-| Data[5] | 结束帧     | 0XFA  |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X03 |
+| Data[3] | Command frame | 0X89 |
+| Data[4] | Flange/tool ​​| 00/01 |
+| Data[5] | End frame | 0XFA |
 
-假设设置末端坐标系为工具
+Assume that the end coordinate system is set to tool
 
-串口发送示例：FE FE 03 89 01 FA
+Serial port sending example: FE FE 03 89 01 FA
 
-无返回值
+No return value
 
 ---
 
-#### 获取末端坐标系
+#### Get the end coordinate system
 
-| 数据域  | 说明       | 数据 |
+| Data field | Description | Data |
 | ------- | ---------- | ---- |
-| Data[0] | 识别帧     | 0XFE |
-| Data[1] | 识别帧     | 0XFE |
-| Data[2] | 数据长度帧 | 0X02 |
-| Data[3] | 指令帧     | 0X8a |
-| Data[4] | 结束帧     | 0XFA |
+| Data[0] | Identification frame | 0XFE |
+| Data[1] | Identification frame | 0XFE |
+| Data[2] | Data length frame | 0X02 |
+| Data[3] | Command frame | 0X8a |
+| Data[4] | End frame | 0XFA |
 
-串口发送示例：FE FE 02 8a FA
+Serial port sending example: FE FE 02 8a FA
 
-返回数据结构
+Return data structure
 
-| 数据域  | 说明       | 数据  |
+| Data field | Description | Data |
 | ------- | ---------- | ----- |
-| Data[0] | 返回帧头   | 0XFE  |
-| Data[1] | 返回帧头   | 0XFE  |
-| Data[2] | 返回长度帧 | 0X03  |
-| Data[3] | 返回指令帧 | 0X8a  |
-| Data[4] | 法兰/工具  | 00/01 |
-| Data[4] | 结束帧     | 0XFA  |
+| Data[0] | Return frame header | 0XFE |
+| Data[1] | Return frame header | 0XFE |
+| Data[2] | Return length frame | 0X03 |
+| Data[3] | Return command frame | 0X8a |
+| Data[4] | Flange/Tool | 00/01 |
+| Data[4] | End frame | 0XFA |
 
-串口返回示例：FE FE 03 86 01 FA
+Serial port return example: FE FE 03 86 01 FA
 
 ---
 
-**附录：**
+**Appendix:**
 
-在ATOM库和运动学库中添加了相应的坐标变换程序，具体实现方式如下所述：
+Added corresponding coordinate transformation programs in the ATOM library and kinematics library. The specific implementation methods are as follows:
 
-1. 改变末端坐标系
-2. 通过setEndType和getEndType函数可以设置末端坐标系，EndType::FLANGE为将末端设置为法兰，EndType::TOOL为将末端设置为工具末端。
-3. 通过setToolReference和getToolReference函数可以设置读取工具的坐标信息。设置时是以法兰坐标系为相对坐标系，工具末端信息是相对于法兰坐标系的。
-4. 将EndType设置为FLANGE后，GetCoords和WriteCoords方法均以法兰位置计算。
-5. 将EndType设置为TOOL后，GetCoords和WriteCoords方法均以工具末端位置计算。
-6. 改变基坐标系
-7. 通过setReferenceFrame函数可以设置基坐标系，RFType::BASE为将机器人基座作为基坐标，RFType::WORLD为将世界坐标系作为基坐标。getReferenceFrame函数为读取当前基坐标系种类。
-8. 通过setWorldReference和getWorldReference函数可以设置读取基坐标系信息。设置时是以世界坐标系为相对坐标系，输入机器人的基座相对于世界坐标系的位置信息。
-9. 当基坐标系为基座时，GetCoords和WriteCoords方法均以基座为参考坐标系。
-10. 当基坐标系为世界坐标系时，GetCoords和WriteCoords方法均以世界坐标系作为参考坐标系。
+1. Change the end coordinate system
 
-通信相关更改（暂时）
+2. The end coordinate system can be set through the setEndType and getEndType functions. EndType::FLANGE sets the end to the flange, and EndType::TOOL sets the end to the tool end.
 
-现增加末端坐标系的设置与读取，世界坐标系的设置与读取，当前参考坐标系的设置与读取，末端类型的设置与读取，移动方式的设置与读取，机械臂信息的发送接收。
+3. The coordinate information of the tool can be set through the setToolReference and getToolReference functions. When setting, the flange coordinate system is used as the relative coordinate system, and the tool end information is relative to the flange coordinate system.
 
-这些通信暂时设置为0x80至0x8A
+4. After setting EndType to FLANGE, the GetCoords and WriteCoords methods are calculated based on the flange position.
 
-在ParameterList.h文件中新增roboticMessages空间用于添加机械臂通信信息，现只暂时增加“没有逆解”的提示，后续可陆续增加。
+5. After setting EndType to TOOL, the GetCoords and WriteCoords methods are calculated based on the tool end position.
 
-MOVEL功能简单设计思想如下：
+6. Change the base coordinate system
 
-求出初始点位和目标点位之间的欧式距离，以欧式距离为基准，每隔10mm插入一个插值点，如果插值点没有逆解，搜索位置不变三个方向姿态正负PI/30的临近空间内是否有逆解，主要是避免奇异值以及一些恰好不能求出解的特殊位置。
+7. The base coordinate system can be set through the setReferenceFrame function. RFType::BASE uses the robot base as the base coordinate, and RFType::WORLD uses the world coordinate system as the base coordinate. The getReferenceFrame function is used to read the current base coordinate system type.
+8. The setWorldReference and getWorldReference functions can be used to set and read the base coordinate system information. When setting, the world coordinate system is used as the relative coordinate system, and the position information of the robot's base relative to the world coordinate system is input.
+9. When the base coordinate system is the base, the GetCoords and WriteCoords methods both use the base as the reference coordinate system.
+10. When the base coordinate system is the world coordinate system, the GetCoords and WriteCoords methods both use the world coordinate system as the reference coordinate system.
 
-MOVEL和JOG的点位发送间隔时间改为动态时间，根据两点之间最大关节移动距离计算移动时间，再讲该移动时间减去特定时长作为时间间隔。
+Communication related changes (temporary)
 
+Now add the setting and reading of the end coordinate system, the setting and reading of the world coordinate system, the setting and reading of the current reference coordinate system, the setting and reading of the end type, the setting and reading of the movement method, and the sending and receiving of the robot information.
+
+These communications are temporarily set to 0x80 to 0x8A
+
+In the ParameterList.h file, add a new roboticMessages space for adding robot communication information. Now only temporarily add the prompt of "no inverse solution", which can be added later.
+
+The simple design idea of ​​MOVEL function is as follows:
+
+Calculate the Euclidean distance between the initial point and the target point, and insert an interpolation point every 10mm based on the Euclidean distance. If there is no inverse solution for the interpolation point, search for an inverse solution in the adjacent space of positive and negative PI/30 in the three directions of the unchanged position, mainly to avoid singular values ​​and some special positions where the solution cannot be found.
+
+The point sending interval of MOVEL and JOG is changed to dynamic time. The moving time is calculated according to the maximum joint moving distance between the two points, and then the moving time minus the specific time is used as the time interval.

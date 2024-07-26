@@ -1,24 +1,26 @@
-# 第八章 配套资源
-本章节将详细介绍产品的各类配套资源，旨在帮助用户全面了解和高效使用我们的产品。无论是产品资料、图纸、软件资料及源码，还是系统资料和宣传资料，我们都提供了详尽的信息和下载链接，以确保用户能够充分利用这些资源进行产品开发、操作和推广
+# Chapter 8 Supporting Resources
+This chapter will introduce various supporting resources of the product in detail, aiming to help users fully understand and use our products efficiently. Whether it is product information, drawings, software information and source code, or system information and promotional materials, we provide detailed information and download links to ensure that users can make full use of these resources for product development, operation and promotion
 
-## [产品资料下载](8.1-ProductInformation/README.md)
+## [Download Product Information](8.1-ProductInformation/README.md)
 
-产品资料包括280 pi机械臂的详细规格、技术参数和使用说明。此部分内容旨在帮助用户全面了解机械臂的性能和功能，确保在使用过程中获得最佳体验
+The product information includes detailed specifications, technical parameters and instructions for use of the 280 JN robot arm. This section aims to help users fully understand the performance and functions of the robot arm and ensure the best experience during use
 
-## [产品图纸](8.2-ProductDrawings/README.md)
+## [Product Drawings](8.2-ProductDrawings/README.md)
 
-产品图纸部分提供了280 pi机械臂的详细3D图和2D图。这些图纸对于需要进行定制化设计或进行维护的工程人员来说尤为重要，可以帮助他们更好地理解机械臂的构造。
+The product drawings section provides detailed 3D and 2D drawings of the 280 JN robot arm. These drawings are particularly important for engineers who need to perform customized designs or maintenance, and can help them better understand the structure of the robot arm.
 
-## [软件资料及源码](8.3-SoftwareInformationAndSourceCode/README.md)
-软件资料及源码部分包含与280 pi机械臂配套的软件安装包、驱动程序及相关的开源代码。用户可以通过这些资料进行软件安装、升级及二次开发，提升机械臂的功能和应用场景
+## [Software Information and Source Code](8.3-SoftwareInformationAndSourceCode/README.md)
+The software information and source code section contains the software installation package, driver and related open source code that are compatible with the 280 JN robot. Users can use these materials to install, upgrade and perform secondary development of the software to enhance the functions and application scenarios of the robot
 
-## 系统资料
+## System Information
 
-系统资料提供了280 pi机械臂的系统架构和工作原理说明，涵盖硬件和软件的协同工作方式。此部分有助于用户在集成和调试过程中，快速定位和解决问题，确保系统稳定运行
-(有待更新)
-## [宣传资料](8.5-PromotionalMaterials/README.md)
+The system information provides the system architecture and working principle of the 280 JN robot, covering the collaborative working mode of hardware and software. This section helps users to quickly locate and solve problems during integration and debugging to ensure stable operation of the system
 
-宣传资料部分包含280 pi机械臂的产品宣传册、展示视频及客户案例。这些资料不仅展示了机械臂的核心优势和应用场景，还提供了实际应用中的成功案例，帮助潜在客户更直观地了解产品的价值。
+(To be updated)
+
+## [Promotional Materials](8.5-PromotionalMaterials/README.md)
+
+The promotional materials section contains the product brochure, demonstration video and customer cases of the 280 JN robot. These materials not only show the core advantages and application scenarios of the robot, but also provide successful cases in actual applications to help potential customers understand the value of the product more intuitively.
 
 ---
-- [上一章](../7.SuccessfulCase/7-SuccessfulCases.md)- /[下一章](../../4-SupportAndService/11.AboutUs/11.AboutUs.md)
+- [Previous Chapter](../7.SuccessfulCase/7-SuccessfulCases.md)- /[Next Chapter](../../4-SupportAndService/11.AboutUs/11.AboutUs.md)

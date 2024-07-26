@@ -1,15 +1,14 @@
-# 产品资料下载
-产品资料包括280 JN机械臂的详细规格、技术参数和使用说明。此部分内容旨在帮助用户全面了解机械臂的性能和功能，确保在使用过程中获得最佳体验
+# Product Documentation Download
+The product documentation includes detailed specifications, technical parameters and instructions for use of the 280 JN robot arm. This section is intended to help users fully understand the performance and functions of the robot arm and ensure the best experience during use
 
 ---
 
-### 下载链接
-你可以通过以下链接下载所有相关的产品资料：[产品资料下载](https://www.elephantrobotics.com/support/)
+### Download Link
+You can download all relevant product documentation through the following link: [Product Documentation Download](https://www.elephantrobotics.com/support/)
 
-| 操作系统   | 下载链接 |
+| Operating System | Download Link |
 |------------|----------|
-| Ubuntu 18.04 | [下载链接](https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_software/iMage-ISO/myCobot-280/myCobot_280_ubuntu_V20221030-shrink.zip) |
-| ubuntu 20.04 | [下载链接](https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_software/iMage-ISO/myCobot-280/myCobot_280_ubuntu_V20230222_20.04Pi_aarch64_shrunk.img.gz) |
-
+| Ubuntu 18.04 | [Download Link](https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_software/iMage-ISO/myCobot-280/myCobot_280_ubuntu_V20221030-shrink.zip) |
+| ubuntu 20.04 | [Download link](https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_software/iMage-ISO/myCobot-280/myCobot_280_ubuntu_V20230222_20.04Pi_aarch64_shrunk.img.gz) |
 ---
 
