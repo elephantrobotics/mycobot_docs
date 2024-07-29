@@ -1,6 +1,5 @@
-# 系统资料
-系统资料提供了280 JN机械臂的系统架构和工作原理说明，涵盖硬件和软件的协同工作方式。此部分有助于用户在集成和调试过程中，快速定位和解决问题，确保系统稳定运行
-(资料有待更新)
+# System Information
+The system information provides the system architecture and working principle of the 280 JN robot, covering the collaborative working mode of hardware and software. This section helps users to quickly locate and solve problems during integration and debugging to ensure stable operation of the system
+(Information to be updated)
 
 ---
-

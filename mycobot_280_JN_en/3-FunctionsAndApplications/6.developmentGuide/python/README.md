@@ -18,22 +18,22 @@
 
 You can use Python to develop our robot arm according to the following guidelines
 
-1. [Environment construction](./1_download.md)
+1. [Environment construction](1_download.md)
 
-2. [API description](./2_API.md)
+2. [API description](2_API.md)
 
-3. [Joint control](./3_angle.md)
+3. [Joint control](3_angle.md)
 
-4. [Coordinate control](./4_coord.md)
+4. [Coordinate control](4_coord.md)
 
-5. [IO control](./5_IO.md)
+5. [IO control](5_IO.md)
 
-6. [Gripper control](./6_gripper.md)
+6. [Gripper control](6_gripper.md)
 
-7. [TCP&IP](./7_TCPIP.md)
+7. [TCP&IP](7_TCPIP.md)
 
-8. [Handle control](./9_HandleControl.md)
+8. [Handle control](9_HandleControl.md)
 
-9. [Drawing patterns](./15_280_gcode_draw.md)
+9. [Drawing patterns](15_280_gcode_draw.md)
 
-10. [Demonstration code and video](./8_example.md)
+10. [Demonstration code](8_example.md)

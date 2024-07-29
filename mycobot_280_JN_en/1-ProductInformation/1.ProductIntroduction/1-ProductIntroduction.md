@@ -3,7 +3,7 @@
 
 ##### ER myCobot 280 Jetson Nano
 
-![Cover](../../resource/1-ProductInformation/1.ProductIntroduction/280JNtu.png)
+![Cover](../../resource/1-ProductInformation/1.ProductIntroduction/1280JNtu.png)
 ##### AI Artificial Intelligence New Science Classroom
 
 ### Product Introduction
@@ -13,7 +13,7 @@ myCobot 280 for Jetson Nano 2023 six-axis collaborative robot is a robot arm dev
 myCobot 280 for Jetson Nano six-axis collaborative robot has a self-weight of **1030g**, a payload of **250g**, and an arm span of **280mm**. It is small in size but powerful in function. It has a rich software and hardware interaction mode and a variety of compatible expansion interfaces. It supports secondary development of multiple platforms and effectively helps users realize multi-scenario application development.
 
 ### Design Concept
-![Concept](../../resource/1-ProductInformation/1.ProductIntroduction/DualScreen.jpg)
+![Concept](../../resource/1-ProductInformation/1.ProductIntroduction/main.jpg)
 ER myCobot 280 Jetson Nano uses NVIDIA® Jetson Nano™ core development version as the main control, with built-in Ubuntu Mate 20.04 operating system. It does not need to be equipped with an additional PC main control. It can be used by directly connecting the monitor, keyboard, and mouse. It is the preferred assistant for quickly building robot arm machine vision and robot applications, control logic development, robot fusion development, and ROS simulation experiment classroom, helping you quickly start learning and applying six-axis robot arms
 
 ### Design Goal
@@ -27,7 +27,7 @@ ER myCobot 280 Jetson Nano uses NVIDIA® Jetson Nano™ core development version
 
 ### Product Features
 
-![Features](../../resource/1-ProductInformation/1.ProductIntroduction/feature.png)
+![Features](../../resource/1-ProductInformation/1.ProductIntroduction/feature1.png)
 
 | | |
 | --------------------------------------------------- | ------------------------------------------------------------ |
@@ -40,7 +40,7 @@ ER myCobot 280 Jetson Nano uses NVIDIA® Jetson Nano™ core development version
 
 ## 2. Product Application
 
-![Application Scenario](../../resource/1-ProductInformation/1.ProductIntroduction/ApplicationScenario.png)
+![Application Scenario](../../resource/1-ProductInformation/1.ProductIntroduction/hard.jpg)
 ### User Group
 
 | | |
@@ -62,11 +62,11 @@ ER myCobot 280 Jetson Nano uses NVIDIA® Jetson Nano™ core development version
 ---
 
 ## 3. Supported Extension Development
-![Extension Development](../../resource/1-ProductInformation/1.ProductIntroduction/expand.PNG)
+![Extension Development](../../resource/1-ProductInformation/1.ProductIntroduction/expand1.PNG)
 
 The mycobot series of robotic arms are extremely valuable in the fields of education and scientific research, especially in Python and ROS (Robot Operating System), two widely used development environments. These environments provide strong support, allowing the mycobot series of products to be widely used in machine learning, artificial intelligence research, complex motion control, and visual processing tasks. At the same time, with dozens of accessories such as adaptive grippers, camera flanges, suction pumps, etc., you can give full play to myCobot's creative ideas. Mobile chassis + robotic arm development, low-cost start robot collaboration, SLAM mapping, autonomous navigation, ROS development environment, six-axis collaborative robot control, visual recognition, inter-device communication and other development content.
 
-![Expanded Development 2](../../resource/1-ProductInformation/1.ProductIntroduction/agv.png)
+![Expanded Development 2](../../resource/1-ProductInformation/1.ProductIntroduction/agve.jpg)
 
 | | |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |

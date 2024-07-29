@@ -1,26 +1,26 @@
-# 第五章 基础功能
+# Chapter 5 Basic Functions
 
-**本章主要解释产品的基本功能用法和基本软件的使用。本章至关重要，应仔按照顺序细阅读。在实际应用机器人之前，请确保正确理解所述操作。**
+**This chapter mainly explains the basic functions and usage of the product and the use of basic software. This chapter is very important and should be read carefully in order. Before actually applying the robot, please make sure you understand the described operations correctly. **
 
-ER myCobot 280 Jetson Nano 采用 NVIDIA® Jetson Nano™ 核心开发版作为主控，内置Ubuntu Mate 20.04 操作系统，无需额外搭配PC主控，直接链接显示器、键盘、鼠标即可使用，是可以看做一个微型的电脑主机，主机和主机之间无法简单的通过一根线构成通讯。它只能连接到一台独立显示器上，并搭配电源 鼠标 键盘，进入到开发板内置的系统后对其进行开发和操作。
+ER myCobot 280 Jetson Nano uses NVIDIA® Jetson Nano™ core development version as the main control, with built-in Ubuntu Mate 20.04 operating system. It does not need to be equipped with an additional PC main control. It can be used by directly connecting the display, keyboard, and mouse. It can be regarded as a miniature computer host. The host and the host cannot simply communicate through a single line. It can only be connected to an independent display, and equipped with a power supply, mouse, and keyboard, and then developed and operated after entering the built-in system of the development board.
 
-请跟随以下章节，对myCobot 280 JN版本的机械臂进行基础功能学习。
+Please follow the following chapters to learn the basic functions of the myCobot 280 JN version of the robot arm.
 
-- [系统使用介绍](5.1-Functionlnstruction/README - 1.md)  
-  本部分将介绍对myCobot 280 JN机械臂的开发环境以及系统内置软件进行简要介绍。
+- [System Usage Introduction](5.1-Functionlnstruction/README.md)
+This section will briefly introduce the development environment of the myCobot 280 JN robot arm and the system built-in software.
 
-- [系统基础功能说明](5.2-Softwarelnstructions/3.5.2-SW-detail-description.md)<br>
-  本部分会介绍Ubuntu操作系统以及如何进行VNC配置、网络配置等操作。
+- [System Basic Function Description](5.2-Softwarelnstructions/3.5.2-SW-detail-description.md)<br>
+This section will introduce the Ubuntu operating system and how to perform VNC configuration, network configuration and other operations.
 
-- [固件说明](5.3-FirmwareFunctionDescription/3.5.3-HW-description-JN.md)  
-  本部分会介绍JN版本机器人的通用硬件接口
+- [Firmware Description](5.3-FirmwareFunctionDescription/3.5.3-HW-description-JN.md)
+This section will introduce the general hardware interface of the JN version robot
 
-- [mystudio介绍](5.2-Softwarelnstructions/README.md)
-  一站式服务平台myStudio，整合myCobot软件资源及各类资料，支持固件下载与更新。提供产品使用视频教程以及维护/维修方面等信息。
+- [MyStudio Introduction](5.2-Softwarelnstructions/README.md)
+The one-stop service platform myStudio integrates myCobot software resources and various materials, and supports firmware downloads and updates. Provides product usage video tutorials and maintenance/repair information.
 
-- [TF卡更换教程以及烧录镜像](5.4-TFcard/tfcard.md)
-  此版本机械臂出厂自带64G TF卡，内置Ubuntu20.04 系统，已安装myStudio 固件烧录软件，myBlockly 图形化编程软件，且已适配python 、ROS开发环境。当系统因操作不当而损坏或设置错误且无法更改时，可以重新刻录系统映像并恢复初始设置（需要SD卡读取器）
+- [TF card replacement tutorial and image burning](5.4-TFcard/tfcard.md)
+This version of the robot comes with a 64G TF card, built-in Ubuntu20.04 system, myStudio firmware burning software, myBlockly graphical programming software installed, and adapted to python and ROS development environment. When the system is damaged due to improper operation or the settings are wrong and cannot be changed, you can re-burn the system image and restore the initial settings (SD card reader required)
 
 ---
 
-[← 上一章](../../2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.md) | [下一章 →](../6.developmentGuide/README.md)
+[← Previous Chapter](../../2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.md) | [Next Chapter →](../6.developmentGuide/README.md)

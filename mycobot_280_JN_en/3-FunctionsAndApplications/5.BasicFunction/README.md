@@ -6,7 +6,7 @@ ER myCobot 280 Jetson Nano uses NVIDIA® Jetson Nano™ core development version
 
 Please follow the following chapters to learn the basic functions of the myCobot 280 JN version of the robot arm.
 
-- [System Usage Introduction](5.1-Functionlnstruction/README - 1.md)
+- [System Usage Introduction](5.1-Functionlnstruction/README.md)
 This section will briefly introduce the development environment of the myCobot 280 JN robot arm and the system built-in software.
 
 - [System Basic Function Description](5.2-Softwarelnstructions/3.5.2-SW-detail-description.md)<br>

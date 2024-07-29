@@ -114,4 +114,4 @@ Step 1: Connect to PC. Use USB to connect the Atom at the end.
 
 Step 2: Select `ATOM` in the `Board` column, and the Atom firmware will appear in the `Basic` sidebar. There is only one Atom firmware, click to burn it (the figure below takes myCobot 280 as an example).
 
-![Atom link](../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.2-SoftwareInstructions\atom2.jpg)
+![Atom link](../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.2-Softwarelnstructions/atom2.jpg)
