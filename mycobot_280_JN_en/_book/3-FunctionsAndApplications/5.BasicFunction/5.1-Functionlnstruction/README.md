@@ -1,90 +1,83 @@
-# 开发环境介绍
+# Development Environment Introduction
 
-## 1.Ubuntu Mate 20.04系统简介
+## 1. Introduction to Ubuntu Mate 20.04 System
 
-**什么是Ubuntu**
+**What is Ubuntu**
 
-Ubuntu是个人桌面操作系统中使用最广泛的linux操作系统。对于初学者来说，熟悉linux环境或一些嵌入式硬件操作系统是一个很好的选择。
+Ubuntu is the most widely used Linux operating system in personal desktop operating systems. For beginners, being familiar with the Linux environment or some embedded hardware operating systems is a good choice.
 
 ![img](../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.1-Functionlnstruction/system.png)
 
-### 1.1 系统基本功能介绍
+### 1.1 Introduction to basic system functions
 
-#### 1.1.1 系统与正式发布版本的区别
+#### 1.1.1 Differences between the system and the official release version
 
-**与官方版本相比，我们做了以下改变：**
+**Compared with the official version, we have made the following changes:**
 
-- 集成python/Ros1/Ros2和其他环境，用户可以直接使用我们公司提供的内置软件，而无需设置其他环境
-- 已经安装了我们的操作软件（myStudio、myBlockly），无需自己安装
-- 配置VNC屏幕共享，它将在启动后拥有自己的热点，您可以通过远程连接工具连接到屏幕：VNC，而无需连接到显示屏
+- Integrate python/Ros1/Ros2 and other environments, users can directly use the built-in software provided by our company without setting up other environments
 
-#### 1.1.2 系统基本功能介绍
+- Our operating software (myStudio, myBlockly) has been installed, no need to install it yourself
 
-**因为myCobot 280 Jetson nano版本具有内置的开发环境，所以下面介绍的软件可以直接使用。**
+- Configure VNC screen sharing, it will have its own hotspot after startup, you can connect to the screen through the remote connection tool: VNC, without connecting to the display
+
+#### 1.1.2 Introduction to basic system functions
+
+**Because the myCobot 280 Jetson nano version has a built-in development environment, the software introduced below can be used directly. **
 
 ![img](../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.1-Functionlnstruction/2.1.5.4-1-002.png)
 
-1 系统文件夹和回收站
+1 System folder and recycle bin
 
-2 测试myCobot是否正常工作的测试工具
+2 Test tool to test whether myCobot is working properly
 
-3 myStudio: 它可以将固件烧录到机械臂上
+3 myStudio: It can burn firmware to the robot arm
 
-4 myBlockly: 可视化模块化编程软件
+4 myBlockly: Visual modular programming software
 
-5 Ros1/Ros2：它是一种用于编写机器人软件程序的高度灵活的软件架构。
+5 Ros1/Ros2: It is a highly flexible software architecture for writing robot software programs.
 
-6 browser and link：可以跳转到我们的官方网站和Gitbook (需要连接到Internet)
+6 browser and link: can jump to our official website and Gitbook (need to connect to the Internet)
 
-##### 2 工具栏
+##### 2 Toolbar
 
 ![img](../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.1-Functionlnstruction/2.1.5.4-1-003.png)
 
-1 终端：命令行界面
+1 Terminal: Command line interface
 
-2 文件管理器 ：可以查看系统的存储资源
+2 File manager: can view the system's storage resources
 
-3 Notepad：也用于打开一些脚本文件，查看代码
+3 Notepad: also used to open some script files and view code
 
-4 Vim：文本编辑器 有关详细信息，请查看 [introduction](https://zh.wikipedia.org/zh-hans/Vim)
+4 Vim: text editor For more information, please check [introduction](https://zh.wikipedia.org/zh-hans/Vim)
 
-5 显示桌面：单击可直接显示桌面
+5 Show desktop: click to directly display the desktop
 
-6 用于查看CPU使用情况和内存使用情况
+6 Used to view CPU usage and memory usage
 
-7 回收站： 它用于存储用户临时删除的文档，并且可以恢复回收站中存储的文件
+7 Recycle Bin: It is used to store documents temporarily deleted by users, and files stored in the Recycle Bin can be restored
 
+### 1.3 How to reset the system
 
-
-### 1.3 如何重置系统
-
-当系统因操作不当而损坏或设置错误且无法更改时，我们可以重新刻录系统映像并恢复初始设置（您需要SD卡读取器）详情查阅后面部分章节：TF卡更换教程以及烧录镜像
+When the system is damaged due to improper operation or the settings are wrong and cannot be changed, we can re-burn the system image and restore the initial settings (you need an SD card reader). For details, please refer to the following chapters: TF card replacement tutorial and burning image
 
 ![img](../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.1-Functionlnstruction/systemup3.png)
 
-
-
-## 2. 系统中包含的开发环境介绍
+## 2. Introduction to the development environment included in the system
 
 **Ros1/Ros2**
 
-ROS 是开源的，是用于机器人控制的一种后操作系统，或者说次级操作系统。通过ROS，我们能够在虚拟环境中实现对机械臂的仿真控制。我们将通过 rviz 平台实现对机械臂的可视化，并使用多种方式对我们的机械臂进行操作；通过moveit 平台进行机械臂行动路径的规划和执行，达到自由控制机械臂的效果。安装ROS开发环境后，具体可查看 ROS相关章节。
+ROS is open source and is a post-operating system, or secondary operating system, for robot control. Through ROS, we can achieve simulated control of the robot arm in a virtual environment. We will use the rviz platform to visualize the robot arm and use a variety of methods to operate our robot arm; through the moveit platform, the robot arm's motion path is planned and executed to achieve the effect of free control of the robot arm. After installing the ROS development environment, you can refer to the ROS related chapters for details.
 
 ![img](../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.1-Functionlnstruction//open-2.png)
-
-
 
 **Python**
 
 ![2.1.5.4-1-006](../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.1-Functionlnstruction/2.4.png)
 
-基于Python 开发使用. 我们的机器人支持Python，Python API库的开发也越来越完善。 可以通过Python控制机器人的关节角度、坐标、夹持器等方面。 参考**安装python环境**章节获取更多信息。
+Developed and used based on Python. Our robots support Python, and the development of Python API libraries is becoming more and more complete. You can control the robot's joint angles, coordinates, grippers, etc. through Python. Refer to the **Install Python environment** section for more information.
 
+**Blockly development and use**
 
-
-**Blockly 开发使用**
-
-myBlockly是一款全可视化的模块化编程软件，属于图形化编程语言。可以让用户以搭积木式的方法进行编程控制mycobot。特别适合初学者学习编程，锻炼编程思维。
+myBlockly is a fully visual modular programming software, which belongs to a graphical programming language. It allows users to program and control mycobot in a building block-like way. It is especially suitable for beginners to learn programming and exercise programming thinking.
 
 ![blockly](../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.1-Functionlnstruction/2.7-1.png)
-

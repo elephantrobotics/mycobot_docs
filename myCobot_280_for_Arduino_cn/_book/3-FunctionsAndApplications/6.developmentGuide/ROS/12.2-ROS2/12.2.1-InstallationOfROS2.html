@@ -1,0 +1,1334 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6.4.1 ROS2环境搭建 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="12.2.2-BasicTutorial.html" />
+    
+    
+    <link rel="prev" href="12.2.3-ROS2Introduction.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../../">
+            
+                <a href="../../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    产品信息
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../../../1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.html">
+            
+                <a href="../../../../1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.html">
+            
+                    
+                    1. 产品简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../../../1-ProductInformation/2.ProductParameter/2-ProductParameters.html">
+            
+                <a href="../../../../1-ProductInformation/2.ProductParameter/2-ProductParameters.html">
+            
+                    
+                    2. 产品参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    基础设置
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../../../2-BasicSettings/3.UserNotice/3-UserInstructions.html">
+            
+                <a href="../../../../2-BasicSettings/3.UserNotice/3-UserInstructions.html">
+            
+                    
+                    3. 用户须知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../../../2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.html">
+            
+                <a href="../../../../2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.html">
+            
+                    
+                    4. 首次安装
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.html">
+            
+                <a href="../../../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.html">
+            
+                    
+                    4.1如何正确寻求帮助
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../../../4-SupportAndService/9.Troubleshooting/9.1-driver.html">
+            
+                <a href="../../../../4-SupportAndService/9.Troubleshooting/9.1-driver.html">
+            
+                    
+                    4.2常见的驱动问题以及解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../../../4-SupportAndService/9.Troubleshooting/9.2-software.html">
+            
+                <a href="../../../../4-SupportAndService/9.Troubleshooting/9.2-software.html">
+            
+                    
+                    4.3常见的软件问题以及解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../../../4-SupportAndService/9.Troubleshooting/9.3-hardware.html">
+            
+                <a href="../../../../4-SupportAndService/9.Troubleshooting/9.3-hardware.html">
+            
+                    
+                    4.4常见的硬件问题以及解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    功能与应用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../5.BasicFunction/">
+            
+                <a href="../../../5.BasicFunction/">
+            
+                    
+                    5. 基础功能
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../../5.BasicFunction/5.1-Functionlnstruction/DevelopmEntenvironment.html">
+            
+                <a href="../../../5.BasicFunction/5.1-Functionlnstruction/DevelopmEntenvironment.html">
+            
+                    
+                    5.1 机械臂系统使用介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../../5.BasicFunction/5.2-Softwarelnstructions/">
+            
+                <a href="../../../5.BasicFunction/5.2-Softwarelnstructions/">
+            
+                    
+                    5.2 myStudio说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../../5.BasicFunction/5.3-FirmwareFunctionDescription/RoboticArmElectricalInterface.html">
+            
+                <a href="../../../5.BasicFunction/5.3-FirmwareFunctionDescription/RoboticArmElectricalInterface.html">
+            
+                    
+                    5.3 硬件接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    6. 软件开发指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../Arduino/">
+            
+                <a href="../../Arduino/">
+            
+                    
+                    6.1 基于Arduino开发使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1.1" data-path="../../Arduino/10.1-arduino_download.html">
+            
+                <a href="../../Arduino/10.1-arduino_download.html">
+            
+                    
+                    6.1.1环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2" data-path="../../Arduino/10.2-arduino_use.html">
+            
+                <a href="../../Arduino/10.2-arduino_use.html">
+            
+                    
+                    6.1.2简单使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3" data-path="../../Arduino/10.3-api.html">
+            
+                <a href="../../Arduino/10.3-api.html">
+            
+                    
+                    6.1.3API说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.4" data-path="../../python/10.4-arduinolib_use.md">
+            
+                <span>
+            
+                    
+                    6.1.4库的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../python/">
+            
+                <a href="../../python/">
+            
+                    
+                    6.2 基于python开发使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.2.1" data-path="../../python/7.1_download.html">
+            
+                <a href="../../python/7.1_download.html">
+            
+                    
+                    6.2.1环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.2" data-path="../../python/7.2_API.html">
+            
+                <a href="../../python/7.2_API.html">
+            
+                    
+                    6.2.2api说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.3" data-path="../../python/7.3_angle.html">
+            
+                <a href="../../python/7.3_angle.html">
+            
+                    
+                    6.2.3关节控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.4" data-path="../../python/7.4_coord.html">
+            
+                <a href="../../python/7.4_coord.html">
+            
+                    
+                    6.2.4坐标控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.5" data-path="../../python/7.5_IO.html">
+            
+                <a href="../../python/7.5_IO.html">
+            
+                    
+                    6.2.5 IO控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.6" data-path="../../python/7.6_gripper.html">
+            
+                <a href="../../python/7.6_gripper.html">
+            
+                    
+                    6.2.6夹爪控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.7" data-path="../../python/7.7_TCPIP.html">
+            
+                <a href="../../python/7.7_TCPIP.html">
+            
+                    
+                    6.2.7 TCP&IP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.8" data-path="../../python/7.9_HandleControl.html">
+            
+                <a href="../../python/7.9_HandleControl.html">
+            
+                    
+                    6.2.8手柄控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.9" data-path="../../python/7.15_280_gcode_draw.html">
+            
+                <a href="../../python/7.15_280_gcode_draw.html">
+            
+                    
+                    6.2.9绘制图案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.10" data-path="../../python/7.8_example.html">
+            
+                <a href="../../python/7.8_example.html">
+            
+                    
+                    6.2.10演示代码与视频
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../12.1-ROS1/12.1.1-Introduction.html">
+            
+                <a href="../12.1-ROS1/12.1.1-Introduction.html">
+            
+                    
+                    6.3 基于ROS1 开发使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.3.1" data-path="../12.1-ROS1/12.1.2-EnvironmentBuilding.html">
+            
+                <a href="../12.1-ROS1/12.1.2-EnvironmentBuilding.html">
+            
+                    
+                    6.3.1 ROS1环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.2" data-path="../12.1-ROS1/12.1.3-ROS_Basics.html">
+            
+                <a href="../12.1-ROS1/12.1.3-ROS_Basics.html">
+            
+                    
+                    6.3.2 ROS1基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.3" data-path="../12.1-ROS1/12.1.4-rivzIntroductionAndUse/">
+            
+                <a href="../12.1-ROS1/12.1.4-rivzIntroductionAndUse/">
+            
+                    
+                    6.3.3 rivz介绍以及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.4" data-path="../12.1-ROS1/12.1.5-Moveit/">
+            
+                <a href="../12.1-ROS1/12.1.5-Moveit/">
+            
+                    
+                    6.3.4 Moveit介绍以及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="12.2.3-ROS2Introduction.html">
+            
+                <a href="12.2.3-ROS2Introduction.html">
+            
+                    
+                    6.4 基于ROS2 开发使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.2.4.1" data-path="12.2.1-InstallationOfROS2.html">
+            
+                <a href="12.2.1-InstallationOfROS2.html">
+            
+                    
+                    6.4.1 ROS2环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.2" data-path="12.2.2-BasicTutorial.html">
+            
+                <a href="12.2.2-BasicTutorial.html">
+            
+                    
+                    6.4.2 ROS2基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.3" data-path="12.2.4-rivzIntroductionAndUse/">
+            
+                <a href="12.2.4-rivzIntroductionAndUse/">
+            
+                    
+                    6.4.3 rivz介绍以及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/">
+            
+                    
+                    6.5 基于Blockly 开发使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.5.1" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.1-myBlocklyFirstUse.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.1-myBlocklyFirstUse.html">
+            
+                    
+                    6.5.1myBlockly初始使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5.2" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.2-ControlRGB.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.2-ControlRGB.html">
+            
+                    
+                    6.5.2控制RGB灯板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5.3" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.3-ControlRoboticArmBackZero.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.3-ControlRoboticArmBackZero.html">
+            
+                    
+                    6.5.3控制机械臂回到原点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5.4" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.4-ControlSingleJoint.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.4-ControlSingleJoint.html">
+            
+                    
+                    6.5.4控制单关节运动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5.5" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.5-ControlSinglesJoint.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.5-ControlSinglesJoint.html">
+            
+                    
+                    6.5.5控制多个关节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5.6" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.6-ControlRoboticSwingLeft&Right.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.6-ControlRoboticSwingLeft&Right.html">
+            
+                    
+                    6.5.6控制机械臂左右摆动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5.7" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.7-ControlRoboticArmDance.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.7-ControlRoboticArmDance.html">
+            
+                    
+                    6.5.7控制机械臂跳舞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5.8" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.html">
+            
+                    
+                    6.5.8夹爪的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5.9" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.html">
+            
+                    
+                    6.5.9吸泵的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5.10" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.html">
+            
+                    
+                    6.5.10夹爪测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5.11" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.14-ioTest.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.14-ioTest.html">
+            
+                    
+                    6.5.11 IO测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5.12" data-path="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.html">
+            
+                <a href="../../myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.html">
+            
+                    
+                    6.5.12Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../../CommunicationProtocolPackage/18-communication.html">
+            
+                <a href="../../CommunicationProtocolPackage/18-communication.html">
+            
+                    
+                    6.6 基于串口通信协议开发使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../../7.SuccessfulCase/7-SuccessfulCases.html">
+            
+                <a href="../../../7.SuccessfulCase/7-SuccessfulCases.html">
+            
+                    
+                    7. 成功案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../../8.SupportingResources/">
+            
+                <a href="../../../8.SupportingResources/">
+            
+                    
+                    8. 配套资源
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../../8.SupportingResources/8.1-ProductInformation/">
+            
+                <a href="../../../8.SupportingResources/8.1-ProductInformation/">
+            
+                    
+                    8.1 产品资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../../../8.SupportingResources/8.2-ProductDrawings/">
+            
+                <a href="../../../8.SupportingResources/8.2-ProductDrawings/">
+            
+                    
+                    8.2 产品图纸
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../../../8.SupportingResources/8.3-SoftwareInformationAndSourceCode/">
+            
+                <a href="../../../8.SupportingResources/8.3-SoftwareInformationAndSourceCode/">
+            
+                    
+                    8.3 软件资料及源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../../../8.SupportingResources/8.4-SystemInformation/">
+            
+                <a href="../../../8.SupportingResources/8.4-SystemInformation/">
+            
+                    
+                    8.4 系统资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../../../8.SupportingResources/8.5-PromotionalMaterials/">
+            
+                <a href="../../../8.SupportingResources/8.5-PromotionalMaterials/">
+            
+                    
+                    8.5 宣传资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    支持与服务
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../../../4-SupportAndService/11.AboutUs/11.AboutUs.html">
+            
+                <a href="../../../../4-SupportAndService/11.AboutUs/11.AboutUs.html">
+            
+                    
+                     联系我们
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../../../5-Acknowledgments/5-Acknowledgments.html">
+            
+                <a href="../../../../5-Acknowledgments/5-Acknowledgments.html">
+            
+                    
+                    致谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../../.." >6.4.1 ROS2环境搭建</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x73AF;&#x5883;&#x5B89;&#x88C5;">&#x73AF;&#x5883;&#x5B89;&#x88C5;</h1>
+<h1 id="m5&#x7248;&#x672C;&#xFF1A;">M5&#x7248;&#x672C;&#xFF1A;</h1>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong>&#x5B89;&#x88C5;&#x865A;&#x62DF;&#x673A;&#x7CFB;&#x7EDF;&#x65F6;&#xFF0C;&#x8BF7;&#x5B89;&#x88C5;<strong>Ubuntu 20.04&#x7248;&#x672C;&#x7684;&#x7CFB;&#x7EDF;</strong>&#xFF0C;&#x5B89;&#x88C5;&#x65B9;&#x6CD5;&#x4E0E;ubuntu 18.04&#x4E00;&#x81F4;&#x3002;</p>
+<p>&#x5728;Linux&#x4E2D;&#x5B89;&#x88C5;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x7684;ubuntu&#x7CFB;&#x7EDF;&#xFF0C;&#x53EF;&#x53C2;&#x8003; ROS1&#x73AF;&#x5883;&#x642D;&#x5EFA; &#x7AE0;&#x8282;&#x3002;</p>
+<h2 id="ros2-&#x73AF;&#x5883;&#x642D;&#x5EFA;">ROS2 &#x73AF;&#x5883;&#x642D;&#x5EFA;</h2>
+<h3 id="ros2-&#x5B89;&#x88C5;">ROS2 &#x5B89;&#x88C5;</h3>
+<p>&#x57FA;&#x672C;&#x7684;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x642D;&#x5EFA;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x673A;&#x5668;&#x4EBA;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF; ROS2&#x4EE5;&#x53CA; git &#x7248;&#x672C;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x4EE5;&#x4E0B;&#x5206;&#x522B;&#x4ECB;&#x7ECD;&#x5176;&#x5B89;&#x88C5;&#x65B9;&#x6CD5;&#x53CA;&#x6D41;&#x7A0B;&#x3002;</p>
+<p><strong>myCobot 280-M5</strong>&#x3001;<strong>myCobot 320-M5</strong>&#x3001;<strong>myPalletizer 260-M5</strong> &#x548C; <strong>mechArm 270-M5</strong> &#x7684;&#x8BBE;&#x5907;&#x53EF;&#x53C2;&#x8003;&#x4EE5;&#x4E0B;&#x4ECB;&#x7ECD;&#x7684;&#x5B89;&#x88C5;&#x65B9;&#x5F0F;&#x53CA;&#x6D41;&#x7A0B;&#x3002;<strong>myCobot 280-PI</strong>&#x3001;<strong>myCobot 320-PI</strong>&#x3001;<strong>myPalletizer 260-PI</strong> &#x548C; <strong>mechArm 270-PI</strong>  &#x7684;&#x8BBE;&#x5907;&#x4EC5;&#x4EC5;&#x9700;&#x8981;&#x6267;&#x884C; <strong>mycobot_ros2</strong> &#x5B89;&#x88C5;&#x5305;&#x7684;&#x5B89;&#x88C5;&#x3002;</p>
+<h4 id="&#x7248;&#x672C;&#x9009;&#x62E9;">&#x7248;&#x672C;&#x9009;&#x62E9;</h4>
+<p>ROS2 &#x8DDF; ubuntu &#x6709;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x7684; ubuntu &#x5BF9;&#x5E94;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x7684; ROS2&#xFF0C;&#x53C2;&#x8003;&#x7F51;&#x7AD9;&#x89C1;&#x4E0B;&#xFF1A;<a href="http://docs.ros.org/en/foxy/Releases.html" target="_blank">http://docs.ros.org/en/foxy/Releases.html</a></p>
+<p>&#x8FD9;&#x91CC;&#x7ED9;&#x51FA;&#x5BF9;&#x5E94;Ubuntu&#x652F;&#x6301;&#x7684; ROS2 &#x7248;&#x672C;:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ROS2&#x7248;&#x672C;</th>
+<th style="text-align:center">&#x53D1;&#x5E03;&#x65E5;&#x671F;</th>
+<th style="text-align:center">&#x7EF4;&#x62A4;&#x622A;&#x6B62;&#x65E5;&#x671F;</th>
+<th style="text-align:center">Ubuntu&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Foxy</td>
+<td style="text-align:center">2020 &#x5E74; 6 &#x6708; 5 &#x65E5;</td>
+<td style="text-align:center">2023 &#x5E74; 5 &#x6708;</td>
+<td style="text-align:center">Ubuntu 20.04(Focal Fossa)</td>
+</tr>
+<tr>
+<td style="text-align:center">Galactic</td>
+<td style="text-align:center">2021 &#x5E74; 5 &#x6708; 23 &#x65E5;</td>
+<td style="text-align:center">2022 &#x5E74; 11 &#x6708;</td>
+<td style="text-align:center">Ubuntu 20.04(Focal Fossa)</td>
+</tr>
+<tr>
+<td style="text-align:center">Humble</td>
+<td style="text-align:center">2022 &#x5E74; 5 &#x6708; 23 &#x65E5;</td>
+<td style="text-align:center">2027 &#x5E74; 5 &#x6708;</td>
+<td style="text-align:center">Ubuntu 22.04(Jammy Jellyfish)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8BF7;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x5B89;&#x88C5;&#x7684;Ubuntu&#x7248;&#x672C;&#x8FDB;&#x884C;&#x5BF9;&#x5E94;ROS2&#x7248;&#x672C;&#x7684;&#x5B89;&#x88C5;</strong></p>
+<p>&#x5982;&#x679C;&#x7248;&#x672C;&#x4E0D;&#x540C;&#xFF0C;&#x4E0B;&#x8F7D;&#x5C06;&#x4F1A;&#x5931;&#x8D25;.&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x9009;&#x62E9;&#x7684;&#x7CFB;&#x7EDF;&#x4E3A; Ubuntu 20.04 (&#x63A8;&#x8350;), &#x5BF9;&#x5E94; ROS2 &#x7248;&#x672C;&#x4E3A; ROS2 Foxy</p>
+<blockquote>
+<p>NOTE: &#x76EE;&#x524D;&#x6211;&#x4EEC;&#x4E0D;&#x63D0;&#x4F9B; windows &#x5B89;&#x88C5; ROS2 &#x7684;&#x4EFB;&#x4F55;&#x53C2;&#x8003;, &#x82E5;&#x6709;&#x9700;&#x8981;&#x8BF7;&#x53C2;&#x8003; <a href="http://docs.ros.org/en/foxy/Installation/Alternatives/Windows-Development-Setup.html" target="_blank">http://docs.ros.org/en/foxy/Installation/Alternatives/Windows-Development-Setup.html</a></p>
+</blockquote>
+<h4 id="&#x5F00;&#x59CB;&#x5B89;&#x88C5;">&#x5F00;&#x59CB;&#x5B89;&#x88C5;</h4>
+<h5 id="1-&#x6DFB;&#x52A0;&#x6E90;">1 &#x6DFB;&#x52A0;&#x6E90;</h5>
+<p>Ubuntu &#x672C;&#x8EAB;&#x7684;&#x8F6F;&#x4EF6;&#x6E90;&#x5217;&#x8868;&#x4E2D;&#x6CA1;&#x6709; ROS2 &#x7684;&#x8F6F;&#x4EF6;&#x6E90;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x5148;<strong>&#x5C06; ROS2 &#x8F6F;&#x4EF6;&#x6E90;&#x914D;&#x7F6E;&#x5230;&#x8F6F;&#x4EF6;&#x5217;&#x8868;&#x4ED3;&#x5E93;&#x4E2D;</strong>&#xFF0C;&#x624D;&#x80FD;&#x4E0B;&#x8F7D; ROS2 &#x3002;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x53F0;&#x7EC8;&#x7AEF;(&#x5FEB;&#x6377;&#x952E;<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>),&#x8F93;&#x5165;&#x5982;&#x4E0B;&#x6307;&#x4EE4;&#xFF1A;</p>
+<ul>
+<li>&#x5B98;&#x65B9;&#x6E90;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;deb [arch=<span class="hljs-variable">$(dpkg --print-architecture)</span> signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu <span class="hljs-variable">$(source /etc/os-release &amp;&amp; echo $UBUNTU_CODENAME)</span> main&quot;</span> | sudo tee /etc/apt/sources.list.d/ros2.list &gt; /dev/null
+</code></pre>
+<ul>
+<li>&#x82E5;&#x4E0B;&#x8F7D;&#x901F;&#x5EA6;&#x7F13;&#x6162;&#xFF0C;&#x63A8;&#x8350;&#x5C31;&#x8FD1;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x955C;&#x50CF;&#x6E90;&#x66FF;&#x6362;&#x4E0A;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x3002;&#x4F8B;&#x5982;&#xFF0C;huawei cloud&#x4E3A;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;deb [arch=<span class="hljs-variable">$(dpkg --print-architecture)</span>] https://repo.huaweicloud.com/ros2/ubuntu/ <span class="hljs-variable">$(lsb_release -cs)</span> main&quot;</span> | sudo tee /etc/apt/sources.list.d/ros2.list &gt; /dev/null
+</code></pre>
+<h5 id="2-&#x8BBE;&#x7F6E;&#x79D8;&#x94A5;">2 &#x8BBE;&#x7F6E;&#x79D8;&#x94A5;</h5>
+<p><strong>&#x914D;&#x7F6E;&#x516C;&#x7F51;&#x79D8;&#x94A5;</strong>,&#x8FD9;&#x4E00;&#x6B65;&#x662F;&#x4E3A;&#x4E86;&#x8BA9;&#x7CFB;&#x7EDF;&#x786E;&#x8BA4;&#x6211;&#x4EEC;&#x7684;&#x8DEF;&#x5F84;&#x662F;&#x5B89;&#x5168;&#x7684;&#x7684;&#xFF0C;&#x8FD9;&#x6837;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#x624D;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x4E0D;&#x7136;&#x4E0B;&#x8F7D;&#x540E;&#x4F1A;&#x88AB;&#x7ACB;&#x523B;&#x5220;&#x6389;&#xFF1A;</p>
+<pre><code class="lang-bash">sudo apt install curl gnupg2 -y
+curl <span class="hljs-_">-s</span> https://gitee.com/ohhuo/rosdistro/raw/master/ros.asc | sudo apt-key add -
+</code></pre>
+<h5 id="3-&#x5B89;&#x88C5;">3 &#x5B89;&#x88C5;</h5>
+<p>&#x5728;&#x52A0;&#x5165;&#x4E86;&#x65B0;&#x7684;&#x8F6F;&#x4EF6;&#x6E90;&#x540E;&#xFF0C;&#x9700;&#x8981;<strong>&#x66F4;&#x65B0;&#x8F6F;&#x4EF6;&#x6E90;&#x5217;&#x8868;</strong>&#xFF0C;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x53F0;&#x7EC8;&#x7AEF;(&#x5FEB;&#x6377;&#x952E;<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>),&#x8F93;&#x5165;&#x5982;&#x4E0B;&#x6307;&#x4EE4;&#xFF1A;</p>
+<pre><code class="lang-bash">sudo apt-get update
+</code></pre>
+<p>&#x6267;&#x884C;<strong>&#x5B89;&#x88C5; ROS2</strong>&#xFF0C;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x53F0;&#x7EC8;&#x7AEF;(&#x5FEB;&#x6377;&#x952E;<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>),&#x8BF7;&#x6309;&#x7167;&#x81EA;&#x5DF1;&#x7684;Ubuntu&#x7248;&#x672C;&#x9009;&#x62E9;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x6307;&#x4EE4;&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 20.04 foxy&#x7248;&#x672C;</span>
+sudo apt install ros-foxy-desktop
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 20.04 galactic&#x7248;&#x672C;</span>
+sudo apt install ros-galactic-desktop
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 22.04 humble&#x7248;&#x672C;</span>
+sudo apt install ros-humble-desktop
+</code></pre>
+<p><strong>&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x8017;&#x65F6;&#x6BD4;&#x8F83;&#x957F;&#xFF0C;&#x9700;&#x8981;&#x8010;&#x5FC3;&#x7B49;&#x5F85;</strong></p>
+<p>&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#x5237;&#x65B0;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">source</span> /opt/ros/foxy/setup.bash
+</code></pre>
+<h4 id="&#x8BBE;&#x7F6E;ros2&#x73AF;&#x5883;">&#x8BBE;&#x7F6E;ros2&#x73AF;&#x5883;</h4>
+<p>&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x6BCF;&#x6B21;&#x5173;&#x6389;&#x7EC8;&#x7AEF;&#x7A97;&#x53E3;&#x540E;&#x90FD;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x751F;&#x6548; ROS2 &#x529F;&#x80FD;&#x8DEF;&#x5F84;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;<strong>&#x628A;&#x8DEF;&#x5F84;&#x914D;&#x7F6E;&#x5230;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E2D;</strong>&#xFF0C;&#x8FD9;&#x6837;&#x5728;&#x6BCF;&#x6B21;&#x6253;&#x5F00;&#x65B0;&#x7684;&#x7EC8;&#x7AEF;&#x65F6;&#x4FBF;&#x53EF;&#x81EA;&#x52A8;&#x751F;&#x6548; ROS2 &#x529F;&#x80FD;&#x8DEF;&#x5F84;&#xFF0C;&#x5728;&#x7EC8;&#x7AEF;&#x4F9D;&#x6B21;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x53F0;&#x7EC8;&#x7AEF;(&#x5FEB;&#x6377;&#x952E;<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>)&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 20.04 foxy&#x7248;&#x672C;</span>
+<span class="hljs-comment"># &#x5C06; ros &#x73AF;&#x5883;&#x52A0;&#x5165;&#x5230;&#x5F53;&#x524D;&#x63A7;&#x5236;&#x53F0;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;source /opt/ros/foxy/setup.bash&quot;</span> &gt;&gt; ~/.bashrc
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 20.04 galactic&#x7248;&#x672C;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;source /opt/ros/galactic/setup.bash&quot;</span> &gt;&gt; ~/.bashrc
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 22.04 humble&#x7248;&#x672C;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;source /opt/ros/humble/setup.bash&quot;</span> &gt;&gt; ~/.bashrc
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-built_in">source</span> ~/.bashrc
+</code></pre>
+<h5 id="&#x5B89;&#x88C5;-ros2-&#x989D;&#x5916;&#x4F9D;&#x8D56;&#x9879;">&#x5B89;&#x88C5; ROS2 &#x989D;&#x5916;&#x4F9D;&#x8D56;&#x9879;</h5>
+<p>&#x5728;&#x7EC8;&#x7AEF;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;<strong>&#x5B89;&#x88C5;ROS2&#x989D;&#x5916;&#x4F9D;&#x8D56;&#x9879;</strong>&#xFF0C;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x53F0;&#x7EC8;&#x7AEF;(&#x5FEB;&#x6377;&#x952E;<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>)&#xFF1A;</p>
+<pre><code class="lang-bash">sudo apt install python3-argcomplete -y
+</code></pre>
+<pre><code class="lang-bash">sudo apt install ros-foxy-xacro
+</code></pre>
+<pre><code class="lang-bash">sudo apt-get install python3-colcon-common-extensions
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 20.04 foxy&#x7248;&#x672C;</span>
+sudo apt install ros-foxy-joint-state-publisher-gui
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 20.04 galactic&#x7248;&#x672C;</span>
+sudo apt install ros-galactic-joint-state-publisher-gui
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Ubuntu 22.04 humble&#x7248;&#x672C;</span>
+sudo apt install ros-humble-joint-state-publisher-gui
+</code></pre>
+<h4 id="&#x9A8C;&#x8BC1;&#x5B89;&#x88C5;">&#x9A8C;&#x8BC1;&#x5B89;&#x88C5;</h4>
+<p>&#x4E3A;&#x4E86;&#x9A8C;&#x8BC1; ROS2 &#x662F;&#x5426;&#x5B89;&#x88C5;&#x6210;&#x529F;&#xFF0C;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x53F0;&#x7EC8;&#x7AEF;(&#x5FEB;&#x6377;&#x952E;<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>)&#xFF0C;&#x5728;&#x7EC8;&#x7AEF;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code class="lang-bash">ros2
+</code></pre>
+<p>&#x5F53;&#x663E;&#x793A;&#x5982;&#x4E0B;&#x754C;&#x9762;&#xFF0C;&#x5219;&#x8868;&#x793A; ROS2 &#x5B89;&#x88C5;&#x6210;&#x529F;</p>
+<p><img src="../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/ros2install/12.2.1-1.png" width="500" align="center"></p>
+<h2 id="git-&#x5B89;&#x88C5;">git &#x5B89;&#x88C5;</h2>
+<h3 id="&#x66F4;&#x65B0;&#x8F6F;&#x4EF6;&#x6E90;&#x5217;&#x8868;">&#x66F4;&#x65B0;&#x8F6F;&#x4EF6;&#x6E90;&#x5217;&#x8868;</h3>
+<p>&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x53F0;&#x7EC8;&#x7AEF;(&#x5FEB;&#x6377;&#x952E;<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>)&#xFF0C;&#x5728;&#x7EC8;&#x7AEF;&#x7A97;&#x53E3;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x4EE5;<strong>&#x66F4;&#x65B0;&#x8F6F;&#x4EF6;&#x6E90;&#x5217;&#x8868;</strong>&#xFF1A;</p>
+<pre><code class="lang-bash">sudo apt-get update
+</code></pre>
+<h3 id="&#x5B89;&#x88C5;-git">&#x5B89;&#x88C5; git</h3>
+<p>&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x53F0;&#x7EC8;&#x7AEF;(&#x5FEB;&#x6377;&#x952E;<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>)&#xFF0C;&#x5728;&#x7EC8;&#x7AEF;&#x7A97;&#x53E3;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;<strong>&#x6267;&#x884C; git &#x7684;&#x5B89;&#x88C5;</strong>&#xFF1A;</p>
+<pre><code class="lang-bash">sudo apt-get install git
+</code></pre>
+<h3 id="&#x9A8C;&#x8BC1;&#x5B89;&#x88C5;">&#x9A8C;&#x8BC1;&#x5B89;&#x88C5;</h3>
+<p><strong>&#x8BFB;&#x53D6; git &#x7248;&#x672C;</strong>&#xFF0C;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x53F0;&#x7EC8;&#x7AEF;(&#x5FEB;&#x6377;&#x952E;<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>)&#xFF0C;&#x5728;&#x7EC8;&#x7AEF;&#x7A97;&#x53E3;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code class="lang-bash">git --version
+</code></pre>
+<p>&#x5728;&#x7EC8;&#x7AEF;&#x4E2D;&#x53EF;&#x4EE5;&#x663E;&#x793A; git &#x7248;&#x672C;&#x53F7;&#xFF0C;&#x5982;&#x4E0B;&#xFF0C;&#x5373;&#x4E3A;&#x5B89;&#x88C5;&#x6210;&#x529F;&#x3002;</p>
+<p><img src="../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/ros2install/install-git-2.png" width="500" align="center"></p>
+<h2 id="mycobotros2-&#x5B89;&#x88C5;">mycobot_ros2 &#x5B89;&#x88C5;</h2>
+<p><code>mycobot_ros2</code> &#x662F; ElephantRobotics &#x63A8;&#x51FA;&#x7684;&#xFF0C;&#x9002;&#x914D;&#x65D7;&#x4E0B;&#x684C;&#x9762;&#x578B;&#x516D;&#x8F74;&#x673A;&#x68B0;&#x81C2; mycobot&#x7CFB;&#x5217; &#x7684;ROS2 &#x5305;&#x3002;</p>
+<p>&#x9879;&#x76EE;&#x5730;&#x5740;&#xFF1A;<a href="http://github.com/elephantrobotics/mycobot_ros2" target="_blank">http://github.com/elephantrobotics/mycobot_ros2</a></p>
+<h3 id="&#x524D;&#x63D0;">&#x524D;&#x63D0;</h3>
+<p>&#x5728;&#x5B89;&#x88C5;&#x5305;&#x4E4B;&#x524D;&#xFF0C;&#x8BF7;&#x4FDD;&#x8BC1;&#x62E5;&#x6709; ros2 &#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x7ED9;&#x51FA;<strong>&#x521B;&#x5EFA;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x7684;&#x6837;&#x4F8B;&#x547D;&#x4EE4;</strong>&#xFF0C;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x53F0;&#x7EC8;&#x7AEF;(&#x5FEB;&#x6377;&#x952E;<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>)&#xFF0C;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code class="lang-bash">mkdir -p ~/colcon_ws/src  <span class="hljs-comment"># &#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939;</span>
+</code></pre>
+<p><strong>&#x6DFB;&#x52A0;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x7684;&#x73AF;&#x5883;</strong></p>
+<p>&#x5B98;&#x65B9;&#x9ED8;&#x8BA4;&#x7684; ROS2 &#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x662F; <code>colcon_ws</code>&#x3002;</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;source ~/colcon_ws/install/setup.bash&quot;</span> &gt;&gt; ~/.bashrc
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-built_in">source</span> ~/.bashrc
+</code></pre>
+<h3 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h3>
+<p><strong>NOTE&#xFF1A;</strong></p>
+<ul>
+<li>&#x672C;&#x5305;&#x4F9D;&#x8D56;&#x4E8E;ROS2&#x548C;MoveIT2&#xFF0C;&#x4F7F;&#x7528;&#x524D;&#x786E;&#x4FDD;&#x4EE5;&#x6210;&#x529F;&#x5B89;&#x88C5;ROS2&#x548C;MoveIT2&#x3002;</li>
+<li>&#x672C;&#x5305;&#x4E0E;&#x771F;&#x5B9E;&#x673A;&#x68B0;&#x81C2;&#x7684;&#x4EA4;&#x4E92;&#x4F9D;&#x8D56;&#x4E8E;PythonApi - <code>pymycobot</code></li>
+<li>Api&#x9879;&#x76EE;&#x5730;&#x4E3A;&#xFF1A;<a href="https://github.com/elephantrobotics/pymycobot" target="_blank">https://github.com/elephantrobotics/pymycobot</a></li>
+<li><p>&#x5FEB;&#x901F;&#x5B89;&#x88C5;&#xFF1A;<code>pip install pymycobot --upgrade</code></p>
+<p>&#x6267;&#x884C;pip install pymycobot --upgrade&#x547D;&#x4EE4;&#x65F6;&#xFF0C;&#x82E5;&#x51FA;&#x73B0;&#x5982;&#x4E0B;&#x56FE;&#x9519;&#x8BEF;&#x63D0;&#x793A;&#xFF1A;</p>
+<p><img src="../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/ros2install/ros-5.png" width="500" align="center"></p>
+<p>&#x6839;&#x636E;&#x63D0;&#x793A;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x5B89;&#x88C5;pip</p>
+<pre><code class="lang-bash">sudo apt install python-pip
+</code></pre>
+</li>
+<li><p>&#x5982;&#x679C;&#x4F60;&#x7684;Ubuntu&#x7CFB;&#x7EDF;&#x662F;20.04&#x7248;&#x672C;&#xFF0C;&#x8BF7;&#x6267;&#x884C;&#x547D;&#x4EE4;<code>sudo apt install python3-pip</code>&#x5B89;&#x88C5;pip
+pip&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x7EC8;&#x7AEF;&#x518D;&#x6B21;&#x6267;&#x884C;</p>
+<pre><code class="lang-bash">pip install pymycobot --upgrade
+</code></pre>
+</li>
+<li><p>&#x5B89;&#x88C5;&#x65B9;&#x5F0F;&#x4F9D;&#x8D56;&#x4E8E;Git&#xFF0C;&#x8BF7;&#x786E;&#x4FDD;&#x7535;&#x8111;&#x4E2D;&#x5DF2;&#x5B89;&#x88C5;Git&#x3002;</p>
+</li>
+</ul>
+<p>&#x5B98;&#x65B9;&#x9ED8;&#x8BA4;&#x7684; ROS2 &#x5DE5;&#x4F5C;&#x533A;&#x662F; <code>colcon_ws</code>&#x3002;</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> colcon_ws/src  <span class="hljs-comment"># &#x8FDB;&#x5165;&#x5DE5;&#x4F5C;&#x533A;&#x7684;src&#x6587;&#x4EF6;&#x5939;&#x4E2D;</span>
+<span class="hljs-comment"># &#x514B;&#x9686;github&#x4E0A;&#x7684;&#x4EE3;&#x7801;</span>
+git <span class="hljs-built_in">clone</span> --depth 1 https://github.com/elephantrobotics/mycobot_ros2.git
+<span class="hljs-built_in">cd</span> ..       <span class="hljs-comment"># &#x8FD4;&#x56DE;&#x5DE5;&#x4F5C;&#x533A;</span>
+colcon build --symlink-install <span class="hljs-comment"># &#x6784;&#x5EFA;&#x5DE5;&#x4F5C;&#x533A;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#xFF0C;--symlink-install&#xFF1A;&#x907F;&#x514D;&#x6BCF;&#x6B21;&#x8C03;&#x6574; python &#x811A;&#x672C;&#x65F6;&#x90FD;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;</span>
+<span class="hljs-built_in">source</span> install/setup.bash <span class="hljs-comment"># &#x6DFB;&#x52A0;&#x73AF;&#x5883;&#x53D8;&#x91CF;</span>
+</code></pre>
+<p>&#x81F3;&#x6B64;ROS2&#x73AF;&#x5883;&#x642D;&#x5EFA;&#x5B8C;&#x6210;&#xFF0C;ROS2&#x7684;&#x4F7F;&#x7528;&#x8BF7;&#x53C2;&#x8003; Rviz&#x4ECB;&#x7ECD;&#x53CA;&#x4F7F;&#x7528; &#x7AE0;&#x8282;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="12.2.3-ROS2Introduction.html" class="navigation navigation-prev " aria-label="Previous page: 6.4 基于ROS2 开发使用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="12.2.2-BasicTutorial.html" class="navigation navigation-next " aria-label="Next page: 6.4.2 ROS2基础">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.4.1 ROS2环境搭建","level":"1.4.2.4.1","depth":4,"next":{"title":"6.4.2 ROS2基础","level":"1.4.2.4.2","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.2-BasicTutorial.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.2-BasicTutorial.md","articles":[]},"previous":{"title":"6.4 基于ROS2 开发使用","level":"1.4.2.4","depth":3,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.3-ROS2Introduction.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.3-ROS2Introduction.md","articles":[{"title":"6.4.1 ROS2环境搭建","level":"1.4.2.4.1","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.1-InstallationOfROS2.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.1-InstallationOfROS2.md","articles":[]},{"title":"6.4.2 ROS2基础","level":"1.4.2.4.2","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.2-BasicTutorial.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.2-BasicTutorial.md","articles":[]},{"title":"6.4.3 rivz介绍以及使用","level":"1.4.2.4.3","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.4-rivzIntroductionAndUse/README.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.4-rivzIntroductionAndUse/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.1-InstallationOfROS2.md","mtime":"2024-07-29T08:50:21.080Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-29T09:54:30.759Z"},"basePath":"../../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../../gitbook/gitbook.js"></script>
+    <script src="../../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

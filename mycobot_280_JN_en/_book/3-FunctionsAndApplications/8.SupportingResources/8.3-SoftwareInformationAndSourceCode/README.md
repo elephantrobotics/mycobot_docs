@@ -1,35 +1,35 @@
-# 软件资料及源码
-软件资料及源码部分包含与280 JN机械臂配套的软件安装包。用户可以通过这些资料进行软件安装、升级及二次开发，提升机械臂的功能和应用场景
+# Software information and source code
+The software information and source code section includes the software installation package that is compatible with the 280 JN robot arm. Users can use these materials to install, upgrade and perform secondary development of the software to enhance the functions and application scenarios of the robot arm
 
-你可以通过以下链接下载所有相关的产品资料：[软件资料下载](https://www.elephantrobotics.com/support/)
+You can download all relevant product information through the following link: [Software Information Download](https://www.elephantrobotics.com/support/)
 
-### 软件下载链接包含以下可能会使用到的软件
+### The software download link includes the following software that may be used
 ---
 * myStudio 2.0
-	一站式服务平台myStudio，整合myCobot软件资源及各类资料， 
-	主要功能：
-	
-	1. 支持固件下载与更新; 
-	
-	2. 提供产品使用视频教程；
-	
-	3. 维护/维修方面等信息；
+The one-stop service platform myStudio integrates myCobot software resources and various materials.
+Main functions:
+
+1. Support firmware download and update;
+
+2. Provide product use video tutorials;
+
+3. Maintenance/repair information;
 ---
 
 * myBlockly
-  myBlockly是一个完全可视的模块化编程软件，属于图形化编程语言，适合初级用户熟悉编程。
-  使用者以拖拽拼图的方式开发出应用程序，即可创造出简单及复杂的功能。
+myBlockly is a fully visual modular programming software, which belongs to a graphical programming language and is suitable for novice users to familiarize themselves with programming.
+Users can create simple and complex functions by dragging and dropping puzzles to develop applications.
 
 ---
 * Meta Care
-  Meta Care是一款有趣的宠物模拟游戏，融合了宠物养育、故事和成就收集等元素。
-	-游戏需要全程联网。
-	-您需要拥有Meta Dog，并通过蓝牙与您的设备进行连接。
-	-游戏仅支持安卓设备。
-	
+Meta Care is an interesting pet simulation game that combines elements of pet raising, story and achievement collection.
+- The game requires an Internet connection throughout the game.
+- You need to own Meta Dog and connect it to your device via Bluetooth.
+- The game is only supported on Android devices.
+
 ---
 * Elephant Luban
-  Elephant Luban 是一款G-Code轨迹生成使用平台，提供用户基础的使用案例，选择写字画   画， 激光雕刻使用场景，快速开启DIY创意空间。
+Elephant Luban is a G-Code trajectory generation and usage platform that provides user-based use cases, selects writing, painting, and laser engraving usage scenarios, and quickly opens up a DIY creative space.
 ---
-* MyCobot Controlle
-  MyCobot Controller是一款通过蓝牙控制MyCobot系列机械臂的APP。 您可以使用手机移动   机械臂。如果您是安卓用户，请前往[Google Play Store] 如果您是IOS用户，请等待软件   发布后再搜索下载。
+* MyCobot Controllerle
+MyCobot Controller is an APP that controls the MyCobot series of robotic arms via Bluetooth. You can use your phone to move the robotic arm. If you are an Android user, please go to [Google Play Store] If you are an IOS user, please wait for the software to be released before searching and downloading.

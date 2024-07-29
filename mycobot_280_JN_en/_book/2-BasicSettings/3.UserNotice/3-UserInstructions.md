@@ -1,161 +1,160 @@
-# 第三章 用户须知
+# Chapter 3 User Notice
 
-> 第三章《用户须知》是为了确保用户在使用产品时能够达到既定的安全标准和效率，因此对每个用户而言都是必读的。本章节不仅提供了有关产品使用、运输、储存和维护的基本信息，以确保产品的安全运行和效率最大化，还详细阐述了因不遵守这些准则而可能导致的产品故障或损坏的责任问题。
+> Chapter 3 User Notice is a must-read for every user to ensure that the user can achieve the established safety standards and efficiency when using the product. This chapter not only provides basic information on product use, transportation, storage and maintenance to ensure safe operation and maximized efficiency of the product, but also details the liability issues for product failure or damage that may result from failure to comply with these guidelines.
 
 ---
 
-## 1.安全说明
+## 1. Safety Instructions
 
-### 简介
+### Introduction
 
-本章详细介绍了有关对大象机器人执行安装、维护和维修工作的人员的常规安全信息。请在搬运、安装和使用前，先充分阅读和理解本章节的内容与注意事项。
+This chapter details general safety information for personnel who perform installation, maintenance and repair work on the Elephant Robot. Please fully read and understand the contents and precautions of this chapter before handling, installing and using it.
 
-### 危险识别
+### Hazard Identification
 
-协作机器人的安全性建立在正确配置和使用机器人的前提上。并且，即使遵守所有的安全指示，操作者所造成的伤害或损伤依然有可能发生。因此，了解机器人使用的安全隐患是非常重要的，有利于防患于未然。
+The safety of collaborative robots is based on the premise of correctly configuring and using the robots. Moreover, even if all safety instructions are followed, injuries or damage to the operator may still occur. Therefore, it is very important to understand the safety hazards of robot use, which is conducive to preventing them before they happen.
 
-以下表 1-1~3 是使用机器人的情境下可能存在的常见安全隐患 ∶
+Tables 1-1 to 3 below are common safety hazards that may exist when using robots:
 
-**表 1-1 危险级安全隐患**
+**Table 1-1 Dangerous safety hazards**
 
 | ![danger](../../resource/2-BasicSettings/3.UserNotice/danger.png) |
 | :----------------------------------------------------------- |
-| 1 机器人搬运过程中的错误操作导致的人身伤害或者机器人损伤。   |
-| 2 未按要求固定机器人，例如螺钉缺少或螺钉未上紧、底座锁付能力不足以稳定支撑机器人进行高速运动等造成机器人倾倒，导致人身伤害或者机器人损伤。 |
-| 3 未进行机器人的正确安全功能配置，或者少安装了安全防护工具等，造成机器人安全功能未能发挥作用，从而引起危险。 |
+| 1 Personal injury or robot damage caused by incorrect operation during robot handling. |
+| 2 Failure to fix the robot as required, such as lack of screws or screws not tightened, insufficient base locking capacity to stably support the robot for high-speed movement, etc., may cause the robot to fall over, resulting in personal injury or robot damage. |
+| 3 Failure to correctly configure the robot's safety functions, or insufficient installation of safety protection tools, etc., may cause the robot's safety functions to fail to function, thus causing danger. |
 
-**表 1-2 警告级安全隐患**
+**Table 1-2 Warning-level safety hazards**
 
 | ![warning](../../resource/2-BasicSettings/3.UserNotice/warning.png) |
 | :----------------------------------------------------------- |
-| 1 调试程序时请勿在机器人运动范围内逗留，不合适的安全配置可能无法避免可能造成人身伤害的碰撞。 |
-| 2 机器人与其他设备连接可能引发新的危险，需要重新进行全面的风险评估。 |
-| 3 因工作环境中的其他设备或者机器人末端执行器等尖锐表面造成刮伤、刺伤。 |
-| 4 机器人是精密机械，踩踏可能造成机器人损伤。                 |
-| 5 夹持不到位或关闭机器人电源、气源前（未确定末端执行器是否牢固夹持物因为失去动力而掉下）未将夹持的物体取下，可能会引起危险，例如末端执行器损坏、人被砸伤等。 |
-| 6 机器人存在意外移动的风险，在任何情况下，切勿站在机器人任何轴的下方！ |
-| 7 机器人是精密机械，搬运时不能平稳放置可能会引起振动，可能会引起机器人内部部件的损伤。 |
-| 8 机器人与普通机械设备相比自由度更多、运动范围更大，不满足运动范围可能会引起意外的碰撞。 |
+| 1 Do not stay in the robot's motion range when debugging the program. Improper safety configuration may not be able to avoid collisions that may cause personal injury. |
+| 2 The connection between the robot and other equipment may cause new hazards, and a comprehensive risk assessment needs to be re-performed. |
+| 3 Scratches and punctures caused by sharp surfaces such as other equipment or the robot's end effector in the working environment. |
+| 4 The robot is a precision machine, and stepping on it may cause damage to the robot. |
+| 5 Failure to clamp the object in place or not removing the clamped object before turning off the robot power or air source (not confirming whether the end effector is firm and the clamped object falls due to power loss) may cause dangers, such as damage to the end effector and injuries to people. |
+| 6 The robot may move unexpectedly. Do not stand under any axis of the robot under any circumstances! |
+| 7 The robot is a precision machine. If it is not placed stably during transportation, it may cause vibration, which may cause damage to the robot's internal components. |
+| 8 Compared with ordinary mechanical equipment, the robot has more degrees of freedom and a larger range of motion. Failure to meet the range of motion may cause unexpected collisions. |
 
-**表 1-3 有可能导致触电的安全隐患**
+**Table 1-3 Safety hazards that may cause electric shock**
 
 | ![careful](../../resource/2-BasicSettings/3.UserNotice/careful.png) |
 | :----------------------------------------------------------- |
-| 1 使用非原装电缆可能会引发未知危险。                         |
-| 2 用电设备接触液体可能导致漏电危险。                         |
-| 3 电气连接错误时可能存在触电隐患。                           |
-| 4 请务必在关闭控制器与相关装置电源并拔出电源插头之后进行更换作业。如果在通电的状态下进行作业，则可能会导致触电或故障。 |
+| 1 Using non-original cables may cause unknown dangers. |
+| 2 Electrical equipment in contact with liquid may cause leakage. |
+| 3 There may be a risk of electric shock when the electrical connection is incorrect. |
+| 4 Always turn off the power of the controller and related devices and unplug the power plug before replacing. If the work is carried out in the power-on state, it may cause electric shock or malfunction. |
 
-### 2.安全注意事项
+### 2. Safety precautions
 
-**使用机械臂时应遵循如下安全规则：**
+**The following safety rules should be followed when using the robot arm:**
 
-- 机械臂属于带电设备，非专业人士不得随意更改线路，否则容易给设备或者人身带来伤害。
-- 操作机械臂时，应当严格遵守当地的法规和规范，手册中所描述的安全注意事项及描述的“危险”、 “警告”和“注意”事项仅作为当地安全规范的补充。
-- 请在规定环境范围内使用机械臂，超出机械臂规格及负载条件会缩短产品的使用寿命甚至损坏设备。
-- 负责安装、操作、维护 myCobot 机械臂的人员必须先经过严格培训，了解各种安全注意事项，掌握 正确的操作和维护方法之后，才能操作和维护机器人。
-- 请勿长时间在潮湿环境下使用本产品。本产品为精密电子元器件，长时间潮湿环境工作会损坏设备。
-- 请勿在高温环境下使用本设备。本设备外表面是由光敏树脂为原料制造而成，较高的温度会损坏设备的外壳，导致设备故障。
-- 高腐蚀性清洁不适用于机械臂的清洁，阳极氧化的部件不适用于浸没清洁。
-- 请勿在未安装底座时使用本产品以避免损伤本设备或意外发生，本产品应在固定且周围无障碍物的环境下使用。
-- 请勿使用其他电源适配器供电。如因使用不符合标准的适配器导致设备损坏将不在售后服务内。
-- 请勿拆解，拆开，拧开机械臂的螺丝或外壳等。如若拆开，则无法提供保修服务。
-- 未经专业培训人员不得擅自维修故障产品，不得擅自拆卸机械臂，若产品出现故障，请及时联系 myCobot 技术支持工程师。
-- 若该产品报废，请遵守相关法律正确处理工业废料，保护环境。
-- 儿童使用过程中必须有人在旁边监控，运行完成时及时关闭设备。
-- 机器人在运动过程中，请勿将手伸入机械臂运动范围，当心碰伤。
-- 严禁更改或者去除和修改机械臂以及相关设备的铭牌、说明、图标和标记。
-- 搬运、安装过程中请务必小心，应按包装箱上的提示注意轻放、按箭头方向正确放置机器人，否则容易损坏机器。
-- **请勿擅自烧录其他产品驱动、或使用非官方推荐方式烧录固件。**如因用户个人烧录其他固件导致设备损坏将不在售后服务内。
+- The robot arm is a live device. Non-professionals are not allowed to change the circuit at will, otherwise it is easy to cause damage to the equipment or personal injury.
 
-**如果您对本手册的内容有任何疑问或建议，请登录大象机器人官方网站提交相关信息：**
+- When operating the robot arm, local laws and regulations should be strictly observed. The safety precautions and "Danger", "Warning" and "Caution" items described in the manual are only used as supplements to local safety regulations.
+
+- Please use the robot arm within the specified environmental range. Exceeding the robot arm specifications and load conditions will shorten the product life or even damage the equipment.
+
+- Personnel responsible for installing, operating and maintaining the myCobot robot arm must first undergo rigorous training, understand various safety precautions, and master the correct operation and maintenance methods before operating and maintaining the robot.
+
+- Do not use this product in a humid environment for a long time. This product is a precision electronic component. Long-term operation in a humid environment will damage the device.
+
+- Do not use this device in a high temperature environment. The outer surface of this device is made of photosensitive resin as raw material. Higher temperatures will damage the outer shell of the device and cause equipment failure.
+- Highly corrosive cleaning is not suitable for cleaning the robot arm, and anodized parts are not suitable for immersion cleaning.
+- Do not use this product without a base installed to avoid damage to the device or accidents. This product should be used in a fixed environment with no obstacles around.
+- Do not use other power adapters for power supply. If the device is damaged due to the use of an adapter that does not meet the standards, it will not be covered by after-sales service.
+- Do not disassemble, disassemble, or unscrew the screws or casing of the robot arm. If disassembled, warranty service cannot be provided.
+- Personnel who have not received professional training are not allowed to repair faulty products or disassemble the robot arm without authorization. If the product fails, please contact myCobot technical support engineers in time.
+- If the product is scrapped, please comply with relevant laws to properly dispose of industrial waste and protect the environment.
+- Children must be monitored by someone during use, and the device must be turned off in time when the operation is completed.
+- When the robot is in motion, do not put your hand into the range of motion of the robot arm to avoid injury.
+- It is strictly forbidden to change or remove and modify the nameplate, instructions, icons and markings of the robot arm and related equipment.
+- Please be careful during transportation and installation. Please place the robot gently and correctly in the direction of the arrow according to the instructions on the packaging box, otherwise it is easy to damage the machine.
+- **Do not burn other product drivers without authorization, or use unofficial recommended methods to burn firmware. **If the device is damaged due to the user's personal burning of other firmware, it will not be covered by after-sales service.
+
+**If you have any questions or suggestions about the contents of this manual, please log in to the official website of Elephant Robotics to submit relevant information:**
 
 https://www.elephantrobotics.com
 
-**请勿将机械臂用于以下用途：**
+**Do not use the robot arm for the following purposes:**
 
-- 医疗与生命攸关的应用中。
-- 可能会引起爆炸的环境中。
-- 未经过风险评估直接使用。
-- 安全功能等级不够的使用。
-- 不符合的机器人性能参数的使用。
+- Medical and life-critical applications.
 
----
-## 3.运输和储存
+- In an environment that may cause an explosion.
 
-### 装箱打包
+- Direct use without risk assessment.
 
-&emsp;&emsp;在机器人产品进行装箱打包时，请确保使用专为其设计的包装材料和箱体，这些材料能够提供足够的缓冲和支撑，防止运输过程中的撞击和震动。务必检查所有零部件是否已正确固定，避免松动导致损坏。对于易碎或敏感部件，应额外使用防震保护材料进行加固。最后，确保包装箱外标有清晰的搬运和警告标签，指示正确的搬运方式和存放方向。
+- Use with insufficient safety function level.
 
-### 物流运输
-
-&emsp;&emsp;在运输过程中，应使用原始包装运输机器人产品。在运输过程中，应确保机器人产品在包装箱内作为一个整体是稳定的，并通过适当的措施加以保护。在运输和长期储存过程中，环境温度应保持在-20 至+55°C 的范围内，湿度 ≤95%且无凝露。
-
-&emsp;&emsp;由于机器人是精密机械，从包装中取出机器人产品时，应小心处理。在运输过程中，如果不能稳定放置，可能会引起振动并损坏机器人的内部部件。
-
-### 设备储藏
-
-&emsp;&emsp;运输完成后，原包装应妥善存放在干燥的地方，环境温度应保持在-20 至+55°C 的范围内，湿度 ≤95%且无凝露，以备将来重新包装和运输需要。不要将其他物品堆放到机械臂的原包装箱上，防止包装箱变形和机械臂损坏。
+- Use that does not meet the robot performance parameters.
 
 ---
-## 4.维护和保养
+## 3. Transportation and storage
 
-作为一家机器人制造商，我们重视确保客户能够正确、安全地维护和升级他们的机器人设备。为此，我们提供以下详细的维护和保养指南，包括常见维护项目及维修或升级硬件的部分，请您认真阅读:
+### Packing and packaging
 
-### 常见维护项目及推荐周期
+&emsp;&emsp;When packing and packaging the robot product, please make sure to use packaging materials and boxes designed for it. These materials can provide sufficient cushioning and support to prevent impact and vibration during transportation. Be sure to check that all parts are properly fixed to avoid looseness and damage. For fragile or sensitive parts, additional anti-vibration protection materials should be used for reinforcement. Finally, make sure that the outside of the packaging box is marked with clear handling and warning labels to indicate the correct handling method and storage direction.
 
-| **维护项目**       | **描述**                                                         | **推荐周期** |
+### Logistics and Transportation
+
+&emsp;&emsp;During transportation, the robot product should be transported in the original packaging. During transportation, it should be ensured that the robot product is stable as a whole in the packaging box and protected by appropriate measures. During transportation and long-term storage, the ambient temperature should be maintained in the range of -20 to +55°C, and the humidity should be ≤95% without condensation.
+
+&emsp;&emsp;Because the robot is a precision machine, the robot product should be handled with care when it is removed from the packaging. During transportation, if it is not placed stably, it may cause vibration and damage the internal parts of the robot.
+
+### Equipment Storage
+
+&emsp;&emsp;After transportation, the original packaging should be properly stored in a dry place, the ambient temperature should be kept within the range of -20 to +55°C, the humidity should be ≤95% and without condensation, in preparation for future repackaging and transportation needs. Do not stack other items on the original packaging box of the robot arm to prevent the packaging box from deforming and the robot arm from being damaged.
+
+---
+## 4. Maintenance and Care
+
+As a robot manufacturer, we value ensuring that our customers can properly and safely maintain and upgrade their robot equipment. To this end, we provide the following detailed maintenance and care guide, including common maintenance items and parts for repairing or upgrading hardware. Please read carefully:
+
+### Common Maintenance Items and Recommended Cycles
+
+| **Maintenance Item** | **Description** | **Recommended Cycle** |
 | ------------------ | ---------------------------------------------------------------- | ------------ |
-| 视觉检查           | 检查机器人有无明显的损坏、异物堆积或磨损。                       | 日常         |
-| 结构清洁           | 使用干净、干燥的布料清洁机器人结构部件。避免水分和侵蚀性清洁剂。 | 日常         |
-| 紧固件检查         | 检查并紧固所有螺栓和连接件。                                     | 日常         |
-| 润滑               | 对关节和移动部件进行润滑，使用制造商推荐的润滑油。               | 每 3 个月    |
-| 电缆和接线检查     | 检查电缆和接线，确保无损坏或磨损。                               | 每月         |
-| 电气连接检查       | 确保所有电气连接牢固，无腐蚀或损坏。                             | 每月         |
-| 软件更新           | 检查并更新控制软件和应用程序。                                   | 每次有更新时 |
-| 软件数据备份       | 定期备份关键软件配置和数据。                                     | 每季度       |
-| 固件更新           | 定期检查并更新固件，以获取最新的功能和安全补丁。                 | 每次有更新时 |
-| 传感器和器件检查   | 检查传感器和其他关键器件，确保正常工作。                         | 每月         |
-| 紧急停止功能测试   | 定期测试紧急停止功能，确保其可靠性。                             | 每月         |
-| 环境条件监控       | 监控工作环境的温度、湿度、灰尘等，确保符合机器人的操作规格。     | 持续监控     |
-| 安全配置复查       | 定期检查和确认机器人的安全配置，如限速和工作范围设定。           | 每月         |
-| 预防性维护计划执行 | 按制造商的维护计划执行定期检查和维护。                           | 按制造商指南 |
+| Visual Inspection | Check the robot for obvious damage, foreign matter accumulation or wear. | Daily |
+| Structural Cleaning | Clean the robot structural parts with a clean, dry cloth. Avoid moisture and aggressive cleaning agents. | Daily |
+| Fastener inspection | Check and tighten all bolts and connections. | Daily |
+| Lubrication | Lubricate joints and moving parts with lubricants recommended by the manufacturer. | Every 3 months |
+| Cable and wiring inspection | Check cables and wiring to ensure they are not damaged or worn. | Monthly |
+| Electrical connection inspection | Ensure all electrical connections are secure and free of corrosion or damage. | Monthly |
+| Software update | Check and update control software and applications. | Every update |
+| Software data backup | Regularly back up critical software configurations and data. | Quarterly |
+| Firmware update | Regularly check and update firmware to get the latest features and security patches. | Every update |
+| Sensor and device inspection | Check sensors and other critical devices to ensure they are functioning properly. | Monthly |
+| Emergency stop function test | Regularly test the emergency stop function to ensure its reliability. | Monthly |
+| Environmental Condition Monitoring | Monitor the temperature, humidity, dust, etc. of the working environment to ensure that the robot's operating specifications are met. | Continuous Monitoring |
+| Safety Configuration Review | Regularly check and confirm the robot's safety configuration, such as speed limit and working range settings. | Monthly |
+| Preventive Maintenance Plan Execution | Perform regular inspections and maintenance according to the manufacturer's maintenance plan. | According to the manufacturer's guide |
 
-### 独立更改机器人硬件的指南
+### Guidelines for Independently Changing Robot Hardware
 
-我们理解客户可能会有自行升级或维修机器人硬件的需求。在进行任何升级操作之前，请务必详细阅读产品的相关参数，并与我们的官方人员确认是否被允许进行此类操作。未经官方允许的操作可能导致产品故障，且不在保修范围内。
+We understand that customers may have the need to upgrade or repair robot hardware on their own. Before performing any upgrade operations, please be sure to read the relevant parameters of the product in detail and confirm with our official personnel whether such operations are allowed. Operations without official permission may cause product failure and are not covered by the warranty.
 
-**物料要求**
+**Material Requirements**
 
-官方制造或推荐的物料：所有维修和升级所需的配件和组件必须是由我们官方制造或明确推荐的。这包括但不限于电子组件、传感器、电机、连接件和任何其他可更换部件。
+Officially manufactured or recommended materials: All accessories and components required for repairs and upgrades must be officially manufactured or explicitly recommended by us. This includes but is not limited to electronic components, sensors, motors, connectors, and any other replaceable parts.
 
-物料获取：客户可通过我们的官方渠道购买所需的维修和升级物料。这确保了配件的质量和兼容性。
+Material Acquisition: Customers can purchase the required repair and upgrade materials through our official channels. This ensures the quality and compatibility of the accessories.
 
-**维修或升级流程**
+**Repair or Upgrade Process**
 
-客户自行维修：客户应负责完成维修工作。我们将提供详细的维修指导和手册，以指导客户完成维修步骤。
+Customer Self-Repair: The customer is responsible for completing the repair work. We will provide detailed repair instructions and manuals to guide customers through the repair steps.
 
-遵循官方指导：维修操作应严格遵循我们提供的官方指导。任何偏离官方指导的操作都可能导致设备损坏。
+Follow Official Instructions: Repair operations should strictly follow the official instructions we provide. Any deviation from the official instructions may cause damage to the device.
 
-**责任和保修政策**
+**Liability and Warranty Policy**
 
-- 责任划分：  
-  制造商：提供维修和升级的官方指导、官方制造或推荐的物料，并处理由制造缺陷导致的问题。
-  客户：负责按照官方指导完成维修，使用官方配件。
+- Division of Responsibilities:
+Manufacturer: Provide official instructions for repairs and upgrades# Chapter 3 User Notice
 
-- 保修政策：
-  保修有效：只有当维修操作完全遵循我们的指导，且使用官方配件时，保修才有效。
-  保修无效：若客户未按官方指导操作，或使用非官方配件进行维修或升级，导致的任何损坏都将不在保修范围内。
+> Chapter 3 User Notice is a must-read for every user to ensure that the user can achieve the established safety standards and efficiency when using the product. This chapter not only provides basic information on product use, transportation, storage and maintenance to ensure safe operation and maximized efficiency of the product, but also details the liability issues for product failure or damage that may result from failure to comply with these guidelines.
 
-**注意事项**
-
-- 安全第一：在进行任何维修或升级操作前，请确保遵循所有安全指南，包括断电和使用适当的防护装备。
-- 技术支持：如在维修过程中遇到问题，建议停止操作并联系我们的技术支持团队寻求帮助。
-
-我们强烈建议客户严格遵循这些指南，以确保机器人设备的安全、有效运行。不当的维修操作可能导致设备损坏并影响保修状态。如需进一步的指导或支持，请及时联系我们的专业技术团队。
+---
 
 
-
-
-如果您已经阅读了本章的所有内容，请继续阅读下一章。 <br>
-[← 上一章](../../1-ProductInformation/2.ProductParameter/2-ProductParameters.md)| [下一章 →](../4.FirstTimeInstallation/4-FirstTimeInstallation.md)
+If you have read all of this chapter, please continue to the next chapter. <br>
+[← Previous Chapter](../../1-ProductInformation/2.ProductParameter/2-ProductParameters.md)| [Next Chapter →](../4.FirstTimeInstallation/4-FirstTimeInstallation.md)

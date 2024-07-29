@@ -2,7 +2,7 @@
 
 > In Chapter 1, we explored the product's selling points and design concepts, providing you with a panoramic view of the product's high-level understanding. Now, let's move on to Chapter 2 - Robot Parameters. This chapter will be the key to your understanding of the product's technical details. A detailed understanding of these technical parameters will not only help you fully realize the advancement and practicality of our products, but also ensure that you can use these technologies more effectively to meet your specific needs.
 
-<img src="../../resource\1-ProductInformation\2.ProductParameter/280JNtu.png" style="zoom:100%;" />
+<img src="../../resource\1-ProductInformation\2.ProductParameter/1280JNtu.png" style="zoom:100%;" />
 
 ## 1 Robot Specifications
 
@@ -121,7 +121,7 @@ Figure 1 Base interface
 | GND | GND | p | GND | |
 | 04 | GPIO4 | I/O | GPIO4 | |
 | 03 | GPIO3 | I/O | GPIO3 | SCL I2C bus (serial clock line) occupied |
-| NC | NC | - | - | Not supported yet | |3.3 | 3.3V | P | DC 3.3V | | | 21 | GPIO21 | I/O | GPIO21 | | | 20 | GPIO20 | I/O | GPIO20 | | | 16 | GPIO16 | I/O | GPIO16 | | | GND | | | 01 | GPIO1 | I/O | GPIO1 | | | 07 | GPIO7 | I/O | GPIO7 | | | 08 | GPIO8 | I/O | GPIO8 | | | 25 | GPIO25 | 24 | GPIO24 | I/O | GPIO24 | |
+| NC | NC | - | - | Not supported yet |
 | 23 | GPIO23 | I/O | GPIO23 | |
 | GND | GND | p | GND | |
 | 18 | GPIO18 | I/O | GPIO18 | PAD occupation |

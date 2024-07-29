@@ -1,153 +1,159 @@
-# 第四章 首次安装
-## 1.产品标准清单
-## 1.1产品列表图片
-> 感谢您选择大象机器人myCobot 280 JN机械臂，本章节内容旨在帮助您轻松上手大象机器人产品，享受产品带来的每一个精彩瞬间。
+# Chapter 4 First Installation
+## 1. Product Standard List
+## 1.1 Product List Image
+> Thank you for choosing the Elephant Robot myCobot 280 JN robot arm. The content of this chapter is to help you easily get started with the Elephant Robot product and enjoy every wonderful moment brought by the product.
 
+![Unboxing Kit](../../resource/2-BasicSettings/4.FirstTimeInstallation/280PI.png)
 
-![开箱套装](../../resource/2-BasicSettings/4.FirstTimeInstallation/280PI.png)
+## 1.2 Product Standard List Comparison Table
 
-## 1.2产品标准清单对照表
-
-| 序列号 | 产品                                |
+| Serial Number | Product |
 | :----: | :---------------------------------- |
-|   1    | myCobot机械臂（型号myCobot-280 JN） |
-|   2    | myCobot机械臂-产品画册              |
-|   3    | myCobot机械臂-配套电源线            |
-|   4    | USB-Type C                          |
-|   5    | HDMI连接线                          |
+| 1 | myCobot Robot Arm (Model myCobot-280 JN) |
+| 2 | myCobot Robot Arm-Product Brochure |
+| 3 | myCobot Robot Arm-Matching Power Cable |
+| 4 | USB-Type C |
+| 5 | HDMI Cable |
 
-**注：** 包装箱到位后，请确认机器人包装完好无损。如有损坏，请及时联系物流公司和您所在地区的供应商。开箱后，请根据物品清单检查箱内的实际物品。
-
----
-## 2.产品开箱指南
-## 2.1产品开箱图文引导
-
-**为什么需要按照步骤拆卸产品**
-
-在本节中，我们强烈建议按照指定步骤拆卸产品。这不仅有助于确保产品在运输过程中不受损害，还能将意外故障的风险降至最低。请仔细阅读以下图解指南，以确保您的产品在开箱过程中的安全。
-
-- **1** 检查包装箱是否损坏。如有损坏或配件缺失，请及时联系物流公司和您所在地区的供应商。
-
-- **2** 打开包装盒，取出产品宣传册、海绵包装盖、myCobot 机器人手臂、配套电源、平板底座和附件包。
-
-- **3** 确保每一步都完成后再进行下一步，以防止不必要的损坏或遗漏。
-
-**注:** 取出产品后，请仔细检查每件物品的外观。请对照物品清单检查包装箱中的实际物品。
-
-## 3.开机检测指南
-
-## 3.1结构安装和固定
-
-在 **机械臂** 的运动过程中，如果不将 myCobot 的**底面与桌面或其他底面相连**，仍然会造成 myCobot 的 **摇晃或倾覆**。
-
-**常见的固定机械臂的方式有三种**：
-
-1) 使用乐高插键固定在具有乐高接口的底座上
-我们销售的底座有 2 种：平面吸盘底座与 G 型夹底座
-![底座](../../resource/2-BasicSettings/4.FirstTimeInstallation/stand.jpg)
-​	平面底座 适配型号：myCobot 280
-
-* 在底座的四角安装吸盘并拧紧。
-* 用附带的乐高科技件，连接平面底座和机械臂底部。
-* 将四个吸盘固定在平整光滑平面后方可开始使用。
-* 技巧： 可以适当在吸盘下加入少量不导电液体，以填补吸盘与桌面的缝隙，以获得最佳吸附效果。
-![底座2](../../resource/2-BasicSettings/4.FirstTimeInstallation/stand_2.jpg)
+**Note:** After the packaging box arrives, please confirm that the robot packaging is intact. If there is any damage, please contact the logistics company and the supplier in your area in time. After unpacking, please check the actual items in the box according to the list of items.
 
 ---
+## 2. Product unpacking guide
+## 2.1 Product unpacking graphic guide
 
-G型底座 适配型号：myCobot 280、myPalletizer 260
+**Why do you need to disassemble the product according to the steps**
 
-![G底座](../../resource/2-BasicSettings/4.FirstTimeInstallation/GStand.jpg)
+In this section, we strongly recommend disassembling the product according to the specified steps. This not only helps to ensure that the product is not damaged during transportation, but also minimizes the risk of unexpected failures. Please read the following graphic guide carefully to ensure the safety of your product during the unpacking process.
 
-   - 用G形夹将底座固定在桌子边沿
+- **1** Check the packaging box for damage. If there is any damage or missing accessories, please contact the logistics company and the supplier in your area in time.
 
-   - 用附带的乐高科技件，连接底座和机械臂底部
+- **2** Open the box and take out the product brochure, sponge packaging cover, myCobot robot arm, matching power supply, flat base and accessory bag.
 
-   - 确定稳固后方可开始使用
+- **3** Make sure each step is completed before proceeding to the next step to prevent unnecessary damage or omissions.
 
-![G底座2](../../resource/2-BasicSettings/4.FirstTimeInstallation/GStand2.jpg)
+**Note:** After taking out the product, please carefully check the appearance of each item. Please check the actual items in the box against the list of items.
 
-2 myCobot 底座的螺丝孔位连接
+## 3. Startup Inspection Guide
 
-需要将机器人固定在牢固机座上才可以正常使用。机座重量要求：固定式机座，或移动式机座。
+## 3.1 Structural Installation and Fixing
 
-请确定固定底座上有对应螺纹孔位，再进行安装。
+During the movement of the **robot arm**, if the **bottom surface of myCobot is not connected to the desktop or other bottom surface**, myCobot will still **shake or overturn**.
 
-正式进行安装前，请确认：
+**There are three common ways to fix the robot arm**:
 
-* 待安装环境符合以上《工作环境与条件》表格的要求。
-*  安装位置不小于机器人工作范围，且留有足够大的安装、使用、维护、维修的空间。
-*  将机座放置到合适位置。
-*  安装相关工具已准备好，如螺丝、扳手等。
-  **确认以上内容后**，请将机器人搬运至机座安装台面上，调整机器人位置，将机器人基座固定孔位与机座安装台面上的孔位对准。对准孔位后，将螺丝对准孔位，拧紧即可。
+1) Use Lego keys to fix it on a base with a Lego interface
 
-* 注意：在机座安装台面上调整机器人位置时，请尽量避免在机座安装台面上直接推拉机器人，以免产生划痕。人工移动机器人时请尽量避免对机器人本体脆弱部分施加外力，以免造成机器人不必要的损伤。
+We sell two types of bases: flat suction cup base and G-type clamp base
+![Base](../../resource/2-BasicSettings/4.FirstTimeInstallation/stand.jpg)
+​ Flat base Applicable model: myCobot 280
+
+* Install suction cups at the four corners of the base and tighten them.
+
+* Use the included Lego technology parts to connect the flat base and the bottom of the robot arm.
+
+* Fix the four suction cups on a flat and smooth surface before starting to use.
+* Tips: You can add a small amount of non-conductive liquid under the suction cup to fill the gap between the suction cup and the desktop to achieve the best adsorption effect.
+![Base 2](../../resource/2-BasicSettings/4.FirstTimeInstallation/stand_2.jpg)
 
 ---
-# 4.上电与初步检测
 
-## 4.1机器人上电
+G-type base Applicable models: myCobot 280, myPalletizer 260
 
-操作前，请确认已阅读并确保已遵循**第一章 安全须知**的内容，确保操作安全。同时将电源适配器连接上机械臂，并将机械臂底座固定在桌子上。连接方式如图 3-1 所示：
+![G base](../../resource/2-BasicSettings/4.FirstTimeInstallation/GStand.jpg)
+
+- Use the G-shaped clip to fix the base to the edge of the table
+
+- Use the included Lego technology parts to connect the base and the bottom of the robot arm
+
+- Make sure it is stable before starting to use
+
+![G base 2](../../resource/2-BasicSettings/4.FirstTimeInstallation/GStand2.jpg)
+
+2 myCobot base screw hole connection
+
+The robot needs to be fixed on a solid base before it can be used normally. Base weight requirements: fixed base, or mobile base.
+
+Please make sure that there are corresponding threaded holes on the fixed base before installation.
+
+Before formal installation, please confirm:
+
+* The installation environment meets the requirements of the above "Working Environment and Conditions" table.
+
+* The installation location is not less than the robot's working range, and there is enough space for installation, use, maintenance, and repair.
+
+* Place the base in a suitable position.
+
+* The installation-related tools are ready, such as screws, wrenches, etc.
+
+**After confirming the above content**, please move the robot to the base installation table, adjust the robot position, and align the robot base fixing holes with the holes on the base installation table. After aligning the holes, align the screws with the holes and tighten them.
+
+* Note: When adjusting the robot position on the base installation table, please try to avoid pushing and pulling the robot directly on the base installation table to avoid scratches. When manually moving the robot, please try to avoid applying external force to the fragile parts of the robot body to avoid unnecessary damage to the robot.
+
+---
+# 4. Power on and preliminary inspection
+
+## 4.1 Power on the robot
+
+Before operation, please make sure that you have read and followed the contents of **Chapter 1 Safety Instructions** to ensure safe operation. At the same time, connect the power adapter to the robot arm and fix the base of the robot arm on the table. The connection method is shown in Figure 3-1:
 
 <img src="../../resource/2-BasicSettings/4.FirstTimeInstallation/2.1.7.3-2-001.jpg" alt="2.1.7.3-2-001" style="zoom:10%;" />
 
-图 3-1
+Figure 3-1
 
-myCobot **必须使用外部电源**进行供电，以提供足够的电量：
+myCobot **must be powered by an external power supply** to provide sufficient power:
 
-- 额定电压: 12V
-- 额定电流: 3-5A
-- 插头类型: DC 5.5mm x 2.1
+- Rated voltage: 12V
+- Rated current: 3-5A
+- Plug type: DC 5.5mm x 2.1
 
-注意，**不能仅仅使用插入M5Stack-basic的TypeC进行供电**。使用官方适配的电源，以免对机械臂造成损害。
+Note that **it cannot be powered by just the TypeC plugged into the M5Stack-basic**. Use an officially-adapted power supply to avoid damage to the robot arm.
 
-## 4.2连接外部设备
+## 4.2 Connect external devices
 
-使用配套的HDMI线连接机械臂和显示器：
+Use the matching HDMI cable to connect the robot arm and the monitor:
 
-- 先将HDMI线插入显示器的HDMI接口。
+- First insert the HDMI cable into the HDMI port of the monitor.
 
-  <img src="../../resource/2-BasicSettings/4.FirstTimeInstallation/PI连接3.jpg" alt="img" style="zoom:100%;" />
+<img src="../../resource/2-BasicSettings/4.FirstTimeInstallation/PI连接3.jpg" alt="img" style="zoom:100%;" />
 
-- 再将另一头插入机械臂的HDMI接口即可。
+- Then insert the other end into the HDMI port of the robot arm.
 
-  <img src="../../resource/2-BasicSettings/4.FirstTimeInstallation/280JNHDMI_1.jpg" alt="img" style="zoom:100%;" />
-  
-- myCobot 280 Jetson Nano 有3路USB接口，这可以直接插入鼠标、键盘和其他外围设备使用
+<img src="../../resource/2-BasicSettings/4.FirstTimeInstallation/280JNHDMI_1.jpg" alt="img" style="zoom:100%;" />
+
+- myCobot 280 Jetson Nano has 3 USB ports, which can be directly plugged into a mouse, keyboard and other peripherals for use
 
 <img src="../../resource/2-BasicSettings/4.FirstTimeInstallation/2.1.7.4-1-003.jpg" alt="2.1.7.4-1-003" style="zoom:12%;" />
 
-## 4.3上电
+## 4.3 Power on
 
-连接所需的外部设备后,按下按钮如图圈来启动机器
+After connecting the required external devices, press the button as shown in the circle to start the machine
 
 <img src="../../resource/2-BasicSettings/4.FirstTimeInstallation//2.1.7.4-1-004.jpg" alt="2.1.7.4-1-003" style="zoom:12%;" />
 
-**系统卡说明**
+**System card description**
 
-出厂自带64G TF卡，内置Ubuntu20.04 系统，已安装myStudio 固件烧录软件，myBlockly 图形化编程软件，且已适配python 、ROS开发环境。
+The machine comes with a 64G TF card, built-in Ubuntu20.04 system, myStudio firmware burning software, myBlockly graphical programming software installed, and adapted to python and ROS development environment.
 
-确保你使用的是质量好的电源，我们建议使用官方提供电源。在关闭机械臂之前，请确保正确关闭了操作系统。您可以在我们的gitbook上获得有关使用机械臂的帮助。
+Make sure you are using a good quality power supply. We recommend using the official power supply. Before shutting down the robot arm, make sure that the operating system is properly shut down. You can get help on using the robot arm on our gitbook.
 
-## 5.开箱视频
+## 5. Unboxing video
 
 <video id="my-video" class="video-js" controls preload="auto" width="100%"
 poster="" data-setup='{"aspectRatio":"16:9"}'>
-  <source src="https://www.elephantrobotics.com/wp-content/uploads/2022/03/280jn%E5%BC%80%E7%AE%B1%E4%B8%AD%E6%96%8720220314_4.mp4#t=4"></video>
+<source src="https://www.elephantrobotics.com/wp-content/uploads/2022/03/280jn%E5%BC%80%E7%AE%B1%E4%B8%AD%E6%96%8720220314_4.mp4#t=4"></video>
 
-## 6.常见问题解决
-本小节旨在帮助用户解决在使用过程中所遇到的常见问题，涵盖硬件、软件、驱动以及如何在论坛中提问这几个方面，如您在使用机械臂的过程中遇到问题，请首先阅读本小节的内容来寻求解决办法。如果列举出的问题无法帮助您解决并且您有更多售后问题想要咨询请添加售后小管家微信。
+## 6. Common Problem Solving
+This section aims to help users solve common problems encountered during use, covering hardware, software, drivers, and how to ask questions in the forum. If you encounter problems while using the robotic arm, please read the contents of this section first to find solutions. If the listed problems cannot help you solve and you have more after-sales questions, please add the after-sales manager WeChat.
 
-[如何合理的提问以获取问题解决办法](../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.md)
+[How to ask reasonable questions to get solutions](../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.md)
 
-[常见的驱动问题以及解决方案](../../4-SupportAndService/9.Troubleshooting/9.1-driver.md)
+[Common driver problems and solutions](../../4-SupportAndService/9.Troubleshooting/9.1-driver.md)
 
-[常见的软件问题以及解决方案](../../4-SupportAndService/9.Troubleshooting/9.2-software.md)
+[Common software problems and solutions](../../4-SupportAndService/9.Troubleshooting/9.2-software.md)
 
-[常见的硬件问题以及解决方案](../../4-SupportAndService/9.Troubleshooting/9.3-hardware.md)
+[Common hardware problems and solutions](../../4-SupportAndService/9.Troubleshooting/9.3-hardware.md)
 
 ---
 
-如果您已经阅读了本章的所有内容，请继续阅读下一章。 <br>
-[← 上一章](../3.UserNotice/3-UserInstructions.md) | [下一章 →](../../3-FunctionsAndApplications/5.BasicFunction/README.md)
+If you have read all the contents of this chapter, please continue to read the next chapter. <br>
+[← Previous Chapter](../3.UserNotice/3-UserInstructions.md) | [Next Chapter →](../../3-FunctionsAndApplications/5.BasicFunction/README.md)
