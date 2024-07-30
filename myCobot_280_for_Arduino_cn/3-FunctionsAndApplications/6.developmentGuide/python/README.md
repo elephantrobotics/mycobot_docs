@@ -26,10 +26,8 @@
 
 6.[夹爪控制](7.6_gripper.md)
 
-7.[TCP&IP](7.7_TCPIP.md)
+7.[手柄控制](7.9_HandleControl.md)
 
-8.[手柄控制](7.9_HandleControl.md)
+8.[绘制图案](7.15_280_gcode_draw.md)
 
-9.[绘制图案](7.15_280_gcode_draw.md)
-
-10.[演示代码](7.8_example.md)
+9.[演示代码](7.8_example.md)

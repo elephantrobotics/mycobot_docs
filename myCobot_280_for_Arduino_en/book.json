@@ -1,0 +1,23 @@
+{
+  "plugins": ["anchor-navigation-ex"],
+  "pluginsConfig": {
+    "anchor-navigation-ex": {
+      "showLevel": false,
+      "showGoTop": true,
+      "mini": true,
+      "float": {
+        "show": true,
+        "trigger": "click",
+        "right": "20px",
+        "bottom": "20px",
+        "offset": {
+          "top": 10,
+          "left": 10
+        },
+        "minWidth": "70px",
+        "zIndex": "1000"
+      },
+      "insertAnchor": true
+    }
+  }
+}
