@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -389,9 +393,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2.1.4" data-path="10.4-arduinolib_use.md">
+        <li class="chapter " data-level="1.4.2.1.4" data-path="../Arduino/10.4-arduinolib_use.html">
             
-                <span>
+                <a href="../Arduino/10.4-arduinolib_use.html">
             
                     
                     6.1.4库的使用
@@ -1070,14 +1074,14 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="io&#x63A7;&#x5236;">IO&#x63A7;&#x5236;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#io&#x63A7;&#x5236;"><b></b>IO&#x63A7;&#x5236;</a></li><ul><li><span class="title-icon "></span><a href="#mycobot"><b></b>mycobot</a></li><ul><li><span class="title-icon "></span><a href="#basic-io"><b></b>Basic IO</a></li><li><span class="title-icon "></span><a href="#atom-io"><b></b>Atom IO</a></li><li><span class="title-icon "></span><a href="#&#x6811;&#x8393;&#x6D3E;&#x2014;&#x2014;gpio"><b></b>&#x6811;&#x8393;&#x6D3E;&#x2014;&#x2014;GPIO</a></li><li><span class="title-icon "></span><a href="#&#x6848;&#x4F8B;&#x4F7F;&#x7528;"><b></b>&#x6848;&#x4F8B;&#x4F7F;&#x7528;</a></li></ul></ul></ul></div><a href="#io&#x63A7;&#x5236;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="io&#x63A7;&#x5236;"><a name="io&#x63A7;&#x5236;" class="anchor-navigation-ex-anchor" href="#io&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>IO&#x63A7;&#x5236;</h1>
 <p>IO&#x5373;&#x6570;&#x636E;&#x7684;&#x8F93;&#x5165;&#x4E0E;&#x8F93;&#x51FA;&#xFF0C;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x673A;&#x68B0;&#x81C2;&#x7684;Basic&#x548C;Atom&#x4E0A;&#x6709;&#x591A;&#x4E2A;pin&#x811A;&#xFF0C;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x51FD;&#x6570;&#x63A5;&#x53E3;&#x53EF;&#x4EE5;&#x5BF9;&#x5176;&#x8BBE;&#x7F6E;&#x5176;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x6A21;&#x5F0F;&#x3002;</p>
 <ul>
 <li><strong>myCobot&#xFF1A;</strong></li>
 </ul>
 <p><img src="../../../resource/3-FunctionsAndApplications/6.developmentGuide/python/io/mycobotIO.jpg" style="zoom: 67%;"></p>
-<h2 id="mycobot">mycobot</h2>
-<h3 id="basic-io">Basic IO</h3>
+<h2 id="mycobot"><a name="mycobot" class="anchor-navigation-ex-anchor" href="#mycobot"><i class="fa fa-link" aria-hidden="true"></i></a>mycobot</h2>
+<h3 id="basic-io"><a name="basic-io" class="anchor-navigation-ex-anchor" href="#basic-io"><i class="fa fa-link" aria-hidden="true"></i></a>Basic IO</h3>
 <p><strong>get_basic_input(pin_no)</strong></p>
 <ul>
 <li><strong>&#x529F;&#x80FD;&#xFF1A;</strong> &#x83B7;&#x53D6;&#x5E95;&#x90E8;&#x5F15;&#x811A;&#x53F7;&#x7684;&#x5DE5;&#x4F5C;&#x72B6;&#x6001;</li>
@@ -1099,7 +1103,7 @@
 <li><strong>&#x529F;&#x80FD;&#xFF1A;</strong> &#x83B7;&#x53D6;&#x68C0;&#x6D4B;&#x5230;&#x7684;&#x8DDD;&#x79BB;&#xFF08;&#x9700;&#x8981;&#x5916;&#x90E8;&#x8DDD;&#x79BB;&#x68C0;&#x6D4B;&#x5668;&#xFF09;</li>
 <li><strong>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</strong> &#x68C0;&#x6D4B;&#x5230;&#x7684;&#x8DDD;&#x79BB;&#x503C;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;mm</li>
 </ul>
-<h3 id="atom-io">Atom IO</h3>
+<h3 id="atom-io"><a name="atom-io" class="anchor-navigation-ex-anchor" href="#atom-io"><i class="fa fa-link" aria-hidden="true"></i></a>Atom IO</h3>
 <p><strong>set_pin_mode(pin_no, pin_mode)</strong></p>
 <ul>
 <li><strong>&#x529F;&#x80FD;&#xFF1A;</strong> &#x8BBE;&#x7F6E; atom &#x4E2D;&#x6307;&#x5B9A;&#x5F15;&#x811A;&#x7684;&#x72B6;&#x6001;&#x6A21;&#x5F0F;</li>
@@ -1135,7 +1139,7 @@
 <li><p><strong>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</strong> <code>pin_signal</code>( <code>int</code>) &#x5F53;&#x8FD4;&#x56DE;&#x7684;&#x503C;&#x4E3A;0&#x8868;&#x793A;&#x5728;&#x5DE5;&#x4F5C;&#x72B6;&#x6001;&#x8FD0;&#x884C;&#xFF0C;1&#x8868;&#x793A;&#x505C;&#x6B62;&#x72B6;&#x6001;</p>
 </li>
 </ul>
-<h3 id="&#x6811;&#x8393;&#x6D3E;&#x2014;&#x2014;gpio">&#x6811;&#x8393;&#x6D3E;&#x2014;&#x2014;GPIO</h3>
+<h3 id="&#x6811;&#x8393;&#x6D3E;&#x2014;&#x2014;gpio"><a name="&#x6811;&#x8393;&#x6D3E;&#x2014;&#x2014;gpio" class="anchor-navigation-ex-anchor" href="#&#x6811;&#x8393;&#x6D3E;&#x2014;&#x2014;gpio"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6811;&#x8393;&#x6D3E;&#x2014;&#x2014;GPIO</h3>
 <p>&#x5F53;&#x60A8;&#x7684;&#x673A;&#x68B0;&#x81C2;&#x4E3A;&#x6811;&#x8393;&#x6D3E;&#x7248;&#x672C;&#x65F6;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x7528;&#x5230;&#x4EE5;&#x4E0B;API</p>
 <p><strong>&#x7528;&#x6CD5;&#xFF1A;</strong></p>
 <p>&#x6587;&#x4EF6;&#x5F00;&#x5934;&#x8F93;&#x5165;&#x4EE3;&#x7801;&#x5BFC;&#x5165;&#xFF1A;</p>
@@ -1175,7 +1179,7 @@
 </li>
 <li><strong>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</strong>  0&#x4E3A;&#x4F4E;&#x7535;&#x5E73;    1&#x4E3A;&#x9AD8;&#x7535;&#x5E73;</li>
 </ul>
-<h3 id="&#x6848;&#x4F8B;&#x4F7F;&#x7528;">&#x6848;&#x4F8B;&#x4F7F;&#x7528;</h3>
+<h3 id="&#x6848;&#x4F8B;&#x4F7F;&#x7528;"><a name="&#x6848;&#x4F8B;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x6848;&#x4F8B;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6848;&#x4F8B;&#x4F7F;&#x7528;</h3>
 <ul>
 <li><strong>MyCobot 280-M5&#x7248;&#x672C;&#xFF1A;</strong></li>
 </ul>
@@ -1302,7 +1306,7 @@ GPIO.output(<span class="hljs-number">21</span>, <span class="hljs-number">1</sp
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.2.5 IO控制","level":"1.4.2.2.5","depth":4,"next":{"title":"6.2.6夹爪控制","level":"1.4.2.2.6","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/python/7.6_gripper.md","ref":"3-FunctionsAndApplications/6.developmentGuide/python/7.6_gripper.md","articles":[]},"previous":{"title":"6.2.4坐标控制","level":"1.4.2.2.4","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/python/7.4_coord.md","ref":"3-FunctionsAndApplications/6.developmentGuide/python/7.4_coord.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-FunctionsAndApplications/6.developmentGuide/python/7.5_IO.md","mtime":"2024-07-19T03:37:25.523Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-29T09:54:30.759Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.2.5 IO控制","level":"1.4.2.2.5","depth":4,"next":{"title":"6.2.6夹爪控制","level":"1.4.2.2.6","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/python/7.6_gripper.md","ref":"3-FunctionsAndApplications/6.developmentGuide/python/7.6_gripper.md","articles":[]},"previous":{"title":"6.2.4坐标控制","level":"1.4.2.2.4","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/python/7.4_coord.md","ref":"3-FunctionsAndApplications/6.developmentGuide/python/7.4_coord.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","livereload"],"pluginsConfig":{"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"insertAnchor":true,"showGoTop":true,"mini":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":"","bottom":"20px","offset":{"top":10,"left":10},"minWidth":"70px","floatIcon":"fa fa-navicon","zIndex":"1000","trigger":"click","right":"20px","show":true}},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-FunctionsAndApplications/6.developmentGuide/python/7.5_IO.md","mtime":"2024-07-19T03:37:25.523Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-30T03:12:01.360Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
