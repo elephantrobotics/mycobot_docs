@@ -107,9 +107,8 @@ myCobot 280系列共4个版本：M5版本、PI版本、ardunio版本以及jetson
 </table>
 
 
-# 1 myStudio环境搭建
-
-## 1.1 myStudio下载和安装
+## myStudio环境搭建
+## myStudio下载和安装
 
 >注意：myStudio安装时的安装路径不能有任何空格
 
@@ -144,7 +143,7 @@ myCobot 280系列共4个版本：M5版本、PI版本、ardunio版本以及jetson
 
 
 
-## 1.2 安装驱动
+## 安装驱动
 
 用户可根据自己所使用的操作系统，点击下方按钮下载相应的 **CP210X** 或 **CP34X** 驱动程序压缩包，在解压压缩包后，选择对应操作系统位数的安装包进行安装。
 
@@ -174,7 +173,7 @@ myCobot 280系列共4个版本：M5版本、PI版本、ardunio版本以及jetson
 
 
 
-## 1.3 如何区分CP210X和CP34X芯片
+## 如何区分CP210X和CP34X芯片
 
 - 如下图所示，打开 **设备管理器** ，查看 **端口(COM和LPT)** 
 
@@ -190,11 +189,11 @@ myCobot 280系列共4个版本：M5版本、PI版本、ardunio版本以及jetson
 
 
 
-# 2 烧录与更新固件
+## 烧录与更新固件
 
 **[myStudio视频教程](https://www.bilibili.com/video/BV1Qr4y1N7B5/)**
 
-## 2.1 烧录M5Stack-Basic固件
+## 烧录M5Stack-Basic固件
 
 > **注意：Pi系列机械臂无需烧录M5Stack-Basic固件。**
 
@@ -218,7 +217,7 @@ myCobot 280系列共4个版本：M5版本、PI版本、ardunio版本以及jetson
 
 
 
-## 2.2 烧录 Atom 固件
+## 烧录 Atom 固件
 
 第一步：与PC连接。用 USB 连接末端的Atom。
 <img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.2-Softwarelnstructions/4.1.2.1-atom_PC.jpg" alt="atom" style="zoom:40%;" />

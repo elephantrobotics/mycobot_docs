@@ -101,35 +101,49 @@ Figure 1 Base interface
 
 <center>Table 1</center>
 
-| Label | Signal Name | Type | Function | Remarks |
+
+| tag | sign | species | function | remark |
 | :---: | :----: | :--: | :------: | :----: |
-| GND | GND | p | GND | |
-| 26 | GPIO26 | I/O | GPIO26 | |
-| 19 | GPIO19 | I/O | GPIO19 | |
-| 13 | GPIO13 | I/O | GPIO13 | |
-| 06 | GPIO6 | I/O | GPIO6 | |
-| 05 | GPIO5 | I/O | GPIO5 | |
-| 00 | GPIO0 | I/O | GPIO0 | |
-| GND | GND | p | GND | |
-| 11 | GPIO11 | I/O | GPIO11 | |
-| 09 | GPIO9 | I/O | GPIO9 | |
-| 10 | GPIO10 | I/O | GPIO10 | |
-|3.3 | 3.3V | P | DC 3.3V | |
-| 22 | GPIO22 | I/O | GPIO22 | |
-| 27 | GPIO27 | I/O | GPIO27 | |
-| 17 | GPIO17 | I/O | GPIO17 | PAD occupied |
-| GND | GND | p | GND | |
-| 04 | GPIO4 | I/O | GPIO4 | |
+| GND | GND  | p | GND |  |
+| 26 | GPIO26 | I/O | GPIO26 |  |
+| 19 | GPIO19 | I/O | GPIO19 |  |
+| 13 | GPIO13 | I/O | GPIO13 |  |
+| 06 | GPIO6 | I/O | GPIO6 |  |
+| 05 | GPIO5 | I/O | GPIO5 |  |
+| 00 | GPIO0 | I/O | GPIO0 |  |
+| GND | GND  | p | GND |  |
+| 11 | GPIO11 | I/O | GPIO11 |  |
+| 09 | GPIO9 | I/O | GPIO9 |  |
+| 10 | GPIO10 | I/O | GPIO10 |  |
+|3.3 | 3.3V | P | DC 3.3V |  |
+| 22 | GPIO22 | I/O | GPIO22 |  |
+| 27 | GPIO27 | I/O | GPIO27 |  |
+| 17 | GPIO17 | I/O | GPIO17 | PAD occupancy |
+| GND | GND  | p | GND |  |
+| 04 | GPIO4 | I/O | GPIO4 |  |
 | 03 | GPIO3 | I/O | GPIO3 | SCL I2C bus (serial clock line) occupied |
-| NC | NC | - | - | Not supported yet |
-| 23 | GPIO23 | I/O | GPIO23 | |
-| GND | GND | p | GND | |
-| 18 | GPIO18 | I/O | GPIO18 | PAD occupation |
-| NC | NC | - | - | Not supported |
-| NC | NC | - | - | Not supported |
-| GND | GND | p | GND | |
-| 5V | 5V | P | DC 5V | |
-| 5V | 5V | P | DC 5V | |
+| NC | NC | - | - | nonsupport |
+|3.3 | 3.3V | P | DC 3.3V |  |
+| 21 | GPIO21 | I/O | GPIO21 |  |
+| 20 | GPIO20 | I/O | GPIO20 |  |
+| 16 | GPIO16 | I/O | GPIO16 |  |
+| GND | GND  | p | GND |  |
+| 12 | GPIO12 | I/O | GPIO12 |  |
+| GND | GND  | p | GND |  |
+| 01 | GPIO1 | I/O | GPIO1 |  |
+| 07 | GPIO7 | I/O | GPIO7 |  |
+| 08 | GPIO8 | I/O | GPIO8 |  |
+| 25 | GPIO25 | I/O | GPIO25 |  |
+| GND | GND  | p | GND |  |
+| 24  | GPIO24 | I/O | GPIO24 |  |
+| 23 | GPIO23 | I/O | GPIO23 |  |
+| GND | GND  | p | GND |  |
+| 18 | GPIO18 | I/O | GPIO18 | PAD occupancy |
+| NC | NC | - | - | nonsupport |
+| NC | NC | - | - | nonsupport |
+| GND | GND  | p | GND |  |
+| 5V | 5V | P | DC 5V |  |
+| 5V | 5V | P | DC 5V |  |
 
 > **Note:**
 > 1. I: Only as input.

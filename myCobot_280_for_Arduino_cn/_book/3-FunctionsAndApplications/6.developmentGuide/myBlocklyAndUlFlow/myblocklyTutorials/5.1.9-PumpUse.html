@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -389,9 +393,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2.1.4" data-path="../../python/10.4-arduinolib_use.md">
+        <li class="chapter " data-level="1.4.2.1.4" data-path="../../Arduino/10.4-arduinolib_use.html">
             
-                <span>
+                <a href="../../Arduino/10.4-arduinolib_use.html">
             
                     
                     6.1.4库的使用
@@ -1070,14 +1074,14 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="9-&#x5438;&#x6CF5;&#x7684;&#x4F7F;&#x7528;">9 &#x5438;&#x6CF5;&#x7684;&#x4F7F;&#x7528;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#9-&#x5438;&#x6CF5;&#x7684;&#x4F7F;&#x7528;"><b></b>9 &#x5438;&#x6CF5;&#x7684;&#x4F7F;&#x7528;</a></li><ul><ul><li><span class="title-icon "></span><a href="#&#x672C;&#x7AE0;&#x5B66;&#x4E60;&#x5185;&#x5BB9;"><b></b>&#x672C;&#x7AE0;&#x5B66;&#x4E60;&#x5185;&#x5BB9;</a></li></ul></ul></ul></div><a href="#9-&#x5438;&#x6CF5;&#x7684;&#x4F7F;&#x7528;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="9-&#x5438;&#x6CF5;&#x7684;&#x4F7F;&#x7528;"><a name="9-&#x5438;&#x6CF5;&#x7684;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#9-&#x5438;&#x6CF5;&#x7684;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>9 &#x5438;&#x6CF5;&#x7684;&#x4F7F;&#x7528;</h1>
 <p><i>&#x5F00;&#x59CB;&#x524D;&#x51C6;&#x5907;</i></p>
 <p>M5Stack&#x7CFB;&#x5217;&#xFF1A;&#x786E;&#x4FDD;&#x673A;&#x68B0;&#x81C2;&#x5DF2;&#x7ECF;&#x8FDE;&#x63A5;&#x4E0A;&#x7535;&#x8111;</p>
 <p>&#x5176;&#x4ED6;&#x7CFB;&#x5217;&#xFF1A;&#x786E;&#x4FDD;&#x673A;&#x5668;&#x6B63;&#x5E38;</p>
 <p>&#x5438;&#x6CF5;&#x7684;&#x4ECB;&#x7ECD;&#x548C;&#x5B89;&#x88C5;&#x8BF7;&#x53C2;&#x8003;<strong>&#x914D;&#x4EF6;</strong>&#x3002;&#x5438;&#x6CF5;&#x7684;&#x9002;&#x914D;&#x7684;&#x673A;&#x68B0;&#x81C2;&#x578B;&#x53F7;&#x5305;&#x62EC;myCobot 280&#x3001;myPalletizer 260&#x4EE5;&#x53CA;mechArm 270&#x3002;&#x8FD9;&#x91CC;&#x4EE5;myPalletizer 260 M5Stack&#x673A;&#x68B0;&#x81C2;&#x4E3A;&#x4F8B;&#x8FDB;&#x884C;&#x8BF4;&#x660E;&#x3002;</p>
-<h3 id="&#x672C;&#x7AE0;&#x5B66;&#x4E60;&#x5185;&#x5BB9;">&#x672C;&#x7AE0;&#x5B66;&#x4E60;&#x5185;&#x5BB9;</h3>
+<h3 id="&#x672C;&#x7AE0;&#x5B66;&#x4E60;&#x5185;&#x5BB9;"><a name="&#x672C;&#x7AE0;&#x5B66;&#x4E60;&#x5185;&#x5BB9;" class="anchor-navigation-ex-anchor" href="#&#x672C;&#x7AE0;&#x5B66;&#x4E60;&#x5185;&#x5BB9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x672C;&#x7AE0;&#x5B66;&#x4E60;&#x5185;&#x5BB9;</h3>
 <p>&#x5982;&#x4F55;&#x4F7F;&#x7528;myBlockly&#x63A7;&#x5236;myPalletizer 260 M5Stack&#x673A;&#x68B0;&#x81C2;&#x4E0A;&#x8FDE;&#x63A5;&#x7684;&#x5438;&#x6CF5;</p>
-<h4 id="api&#x5C55;&#x793A;">API&#x5C55;&#x793A;</h4>
+<h4 id="api&#x5C55;&#x793A;"><a name="api&#x5C55;&#x793A;" class="anchor-navigation-ex-anchor" href="#api&#x5C55;&#x793A;"><i class="fa fa-link" aria-hidden="true"></i></a>API&#x5C55;&#x793A;</h4>
 <p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;M5&#x7248;&#x672C;&#x4E0E;Raspberry Pi&#x7248;&#x672C;&#x9700;&#x8981;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x6CD5;&#x6A21;&#x6765;&#x63A7;&#x5236;&#x5438;&#x6CF5;&#x3002;M5&#x7248;&#x672C;&#x673A;&#x68B0;&#x81C2;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x6811;&#x8393;&#x6D3E;&#x63A5;&#x53E3;&#xFF0C;&#x5982;&#x679C;&#x6A21;&#x5757;&#x4E0E;&#x673A;&#x578B;&#x4E0D;&#x5339;&#x914D;&#xFF0C;&#x7A0B;&#x5E8F;&#x5C31;&#x4F1A;&#x62A5;&#x9519;&#xFF08;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF09;&#x3002;</p>
 <p><img src="../../../../resource/3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/SuctionPump/M5&#x62A5;&#x9519;.jpg" style="zoom: 50%;"></p>
 <ul>
@@ -1124,7 +1128,7 @@
 <li><p>&#x76EE;&#x7684;&#xFF1A;&#x5C06;&#x5F15;&#x811A;&#x8BBE;&#x7F6E;&#x4E3A;&#x9AD8;&#xFF0C;&#x4F4E;&#x7535;&#x5E73;</p>
 </li>
 </ul>
-<h4 id="&#x7B80;&#x5355;&#x6F14;&#x793A;">&#x7B80;&#x5355;&#x6F14;&#x793A;</h4>
+<h4 id="&#x7B80;&#x5355;&#x6F14;&#x793A;"><a name="&#x7B80;&#x5355;&#x6F14;&#x793A;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x5355;&#x6F14;&#x793A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x5355;&#x6F14;&#x793A;</h4>
 <p><strong>&#x5782;&#x76F4;&#x5438;&#x6CF5; V1.0</strong></p>
 <ul>
 <li><p>&#x56FE;&#x5F62;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;&#xFF08;&#x7528;&#x4E8E;Raspberry Pi&#x7248;&#x672C;&#xFF09;
@@ -1187,7 +1191,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.5.9吸泵的使用","level":"1.4.2.5.9","depth":4,"next":{"title":"6.5.10夹爪测试","level":"1.4.2.5.10","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.md","articles":[]},"previous":{"title":"6.5.8夹爪的使用","level":"1.4.2.5.8","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.md","mtime":"2024-07-25T08:54:20.734Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-29T09:54:30.759Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.5.9吸泵的使用","level":"1.4.2.5.9","depth":4,"next":{"title":"6.5.10夹爪测试","level":"1.4.2.5.10","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.md","articles":[]},"previous":{"title":"6.5.8夹爪的使用","level":"1.4.2.5.8","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","livereload"],"pluginsConfig":{"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"insertAnchor":true,"showGoTop":true,"mini":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":"","bottom":"20px","offset":{"top":10,"left":10},"minWidth":"70px","floatIcon":"fa fa-navicon","zIndex":"1000","trigger":"click","right":"20px","show":true}},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.md","mtime":"2024-07-25T08:54:20.734Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-30T03:12:01.360Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>
