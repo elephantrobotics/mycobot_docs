@@ -4,7 +4,7 @@ pymycobot is a Python package for serial communication with myCobot, supporting 
 
 Before using pymycobot to control the robot arm, you need to build a Python environment. The following is a detailed description of Python download and installation.
 
-## 1 Download and install Python
+## Download and install Python
 
 **Applicable devices:**
 
@@ -38,7 +38,7 @@ Before using pymycobot to control the robot arm, you need to build a Python envi
 
 Currently, there are two versions of Python, one is `2.x` version and the other is `3.x` version. These two versions are incompatible. As `3.x` version is becoming more and more popular, our tutorial will take the latest `3.10.7` version as an example.
 
-### 1.1 Install Python
+###  Install Python
 
 > **Note: **Before installing, please confirm whether your computer is 64-bit or 32-bit. Right-click `My Computer` and select `Properties`. As shown in the figure below, it is a 64-bit operating system, so select the 64-bit Python installation package.
 >
@@ -51,7 +51,7 @@ Currently, there are two versions of Python, one is `2.x` version and the other 
 * **Click the `Downloads` option to start downloading Python, click `Add Python 3.10 to PATH`, click `Install Now` to start installing Python**
 
 <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload1.jpg" style="zoom: 33%;" /> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload2.jpg" style="zoom: 50%;" /> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload3.jpg" style="zoom : 50%;" /> * **The prompt "Setup was successful" appears, indicating that the installation is complete** <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload4.jpg" style="zoom: 50%;" />
-### 1.2 Run Python
+### Run Python
 After successful installation, open the command prompt window (Win+R, enter cmd and press Enter), and type `python`. Two situations will occur.
 
 **Situation 1:**
@@ -70,7 +70,7 @@ If the input is wrong (for example, enter pythonn), an error message will appear
 
 > **Note:** The error message is generally caused by not configuring the environment variables. You can refer to **1.3 Configure environment variables** to modify the environment variables.
 
-### 1.3 Configure environment variables
+### Configure environment variables
 Since Windows will search for python.exe according to the path set by a Path environment variable, if it is not found, an error will be reported. Therefore, if you miss checking `Add Python 3.10 to PATH` during installation, you need to manually add the path where python.exe is located to Path, or reinstall Python and remember to check the `Add Python 3.10 to PATH` option.
 
 The following are the steps to manually add the path where python.exe is located.
@@ -91,13 +91,13 @@ The following are the steps to manually add the path where python.exe is located
 
 <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/user variable3.jpg" style="zoom: 50%;" />
 
-## 2 PyCharm installation and use
+## PyCharm installation and use
 
 PyCharm is a powerful Python editor with cross-platform capabilities. First, let's introduce the installation steps of PyCharm in Windows system.
 
 **Download address:** **https://www.jetbrains.com/pycharm/download/#section=windows**
 
-### 2.1 Download and install
+### Download and install
 
 * After entering the website, we will see the following interface:
 
@@ -121,7 +121,7 @@ Download the file according to the interface introduction. Professional means pr
 
 <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pycharm下载4.jpg" style="zoom: 50%;" />
 
-### 2.2 Create a project
+### Create a project
 
 After PyCharm is installed, enter the software and create the first program.
 
@@ -153,7 +153,7 @@ After PyCharm is installed, enter the software and create the first program.
 
 <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pycharm界面展示.jpg" style="zoom: 33%;" />
 
-### 2.3 Before use
+### Before use
 
 * Firmware burning. Firmware refers to the device "driver" stored inside the device. Only through firmware can the operating system implement the operation of a specific machine according to the standard device driver. Different versions of the robot arm need to burn different firmware (refer to the [**MyStudio**](https://docs.elephantrobotics.com/docs/gitbook/4-BasicApplication/4.1-myStudio/) chapter).
 * **M5 version** The Basic at the bottom needs to burn minirobot. After the burning is completed, select the **Transponder** function (this function is used to receive and forward the instructions sent by the Basic at the bottom to perform the target action), click `Press A`, and the **Atom: OK** prompt message appears, which means success. In addition, the latest version of atomMain is burned in the Atom at the end of the M5 version. It is burned by default at the factory, and there is no need to burn it yourself.
@@ -182,7 +182,7 @@ python2 setup.py install
 python3 setup.py install
 ```
 
-## 3 Simple use of Python
+## Simple use of Python
 
 After the above preparations are completed, start to control the robot arm through Python code. Here, the myPalletizer 260 M5 version is used as an example for demonstration.
 
@@ -202,7 +202,7 @@ First, go to the project address: **https://github.com/elephantrobotics/pymycobo
 
 <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pymycobotdownload.jpg" style="zoom: 33%;" />
 
-### 3.1 Simple Demonstration
+### Simple Demonstration
 
 Create a new Python file in PyCharm and enter the following code to execute the LED flashing (myCobot 280-M5, myCobot 320-M5 and myPalletizer 260 can refer to the following code).
 

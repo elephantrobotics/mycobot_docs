@@ -4,7 +4,7 @@
 
 ---
 
-## 1. Safety Instructions
+## 1.Safety Instructions
 
 ### Introduction
 
@@ -46,7 +46,7 @@ Tables 1-1 to 3 below are common safety hazards that may exist when using robots
 | 3 There may be a risk of electric shock when the electrical connection is incorrect. |
 | 4 Always turn off the power of the controller and related devices and unplug the power plug before replacing. If the work is carried out in the power-on state, it may cause electric shock or malfunction. |
 
-### Safety Precautions
+### 2.Safety Precautions
 
 **The following safety rules should be followed when using the robot arm:**
 
@@ -85,7 +85,7 @@ https://www.elephantrobotics.com
 - Use that does not meet the robot performance parameters.
 
 ---
-## 2. Transportation and storage
+## 3.Transportation and storage
 
 ### Packing and packaging
 
@@ -102,7 +102,7 @@ https://www.elephantrobotics.com
 &emsp;&emsp;After transportation, the original packaging should be properly stored in a dry place, the ambient temperature should be kept within the range of -20 to +55°C, the humidity should be ≤95% and there should be no condensation, in preparation for future repackaging and transportation needs. Do not stack other items on the original packaging box of the robot arm to prevent deformation of the packaging box and damage to the robot arm.
 
 ---
-## 3. Maintenance and Care
+## 4.Maintenance and Care
 
 As a robot manufacturer, we value ensuring that our customers can properly and safely maintain and upgrade their robot equipment. To this end, we provide the following detailed maintenance and care guide, including common maintenance items and parts for repairing or upgrading hardware. Please read carefully:
 

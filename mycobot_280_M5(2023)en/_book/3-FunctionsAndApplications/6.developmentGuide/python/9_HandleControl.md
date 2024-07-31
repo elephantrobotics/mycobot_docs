@@ -34,11 +34,11 @@ You can use the game controller to control the movement of the machine and use t
 
 # Instructions for use
 
-## 1. Connect the device
+## Connect the device
 
 Connect MyCobot and the handle to the computer.
 
-## 2. Install the required packages
+## Install the required packages
 
 Download code: https://github.com/elephantrobotics/pymycobot
 
@@ -48,7 +48,7 @@ Open the terminal, switch the path to the `pymycobot/demo/handle_control` folder
 pip3 install -r requirements.txt
 ```
 
-## 3. Change the port number
+## Change the port number
 
 ### myCobot
 

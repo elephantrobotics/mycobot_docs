@@ -1,11 +1,11 @@
-## 1. Product Overview
+## Product Overview
 
 ##### myCobot 280 pi
 
 ![Cover](../../resource/1-ProductInformation/1.ProductIntroduction/1-1.png)
 ##### Desktop-level six-axis collaborative robot
 
-### Product Introduction
+### 1.Product Introduction
 
 The myCobot 280 Pi six-axis collaborative robot is a **multi-functional lightweight intelligent robotic arm** carefully developed by Elephant Robotics. It belongs to the "myCobot series" products and uses **Raspberry Pi microprocessors**. It is one of the core products of Elephant Robotics for **robots and artificial intelligence education ecosystems**.
 
@@ -37,7 +37,7 @@ The myCobot 280 pi robotic arm is a six-degree-of-freedom collaborative robot de
 | **Unique industrial design, extremely compact** | Integrated design, the overall body structure is compact, the net weight is only 860g, and it is very easy to carry. <br/> Modular design, few spare parts, low maintenance cost, can be quickly disassembled and replaced, and plug-and-play is realized. |
 | **High-configuration joint module, support LEGO interface** | Contains 6 high-performance servo motors, fast response, small inertia, and smooth rotation. <br>The base and the end are equipped with LEGO technology parts interface, which is suitable for the development of various micro embedded devices. |
 
-## 2. Product Application
+## 2.Product Application
 
 ![Application Scenario](../../resource/1-ProductInformation/1.ProductIntroduction/ApplicationScenario.png)
 ### User Group
@@ -49,7 +49,7 @@ The myCobot 280 pi robotic arm is a six-degree-of-freedom collaborative robot de
 | **Commercial Display and Public Exhibition Organizers** | myCobot 280 pi has become the preferred device for technology display and product demonstration with its precision operation display advantages. Dynamic demonstrations not only attract audiences, but also enhance their sense of participation, effectively promoting technological innovation and products. |
 | **Geek development enthusiasts** | myCobot 280 pi is based on the Raspberry Pi 4B motherboard and supports the Arduino + ROS open source system. Dozens of accessories such as adaptive grippers, camera flanges, suction pumps, etc. help you give full play to myCobot's creative ideas to meet the various creative ideas of enthusiasts. |
 
-### Application scenarios
+### 3.Application scenarios
 | Applicable groups | **Application scenarios** | **Advantage targets** |
 | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **Teachers and students in the field of education** | - STEM education<br>- Robotics projects<br>- Interdisciplinary research projects<br>- Education and research | - Improve students' interest in science and technology<br>- Enhance hands-on skills and problem-solving skills<br>- Promote innovative thinking and teamwork<br>- Provide a practical platform for data collection and robotics |
@@ -58,7 +58,7 @@ The myCobot 280 pi robotic arm is a six-degree-of-freedom collaborative robot de
 
 ---
 
-## 3. Supported extended development
+## Supported extended development
 ![Extended development](../../resource/1-ProductInformation/1.ProductIntroduction/peijian2.png)
 The mycobot series of robotic arms are extremely valuable in the fields of education and scientific research, especially in Python and ROS (Robot Operating System), two widely used development environments. These environments provide strong support, allowing the mycobot series of products to be widely used in machine learning, artificial intelligence research, complex motion control, and visual processing tasks. At the same time, with dozens of accessories such as adaptive grippers, camera flanges, suction pumps, etc., you can give full play to myCobot's creative ideas.
 
@@ -72,7 +72,7 @@ The mycobot series of robotic arms are extremely valuable in the fields of educa
 
 ---
 
-## 4. Where to buy
+## 4.Where to buy
 
 If you are interested in purchasing the device, please click on the link below:
 Taobao: [https://shop504055678.taobao.com](https://shop504055678.taobao.com)<br>

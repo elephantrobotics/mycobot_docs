@@ -1,10 +1,10 @@
 # Chapter 6 Software Development Guide
 
-## 1 Usage Environment
+## Usage Environment
 
 mycobot280 M5 is developed and used based on PC. Since there is no built-in system in the robot arm, the robot arm and PC need to be combined during use. Please prepare the PC before use.
 
-## 2 Development Environment
+## Development Environment
 
 In order to meet the diverse application needs of robots in different scenarios, we have adapted the robot to multiple programming languages. So far, we have adapted the following mainstream programming languages, and we think you can use any of the following languages ​​for development. Please be sure to follow the instructions strictly. Any omitted steps may cause the corresponding language to fail to run successfully. I wish you a smooth use of the robot.<br>
 

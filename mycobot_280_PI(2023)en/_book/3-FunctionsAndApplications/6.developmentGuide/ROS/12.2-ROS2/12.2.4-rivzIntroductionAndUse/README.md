@@ -2,7 +2,7 @@
 
 rviz is a three-dimensional visualization platform in ROS. On the one hand, it can realize the graphical display of external information. On the other hand, it can also release control information to objects through rviz, thereby realizing the monitoring and control of robots.
 
-## 1 Introduction to rviz2
+## Introduction to rviz2
 
 The successful installation of ros2 indicates that rviz2 is also successfully installed, because the installation of ros2 includes rviz2.
 
@@ -17,7 +17,7 @@ Open rviz2 and the following interface will be displayed:
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/rviz-1.png
 width ="500" align = "center">
 
-## 2 Introduction to each area
+## Introduction to each area
 
 + On the left is the display list. The display is something that draws something in the 3D world and may have some options available in the display list.
 
@@ -29,7 +29,7 @@ width ="500" align = "center">
 
 In this section, we only give a rough introduction. If you want to know more details, you can go to the [User Guide](http://wiki.ros.org/rviz/UserGuide) to check it out.
 
-## 3 mycobot_ros2 installation and update
+## mycobot_ros2 installation and update
 
 - **M5 version: ** Please check the end of the ROS2 installation section.
 
@@ -65,7 +65,7 @@ source install/setup.bash # Add environment variables
 
 **Note:** If `/home/er/colcon_ws/src (equivalent to ~/colcon_ws/src)` directory, you need to delete the original `mycobot_ros2` first, and then execute the above command.
 
-## 4 Simple use
+## Simple use
 
 **Start through the launch.py ​​file**
 
@@ -97,7 +97,7 @@ width ="500" align = "center">
 
 If you want to learn more about rviz, you can go to the [official document](http://wiki.ros.org/rviz2) to view it
 
-## 5 M5 version prerequisites
+## M5 version prerequisites
 
 - Open the console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>), open the terminal window to view the device name:
 
@@ -124,7 +124,7 @@ Then enter the user password (**Note:** The password is not displayed, just ente
 
 ## Robot arm control
 
-### 1 Slider control
+### Slider control
 
 Open a command line and run:
 
@@ -183,7 +183,7 @@ Then you can **control the movement of the model in rviz by dragging the slider*
 **Please note: Since the robot arm will move to the current position of the model when the command is entered, please make sure that the model in rviz does not appear to be through the model before you use the command**
 **Do not drag the slider quickly after connecting the robot arm to prevent damage to the robot arm**
 
-### 2 Model following
+### Model following
 
 In addition to the above control, we can also **let the model follow the movement of the real robot arm**. Open a command line and run:
 

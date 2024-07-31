@@ -145,9 +145,11 @@ myCobot **必须使用外部电源**进行供电，以提供足够的电量：
 
 ## 产品首次使用指引视频
 
-<video id="my-video" class="video-js" controls preload="auto" width="100%"
-poster="" data-setup='{"aspectRatio":"16:9"}'>
-  <source src="https://static.elephantrobotics.com/wp-content/uploads/2022/03/Pi%E5%BC%80%E7%AE%B1%E6%B5%8B%E8%AF%84%E6%9C%80%E7%BB%88%E7%89%88.mp4"></video>
+<video id="my-video" class="video-js" controls preload="auto" width="100%" poster="" data-setup='{"aspectRatio":"16:9"}'>
+  <source src="https://static.elephantrobotics.com/wp-content/uploads/2022/03/Pi%E5%BC%80%E7%AE%B1%E6%B5%8B%E8%AF%84%E6%9C%80%E7%BB%88%E7%89%88.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ---
 
 ## 6.常见问题解决
