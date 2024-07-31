@@ -4,7 +4,7 @@ Note: To use the communication protocol for direct communication, you need to bu
 
 ![communication](../../../resource/3-FunctionsAndApplications/6.developmentGuide/CommunicationProtocolPackage/box_connect_PC.jpg)
 
-### 1 Robotic arm motion parameters
+### Robotic arm motion parameters
 
 | **Joint** | **Joint minimum value °* | **Joint maximum value °** | **Joint maximum speed °/s** |**Joint maximum acceleration °/s²**|
 | -------- | ------------ | ------------ | ---------------------------- |--------------------------------------|
@@ -24,7 +24,7 @@ Note: To use the communication protocol for direct communication, you need to bu
 | ry | -180° | 180° | 40° |66°/s²|
 | rz | -180° | 180° | 40° |66°/s² |
 
-### 2 USB Communication Settings
+### USB Communication Settings
 
 <br>
 
@@ -37,11 +37,11 @@ Note: To use the communication protocol for direct communication, you need to bu
 - Parity: None
 - Stop bits: 1
 
-### 3 Command frame description and single command analysis
+### Command frame description and single command analysis
 
 The host Basic sends data to the slave, and the slave parses the data after receiving it. If the command contains a return value, the slave will return it to the host within 500ms.
 
-### 4 Command frame sending and receiving format
+### Command frame sending and receiving format
 
 All commands are in hexadecimal, and the sending and receiving formats are consistent.
 
@@ -62,7 +62,7 @@ Each communication command must contain the following 5 parts, of which 3 and 4 
 - Fixed
 - Required
 
-### 5 Command parsing
+### Command parsing
 
 The host Basic sends data to the slave, and the slave parses the data after receiving it. If the command contains a return value, the slave will return it to the host within 500ms.
 
@@ -75,7 +75,7 @@ The host Basic sends data to the slave, and the slave parses the data after rece
 | Data frame | Data | 0-16 | Data attached to the command, depending on different commands |
 | End frame | End byte | 1 | Stop bit, 0XFA |
 
-### 6 Single command analysis
+### Single command analysis
 
 #### Robot power on
 

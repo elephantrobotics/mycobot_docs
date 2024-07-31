@@ -4,7 +4,7 @@
 
 ---
 
-##  Safety Instructions
+##  1.Safety Instructions
 
 ### Introduction
 
@@ -85,7 +85,7 @@ https://www.elephantrobotics.com
 - Use that does not meet the robot performance parameters.
 
 ---
-## Transportation and storage
+## 2.Transportation and storage
 
 ### Packing and packaging
 
@@ -102,7 +102,7 @@ https://www.elephantrobotics.com
 &emsp;&emsp;After transportation, the original packaging should be properly stored in a dry place, the ambient temperature should be kept within the range of -20 to +55°C, the humidity should be ≤95% and there should be no condensation, in preparation for future repackaging and transportation needs. Do not stack other items on the original packaging box of the robot arm to prevent deformation of the packaging box and damage to the robot arm.
 
 ---
-## Maintenance and Care
+## 3.Maintenance and Care
 
 As a robot manufacturer, we value ensuring that our customers can properly and safely maintain and upgrade their robot equipment. To this end, we provide the following detailed maintenance and care guide, including common maintenance items and parts for repairing or upgrading hardware. Please read carefully:
 
@@ -125,7 +125,7 @@ As a robot manufacturer, we value ensuring that our customers can properly and s
 | Safety configuration review | Regularly check and confirm the safety configuration of the robot, such as speed limit and working range settings. | Monthly |
 | Preventive maintenance plan execution | Perform regular inspections and maintenance according to the manufacturer's maintenance plan. | By Manufacturer's Guide |
 
-### Guide to Independently Changing Robot Hardware
+### 4.Guide to Independently Changing Robot Hardware
 
 We understand that customers may have the need to upgrade or repair robot hardware by themselves. Before performing any upgrade operations, please be sure to read the relevant parameters of the product in detail and confirm with our official personnel whether such operations are allowed. Operations without official permission may cause product failure and are not covered by the warranty.
 

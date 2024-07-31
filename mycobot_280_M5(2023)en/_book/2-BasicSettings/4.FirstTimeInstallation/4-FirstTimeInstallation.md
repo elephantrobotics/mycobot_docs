@@ -1,5 +1,5 @@
 # Chapter 4 First Installation
-## Product Standard List
+## 1.Product Standard List
 ## Product List Image
 > Thank you for choosing the Elephant Robot myCobot 280 M5 robot arm. This chapter is designed to help you easily get started with Elephant Robot products and enjoy every wonderful moment brought by the product.
 
@@ -20,7 +20,7 @@
 **Note:** After the packing box arrives, please confirm that the robot packaging is intact. If there is any damage, please contact the logistics company and the supplier in your area in time. After unpacking, please check the actual items in the box according to the item list.
 
 ---
-## Product Unpacking Guide
+## 2.Product Unpacking Guide
 ## Product Unpacking Graphic Guide
 
 **Why do you need to follow the steps to disassemble the product**
@@ -35,14 +35,14 @@ In this section, we strongly recommend that you follow the specified steps to di
 
 **Note:** After taking out the product, please carefully check the appearance of each item. Please check the actual items in the box against the item list.
 
-## Product unboxing video guide
+## 3.Product unboxing video guide
 
 <video controls>
 <source src="../../resources/2-BasicSettings/4.FirstTimeInstallation/OpenGuide.mp4" type="video/mp4">
 Your browser does not support HTML5 video.
 </video>
 
-## Power-on inspection guide
+## 4.Power-on inspection guide
 
 ## Structural installation and fixation
 
@@ -98,7 +98,7 @@ Before formal installation, please confirm:
 * Note: When adjusting the robot position on the base installation table, please try to avoid pushing and pulling the robot directly on the base installation table to avoid scratches. When manually moving the robot, please try to avoid applying external force to the fragile parts of the robot body to avoid unnecessary damage to the robot.
 
 ---
-## Power on and preliminary test
+## 5.Power on and preliminary test
 
 **myCobot must be powered by an external power supply to provide sufficient power:**
 Rated voltage: 12V
@@ -135,7 +135,7 @@ As shown in the figure, the motor connection is in good condition
 
 The power-on detection is completed.
 
-## 4. Common Problem Solving
+## 6.Common Problem Solving
 This section aims to help users solve common problems encountered during use, covering hardware, software, drivers, and how to ask questions in the forum. If you encounter problems while using the robotic arm, please read the contents of this section first to find solutions. If the listed problems cannot help you solve and you have more after-sales questions to consult, please add the after-sales butler WeChat.
 
 [How to ask questions elegantly](../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.md)
