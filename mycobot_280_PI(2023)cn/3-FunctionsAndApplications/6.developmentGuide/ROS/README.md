@@ -34,27 +34,11 @@
 
 - myCobot 280
   - myCobot 280 M5
-  - myCobot 280 PI
+  - **myCobot 280 PI**
   - myCobot 280 Jetson Nano
   - myCobot 280 for Arduino <br>
-  
-- myCobot 320
-  - myCobot 320 M5
-  - myCobot 320 PI <br>
-  
-- myPalletizer 260
-  - myPalletizer 260 M5
-  - myPalletizer 260 PI <br>
-
-- myCobot PRO 600 <br>
-
-- mechArm-270
-  - mechArm-270 PI
-  - mechArm-270 M5
 
 **使用前提：**
-
-- **M5** 系列版本， 底部**M5Stack-basic**烧录 **miniRobot**，选择 **Transponder** 功能，末端 **ATOM** 烧录最新版的 **atomMain** (出厂默认已烧录)
 
 - **Pi \ jetsonnano** 系列，**ATOM** 烧录最新版的 **atomMain** (出厂默认已烧录)
 
@@ -77,20 +61,6 @@
   - myCobot 280 PI
   - myCobot 280 Jetson Nano
   - myCobot 280 for Arduino <br>
-  
-- myCobot 320
-  - myCobot 320 M5
-  - myCobot 320 PI <br>
-  
-- myPalletizer 260
-  - myPalletizer 260 M5
-  - myPalletizer 260 PI <br>
-
-- myCobot PRO 600 <br>
-
-- mechArm-270
-  - mechArm-270 M5
-  - mechArm-270 PI
 
 **使用前提：**
 

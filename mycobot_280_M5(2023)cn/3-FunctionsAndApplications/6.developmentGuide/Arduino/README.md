@@ -13,8 +13,8 @@ MyCobotBasic库是我们公司开发的一款开源机器人控制库，需要�
 
 **适用设备：**
 
-- myCobot 280
-  - myCobot 280 M5
+- myCobot 280系列
+  - **myCobot 280 M5**
   - myCobot 280 for Arduino <br>
 - myCobot 320
   - myCobot 320 M5 <br>
