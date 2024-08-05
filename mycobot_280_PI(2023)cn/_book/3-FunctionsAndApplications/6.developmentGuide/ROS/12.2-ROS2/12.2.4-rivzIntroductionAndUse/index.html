@@ -1309,12 +1309,6 @@ source install/setup.bash
 <h3 id="&#x6ED1;&#x5757;&#x63A7;&#x5236;"><a name="&#x6ED1;&#x5757;&#x63A7;&#x5236;" class="anchor-navigation-ex-anchor" href="#&#x6ED1;&#x5757;&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6ED1;&#x5757;&#x63A7;&#x5236;</h3>
 <p>&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x884C;&#xFF0C;&#x8FD0;&#x884C;&#xFF1A;</p>
 <ul>
-<li>mycobot 280-M5&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<pre><code class="lang-bash"><span class="hljs-comment"># mycobot 280-M5&#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x4E3A;&quot;/dev/ttyUSB0&quot;&#xFF0C;&#x6CE2;&#x7279;&#x7387;&#x4E3A;115200.&#x90E8;&#x5206;&#x673A;&#x578B;&#x7684;&#x4E32;&#x53E3;&#x540D;&#x4E3A; &quot;dev/ttyACM0&quot;,&#x82E5;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#xFF0C;&#x53EF;&#x5C06;&#x4E32;&#x53E3;&#x540D;&#x6539;&#x4E3A;&quot;/dev/ttyACM0&quot;.</span>
-ros2 launch mycobot_280 slider_control.launch.py
-</code></pre>
-<ul>
 <li>mycobot 280-PI&#x7248;&#x672C;&#xFF1A;</li>
 </ul>
 <p>&#x70B9;&#x51FB;&#x684C;&#x9762;&#x4E0A;&#x7684;<code>ROS2 Shell</code>&#x56FE;&#x6807;&#x6216;&#x8005;&#x684C;&#x9762;&#x4E0B;&#x65B9;&#x680F;&#x7684;&#x5BF9;&#x5E94;&#x56FE;&#x6807;&#xFF0C;&#x6253;&#x5F00;ROS2&#x73AF;&#x5883;&#x7EC8;&#x7AEF;&#xFF1A;</p>
@@ -1325,30 +1319,11 @@ ros2 launch mycobot_280 slider_control.launch.py
 <pre><code class="lang-bash"><span class="hljs-comment"># mycobot 280-PI&#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x4E3A;&quot;/dev/ttyAMA0&quot;&#xFF0C;&#x6CE2;&#x7279;&#x7387;&#x4E3A;1000000.</span>
 ros2 launch mycobot_280pi slider_control.launch.py
 </code></pre>
-<ul>
-<li>mycobot 280-JetsonNano&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<p>&#x70B9;&#x51FB;&#x684C;&#x9762;&#x4E0A;&#x7684;<code>ROS2 Shell</code>&#x56FE;&#x6807;&#x6216;&#x8005;&#x684C;&#x9762;&#x4E0B;&#x65B9;&#x680F;&#x7684;&#x5BF9;&#x5E94;&#x56FE;&#x6807;&#xFF0C;&#x6253;&#x5F00;ROS2&#x73AF;&#x5883;&#x7EC8;&#x7AEF;&#xFF1A;</p>
-<p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/rviz2/12.2.7-10.jpg" width="500" align="center"></p>
-<p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/rviz2/12.2.7-11.jpg" width="500" align="center"></p>
-<p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/rviz2/12.2.7-12.png" width="500" align="center"></p>
-<p>&#x7136;&#x540E;&#x8FD0;&#x884C;&#x547D;&#x4EE4;&#xFF1A;</p>
-<pre><code class="lang-bash"><span class="hljs-comment"># mycobot 280-JetsonNano&#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x4E3A;&quot;/dev/ttyTHS1&quot;&#xFF0C;&#x6CE2;&#x7279;&#x7387;&#x4E3A;1000000.</span>
-ros2 launch mycobot_280jn slider_control.launch.py
-</code></pre>
-<p>&#x5B83;&#x5C06;<strong>&#x6253;&#x5F00; rviz &#x548C;&#x4E00;&#x4E2A;&#x6ED1;&#x5757;&#x7EC4;&#x4EF6;</strong>&#xFF0C;&#x4F60;&#x5C06;&#x770B;&#x5230;&#x5982;&#x4E0B;&#x753B;&#x9762;&#xFF08;&#x6811;&#x8393;&#x6D3E;&#x7248;&#x672C;&#x753B;&#x9762;&#x7565;&#x6709;&#x5DEE;&#x5F02;&#xFF0C;&#x4E0D;&#x5F71;&#x54CD;&#x4F7F;&#x7528;&#xFF09;&#xFF1A;</p>
-<p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/rviz2/caf-1.png" width="500" align="center"></p>
 <p>&#x63A5;&#x7740;&#x4F60;&#x53EF;&#x4EE5;<strong>&#x901A;&#x8FC7;&#x62D6;&#x52A8;&#x6ED1;&#x5757;&#x6765;&#x63A7;&#x5236; rviz &#x4E2D;&#x7684;&#x6A21;&#x578B;&#x79FB;&#x52A8;</strong>&#x3002;&#x771F;&#x5B9E;&#x7684; mycobot &#x5C06;&#x8DDF;&#x7740;&#x4E00;&#x8D77;&#x8FD0;&#x52A8;.</p>
 <p><strong>&#x8BF7;&#x6CE8;&#x610F;&#xFF1A;&#x7531;&#x4E8E;&#x5728;&#x547D;&#x4EE4;&#x8F93;&#x5165;&#x7684;&#x540C;&#x65F6;&#x673A;&#x68B0;&#x81C2;&#x4F1A;&#x79FB;&#x52A8;&#x5230;&#x6A21;&#x578B;&#x76EE;&#x524D;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5728;&#x60A8;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x4E4B;&#x524D;&#x8BF7;&#x786E;&#x4FDD;rviz&#x4E2D;&#x7684;&#x6A21;&#x578B;&#x6CA1;&#x6709;&#x51FA;&#x73B0;&#x7A7F;&#x6A21;&#x73B0;&#x8C61;</strong>
 <strong>&#x4E0D;&#x8981;&#x5728;&#x8FDE;&#x63A5;&#x673A;&#x68B0;&#x81C2;&#x540E;&#x505A;&#x51FA;&#x5FEB;&#x901F;&#x62D6;&#x52A8;&#x6ED1;&#x5757;&#x7684;&#x884C;&#x4E3A;&#xFF0C;&#x9632;&#x6B62;&#x673A;&#x68B0;&#x81C2;&#x635F;&#x574F;</strong></p>
 <h3 id="&#x6A21;&#x578B;&#x8DDF;&#x968F;"><a name="&#x6A21;&#x578B;&#x8DDF;&#x968F;" class="anchor-navigation-ex-anchor" href="#&#x6A21;&#x578B;&#x8DDF;&#x968F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6A21;&#x578B;&#x8DDF;&#x968F;</h3>
 <p>&#x9664;&#x4E86;&#x4E0A;&#x9762;&#x7684;&#x63A7;&#x5236;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;<strong>&#x8BA9;&#x6A21;&#x578B;&#x8DDF;&#x968F;&#x771F;&#x5B9E;&#x7684;&#x673A;&#x68B0;&#x81C2;&#x8FD0;&#x52A8;</strong>&#x3002;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x884C;&#x8FD0;&#x884C;&#xFF1A;</p>
-<ul>
-<li>mycobot 280-M5&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<pre><code class="lang-bash"><span class="hljs-comment"># mycobot 280-M5&#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x4E3A;&quot;/dev/ttyUSB0&quot;&#xFF0C;&#x6CE2;&#x7279;&#x7387;&#x4E3A;115200.&#x90E8;&#x5206;&#x673A;&#x578B;&#x7684;&#x4E32;&#x53E3;&#x540D;&#x4E3A; &quot;dev/ttyACM0&quot;,&#x82E5;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#xFF0C;&#x53EF;&#x5C06;&#x4E32;&#x53E3;&#x540D;&#x6539;&#x4E3A;&quot;/dev/ttyACM0&quot;.</span>
-ros2 launch mycobot_280 mycobot_follow.launch.py
-</code></pre>
 <ul>
 <li>mycobot 280-PI&#x7248;&#x672C;&#xFF1A;</li>
 </ul>
@@ -1363,10 +1338,6 @@ ros2 launch mycobot_280pi mycobot_follow.launch.py
 <ul>
 <li>mycobot 280-JetsonNano&#x7248;&#x672C;&#xFF1A;</li>
 </ul>
-<p>&#x70B9;&#x51FB;&#x684C;&#x9762;&#x4E0A;&#x7684;<code>ROS2 Shell</code>&#x56FE;&#x6807;&#x6216;&#x8005;&#x684C;&#x9762;&#x4E0B;&#x65B9;&#x680F;&#x7684;&#x5BF9;&#x5E94;&#x56FE;&#x6807;&#xFF0C;&#x6253;&#x5F00;ROS2&#x73AF;&#x5883;&#x7EC8;&#x7AEF;&#xFF1A;</p>
-<p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/rviz2/12.2.7-10.jpg" width="500" align="center"></p>
-<p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/rviz2/12.2.7-11.jpg" width="500" align="center"></p>
-<p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/rviz2/12.2.7-12.png" width="500" align="center"></p>
 <p>&#x7136;&#x540E;&#x8FD0;&#x884C;&#x547D;&#x4EE4;&#xFF1A;</p>
 <pre><code class="lang-bash"><span class="hljs-comment"># mycobot 280-JetsonNano&#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x4E3A;&quot;/dev/ttyTHS1&quot;&#xFF0C;&#x6CE2;&#x7279;&#x7387;&#x4E3A;1000000.</span>
 ros2 launch mycobot_280jn mycobot_follow.launch.py
@@ -1375,12 +1346,6 @@ ros2 launch mycobot_280jn mycobot_follow.launch.py
 <h3 id="gui-&#x63A7;&#x5236;"><a name="gui-&#x63A7;&#x5236;" class="anchor-navigation-ex-anchor" href="#gui-&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>GUI &#x63A7;&#x5236;</h3>
 <p>&#x5728;&#x524D;&#x9762;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#xFF0C;&#x672C;&#x5305;&#x8FD8;<strong>&#x63D0;&#x4F9B;&#x4E86;&#x7B80;&#x5355;&#x7684; Gui &#x63A7;&#x5236;&#x754C;&#x9762;</strong>&#x3002; &#x8BE5;&#x65B9;&#x5F0F;&#x610F;&#x5728;&#x4E8E;&#x771F;&#x5B9E;&#x673A;&#x68B0;&#x81C2;&#x76F8;&#x4E92;&#x8054;&#x52A8;&#xFF0C;&#x8BF7;&#x8FDE;&#x63A5; mycobot&#x3002;</p>
 <p>&#x6253;&#x5F00;&#x547D;&#x4EE4;&#x884C;&#xFF1A;</p>
-<ul>
-<li>mycobot 280-M5&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<pre><code class="lang-bash"><span class="hljs-comment"># mycobot 280-M5&#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x4E3A;&quot;/dev/ttyUSB0&quot;&#xFF0C;&#x6CE2;&#x7279;&#x7387;&#x4E3A;115200.&#x90E8;&#x5206;&#x673A;&#x578B;&#x7684;&#x4E32;&#x53E3;&#x540D;&#x4E3A; &quot;dev/ttyACM0&quot;,&#x82E5;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#xFF0C;&#x53EF;&#x5C06;&#x4E32;&#x53E3;&#x540D;&#x6539;&#x4E3A;&quot;/dev/ttyACM0&quot;.</span>
-ros2 launch mycobot_280 simple_gui.launch.py
-</code></pre>
 <ul>
 <li>mycobot 280-PI&#x7248;&#x672C;&#xFF1A;</li>
 </ul>
@@ -1392,27 +1357,9 @@ ros2 launch mycobot_280 simple_gui.launch.py
 <pre><code class="lang-bash"><span class="hljs-comment"># mycobot 280-PI&#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x4E3A;&quot;/dev/ttyAMA0&quot;&#xFF0C;&#x6CE2;&#x7279;&#x7387;&#x4E3A;1000000.</span>
 ros2 launch mycobot_280pi simple_gui.launch.py
 </code></pre>
-<ul>
-<li>mycobot 280-JetsonNano&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<p>&#x70B9;&#x51FB;&#x684C;&#x9762;&#x4E0A;&#x7684;<code>ROS2 Shell</code>&#x56FE;&#x6807;&#x6216;&#x8005;&#x684C;&#x9762;&#x4E0B;&#x65B9;&#x680F;&#x7684;&#x5BF9;&#x5E94;&#x56FE;&#x6807;&#xFF0C;&#x6253;&#x5F00;ROS2&#x73AF;&#x5883;&#x7EC8;&#x7AEF;&#xFF1A;</p>
-<p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/rviz2/12.2.7-10.jpg" width="500" align="center"></p>
-<p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/rviz2/12.2.7-11.jpg" width="500" align="center"></p>
-<p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/rviz2/12.2.7-12.png" width="500" align="center"></p>
-<p>&#x7136;&#x540E;&#x8FD0;&#x884C;&#x547D;&#x4EE4;&#xFF1A;</p>
-<pre><code class="lang-bash"><span class="hljs-comment"># mycobot 280-JetsonNano&#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x4E3A;&quot;/dev/ttyTHS1&quot;&#xFF0C;&#x6CE2;&#x7279;&#x7387;&#x4E3A;1000000.</span>
-ros2 launch mycobot_280jn simple_gui.launch.py
-</code></pre>
-<p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/rviz2/gui-1.png" width="500" align="center"></p>
 <h3 id="&#x952E;&#x76D8;&#x63A7;&#x5236;"><a name="&#x952E;&#x76D8;&#x63A7;&#x5236;" class="anchor-navigation-ex-anchor" href="#&#x952E;&#x76D8;&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x952E;&#x76D8;&#x63A7;&#x5236;</h3>
 <p>&#x5728; <code>mycobot_280</code> &#x7684;&#x5305;&#x4E2D;<strong>&#x6DFB;&#x52A0;&#x4E86;&#x952E;&#x76D8;&#x63A7;&#x5236;&#x7684;&#x529F;&#x80FD;</strong>&#xFF0C;&#x5E76;&#x5728; rviz &#x4E2D;&#x5B9E;&#x65F6;&#x540C;&#x6B65;&#x3002;&#x672C;&#x529F;&#x80FD;&#x4F9D;&#x8D56; pythonApi&#xFF0C;&#x6240;&#x4EE5;&#x786E;&#x4FDD;&#x4E0E;&#x771F;&#x5B9E;&#x673A;&#x68B0;&#x81C2;&#x8FDE;&#x63A5;&#x3002;</p>
 <p>&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x884C;&#xFF0C;&#x8FD0;&#x884C;&#xFF1A;</p>
-<ul>
-<li>mycobot 280-M5&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<pre><code class="lang-bash"><span class="hljs-comment"># mycobot 280-M5&#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x4E3A;&quot;/dev/ttyUSB0&quot;&#xFF0C;&#x6CE2;&#x7279;&#x7387;&#x4E3A;115200.&#x90E8;&#x5206;&#x673A;&#x578B;&#x7684;&#x4E32;&#x53E3;&#x540D;&#x4E3A; &quot;dev/ttyACM0&quot;,&#x82E5;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#xFF0C;&#x53EF;&#x5C06;&#x4E32;&#x53E3;&#x540D;&#x6539;&#x4E3A;&quot;/dev/ttyACM0&quot;.</span>
-ros2 launch mycobot_280 teleop_keyboard.launch.py
-</code></pre>
 <ul>
 <li>mycobot 280-PI&#x7248;&#x672C;&#xFF1A;</li>
 </ul>
@@ -1423,17 +1370,6 @@ ros2 launch mycobot_280 teleop_keyboard.launch.py
 <p>&#x7136;&#x540E;&#x8FD0;&#x884C;&#x547D;&#x4EE4;&#xFF1A;</p>
 <pre><code class="lang-bash"><span class="hljs-comment"># mycobot 280-PI&#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x4E3A;&quot;/dev/ttyAMA0&quot;&#xFF0C;&#x6CE2;&#x7279;&#x7387;&#x4E3A;1000000.</span>
 ros2 launch mycobot_280pi teleop_keyboard.launch.py
-</code></pre>
-<ul>
-<li>mycobot 280-JetsonNano&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<p>&#x70B9;&#x51FB;&#x684C;&#x9762;&#x4E0A;&#x7684;<code>ROS2 Shell</code>&#x56FE;&#x6807;&#x6216;&#x8005;&#x684C;&#x9762;&#x4E0B;&#x65B9;&#x680F;&#x7684;&#x5BF9;&#x5E94;&#x56FE;&#x6807;&#xFF0C;&#x6253;&#x5F00;ROS2&#x73AF;&#x5883;&#x7EC8;&#x7AEF;&#xFF1A;</p>
-<p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/rviz2/12.2.7-10.jpg" width="500" align="center"></p>
-<p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/rviz2/12.2.7-11.jpg" width="500" align="center"></p>
-<p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/rviz2/12.2.7-12.png" width="500" align="center"></p>
-<p>&#x7136;&#x540E;&#x8FD0;&#x884C;&#x547D;&#x4EE4;&#xFF1A;</p>
-<pre><code class="lang-bash"><span class="hljs-comment"># mycobot 280-JetsonNano&#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x4E3A;&quot;/dev/ttyTHS1&quot;&#xFF0C;&#x6CE2;&#x7279;&#x7387;&#x4E3A;1000000.</span>
-ros2 launch mycobot_280jn teleop_keyboard.launch.py
 </code></pre>
 <p>&#x8FD0;&#x884C;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/rviz2/kb-1.png" width="500" align="center"></p>
@@ -1465,11 +1401,6 @@ ros2 launch mycobot_280jn teleop_keyboard.launch.py
 </code></pre>
 <p>&#x63A5;&#x7740;&#xFF0C;&#x6253;&#x5F00;&#x53E6;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x884C;&#xFF0C;&#x8FD0;&#x884C;&#xFF1A;</p>
 <ul>
-<li>mycobot 280-M5&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<pre><code class="lang-bash">ros2 run mycobot_280 teleop_keyboard
-</code></pre>
-<ul>
 <li>mycobot 280-PI&#x7248;&#x672C;&#xFF1A;</li>
 </ul>
 <p>&#x70B9;&#x51FB;&#x684C;&#x9762;&#x4E0A;&#x7684;<code>ROS2 Shell</code>&#x56FE;&#x6807;&#x6216;&#x8005;&#x684C;&#x9762;&#x4E0B;&#x65B9;&#x680F;&#x7684;&#x5BF9;&#x5E94;&#x56FE;&#x6807;&#xFF0C;&#x6253;&#x5F00;ROS2&#x73AF;&#x5883;&#x7EC8;&#x7AEF;&#xFF1A;</p>
@@ -1478,16 +1409,6 @@ ros2 launch mycobot_280jn teleop_keyboard.launch.py
 <p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/rviz2/12.2.7-12.png" width="500" align="center"></p>
 <p>&#x7136;&#x540E;&#x8FD0;&#x884C;&#x547D;&#x4EE4;&#xFF1A;</p>
 <pre><code class="lang-bash">ros2 run mycobot_280pi teleop_keyboard
-</code></pre>
-<ul>
-<li>mycobot 280-JetsonNano&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<p>&#x70B9;&#x51FB;&#x684C;&#x9762;&#x4E0A;&#x7684;<code>ROS2 Shell</code>&#x56FE;&#x6807;&#x6216;&#x8005;&#x684C;&#x9762;&#x4E0B;&#x65B9;&#x680F;&#x7684;&#x5BF9;&#x5E94;&#x56FE;&#x6807;&#xFF0C;&#x6253;&#x5F00;ROS2&#x73AF;&#x5883;&#x7EC8;&#x7AEF;&#xFF1A;</p>
-<p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/rviz2/12.2.7-10.jpg" width="500" align="center"></p>
-<p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/rviz2/12.2.7-11.jpg" width="500" align="center"></p>
-<p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/rviz2/12.2.7-12.png" width="500" align="center"></p>
-<p>&#x7136;&#x540E;&#x8FD0;&#x884C;&#x547D;&#x4EE4;&#xFF1A;</p>
-<pre><code class="lang-bash">ros2 run mycobot_280jn teleop_keyboard
 </code></pre>
 <p>&#x4F60;&#x4F1A;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x770B;&#x5230;&#x5982;&#x4E0B;&#x8F93;&#x51FA;&#xFF1A;</p>
 <pre><code class="lang-bash">Mycobot Teleop Keyboard Controller
@@ -1524,11 +1445,6 @@ currently:    speed: 10    change percent: 2
 <h5 id="1-&#x52A0;&#x8F7D;&#x6A21;&#x578B;"><a name="1-&#x52A0;&#x8F7D;&#x6A21;&#x578B;" class="anchor-navigation-ex-anchor" href="#1-&#x52A0;&#x8F7D;&#x6A21;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>1 &#x52A0;&#x8F7D;&#x6A21;&#x578B;</h5>
 <p>&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x884C;&#xFF0C;&#x8FD0;&#x884C;&#xFF1A;</p>
 <ul>
-<li>mycobot 280-M5&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<pre><code class="lang-bash">ros2 launch mycobot_280 <span class="hljs-built_in">test</span>_pump.launch.py
-</code></pre>
-<ul>
 <li>mycobot 280-PI&#x7248;&#x672C;&#xFF1A;</li>
 </ul>
 <p>&#x70B9;&#x51FB;&#x684C;&#x9762;&#x4E0A;&#x7684;<code>ROS2 Shell</code>&#x56FE;&#x6807;&#x6216;&#x8005;&#x684C;&#x9762;&#x4E0B;&#x65B9;&#x680F;&#x7684;&#x5BF9;&#x5E94;&#x56FE;&#x6807;&#xFF0C;&#x6253;&#x5F00;ROS2&#x73AF;&#x5883;&#x7EC8;&#x7AEF;&#xFF1A;</p>
@@ -1545,12 +1461,6 @@ currently:    speed: 10    change percent: 2
 <p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x8BE5;&#x529F;&#x80FD;&#x4EC5;&#x652F;&#x6301;&#x5BF9;&#x673A;&#x68B0;&#x81C2;&#x7684;&#x63A7;&#x5236;</strong></p>
 </blockquote>
 <p>&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x884C;&#xFF0C;&#x8FD0;&#x884C;&#xFF1A;</p>
-<ul>
-<li>mycobot 280-M5&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<pre><code class="lang-bash"><span class="hljs-comment"># mycobot 280-M5&#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x4E3A;&quot;/dev/ttyUSB0&quot;&#xFF0C;&#x6CE2;&#x7279;&#x7387;&#x4E3A;115200.&#x90E8;&#x5206;&#x673A;&#x578B;&#x7684;&#x4E32;&#x53E3;&#x540D;&#x4E3A; &quot;dev/ttyACM0&quot;,&#x82E5;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#xFF0C;&#x53EF;&#x5C06;&#x4E32;&#x53E3;&#x540D;&#x6539;&#x4E3A;&quot;/dev/ttyACM0&quot;.</span>
-ros2 launch mycobot_280 slider_control_pump.launch.py
-</code></pre>
 <ul>
 <li>mycobot 280-PI&#x7248;&#x672C;&#xFF1A;</li>
 </ul>
@@ -1570,22 +1480,11 @@ ros2 launch mycobot_280pi slider_control_pump.launch.py
 <h5 id="3-gui&#x63A7;&#x5236;"><a name="3-gui&#x63A7;&#x5236;" class="anchor-navigation-ex-anchor" href="#3-gui&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>3 GUI&#x63A7;&#x5236;</h5>
 <p>&#x5728;&#x524D;&#x9762;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#xFF0C;&#x672C;&#x5305;&#x8FD8;<strong>&#x63D0;&#x4F9B;&#x4E86;&#x7B80;&#x5355;&#x7684; Gui &#x63A7;&#x5236;&#x754C;&#x9762;</strong>&#x3002; &#x8BE5;&#x65B9;&#x5F0F;&#x610F;&#x5728;&#x4E8E;&#x771F;&#x5B9E;&#x673A;&#x68B0;&#x81C2;&#x76F8;&#x4E92;&#x8054;&#x52A8;&#xFF0C;&#x8BF7;&#x8FDE;&#x63A5; mycobot&#x3002;</p>
 <p>&#x6253;&#x5F00;&#x547D;&#x4EE4;&#x884C;&#xFF1A;</p>
-<ul>
-<li>mycobot 280-M5&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<pre><code class="lang-bash"><span class="hljs-comment"># mycobot 280-M5&#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x4E3A;&quot;/dev/ttyUSB0&quot;&#xFF0C;&#x6CE2;&#x7279;&#x7387;&#x4E3A;115200.&#x90E8;&#x5206;&#x673A;&#x578B;&#x7684;&#x4E32;&#x53E3;&#x540D;&#x4E3A; &quot;dev/ttyACM0&quot;,&#x82E5;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#xFF0C;&#x53EF;&#x5C06;&#x4E32;&#x53E3;&#x540D;&#x6539;&#x4E3A;&quot;/dev/ttyACM0&quot;.</span>
-ros2 launch mycobot_280 simple_gui_pump.launch.py
-</code></pre>
 <p>&#x5B83;&#x5C06;<strong>&#x6253;&#x5F00;rviz&#x548C;&#x4E00;&#x4E2A;GUI&#x754C;&#x9762;</strong>&#xFF0C;&#x4F60;&#x5C06;&#x770B;&#x5230;&#x5982;&#x4E0B;&#x753B;&#x9762;&#xFF1A;</p>
 <p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/rviz2/12.1.4-14.png" width="500" align="center"></p>
 <h4 id="&#x6444;&#x50CF;&#x5934;&#x6CD5;&#x5170;"><a name="&#x6444;&#x50CF;&#x5934;&#x6CD5;&#x5170;" class="anchor-navigation-ex-anchor" href="#&#x6444;&#x50CF;&#x5934;&#x6CD5;&#x5170;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6444;&#x50CF;&#x5934;&#x6CD5;&#x5170;</h4>
 <h5 id="1-&#x52A0;&#x8F7D;&#x6A21;&#x578B;_1"><a name="1-&#x52A0;&#x8F7D;&#x6A21;&#x578B;_1" class="anchor-navigation-ex-anchor" href="#1-&#x52A0;&#x8F7D;&#x6A21;&#x578B;_1"><i class="fa fa-link" aria-hidden="true"></i></a>1 &#x52A0;&#x8F7D;&#x6A21;&#x578B;</h5>
 <p>&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x884C;&#xFF0C;&#x8FD0;&#x884C;&#xFF1A;</p>
-<ul>
-<li>mycobot 280-M5&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<pre><code class="lang-bash">ros2 launch mycobot_280 <span class="hljs-built_in">test</span>_camera_flange.launch.py
-</code></pre>
 <ul>
 <li>mycobot 280-PI&#x7248;&#x672C;&#xFF1A;</li>
 </ul>
@@ -1603,12 +1502,6 @@ ros2 launch mycobot_280 simple_gui_pump.launch.py
 <p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x8BE5;&#x529F;&#x80FD;&#x4EC5;&#x652F;&#x6301;&#x5BF9;&#x673A;&#x68B0;&#x81C2;&#x7684;&#x63A7;&#x5236;</strong></p>
 </blockquote>
 <p>&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x884C;&#xFF0C;&#x8FD0;&#x884C;&#xFF1A;</p>
-<ul>
-<li>mycobot 280-M5&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<pre><code class="lang-bash"><span class="hljs-comment"># mycobot 280-M5&#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x4E3A;&quot;/dev/ttyUSB0&quot;&#xFF0C;&#x6CE2;&#x7279;&#x7387;&#x4E3A;115200.&#x90E8;&#x5206;&#x673A;&#x578B;&#x7684;&#x4E32;&#x53E3;&#x540D;&#x4E3A; &quot;dev/ttyACM0&quot;,&#x82E5;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#xFF0C;&#x53EF;&#x5C06;&#x4E32;&#x53E3;&#x540D;&#x6539;&#x4E3A;&quot;/dev/ttyACM0&quot;.</span>
-ros2 launch mycobot_280 slider_control_camera_flange.launch.py
-</code></pre>
 <ul>
 <li>mycobot 280-PI&#x7248;&#x672C;&#xFF1A;</li>
 </ul>
@@ -1629,11 +1522,6 @@ ros2 launch mycobot_280pi slider_control_camera_flange.launch.py
 <h5 id="1-&#x52A0;&#x8F7D;&#x6A21;&#x578B;_2"><a name="1-&#x52A0;&#x8F7D;&#x6A21;&#x578B;_2" class="anchor-navigation-ex-anchor" href="#1-&#x52A0;&#x8F7D;&#x6A21;&#x578B;_2"><i class="fa fa-link" aria-hidden="true"></i></a>1 &#x52A0;&#x8F7D;&#x6A21;&#x578B;</h5>
 <p>&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x884C;&#xFF0C;&#x8FD0;&#x884C;&#xFF1A;</p>
 <ul>
-<li>mycobot 280-M5&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<pre><code class="lang-bash">ros2 launch mycobot_280 <span class="hljs-built_in">test</span>_camera_flange_pump.launch.py
-</code></pre>
-<ul>
 <li>mycobot 280-PI&#x7248;&#x672C;&#xFF1A;</li>
 </ul>
 <p>&#x70B9;&#x51FB;&#x684C;&#x9762;&#x4E0A;&#x7684;<code>ROS2 Shell</code>&#x56FE;&#x6807;&#x6216;&#x8005;&#x684C;&#x9762;&#x4E0B;&#x65B9;&#x680F;&#x7684;&#x5BF9;&#x5E94;&#x56FE;&#x6807;&#xFF0C;&#x6253;&#x5F00;ROS2&#x73AF;&#x5883;&#x7EC8;&#x7AEF;&#xFF1A;</p>
@@ -1648,24 +1536,15 @@ ros2 launch mycobot_280pi slider_control_camera_flange.launch.py
 <h4 id="urdf&#x6A21;&#x578B;&#x5730;&#x5740;"><a name="urdf&#x6A21;&#x578B;&#x5730;&#x5740;" class="anchor-navigation-ex-anchor" href="#urdf&#x6A21;&#x578B;&#x5730;&#x5740;"><i class="fa fa-link" aria-hidden="true"></i></a>URDF&#x6A21;&#x578B;&#x5730;&#x5740;</h4>
 <h5 id="1-mycobot-&#x5782;&#x76F4;&#x5438;&#x6CF5;v20"><a name="1-mycobot-&#x5782;&#x76F4;&#x5438;&#x6CF5;v20" class="anchor-navigation-ex-anchor" href="#1-mycobot-&#x5782;&#x76F4;&#x5438;&#x6CF5;v20"><i class="fa fa-link" aria-hidden="true"></i></a>1 myCobot &#x5782;&#x76F4;&#x5438;&#x6CF5;V2.0</h5>
 <ul>
-<li><p><a href="https://github.com/elephantrobotics/mycobot_ros2/blob/280-ros-pump-camera/mycobot_description/urdf/mycobot/mycobot_with_pump.urdf" target="_blank">myCobot 280-M5 &#x7248;&#x672C;</a></p>
-</li>
-<li><p><a href="https://github.com/elephantrobotics/mycobot_ros2/blob/280-ros-pump-camera/mycobot_description/urdf/mycobot_pi/mycobot_with_pump.urdf" target="_blank">myCobot 280-PI &#x7248;&#x672C;</a></p>
-</li>
+<li><a href="https://github.com/elephantrobotics/mycobot_ros2/blob/280-ros-pump-camera/mycobot_description/urdf/mycobot_pi/mycobot_with_pump.urdf" target="_blank">myCobot 280-PI &#x7248;&#x672C;</a></li>
 </ul>
 <h5 id="2-&#x6444;&#x50CF;&#x5934;&#x6CD5;&#x5170;"><a name="2-&#x6444;&#x50CF;&#x5934;&#x6CD5;&#x5170;" class="anchor-navigation-ex-anchor" href="#2-&#x6444;&#x50CF;&#x5934;&#x6CD5;&#x5170;"><i class="fa fa-link" aria-hidden="true"></i></a>2 &#x6444;&#x50CF;&#x5934;&#x6CD5;&#x5170;</h5>
 <ul>
-<li><p><a href="https://github.com/elephantrobotics/mycobot_ros2/tree/humble/mycobot_description/urdf/mycobot/mycobot_with_camera_flange.urdf" target="_blank">myCobot 280-M5 &#x7248;&#x672C;</a></p>
-</li>
-<li><p><a href="https://github.com/elephantrobotics/mycobot_ros2/tree/humble/mycobot_description/urdf/mycobot_pi/mycobot_with_camera_flange.urdf" target="_blank">myCobot 280-PI &#x7248;&#x672C;</a></p>
-</li>
+<li><a href="https://github.com/elephantrobotics/mycobot_ros2/tree/humble/mycobot_description/urdf/mycobot_pi/mycobot_with_camera_flange.urdf" target="_blank">myCobot 280-PI &#x7248;&#x672C;</a></li>
 </ul>
 <h5 id="3-&#x6444;&#x50CF;&#x5934;&#x6CD5;&#x5170;--&#x5438;&#x6CF5;"><a name="3-&#x6444;&#x50CF;&#x5934;&#x6CD5;&#x5170;--&#x5438;&#x6CF5;" class="anchor-navigation-ex-anchor" href="#3-&#x6444;&#x50CF;&#x5934;&#x6CD5;&#x5170;--&#x5438;&#x6CF5;"><i class="fa fa-link" aria-hidden="true"></i></a>3 &#x6444;&#x50CF;&#x5934;&#x6CD5;&#x5170; &amp;&amp; &#x5438;&#x6CF5;</h5>
 <ul>
-<li><p><a href="https://github.com/elephantrobotics/mycobot_ros2/tree/humble/mycobot_description/urdf/mycobot/mycobot_with_camera_flange_pump.urdf" target="_blank">myCobot 280-M5 &#x7248;&#x672C;</a></p>
-</li>
-<li><p><a href="https://github.com/elephantrobotics/mycobot_ros2/tree/humble/mycobot_description/urdf/mycobot_pi/mycobot_with_camera_flange_pump.urdf" target="_blank">myCobot 280-PI &#x7248;&#x672C;</a></p>
-</li>
+<li><a href="https://github.com/elephantrobotics/mycobot_ros2/tree/humble/mycobot_description/urdf/mycobot_pi/mycobot_with_camera_flange_pump.urdf" target="_blank">myCobot 280-PI &#x7248;&#x672C;</a></li>
 </ul>
 
                                 
@@ -1710,7 +1589,7 @@ ros2 launch mycobot_280pi slider_control_camera_flange.launch.py
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.3.3 rivz介绍以及使用","level":"1.4.2.3.3","depth":4,"next":{"title":"6.4 基于Blockly 开发使用","level":"1.4.2.4","depth":3,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/README.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/README.md","articles":[{"title":"6.4.1myBlockly初始使用","level":"1.4.2.4.1","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.1-myBlocklyFirstUse.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.1-myBlocklyFirstUse.md","articles":[]},{"title":"6.4.2控制RGB灯板","level":"1.4.2.4.2","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.2-ControlRGB.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.2-ControlRGB.md","articles":[]},{"title":"6.4.3控制机械臂回到原点","level":"1.4.2.4.3","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.3-ControlRoboticArmBackZero.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.3-ControlRoboticArmBackZero.md","articles":[]},{"title":"6.4.4控制单关节运动","level":"1.4.2.4.4","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.4-ControlSingleJoint.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.4-ControlSingleJoint.md","articles":[]},{"title":"6.4.5控制多个关节","level":"1.4.2.4.5","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.5-ControlSinglesJoint.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.5-ControlSinglesJoint.md","articles":[]},{"title":"6.4.6控制机械臂左右摆动","level":"1.4.2.4.6","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.6-ControlRoboticSwingLeft&Right.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.6-ControlRoboticSwingLeft&Right.md","articles":[]},{"title":"6.4.7控制机械臂跳舞","level":"1.4.2.4.7","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.7-ControlRoboticArmDance.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.7-ControlRoboticArmDance.md","articles":[]},{"title":"6.4.8夹爪的使用","level":"1.4.2.4.8","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.md","articles":[]},{"title":"6.4.9吸泵的使用","level":"1.4.2.4.9","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.md","articles":[]},{"title":"6.4.10夹爪测试","level":"1.4.2.4.10","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.md","articles":[]},{"title":"6.4.11 IO测试","level":"1.4.2.4.11","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.14-ioTest.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.14-ioTest.md","articles":[]},{"title":"6.4.12Q&A","level":"1.4.2.4.12","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.md","articles":[]}]},"previous":{"title":"6.3.2 ROS2基础","level":"1.4.2.3.2","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.2-BasicTutorial.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.2-BasicTutorial.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","livereload"],"pluginsConfig":{"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"insertAnchor":true,"showGoTop":true,"mini":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":"","bottom":"20px","offset":{"top":10,"left":10},"minWidth":"70px","floatIcon":"fa fa-navicon","zIndex":"1000","trigger":"click","right":"20px","show":true}},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.4-rivzIntroductionAndUse/README.md","mtime":"2024-07-25T09:51:15.044Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-31T08:34:08.834Z"},"basePath":"../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.3.3 rivz介绍以及使用","level":"1.4.2.3.3","depth":4,"next":{"title":"6.4 基于Blockly 开发使用","level":"1.4.2.4","depth":3,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/README.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/README.md","articles":[{"title":"6.4.1myBlockly初始使用","level":"1.4.2.4.1","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.1-myBlocklyFirstUse.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.1-myBlocklyFirstUse.md","articles":[]},{"title":"6.4.2控制RGB灯板","level":"1.4.2.4.2","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.2-ControlRGB.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.2-ControlRGB.md","articles":[]},{"title":"6.4.3控制机械臂回到原点","level":"1.4.2.4.3","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.3-ControlRoboticArmBackZero.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.3-ControlRoboticArmBackZero.md","articles":[]},{"title":"6.4.4控制单关节运动","level":"1.4.2.4.4","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.4-ControlSingleJoint.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.4-ControlSingleJoint.md","articles":[]},{"title":"6.4.5控制多个关节","level":"1.4.2.4.5","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.5-ControlSinglesJoint.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.5-ControlSinglesJoint.md","articles":[]},{"title":"6.4.6控制机械臂左右摆动","level":"1.4.2.4.6","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.6-ControlRoboticSwingLeft&Right.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.6-ControlRoboticSwingLeft&Right.md","articles":[]},{"title":"6.4.7控制机械臂跳舞","level":"1.4.2.4.7","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.7-ControlRoboticArmDance.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.7-ControlRoboticArmDance.md","articles":[]},{"title":"6.4.8夹爪的使用","level":"1.4.2.4.8","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.md","articles":[]},{"title":"6.4.9吸泵的使用","level":"1.4.2.4.9","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.md","articles":[]},{"title":"6.4.10夹爪测试","level":"1.4.2.4.10","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.md","articles":[]},{"title":"6.4.11 IO测试","level":"1.4.2.4.11","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.14-ioTest.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.14-ioTest.md","articles":[]},{"title":"6.4.12Q&A","level":"1.4.2.4.12","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.md","ref":"3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.md","articles":[]}]},"previous":{"title":"6.3.2 ROS2基础","level":"1.4.2.3.2","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.2-BasicTutorial.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.2-BasicTutorial.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","livereload"],"pluginsConfig":{"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"insertAnchor":true,"showGoTop":true,"mini":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":"","bottom":"20px","offset":{"top":10,"left":10},"minWidth":"70px","floatIcon":"fa fa-navicon","zIndex":"1000","trigger":"click","right":"20px","show":true}},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.4-rivzIntroductionAndUse/README.md","mtime":"2024-08-01T09:06:20.377Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-01T09:57:07.660Z"},"basePath":"../../../../..","book":{"language":""}});
         });
     </script>
 </div>

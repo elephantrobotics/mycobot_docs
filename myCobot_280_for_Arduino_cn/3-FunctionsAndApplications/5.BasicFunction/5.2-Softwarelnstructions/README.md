@@ -12,7 +12,7 @@
 
 ## 2 myStudio最新版本与支持平台
 
-- 最新版本：V3.5.8
+- 最新版本：V3.5.9
 
 - 适用于：Windows、Mac、Linux
 
@@ -29,25 +29,15 @@
   - myCobot 280 PI
   - myCobot 280 Jetson Nano
   - **myCobot 280 for Arduino** 
-- myCobot 320
-  - myCobot 320 M5
-  - myCobot 320 PI 
-- myPalletizer 260
-  - myPalletizer 260 M5
-  - myPalletizer 260 PI 
-- mechArm 270
-  - mechArm 270 M5
-  - mechArm 270 Pi
-- myCobot Pro 600 
-- myBuddy 280
+
 
 ## 5 固件版本推荐
 
-不同型号机械臂所需烧录的固件不同，以下是不同型号机械臂推荐烧录的固件版本。
-
 **myCobot 280系列**
 
-myCobot 280系列共4个版本：M5版本、PI版本、ardunio版本以及jetsonnano版本。不同版本核心型号不同，所需烧录的固件及其版本也不同。
+固件是一种嵌在设备中的特殊软件，负责控制设备的基本功能。它就像设备的大脑，指挥硬件该如何工作。不同型号机械臂所需烧录的固件不同，myCobot 280系列共4个版本：M5版本、PI版本、arduino版本以及jetsonnano版本。不同版本核心型号不同，所需烧录的固件及其版本也不同。**这里仅提供Ardunio版本的固件信息**。末端atom为算法储存运算终端。
+
+<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.2-Softwarelnstructions/2111pic4.png" alt="atom" style="zoom:100%;" />
 
 <table>
 <tr>
@@ -57,47 +47,15 @@ myCobot 280系列共4个版本：M5版本、PI版本、ardunio版本以及jetson
     <td>推荐固件及其版本</td>
 </tr>
 <tr>
-	<td rowspan='2'>M5版本</td>
-    <td>M5Stack-Basic</td>
-    <td>miniRobot固件</td>
-    <td>推荐烧录v2.1版本，可以使用拖动示教、wifi、蓝牙等功能</td>
-</tr>
-<tr>
-	<td>Atom</td>
-    <td>atomMain固件</td>
-    <td>产品序列号为ER28001202200415及之前，或者产品无序列号，推荐烧录v4.1版本；序列号为ER28001202200416及之后，推荐烧录v5.1版本</td>
-</tr>
-<tr>
-	<td rowspan='2'>PI版本</td>
-	<td>RaspberryPI 4B</td>
-	<td>ubuntu固件</td>
-	<td>推荐烧录V18.04.版本</td>
-</tr>
-<tr>
-	<td>Atom</td>
-	<td>atomMain固件</td>
-	<td>产品序列号为ER28001202200415及之前，或者产品无序列号，推荐烧录v4.1版本；序列号为ER28001202200416及之后，推荐烧录v5.1版本</td>
-</tr>
-<tr>
 	<td rowspan='3'>Arduino版本</td>
 	<td>mega2560</td>
 	<td>transponder固件</td>
 	<td>推荐烧录v1.0版本</td>
 </tr>
+<tr>
 	<td>mkrwifi1010</td>
 	<td>transponder固件</td>
 	<td>推荐烧录v1.0版本</td>
-</tr>
-<tr>
-	<td>Atom</td>
-	<td>atomMain固件</td>
-	<td>产品序列号为ER28001202200415及之前，或者产品无序列号，推荐烧录v4.1版本；序列号为ER28001202200416及之后，推荐烧录v5.1版本</td>
-</tr>
-<tr>
-	<td rowspan='2'>Jetson nano版本</td>
-	<td>JestonNano</td>
-	<td>ubuntu固件</td>
-	<td>推荐烧录V18.04.版本</td>
 </tr>
 <tr>
 	<td>Atom</td>
@@ -112,7 +70,7 @@ myCobot 280系列共4个版本：M5版本、PI版本、ardunio版本以及jetson
 
 >注意：myStudio安装时的安装路径不能有任何空格
 
-下载地址：
+下载地址（我们提供2种下载地址，根据您的需求选择合适的下载地址即可）：
 
 **1. [GitHub地址](https://github.com/elephantrobotics/myStudio)**
 
@@ -193,34 +151,12 @@ myCobot 280系列共4个版本：M5版本、PI版本、ardunio版本以及jetson
 
 **[myStudio视频教程](https://www.bilibili.com/video/BV1Qr4y1N7B5/)**
 
-## 烧录M5Stack-Basic固件
-
-> **注意：Pi系列机械臂无需烧录M5Stack-Basic固件。**
-
-第一步: 与PC连接。M5Stack-Basic与PC连接方式如下图所示：
-
-<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.2-Softwarelnstructions/4.1.2.1-basic_PC.jpg" alt="basic" style="zoom:50%;" />
-
-
-
-第二步：选择端口。连接之后，myStudio 的连接窗口的`USB端口`会显示出已连接的开发板（这里是以myPalletizer 260M5版本为例）：
-
-<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.2-Softwarelnstructions/USB.jpg" style="zoom: 40%;" />
-
-
-
-第三步：点击`登录`->`M5Stack-basic`，即可烧录所需固件：
-
-> **注意：**280 PI/Jetson nano/Arduino版本没有M5Stack-basic，因此连接到myStudio之后会显示“无数据”。
-
-<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.2-Softwarelnstructions/basic.jpg" style="zoom: 40%;" />
-
-
-
 ## 烧录 Atom 固件
 
-第一步：与PC连接。用 USB 连接末端的Atom。
-<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.2-Softwarelnstructions/4.1.2.1-atom_PC.jpg" alt="atom" style="zoom:40%;" />
+
+
+第一步：与PC连接。用 USB 连接末端的Atom。底端的Arduino Board由用户自由开发，而末端的atom为算法储存运算终端，不可开发，只可使用本公司固件。
+<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.2-Softwarelnstructions/2111pic4.png" alt="atom" style="zoom:100%;" />
 
 
 

@@ -7,7 +7,7 @@
 <img src="../../../resource/3-FunctionsAndApplications/5.BasicFunction/5.1-Functionlnstruction/10-1-1-001.jpg" alt="10-1-1-001" width="60%"><br>
  **Arduino IDE Download Address** 
 
-- [Arduino 官方网站](https://www.arduino.cc/en/software) 
+此处提供 IDE 1.8.16版本下载链接
 
 - [Windows X64](https://downloads.arduino.cc/arduino-1.8.16-windows.exe)
 
@@ -65,7 +65,7 @@
 **注意：** 请下载最新的库，第一版为v0.0.1。
 
   * 点击下载相关依赖库
-    - [**MycobotBasic**](https://github.com/elephantrobotics/MyCobotBasic/tags)(Mycobot280-Arduino机型导入后可以参考**arduinolib_use**章节进行使用)。具体请看下图，.zip适用于Windows系统，.tar.gz适用于Linux系统：<br>
+    - [**MycobotBasic**](https://github.com/elephantrobotics/MyCobotBasic/tags)(Mycobot280-Arduino机型导入后可以参考**Arduino简单使用**章节进行使用)。具体请看下图，.zip适用于Windows系统，.tar.gz适用于Linux系统：<br>
 
 <img src="../../../resource/3-FunctionsAndApplications/5.BasicFunction/5.1-Functionlnstruction/10-1-4.2-001.png" alt="10-1-4-001" width="50%"><br>
 
