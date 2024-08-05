@@ -20,7 +20,6 @@
             * [6.1.1环境搭建](3-FunctionsAndApplications/6.developmentGuide/Arduino/10.1-arduino_download.md)
             * [6.1.2简单使用](3-FunctionsAndApplications/6.developmentGuide/Arduino/10.2-arduino_use.md)
             * [6.1.3API说明](3-FunctionsAndApplications/6.developmentGuide/Arduino/10.3-api.md)
-            * [6.1.4库的使用](3-FunctionsAndApplications/6.developmentGuide/Arduino/10.4-arduinolib_use.md)
         * [6.2 基于python开发使用](3-FunctionsAndApplications/6.developmentGuide/python/README.md)
             * [6.2.1环境搭建](3-FunctionsAndApplications/6.developmentGuide/python/7.1_download.md)
             * [6.2.2api说明](3-FunctionsAndApplications/6.developmentGuide/python/7.2_API.md)

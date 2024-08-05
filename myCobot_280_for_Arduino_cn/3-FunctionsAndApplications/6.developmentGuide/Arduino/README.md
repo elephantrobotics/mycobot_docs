@@ -15,28 +15,46 @@ MyCobotBasic库是我们公司开发的一款开源机器人控制库，需要�
 
 - myCobot 280
   - myCobot 280 M5
-  - myCobot 280 for Arduino <br>
-- myCobot 320
-  - myCobot 320 M5 <br>
-- myPalletizer 260
-  - myPalletizer 260 M5<br>
-- mechArm 270
-  - mechArm 270 M5<br>
-
-
-**使用前提：**
-
-- **M5** 系列版本， 底部**M5Stack-basic**烧录 **miniRobot**，选择 **Transponder** 功能，末端 **ATOM** 烧录最新版的 **atomMain** (出厂默认已烧录)
-
-
+  - **myCobot 280 for Arduino** <br>
 
 ## Arduino开发使用引导
 
-您可以根据以下指引来使用 Arduino对我们的机械臂进行开发
+您可以根据以下指引来使用 Arduino对我们的机械臂进行开发：<br>
 1.[环境搭建](10.1-arduino_download.md)
 
 2.[简单使用](10.2-arduino_use.md)
 
 3.[API说明](10.3-api.md)
 
-4.[库的使用](10.4-arduinolib_use.md)
+
+
+## Arduino开发板连接指引
+myCobot 280 for Arduino版本是基于PC和开发板进行开发和使用的，**机械臂内部无任何内置系统**，所以在使用过程中是需要机械臂、PC以及开发板相结合，所以在使用之前请准备好一台PC电脑以及开发板。**开发前请先连接好PC和开发板**。
+
+1、先给机械臂上电（如果绿灯亮起表示机械臂已经上电）
+
+![arduino](../../../resource\3-FunctionsAndApplications\6.developmentGuide\Arduino/10.png)
+
+myCobot 280 for Arduino连接处
+
+![arduino](../../../resource\3-FunctionsAndApplications\6.developmentGuide\Arduino/2141arduino.jpg)
+
+2、连接Arduino板子（连接位置如下图所示，以开发板Arduino MEGA2560为例）
+
+![arduino](../../../resource\3-FunctionsAndApplications\6.developmentGuide\Arduino/2141devcon1.jpg)
+
+![arduino](../../../resource\3-FunctionsAndApplications\6.developmentGuide\Arduino/11.png)
+
+![arduino](../../../resource\3-FunctionsAndApplications\6.developmentGuide\Arduino/12.png)
+
+3、接通串口与电脑相连（如果绿灯亮起表示成功连接电脑）
+
+![arduino](../../../resource\3-FunctionsAndApplications\6.developmentGuide\Arduino/13.png)
+
+接通后可按照以下步骤查看连接端口号
+
+点击此电脑 --> 点击鼠标右键管理 --> 点击设备管理器 --> 点击端口
+
+![arduino](../../../resource\3-FunctionsAndApplications\6.developmentGuide\Arduino/14.png)
+
+如能正常显示端口号，则表明开发板此时已经成功链接电脑，可以开始进行开发。如无端口号显示，请检查各链接线是否存在松动等链接不良情况。

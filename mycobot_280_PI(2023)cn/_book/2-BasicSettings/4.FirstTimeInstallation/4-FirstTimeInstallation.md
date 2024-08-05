@@ -67,7 +67,7 @@
 
 ---
 
-G型底座 适配型号：myCobot 280、myPalletizer 260
+G型底座 适配型号：myCobot 280
 
 ![G底座](../../resource/2-BasicSettings/4.FirstTimeInstallation/GStand.jpg)
 
