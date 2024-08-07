@@ -6,7 +6,7 @@ You can control the movement of the robot arm and realize the drawing operation 
 
 > Note: The end of the robot arm and the pen clip are connected using Lego technology.
 
-> <img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\draw/7.15.1.jpg" alt="7.1.1-1" style="zoom: 80%;" />
+> <img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\draw/7.15.2.jpg" alt="7.1.1-1" style="zoom: 80%;" />
 
 ## Instructions
 

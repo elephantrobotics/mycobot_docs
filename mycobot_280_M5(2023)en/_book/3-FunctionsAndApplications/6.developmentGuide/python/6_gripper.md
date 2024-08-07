@@ -8,7 +8,7 @@ Before using Python to control the gripper, you need to install and connect the 
 >
 > <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\Jaw/gripper1.jpg" style="zoom: 67%;" />
 >
-> The electric gripper is inserted into the 485 interface on the top, see the following figure:
+> The electric gripper is inserted into the interface on the top, see the following figure:
 >
 > <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\Jaw/gripper2.jpg" style="zoom: 67%;" />
 >

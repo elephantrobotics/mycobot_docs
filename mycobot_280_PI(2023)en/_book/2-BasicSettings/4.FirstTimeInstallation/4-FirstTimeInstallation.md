@@ -35,10 +35,8 @@ In this section, we strongly recommend disassembling the product according to th
 
 ## Product unboxing video guide
 
-<video controls>
-<source src="../../resource/2-BasicSettings/4.FirstTimeInstallation/OpenGuide.mp4" type="video/mp4">
-Your browser does not support HTML5 video.
-</video>
+[![Video Title](https://img.youtube.com/vi/haV4rIl1dLk/0.jpg)](https://www.youtube.com/watch?v=haV4rIl1dLk)
+
 
 ##  3.Power-on inspection guide
 ## Structural installation and fixation

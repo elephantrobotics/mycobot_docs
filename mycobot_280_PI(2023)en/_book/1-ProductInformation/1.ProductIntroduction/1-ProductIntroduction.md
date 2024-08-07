@@ -2,7 +2,7 @@
 
 ##### myCobot 280 pi
 
-![Cover](../../resource/1-ProductInformation/1.ProductIntroduction/1-1.png)
+![Cover](../../resource/1-ProductInformation/1.ProductIntroduction/pi.jpg)
 ##### Desktop-level six-axis collaborative robot
 
 ### 1.Product Introduction

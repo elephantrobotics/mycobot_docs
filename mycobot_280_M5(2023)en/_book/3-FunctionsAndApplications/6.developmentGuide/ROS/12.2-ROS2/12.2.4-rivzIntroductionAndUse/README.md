@@ -43,10 +43,10 @@ The official default workspace is `colcon_ws`.
 
 Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
 width ="500" align = "center">
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
 width ="500" align = "center">
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-12.png
@@ -139,7 +139,11 @@ ros2 launch mycobot_280 slider_control.launch.py
 
 Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-10.jpg width ="500" align = "center"> <img src =../.../../../../../../resources/3-FunctionsAndApplications/6. developmentGuide/ROS/ROS2/rviz2/12.2.7-11.jpg width ="500" align = "center"> <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-12.png width = "500" align = "center">
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg width ="500" align = "center"> 
+
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg width ="500" align = "center">
+
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-12.png width = "500" align = "center">
 
 Then run the command:
 
@@ -152,10 +156,10 @@ ros2 launch mycobot_280pi slider_control.launch.py
 
 Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
 width ="500" align = "center">
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
 width ="500" align = "center">
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-12.png
@@ -200,9 +204,11 @@ ros2 launch mycobot_280 slider_control_pump.launch.py
 
 Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg width ="500" align = "center"> 
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
+width ="500" align = "center">
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-11.jpg width ="500" align = "center"> 
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
+width ="500" align = "center"> 
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
 width ="500" align = "center">
@@ -242,10 +248,10 @@ ros2 launch mycobot_280 simple_gui.launch.py
 
 Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
 width ="500" align = "center">
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
 width ="500" align = "center">
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-12.png
@@ -262,10 +268,10 @@ ros2 launch mycobot_280pi simple_gui.launch.py
 
 Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
 width ="500" align = "center">
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
 width ="500" align = "center">
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-12.png
@@ -298,10 +304,10 @@ ros2 launch mycobot_280 teleop_keyboard.launch.py
 
 Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-10.jpg
-width = "500" align = "center">
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
+width ="500" align = "center">
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
 width ="500" align = "center">
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-12.png
@@ -318,10 +324,10 @@ ros2 launch mycobot_280pi teleop_keyboard.launch.py ​​
 
 Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
 width ="500" align = "center">
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
 width ="500" align = "center">
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-12.png
@@ -379,10 +385,10 @@ width ="500" align = "center"> Mycobot information will be output on the command
 
 Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
 width ="500" align = "center">
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
 width ="500" align = "center">
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-12.png
@@ -398,10 +404,10 @@ ros2 run mycobot_280pi teleop_keyboard
 
 Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
 width ="500" align = "center">
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
 width ="500" align = "center">
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-12.png
@@ -465,9 +471,11 @@ ros2 launch mycobot_280 test_pump.launch.py
 
 Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-10.jpg width ="500" align = "center"> 
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
+width ="500" align = "center"> 
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-11.jpg width ="500" align = "center">
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
+width ="500" align = "center">
 
  <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-12.png width ="500" align = "center">
 
@@ -499,10 +507,10 @@ ros2 launch mycobot_280 slider_control_pump.launch.py
 
 Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
 width ="500" align = "center">
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
 width ="500" align = "center">
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-12.png
@@ -559,10 +567,10 @@ ros2 launch mycobot_280 test_camera_flange.launch.py
 
 Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
 width ="500" align = "center">
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
 width ="500" align = "center">
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
@@ -596,10 +604,10 @@ ros2 launch mycobot_280 slider_control_camera_flange.launch.py
 
 Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
 width ="500" align = "center">
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
 width ="500" align = "center">
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
@@ -638,10 +646,10 @@ ros2 launch mycobot_280 test_camera_flange_pump.launch.py
 
 Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
 width ="500" align = "center">
 
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
+<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
 width ="500" align = "center">
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png

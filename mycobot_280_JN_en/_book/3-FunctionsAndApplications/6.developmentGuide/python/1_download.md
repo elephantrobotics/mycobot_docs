@@ -225,39 +225,39 @@ The following are the corresponding codes for myCobot and myPalletizer.
 ```python
 from pymycobot.mycobot import MyCobot
 
-from pymycobot import PI_PORT, PI_BAUD  	# 当使用树莓派版本的mycobot时，可以引用这两个变量进行MyCobot初始化，如不是可不填该行代码
+from pymycobot import PI_PORT, PI_BAUD # When using the Raspberry Pi version of mycobot, you can reference these two variables to initialize MyCobot. If not, you can leave this line of code blank
 import time
-#以上需写在代码开头，意为导入项目包
+#The above needs to be written at the beginning of the code, which means importing the project package
 
-# MyCobot 类初始化需要两个参数：串口和波特率
-#   第一个是串口字符串， 如：
-#       linux： "/dev/ttyUSB0"
-#       windows: "COM3"
-#   第二个是波特率：
-#       M5版本为： 115200
-#   以下为如:
-#       mycobot-M5:
-#           linux:
-#              mc = MyCobot("/dev/ttyUSB0", 115200)
-#           windows:
-#              mc = MyCobot("COM3", 115200)
-#       mycobot-raspi:
-#           mc = MyCobot(PI_PORT, PI_BAUD)
+# MyCobot class initialization requires two parameters: serial port and baud rate
+# The first is the serial port string, such as:
+# linux: "/dev/ttyUSB0"
+# windows: "COM3"
+# The second is the baud rate:
+# M5 version: 115200
+# The following is such as:
+# mycobot-M5:
+# linux:
+# mc = MyCobot("/dev/ttyUSB0", 115200)
+# windows:
+# mc = MyCobot("COM3", 115200)
+# mycobot-raspi:
+# mc = MyCobot(PI_PORT, PI_BAUD)
 #
-# 初始化一个MyCobot对象
-# 下面为 windows版本创建对象代码
+# Initialize a MyCobot object
+# The following is the object code for the Windows version
 mc = MyCobot("COM3", 115200)
 
 i = 7
-#循环7次
-while i > 0:							
-    mc.set_color(0,0,255) #蓝灯亮
-    time.sleep(2)	#等2秒				
-    mc.set_color(255,0,0) #红灯亮
-    time.sleep(2)	#等2秒
-    mc.set_color(0,255,0) #绿灯亮
-    time.sleep(2)	#等2秒
-    i -= 1
+# Loop 7 times
+while i > 0:
+mc.set_color(0,0,255) #Blue light on
+time.sleep(2) #Wait 2 seconds
+mc.set_color(255,0,0) #Red light on
+time.sleep(2) #Wait 2 seconds
+mc.set_color(0,255,0) #Green light on
+time.sleep(2) #Wait 2 seconds
+i -= 1
 ```
 
 

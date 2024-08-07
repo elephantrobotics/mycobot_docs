@@ -50,7 +50,10 @@ Currently, there are two versions of Python, one is `2.x` version and the other 
 
 * **Click the `Downloads` option to start downloading Python, click `Add Python 3.10 to PATH`, click `Install Now` to start installing Python**
 
-<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload1.jpg" style="zoom: 33%;" /> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload2.jpg" style="zoom: 50%;" /> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload3.jpg" style="zoom : 50%;" /> * **The prompt "Setup was successful" appears, indicating that the installation is complete** <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload4.jpg" style="zoom: 50%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload1.jpg" style="zoom: 33%;" /> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythoninstall2.jpg" style="zoom: 50%;" /> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythoninstall3.jpg" style="zoom : 50%;" /> 
+
+* **The prompt "Setup was successful" appears, indicating that the installation is complete** <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pythondownload4.jpg" style="zoom: 50%;" />
+
 ### Run Python
 After successful installation, open the command prompt window (Win+R, enter cmd and press Enter), and type `python`. Two situations will occur.
 
@@ -151,7 +154,7 @@ After PyCharm is installed, enter the software and create the first program.
 
 * After the file is successfully created, you will enter the following interface and you can write your own program
 
-<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pycharm界面展示.jpg" style="zoom: 33%;" />
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/createproject2.jpg" style="zoom: 33%;" />
 
 ### Before use
 

@@ -80,4 +80,4 @@ Developed and used based on Python. Our robots support Python, and the developme
 
 myBlockly is a fully visual modular programming software, which belongs to a graphical programming language. It allows users to program and control mycobot in a building block-like way. It is especially suitable for beginners to learn programming and exercise programming thinking.
 
-![blockly](../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.1-Functionlnstruction/2.7-1.png)
+![blockly](../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.1-Functionlnstruction/E.png)

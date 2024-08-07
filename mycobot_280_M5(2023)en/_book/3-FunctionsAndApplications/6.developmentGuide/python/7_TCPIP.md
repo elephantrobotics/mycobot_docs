@@ -44,9 +44,9 @@ If you need to connect to other networks, you can download the [myBlockly softwa
 
 **Step 2:** Open myBlockly, set the WIFI account and password for 280 m5 to connect, and then click Run.
 
-![](../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/OtherNetworks3.png)
+![](../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/OtherNetworks30.png)
 
-![](../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/OtherNetworks4.png)
+![](../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/OtherNetworks40.png)
 
 **Step 3:** The operation steps are as follows: Transponder -> WLAN Server, and the robot arm will connect to the "agilex-desktop" network.
 

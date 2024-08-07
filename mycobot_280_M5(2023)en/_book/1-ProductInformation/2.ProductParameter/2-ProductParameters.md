@@ -4,7 +4,7 @@
 
 ## 1.Robot Specifications
 
-![封面](../../resources/1-ProductInformation/2.ProductParameter/main.jpg)
+![封面](../../resources/1-ProductInformation/2.ProductParameter/main1.jpg)
 
 | Index | Parameters |
 | :-----------: | :---------: |
