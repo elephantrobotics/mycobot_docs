@@ -1241,24 +1241,9 @@
 <p><code>mycobot_ros</code> &#x73B0;&#x5DF2;&#x96C6;&#x6210;&#x4E86; MoveIt &#x90E8;&#x5206;&#x3002;</p>
 <p>&#x6253;&#x5F00;&#x547D;&#x4EE4;&#x884C;&#x8FD0;&#x884C;&#xFF1A;</p>
 <ul>
-<li>mycobot 280-M5&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<pre><code class="lang-bash">roslaunch mycobot_280_moveit mycobot_moveit.launch
-</code></pre>
-<ul>
-<li>mycobot 280-Pi&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<pre><code class="lang-bash">roslaunch mycobot_280pi_moveit mycobot_moveit.launch
-</code></pre>
-<ul>
 <li>mycobot 280-JetsonNano&#x7248;&#x672C;&#xFF1A;</li>
 </ul>
 <pre><code class="lang-bash">roslaunch mycobot_280jn_moveit mycobot_moveit.launch
-</code></pre>
-<ul>
-<li>mycobot 280-Arduino&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<pre><code class="lang-bash">roslaunch mycobot_280arduino_moveit mycobot_moveit.launch
 </code></pre>
 <p>&#x8FD0;&#x884C;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;  </p>
 <p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.5-Moveit/moveit-2.png" width="500" align="center"></p>
@@ -1266,28 +1251,10 @@
 <p><img src="../../../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.5-Moveit/moveit-3.gif" width="500" align="center"></p>
 <p>&#x5982;&#x679C;&#x9700;&#x8981;&#x8BA9;&#x771F;&#x5B9E;&#x7684;&#x673A;&#x68B0;&#x81C2;&#x540C;&#x6B65;&#x6267;&#x884C;&#x8BA1;&#x5212;&#xFF0C;&#x9700;&#x8981;&#x518D;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x884C;&#xFF0C;&#x8FD0;&#x884C;&#xFF1A;</p>
 <ul>
-<li>mycobot 280-M5&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<pre><code class="lang-bash"><span class="hljs-comment"># mycobot 280-M5&#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x4E3A;&quot;/dev/ttyUSB0&quot;&#xFF0C;&#x6CE2;&#x7279;&#x7387;&#x4E3A;115200.&#x90E8;&#x5206;&#x673A;&#x578B;&#x7684;&#x4E32;&#x53E3;&#x540D;&#x4E3A; &quot;dev/ttyACM0&quot;,&#x82E5;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#xFF0C;&#x53EF;&#x5C06;&#x4E32;&#x53E3;&#x540D;&#x6539;&#x4E3A;&quot;/dev/ttyACM0&quot;.</span>
-rosrun mycobot_280_moveit sync_plan.py _port:=/dev/ttyUSB0 _baud:=115200
-</code></pre>
-<ul>
-<li>mycobot 280-Pi&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<pre><code class="lang-bash"><span class="hljs-comment"># mycobot 280-Pi&#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x4E3A;&quot;/dev/ttyAMA0&quot;&#xFF0C;&#x6CE2;&#x7279;&#x7387;&#x4E3A;1000000.</span>
-rosrun mycobot_280pi_moveit sync_plan.py _port:=/dev/ttyAMA0 _baud:=1000000
-</code></pre>
-<ul>
 <li>mycobot 280-JetsonNano&#x7248;&#x672C;&#xFF1A;</li>
 </ul>
 <pre><code class="lang-bash"><span class="hljs-comment"># mycobot 280-JetsonNano&#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x4E3A;&quot;/dev/ttyTHS1&quot;&#xFF0C;&#x6CE2;&#x7279;&#x7387;&#x4E3A;1000000.</span>
 rosrun mycobot_280jn_moveit sync_plan.py _port:=/dev/ttyTHS1 _baud:=1000000
-</code></pre>
-<ul>
-<li>mycobot 280-JetsonNano&#x7248;&#x672C;&#xFF1A;</li>
-</ul>
-<pre><code class="lang-bash"><span class="hljs-comment"># mycobot 280-Arduino&#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x4E32;&#x53E3;&#x540D;&#x4E3A;&quot;/dev/ttyACM0&quot;&#xFF0C;&#x6CE2;&#x7279;&#x7387;&#x4E3A;115200.</span>
-rosrun mycobot_280arduino_moveit sync_play.py _port:=/dev/ttyACM0 _baud:=115200
 </code></pre>
 
                                 
@@ -1332,7 +1299,7 @@ rosrun mycobot_280arduino_moveit sync_play.py _port:=/dev/ttyACM0 _baud:=115200
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.2.4 Moveit介绍以及使用","level":"1.4.2.2.4","depth":4,"next":{"title":"6.3 基于ROS2 开发使用","level":"1.4.2.3","depth":3,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.3-ROS2Introduction.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.3-ROS2Introduction.md","articles":[{"title":"6.3.1 ROS2环境搭建","level":"1.4.2.3.1","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.1-InstallationOfROS2.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.1-InstallationOfROS2.md","articles":[]},{"title":"6.3.2 ROS2基础","level":"1.4.2.3.2","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.2-BasicTutorial.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.2-BasicTutorial.md","articles":[]},{"title":"6.3.3 rivz介绍以及使用","level":"1.4.2.3.3","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.4-rivzIntroductionAndUse/README.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.4-rivzIntroductionAndUse/README.md","articles":[]}]},"previous":{"title":"6.2.3 rivz介绍以及使用","level":"1.4.2.2.3","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.4-rivzIntroductionAndUse/README.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.4-rivzIntroductionAndUse/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","livereload"],"pluginsConfig":{"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"insertAnchor":true,"showGoTop":true,"mini":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":"","bottom":"20px","offset":{"top":10,"left":10},"minWidth":"70px","floatIcon":"fa fa-navicon","zIndex":"1000","trigger":"click","right":"20px","show":true}},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.5-Moveit/README.md","mtime":"2024-07-19T04:51:26.246Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-31T08:27:02.032Z"},"basePath":"../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.2.4 Moveit介绍以及使用","level":"1.4.2.2.4","depth":4,"next":{"title":"6.3 基于ROS2 开发使用","level":"1.4.2.3","depth":3,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.3-ROS2Introduction.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.3-ROS2Introduction.md","articles":[{"title":"6.3.1 ROS2环境搭建","level":"1.4.2.3.1","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.1-InstallationOfROS2.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.1-InstallationOfROS2.md","articles":[]},{"title":"6.3.2 ROS2基础","level":"1.4.2.3.2","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.2-BasicTutorial.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.2-BasicTutorial.md","articles":[]},{"title":"6.3.3 rivz介绍以及使用","level":"1.4.2.3.3","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.4-rivzIntroductionAndUse/README.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.4-rivzIntroductionAndUse/README.md","articles":[]}]},"previous":{"title":"6.2.3 rivz介绍以及使用","level":"1.4.2.2.3","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.4-rivzIntroductionAndUse/README.md","ref":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.4-rivzIntroductionAndUse/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","livereload"],"pluginsConfig":{"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"insertAnchor":true,"showGoTop":true,"mini":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":"","bottom":"20px","offset":{"top":10,"left":10},"minWidth":"70px","floatIcon":"fa fa-navicon","zIndex":"1000","trigger":"click","right":"20px","show":true}},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.5-Moveit/README.md","mtime":"2024-08-05T09:29:33.846Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-06T01:28:39.821Z"},"basePath":"../../../../..","book":{"language":""}});
         });
     </script>
 </div>

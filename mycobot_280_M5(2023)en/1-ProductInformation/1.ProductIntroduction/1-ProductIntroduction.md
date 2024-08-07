@@ -3,7 +3,7 @@
 
 ##### myCobot 280 M5
 
-![封面](../../resources/1-ProductInformation/1.ProductIntroduction/main.jpg)
+![封面](../../resources/1-ProductInformation/1.ProductIntroduction/main1.jpg)
 ##### Desktop six-axis collaborative robot
 
 ### Product Introduction
@@ -27,7 +27,7 @@ The myCobot 280 series robot arm is a six-degree-of-freedom collaborative robot 
 
 ### Features
 
-![特点](../../resources/1-ProductInformation/1.ProductIntroduction/ProductFeature.png)
+![特点](../../resources/1-ProductInformation/1.ProductIntroduction/product.png)
 
 |                                                              |                                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -64,7 +64,7 @@ The myCobot 280 series robot arm is a six-degree-of-freedom collaborative robot 
 ---
 
 ## 3.Supported extension development
-![拓展开发](../../resources/1-ProductInformation/1.ProductIntroduction/ExpansionAndDevelopment.png)
+![拓展开发](../../resources/1-ProductInformation/1.ProductIntroduction/EXP.png)
 
 The mycobot series of robotic arms are extremely valuable in the fields of education and scientific research, especially in Python and ROS (Robot Operating System), two widely used development environments. These environments provide strong support, allowing the mycobot series of products to be widely used in machine learning, artificial intelligence research, complex motion control, and visual processing tasks. At the same time, with dozens of accessories such as adaptive grippers, camera flanges, suction pumps, etc., you can give full play to myCobot's creative ideas.
 
