@@ -25,21 +25,16 @@
 ## Applicable devices for myStudio
 
 - myCobot 280
+
 - myCobot 280 M5
+
 - myCobot 280 PI
+
 - myCobot 280 Jetson Nano
+
 - myCobot 280 for Arduino
-- myCobot 320
-- myCobot 320 M5
-- myCobot 320 PI
-- myPalletizer 260
-- myPalletizer 260 M5
-- myPalletizer 260 PI
-- mechArm 270
-- mechArm 270 M5
-- mechArm 270 Pi
-- myCobot Pro 600
-- myBuddy 280
+
+  
 
 ## Firmware version recommendation
 

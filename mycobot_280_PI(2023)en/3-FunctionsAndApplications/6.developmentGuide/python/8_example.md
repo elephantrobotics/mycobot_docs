@@ -150,7 +150,7 @@ time.sleep(3)
 
 
 
-## ** Multi-joint exercise**
+## **Multi-joint exercise**
 
 ```python
 import time
@@ -408,8 +408,6 @@ if __name__ == "__main__":
 
 
 ## Suction pump control
-
-280-M5版本
 
 ```python
 from pymycobot.mycobot import MyCobot

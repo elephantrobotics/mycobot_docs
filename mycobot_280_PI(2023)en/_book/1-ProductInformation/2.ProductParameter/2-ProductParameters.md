@@ -39,11 +39,11 @@
 
 - The robot base is mounted with flanges. The base is compatible with both LEGO technology and M4 screw installation.
 
-<img src="../../resource/1-ProductInformation/2.ProductParameter/孔位安装2.jpg" style="zoom:75%;" />
+<img src="../../resource/1-ProductInformation/2.ProductParameter/孔位安装2.jpg" style="zoom:100%;" />
 
 - The end of the robot is equipped with a flange, and the end of the robot arm is compatible with both Lego technology holes and screw threaded holes.
 
-<img src="../../resource/1-ProductInformation/2.ProductParameter/末端2.png" style="zoom:60%;" />
+<img src="../../resource/1-ProductInformation/2.ProductParameter/末端2.png" style="zoom:80%;" />
 
 ## 2.Electronic parameters
 

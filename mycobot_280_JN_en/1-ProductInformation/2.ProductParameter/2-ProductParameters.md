@@ -46,7 +46,7 @@
 ## 3. Structural size parameters
 ### 3.1 Workspace
 
-<img src="../../resource\1-ProductInformation\2.ProductParameter/worksize.png" style="zoom:100%;" />
+<img src="../../resource\1-ProductInformation\2.ProductParameter/worksize2.png" style="zoom:100%;" />
 
 ### 3.2 Specifications and dimensions
 
@@ -67,11 +67,11 @@
 
 - The robot base is mounted with a flange. The base is compatible with both LEGO technology and M4 screw installation.
 
-<img src="../../resource\1-ProductInformation\2.ProductParameter/base1.jpg" style="zoom:100%;" />
+<img src="../../resource\1-ProductInformation\2.ProductParameter/base10.jpg" style="zoom:60%;" />
 
 - The robot end is mounted with a flange. The end of the robot arm is compatible with both LEGO technology holes and screw threaded holes.
 
-<img src="../../resource\1-ProductInformation\2.ProductParameter/base2.png" style="zoom:60%;" />
+<img src="../../resource\1-ProductInformation\2.ProductParameter/base.png" style="zoom:100%;" />
 
 ## 4. Electrical characteristic parameters
 ## 4.1 Electrical interface of the robot base

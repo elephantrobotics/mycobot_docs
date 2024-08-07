@@ -37,10 +37,10 @@ In this section, we strongly recommend that you follow the specified steps to di
 
 ## 3.Product unboxing video guide
 
-<video controls>
-<source src="../../resources/2-BasicSettings/4.FirstTimeInstallation/OpenGuide.mp4" type="video/mp4">
-Your browser does not support HTML5 video.
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Lwi8UoihzNc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+If the video above does not play, you can click the link below to view the unboxing video
+[unboxing video guide](https://www.youtube.com/embed/Lwi8UoihzNc)
 
 ## 4.Power-on inspection guide
 
