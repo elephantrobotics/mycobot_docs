@@ -6,7 +6,12 @@ rviz是ROS中一款三维可视化平台，一方面能够实现对外部信息�
 
 ros2安装成功表明rviz2也一起安装成功了，因为ros2的安装包含了rviz2。
 
-打开一个一个新的终端(快捷键<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>)输入命令打开rviz2
+进入ROS2环境终端
+
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-10.jpg
+width ="500"  align = "center">
+
+在打开一个终端输入以下命令打开rviz2
 
 ```bash
 rviz2

@@ -19,7 +19,16 @@ sudo apt-get install ros-melodic-rviz
 sudo apt-get install ros-noetic-rviz    
 ```
 
+可以在终端输入
+```
+lsb_release -a
+```
+命令来查看目前ubuntu系统的版本。
+
+
+
 安装完成后，请先打开一个新的终端(快捷键<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>),输入如下指令：
+
 ```bash
 roscore
 ```
@@ -260,9 +269,6 @@ rosrun mycobot_280jn teleop_keyboard.py
 #或者
 rosrun mycobot_280jn teleop_keyboard.py _speed:=70
 ```
-
-- mycobot 280-Arduino版本：
-
 
 你会在命令行中看到如下输出：
 ```bash

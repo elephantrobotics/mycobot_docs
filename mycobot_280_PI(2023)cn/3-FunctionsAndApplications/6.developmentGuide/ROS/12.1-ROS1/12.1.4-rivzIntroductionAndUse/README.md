@@ -19,12 +19,14 @@ sudo apt-get install ros-melodic-rviz
 sudo apt-get install ros-noetic-rviz    
 ```
 
-安装完成后，请先打开一个新的终端(快捷键<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>),输入如下指令：
-```bash
-roscore
-```
+安装完成后，请先打开一个新的终端
 
-然后再打开一个一个新的终端(快捷键<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>)输入命令打开rviz
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/rviz-21.jpg
+ align = "center">
+
+
+
+然后在打开的新的终端输入以下命令打开rviz
 
 ```bash
 rosrun rviz rviz
