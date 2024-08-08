@@ -56,7 +56,7 @@
      * [6.4.8 Use of the gripper](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.md)
      * [6.4.9 Use of suction pump](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.md)
      * [6.4.10 Gripper Test](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.md)
-     * [6.4.11 IO Test](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.14 -ioTest.md) 
+     * [6.4.11 IO Test](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.14-ioTest.md) 
      * [6.4.12Q&A](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.md)
    * [6.5 Development and use based on C++](3-FunctionsAndApplications/6.developmentGuide/Cplus/README.md)
      * [6.5 .1 Environment Construction](3-FunctionsAndApplications/6.developmentGuide/Cplus/8.1-download.md)
@@ -96,7 +96,7 @@
   * [8.2 Product Drawings](3-FunctionsAndApplications/8.SupportingResources/8.2-ProductDrawings/README.md)
   * [8.3 Software Information and Source Code ](3-FunctionsAndApplications/8.SupportingResources/8.3-SoftwareInformationAndSourceCode/README.md)
   * [8.4 System Information](3-FunctionsAndApplications/8.SupportingResources/8.4-SystemInformation/README.md)
-  * [8.5 Promotional Materials](3- FunctionsAndApplications/8.SupportingResources/8.5-PromotionalMaterials/README.md)
+  * [8.5 Promotional Materials](3-FunctionsAndApplications/8.SupportingResources/8.5-PromotionalMaterials/README.md)
 * Support and Services
 *  [ Contact Us](4-SupportAndService/11.AboutUs/11.AboutUs.md)
 *  [Robot Arm Accessories](4-SupportAndService/Accessories/accessories.md)

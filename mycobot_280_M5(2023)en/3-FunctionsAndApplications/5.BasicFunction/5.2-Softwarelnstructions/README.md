@@ -1,6 +1,6 @@
 # myStudio
 
-![Cover](../../../resources/3-FunctionsAndApplications/5.2-Softwarelnstructions/mystudioShow.jpg)
+![Cover](../../../resources/3-FunctionsAndApplications/5.2-Softwarelnstructions/mystudioview.jpg)
 
 ## Original intention of myStudio design
 
@@ -23,21 +23,10 @@
 ## myStudio applicable devices
 
 - myCobot 280
-- myCobot 280 M5
+- **myCobot 280 M5**
 - myCobot 280 PI
 - myCobot 280 Jetson Nano
 - myCobot 280 for Arduino
-- myCobot 320
-- myCobot 320 M5
-- myCobot 320 PI
-- myPalletizer 260
-- myPalletizer 260 M5
-- myPalletizer 260 PI
-- mechArm 270
-- mechArm 270 M5
-- mechArm 270 Pi
-- myCobot Pro 600
-- myBuddy 280
 
 ## Firmware version recommendation
 
@@ -133,7 +122,7 @@ You can download it according to your computer system.
 
 > **Note:** Please download the latest version. You can view the current version in the downloaded myStudio interface and update to the latest version.
 >
->![GITHUB2](../../../resources/3-FunctionsAndApplications/5.2-Softwarelnstructions/mystudioRenew.jpg)
+>![GITHUB2](../../../resources/3-FunctionsAndApplications/5.2-Softwarelnstructions/renew.png)
 
 ##  Driver Installation
 

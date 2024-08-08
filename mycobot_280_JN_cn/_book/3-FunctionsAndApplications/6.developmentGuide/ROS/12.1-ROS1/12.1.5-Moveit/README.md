@@ -35,7 +35,12 @@ move_group是一个 ROS 节点。它使用ROS参数服务器来获取三种信�
 ```bash
 roslaunch mycobot_280jn_moveit mycobot_moveit.launch
 ```
-
+若输入命令后终端出现以下反馈
+```bash
+command `roslaunch` not found，but can be installed with
+sudo apt install python3-roslaunch
+```
+则请回到环境搭建章节，根据章节指引升级mycobot_ros包
 
 运行效果如下：  
 

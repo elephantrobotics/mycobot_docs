@@ -29,7 +29,12 @@ move_group是一个 ROS 节点。它使用ROS参数服务器来获取三种信�
 
 `mycobot_ros` 现已集成了 MoveIt 部分。
 
-打开命令行运行：
+点击进入ros1环境终端
+
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/rviz-21.jpg
+ align = "center">
+
+在打开的终端输入以下命令运行MoveIt：
 - mycobot 280-Pi版本：
   
 ```bash
