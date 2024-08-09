@@ -23,21 +23,10 @@
 ## myStudio适用设备
 
 - myCobot 280
-  - myCobot 280 M5
+  - **myCobot 280 M5**
   - myCobot 280 PI
   - myCobot 280 Jetson Nano
   - myCobot 280 for Arduino 
-- myCobot 320
-  - myCobot 320 M5
-  - myCobot 320 PI 
-- myPalletizer 260
-  - myPalletizer 260 M5
-  - myPalletizer 260 PI 
-- mechArm 270
-  - mechArm 270 M5
-  - mechArm 270 Pi
-- myCobot Pro 600 
-- myBuddy 280
 
 ## 固件版本推荐
 
@@ -45,64 +34,29 @@
 
 **myCobot 280系列**
 
-myCobot 280系列共4个版本：M5版本、PI版本、ardunio版本以及jetsonnano版本。不同版本核心型号不同，所需烧录的固件及其版本也不同。
+myCobot 280系列共4个版本：M5版本、PI版本、ardunio版本以及jetsonnano版本。不同版本核心型号不同，所需烧录的固件及其版本也不同。以下仅列出M5机械臂相关的固件。
 
 <table>
-<tr>
-	<td>机械臂版本号</td>
+  <tr>
+    <td>机械臂版本号</td>
     <td>核心</td>
     <td>所需烧录固件</td>
     <td>推荐固件及其版本</td>
-</tr>
-<tr>
-	<td rowspan='2'>M5版本</td>
+  </tr>
+  <tr>
+    <td rowspan="2">M5版本</td>
     <td>M5Stack-Basic</td>
     <td>miniRobot固件</td>
     <td>推荐烧录v2.1版本，可以使用拖动示教、wifi、蓝牙等功能</td>
-</tr>
-<tr>
-	<td>Atom</td>
+  </tr>
+  <tr>
+    <td>Atom</td>
     <td>atomMain固件</td>
     <td>产品序列号为ER28001202200415及之前，或者产品无序列号，推荐烧录v4.1版本；序列号为ER28001202200416及之后，推荐烧录v5.1版本</td>
-</tr>
-<tr>
-	<td rowspan='2'>PI版本</td>
-	<td>RaspberryPI 4B</td>
-	<td>ubuntu固件</td>
-	<td>推荐烧录V18.04.版本</td>
-</tr>
-<tr>
-	<td>Atom</td>
-	<td>atomMain固件</td>
-	<td>产品序列号为ER28001202200415及之前，或者产品无序列号，推荐烧录v4.1版本；序列号为ER28001202200416及之后，推荐烧录v5.1版本</td>
-</tr>
-<tr>
-	<td rowspan='3'>Arduino版本</td>
-	<td>mega2560</td>
-	<td>transponder固件</td>
-	<td>推荐烧录v1.0版本</td>
-</tr>
-	<td>mkrwifi1010</td>
-	<td>transponder固件</td>
-	<td>推荐烧录v1.0版本</td>
-</tr>
-<tr>
-	<td>Atom</td>
-	<td>atomMain固件</td>
-	<td>产品序列号为ER28001202200415及之前，或者产品无序列号，推荐烧录v4.1版本；序列号为ER28001202200416及之后，推荐烧录v5.1版本</td>
-</tr>
-<tr>
-	<td rowspan='2'>Jetson nano版本</td>
-	<td>JestonNano</td>
-	<td>ubuntu固件</td>
-	<td>推荐烧录V18.04.版本</td>
-</tr>
-<tr>
-	<td>Atom</td>
-	<td>atomMain固件</td>
-	<td>产品序列号为ER28001202200415及之前，或者产品无序列号，推荐烧录v4.1版本；序列号为ER28001202200416及之后，推荐烧录v5.1版本</td>
-</tr>
+  </tr>
 </table>
+
+
 
 # myStudio环境搭建
 
@@ -110,7 +64,7 @@ myCobot 280系列共4个版本：M5版本、PI版本、ardunio版本以及jetson
 
 >注意：myStudio安装时的安装路径不能有任何空格
 
-下载地址：
+我们提供两种下载地址：
 
 **1. [GitHub地址](https://github.com/elephantrobotics/myStudio)**
 
@@ -214,3 +168,42 @@ myCobot 280系列共4个版本：M5版本、PI版本、ardunio版本以及jetson
 第二步：在`Board`一栏可以选择`ATOM`,侧边栏`Basic`就会出现 Atom 的固件。Atom 的固件就只有一个，点击烧入即可（下图以myCobot 280为例）。
 
 ![Atom链接](../../../resources/3-FunctionsAndApplications/5.2-Softwarelnstructions/atom2.jpg)
+
+烧录完固件后请跟随以下步骤对mycobot机械臂进行首次使用检测。
+
+## 上电与初步检测
+
+**myCobot 必须使用外部电源进行供电，以提供足够的电量：**
+   Rated voltage: 12V<br>
+   Rated current: 3-5A<br>
+   Plug Type: DC 5.5mm x 2.1<br>
+**注意，不能仅仅使用插入M5Stack-basic的TypeC进行供电。使用官方适配的电源，以免对机械臂造成损害。**
+
+### 图文引导
+![链接](../../../resources\3-FunctionsAndApplications\5.2-Softwarelnstructions/box_connect_PC.jpg)
+
+#### 连接电源
+
+连接电源线之后即启动。
+
+使用Type-C线连接到电脑和机械臂M5Stack-basic的对应USB接口，并进行连接检测。连接检测是一项用于机械臂中电机以及 **Atom** 连接状态的检测功能。这项功能便于客户排除设备故障
+
+#### 链接检测
+
+**Step 1:** **Atom**烧录最新版的**atomMain**。
+
+**Step 2:** **M5Stack-basic**烧录**minirobot**，选择**Information**功能。
+![链接检测1](../../../resources\3-FunctionsAndApplications\5.2-Softwarelnstructions/ConnectCheck1.jpg)
+**Step 3**: 按下**A**键，开始连接检测。屏幕显示**Atom**以及六个电机连接状态。
+![链接检测2](../../../resources\3-FunctionsAndApplications\5.2-Softwarelnstructions/pushA.jpg)
+![链接检测3](../../../resources\3-FunctionsAndApplications\5.2-Softwarelnstructions/connectOK.jpg)
+如图所示即为电机链接状态良好
+**Step 4**: 按下**B**键，开始检测版本信息。屏幕显示机器人版本以及**Basic**固件版本。
+
+![链接检测4](../../../resources\3-FunctionsAndApplications\5.2-Softwarelnstructions/BaseVersion.jpg)
+
+**Step 5**: 按下**C**键，退出此功能
+
+![链接检测5](../../../resources\3-FunctionsAndApplications\5.2-Softwarelnstructions/pushC.jpg)
+
+即可完成开机检测。

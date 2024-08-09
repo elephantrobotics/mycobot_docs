@@ -11,22 +11,10 @@ pymycobot 是一个和 myCobot 进行串口通讯的 Python 包，支持 Python2
 **适用设备：**
 
 * myCobot 280：
-  * myCobot 280 M5
+  * **myCobot 280 M5**
   * myCobot 280 PI
   * myCobot 280 Jetson Nano
   * myCobot 280 for Arduino 
-* myCobot 320：
-
-  - myCobot 320 M5
-  - myCobot 320 PI 
-* myPalletizer 260：
-
-  - myPalletizer 260 M5
-  - myPalletizer 260 PI
-* mechArm-270：
-
-  - mechArm-270 M5
-  - mechArm-270 PI
 
 目前，Python有两个版本，一个是`2.x`版，一个是`3.x`版，这两个版本是不兼容的。由于`3.x`版越来越普及，我们的教程将以最新的`3.10.7`版本为例进行说明。
 
@@ -77,7 +65,7 @@ pymycobot 是一个和 myCobot 进行串口通讯的 Python 包，支持 Python2
 
 <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/运行python2.jpg" style="zoom: 50%;" />
 
->  **注意：**出现错误的信息一般都是没有配置环境变量导致的，可以参考**1.3 配置环境变量**修改环境变量。
+>  **注意：**出现错误的信息一般都是没有配置环境变量导致的，可以参考**下文 配置环境变量**修改环境变量。
 
 
 
@@ -194,9 +182,8 @@ PyCharm安装完成之后进入该软件，创建第一个程序。
 
 ### 使用之前
 
-* 固件烧录。固件是指设备内部保存的设备“驱动程序”。操作系统只有通过固件才能按照标准的设备驱动实现特定机器的运行动作。不同版本的机械臂需要烧录不同的固件（可以参考 [**MyStudio**](https://docs.elephantrobotics.com/docs/gitbook/4-BasicApplication/4.1-myStudio/)章节）。
+* 固件烧录。固件是指设备内部保存的设备“驱动程序”。操作系统只有通过固件才能按照标准的设备驱动实现特定机器的运行动作。不同版本的机械臂需要烧录不同的固件（可以参考 [**MyStudio**](../../5.BasicFunction/5.2-Softwarelnstructions/README.md)章节）。
   * **M5版本**底部的Basic需要烧录minirobot。烧录完成后选择**Transponder**功能（该功能用于接收转发底部Basic发送的指令，从而执行目标动作），点击`Press A`，出现**Atom：OK**提示信息即为成功。此外，M5版本末端 Atom 烧录最新版的 atomMain，出厂默认已烧录，无需自行烧录。
-  * **Pi \ jetsonnano版本**末端Atom烧录最新版的 atomMain，出厂默认已烧录，无需自行烧录。
 * pymycobot安装。打开一个控制台终端(快捷键Win+R,输入cmd进入终端)，输入以下命令：
 
 ```python
@@ -249,7 +236,7 @@ from pymycobot.mypalletizer import MyPalletizer
 
 ### 简单演示
 
-在PyCharm中新建一个 Python 文件，输入以下代码可执行 LED 闪烁（myCobot 280-M5、myCobot 320-M5以及myPalletizer 260可参考以下代码）。
+在PyCharm中新建一个 Python 文件，输入以下代码可执行 LED 闪烁（myCobot 280-M5可参考以下代码）。
 
 > **注意：** 各款设备的对应的波特率不尽相同，使用时请查阅资料了解其波特率，串口编号可通过**[计算器设备管理器](https://docs.elephantrobotics.com/docs/gitbook/4-BasicApplication/4.1-myStudio/4.1.1-myStudio_download_driverinstalled.html#4113-%E5%A6%82%E4%BD%95%E5%8C%BA%E5%88%86cp210x%E5%92%8Ccp34x%E8%8A%AF%E7%89%87)**或串口助手进行查看。
 
@@ -292,30 +279,6 @@ while i > 0:
     time.sleep(2)	#等2秒
     mc.set_color(0,255,0) #绿灯亮
     time.sleep(2)	#等2秒
-    i -= 1
-```
-
-
-
-* **myPalletizer**
-
-```python
-from pymycobot.mypalletizer import MyPalletizer
-import time
-#以上需写在代码开头，意为导入项目包
-
-# 初始化一个MyPalletizer对象
-mc = MyPalletizer("COM3", 115200)
-
-i = 7
-#循环7次
-while i > 0:
-    mc.set_color(0,0,255) #蓝灯亮
-    time.sleep(2) #等2秒
-    mc.set_color(255,0,0) #红灯亮
-    time.sleep(2) #等2秒
-    mc.set_color(0,255,0) #绿灯亮
-    time.sleep(2) #等2秒
     i -= 1
 ```
 

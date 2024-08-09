@@ -80,26 +80,3 @@ print(res)
 ...
 ```
 
-### 3 myCobot 树莓派系统远程连接
-
-- 使用树莓派远程连接时，需要注意以下几点
-   1.树莓派和控制端需要在同一网络
-   2.服务器文件需要先在树莓派中执行（具体操作见下方gif操作图）
-   3、服务器文件执行后，提示“Binding succeeded” 和 “waiting connect ”表示开启成功，控制端可参考**2 案例**进行控制
-
-![Server](../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/Server.gif)
-
-*具体操作为：*
-
-*克隆我们的项目库：*`git clone https://github.com/elephantrobotics/pymycobot.git`
-
-*在demo文件夹中找到 [Server.py](https://github.com/elephantrobotics/pymycobot/blob/main/demo/Server.py)文件
-
-请根据您的机器型号更改Server.py文件最后一行MyCobotServer中传递的参数。
-
-- 默认机型为280PI。
-- 默认参数为：
-   - serial_num：/dev/ttyAMA0
-   - baud：1000000
-
-使用 python执行

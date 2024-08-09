@@ -105,20 +105,6 @@ source devel/setup.bash
 roslaunch mycobot_280 test.launch
 ```
 
-- mycobot 280-Pi版本：
-
-```bash
-roslaunch mycobot_280pi test.launch
-```
-
-- mycobot 280-JetsonNano版本：
-  
-```bash
-roslaunch mycobot_280jn test.launch
-```
-
-
-
 打开rviz，并得到如下结果：
 
 <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz-5.png
@@ -154,8 +140,6 @@ sudo chmod 777 /dev/ttyACM0 # 新版本 myCobot280 M5
 
 # 280系列rviz使用指南
 
-
-
 ## 机械臂的控制
 
 ### 滑块控制
@@ -168,27 +152,6 @@ sudo chmod 777 /dev/ttyACM0 # 新版本 myCobot280 M5
 # mycobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
 roslaunch mycobot_280 slider_control.launch port:=/dev/ttyUSB0 baud:=115200
 ```
-- mycobot 280-Pi版本：
-  
-```bash
-# mycobot 280-Pi版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-roslaunch mycobot_280pi slider_control.launch port:=/dev/ttyAMA0 baud:=1000000
-```
-
-- mycobot 280-JetsonNano版本：
-  
-```bash
-# mycobot 280-JetsonNano版本默认串口名为"/dev/ttyTHS1"，波特率为1000000.
-roslaunch mycobot_280jn slider_control.launch port:=/dev/ttyTHS1 baud:=1000000
-```
-
-- mycobot 280-Arduino版本：
-  
-```bash
-# mycobot 280-Arduino版本默认串口名为"/dev/ttyACM0"，波特率为115200.
-roslaunch mycobot_280arduino slider_control.launch port:=/dev/ttyACM0 baud:=115200
-```
-
 它将**打开 rviz 和一个滑块组件**，你将看到如下画面：
 
 <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/caf-1.png
@@ -203,28 +166,6 @@ width ="500"  align = "center">
 rosrun mycobot_280 slider_control.py _port:=/dev/ttyUSB0 _baud:=115200
 ```
 
-- mycobot 280-Pi版本：
-  
-```bash
-# mycobot 280-Pi版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-rosrun mycobot_280pi slider_control.py _port:=/dev/ttyAMA0 _baud:=1000000
-```
-
-- mycobot 280-JetsonNano版本：
-  
-```bash
-# mycobot 280-JetsonNano版本默认串口名为"/dev/ttyTHS1"，波特率为1000000.
-rosrun mycobot_280jn slider_control.py _port:=/dev/ttyTHS1 _baud:=1000000
-```
-
-- mycobot 280-Arduino版本：
-  
-```bash
-# mycobot 280-Arduino版本默认串口名为"/dev/ttyACM0"，波特率为115200.
-rosrun mycobot_280arduino slider_control.py _port:=/dev/ttyACM0 _baud:=115200
-```
-
-
 **请注意：由于在命令输入的同时机械臂会移动到模型目前的位置，在您使用命令之前请确保rviz中的模型没有出现穿模现象**
 **不要在连接机械臂后做出快速拖动滑块的行为，防止机械臂损坏**
 
@@ -237,46 +178,11 @@ rosrun mycobot_280arduino slider_control.py _port:=/dev/ttyACM0 _baud:=115200
 rosrun mycobot_280 follow_display.py _port:=/dev/ttyUSB0 _baud:=115200
 ```
 
-- mycobot 280-pi版本：
-  
-```bash
-# mycobot 280-Pi版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-rosrun mycobot_280pi follow_display.py _port:=/dev/ttyAMA0 _baud:=1000000
-```
-
-- mycobot 280-JetsonNano版本：
-  
-```bash
-# mycobot 280-JetsonNano版本默认串口名为"/dev/ttyTHS1"，波特率为1000000.
-rosrun mycobot_280jn follow_display.py _port:=/dev/ttyTHS1 _baud:=1000000
-```
-
-- mycobot 280-Arduino版本：
-  
-```bash
-# mycobot 280-Arduino版本默认串口名为"/dev/ttyACM0"，波特率为115200.
-rosrun mycobot_280arduino follow_display.py _port:=/dev/ttyACM0 _baud:=115200
-```
-
 
 然后打开另一个命令行，运行：
 - mycobot 280-M5版本：
 ```bash
 roslaunch mycobot_280 mycobot_follow.launch
-```
-- mycobot 280-Pi版本：
-```bash
-roslaunch mycobot_280pi mycobot_follow.launch
-```
-
-- mycobot 280-JetsonNano版本：
-```bash
-roslaunch mycobot_280jn mycobot_follow.launch
-```
-
-- mycobot 280-Arduino版本：
-```bash
-roslaunch mycobot_280arduino mycobot_follow.launch
 ```
 它将**打开 rviz 展示模型跟随效果**。
 
@@ -290,25 +196,6 @@ roslaunch mycobot_280arduino mycobot_follow.launch
 # mycobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
 roslaunch mycobot_280 simple_gui.launch port:=/dev/ttyUSB0 baud:=115200
 ```
-- mycobot 280-Pi版本：
-```bash
-# mycobot 280-Pi版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-roslaunch mycobot_280pi simple_gui.launch port:=/dev/ttyAMA0 baud:=1000000
-```
-- mycobot 280-JetsonNano版本：
-  
-```bash
-# mycobot 280-JetsonNano版本默认串口名为"/dev/ttyTHS1"，波特率为1000000.
-roslaunch mycobot_280jn simple_gui.launch port:=/dev/ttyTHS1 baud:=1000000
-```
-
-- mycobot 280-Arduino版本：
-  
-```bash
-# mycobot 280-Arduino版本默认串口名为"/dev/ttyACM0"，波特率为115200.
-roslaunch mycobot_280arduino simple_gui.launch port:=/dev/ttyACM0 baud:=115200
-```
-
 <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/gui-1.png
 width ="500"  align = "center">
 
@@ -323,27 +210,6 @@ width ="500"  align = "center">
 ```bash
 # mycobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
 roslaunch mycobot_280 teleop_keyboard.launch port:=/dev/ttyUSB0 baud:=115200
-```
-
-- mycobot 280-Pi版本：
-  
-```bash
-# mycobot 280-Pi版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-roslaunch mycobot_280pi teleop_keyboard.launch port:=/dev/ttyAMA0 baud:=1000000
-```
-
-- mycobot 280-JetsonNano版本：
-  
-```bash
-# mycobot 280-JetsonNano版本默认串口名为"/dev/ttyTHS1"，波特率为1000000.
-roslaunch mycobot_280jn teleop_keyboard.launch port:=/dev/ttyTHS1 baud:=1000000
-```
-
-- mycobot 280-Arduino版本：
-  
-```bash
-# mycobot 280-Arduino版本默认串口名为"/dev/ttyACM0"，波特率为115200.
-roslaunch mycobot_280arduino teleop_keyboard.launch port:=/dev/ttyACM0 baud:=115200
 ```
 
 运行效果如下：
@@ -417,27 +283,9 @@ rosrun mycobot_280 teleop_keyboard.py
 rosrun mycobot_280 teleop_keyboard.py _speed:=70
 ```
 
-- mycobot 280-Pi版本：
-
-```bash
-rosrun mycobot_280 teleop_keyboard.py
-#或者
-rosrun mycobot_280pi teleop_keyboard.py _speed:=70
-```
-
-- mycobot 280-JetsonNano版本：
-
-```bash
-rosrun mycobot_280jn teleop_keyboard.py
-#或者
-rosrun mycobot_280jn teleop_keyboard.py _speed:=70
-```
-
-- mycobot 280-Arduino版本：
-
 ```bash
 rosrun mycobot_280arduino teleop_keyboard.py
-#或者
+#或
 rosrun mycobot_280arduino teleop_keyboard.py _speed:=70
 ```
 
@@ -489,20 +337,6 @@ width ="500"  align = "center">
 ```bash
 roslaunch mycobot_280 detect_marker.launch
 ```
-- mycobot 280-Pi版本：
-```bash
-roslaunch mycobot_280pi detect_marker.launch
-```
-
-- mycobot 280-JetsonNano版本：
-```bash
-roslaunch mycobot_280jn detect_marker.launch
-```
-
-- mycobot 280-Arduino版本：
-```bash
-roslaunch mycobot_280arduino detect_marker.launch
-```
 可选择参数：
 + num：相机id， 默认为 0.
 
@@ -524,26 +358,6 @@ width ="500"  align = "center">
 # mycobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
 roslaunch mycobot_280 detect_marker_with_topic.launch port:=/dev/ttyUSB0 baud:=115200
 ```
-- mycobot 280-Pi版本：
-```bash
-# mycobot 280-Pi版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-roslaunch mycobot_280pi detect_marker_with_topic.launch port:=/dev/ttyAMA0 baud:=1000000
-```
-
-- mycobot 280-JetsonNano版本：
-  
-```bash
-# mycobot 280-JetsonNano版本默认串口名为"/dev/ttyTHS1"，波特率为1000000.
-roslaunch mycobot_280jn detect_marker_with_topic.launch port:=/dev/ttyTHS1 baud:=1000000
-```
-
-- mycobot 280-Arduino版本：
-  
-```bash
-# mycobot 280-Arduino版本默认串口名为"/dev/ttyACM0"，波特率为115200.
-roslaunch mycobot_280arduino detect_marker_with_topic.launch port:=/dev/ttyACM0 baud:=115200
-```
-
 可选择参数：
 
 + num： 相机id， 默认为 0.
@@ -565,20 +379,6 @@ width ="500"  align = "center">
 rosrun mycobot_280 follow_and_pump.py
 ```
 
-- mycobot 280-Pi版本：
-```bash
-rosrun mycobot_280pi follow_and_pump.py
-```
-
-- mycobot 280-JetsonNano版本：
-```bash
-rosrun mycobot_280jn follow_and_pump.py
-```
-
-- mycobot 280-Arduino版本：
-```bash
-rosrun mycobot_280arduino follow_and_pump.py
-```
 启动后，mycobot 会去到它的初始位置
 
 <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/vision-3.gif
@@ -812,12 +612,6 @@ currently:      speed: 50       change percent 5
 roslaunch mycobot_280 test_pump.launch
 ```
 
-- myCobot 280-PI版本：
-
-```bash
-roslaunch mycobot_280pi test_pump.launch
-```
-
 它将**打开rviz**，你将看到如下画面：
 
 <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-13.png
@@ -836,13 +630,6 @@ width ="500"  align = "center">
 roslaunch mycobot_280 slider_control_pump.launch port:=/dev/ttyUSB0 baud:=115200
 ```
 
-- myCobot 280-PI版本：
-
-```bash
-# myCobot 280-Pi版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-roslaunch mycobot_280pi slider_control_pump.launch port:=/dev/ttyAMA0 baud:=1000000
-```
-
 它将**打开rviz和一个滑块组件**，你将看到如下画面：
 
 <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-16.png
@@ -855,13 +642,6 @@ width ="500"  align = "center">
 ```bash
 # myCobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
 rosrun mycobot_280 slider_control.py _port:=/dev/ttyUSB0 _baud:=115200
-```
-
-- myCobot 280-PI版本：
-
-```bash
-# myCobot 280-Pi版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-rosrun mycobot_280pi slider_control.py _port:=/dev/ttyAMA0 _baud:=1000000
 ```
 
 **请注意：由于在命令输入的同时机械臂会移动到模型目前的位置，在您使用命令之前请确保rviz中的模型没有出现穿模现象**。
@@ -962,12 +742,6 @@ currently:      speed: 50       change percent 5
 roslaunch mycobot_280 test_camera_flange.launch
 ```
 
-- myCobot 280-PI版本：
-
-```bash
-roslaunch mycobot_280pi test_camera_flange.launch
-```
-
 它将**打开rviz**，你将看到如下画面：
 
 <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-15.png
@@ -986,13 +760,6 @@ width ="500"  align = "center">
 roslaunch mycobot_280 slider_control_camera_flange.launch port:=/dev/ttyUSB0 baud:=115200
 ```
 
-- myCobot 280-PI版本：
-
-```bash
-# myCobot 280-Pi版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-roslaunch mycobot_280pi slider_control_camera_flange.launch port:=/dev/ttyAMA0 baud:=1000000
-```
-
 它将**打开rviz和一个滑块组件**，你将看到如下画面：
 
 <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-17.png
@@ -1005,13 +772,6 @@ width ="500"  align = "center">
 ```bash
 # myCobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
 rosrun mycobot_280 slider_control.py _port:=/dev/ttyUSB0 _baud:=115200
-```
-
-- myCobot 280-PI版本：
-
-```bash
-# myCobot 280-Pi版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-rosrun mycobot_280pi slider_control.py _port:=/dev/ttyAMA0 _baud:=1000000
 ```
 
 **请注意：由于在命令输入的同时机械臂会移动到模型目前的位置，在您使用命令之前请确保rviz中的模型没有出现穿模现象**。
@@ -1029,12 +789,6 @@ rosrun mycobot_280pi slider_control.py _port:=/dev/ttyAMA0 _baud:=1000000
 roslaunch mycobot_280 test_camera_flange_pump.launch
 ```
 
-- myCobot 280-PI版本：
-
-```bash
-roslaunch mycobot_280pi test_camera_flange_pump.launch
-```
-
 它将**打开rviz**，你将看到如下画面：
 
 <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-18.png
@@ -1049,17 +803,10 @@ width ="500"  align = "center">
 ##### 2 myCobot 垂直吸泵V2.0
 
 - [myCobot 280-M5 版本](https://github.com/elephantrobotics/mycobot_ros/tree/noetic/mycobot_description/urdf/mycobot/mycobot_with_pump.urdf)
-
-- [myCobot 280-PI 版本](https://github.com/elephantrobotics/mycobot_ros/tree/noetic/mycobot_description/urdf/mycobot_pi/mycobot_with_pump.urdf)
-  
 ##### 3 摄像头法兰
 
 - [myCobot 280-M5 版本](https://github.com/elephantrobotics/mycobot_ros/tree/noetic/mycobot_description/urdf/mycobot/mycobot_with_camera_flange.urdf)
 
-- [myCobot 280-PI 版本](https://github.com/elephantrobotics/mycobot_ros/tree/noetic/mycobot_description/urdf/mycobot_pi/mycobot_with_camera_flange.urdf)
-
 ##### 4 摄像头法兰 && 吸泵
 
 - [myCobot 280-M5 版本](https://github.com/elephantrobotics/mycobot_ros/tree/noetic/mycobot_description/urdf/mycobot/mycobot_with_camera_flange_pump.urdf)
-
-- [myCobot 280-PI 版本](https://github.com/elephantrobotics/mycobot_ros/tree/noetic/mycobot_description/urdf/mycobot_pi/mycobot_with_camera_flange_pump.urdf)
