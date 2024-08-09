@@ -71,11 +71,11 @@
 ### 3.3孔位安装
 - 机器人底座安装法兰，底座同时兼容乐高科技件安装方式和M4螺丝安装方式。
 
-![孔位安装](../../resources/1-ProductInformation/2.ProductParameter/HoleInstallation1.jpg)
+![孔位安装](../../resources/1-ProductInformation/2.ProductParameter/孔位安装1.jpg)
 
 - 机器人末端安装法兰，机械臂末端同时兼容乐高科技件孔与螺丝螺纹孔。
 
-![孔位安装](../../resources/1-ProductInformation/2.ProductParameter/HoleInstallation2.jpg)
+![孔位安装](../../resources/1-ProductInformation/2.ProductParameter/末端.png)
 
 ## 4.电气特性参数
 ### 4.1机械臂底座电气接口

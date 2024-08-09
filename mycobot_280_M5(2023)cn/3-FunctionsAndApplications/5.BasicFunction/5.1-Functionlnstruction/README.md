@@ -1,7 +1,12 @@
 # 基础功能应用
 
-## **myStudio**
-在开始使用设备前，您首先需要**安装驱动以及更新设备固件**。
+在开始使用机械臂设备前，您首先需要**安装驱动以及更新设备固件**。
+
+驱动程序是让您的电脑与机械臂进行通信的重要软件，安装驱动程序可以确保设备正常工作、优化性能，并启用设备的各种功能。因此，通常在新设备接入计算机时，系统会提示安装驱动程序，这是为了保证设备能够被正确识别和使用。设备固件是一种嵌入在硬件设备中的特定软件，它负责控制设备的基本操作和功能。固件位于软件和硬件之间，扮演着控制硬件操作的角色。您需要更新最新的设备固件，才能更好的对mycobot机械臂进行开发。
+
+![P210X_install](../../../resources/3-FunctionsAndApplications/5.1-Functionlnstruction/atom_PC.jpg)
+
+
 
 ### 安装驱动
 
@@ -19,6 +24,7 @@
   - [ **Linux** ](https://download.elephantrobotics.com/software/drivers/CP210x_VCP_Linux.zip)
   
   **CP34X**
+  
   - [ **Windows10** ](https://download.elephantrobotics.com/software/drivers/CH9102_VCP_SER_Windows.exe)
   - [ **MacOS** ](https://download.elephantrobotics.com/software/drivers/CH9102_VCP_MacOS.zip)
   
@@ -30,9 +36,7 @@
 
 ### 更新设备固件
 
-在开发前，用户请确认自己所使用的设备固件是否为最新版的固件，以便于用户在后续开发中更好的使用该设备。
-
-用户可通过 **myStudio**进行设备固件的更新。
+用户可通过 **myStudio**进行设备固件的更新，在开发前，用户请确认自己所使用的设备固件是否为最新版的固件，以便于用户在后续开发中更好的使用该设备。下一小节，将会介绍**myStudio**，以及如何通过**myStudio**进行固件升级。
 
 ##  **出厂固件介绍**
 

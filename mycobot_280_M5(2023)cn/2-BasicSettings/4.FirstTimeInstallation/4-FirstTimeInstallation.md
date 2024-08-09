@@ -93,45 +93,7 @@ G型底座 适配型号：myCobot 280、myPalletizer 260
 
 * 注意：在机座安装台面上调整机器人位置时，请尽量避免在机座安装台面上直接推拉机器人，以免产生划痕。人工移动机器人时请尽量避免对机器人本体脆弱部分施加外力，以免造成机器人不必要的损伤。
 
----
-## 5.上电与初步检测
-
-**myCobot 必须使用外部电源进行供电，以提供足够的电量：**
-	Rated voltage: 12V
-	Rated current: 3-5A
-	Plug Type: DC 5.5mm x 2.1
-**注意，不能仅仅使用插入M5Stack-basic的TypeC进行供电。使用官方适配的电源，以免对机械臂造成损害。**
-
-### 图文引导
-![链接](../../resources/2-BasicSettings/4.FirstTimeInstallation/box_connect_PC.jpg)
-
-#### 连接电源
-
-连接电源线之后即启动。
-
-使用Type-C线连接到电脑和机械臂M5Stack-basic的对应USB接口，并进行连接检测。连接检测是一项用于机械臂中电机以及 **Atom** 连接状态的检测功能。这项功能便于客户排除设备故障
-
-#### 链接检测
-
-**Step 1:** **Atom**烧录最新版的**atomMain**。
-
-**Step 2:** **M5Stack-basic**烧录**minirobot**，选择**Information**功能。
-![链接检测1](../../resources/2-BasicSettings/4.FirstTimeInstallation/ConnectCheck1.jpg)
-**Step 3**: 按下**A**键，开始连接检测。屏幕显示**Atom**以及六个电机连接状态。
-![链接检测2](../../resources/2-BasicSettings/4.FirstTimeInstallation/pushA.jpg)
-![链接检测3](../../resources/2-BasicSettings/4.FirstTimeInstallation/connectOK.jpg)
-如图所示即为电机链接状态良好
-**Step 4**: 按下**B**键，开始检测版本信息。屏幕显示机器人版本以及**Basic**固件版本。
-
-![链接检测4](../../resources/2-BasicSettings/4.FirstTimeInstallation/BaseVersion.jpg)
-
-**Step 5**: 按下**C**键，退出此功能
-
-![链接检测5](../../resources/2-BasicSettings/4.FirstTimeInstallation/pushC.jpg)
-
-即可完成开机检测。
-
-## 6.常见问题解决
+## 5.常见问题解决
 本小节旨在帮助用户解决在使用过程中所遇到的常见问题，涵盖硬件、软件、驱动以及如何在论坛中提问这几个方面，如您在使用机械臂的过程中遇到问题，请首先阅读本小节的内容来寻求解决办法。如果列举出的问题无法帮助您解决并且您有更多售后问题想要咨询请添加售后小管家微信。
 
 [如何优雅的提问](../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.md)

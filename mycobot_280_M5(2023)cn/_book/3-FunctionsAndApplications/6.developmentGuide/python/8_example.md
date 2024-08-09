@@ -43,14 +43,9 @@ while i > 0:
     time.sleep(2)	#等2秒				
     mc.set_color(255,0,0) #红灯亮
     time.sleep(2)	#等2秒
-    mc.set_color(0,255,0) #绿灯亮
-    time.sleep(2)	#等2秒
+    mc.set_color(0,255,0) #绿灯亮    time.sleep(2)	#等2秒
     i -= 1
 ```
-
-
-
-
 
 
 
@@ -58,32 +53,6 @@ while i > 0:
 poster="" data-setup='{"aspectRatio":"16:9"}'>
   <source src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\example/2.1python控制RGB灯板01.mp4" type='video/mp4' >
 </video>
-
-
-### myArm
-
-```python
-from pymycobot.myarm import MyArm
-import time
-#以上需写在代码开头,意为导入项目包
-
-
-# 初始化一个MyArm对象
-# 下面为 windows版本创建对象代码
-mc = MyArm("/dev/ttyAMA0", 115200)
-
-i = 7
-#循环7次
-while i > 0:							
-    mc.set_color(0,0,255) #蓝灯亮
-    time.sleep(2)	#等2秒				
-    mc.set_color(255,0,0) #红灯亮
-    time.sleep(2)	#等2秒
-    mc.set_color(0,255,0) #绿灯亮
-    time.sleep(2)	#等2秒
-    i -= 1
-```
-
 
 ## 控制机械回原点
 
@@ -559,84 +528,6 @@ def pump_off():
     mc.set_basic_output(2, 1)
     # 让5号位停止工作
     mc.set_basic_output(5, 1)
-
-
-# 机械臂复原
-mc.send_angles([0, 0, 0, 0, 0, 0], 30)
-time.sleep(3)
-
-#开启吸泵
-pump_on()
-mc.send_angles(angles[2], 30)
-time.sleep(2)
-
-#吸取小物块
-mc.send_angles(angles[1], 30)
-time.sleep(2)
-mc.send_angles(angles[0], 30)
-time.sleep(2)
-mc.send_angles(angles[1], 30)
-time.sleep(2)
-
-#关闭吸泵
-pump_off()
-mc.send_angles(angles[0], 40)
-time.sleep(1.5)
-
-```
-
-280-Pi版本：
-
-```python
-from pymycobot.mycobot import MyCobot
-from pymycobot import PI_PORT, PI_BAUD  # 当使用树莓派版本的mycobot时,可以引用这两个变量进行MyCobot初始化
-import RPi.GPIO as GPIO
-import time
-
-# MyCobot 类初始化需要两个参数：
-#   第一个是串口字符串, 如：
-#       linux： "/dev/ttyUSB0"
-#       windows: "COM3"
-#   第二个是波特率：
-#       M5版本为： 115200
-#
-#   Example:
-#       mycobot-M5:
-#           linux:
-#              mc = MyCobot("/dev/ttyUSB0", 115200)
-#           windows:
-#              mc = MyCobot("COM3", 115200)
-#       mycobot-raspi:
-#           mc = MyCobot(PI_PORT, PI_BAUD)
-#
-# 初始化一个MyCobot对象
-# 下面为树莓派版本创建对象代码
-mc = MyCobot(PI_PORT, PI_BAUD)
-
-# 机械臂运动的位置
-angles = [
-            [92.9, -10.1, -60, 5.8, -2.02, -37.7],
-            [92.9, -53.7, -83.05, 50.09, -0.43, -38.75],
-            [92.9, -10.1, -87.27, 5.8, -2.02, -37.7]
-        ]
-# 初始化吸泵
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(20, GPIO.OUT)
-GPIO.setup(21, GPIO.OUT)
-
-# 开启吸泵
-def pump_on():
-    # 让20号位工作
-    GPIO.output(20,0)
-    # 让21号位工作
-         GPIO.output(21,0)
-
-# 停止吸泵
-def pump_off():
-    # 让20号位停止工作
-    GPIO.output(20,1)
-    # 让21号位停止工作
-          GPIO.output(21,1)
 
 
 # 机械臂复原
