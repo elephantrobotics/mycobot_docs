@@ -15,13 +15,6 @@ MyCobotBasic library is an open source robot control library developed by our co
 
 - myCobot 280
 - myCobot 280 M5
-- myCobot 280 for Arduino <br>
-- myCobot 320
-- myCobot 320 M5 <br>
-- myPalletizer 260
-- myPalletizer 260 M5<br>
-- mechArm 270
-- mechArm 270 M5<br>
 
 **Prerequisites:**
 

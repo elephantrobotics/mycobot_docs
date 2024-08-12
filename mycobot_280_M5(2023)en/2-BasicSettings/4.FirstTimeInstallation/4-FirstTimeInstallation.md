@@ -98,44 +98,8 @@ Before formal installation, please confirm:
 * Note: When adjusting the robot position on the base installation table, please try to avoid pushing and pulling the robot directly on the base installation table to avoid scratches. When manually moving the robot, please try to avoid applying external force to the fragile parts of the robot body to avoid unnecessary damage to the robot.
 
 ---
-## 5.Power on and preliminary test
 
-**myCobot must be powered by an external power supply to provide sufficient power:**
-Rated voltage: 12V
-Rated current: 3-5A
-Plug Type: DC 5.5mm x 2.1
-**Note that you cannot just use the TypeC plugged into the M5Stack-basic for power. Use the official power adapter to avoid damage to the robot. **
-
-### Graphic guide
-![link](../../resources/2-BasicSettings/4.FirstTimeInstallation/box_connect_PC.jpg)
-
-#### Connect the power supply
-
-Start after connecting the power cord.
-
-Use the Type-C cable to connect to the corresponding USB port of the computer and the robot M5Stack-basic, and perform a connection test. The connection test is a detection function for the motor and **Atom** connection status in the robot. This function is convenient for customers to troubleshoot equipment failures
-
-#### Connection detection
-
-**Step 1:** **Atom** burns the latest version of **atomMain**.
-
-**Step 2:** **M5Stack-basic** burns **minirobot**, select **Information** function.
-![Connection detection 1](../../resources/2-BasicSettings/4.FirstTimeInstallation/ConnectCheck1.jpg)
-**Step 3**: Press **A** key to start connection detection. The screen displays **Atom** and the connection status of the six motors.
-![Link Detection 2](../../resources/2-BasicSettings/4.FirstTimeInstallation/pushA.jpg)
-![Link Detection 3](../../resources/2-BasicSettings/4.FirstTimeInstallation/connectOK.jpg)
-As shown in the figure, the motor connection is in good condition
-**Step 4**: Press the **B** key to start detecting the version information. The screen displays the robot version and the **Basic** firmware version.
-
-![Link Detection 4](../../resources/2-BasicSettings/4.FirstTimeInstallation/BaseVersion.jpg)
-
-**Step 5**: Press the **C** key to exit this function
-
-![Link Detection 5](../../resources/2-BasicSettings/4.FirstTimeInstallation/pushC.jpg)
-
-The power-on detection is completed.
-
-## 6.Common Problem Solving
+## 5.Common Problem Solving
 This section aims to help users solve common problems encountered during use, covering hardware, software, drivers, and how to ask questions in the forum. If you encounter problems while using the robotic arm, please read the contents of this section first to find solutions. If the listed problems cannot help you solve and you have more after-sales questions to consult, please add the after-sales butler WeChat.
 
 [How to ask questions elegantly](../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.md)

@@ -54,44 +54,8 @@ The myCobot 280 series has 4 versions: M5 version, PI version, ardunio version a
 <td>atomMain firmware</td>
 <td>For products with serial numbers ER28001202200415 and earlier, or products without serial numbers, it is recommended to burn v4.1; for products with serial numbers ER28001202200416 and later, it is recommended to burn v5.1</td>
 </tr>
-<tr>
-<td rowspan='2'>PI version</td>
-<td>RaspberryPI 4B</td>
-<td>ubuntu firmware</td>
-<td>Recommend burning V18.04. version</td>
-</tr>
-<tr>
-<td>Atom</td>
-<td>atomMain firmware</td>
-<td>For products with serial numbers ER28001202200415 and earlier, or products without serial numbers, it is recommended to burn v4.1; for products with serial numbers ER28001202200416 and later, it is recommended to burn v5.1</td>
-</tr>
-<tr>
-<td rowspan='3'>Arduino version</td>
-<td>mega2560</td>
-<td>transponder firmware</td>
-<td>Recommend burning v1.0 version</td>
-</tr>
-<td>mkrwifi1010</td>
-<td>transponder firmware</td>
-<td>Recommend burning v1.0 version</td>
-</tr>
-<tr>
-<td>Atom</td>
-<td>atomMain firmware</td>
-<td>For products with serial numbers of ER28001202200415 and earlier, or products without serial numbers, it is recommended to burn v4.1; for products with serial numbers of ER28001202200416 and later, it is recommended to burn v5.1</td>
-</tr>
-<tr>
-<td rowspan='2'>Jetson nano version</td>
-<td>JestonNano</td>
-<td>ubuntu firmware</td>
-<td>Recommend burning V18.04. version</td>
-</tr>
-<tr>
-<td>Atom</td>
-<td>atomMain firmware</td>
-<td>For products with serial numbers of ER28001202200415 and earlier, or products without serial numbers, it is recommended to burn v4.1; for products with serial numbers of ER28001202200416 and later, it is recommended to burn v5.1</td>
-</tr>
 </table>
+
 
 # myStudio environment setup
 
@@ -197,3 +161,40 @@ Step 1: Connect to PC. Connect the Atom at the end with USB.
 Step 2: Select `ATOM` in the `Board` column, and the Atom firmware will appear in the `Basic` sidebar. There is only one Atom firmware, click to burn it (the following figure takes myCobot 280 as an example).
 
 ![Atom link](../../../resources/3-FunctionsAndApplications/5.2-Softwarelnstructions/atom2.jpg)
+
+## 5.Power on and preliminary test
+
+**myCobot must be powered by an external power supply to provide sufficient power:**
+Rated voltage: 12V<br>
+Rated current: 3-5A<br>
+Plug Type: DC 5.5mm x 2.1<br>
+**Note that you cannot just use the TypeC plugged into the M5Stack-basic for power. Use the official power adapter to avoid damage to the robot. **
+
+### Graphic guide
+![link](../../../resources/3-FunctionsAndApplications/5.2-Softwarelnstructions/box_connect_PC.jpg)
+
+#### Connect the power supply
+
+Start after connecting the power cord.
+
+Use the Type-C cable to connect to the corresponding USB port of the computer and the robot M5Stack-basic, and perform a connection test. The connection test is a detection function for the motor and **Atom** connection status in the robot. This function is convenient for customers to troubleshoot equipment failures
+
+#### Connection detection
+
+**Step 1:** **Atom** burns the latest version of **atomMain**.
+
+**Step 2:** **M5Stack-basic** burns **minirobot**, select **Information** function.
+![Connection detection 1](../../../resources/3-FunctionsAndApplications/5.2-Softwarelnstructions/ConnectCheck1.jpg)
+**Step 3**: Press **A** key to start connection detection. The screen displays **Atom** and the connection status of the six motors.
+![Link Detection 2](../../../resources/3-FunctionsAndApplications/5.2-Softwarelnstructions/pushA.jpg)
+![Link Detection 3](../../../resources/3-FunctionsAndApplications/5.2-Softwarelnstructions/connectOK.jpg)
+As shown in the figure, the motor connection is in good condition
+**Step 4**: Press the **B** key to start detecting the version information. The screen displays the robot version and the **Basic** firmware version.
+
+![Link Detection 4](../../../resources/3-FunctionsAndApplications/5.2-Softwarelnstructions/BaseVersion.jpg)
+
+**Step 5**: Press the **C** key to exit this function
+
+![Link Detection 5](../../../resources/3-FunctionsAndApplications/5.2-Softwarelnstructions/pushC.jpg)
+
+The power-on detection is completed.
