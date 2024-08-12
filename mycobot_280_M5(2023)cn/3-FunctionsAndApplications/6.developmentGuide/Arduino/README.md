@@ -16,12 +16,6 @@ MyCobotBasic库是我们公司开发的一款开源机器人控制库，需要�
 - myCobot 280系列
   - **myCobot 280 M5**
   - myCobot 280 for Arduino <br>
-- myCobot 320
-  - myCobot 320 M5 <br>
-- myPalletizer 260
-  - myPalletizer 260 M5<br>
-- mechArm 270
-  - mechArm 270 M5<br>
 
 
 **使用前提：**

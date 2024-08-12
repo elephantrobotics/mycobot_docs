@@ -197,7 +197,7 @@ myCobot 280系列共4个版本：M5版本、PI版本、ardunio版本以及jetson
 **Step 3**: 按下**A**键，开始连接检测。屏幕显示**Atom**以及六个电机连接状态。
 ![链接检测2](../../../resources\3-FunctionsAndApplications\5.2-Softwarelnstructions/pushA.jpg)
 ![链接检测3](../../../resources\3-FunctionsAndApplications\5.2-Softwarelnstructions/connectOK.jpg)
-如图所示即为电机链接状态良好
+如图所示即为电机链接状态良好<br>
 **Step 4**: 按下**B**键，开始检测版本信息。屏幕显示机器人版本以及**Basic**固件版本。
 
 ![链接检测4](../../../resources\3-FunctionsAndApplications\5.2-Softwarelnstructions/BaseVersion.jpg)

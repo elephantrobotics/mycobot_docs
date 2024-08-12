@@ -30,6 +30,8 @@ As shown in the figure, the robot arm clicks Transponder->WLAN Server through th
 <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/WLAN Server1.jpg" style="zoom: 25%;" /> 
 <img src=" ../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP//wificonnecting.jpg" style="zoom: 25%;" /> 
 
+<img src=" ../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\TCPorIP/移动链接.jpg" style="zoom: 25%;" />
+
 ## 1.3 Connect to other networks
 
 If you need to connect to other networks, you can download the [myBlockly software](https://www.elephantrobotics.com/download/) provided by our company to connect to other networks.

@@ -192,7 +192,9 @@ pip install pymycobot --upgrade --user
 
 <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pymycobot安装.jpg" style="zoom: 67%;" />
 
+出现了以下字样则证明pymycobot包安装成功
 
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pymycobot安装完成.png" style="zoom: 67%;" />
 
 * 源码安装。打开一个控制台终端(快捷键Win+R,输入cmd进入终端)，输入以下命令即可安装：
 
@@ -219,12 +221,12 @@ cd <your-path>/pymycobot
 首先，打开您安装好的PyCharm，新建一个Python文件，输入以下代码，导入我们的库：
 
 ```python
-from pymycobot.mypalletizer import MyPalletizer
+from pymycobot.mycobot import MyCobot
 ```
 
 **注意：**
 
-1. 如果输入`from pymycobot.mypalletizer import MyPalletizer`，字体下方没有出现红色波浪线证明已经安装成功可以使用了，如果出现红色波浪线可以参考[**如何安装API库** ](https://www.cnblogs.com/xiaoguan-bky/p/11184740.html)，[**如何调用API库**](https://jingyan.baidu.com/article/25648fc1e86917d191fd009d.html)。
+1. 如果输入`from pymycobot.mycobot import MyCobot`，字体下方没有出现红色波浪线证明已经安装成功可以使用了，如果出现红色波浪线可以参考[**如何安装API库** ](https://www.cnblogs.com/xiaoguan-bky/p/11184740.html)，[**如何调用API库**](https://jingyan.baidu.com/article/25648fc1e86917d191fd009d.html)。
 
 2. 如果不想通过上述命令安装API库，可以通过以下github下载项目到本地。 
 
@@ -282,5 +284,6 @@ while i > 0:
     i -= 1
 ```
 
+如果在执行代码时出现以下报错，请仔细查阅程序中的串口号是否正确。查询自己电脑的串口号并在程序中修改为您所查询到的串口号即可解决此报错问题。若程序正常运行，但机械臂无任何反应，请检测波特率是否填写正确。
 
-
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/串口报错.png" style="zoom: 60%;" />

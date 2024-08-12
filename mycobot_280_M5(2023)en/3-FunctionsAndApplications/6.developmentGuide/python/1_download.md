@@ -9,32 +9,10 @@ Before using pymycobot to control the robot arm, you need to build a Python envi
 **Applicable devices:**
 
 * myCobot 280:
-
-* myCobot 280 M5
-
+* **myCobot 280 M5**
 * myCobot 280 PI
-
 * myCobot 280 Jetson Nano
-
 * myCobot 280 for Arduino
-
-* myCobot 320:
-
-- myCobot 320 M5
-
-- myCobot 320 PI
-
-* myPalletizer 260:
-
-- myPalletizer 260 M5
-
-- myPalletizer 260 PI
-
-* mechArm-270:
-
-- mechArm-270 M5
-
-- mechArm-270 PI
 
 Currently, there are two versions of Python, one is `2.x` version and the other is `3.x` version. These two versions are incompatible. As `3.x` version is becoming more and more popular, our tutorial will take the latest `3.10.7` version as an example.
 
@@ -158,9 +136,8 @@ After PyCharm is installed, enter the software and create the first program.
 
 ### Before use
 
-* Firmware burning. Firmware refers to the device "driver" stored inside the device. Only through firmware can the operating system implement the operation of a specific machine according to the standard device driver. Different versions of the robot arm need to burn different firmware (refer to the [**MyStudio**](https://docs.elephantrobotics.com/docs/gitbook/4-BasicApplication/4.1-myStudio/) chapter).
+* Firmware burning. Firmware refers to the device "driver" stored inside the device. Only through firmware can the operating system implement the operation of a specific machine according to the standard device driver. Different versions of the robot arm need to burn different firmware (refer to the **MyStudio** chapter).
 * **M5 version** The Basic at the bottom needs to burn minirobot. After the burning is completed, select the **Transponder** function (this function is used to receive and forward the instructions sent by the Basic at the bottom to perform the target action), click `Press A`, and the **Atom: OK** prompt message appears, which means success. In addition, the latest version of atomMain is burned in the Atom at the end of the M5 version. It is burned by default at the factory, and there is no need to burn it yourself.
-* **Pi \ jetsonnano version** The latest version of atomMain is burned in the Atom at the end. It is burned by default at the factory, and there is no need to burn it yourself.
 * pymycobot installation. Open a console terminal (shortcut Win+R, enter cmd to enter the terminal), and enter the following command:
 
 ```python
@@ -168,6 +145,10 @@ pip install pymycobot --upgrade --user
 ```
 
 <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pymycobot安装.jpg" style="zoom: 67%;" />
+
+The following words appear, indicating that the pymycobot package has been successfully installed
+
+<img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/pymycobot安装完成.png" style="zoom: 67%;" />
 
 * Source code installation. Open a console terminal (shortcut Win+R, enter cmd to enter the terminal), enter the following command to install:
 
@@ -257,5 +238,14 @@ while i > 0:
     i -= 1
 ```
 
-
-
+If the following error message appears when executing the code, please check carefully whether the serial port number in the program is correct. You can solve this error message by checking the serial port number of your computer and changing it to the serial port number you found in the program. If the program runs normally but the robot arm does not respond, please check whether the baud rate is entered correctly.
+```
+Traceback (most recent call last):
+  File "D:/python/Tms-GCN-edit/Tms-GCN-PyTorch/JointControl.py", line 24, in <module>
+    mc = MyCobot("COM7", 115200)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python38\site-packages\pymycobot\mycobot.py", line 69, in __init__
+    self._serial_port.open()
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python38\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM7': FileNotFoundError(2, 'The system cannot find the file specified。', None, 2)
+```

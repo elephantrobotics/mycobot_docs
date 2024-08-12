@@ -39,24 +39,6 @@ Open the command line and run:
 roslaunch mycobot_280_moveit mycobot_moveit.launch
 ```
 
-- mycobot 280-Pi version:
-
-```bash
-roslaunch mycobot_280pi_moveit mycobot_moveit.launch
-```
-
-- mycobot 280-JetsonNano version:
-
-```bash
-roslaunch mycobot_280jn_moveit mycobot_moveit.launch
-```
-
-- mycobot 280-Arduino version:
-
-```bash
-roslaunch mycobot_280arduino_moveit mycobot_moveit.launch
-```
-
 The running effect is as follows:
 
 <img src =../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/moveit/moveit-2.png
@@ -73,24 +55,4 @@ If you need to let the real robot arm execute the plan synchronously, you need t
 ```bash
 # The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0", and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0", if the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
 rosrun mycobot_280_moveit sync_plan.py _port:=/dev/ttyUSB0 _baud:=115200
-```
-- mycobot 280-Pi version:
-
-```bash
-# The default serial port name of mycobot 280-Pi version is "/dev/ttyAMA0", and the baud rate is 1000000.
-rosrun mycobot_280pi_moveit sync_plan.py _port:=/dev/ttyAMA0 _baud:=1000000
-```
-
-- mycobot 280-JetsonNano version:
-
-```bash
-# mycobot The default serial port name of 280-JetsonNano version is "/dev/ttyTHS1" and the baud rate is 1000000.
-rosrun mycobot_280jn_moveit sync_plan.py _port:=/dev/ttyTHS1 _baud:=1000000
-```
-
-- mycobot 280-Arduino version:
-
-```bash
-# The default serial port name of mycobot 280-Arduino version is "/dev/ttyACM0" and the baud rate is 115200.
-rosrun mycobot_280arduino_moveit sync_play.py _port:=/dev/ttyACM0 _baud:=115200
 ```
