@@ -17,14 +17,8 @@ JavaScript易于学习但很难掌握并用于各种用途，从简单地增强�
 **适用设备：**
 
 - myCobot 280
-  - myCobot 280 M5
+  - **myCobot 280 M5**
   - myCobot 280 for Arduino <br>
-- myCobot 320
-  - myCobot 320 M5<br>
-- myPalletizer 260
-  - myPalletizer 260 M5 <br>
-- mechArm 270
-  - mechArm 270 M5<br>
 
 
 **使用前提：**
@@ -42,7 +36,7 @@ JavaScript易于学习但很难掌握并用于各种用途，从简单地增强�
 **使用前提：**
 
 - Atom 烧录最新版的 atomMain。
-- Basic 烧录minirobot，选择 transponder 功能，Pi系列无需烧录 Basic。
+- Basic 烧录minirobot，选择 transponder 功能。
 
 ## JavaScript开发使用引导
 

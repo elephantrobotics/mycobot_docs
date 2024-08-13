@@ -1,40 +1,65 @@
 # Environment setup
+pymycobot is a Python package for serial communication with myCobot, supporting Python2, Python3.5 and later versions.
+
+Before using pymycobot to control the robot arm, you need to build a Python environment. The following is a detailed description of Python download and installation.
+
+Since the mycobot 280 JN robot arm has a built-in python environment, you can write python code in the Ubuntu system of the 280 JN, or you can write a python program in your own PC, and copy the written python program to the Ubuntu system of the robot arm with a USB flash drive for running.
+
+The python environment of the robot arm can be checked by the following method
+
+**Check the python package:**
+
+Open the terminal, enter
+```python
+pip list
+```
+Then press the enter key to view all the packages currently installed in the python environment.
+
+Enter
+```python
+python --version
+```
+in the terminal to query the python version currently used by the robot arm.
+
+Enter python in the terminal and press Enter. When `>>>` is displayed, it means that you have entered the python compilation environment. You can now use python to write code.
+
+<img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/4.PNG" style="zoom: 67%;" />
+
+You can also use the nano command to create a python file. First open the terminal, enter
+```python
+nano demo.py
+```
+Then press Enter to create a python file named demo. Here demo is the file name of the created python file, you can change it to any name here. After pressing Enter, you will enter the code editing page, where you can write python program code.
+
+<img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/2.PNG" style="zoom: 67%;" />
+
+<img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/6.PNG" style="zoom: 67%;" />
+
+After writing the Python program, press `ctrl+s` to save the edited program, and then press `ctrl+x` to exit the editor.
+
+In the opened terminal, enter
+```python
+python demo.py
+```
+to run the Python program you just wrote.
+
+<img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/3.PNG" style="zoom: 67%;" />
 
 pymycobot is a Python package for serial communication with myCobot, supporting Python2, Python3.5 and later versions.
 
 Before using pymycobot to control the robot arm, you need to build a Python environment. The following is a detailed description of Python download and installation.
 
-## Download and install Python
+## Download and install Python on your PC
+
+This section will guide you to install Python on your PC. You can write Python programs on your PC and then copy them to the Ubuntu system of the robot arm via a USB flash drive.
 
 **Applicable devices:**
 
 * myCobot 280:
-
 * myCobot 280 M5
-
 * myCobot 280 PI
-
-* myCobot 280 Jetson Nano
-
+* **myCobot 280 Jetson Nano**
 * myCobot 280 for Arduino
-
-* myCobot 320:
-
-- myCobot 320 M5
-
-- myCobot 320 PI
-
-* myPalletizer 260:
-
-- myPalletizer 260 M5
-
-- myPalletizer 260 PI
-
-* mechArm-270:
-
-- mechArm-270 M5
-
-- mechArm-270 PI
 
 Currently, there are two versions of Python, one is `2.x` version and the other is `3.x` version. These two versions are incompatible. As `3.x` version is becoming more and more popular, our tutorial will take the latest `3.10.7` version as an example.
 

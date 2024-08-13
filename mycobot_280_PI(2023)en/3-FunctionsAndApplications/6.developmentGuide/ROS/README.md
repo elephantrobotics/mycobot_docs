@@ -42,23 +42,7 @@ Compared with **ROS** that only supports Linux systems, **ROS2** also supports w
 - myCobot 280 Jetson Nano
 - myCobot 280 for Arduino <br>
 
-- myCobot 320
-- myCobot 320 M5
-- myCobot 320 PI <br>
-
-- myPalletizer 260
-- myPalletizer 260 M5
-- myPalletizer 260 PI <br>
-
-- myCobot PRO 600 <br>
-
-- mechArm-270
-- mechArm-270 PI
-- mechArm-270 M5
-
 **Prerequisites:**
-
-- **M5** series version, **M5Stack-basic** burn **miniRobot** at the bottom, select **Transponder** function, **ATOM** burn the latest version of **atomMain** at the end (factory default burned)
 
 - **Pi \ jetsonnano** series, **ATOM** burn the latest version of **atomMain** (factory default burned)
 
@@ -80,26 +64,10 @@ Compared with **ROS** that only supports Linux systems, **ROS2** also supports w
 
 - myCobot 280
 - myCobot 280 M5
-- myCobot 280 PI
+- **myCobot 280 PI**
 - myCobot 280 Jetson Nano
 - myCobot 280 for Arduino <br>
 
-- myCobot 320
-- myCobot 320 M5
-- myCobot 320 PI <br>
-
-- myPalletizer 260
-- myPalletizer 260 M5
-- myPalletizer 260 PI <br>
-
-- myCobot PRO 600 <br>
-
-- mechArm-270
-- mechArm-270 M5
-- mechArm-270 PI
-
 **Prerequisites:**
-
-- **M5** series version, **M5Stack-basic** burn **miniRobot** at the bottom, select **Transponder** function, **ATOM** burn the latest version of **atomMain** at the end (factory default burned)
 
 - **Pi \ jetsonnano** series, **ATOM** burn the latest version of **atomMain** (factory default burned)

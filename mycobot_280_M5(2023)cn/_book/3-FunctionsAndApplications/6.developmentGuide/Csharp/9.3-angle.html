@@ -1701,41 +1701,46 @@
 mc.SendAngles(angles ,30);
 </code></pre><h2 id="&#x5B8C;&#x6574;&#x4F7F;&#x7528;&#x6848;&#x4F8B;"><a name="&#x5B8C;&#x6574;&#x4F7F;&#x7528;&#x6848;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x5B8C;&#x6574;&#x4F7F;&#x7528;&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B8C;&#x6574;&#x4F7F;&#x7528;&#x6848;&#x4F8B;</h2>
 <p>&#x9879;&#x76EE;&#x4E2D;&#x7684;program.cs&#x662F;&#x5B8C;&#x6574;&#x7684;&#x4F7F;&#x7528;&#x6848;&#x4F8B;&#x7A0B;&#x5E8F;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x6B64;&#x57FA;&#x7840;&#x4E0A;&#x6839;&#x636E;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x3002;<br></p>
-<pre><code>using System;
+<pre><code class="lang-c#">using System; // &#x5F15;&#x5165;System&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF0C;&#x63D0;&#x4F9B;&#x57FA;&#x672C;&#x7684;&#x7C7B;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x5982;Console&#x548C;Thread  
 
-namespace Mycobot.csharp
-{
-    class Test 
-    {
-        static void Main(string[] args)
-        {
-            MyCobot mc = new MyCobot(&quot;/dev/ttyUSB0&quot;);
-            mc.Open();
-            // int[] angles = new[] {100, 100, 100, 100, 100, 100};
-            // mc.SendAngles(angles, 50);
-            // Thread.Sleep(5000);
-            // var recv = mc.GetAngles();
-            // foreach (var v in recv)
-            // {
-                // Console.WriteLine(v);
-            // }
+namespace Mycobot.csharp // &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF0C;&#x7528;&#x4E8E;&#x7EC4;&#x7EC7;&#x4EE3;&#x7801;  
+{  
+    class Test // &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;Test&#x7684;&#x7C7B;  
+    {  
+        static void Main(string[] args) // &#x7A0B;&#x5E8F;&#x7684;&#x4E3B;&#x5165;&#x53E3;&#x70B9;  
+        {  
+            MyCobot mc = new MyCobot(&quot;/dev/ttyUSB0&quot;); // &#x521B;&#x5EFA;&#x4E00;&#x4E2A;MyCobot&#x5B9E;&#x4F8B;&#xFF0C;&#x5047;&#x8BBE;&quot;/dev/ttyUSB0&quot;&#x662F;&#x673A;&#x5668;&#x4EBA;&#x4E0E;&#x8BA1;&#x7B97;&#x673A;&#x901A;&#x4FE1;&#x7684;&#x4E32;&#x53E3;  
+            mc.Open(); // &#x6253;&#x5F00;&#x4E0E;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x8FDE;&#x63A5;  
 
-            // int[] coords = new[] {160, 160, 160, 0, 0, 0};
-            // mc.SendCoords(coords, 90, 1);
-            // Thread.Sleep(5000);
-            // var recv = mc.GetCoords();
-            // foreach (var v in recv)
-            // {
-                // Console.WriteLine(v);
-            // }
+            // &#x4E0B;&#x9762;&#x7684;&#x51E0;&#x884C;&#x4EE3;&#x7801;&#x88AB;&#x6CE8;&#x91CA;&#x6389;&#x4E86;&#xFF0C;&#x5B83;&#x4EEC;&#x6F14;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x53D1;&#x9001;&#x89D2;&#x5EA6;&#x6570;&#x7EC4;&#x3001;&#x7B49;&#x5F85;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x3001;&#x63A5;&#x6536;&#x5E76;&#x6253;&#x5370;&#x8FD4;&#x56DE;&#x7684;&#x89D2;&#x5EA6;  
+            // int[] angles = new[] {100, 100, 100, 100, 100, 100}; // &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5305;&#x542B;6&#x4E2A;&#x89D2;&#x5EA6;&#x7684;&#x6570;&#x7EC4;  
+            // mc.SendAngles(angles, 50); // &#x53D1;&#x9001;&#x89D2;&#x5EA6;&#x6570;&#x7EC4;&#x548C;&#x901F;&#x5EA6;&#x7ED9;&#x673A;&#x5668;&#x4EBA;  
+            // Thread.Sleep(5000); // &#x7B49;&#x5F85;5000&#x6BEB;&#x79D2;&#xFF08;5&#x79D2;&#xFF09;  
+            // var recv = mc.GetAngles(); // &#x63A5;&#x6536;&#x5F53;&#x524D;&#x89D2;&#x5EA6;  
+            // foreach (var v in recv) // &#x904D;&#x5386;&#x5E76;&#x6253;&#x5370;&#x63A5;&#x6536;&#x5230;&#x7684;&#x89D2;&#x5EA6;  
+            // {  
+            //     Console.WriteLine(v);  
+            // }  
 
-            mc.SendOneAngle(1, 100,70);
+            // &#x4E0B;&#x9762;&#x7684;&#x51E0;&#x884C;&#x4EE3;&#x7801;&#x540C;&#x6837;&#x88AB;&#x6CE8;&#x91CA;&#x6389;&#x4E86;&#xFF0C;&#x5B83;&#x4EEC;&#x6F14;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x53D1;&#x9001;&#x5750;&#x6807;&#x6570;&#x7EC4;&#x3001;&#x7B49;&#x5F85;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x3001;&#x63A5;&#x6536;&#x5E76;&#x6253;&#x5370;&#x8FD4;&#x56DE;&#x7684;&#x5750;&#x6807;  
+            // int[] coords = new[] {160, 160, 160, 0, 0, 0}; // &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4F4D;&#x7F6E;&#x548C;&#x65B9;&#x5411;&#x7684;&#x5750;&#x6807;&#x6570;&#x7EC4;  
+            // mc.SendCoords(coords, 90, 1); // &#x53D1;&#x9001;&#x5750;&#x6807;&#x548C;&#x901F;&#x5EA6;&#x7ED9;&#x673A;&#x5668;&#x4EBA;  
+            // Thread.Sleep(5000); // &#x7B49;&#x5F85;5000&#x6BEB;&#x79D2;&#xFF08;5&#x79D2;&#xFF09;  
+            // var recv = mc.GetCoords(); // &#x63A5;&#x6536;&#x5F53;&#x524D;&#x5750;&#x6807;  
+            // foreach (var v in recv) // &#x904D;&#x5386;&#x5E76;&#x6253;&#x5370;&#x63A5;&#x6536;&#x5230;&#x7684;&#x5750;&#x6807;  
+            // {  
+            //     Console.WriteLine(v);  
+            // }  
 
-            // byte[] setColor = {0xfe, 0xfe, 0x05, 0x6a, 0xff, 0x00, 0x00, 0xfa};
-            mc.Close();
-        }
-    }
+            mc.SendOneAngle(1, 100, 70); // &#x53D1;&#x9001;&#x5355;&#x4E2A;&#x5173;&#x8282;&#x7684;&#x89D2;&#x5EA6;&#xFF08;&#x5047;&#x8BBE;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x5173;&#x8282;&#xFF09;&#xFF0C;&#x8BBE;&#x7F6E;&#x89D2;&#x5EA6;&#x4E3A;100&#xFF0C;&#x901F;&#x5EA6;&#x4E3A;70  
+
+            // byte[] setColor = {0xfe, 0xfe, 0x05, 0x6a, 0xff, 0x00, 0x00, 0xfa}; // &#x8FD9;&#x884C;&#x4EE3;&#x7801;&#x4E5F;&#x88AB;&#x6CE8;&#x91CA;&#x6389;&#x4E86;&#xFF0C;&#x53EF;&#x80FD;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;LED&#x989C;&#x8272;&#x7B49;  
+            mc.Close(); // &#x5173;&#x95ED;&#x4E0E;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x8FDE;&#x63A5;  
+        }  
+    }  
+}
 </code></pre>
+
                                 
                                 </section>
                             
@@ -1778,7 +1783,7 @@ namespace Mycobot.csharp
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.6.3关节控制","level":"1.4.2.6.3","depth":4,"next":{"title":"6.6.4坐标控制","level":"1.4.2.6.4","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/Csharp/9.4-coord.md","ref":"3-FunctionsAndApplications/6.developmentGuide/Csharp/9.4-coord.md","articles":[]},"previous":{"title":"6.6.2编译运行","level":"1.4.2.6.2","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/Csharp/9.2-build.md","ref":"3-FunctionsAndApplications/6.developmentGuide/Csharp/9.2-build.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","livereload"],"pluginsConfig":{"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"insertAnchor":true,"showGoTop":true,"mini":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":"","bottom":"20px","offset":{"top":10,"left":10},"minWidth":"70px","floatIcon":"fa fa-navicon","zIndex":"1000","trigger":"click","right":"20px","show":true}},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-FunctionsAndApplications/6.developmentGuide/Csharp/9.3-angle.md","mtime":"2024-07-25T09:23:03.188Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-12T01:38:21.571Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.6.3关节控制","level":"1.4.2.6.3","depth":4,"next":{"title":"6.6.4坐标控制","level":"1.4.2.6.4","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/Csharp/9.4-coord.md","ref":"3-FunctionsAndApplications/6.developmentGuide/Csharp/9.4-coord.md","articles":[]},"previous":{"title":"6.6.2编译运行","level":"1.4.2.6.2","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/Csharp/9.2-build.md","ref":"3-FunctionsAndApplications/6.developmentGuide/Csharp/9.2-build.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","livereload"],"pluginsConfig":{"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"insertAnchor":true,"showGoTop":true,"mini":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":"","bottom":"20px","offset":{"top":10,"left":10},"minWidth":"70px","floatIcon":"fa fa-navicon","zIndex":"1000","trigger":"click","right":"20px","show":true}},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-FunctionsAndApplications/6.developmentGuide/Csharp/9.3-angle.md","mtime":"2024-08-12T08:42:37.606Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-13T02:49:41.085Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

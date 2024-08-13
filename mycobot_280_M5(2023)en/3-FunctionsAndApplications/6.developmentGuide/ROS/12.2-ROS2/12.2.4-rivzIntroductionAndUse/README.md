@@ -2,7 +2,7 @@
 
 rviz is a three-dimensional visualization platform in ROS. On the one hand, it can realize the graphical display of external information. On the other hand, it can also release control information to objects through rviz, thereby realizing the monitoring and control of robots.
 
-## 1 Introduction to rviz2
+## Introduction to rviz2
 
 The successful installation of ros2 indicates that rviz2 is also successfully installed, because the installation of ros2 includes rviz2.
 
@@ -17,7 +17,7 @@ Open rviz2 and the following interface will be displayed:
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz-1.png
 width ="500" align = "center">
 
-## 2 Introduction to each area
+## Introduction to each area
 
 + On the left is the display list. The display is something that draws something in the 3D world and may have some options available in the display list.
 
@@ -29,43 +29,11 @@ width ="500" align = "center">
 
 In this section, we only give a rough introduction. If you want to know more details, you can go to the [User Guide](http://wiki.ros.org/rviz/UserGuide) to check it out.
 
-## 3 mycobot_ros2 installation and update
+## mycobot_ros2 installation and update
 
 - **M5 version: ** Please check the end of the [12.2.1 ROS2 installation](../12.2.1-ROS2 installation.md) section.
 
-- **PI version (Ubuntu 20.04): **
-
-`mycobot_ros2` is a ROS package launched by ElephantRobotics that is compatible with various types of desktop robotic arms.
-
-Project address: https://github.com/elephantrobotics/mycobot_ros2
-
-The official default workspace is `colcon_ws`.
-
-Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-12.png
-width ="500" align = "center">
-
-Then enter the following command:
-
-```bash
-cd ~/colcon_ws/src # Enter the src folder in the workspace
-# Clone the code on github
-git clone https://github.com/elephantrobotics/mycobot_ros2.git
-cd .. # Return to the workspace
-colcon build --symlink-install # Build the code in the workspace, --symlink-install: Avoid recompiling every time you adjust the python script
-source install/setup.bash # Add environment variables
-```
-
-**Note:** If `/home/er/colcon_ws/src (equivalent to ~/colcon_ws/src)` directory, you need to delete the original `mycobot_ros2` first, and then execute the above command.
-
-## 4 Simple use
+## Simple use
 
 **Start through the launch.py ​​file**
 
@@ -97,7 +65,7 @@ width ="500" align = "center">
 
 If you want to learn more about rviz, you can go to the [official document](http://wiki.ros.org/rviz2) to view it
 
-## 5 M5 version prerequisites
+## M5 version prerequisites
 
 - Open the console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>), open the terminal window to view the device name:
 
@@ -124,7 +92,7 @@ Then enter the user password (**Note:** The password is not displayed, just ente
 
 ## Robot arm control
 
-### 1 Slider control
+### Slider control
 
 Open a command line and run:
 
@@ -133,43 +101,6 @@ Open a command line and run:
 ```bash
 # The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
 ros2 launch mycobot_280 slider_control.launch.py
-```
-
-- mycobot 280-PI version:
-
-Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg width ="500" align = "center"> 
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-12.png width = "500" align = "center">
-
-Then run the command:
-
-```bash
-# The default serial port name of mycobot 280-PI version is "/dev/ttyAMA0" and the baud rate is 1000000.
-ros2 launch mycobot_280pi slider_control.launch.py
-```
-
-- mycobot 280-JetsonNano version:
-
-Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-12.png
-width ="500" align = "center">
-
-Then run the command:
-
-```bash
-# mycobot 280-JetsonNano version default serial port name is "/dev/ttyTHS1", baud rate is 1000000.
-ros2 launch mycobot_280jn slider_control.launch.py
 ```
 
 It will **open rviz and a slider component**, and you will see the following screen (the screen of the Raspberry Pi version is slightly different, which does not affect the use):
@@ -182,12 +113,12 @@ Then you can **control the movement of the model in rviz by dragging the slider*
 **Please note: Since the robot arm will move to the current position of the model when the command is entered, please make sure that the model in rviz does not appear to be through the model before you use the command**
 **Do not drag the slider quickly after connecting the robot arm to prevent damage to the robot arm**
 
-### 2 Model following
+### Model following
 
 In addition to the above control, we can also **let the model follow the movement of the real robot arm**. Open a command line and run:
 
 - mycobot 280-M5 version:
-##### 2 Slider control
+##### Slider control
 
 > **Note: This function only supports the control of the robot**
 
@@ -198,26 +129,6 @@ Open a command line and run:
 ```bash
 # The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, the serial port name can be changed to "/dev/ttyACM0".
 ros2 launch mycobot_280 slider_control_pump.launch.py
-```
-
-- mycobot 280-PI version:
-
-Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
-width ="500" align = "center"> 
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
-width ="500" align = "center">
-
-Then run the command:
-
-```bash
-# The default serial port name of mycobot 280-PI version is "/dev/ttyAMA0" and the baud rate is 1000000.
-ros2 launch mycobot_280pi slider_control_pump.launch.py
 ```
 
 It will **open rviz and a slider component**, and you will see the following screen (the screen of the Raspberry Pi version is slightly different, which does not affect the use):
@@ -231,7 +142,7 @@ Then you can **control the model movement in rviz by dragging the slider**. The 
 
 **Do not drag the slider quickly after connecting the robot arm to prevent damage to the robot arm**
 
-### 3 GUI control
+### GUI control
 
 Based on the previous, this package also **provides a simple Gui control interface**. This method is intended to allow real robotic arms to interact with each other. Please connect mycobot.
 
@@ -244,50 +155,10 @@ Open the command line:
 ros2 launch mycobot_280 simple_gui.launch.py
 ```
 
-- mycobot 280-PI version:
-
-Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-12.png
-width ="500" align = "center">
-
-Then run the command:
-
-```bash
-# The default serial port name of mycobot 280-PI version is "/dev/ttyAMA0" and the baud rate is 1000000.
-ros2 launch mycobot_280pi simple_gui.launch.py
-```
-
-- mycobot 280-JetsonNano version:
-
-Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-12.png
-width ="500" align = "center">
-
-Then run the command:
-
-```bash
-# The default serial port name of mycobot 280-JetsonNano version is "/dev/ttyTHS1" and the baud rate is 1000000.
-ros2 launch mycobot_280jn simple_gui.launch.py
-```
-
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/gui-1.png
 width ="500" align = "center">
 
-### 4 Keyboard control
+### Keyboard control
 
 **Keyboard control function has been added to the `mycobot_280` package**, and it is synchronized in real time in rviz. This function relies on pythonApi, so make sure it is connected to the real robot arm.
 
@@ -299,39 +170,6 @@ Open a command line and run:
 # The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
 ros2 launch mycobot_280 teleop_keyboard.launch.py
 ```
-
-- mycobot 280-PI version:
-
-Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-12.png
-width ="500" align = "center">
-
-Then run the command:
-
-```bash
-# The default serial port name of mycobot 280-PI version is "/dev/ttyAMA0" and the baud rate is 1000000.
-ros2 launch mycobot_280pi teleop_keyboard.launch.py ​​
-```
-
-- mycobot 280-JetsonNano version:
-
-Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-12.png
-width ="500" align = "center">
 
 Then run the command:
 
@@ -362,13 +200,6 @@ Then run the command:
 [rviz2-2] Parsing robot urdf xml string.
 ```
 
-
-
-```bash
-# The default serial port name of mycobot 280-JetsonNano version is "/dev/ttyTHS1", and the baud rate is 1000000.
-ros2 launch mycobot_280jn teleop_keyboard.launch.py
-```
-
 The running effect is as follows:
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/kb-1.png
@@ -379,44 +210,6 @@ width ="500" align = "center"> Mycobot information will be output on the command
 [rviz2-2] [INFO] [1652948746.830452458] [rviz2]: OpenGl version: 4.1 (GLSL 4.1)
 [rviz2-2] [INFO] [1652948746.874021926] [rviz2]: Stereo is NOT SUPPORTED
 [rviz2-2] Parsing robot urdf xml string.
-```
-
-- mycobot 280-PI version:
-
-Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-12.png
-width ="500" align = "center">
-
-Then run the command:
-
-```bash
-ros2 run mycobot_280pi teleop_keyboard
-```
-
-- mycobot 280-JetsonNano version:
-
-Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-12.png
-width ="500" align = "center">
-
-Then run the command:
-
-```bash
-ros2 run mycobot_280jn teleop_keyboard
 ```
 
 You will see the following output in the command line:
@@ -449,13 +242,13 @@ currently: speed: 10 change percent: 2
 
 In this terminal, you can control the state of the robot and move the robot by pressing keys in the command line.
 
-### 5 End effector
+### End effector
 
 - **Supported end effectors:** myCobot vertical suction pump V2.0, camera flange
 
 - **Applicable devices:** myCobot 280 M5, myCobot 280 PI
 
-#### 5.1 myCobot vertical suction pump V2.0
+#### myCobot vertical suction pump V2.0
 
 ##### 1 Load the model
 
@@ -465,24 +258,6 @@ Open a command line and run:
 
 ```bash
 ros2 launch mycobot_280 test_pump.launch.py
-```
-
-- mycobot 280-PI version:
-
-Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
-width ="500" align = "center"> 
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
-width ="500" align = "center">
-
- <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-12.png width ="500" align = "center">
-
-Then run the command:
-
-```bash
-ros2 launch mycobot_280pi test_pump.launch.py
 ```
 
 It will **open rviz**, and you will see the following screen (the screen of the Raspberry Pi version is slightly different, which does not affect the use):
@@ -503,27 +278,7 @@ Open a command line and run:
 ros2 launch mycobot_280 slider_control_pump.launch.py
 ```
 
-- mycobot 280-PI version:
-
-Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.2.7-12.png
-width ="500" align = "center">
-
-Then run the command:
-
-```bash
-# The default serial port name of mycobot 280-PI version is "/dev/ttyAMA0" and the baud rate is 1000000.
-ros2 launch mycobot_280pi slider_control_pump.launch.py
-```
-
-It will ** open rviz and a slider component**, you will see the following screen (the Raspberry Pi version screen is slightly different, which does not affect the use):
+It will open rviz and a slider component, you will see the following screen (the Raspberry Pi version screen is slightly different, which does not affect the use):
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.1.4-16.png
 width ="500" align = "center">
@@ -551,7 +306,7 @@ It will **open rviz and a GUI interface**, and you will see the following screen
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/12.1.4-14.png
 width ="500" align = "center">
 
-#### 5.2 Camera flange
+#### Camera flange
 
 ##### 1 Load the model
 
@@ -561,25 +316,6 @@ Open a command line and run:
 
 ```bash
 ros2 launch mycobot_280 test_camera_flange.launch.py
-```
-
-- mycobot 280-PI version:
-
-Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
-width ="500" align = "center">
-
-Then run the command:
-
-```bash
-ros2 launch mycobot_280pi test_camera_flange.launch.py
 ```
 
 It will **open rviz**, you will see the following screen (the screen of the Raspberry Pi version is slightly different, which does not affect the use):
@@ -600,19 +336,6 @@ Open a command line and run:
 ros2 launch mycobot_280 slider_control_camera_flange.launch.py
 ```
 
-- mycobot 280-PI version:
-
-Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
-width ="500" align = "center">
-
 Then run the command:
 
 ```bash
@@ -630,7 +353,7 @@ Then you can **control the movement of the model in rviz by dragging the slider*
 **Please note: Since the robot arm will move to the current position of the model when the command is entered, please make sure that the model in rviz does not appear to be through the model before you use the command**.
 **Do not drag the slider quickly after connecting the robot arm to prevent damage to the robot arm**.
 
-#### 5.3 Camera flange && pump
+#### Camera flange && pump
 
 ##### 1 Load the model
 
@@ -642,46 +365,21 @@ Open a command line and run:
 ros2 launch mycobot_280 test_camera_flange_pump.launch.py
 ```
 
-- mycobot 280-PI version:
-
-Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1040.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/1041.jpg
-width ="500" align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
-width ="500" align = "center">
-
-Then run the command:
-
-```bash
-ros2 launch mycobot_280pi test_camera_flange_pump.launch.py
-```
-
 It will **open rviz**, you will see the following screen (the screen of the Raspberry Pi version is slightly different, which does not affect the use):
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.1.4-18.png
 width ="500" align = "center">
 
-#### 5.3 URDF model address
+#### URDF model address
 
 ##### 1 myCobot vertical suction pump V2.0
 
 - [myCobot 280-M5 version](https://github.com/elephantrobotics/mycobot_ros2/blob/280-ros-pump-camera/mycobot_description/urdf/mycobot/mycobot_with_pump.urdf)
 
-- [myCobot 280-PI version](https://github.com/elephantrobotics/mycobot_ros2/blob/280-ros-pump-camera/mycobot_description/urdf/mycobot_pi/mycobot_with_pump.urdf)
-
 ##### 2 Camera flange
 
 - [myCobot 280-M5 Version](https://github.com/elephantrobotics/mycobot_ros2/tree/humble/mycobot_description/urdf/mycobot/mycobot_with_camera_flange.urdf)
 
-- [myCobot 280-PI Version](https://github.com/elephantrobotics/mycobot_ros2/tree/humble/mycobot_description/urdf/mycobot_pi/mycobot_with_camera_flange.urdf)
-
 ##### 3 Camera Flange && Pump
 
 - [myCobot 280-M5 Version](https://github.com/elephantrobotics/mycobot_ros2/tree/humble/mycobot_description/urdf/mycobot/mycobot_with_camera_flange_pump.urdf)
-
-- [myCobot 280-PI version](https://github.com/elephantrobotics/mycobot_ros2/tree/humble/mycobot_description/urdf/mycobot_pi/mycobot_with_camera_flange_pump.urdf)

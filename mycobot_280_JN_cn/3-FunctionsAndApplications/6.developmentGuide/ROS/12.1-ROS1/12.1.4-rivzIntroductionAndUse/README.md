@@ -58,7 +58,7 @@ width ="500"  align = "center">
 
 ## 2 mycobot_ros安装与更新
 
-- **PI版本(Ubuntu 20.04)：**
+- **PI/JN版本(Ubuntu 20.04)：**
 
 `mycobot_ros` 是 ElephantRobotics 推出的，适配旗下各类型桌面型机械臂的 ROS 包。
 

@@ -64,6 +64,4 @@
 
 **使用前提：**
 
-- **M5** 系列版本， 底部**M5Stack-basic**烧录 **miniRobot**，选择 **Transponder** 功能，末端 **ATOM** 烧录最新版的 **atomMain** (出厂默认已烧录)
-
 - **Pi \ jetsonnano** 系列，**ATOM** 烧录最新版的 **atomMain** (出厂默认已烧录)

@@ -1,40 +1,65 @@
 # Environment setup
 
+pymycobot is a Python package for serial communication with myCobot, supporting Python2, Python3.5 and later versions. Before using pymycobot to control the robot arm, you need to build a Python environment. The following is a detailed description of Python download and installation.
+
+The mycobot 280pi robot arm has a built-in python environment. You can write python code in the Ubuntu system of the 280pi, or you can write a python program in your own PC, and copy the written python program to the Ubuntu system of the robot arm with a USB flash drive for running.
+The python environment of the robot arm can be checked by the following method
+
+**Check the python package:**
+
+Open the terminal, enter
+```python
+pip list
+```
+Then press the enter key to view all the packages currently installed in the python environment.
+
+Enter
+```python
+python --version
+```
+in the terminal to query the python version currently used by the robot arm.
+
+Enter python in the terminal, then press Enter. When `>>>` is displayed, it means that the python compilation environment has been entered, and you can use python to write code at this time.
+
+<img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/4.png" style="zoom: 33%;" />
+
+You can also use the nano command to create a python file. First open the terminal, enter
+```python
+nano demo.py
+```
+Then press Enter to create a python file named demo. Here demo is the file name of the created python file, you can change it to any name here. After pressing Enter, you will enter the code editing page, where you can write python program code.
+
+<img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/2.png" style="zoom: 100%;" />
+
+<img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/6.png" style="zoom: 100%;" />
+
+After writing the Python program, press `ctrl+s` to save the edited program, and then press `ctrl+x` to exit the editor.
+
+In the open terminal, enter
+```python
+python demo.py
+```
+to run the Python program you just wrote.
+
+<img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/3.png" style="zoom: 100%;" />
+
+
+
 pymycobot is a Python package for serial communication with myCobot, supporting Python2, Python3.5 and later versions.
 
 Before using pymycobot to control the robot arm, you need to build a Python environment. The following is a detailed description of Python download and installation.
 
-## Download and install Python
+## Python download and installation for personal PC
+
+This section will guide you to install Python on your personal PC. You can write the Python program on your personal PC and then copy it to the Ubuntu system of the robot arm via a USB flash drive.
 
 **Applicable devices:**
 
 * myCobot 280:
-
 * myCobot 280 M5
-
-* myCobot 280 PI
-
+* **myCobot 280 PI**
 * myCobot 280 Jetson Nano
-
 * myCobot 280 for Arduino
-
-* myCobot 320:
-
-- myCobot 320 M5
-
-- myCobot 320 PI
-
-* myPalletizer 260:
-
-- myPalletizer 260 M5
-
-- myPalletizer 260 PI
-
-* mechArm-270:
-
-- mechArm-270 M5
-
-- mechArm-270 PI
 
 Currently, there are two versions of Python, one is `2.x` version and the other is `3.x` version. These two versions are incompatible. As `3.x` version is becoming more and more popular, our tutorial will take the latest `3.10.7` version as an example.
 
@@ -56,9 +81,7 @@ Currently, there are two versions of Python, one is `2.x` version and the other 
 
  <img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/pythoninstall3.jpg" style="zoom : 50%;" /> 
 
-* **The prompt "Setup was successful" appears, indicating that the installation is complete**
-
-* <img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/pythoninstall4.jpg" style="zoom: 50%;" /> 
+* **The prompt "Setup was successful" appears, indicating that the installation is complete**<img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/pythoninstall4.jpg" style="zoom: 50%;" /> 
 
 
 ### Run Python
@@ -225,39 +248,39 @@ The following are the corresponding codes for myCobot and myPalletizer.
 ```python
 from pymycobot.mycobot import MyCobot
 
-from pymycobot import PI_PORT, PI_BAUD  	# 当使用树莓派版本的mycobot时，可以引用这两个变量进行MyCobot初始化，如不是可不填该行代码
+from pymycobot import PI_PORT, PI_BAUD # When using the Raspberry Pi version of mycobot, you can reference these two variables to initialize MyCobot. If not, you can leave this line of code blank
 import time
-#以上需写在代码开头，意为导入项目包
+#The above needs to be written at the beginning of the code, which means importing the project package
 
-# MyCobot 类初始化需要两个参数：串口和波特率
-#   第一个是串口字符串， 如：
-#       linux： "/dev/ttyUSB0"
-#       windows: "COM3"
-#   第二个是波特率：
-#       M5版本为： 115200
-#   以下为如:
-#       mycobot-M5:
-#           linux:
-#              mc = MyCobot("/dev/ttyUSB0", 115200)
-#           windows:
-#              mc = MyCobot("COM3", 115200)
-#       mycobot-raspi:
-#           mc = MyCobot(PI_PORT, PI_BAUD)
+# MyCobot class initialization requires two parameters: serial port and baud rate
+# The first is the serial port string, such as:
+# linux: "/dev/ttyUSB0"
+# windows: "COM3"
+# The second is the baud rate:
+# M5 version: 115200
+# The following is such as:
+# mycobot-M5:
+# linux:
+# mc = MyCobot("/dev/ttyUSB0", 115200)
+# windows:
+# mc = MyCobot("COM3", 115200)
+# mycobot-raspi:
+# mc = MyCobot(PI_PORT, PI_BAUD)
 #
-# 初始化一个MyCobot对象
-# 下面为 windows版本创建对象代码
+# Initialize a MyCobot object
+# The following is the object code for the Windows version
 mc = MyCobot("COM3", 115200)
 
 i = 7
-#循环7次
-while i > 0:							
-    mc.set_color(0,0,255) #蓝灯亮
-    time.sleep(2)	#等2秒				
-    mc.set_color(255,0,0) #红灯亮
-    time.sleep(2)	#等2秒
-    mc.set_color(0,255,0) #绿灯亮
-    time.sleep(2)	#等2秒
-    i -= 1
+# Loop 7 times
+  while i > 0:
+  mc.set_color(0,0,255) #Blue light on
+  time.sleep(2) #Wait 2 seconds
+  mc.set_color(255,0,0) #Red light on
+  time.sleep(2) #Wait 2 seconds
+  mc.set_color(0,255,0) #Green light on
+  time.sleep(2) #Wait 2 seconds
+  i -= 1
 ```
 
 

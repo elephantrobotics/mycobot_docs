@@ -29,17 +29,6 @@
   - myCobot 280 PI
   - myCobot 280 Jetson Nano
   - myCobot 280 for Arduino 
-- myCobot 320
-  - myCobot 320 M5
-  - myCobot 320 PI 
-- myPalletizer 260
-  - myPalletizer 260 M5
-  - myPalletizer 260 PI 
-- mechArm 270
-  - mechArm 270 M5
-  - mechArm 270 Pi
-- myCobot Pro 600 
-- myBuddy 280
 
 ## 固件版本推荐
 
@@ -57,17 +46,6 @@ myCobot 280系列共4个版本：M5版本、PI版本、ardunio版本以及jetson
     <td>推荐固件及其版本</td>
 </tr>
 <tr>
-	<td rowspan='2'>M5版本</td>
-    <td>M5Stack-Basic</td>
-    <td>miniRobot固件</td>
-    <td>推荐烧录v2.1版本，可以使用拖动示教、wifi、蓝牙等功能</td>
-</tr>
-<tr>
-	<td>Atom</td>
-    <td>atomMain固件</td>
-    <td>产品序列号为ER28001202200415及之前，或者产品无序列号，推荐烧录v4.1版本；序列号为ER28001202200416及之后，推荐烧录v5.1版本</td>
-</tr>
-<tr>
 	<td rowspan='2'>PI版本</td>
 	<td>RaspberryPI 4B</td>
 	<td>ubuntu固件</td>
@@ -78,33 +56,8 @@ myCobot 280系列共4个版本：M5版本、PI版本、ardunio版本以及jetson
 	<td>atomMain固件</td>
 	<td>产品序列号为ER28001202200415及之前，或者产品无序列号，推荐烧录v4.1版本；序列号为ER28001202200416及之后，推荐烧录v5.1版本</td>
 </tr>
-<tr>
-	<td rowspan='3'>Arduino版本</td>
-	<td>mega2560</td>
-	<td>transponder固件</td>
-	<td>推荐烧录v1.0版本</td>
-</tr>
-	<td>mkrwifi1010</td>
-	<td>transponder固件</td>
-	<td>推荐烧录v1.0版本</td>
-</tr>
-<tr>
-	<td>Atom</td>
-	<td>atomMain固件</td>
-	<td>产品序列号为ER28001202200415及之前，或者产品无序列号，推荐烧录v4.1版本；序列号为ER28001202200416及之后，推荐烧录v5.1版本</td>
-</tr>
-<tr>
-	<td rowspan='2'>Jetson nano版本</td>
-	<td>JestonNano</td>
-	<td>ubuntu固件</td>
-	<td>推荐烧录V18.04.版本</td>
-</tr>
-<tr>
-	<td>Atom</td>
-	<td>atomMain固件</td>
-	<td>产品序列号为ER28001202200415及之前，或者产品无序列号，推荐烧录v4.1版本；序列号为ER28001202200416及之后，推荐烧录v5.1版本</td>
-</tr>
 </table>
+
 
 
 ## 更新与烧录 Atom 固件

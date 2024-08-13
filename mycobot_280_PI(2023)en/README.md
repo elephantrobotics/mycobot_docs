@@ -1,4 +1,4 @@
-# myCobot 280 pi (2023 Edition)
+# myCobot 280 pi(2023)
 The world's smallest collaborative robot
 
 Core Document

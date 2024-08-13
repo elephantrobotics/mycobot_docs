@@ -1,24 +1,23 @@
 # Product Drawings
-The product drawings section provides detailed 3D and 2D drawings of the 280 M5 robot. These drawings are particularly important for engineers who need to make customized designs or perform maintenance, and can help them better understand the structure of the robot.
+The product drawings section provides detailed 3D and 2D drawings of the 280 pi robot arm. These drawings are particularly important for engineers who need to make customized designs or perform maintenance, and can help them better understand the structure of the robot arm.
 
 ### Machine 3D Model
 
 | Machine | 3D Model File |
 | :--------------: | :----------------------------------------------------------: |
-| myCobot 280 M5 | [Download](https://download.elephantrobotics.com/Product_3d_files/mycobot_280_M5_230708.STEP) |
+| myCobot 280 PI | [Download](https://download.elephantrobotics.com/Product_3d_files/myCobot_280_PI_230708.STEP) |
 
 ### Machine 2D Drawings
 
 | Machine | Machine 2D Drawings |
 | :---------: | :--------------:|
 | myCobot 280 Atom | [Download](https://download.elephantrobotics.com/Product_3d_files/230918/myCobot_280_Atom_230918.PDF) |
-| myCobot 280 M5 Base | [Download](https://download.elephantrobotics.com/Product_3d_files/230918/myCobot_280_M5_base_230918.PDF) |
 
-### Accessories 3D Models
+### Accessory 3D Model
 
 - myCobot Series
 
-| Accessories | 3D Model Files |
+| Accessory | 3D Model File |
 | :--------: | :----------------------------------------------------------: |
 | Adaptive Gripper | [Download](https://download.elephantrobotics.com/Product_3d_files/myCobot%20280%20%E9%85%8D%E4%BB%B6/%E8%87%AA%E9%80%82%E5%BA%94/%E8%87%AA%E9%80%82%E5%BA%94%E5%A4%B9%E7%88%AA%E6%95%B4%E4%BD%93_230708.STEP) |
 | Parallel Gripper | [Download](https://download.elephantrobotics.com/Product_3d_files/myCobot%20280%20%E9%85%8D%E4%BB%B6/%E5%B9%B3%E8%A1%8C%E5%A4%B9%E7%88%AA/%E5%B9%B3%E8%A1%8C%E5%A4%B9%E7%88%AA%E6%95%B4%E4%BD%93_230708.STEP) |

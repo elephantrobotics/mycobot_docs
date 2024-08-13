@@ -26,4 +26,4 @@ Please change the parameters passed in the last line of MyCobotServer in the Ser
 - serial_num: /dev/ttyAMA0
 - baud: 1000000
 
-Use python to execute*
+Use python to execute

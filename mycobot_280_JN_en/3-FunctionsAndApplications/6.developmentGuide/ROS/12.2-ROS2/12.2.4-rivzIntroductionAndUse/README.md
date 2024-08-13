@@ -31,9 +31,7 @@ In this section, we only give a rough introduction. If you want to know more det
 
 ## mycobot_ros2 installation and update
 
-- **M5 version: ** Please check the end of the ROS2 installation section.
-
-- **PI version (Ubuntu 20.04): **
+- **PI /JN version (Ubuntu 20.04): **
 
 `mycobot_ros2` is a ROS package launched by ElephantRobotics that is compatible with various types of desktop robotic arms.
 
@@ -97,29 +95,6 @@ width ="500" align = "center">
 
 If you want to learn more about rviz, you can go to the [official document](http://wiki.ros.org/rviz2) to view it
 
-## M5 version prerequisites
-
-- Open the console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>), open the terminal window to view the device name:
-
-```bash
-# View the device name of the robot arm
-ls /dev/ttyUSB* # Old version myCobot280 M5
-
-# If the terminal does not display the /dev/ttyUSB related name, you need to use the following command
-ls /dev/ttyACM* # New version myCobot280 M5
-```
-
-- Grant serial port permissions to the robot:
-
-```bash
-# The default device name is /dev/ttyUSB0. If the device name is not the default value, you need to modify it.
-sudo chmod 777 /dev/ttyUSB0 # Old version myCobot280 M5
-
-sudo chmod 777 /dev/ttyACM0 # New version myCobot280 M5
-```
-
-Then enter the user password (**Note:** The password is not displayed, just enter it correctly).
-
 # 280 series rviz user guide
 
 ## Robot arm control
@@ -127,31 +102,6 @@ Then enter the user password (**Note:** The password is not displayed, just ente
 ### Slider control
 
 Open a command line and run:
-
-- mycobot 280-M5 version:
-
-```bash
-# The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-ros2 launch mycobot_280 slider_control.launch.py
-```
-
-- mycobot 280-PI version:
-
-Click the `ROS2 Shell` icon on the desktop or the corresponding icon in the bar below the desktop to open the ROS2 environment terminal:
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-10.jpg width ="500" align = "center"> 
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-11.jpg
-width ="500" align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-12.png width = "500" align = "center">
-
-Then run the command:
-
-```bash
-# The default serial port name of mycobot 280-PI version is "/dev/ttyAMA0" and the baud rate is 1000000.
-ros2 launch mycobot_280pi slider_control.launch.py
-```
 
 - mycobot 280-JetsonNano version:
 
@@ -187,7 +137,6 @@ Then you can **control the movement of the model in rviz by dragging the slider*
 
 In addition to the above control, we can also **let the model follow the movement of the real robot arm**. Open a command line and run:
 
-- mycobot 280-M5 version:
 ##### 2 Slider control
 
 > **Note: This function only supports the control of the robot**
@@ -661,22 +610,4 @@ It will **open rviz**, you will see the following screen (the screen of the Rasp
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.1.4-18.png
 width ="500" align = "center">
 
-#### 5.3 URDF model address
-
-##### 1 myCobot vertical suction pump V2.0
-
-- [myCobot 280-M5 version](https://github.com/elephantrobotics/mycobot_ros2/blob/280-ros-pump-camera/mycobot_description/urdf/mycobot/mycobot_with_pump.urdf)
-
-- [myCobot 280-PI version](https://github.com/elephantrobotics/mycobot_ros2/blob/280-ros-pump-camera/mycobot_description/urdf/mycobot_pi/mycobot_with_pump.urdf)
-
-##### 2 Camera flange
-
-- [myCobot 280-M5 Version](https://github.com/elephantrobotics/mycobot_ros2/tree/humble/mycobot_description/urdf/mycobot/mycobot_with_camera_flange.urdf)
-
-- [myCobot 280-PI Version](https://github.com/elephantrobotics/mycobot_ros2/tree/humble/mycobot_description/urdf/mycobot_pi/mycobot_with_camera_flange.urdf)
-
-##### 3 Camera Flange && Pump
-
-- [myCobot 280-M5 Version](https://github.com/elephantrobotics/mycobot_ros2/tree/humble/mycobot_description/urdf/mycobot/mycobot_with_camera_flange_pump.urdf)
-
-- [myCobot 280-PI version](https://github.com/elephantrobotics/mycobot_ros2/tree/humble/mycobot_description/urdf/mycobot_pi/mycobot_with_camera_flange_pump.urdf)
+- 

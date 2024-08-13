@@ -53,8 +53,6 @@ In this section, we will only give a rough introduction. If you want to know mor
 
 ## mycobot_ros installation and update
 
-- **M5 version:** Please see the end of the [13.1.2 Environment Setup](../12.2.1-ROS2的安装.md) section.
-
 - **PI version (Ubuntu 20.04): **
 
 `mycobot_ros` is a ROS package launched by ElephantRobotics that is compatible with various types of desktop robotic arms.
@@ -103,22 +101,10 @@ source devel/setup.bash
 
 Enter again:
 
-- mycobot 280-M5 version:
-
-```bash
-roslaunch mycobot_280 test.launch
-```
-
 - mycobot 280-Pi version:
 
 ```bash
 roslaunch mycobot_280pi test.launch
-```
-
-- mycobot 280-JetsonNano version:
-
-```bash
-roslaunch mycobot_280jn test.launch
 ```
 
 Open rviz and get the following result:
@@ -128,29 +114,6 @@ width ="500" align = "center">
 
 If you want to learn more about rviz, you can go to the [official document](http://wiki.ros.org/rviz) to view it
 
-## M5 version prerequisites
-
-- Open the console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>), open the terminal window to view the device name:
-
-```bash
-# View the device name of the robot
-ls /dev/ttyUSB* # Old version myCobot280 M5
-
-# If the terminal does not display the /dev/ttyUSB related name, you need to use the following command
-ls /dev/ttyACM* # New version myCobot280 M5
-```
-
-- Grant serial port permissions to the robot:
-
-```bash
-# The default device name is /dev/ttyUSB0. If the device name is not the default value, it needs to be modified.
-sudo chmod 777 /dev/ttyUSB0 # Old version myCobot280 M5
-
-sudo chmod 777 /dev/ttyACM0 # New version myCobot280 M5
-```
-
-Then enter the user password (**Note:** The password will not be displayed, just enter it correctly).
-
 # 280 series rviz user guide
 
 ## Robot arm control
@@ -159,31 +122,11 @@ Then enter the user password (**Note:** The password will not be displayed, just
 
 Open a command line and run:
 
-- mycobot 280-M5 version:
-
-```bash
-# The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-roslaunch mycobot_280 slider_control.launch port:=/dev/ttyUSB0 baud:=115200
-```
 - mycobot 280-Pi version:
 
 ```bash
 # The default serial port name of mycobot 280-Pi version is "/dev/ttyAMA0" and the baud rate is 1000000.
 roslaunch mycobot_280pi slider_control.launch port:=/dev/ttyAMA0 baud:=1000000
-```
-
-- mycobot 280-JetsonNano version:
-
-```bash
-# mycobot 280-JetsonNano version default serial port name is "/dev/ttyTHS1", baud rate is 1000000.
-roslaunch mycobot_280jn slider_control.launch port:=/dev/ttyTHS1 baud:=1000000
-```
-
-- mycobot 280-Arduino version:
-
-```bash
-# mycobot 280-Arduino version default serial port name is "/dev/ttyACM0", baud rate is 115200.
-roslaunch mycobot_280arduino slider_control.launch port:=/dev/ttyACM0 baud:=115200
 ```
 
 It will **open rviz and a slider component**, you will see the following screen:
@@ -193,32 +136,11 @@ width ="500" align = "center">
 
 Then you can **control the movement of the model in rviz by dragging the slider**. If you want the real mycobot to move with you, you need to open another command line and run:
 
-- mycobot 280-M5 version:
-
-```bash
-# The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-rosrun mycobot_280 slider_control.py _port:=/dev/ttyUSB0 _baud:=115200
-```
-
 - mycobot 280-Pi version:
 
 ```bash
 # The default serial port name of mycobot 280-Pi version is "/dev/ttyAMA0" and the baud rate is 1000000.
 rosrun mycobot_280pi slider_control.py _port:=/dev/ttyAMA0 _baud:=1000000
-```
-
-- mycobot 280-JetsonNano version:
-
-```bash
-# mycobot 280-JetsonNano version default serial port name is "/dev/ttyTHS1", baud rate is 1000000.
-rosrun mycobot_280jn slider_control.py _port:=/dev/ttyTHS1 _baud:=1000000
-```
-
-- mycobot 280-Arduino version:
-
-```bash
-# mycobot 280-Arduino version default serial port name is "/dev/ttyACM0", baud rate is 115200.
-rosrun mycobot_280arduino slider_control.py _port:=/dev/ttyACM0 _baud:=115200
 ```
 
 **Please note: due to the commandThe robot arm will move to the current position of the model while inputting. Before you use the command, please make sure that the model in rviz does not have any penetration**
@@ -227,12 +149,6 @@ rosrun mycobot_280arduino slider_control.py _port:=/dev/ttyACM0 _baud:=115200
 ### Model following
 
 In addition to the above controls, we can also **let the model follow the real robot arm movement**. Open a command line and run:
-- mycobot 280-M5 version:
-```bash
-# The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-rosrun mycobot_280 follow_display.py _port:=/dev/ttyUSB0 _baud:=115200
-```
-
 - mycobot 280-pi version:
 
 ```bash
@@ -240,36 +156,10 @@ rosrun mycobot_280 follow_display.py _port:=/dev/ttyUSB0 _baud:=115200
 rosrun mycobot_280pi follow_display.py _port:=/dev/ttyAMA0 _baud:=1000000
 ```
 
-- mycobot 280-JetsonNano version:
-
-```bash
-# mycobot 280-JetsonNano version default serial port name is "/dev/ttyTHS1", baud rate is 1000000.
-rosrun mycobot_280jn follow_display.py _port:=/dev/ttyTHS1 _baud:=1000000
-```
-
-- mycobot 280-Arduino version:
-
-```bash
-# mycobot 280-Arduino version default serial port name is "/dev/ttyACM0", baud rate is 115200.
-rosrun mycobot_280arduino follow_display.py _port:=/dev/ttyACM0 _baud:=115200
-```
-
 Then open another command line and run:
-- mycobot 280-M5 version:
-```bash
-roslaunch mycobot_280 mycobot_follow.launch
-```
 - mycobot 280-Pi version:
 ```bash
 roslaunch mycobot_280pi mycobot_follow.launch
-```
-- mycobot 280-JetsonNano version:
-```bash
-roslaunch mycobot_280jn mycobot_follow.launch
-```
-- mycobot 280-Arduino version:
-```bash
-roslaunch mycobot_280arduino mycobot_follow.launch
 ```
 It will **open rviz to show the model following effect**.
 
@@ -278,30 +168,11 @@ It will **open rviz to show the model following effect**.
 Based on the previous, this package also **provides a simple Gui control interface**. This method is intended for real robotic arms to interact with each other, please connect mycobot.
 
 Open the command line:
-- mycobot 280-M5 version:
-```bash
-# The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-roslaunch mycobot_280 simple_gui.launch port:=/dev/ttyUSB0 baud:=115200
-```
 - mycobot 280-Pi version:
 ```bash
 # The default serial port name of mycobot 280-Pi version is "/dev/ttyAMA0" and the baud rate is 1000000.
 roslaunch mycobot_280pi simple_gui.launch port:=/dev/ttyAMA0 baud:=1000000
 ```
-- mycobot 280-JetsonNano version:
-
-```bash
-# mycobot 280-JetsonNano version default serial port name is "/dev/ttyTHS1", baud rate is 1000000.
-roslaunch mycobot_280jn simple_gui.launch port:=/dev/ttyTHS1 baud:=1000000
-```
-
-- mycobot 280-Arduino version:
-
-```bash
-# mycobot 280-Arduino version default serial port name is "/dev/ttyACM0", baud rate is 115200.
-roslaunch mycobot_280arduino simple_gui.launch port:=/dev/ttyACM0 baud:=115200
-```
-
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/gui-1.png
 width ="500" align = "center">
 
@@ -311,32 +182,11 @@ width ="500" align = "center">
 
 Open a command line and run:
 
-- mycobot 280-M5 version:
-
-```bash
-# The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-roslaunch mycobot_280 teleop_keyboard.launch port:=/dev/ttyUSB0 baud:=115200
-```
-
 - mycobot 280-Pi version:
 
 ```bash
 # The default serial port name of mycobot 280-Pi version is "/dev/ttyAMA0" and the baud rate is 1000000.
 roslaunch mycobot_280pi teleop_keyboard.launch port:=/dev/ttyAMA0 baud:=1000000
-```
-
-- mycobot 280-JetsonNano version:
-
-```bash
-# mycobot 280-JetsonNano version default serial port name is "/dev/ttyTHS1", baud rate is 1000000.
-roslaunch mycobot_280jn teleop_keyboard.launch port:=/dev/ttyTHS1 baud:=1000000
-```
-
-- mycobot 280-Arduino version:
-
-```bash
-# mycobot 280-Arduino version default serial port name is "/dev/ttyACM0", baud rate is 115200.
-roslaunch mycobot_280arduino teleop_keyboard.launch port:=/dev/ttyACM0 baud:=115200
 ```
 
 The running effect is as follows:
@@ -400,35 +250,12 @@ Atom Version: unknown
 
 Next, open another command line and run:
 
-- mycobot 280-M5 version:
-
-```bash
-rosrun mycobot_280 teleop_keyboard.py
-#or
-rosrun mycobot_280 teleop_keyboard.py _speed:=70
-```
-
 - mycobot 280-Pi version:
 
 ```bash
 rosrun mycobot_280 teleop_keyboard.py
 #or
 rosrun mycobot_280pi teleop_keyboard.py _speed:=70
-```
-
-- mycobot 280-JetsonNano version:
-
-```bash
-rosrun mycobot_280jn teleop_keyboard.py
-#or
-rosrun mycobot_280jn teleop_keyboard.py _speed:=70
-```
-
-- mycobot 280-Arduino version:
-
-```bash
-rosrun mycobot_280arduino teleop_keyboard.py#or
-rosrun mycobot_280arduino teleop_keyboard.py _speed:=70
 ```
 
 You will see the following output in the command line:
@@ -475,24 +302,11 @@ width ="500" align = "center">
 
 ####  Identify and display
 Command line operation:
-- mycobot 280-M5 version:
-```bash
-roslaunch mycobot_280 detect_marker.launch
-```
 - mycobot 280-Pi version:
 ```bash
 roslaunch mycobot_280pi detect_marker.launch
 ```
 
-- mycobot 280-JetsonNano version:
-```bash
-roslaunch mycobot_280jn detect_marker.launch
-```
-
-- mycobot 280-Arduino version:
-```bash
-roslaunch mycobot_280arduino detect_marker.launch
-```
 Optional parameters:
 + num: camera id, default is 0.
 
@@ -509,29 +323,10 @@ You can refer to [Slider Control](##1421-Slider Control) and use `slider_control
 >This section requires the use of a vertical suction pump.
 
 Run from command line:
-- mycobot 280-M5 version:
-```bash
-# The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-roslaunch mycobot_280 detect_marker_with_topic.launch port:=/dev/ttyUSB0 baud:=115200
-```
 - mycobot 280-Pi version:
 ```bash
 # The default serial port name of mycobot 280-Pi version is "/dev/ttyAMA0" and the baud rate is 1000000.
 roslaunch mycobot_280pi detect_marker_with_topic.launch port:=/dev/ttyAMA0 baud:=1000000
-```
-
-- mycobot 280-JetsonNano version:
-
-```bash
-# mycobot 280-JetsonNano version default serial port name is "/dev/ttyTHS1", baud rate is 1000000.
-roslaunch mycobot_280jn detect_marker_with_topic.launch port:=/dev/ttyTHS1 baud:=1000000
-```
-
-- mycobot 280-Arduino version:
-
-```bash
-# mycobot 280-Arduino version default serial port name is "/dev/ttyACM0", baud rate is 115200.
-roslaunch mycobot_280arduino detect_marker_with_topic.launch port:=/dev/ttyACM0 baud:=115200
 ```
 
 Optional parameters:
@@ -549,25 +344,11 @@ width ="500" align = "center">
 
 Then run the scripts for tracking and grabbing. Open a new command line:
 
-- mycobot 280-M5 version:
-```bash
-rosrun mycobot_280 follow_and_pump.py
-```
-
 - mycobot 280-Pi version:
 ```bash
 rosrun mycobot_280pi follow_and_pump.py
 ```
 
-- mycobot 280-JetsonNano version:
-```bash
-rosrun mycobot_280jn follow_and_pump.py
-```
-
-- mycobot 280-Arduino version:
-```bash
-rosrun mycobot_280arduino follow_and_pump.py
-```
 After starting, mycobot will go to its initial position
 
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/vision-3.gif
@@ -586,219 +367,11 @@ width ="500" align = "center">
 
 > Note: myCobot Adaptive Gripper only supports myCobot 280 M5 devices
 
-#### myCobot Adaptive Gripper
-
-##### 1 Load the model
-
-Open a command line and run:
-
-- myCobot 280-M5 version:
-
-```bash
-roslaunch mycobot_280 test_gripper.launch
-```
-
-It will **open rviz**, and you will see the following screen:
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/12.1.4-10.png
-width ="500" align = "center">
-
-##### 2 Slider Control
-
-Open a command line and run:
-
-- myCobot 280-M5 version:
-
-```bash
-# The default serial port name of myCobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, the serial port name can be changed to "/dev/ttyACM0".
-roslaunch mycobot_280 slider_control_gripper.launch port:=/dev/ttyUSB0 baud:=115200
-```
-
-It will **open rviz and a slider component**, and you will see the following screen:
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/12.1.4-11.png
-width ="500" align = "center">
-
-Then you can **control the movement of the model in rviz by dragging the slider. ** If you want the real myCobot to move with you, you need to ** open another command line ** and run:
-
-- myCobot 280-M5 version:
-
-```bash
-# The default serial port name of myCobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-rosrun mycobot_280 slider_control_gripper.py _port:=/dev/ttyUSB0 _baud:=115200
-```
-**Please note: Since the robot arm will move to the current position of the model while the command is input, please make sure that the model in rviz does not have a model penetration phenomenon before you use the command**.
-** Do not drag the slider quickly after connecting the robot arm to prevent damage to the robot arm**.
-
-##### 3 Model following
-
-In addition to the above control, we can also ** let the model follow the movement of the real robot arm**. Open a command line and run:
-
-- mycobot 280-M5 version:
-
-```bash
-# The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-rosrun mycobot_280 follow_display_gripper.py _port:=/dev/ttyUSB0 _baud:=115200
-```
-
-Then open another command line and run:
-
-- mycobot 280-M5 version:
-
-```bash
-roslaunch mycobot_280 mycobot_follow_gripper.launch
-```
-
-It will **open rviz to show the model following effect**.
-
-##### 4 GUI control
-
-Based on the previous, this package also provides a simple Gui control interface. This method is intended to allow real robotic arms to interact with each other. Please connect myCobot.
-
-Open the command line:
-
-- mycobot 280-M5 version:
-
-```bash
-# The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-roslaunch mycobot_280 simple_gui_gripper.launch port:=/dev/ttyUSB0 baud:=115200
-```
-
-It will **open rviz and a GUI interface**, and you will see the following screen:
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/12.1.4-12.png
-width ="500" align = "center">
-
-##### 5 Keyboard control
-
-**Keyboard control function has been added to the `mycobot_280` package**, and it is synchronized in real time in rviz. This function relies on pythonApi, so make sure it is connected to the real robot arm.
-
-Open a command line and run:
-
-- mycobot 280-M5 version:
-
-```bash
-# The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-roslaunch mycobot_280 teleop_keyboard_gripper.launch port:=/dev/ttyUSB0 baud:=115200
-```
-
-The running effect is as follows:
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/12.1.4-10.png
-width ="500" align = "center">
-
-The command line will output mycobot information, as follows: 
-```SUMMARY
-========
-
-PARAMETERS
- * /mycobot_services/baud: 115200
- * /mycobot_services/port: /dev/ttyUSB0
- * /robot_description: <?xml version="1....
- * /rosdistro: kinetic
- * /rosversion: 1.12.1.17
-
-NODES
-  /
-    mycobot_services (mycobot_280/mycobot_services.py)
-    real_listener (mycobot_280/listen_real.py)
-    robot_state_publisher (robot_state_publisher/state_publisher)
-    rviz (rviz/rviz)
-
-auto-starting new master
-process[master]: started with pid [1333]
-ROS_MASTER_URI=http://localhost:11311
-
-setting /run_id to f977b3f4-b3a9-11eb-b0c8-d0c63728b379
-process[rosout-1]: started with pid [1349]
-started core service [/rosout]
-process[robot_state_publisher-2]: started with pid [1357]
-process[rviz-3]: started with pid [1367]
-process[mycobot_services-4]: started with pid [1380]
-process[real_listener-5]: started with pid [1395]
-[INFO] [1620882819.196217]: start ...
-[INFO] [1620882819.205050]: /dev/ttyUSB0,115200
-
-MyCobot Status
---------------------------------
-Joint Limit:
-    joint 1: -170 ~ +170
-    joint 2: -135 ~ +140
-    joint 3: -150 ~ +150
-    joint 4: -145 ~ +135
-    joint 5: -170 ~ +170
-    joint 6: -180 ~ +180
-
-Connect Status: True
-
-Servo Infomation: all connected
-
-Servo Temperature: unknown
-
-Atom Version: unknown
-
-[INFO] [1620882819.435778]: ready
-
-```
-
-Next, open another command line and run:
-- mycobot 280-M5 version:
-
-```bash
-rosrun mycobot_280 teleop_keyboard.py
-```
-
-You will see the following output in the command line:
-
-```bash
-Mycobot Teleop Keyboard Controller
----------------------------
-Movimg options(control coordinations [x,y,z,rx,ry,rz]):
-w(x+)
-
-a(y-) s(x-) d(y+)
-
-z(z-) x(z+)
-
-u(rx+) i(ry+) o(rz+)
-
-j(rx-) k(ry-) l(rz-)
-
-Gripper control:
-g - open
-h - close
-
-Pump control:
-b - open
-m - close
-
-Other:
-1 - Go to init pose
-2 - Go to home pose
-3 - Resave home pose
-q - Quit
-
-currently: speed: 50 change percent 5
-```
-
-In this terminal, you can control the state of the robot and move the robot by pressing keys in the command line.
-
-Parameters supported by this script:
-
-+ _speed: robot movement speed.
-+ _change_percent: percentage of moving distance.
-
 #### myCobot vertical pump V2.0
 
 ##### 1 Load the model
 
 Open a command line and run:
-
-- myCobot 280-M5 version:
-
-```bash
-roslaunch mycobot_280 test_pump.launch
-```
 
 - myCobot 280-PI version:
 
@@ -817,13 +390,6 @@ width ="500" align = "center">
 
 Open a command line and run:
 
-- myCobot 280-M5 version:
-
-```bash
-### The default serial port name of myCobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-roslaunch mycobot_280 slider_control_pump.launch port:=/dev/ttyUSB0 baud:=115200
-```
-
 - myCobot 280-PI version:
 
 ```bash
@@ -838,13 +404,6 @@ width ="500" align = "center">
 
 Then you can **control the movement of the model in rviz by dragging the slider. ** If you want the real myCobot to move with you, you need to **open another command line** and run:
 
-- myCobot 280-M5 version:
-
-```bash
-### The default serial port name of myCobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-rosrun mycobot_280 slider_control.py _port:=/dev/ttyUSB0 _baud:=115200
-```
-
 - myCobot 280-PI version:
 
 ```bash
@@ -855,102 +414,11 @@ rosrun mycobot_280pi slider_control.py _port:=/dev/ttyAMA0 _baud:=1000000
 **Please note: Since the robot will move to the current position of the model when the command is input, please make sure that the model in rviz does not have any penetration before you use the command**.
 **Do not drag the slider quickly after connecting the robot to prevent damage to the robot**.
 
-##### 3 GUI control
-
-Based on the previous, this package also **provides a simple Gui control interface**. This method is intended for real robots to interact with each other, please connect myCobot.
-
-Open the command line:
-
-- mycobot 280-M5 version:
-
-```bash
-# The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-roslaunch mycobot_280 simple_gui_pump.launch port:=/dev/ttyUSB0 baud:=115200
-```
-
-It will **open rviz and a GUI interface**, and you will see the following screen:
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/12.1.4-14.png
-width ="500" align = "center">
-
-##### 4 Keyboard control
-
-**Added keyboard control function** in the `mycobot_280` package, and synchronized in real time in rviz. This function depends on python API, so make sure to connect to the real robot arm.
-
-Open a command line and run:
-
-- mycobot 280-M5 version:
-
-```bash
-# The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-roslaunch mycobot_280 teleop_keyboard_pump.launch port:=/dev/ttyUSB0 baud:=115200
-```
-
-The running effect is as follows:
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/12.1.4-13.png
-width ="500" align = "center">
-
-Next, open another command line and run:
-
-- mycobot 280-M5 version:
-
-```bash
-rosrun mycobot_280 teleop_keyboard.py
-```
-
-You will see the following output in the command line:
-
-```bash
-Mycobot Teleop Keyboard Controller
----------------------------
-Movimg options(control coordinations [x,y,z,rx,ry,rz]):
-w(x+)
-
-a(y-) s(x-) d(y+)
-
-z(z-) x(z+)
-
-u(rx+) i(ry+) o(rz+)
-
-j(rx-) k(ry-) l(rz-)
-
-Gripper control:
-g - open
-h - close
-
-Pump control:
-b - open
-m - close
-
-Other:
-1 - Go to init pose
-2 - Go to home pose
-3 - Resave home pose
-q - Quit
-
-currently: speed: 50 change percent 5
-```
-
-In this terminal, you can control the state of the robot and move the robot through the keys in the command line.
-
-Parameters supported by this script:
-
-+ _speed: robot movement speed.
-
-+ _change_percent: movement distance percentage.
-
 #### Camera Flange
 
 ##### 1 Load the model
 
 Open a command line and run:
-
-- myCobot 280-M5 version:
-
-```bash
-roslaunch mycobot_280 test_camera_flange.launch
-```
 
 - myCobot 280-PI version:
 
@@ -969,13 +437,6 @@ width ="500" align = "center">
 
 Open a command line and run:
 
-- myCobot 280-M5 version:
-
-```bash
-# The default serial port name of myCobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-roslaunch mycobot_280 slider_control_camera_flange.launch port:=/dev/ttyUSB0 baud:=115200
-```
-
 - myCobot 280-PI version:
 
 ```bash
@@ -989,13 +450,6 @@ It will **open rviz and a slider component**, and you will see the following scr
 width ="500" align = "center">
 
 Then you can **control the movement of the model in rviz by dragging the slider. ** If you want the real myCobot to move with you, you need to **open another command line** and run:
-
-- myCobot 280-M5 version:
-
-```bash
-# The default serial port name of myCobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-rosrun mycobot_280 slider_control.py _port:=/dev/ttyUSB0 _baud:=115200
-```
 
 - myCobot 280-PI version:
 
@@ -1013,12 +467,6 @@ rosrun mycobot_280pi slider_control.py _port:=/dev/ttyAMA0 _baud:=1000000
 
 Open a command line and run:
 
-- myCobot 280-M5 version:
-
-```bash
-roslaunch mycobot_280 test_camera_flange_pump.launch
-```
-
 - myCobot 280-PI version:
 
 ```bash
@@ -1032,24 +480,14 @@ width ="500" align = "center">
 
 #### URDF model address
 
-##### 1 myCobot adaptive gripper
-
-- [myCobot 280-M5 version](https://github.com/elephantrobotics/mycobot_ros/tree/noetic/mycobot_description/urdf/mycobot/mycobot_with_gripper_parallel.urdf)
-
-##### 2 myCobot vertical suction pump V2.0
-
-- [myCobot 280-M5 version](https://github.com/elephantrobotics/mycobot_ros/tree/noetic/mycobot_description/urdf/mycobot/mycobot_with_pump.urdf)
+##### 1 myCobot vertical suction pump V2.0
 
 - [myCobot 280-PI version](https://github.com/elephantrobotics/mycobot_ros/tree/noetic/mycobot_description/urdf/mycobot_pi/mycobot_with_pump.urdf)
 
-##### 3 Camera flange
-
-- [myCobot 280-M5 version](https://github.com/elephantrobotics/mycobot_ros/tree/noetic/mycobot_description/urdf/mycobot/mycobot_with_camera_flange.urdf)
+##### 2 Camera flange
 
 - [myCobot 280-PI version](https://github.com/elephantrobotics/mycobot_ros/tree/noetic/mycobot_description/urdf/mycobot_pi/mycobot_with_camera_flange.urdf)
 
-##### 4 Camera flange && suction pump
+##### 3 Camera flange && suction pump
 
-- [myCobot 280-M5 version](https://github.com/elephantrobotics/mycobot_ros/tree/noetic/mycobot_description/urdf/mycobot/mycobot_with_camera_flange_pump.urdf)
-
-- [myCobot 280-PI version](https://github.com/elephantrobotics/mycobot_ros/tree/noetic/mycobot_description/urdf/mycobot_pi/mycobot_with_camera_flange_pump.urdf)
+[myCobot 280-PI version](https://github.com/elephantrobotics/mycobot_ros/tree/noetic/mycobot_description/urdf/mycobot_pi/mycobot_with_camera_flange_pump.urdf)
