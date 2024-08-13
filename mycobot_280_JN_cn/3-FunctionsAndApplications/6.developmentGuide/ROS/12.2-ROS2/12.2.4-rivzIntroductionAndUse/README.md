@@ -196,7 +196,7 @@ width ="500"  align = "center">
 然后运行命令：
 
 ```bash
-# mycobot 280-PI版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
+# mycobot 280-JetsonNano版本默认串口名为"/dev/ttyTHS1"，波特率为1000000.
 ros2 launch mycobot_280pi teleop_keyboard.launch.py 
 ```
 

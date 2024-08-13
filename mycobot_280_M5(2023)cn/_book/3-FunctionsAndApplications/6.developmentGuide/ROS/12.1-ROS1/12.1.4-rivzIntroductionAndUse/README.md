@@ -49,39 +49,7 @@ width ="500"  align = "center">
 
 ## mycobot_ros安装与更新
 
-- **M5版本：** 请查看 6.2.1ROS1环境搭建 章节末尾。
-
-- **PI版本(Ubuntu 20.04)：**
-
-`mycobot_ros` 是 ElephantRobotics 推出的，适配旗下各类型桌面型机械臂的 ROS 包。
-
-项目地址：https://github.com/elephantrobotics/mycobot_ros
-
-官方默认的工作空间是`catkin_ws`。
-
-点击桌面上的`ROS1 Shell`图标或者桌面下方栏的对应图标，打开ROS1环境终端：
-
- <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz111.JPG
- align = "center">
-
- <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz222.JPG
- align = "center">
-
- <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rivz333.jpg
- align = "center">
-
- 然后输入以下指令：
-
-```bash
-cd ~/catkin_ws/src  # 进入工作区的src文件夹中
-# 克隆github上的代码
-git clone https://github.com/elephantrobotics/mycobot_ros.git
-cd ..       # 返回工作区
-catkin_make # 构建工作区中的代码
-source devel/setup.bash # 添加环境变量
-```
-
-注意： 若`/home/er/catkin_ws/src (等效于 ~/catkin_ws/src)`目录中已经存在`mycobot_ros`文件夹，则需要先删除原有的 `mycobot_ros`，再执行以上命令。其中，目录路径中的`er`为虚拟机的用户名，若不一致请修改。
+- **M5版本：** 请查看 ROS1环境搭建 章节末尾。
 
 ## 简单使用
 
@@ -283,12 +251,6 @@ rosrun mycobot_280 teleop_keyboard.py
 rosrun mycobot_280 teleop_keyboard.py _speed:=70
 ```
 
-```bash
-rosrun mycobot_280arduino teleop_keyboard.py
-#或
-rosrun mycobot_280arduino teleop_keyboard.py _speed:=70
-```
-
 
 你会在命令行中看到如下输出：
 ```bash
@@ -347,7 +309,7 @@ width ="500"  align = "center">
 
 识别二维码，获取与相机的相对位置关系。根据 rviz 中mycobot的末端位置，进行坐标转换，最后显示在 rviz 中。
 
-可以参考 [滑块控制](##1421-滑块控制),使用 `slider_control.py` 来控制机械臂
+可以参考滑块控制使用 `slider_control.py` 来控制机械臂
 
 #### 视觉追踪与抓取
 >本部分需要使用垂直吸泵。

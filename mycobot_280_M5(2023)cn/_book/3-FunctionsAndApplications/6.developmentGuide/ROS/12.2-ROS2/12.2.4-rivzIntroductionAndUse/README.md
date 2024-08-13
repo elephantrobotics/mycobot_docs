@@ -31,38 +31,6 @@ width ="500"  align = "center">
 
 - **M5版本：** 请查看 ROS2的安装 章节末尾。
 
-- **PI版本(Ubuntu 20.04)：**
-
-`mycobot_ros2` 是 ElephantRobotics 推出的，适配旗下各类型桌面型机械臂的 ROS 包。
-
-项目地址：https://github.com/elephantrobotics/mycobot_ros2
-
-官方默认的工作空间是`colcon_ws`。
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-12.png
-width ="500"  align = "center">
-
-然后输入以下指令：
-
-```bash
-cd ~/colcon_ws/src  # 进入工作区的src文件夹中
-# 克隆github上的代码
-git clone https://github.com/elephantrobotics/mycobot_ros2.git
-cd ..       # 返回工作区
-colcon build --symlink-install # 构建工作区中的代码, --symlink-install：避免每次调整 python 脚本时都需要重新编译
-source install/setup.bash # 添加环境变量
-```
-
-**注意：** 若`/home/er/colcon_ws/src (等效于 ~/colcon_ws/src)`目录中已经存在`mycobot_ros2`文件夹，则需要先删除原有的 `mycobot_ros2`，再执行以上命令。
-
 
 ## 简单使用
 
@@ -135,54 +103,12 @@ sudo chmod 777 /dev/ttyACM0 # 新版本 myCobot280 M5
 ros2 launch mycobot_280 slider_control.launch.py
 ```
 
-- mycobot 280-PI版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-# mycobot 280-PI版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-ros2 launch mycobot_280pi slider_control.launch.py
-```
-
-- mycobot 280-JetsonNano版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-# mycobot 280-JetsonNano版本默认串口名为"/dev/ttyTHS1"，波特率为1000000.
-ros2 launch mycobot_280jn slider_control.launch.py
-```
-
 它将**打开 rviz 和一个滑块组件**，你将看到如下画面（树莓派版本画面略有差异，不影响使用）：
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/caf-1.png
 width ="500"  align = "center">
 
 接着你可以**通过拖动滑块来控制 rviz 中的模型移动**。真实的 mycobot 将跟着一起运动.
-
-
 
 **请注意：由于在命令输入的同时机械臂会移动到模型目前的位置，在您使用命令之前请确保rviz中的模型没有出现穿模现象**
 **不要在连接机械臂后做出快速拖动滑块的行为，防止机械臂损坏**
@@ -196,46 +122,6 @@ width ="500"  align = "center">
 ```bash
 # mycobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
 ros2 launch mycobot_280 mycobot_follow.launch.py 
-```
-
-- mycobot 280-PI版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-# mycobot 280-PI版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-ros2 launch mycobot_280pi mycobot_follow.launch.py 
-```
-
-- mycobot 280-JetsonNano版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-# mycobot 280-JetsonNano版本默认串口名为"/dev/ttyTHS1"，波特率为1000000.
-ros2 launch mycobot_280jn mycobot_follow.launch.py
 ```
 
 它将**打开 rviz 展示模型跟随效果**。
@@ -255,45 +141,7 @@ ros2 launch mycobot_280jn mycobot_follow.launch.py
 ros2 launch mycobot_280 simple_gui.launch.py
 ```
 
-- mycobot 280-PI版本：
 
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-# mycobot 280-PI版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-ros2 launch mycobot_280pi simple_gui.launch.py
-```
-
-- mycobot 280-JetsonNano版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-# mycobot 280-JetsonNano版本默认串口名为"/dev/ttyTHS1"，波特率为1000000.
-ros2 launch mycobot_280jn simple_gui.launch.py
-```
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//gui-1.png
 width ="500"  align = "center">
@@ -309,47 +157,6 @@ width ="500"  align = "center">
 ```bash
 # mycobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
 ros2 launch mycobot_280 teleop_keyboard.launch.py 
-```
-
-- mycobot 280-PI版本：
-  
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-# mycobot 280-PI版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-ros2 launch mycobot_280pi teleop_keyboard.launch.py 
-```
-
-- mycobot 280-JetsonNano版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-# mycobot 280-JetsonNano版本默认串口名为"/dev/ttyTHS1"，波特率为1000000.
-ros2 launch mycobot_280jn teleop_keyboard.launch.py
 ```
 
 运行效果如下：
@@ -394,44 +201,6 @@ width ="500"  align = "center">
 
 ```bash
 ros2 run mycobot_280 teleop_keyboard
-```
-
-- mycobot 280-PI版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-ros2 run mycobot_280pi teleop_keyboard
-```
-
-- mycobot 280-JetsonNano版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-ros2 run mycobot_280jn teleop_keyboard
 ```
 
 你会在命令行中看到如下输出：
@@ -480,25 +249,6 @@ currently:	speed: 10	change percent: 2
 ros2 launch mycobot_280 test_pump.launch.py
 ```
 
-- mycobot 280-PI版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-ros2 launch mycobot_280pi test_pump.launch.py
-```
-
 它将**打开 rviz**，你将看到如下画面（树莓派版本画面略有差异，不影响使用）：
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.1.4-13.png
@@ -515,26 +265,6 @@ width ="500"  align = "center">
 ```bash
 # mycobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
 ros2 launch mycobot_280 slider_control_pump.launch.py
-```
-
-- mycobot 280-PI版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-# mycobot 280-PI版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-ros2 launch mycobot_280pi slider_control_pump.launch.py
 ```
 
 它将**打开 rviz 和一个滑块组件**，你将看到如下画面（树莓派版本画面略有差异，不影响使用）：
@@ -577,25 +307,6 @@ width ="500"  align = "center">
 ros2 launch mycobot_280 test_camera_flange.launch.py
 ```
 
-- mycobot 280-PI版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-ros2 launch mycobot_280pi test_camera_flange.launch.py
-```
-
 它将**打开 rviz**，你将看到如下画面（树莓派版本画面略有差异，不影响使用）：
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.1.4-15.png
@@ -613,19 +324,6 @@ width ="500"  align = "center">
 # mycobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
 ros2 launch mycobot_280 slider_control_camera_flange.launch.py
 ```
-
-- mycobot 280-PI版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
-width ="500"  align = "center">
 
 然后运行命令：
 
@@ -656,25 +354,6 @@ width ="500"  align = "center">
 ros2 launch mycobot_280 test_camera_flange_pump.launch.py
 ```
 
-- mycobot 280-PI版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-ros2 launch mycobot_280pi test_camera_flange_pump.launch.py
-```
-
 它将**打开 rviz**，你将看到如下画面（树莓派版本画面略有差异，不影响使用）：
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280//12.1.4-18.png
@@ -685,17 +364,10 @@ width ="500"  align = "center">
 ##### 1 myCobot 垂直吸泵V2.0
 
 - [myCobot 280-M5 版本](https://github.com/elephantrobotics/mycobot_ros2/blob/280-ros-pump-camera/mycobot_description/urdf/mycobot/mycobot_with_pump.urdf)
-
-- [myCobot 280-PI 版本](https://github.com/elephantrobotics/mycobot_ros2/blob/280-ros-pump-camera/mycobot_description/urdf/mycobot_pi/mycobot_with_pump.urdf)
-  
 ##### 2 摄像头法兰
 
 - [myCobot 280-M5 版本](https://github.com/elephantrobotics/mycobot_ros2/tree/humble/mycobot_description/urdf/mycobot/mycobot_with_camera_flange.urdf)
 
-- [myCobot 280-PI 版本](https://github.com/elephantrobotics/mycobot_ros2/tree/humble/mycobot_description/urdf/mycobot_pi/mycobot_with_camera_flange.urdf)
-
 ##### 3 摄像头法兰 && 吸泵
 
 - [myCobot 280-M5 版本](https://github.com/elephantrobotics/mycobot_ros2/tree/humble/mycobot_description/urdf/mycobot/mycobot_with_camera_flange_pump.urdf)
-
-- [myCobot 280-PI 版本](https://github.com/elephantrobotics/mycobot_ros2/tree/humble/mycobot_description/urdf/mycobot_pi/mycobot_with_camera_flange_pump.urdf)

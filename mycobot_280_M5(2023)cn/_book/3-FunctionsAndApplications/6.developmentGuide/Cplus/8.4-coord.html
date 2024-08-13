@@ -1701,46 +1701,72 @@
 <pre><code>mycobot::Coords goal_coords = { 5, 5, 5, 5, 5, 5 };
 mycobot::MyCobot::I().WriteCoords(goal_coords, 30);
 </code></pre><h2 id="&#x5B8C;&#x6574;&#x4F7F;&#x7528;&#x6848;&#x4F8B;"><a name="&#x5B8C;&#x6574;&#x4F7F;&#x7528;&#x6848;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x5B8C;&#x6574;&#x4F7F;&#x7528;&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B8C;&#x6574;&#x4F7F;&#x7528;&#x6848;&#x4F8B;</h2>
+<p>&#x4E0B;&#x9762;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x662F;&#x4E00;&#x4E2A;&#x63A7;&#x5236; MyCobot &#x673A;&#x68B0;&#x81C2;&#x7684;&#x63A7;&#x5236;&#x7A0B;&#x5E8F;&#x7684;&#x4E3B;&#x8981;&#x5165;&#x53E3;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x7A0B;&#x5E8F;&#x9996;&#x5148;&#x68C0;&#x67E5;&#x63A7;&#x5236;&#x5668;&#x662F;&#x5426;&#x8FDE;&#x63A5;&#x5230;&#x673A;&#x68B0;&#x81C2;&#x3002;&#x5982;&#x679C;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#xFF0C;&#x7A0B;&#x5E8F;&#x4F1A;&#x5C06;&#x673A;&#x68B0;&#x81C2;&#x4E0A;&#x7535;&#x5E76;&#x505C;&#x6B62;&#x5F53;&#x524D;&#x7684;&#x52A8;&#x4F5C;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x5B83;&#x4F1A;&#x83B7;&#x53D6;&#x5E76;&#x8F93;&#x51FA;&#x673A;&#x68B0;&#x81C2;&#x7684;&#x5F53;&#x524D;&#x89D2;&#x5EA6;&#x548C;&#x5750;&#x6807;&#xFF0C;&#x5E76;&#x5C1D;&#x8BD5;&#x5C06;&#x6240;&#x6709;&#x5173;&#x8282;&#x79FB;&#x52A8;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x76EE;&#x6807;&#x89D2;&#x5EA6;&#x3002;&#x7A0B;&#x5E8F;&#x5728;&#x76EE;&#x6807;&#x89D2;&#x5EA6;&#x5C31;&#x4F4D;&#x524D;&#xFF0C;&#x4F1A;&#x6301;&#x7EED;&#x8F93;&#x51FA;&#x5F53;&#x524D;&#x7684;&#x89D2;&#x5EA6;&#x4FE1;&#x606F;&#x3002;&#x6700;&#x540E;&#xFF0C;&#x7A0B;&#x5E8F;&#x5BF9;&#x67D0;&#x4E2A;&#x5173;&#x8282;&#x8FDB;&#x884C;&#x89D2;&#x5EA6;&#x8C03;&#x6574;&#xFF0C;&#x5E76;&#x5728;&#x8C03;&#x6574;&#x540E;&#x505C;&#x6B62;&#x673A;&#x68B0;&#x81C2;&#x7684;&#x52A8;&#x4F5C;&#x3002;&#x5982;&#x679C;&#x8FC7;&#x7A0B;&#x4E2D;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#xFF0C;&#x7A0B;&#x5E8F;&#x4F1A;&#x6355;&#x83B7;&#x5F02;&#x5E38;&#x5E76;&#x9000;&#x51FA;&#x3002;</p>
 <pre><code>int main(int argc, char* argv[])
 try {
-    QCoreApplication a(argc, argv);
-    using namespace std::chrono_literals;
+    QCoreApplication a(argc, argv); // &#x521B;&#x5EFA;&#x4E00;&#x4E2A; QCoreApplication &#x5BF9;&#x8C61;&#x4EE5;&#x652F;&#x6301; Qt &#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;
+
+    using namespace std::chrono_literals; // &#x5F15;&#x5165;&#x7528;&#x4E8E;&#x65F6;&#x95F4;&#x5904;&#x7406;&#x7684;&#x5B57;&#x9762;&#x91CF;&#xFF08;&#x5982; 200ms&#xFF09;
+
+    // &#x68C0;&#x67E5;&#x673A;&#x68B0;&#x81C2;&#x63A7;&#x5236;&#x5668;&#x662F;&#x5426;&#x8FDE;&#x63A5;
     if (!mycobot::MyCobot::I().IsControllerConnected()) {
-        std::cerr &lt;&lt; &quot;Robot is not connected\n&quot;;
-        exit(EXIT_FAILURE);
+        std::cerr &lt;&lt; &quot;Robot is not connected\n&quot;; // &#x5982;&#x679C;&#x672A;&#x8FDE;&#x63A5;&#xFF0C;&#x8F93;&#x51FA;&#x9519;&#x8BEF;&#x4FE1;&#x606F;
+        exit(EXIT_FAILURE); // &#x9000;&#x51FA;&#x7A0B;&#x5E8F;&#xFF0C;&#x8FD4;&#x56DE;&#x5931;&#x8D25;&#x72B6;&#x6001;
     }
-    std::cout &lt;&lt; &quot;Robot is connected\n&quot;;
-    mycobot::MyCobot::I().PowerOn();
-    mycobot::MyCobot::I().StopRobot();
+
+    std::cout &lt;&lt; &quot;Robot is connected\n&quot;; // &#x8F93;&#x51FA;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x7684;&#x4FE1;&#x606F;
+
+    mycobot::MyCobot::I().PowerOn(); // &#x4E0A;&#x7535;&#xFF0C;&#x542F;&#x52A8;&#x673A;&#x68B0;&#x81C2;
+    mycobot::MyCobot::I().StopRobot(); // &#x505C;&#x6B62;&#x673A;&#x68B0;&#x81C2;&#x7684;&#x6240;&#x6709;&#x52A8;&#x4F5C;
+
+    // &#x68C0;&#x67E5;&#x673A;&#x68B0;&#x81C2;&#x662F;&#x5426;&#x6B63;&#x5728;&#x79FB;&#x52A8;&#xFF0C;&#x5E76;&#x8F93;&#x51FA;&#x72B6;&#x6001;
     std::cout &lt;&lt; &quot;Robot is moving: &quot; &lt;&lt; mycobot::MyCobot::I().IsMoving() &lt;&lt; &quot;\n&quot;;
+
+    // &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x673A;&#x68B0;&#x81C2;&#x5404;&#x5173;&#x8282;&#x7684;&#x89D2;&#x5EA6;
     mycobot::Angles angles = mycobot::MyCobot::I().GetAngles();
-    std::this_thread::sleep_for(200ms);
+    std::this_thread::sleep_for(200ms); // &#x5EF6;&#x8FDF; 200 &#x6BEB;&#x79D2;
+
+    // &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x673A;&#x68B0;&#x81C2;&#x672B;&#x7AEF;&#x7684;&#x4F4D;&#x7F6E;&#x5750;&#x6807;
     mycobot::Coords coords = mycobot::MyCobot::I().GetCoords();
+
+    // &#x518D;&#x6B21;&#x83B7;&#x53D6;&#x5404;&#x5173;&#x8282;&#x7684;&#x89D2;&#x5EA6;
     angles = mycobot::MyCobot::I().GetAngles();
-    std::cout &lt;&lt; &quot;[&quot; &lt;&lt; angles[mycobot::J1] &lt;&lt; &quot;, &quot; &lt;&lt; angles[mycobot::J2] &lt;&lt; &quot;, &quot; &lt;&lt; angles[mycobot::J3] &lt;&lt; &quot;, &quot;
-        &lt;&lt; angles[mycobot::J4] &lt;&lt; &quot;, &quot; &lt;&lt; angles[mycobot::J5] &lt;&lt; &quot;, &quot; &lt;&lt; angles[mycobot::J6] &lt;&lt; &quot;]&quot;;
+
+    // &#x8F93;&#x51FA;&#x5404;&#x5173;&#x8282;&#x7684;&#x89D2;&#x5EA6;
+    std::cout &lt;&lt; &quot;[&quot; &lt;&lt; angles[mycobot::J1] &lt;&lt; &quot;, &quot; &lt;&lt; angles[mycobot::J2] &lt;&lt; &quot;, &quot; 
+              &lt;&lt; angles[mycobot::J3] &lt;&lt; &quot;, &quot; &lt;&lt; angles[mycobot::J4] &lt;&lt; &quot;, &quot; 
+              &lt;&lt; angles[mycobot::J5] &lt;&lt; &quot;, &quot; &lt;&lt; angles[mycobot::J6] &lt;&lt; &quot;]&quot;;
+
+    // &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x76EE;&#x6807;&#x89D2;&#x5EA6;&#x6570;&#x7EC4;&#xFF0C;&#x6240;&#x6709;&#x5173;&#x8282;&#x79FB;&#x52A8;&#x5230; 5 &#x5EA6;
     mycobot::Angles goal_angles = { 5, 5, 5, 5, 5, 5 };
-    mycobot::MyCobot::I().WriteAngles(goal_angles);
+    mycobot::MyCobot::I().WriteAngles(goal_angles); // &#x5C06;&#x673A;&#x68B0;&#x81C2;&#x79FB;&#x52A8;&#x5230;&#x76EE;&#x6807;&#x89D2;&#x5EA6;
+
+    // &#x7B49;&#x5F85;&#x673A;&#x68B0;&#x81C2;&#x79FB;&#x52A8;&#x5230;&#x76EE;&#x6807;&#x4F4D;&#x7F6E;
     while (!mycobot::MyCobot::I().IsInPosition(goal_angles, false)) {
-        angles = mycobot::MyCobot::I().GetAngles();
+        angles = mycobot::MyCobot::I().GetAngles(); // &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x89D2;&#x5EA6;
         std::cout &lt;&lt; &quot;[&quot; &lt;&lt; angles[mycobot::J1] &lt;&lt; &quot;, &quot; &lt;&lt; angles[mycobot::J2] &lt;&lt; &quot;, &quot;
-            &lt;&lt; angles[mycobot::J3] &lt;&lt; &quot;, &quot; &lt;&lt; angles[mycobot::J4] &lt;&lt; &quot;, &quot;
-            &lt;&lt; angles[mycobot::J5] &lt;&lt; &quot;, &quot; &lt;&lt; angles[mycobot::J6] &lt;&lt; &quot;]&quot; &lt;&lt; std::flush;
-        std::this_thread::sleep_for(200ms);
+                  &lt;&lt; angles[mycobot::J3] &lt;&lt; &quot;, &quot; &lt;&lt; angles[mycobot::J4] &lt;&lt; &quot;, &quot;
+                  &lt;&lt; angles[mycobot::J5] &lt;&lt; &quot;, &quot; &lt;&lt; angles[mycobot::J6] &lt;&lt; &quot;]&quot; &lt;&lt; std::flush;
+        std::this_thread::sleep_for(200ms); // &#x6BCF;&#x6B21;&#x5FAA;&#x73AF;&#x5EF6;&#x8FDF; 200 &#x6BEB;&#x79D2;
     }
 
+    // &#x8C03;&#x6574; J1 &#x5173;&#x8282;&#x89D2;&#x5EA6;&#xFF0C;&#x589E;&#x91CF;&#x4E3A; 1 &#x5EA6;&#xFF0C;&#x901F;&#x5EA6;&#x4E3A; 5
     mycobot::MyCobot::I().JogAngle(mycobot::Joint::J1, 1, 5);
-    std::this_thread::sleep_for(5000ms);
-    mycobot::MyCobot::I().StopRobot();
+    std::this_thread::sleep_for(5000ms); // &#x5EF6;&#x8FDF; 5 &#x79D2;
 
-    std::cout &lt;&lt; &quot;\n&quot;;
-    exit(EXIT_SUCCESS);
+    mycobot::MyCobot::I().StopRobot(); // &#x505C;&#x6B62;&#x673A;&#x68B0;&#x81C2;&#x7684;&#x6240;&#x6709;&#x52A8;&#x4F5C;
+
+    std::cout &lt;&lt; &quot;\n&quot;; // &#x8F93;&#x51FA;&#x4E00;&#x4E2A;&#x6362;&#x884C;&#x7B26;
+    exit(EXIT_SUCCESS); // &#x6B63;&#x5E38;&#x9000;&#x51FA;&#x7A0B;&#x5E8F;
+
 } catch (std::error_code&amp;) {
+    // &#x6355;&#x83B7; std::error_code &#x5F02;&#x5E38;&#xFF0C;&#x5E76;&#x8F93;&#x51FA;&#x9519;&#x8BEF;&#x4FE1;&#x606F;
     std::cerr &lt;&lt; &quot;System error. Exiting.\n&quot;;
-    exit(EXIT_FAILURE);
+    exit(EXIT_FAILURE); // &#x5F02;&#x5E38;&#x9000;&#x51FA;&#x7A0B;&#x5E8F;
 } catch (...) {
+    // &#x6355;&#x83B7;&#x6240;&#x6709;&#x5176;&#x4ED6;&#x5F02;&#x5E38;&#xFF0C;&#x5E76;&#x8F93;&#x51FA;&#x9519;&#x8BEF;&#x4FE1;&#x606F;
     std::cerr &lt;&lt; &quot;Unknown exception thrown. Exiting.\n&quot;;
-    exit(EXIT_FAILURE);
+    exit(EXIT_FAILURE); // &#x5F02;&#x5E38;&#x9000;&#x51FA;&#x7A0B;&#x5E8F;
 }
 </code></pre>
                                 
@@ -1785,7 +1811,7 @@ try {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.5.4坐标控制","level":"1.4.2.5.4","depth":4,"next":{"title":"6.5.5 IO控制","level":"1.4.2.5.5","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/Cplus/8.5-io.md","ref":"3-FunctionsAndApplications/6.developmentGuide/Cplus/8.5-io.md","articles":[]},"previous":{"title":"6.5.3关节控制","level":"1.4.2.5.3","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/Cplus/8.3-angle.md","ref":"3-FunctionsAndApplications/6.developmentGuide/Cplus/8.3-angle.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","livereload"],"pluginsConfig":{"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"insertAnchor":true,"showGoTop":true,"mini":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":"","bottom":"20px","offset":{"top":10,"left":10},"minWidth":"70px","floatIcon":"fa fa-navicon","zIndex":"1000","trigger":"click","right":"20px","show":true}},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-FunctionsAndApplications/6.developmentGuide/Cplus/8.4-coord.md","mtime":"2024-07-25T09:21:29.974Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-12T01:38:21.571Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.5.4坐标控制","level":"1.4.2.5.4","depth":4,"next":{"title":"6.5.5 IO控制","level":"1.4.2.5.5","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/Cplus/8.5-io.md","ref":"3-FunctionsAndApplications/6.developmentGuide/Cplus/8.5-io.md","articles":[]},"previous":{"title":"6.5.3关节控制","level":"1.4.2.5.3","depth":4,"path":"3-FunctionsAndApplications/6.developmentGuide/Cplus/8.3-angle.md","ref":"3-FunctionsAndApplications/6.developmentGuide/Cplus/8.3-angle.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","livereload"],"pluginsConfig":{"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"insertAnchor":true,"showGoTop":true,"mini":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":"","bottom":"20px","offset":{"top":10,"left":10},"minWidth":"70px","floatIcon":"fa fa-navicon","zIndex":"1000","trigger":"click","right":"20px","show":true}},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3-FunctionsAndApplications/6.developmentGuide/Cplus/8.4-coord.md","mtime":"2024-08-12T08:28:12.131Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-13T02:49:41.085Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

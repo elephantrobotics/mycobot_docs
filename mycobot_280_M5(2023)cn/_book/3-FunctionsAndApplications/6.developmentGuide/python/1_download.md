@@ -142,25 +142,17 @@ PyCharm安装完成之后进入该软件，创建第一个程序。
 
 <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/创建新项目1.jpg" style="zoom: 33%;" />
 
-
-
 * 点击之后找到`Interpreter`，开始对解释器进行设置，点击`Add Interpreter`：
 
 <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/解释器1.jpg" style="zoom: 50%;" />
-
-
 
 * 点击`New`，找到python.exe存储位置，勾选`Inherit global site-package`选项：
 
 <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/解释器2.jpg" style="zoom: 33%;" />
 
-
-
 * 设置`Location`。Location是存储PyCharm项目的地方，可根据需要自行选择。
 
 <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\build/location1.jpg" style="zoom: 33%;" />
-
-
 
 * 新建PyCharm文件。右击箭头指向的文档图标，点击`New`，点击`Python File`，新建成功。
 

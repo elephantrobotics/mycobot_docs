@@ -20,27 +20,25 @@ The process of generating code into the text box is the process of the user drag
 - GitHub address: https://github.com/elephantrobotics/myblockly-package/releases
 - Official website address: https://www.elephantrobotics.com/download/
 
-** Applicable devices:**
+**Applicable devices:**
+
 - myCobot 280
+
 - myCobot 280 M5
-- myCobot 280 PI
+
+- **myCobot 280 PI**
+
 - myCobot 280 Jetson Nano
+
 - myCobot 280 for Arduino
-- myCobot 320
-- myCobot 320 M5
-- myCobot 320 PI
-- myPalletizer 260
-- mechArm-270
-- mechArm-270 M5
-- mechArm-270 PI
+
+  
 
 **Prerequisites:**
 
-- **M5** series version, **M5Stack-basic** burn **miniRobot** at the bottom, select **Transponder** function, **ATOM** burn the latest version of **atomMain** at the end (factory default burned)
-
 - **Pi \ jetsonnano** series, **ATOM** burn the latest version of **atomMain** (factory default burned)
 
-- Configure **Python environment**, please refer to the [Python ▶](https://docs.elephantrobotics.com/docs/gitbook/7-ApplicationBasePython/7.1_download.html) chapter
+- Configure **Python environment**, please refer to the Python chapter
 
 ## myBlockly Development and Use Guide
 

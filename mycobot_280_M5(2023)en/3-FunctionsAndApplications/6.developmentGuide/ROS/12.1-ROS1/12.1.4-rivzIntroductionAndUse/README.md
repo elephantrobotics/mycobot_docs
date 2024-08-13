@@ -309,7 +309,7 @@ width ="500" align = "center">
 
 Recognize the QR code and obtain the relative position relationship with the camera. According to the end position of mycobot in rviz, perform coordinate conversion and finally display it in rviz.
 
-You can refer to [Slider Control](##1421-Slider Control) and use `slider_control.py` to control the robot arm
+You can refer to Slider Control and use `slider_control.py` to control the robot arm
 
 #### Visual Tracking and Grasping
 >This section requires the use of a vertical suction pump.
@@ -692,7 +692,7 @@ Parameters supported by this script:
 
 + _change_percent: movement distance percentage.
 
-#### 6.3 Camera Flange
+#### Camera Flange
 
 ##### 1 Load the model
 
@@ -745,7 +745,7 @@ rosrun mycobot_280 slider_control.py _port:=/dev/ttyUSB0 _baud:=115200
 **Please note: Since the robot will move to the current position of the model when the command is input, please make sure that the model in rviz does not have any penetration before you use the command**.
 **Do not drag the slider quickly after connecting the robot to prevent damage to the robot**.
 
-#### 6.4 Camera Flange && Pump
+#### Camera Flange && Pump
 
 ##### 1 Load the model
 
@@ -762,7 +762,7 @@ It will **open rviz** and you will see the following:
 <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/12.1.4-18.png
 width ="500" align = "center">
 
-#### 6.5 URDF model address
+#### URDF model address
 
 ##### 1 myCobot adaptive gripper
 

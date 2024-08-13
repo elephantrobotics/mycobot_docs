@@ -33,12 +33,12 @@ In this section, we strongly recommend disassembling the product according to th
 
 **Note:** After taking out the product, please carefully check the appearance of each item. Please check the actual items in the box against the item list.
 
-## Product unboxing video guide
+## 3.Product unboxing video guide
 
 [![Video Title](https://img.youtube.com/vi/haV4rIl1dLk/0.jpg)](https://www.youtube.com/watch?v=haV4rIl1dLk)
 
 
-##  3.Power-on inspection guide
+##  4.Power-on inspection guide
 ## Structural installation and fixation
 
 During the movement of the **robot arm**, if the **bottom surface of myCobot is not connected to the desktop or other bottom surface**, myCobot will still **shake or overturn**.
@@ -96,7 +96,7 @@ Before formal installation, please confirm:
 
 
 
-## 4.Power on and preliminary test
+## 5.Power on and preliminary test
 ## Power on the robot
 
 Before operation, please make sure that you have read and followed the contents of **Chapter 3 Safety Instructions** to ensure safe operation. At the same time, connect the power adapter to the robot arm and fix the base of the robot arm on the table. The connection method is shown in Figure 3-1:
