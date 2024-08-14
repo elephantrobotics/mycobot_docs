@@ -20,7 +20,6 @@
        * [6.1.1 Environment Construction](3-FunctionsAndApplications/6.developmentGuide/Arduino/10.1-arduino_download.md)
        * [6.1.2 Simple Use](3-FunctionsAndApplications/6.developmentGuide/Arduino/10.2-arduino_use.md)
        * [6.1.3 API description](3-FunctionsAndApplications/6.developmentGuide/Arduino/10.3-api.md)
-       * [6.1.4 Library usage](3-FunctionsAndApplications/6.developmentGuide/Arduino/10.4-arduinolib_use.md)
      * [6.2 Development and use based on Python](3-FunctionsAndApplications/6.developmentGuide/python/README.md)
        * [6.2.1 Environment construction](3-FunctionsAndApplications/6.developmentGuide/python/1_download.md)
        * [6.2.2 API description](3-FunctionsAndApplications/6.developmentGuide/python/2_API.md)

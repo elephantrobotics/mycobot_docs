@@ -21,7 +21,7 @@ in the terminal to query the python version currently used by the robot arm.
 
 Enter python in the terminal, then press Enter. When `>>>` is displayed, it means that the python compilation environment has been entered, and you can use python to write code at this time.
 
-<img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/4.png" style="zoom: 33%;" />
+<img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/4.png" style="zoom: 70%;" />
 
 You can also use the nano command to create a python file. First open the terminal, enter
 ```python

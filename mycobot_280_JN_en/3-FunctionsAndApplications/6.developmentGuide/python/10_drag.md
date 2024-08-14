@@ -19,10 +19,7 @@ After the file is run:
 - 3.2 Enter the baud rate, the default is 1000000
 | Machine model | Serial port number | Baud rate |
 |:---------:| :--------:|:--------:|
-|270 PI| /dev/ttyAMA0|1000000|
-|280 PI| /dev/ttyAMA0|1000000|
-|320 PI| /dev/ttyAMA0|115200|
-|280 Jetson Nano| /dev/ttyTHS1|1000000|
+|**280 Jetson Nano**| **/dev/ttyTHS1** |**1000000**|
 - 3.3 Select whether to debug or not. Debugging is not enabled by default.
 - 3.4 Finally, enter the function selection list. Function selection is achieved through keyboard keys:
 - `q`: Exit

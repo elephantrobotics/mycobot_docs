@@ -64,7 +64,7 @@ https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/arduino/package_m5stack_in
 **Note:** Please download the latest library, the first version is v0.0.1.
 
 * Click to download related dependent libraries
--[**MycobotBasic**](https://github.com/elephantrobotics/MyCobotBasic/tags)(After importing the Mycobot280-Arduino model, you can refer to the **arduinolib_use** section for use). Please see the following figure for details. .zip is for Windows system, and .tar.gz is for Linux system:<br>
+-[**MycobotBasic**](https://github.com/elephantrobotics/MyCobotBasic/tags)(After importing the Mycobot280-Arduino model, you can refer to the **arduino_use** section for use). Please see the following figure for details. .zip is for Windows system, and .tar.gz is for Linux system:<br>
 
 <img src="../../../resource/3-FunctionsAndApplications/5.BasicFunction/5.1-Functionlnstruction/10-1-4.2-001.png" alt="10-1-4-001" width="50%"><br>
 

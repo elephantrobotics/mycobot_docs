@@ -17,7 +17,7 @@ Since the input and output of the robot arm is 3.3V and the input and output of 
 ## 3. Hardware Link
 
 **Overall connection diagram**
-![](../../resource\3-FunctionsAndApplications\7.SuccessfulCase/PLC1.png)
+![](../../resource\3-FunctionsAndApplications\7.SuccessfulCase/PLC2.png)
 
 **Wiring of the input of the robot arm and the output of the PLC** First connect the PLC to a 24V power supply
 

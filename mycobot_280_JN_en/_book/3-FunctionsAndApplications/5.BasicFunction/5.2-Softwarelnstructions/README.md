@@ -29,17 +29,6 @@
 - myCobot 280 PI
 - **myCobot 280 Jetson Nano**
 - myCobot 280 for Arduino
-- myCobot 320
-- myCobot 320 M5
-- myCobot 320 PI
-- myPalletizer 260
-- myPalletizer 260 M5
-- myPalletizer 260 PI
-- mechArm 270
-- mechArm 270 M5
-- mechArm 270 Pi
-- myCobot Pro 600
-- myBuddy 280
 
 ## 5 Firmware version recommendation
 
@@ -57,43 +46,6 @@ The myCobot 280 series has 4 versions: M5 version, PI version, ardunio version a
 <td>Recommended firmware and version</td>
 </tr>
 <tr>
-<td rowspan='2'>M5 version</td>
-<td>M5Stack-Basic</td>
-<td>miniRobot firmware</td>
-<td>Recommended to burn v2.1 version, you can use drag teaching, wifi, Bluetooth and other functions</td>
-</tr>
-<tr>
-<td>Atom</td>
-<td>atomMain firmware</td>
-<td>For products with serial numbers ER28001202200415 and earlier, or products without serial numbers, it is recommended to burn v4.1; for products with serial numbers ER28001202200416 and later, it is recommended to burn v5.1</td>
-</tr>
-<tr>
-<td rowspan='2'>PI version</td>
-<td>RaspberryPI 4B</td>
-<td>ubuntu firmware</td>
-<td>Recommend burning V18.04. version</td>
-</tr>
-<tr>
-<td>Atom</td>
-<td>atomMain firmware</td>
-<td>For products with serial numbers ER28001202200415 and earlier, or products without serial numbers, it is recommended to burn v4.1; for products with serial numbers ER28001202200416 and later, it is recommended to burn v5.1</td>
-</tr>
-<tr>
-<td rowspan='3'>Arduino version</td>
-<td>mega2560</td>
-<td>transponder firmware</td>
-<td>Recommend burning v1.0 version</td>
-</tr>
-<td>mkrwifi1010</td>
-<td>transponder firmware</td>
-<td>Recommend burning v1.0 version</td>
-</tr>
-<tr>
-<td>Atom</td>
-<td>atomMain firmware</td>
-<td>For products with serial numbers of ER28001202200415 and earlier, or products without serial numbers, it is recommended to burn v4.1; for products with serial numbers of ER28001202200416 and later, it is recommended to burn v5.1</td>
-</tr>
-<tr>
 <td rowspan='2'>Jetson nano version</td>
 <td>JestonNano</td>
 <td>ubuntu firmware</td>
@@ -105,6 +57,7 @@ The myCobot 280 series has 4 versions: M5 version, PI version, ardunio version a
 <td>For products with serial numbers ER28001202200415 and earlier, or products without serial numbers, it is recommended to burn v4.1; for products with serial numbers ER28001202200416 and later, it is recommended to burn v5.1</td>
 </tr>
 </table>
+
 
 ## 6. Update and burn Atom firmware
 

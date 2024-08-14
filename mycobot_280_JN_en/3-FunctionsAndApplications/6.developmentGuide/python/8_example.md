@@ -4,6 +4,8 @@ The following are various use cases and operation result videos. You can copy th
 
 **Note: ** The corresponding baud rates of various devices are different. Please refer to the information to understand their baud rates when using them. The serial port number can be viewed through [Calculator Device Manager](https://docs.elephantrobotics.com/docs/gitbook/4-BasicApplication/4.1-myStudio/4.1.1-myStudio_download_driverinstalled.html#4113-%E5%A6%82%E4%BD%95%E5%8C%BA%E5%88%86cp210x%E5%92%8Ccp34x%E8%8A%AF%E7%89%87) or the serial port assistant.
 
+**The default serial port name of mycobot 280-JetsonNano version is "/dev/ttyTHS1" and the baud rate is 1000000，Note to change the serial port number and baud rate of the following program**.
+
 ## Control RGB light board
 
 ### myCobot
@@ -35,7 +37,7 @@ import time
 #
 # Initialize a MyCobot object
 # Create object code here for windows version
-mc = MyCobot("COM3", 115200)
+mc = MyCobot("/dev/ttyTHS1", 1000000)
 
 i = 7
 #loop 7 times
@@ -75,7 +77,7 @@ from pymycobot import PI_PORT, PI_BAUD      # When using the Raspberry Pi versio
 #
 # Initialize a MyCobot object
 # Create object code here for Raspberry Pi version
-mc = MyCobot(PI_PORT, PI_BAUD)
+mc = MyCobot("/dev/ttyTHS1", 1000000)
 
 # Check whether the program can be burned into the robot arm
 if mc.is_controller_connected() != 1:
@@ -121,7 +123,7 @@ import time
 # Create object code for Raspberry Pi
 # mc = MyCobot(PI_PORT, PI_BAUD)
 # Create object code for M5
-mc=MyCobot('COM3',115200)
+mc = MyCobot("/dev/ttyTHS1", 1000000)
 
 # Robotic arm recovery
 mc.send_angles([0, 0, 0, 0, 0, 0], 40)
@@ -150,7 +152,7 @@ time.sleep(3)
 
 
 
-## ** Multi-joint exercise**
+## **Multi-joint exercise**
 
 ```python
 import time
@@ -177,7 +179,7 @@ from pymycobot import MyCobot
 # Create object code for Raspberry Pi
 # mc = MyCobot(PI_PORT, PI_BAUD)
 # Create object code for M5
-mc=MyCobot('COM3',115200)
+mc = MyCobot("/dev/ttyTHS1", 1000000)
 
 # Robotic arm recovery
 mc.send_angles([0, 0, 0, 0, 0, 0], 50)
@@ -208,7 +210,7 @@ from pymycobot import PI_PORT, PI_BAUD  # When using the Raspberry Pi version of
 import time
 
 # Initialize a MyCobot object
-mc = MyCobot("COM3", 115200)
+mc = MyCobot("/dev/ttyTHS1", 1000000)
 # Get the coordinates of the current location
 angle_datas = mc.get_angles()
 print(angle_datas)
@@ -286,7 +288,7 @@ if __name__ == "__main__":
     #
     # Initialize a MyCobot object
     # Create object code for Raspberry Pi version below
-    mc = MyCobot(PI_PORT, PI_BAUD)
+    mc = MyCobot("/dev/ttyTHS1", 1000000)
 
     # set start start time
     start = time.time()
@@ -399,7 +401,7 @@ if __name__ == "__main__":
     #
     # Initialize a MyCobot object
     # Create object code for Raspberry Pi version below
-    mc = MyCobot(PI_PORT, PI_BAUD)
+    mc = MyCobot("/dev/ttyTHS1", 1000000)
     # make it move to zero position
     mc.set_encoders([2048, 2048, 2048, 2048, 2048, 2048], 20)
     time.sleep(3)
@@ -408,8 +410,6 @@ if __name__ == "__main__":
 
 
 ## Suction pump control
-
-280-M5版本
 
 ```python
 from pymycobot.mycobot import MyCobot
@@ -436,7 +436,7 @@ import time
 #
 # Initialize a MyCobot object
 # Create object code here for windows version
-mc = MyCobot("COM3", 115200)
+mc = MyCobot("/dev/ttyTHS1", 1000000)
 
 # The position of the robot arm movement
 angles = [

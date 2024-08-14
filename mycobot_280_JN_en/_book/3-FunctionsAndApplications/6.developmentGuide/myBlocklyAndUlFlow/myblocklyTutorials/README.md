@@ -24,19 +24,10 @@ The process of generating code into the text box is the process of the user drag
 - myCobot 280
 - myCobot 280 M5
 - myCobot 280 PI
-- myCobot 280 Jetson Nano
+- **myCobot 280 Jetson Nano**
 - myCobot 280 for Arduino
-- myCobot 320
-- myCobot 320 M5
-- myCobot 320 PI
-- myPalletizer 260
-- mechArm-270
-- mechArm-270 M5
-- mechArm-270 PI
 
 **Prerequisites:**
-
-- **M5** series version, **M5Stack-basic** burn **miniRobot** at the bottom, select **Transponder** function, **ATOM** burn the latest version of **atomMain** at the end (factory default burned)
 
 - **Pi \ jetsonnano** series, **ATOM** burn the latest version of **atomMain** (factory default burned)
 

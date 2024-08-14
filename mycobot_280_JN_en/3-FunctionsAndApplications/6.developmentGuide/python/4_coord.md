@@ -97,6 +97,8 @@ The representation of the X coordinate: `Coord.X.value`, there is also a simple 
 
 ### Example use
 
+
+
 ```python
 from pymycobot.mycobot import MyCobot
 from pymycobot.genre import Coord
@@ -120,7 +122,7 @@ import time
 #
 # Initialize a MyCobot object
 # The following is the object code for the Windows version
-mc = MyCobot("COM3", 115200)
+mc = MyCobot("/dev/ttyTHS1", 1000000)
 # Get the current head coordinates and posture
 coords = mc.get_coords()
 print(coords)

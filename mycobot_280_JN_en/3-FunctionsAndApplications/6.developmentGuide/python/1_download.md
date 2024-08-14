@@ -191,7 +191,6 @@ After PyCharm is installed, enter the software and create the first program.
 ### Before use
 
 * Firmware burning. Firmware refers to the device "driver" stored inside the device. Only through firmware can the operating system implement the operation of a specific machine according to the standard device driver. Different versions of the robot arm need to burn different firmware (refer to the **MyStudio**chapter).
-* **M5 version** The Basic at the bottom needs to burn minirobot. After the burning is completed, select the **Transponder** function (this function is used to receive and forward the instructions sent by the Basic at the bottom to perform the target action), click `Press A`, and the **Atom: OK** prompt message appears, which means success. In addition, the latest version of atomMain is burned in the Atom at the end of the M5 version. It is burned by default at the factory, and there is no need to burn it yourself.
 * **Pi \ jetsonnano version** The latest version of atomMain is burned in the Atom at the end. It is burned by default at the factory, and there is no need to burn it yourself.
 * pymycobot installation. Open a console terminal (shortcut Win+R, enter cmd to enter the terminal), and enter the following command:
 
@@ -245,6 +244,8 @@ Create a new Python file in PyCharm and enter the following code to execute the 
 
 The following are the corresponding codes for myCobot and myPalletizer.
 
+**The default serial port name of mycobot 280-JetsonNano version is "/dev/ttyTHS1" and the baud rate is 1000000，Note to change the serial port number and baud rate of the following program**.
+
 * **myCobot**
 
 ```python
@@ -271,7 +272,7 @@ import time
 #
 # Initialize a MyCobot object
 # The following is the object code for the Windows version
-mc = MyCobot("COM3", 115200)
+mc = MyCobot("/dev/ttyTHS1", 1000000)
 
 i = 7
 # Loop 7 times
@@ -285,5 +286,5 @@ time.sleep(2) #Wait 2 seconds
 i -= 1
 ```
 
-
+**If the program cannot be run, or the robot arm does not respond after running the program, please check whether the serial port number and baud rate in the program are correct.**
 
