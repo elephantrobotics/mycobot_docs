@@ -61,7 +61,9 @@ IO is the input and output of data. There are multiple pins on the Basic and Ato
 
 ### Case use
 
-* **MyCobot 280-M5 version: **
+**The default serial port name of mycobot 280-JetsonNano version is "/dev/ttyTHS1" and the baud rate is 1000000，Note to change the serial port number and baud rate of the following program**.
+
+* **MyCobot 280 version: **
 
 ```python
 from pymycobot.mycobot import MyCobot
@@ -87,7 +89,7 @@ import time
 #
 # Initialize a MyCobot object
 # The following is the object creation code for the windows version
-mc = MyCobot("COM3", 115200)
+mc = MyCobot("/dev/ttyTHS1", 1000000)
 
 for count in range(5):
 # Set a loop

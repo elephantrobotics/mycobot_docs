@@ -6,7 +6,7 @@ You can control the movement of the robot arm and realize the drawing operation 
 
 > Note: The end of the robot arm and the pen clip are connected using Lego technology.
 
-> <img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\draw/7.15.1.jpg" alt="7.1.1-1" style="zoom: 80%;" />
+> <img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\draw/7.15.2.jpg" alt="7.1.1-1" style="zoom: 80%;" />
 
 ## Instructions
 
@@ -27,6 +27,8 @@ pip install pyserial pymycobot
 ```
 
 ### 3. Change the port number
+
+**The default serial port name of mycobot 280-JetsonNano version is "/dev/ttyTHS1" and the baud rate is 1000000，Note to change the serial port number and baud rate of the following program**.
 
 Edit the 280_draw_gcode.py file
 

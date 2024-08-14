@@ -138,9 +138,8 @@ Make sure you are using a good quality power supply. We recommend using the offi
 
 ## 5. Unboxing video
 
-<video id="my-video" class="video-js" controls preload="auto" width="100%"
-poster="" data-setup='{"aspectRatio":"16:9"}'>
-<source src="https://www.elephantrobotics.com/wp-content/uploads/2022/03/280jn%E5%BC%80%E7%AE%B1%E4%B8%AD%E6%96%8720220314_4.mp4#t=4"></video>
+[![Video Title](https://img.youtube.com/vi/C3qzrbdky0E/0.jpg)](https://www.youtube.com/watch?v=C3qzrbdky0E)
+
 
 ## 6. Common Problem Solving
 This section aims to help users solve common problems encountered during use, covering hardware, software, drivers, and how to ask questions in the forum. If you encounter problems while using the robotic arm, please read the contents of this section first to find solutions. If the listed problems cannot help you solve and you have more after-sales questions, please add the after-sales manager WeChat.

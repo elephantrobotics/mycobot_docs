@@ -105,7 +105,7 @@ import time
 #
 # Initialize a MyCobot object
 # Here is the object code for the windows version
-mc = MyCobot("COM3", 115200)
+mc = MyCobot("/dev/ttyTHS1", 1000000)
 # By passing the angle parameter, each joint of the robot arm moves to the corresponding position [0, 0, 0, 0, 0, 0]
 mc.send_angles([0, 0, 0, 0, 0, 0], 50)
 
@@ -146,3 +146,5 @@ time.sleep(2.5)
 # Relax the robot arm and swing it manually
 mc.release_all_servos()
 ```
+
+**If the program cannot be run, or the robot arm does not respond after running the program, please check whether the serial port number and baud rate in the program are correct.**

@@ -9,32 +9,9 @@ Before using pymycobot to control the robot arm, you need to build a Python envi
 **Applicable devices:**
 
 * myCobot 280:
-
 * myCobot 280 M5
-
 * myCobot 280 PI
-
 * myCobot 280 Jetson Nano
-
-* myCobot 280 for Arduino
-
-* myCobot 320:
-
-- myCobot 320 M5
-
-- myCobot 320 PI
-
-* myPalletizer 260:
-
-- myPalletizer 260 M5
-
-- myPalletizer 260 PI
-
-* mechArm-270:
-
-- mechArm-270 M5
-
-- mechArm-270 PI
 
 Currently, there are two versions of Python, one is `2.x` version and the other is `3.x` version. These two versions are incompatible. As `3.x` version is becoming more and more popular, our tutorial will take the latest `3.10.7` version as an example.
 

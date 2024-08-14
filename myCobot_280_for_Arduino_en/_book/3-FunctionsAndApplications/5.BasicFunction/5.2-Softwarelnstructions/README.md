@@ -29,17 +29,6 @@
 - myCobot 280 PI
 - myCobot 280 Jetson Nano
 - **myCobot 280 for Arduino**
-- myCobot 320
-- myCobot 320 M5
-- myCobot 320 PI
-- myPalletizer 260
-- myPalletizer 260 M5
-- myPalletizer 260 PI
-- mechArm 270
-- mechArm 270 M5
-- mechArm 270 Pi
-- myCobot Pro 600
-- myBuddy 280
 
 ## 5 Firmware version recommendation
 
@@ -180,8 +169,3 @@ For Mac OS, make sure the system "Preferences->Security and Privacy->General" is
 
 **[myStudio video tutorial](https://www.bilibili.com/video/BV1Qr4y1N7B5/)**
 
-## Burn M5Stack-Basic firmware
-
-> **Note: Pi series robot arms do not need to burn M5Stack-Basic firmware. **
-
-Step 1: Connect to PC. The connection method between M5Stack-Basic and PC is as shown below

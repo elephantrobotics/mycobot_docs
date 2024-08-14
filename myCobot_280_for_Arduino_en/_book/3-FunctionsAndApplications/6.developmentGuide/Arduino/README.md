@@ -16,24 +16,41 @@ MyCobotBasic library is an open source robot control library developed by our co
 - myCobot 280
 - myCobot 280 M5
 - myCobot 280 for Arduino <br>
-- myCobot 320
-- myCobot 320 M5 <br>
-- myPalletizer 260
-- myPalletizer 260 M5<br>
-- mechArm 270
-- mechArm 270 M5<br>
-
-**Prerequisites:**
-
-- **M5** series version, **M5Stack-basic** burn **miniRobot** at the bottom, select **Transponder** function, **ATOM** burn the latest version of **atomMain** at the end (factory default burned)
 
 ## Arduino development guide
 
 You can use it according to the following instructions Arduino develops our robotic arm
 1. [Environment setup](10.1-arduino_download.md)
-
 2. [Simple use](10.2-arduino_use.md)
-
 3. [API description](10.3-api.md)
 
-4. [Arduino lib use](10.4-arduinolib_use.md)
+## Arduino development board connection guide
+The myCobot 280 for Arduino version is developed and used based on PC and development board. **There is no built-in system inside the robot**, so the robot, PC and development board need to be combined during use, so please prepare a PC and development board before use. **Please connect the PC and development board before development**.
+
+1. Power on the robot first (if the green light is on, it means the robot is powered on)
+
+![arduino](../../../resource\3-FunctionsAndApplications\6.developmentGuide\Arduino/10.png)
+
+myCobot 280 for Arduino connection
+
+![arduino](../../../resource\3-FunctionsAndApplications\6.developmentGuide\Arduino/2141arduino.jpg)
+
+2. Connect the Arduino board (the connection position is shown in the figure below, with the development board Arduino MEGA2560 as an example)
+
+![arduino](../../../resource\3-FunctionsAndApplications\6.developmentGuide\Arduino/2141devcon1.jpg)
+
+![arduino](../../../resource\3-FunctionsAndApplications\6.developmentGuide\Arduino/11.png)
+
+![arduino](../../../resource\3-FunctionsAndApplications\6.developmentGuide\Arduino/12.png)
+
+3. Connect the serial port to the computer (if the green light is on, it means the computer is successfully connected)
+
+![arduino](../../../resource\3-FunctionsAndApplications\6.developmentGuide\Arduino/13.png)
+
+After connecting, you can follow the steps below to view the connection port number
+
+Click this computer --> Right-click to manage --> Click Device Manager --> Click on the port
+
+![arduino](../../../resource\3-FunctionsAndApplications\6.developmentGuide\Arduino/14.png)
+
+If the port number is displayed normally, it means that the development board has been successfully connected to the computer and development can begin. If no port number is displayed, please check whether the connection lines are loose or have other poor connection conditions.

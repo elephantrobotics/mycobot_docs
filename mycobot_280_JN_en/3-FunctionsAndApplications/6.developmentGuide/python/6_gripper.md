@@ -1,6 +1,6 @@
 # Gripper control
 
-Before using Python to control the gripper, you need to install and connect the gripper on the robot arm. Different grippers are compatible with different robots (for specific adaptation information, please refer to **[2.8 Product accessories](https://docs.elephantrobotics.com/docs/gitbook/2-serialproduct/2.7-accessories/2.7-accessories.html)**.
+Before using Python to control the gripper, you need to install and connect the gripper on the robot arm. Different grippers are compatible with different robots (for specific adaptation information, please refer to **Product accessories** chapter.
 
 > **Note:**
 >
@@ -8,7 +8,7 @@ Before using Python to control the gripper, you need to install and connect the 
 >
 > <img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\Jaw/gripper1.jpg" style="zoom: 67%;" />
 >
-> The electric gripper is inserted into the 485 interface on the top, see the following figure:
+> The electric gripper is inserted into the interface on the top, see the following figure:
 >
 > <img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\Jaw/gripper2.JPG" style="zoom: 67%;" />
 >
@@ -177,7 +177,7 @@ if __name__ == "__main__":
 #
 # Initialize a MyCobot object
 # Below is the object code for the Raspberry Pi version
-mc = MyCobot(PI_PORT, PI_BAUD)
+mc = MyCobot("/dev/ttyTHS1", 1000000)
 # Move it to zero
 mc.set_encoders([2048, 2048, 2048, 2048, 2048, 2048], 20)
 time.sleep(3) gripper_test(mc) ```
