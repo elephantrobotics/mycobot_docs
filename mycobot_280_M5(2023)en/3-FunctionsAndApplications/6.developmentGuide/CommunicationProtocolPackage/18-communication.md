@@ -2,7 +2,7 @@
 
 Note: To use the communication protocol for direct communication, you need to burn transponder in basic and the latest version of atomMain in atom
 
-![communication](../../../resources/3-FunctionsAndApplications/6.developmentGuide/CommunicationProtocolPackage/box_connect_PC.jpg)
+![communication](../../../resource/3-FunctionsAndApplications/6.developmentGuide/CommunicationProtocolPackage/box_connect_PC.jpg)
 
 ### Robotic arm motion parameters
 
@@ -412,7 +412,7 @@ temp = x\_low + x_high\*256
 x coordinate = (temp \ 33000 ?(temp – 65536) : temp)/10
 
 Calculation method: x coordinate value low bit + x coordinate value high bit multiplied by 256 First determine whether it is greater than 33000
-If it is greater than 33000, subtract 65536 and finally divide by 100. If it is less than 33000, just divide by 10 directly
+If it is greater than 33000, subtract 65536 and finally divide by 10. If it is less than 33000, just divide by 10 directly
 
 (The same applies to y coordinates and z coordinates)
 
@@ -420,7 +420,7 @@ How to get the rx coordinate
 
 temp = rx\_low + rx_high\*256
 
-x coordinate = (temp \ 33000 ?(temp – 65536) : temp)/100
+rx coordinate = (temp \ 33000 ?(temp – 65536) : temp)/100
 
 Calculation method: x coordinate value low bit + x coordinate value high bit multiplied by 256 First determine whether it is greater than 33000
 If it is greater than 33000, subtract 65536 and finally divide by 100. If it is less than 33000, just divide by 100 directly
@@ -565,7 +565,7 @@ Return data structure
 
 Assume the program is in pause state
 
-Serial port return example: FE FE 03 12 01 FA
+Serial port return example: FE FE 03 27 01 FA
 
 ---
 
@@ -595,7 +595,7 @@ No return value
 | Data[3] | Command frame | 0X29 |
 | Data[4] | End frame | 0XFA |
 
-Serial port sending example: FE FE 02 28 FA
+Serial port sending example: FE FE 02 29 FA
 
 No return value
 
@@ -779,7 +779,7 @@ No return value
 
 Set the robot arm to move in the x direction, speed 20
 
-Serial port sending example: FE FE 06 32 01 01 14 FA
+Serial port sending example: FE FE 05 32 01 01 14 FA
 
 axis value range: 1~6, representing x, y, z, rx, ry, rz respectively
 
@@ -831,7 +831,7 @@ No return value
 | ------- | ------------ | ------------- |
 | Data[0] | Identification frame | 0XFE |
 | Data[1] | Identification frame | 0XFE |
-| Data[2] | Data length frame | 0X05 |
+| Data[2] | Data length frame | 0X06 |
 | Data[3] | Command frame | 0X3A |
 | Data[4] | Joint servo serial number | Joint |
 | Data[5] | Potential value high | Encoder\_high |
@@ -841,7 +841,7 @@ No return value
 
 Example, set joint 5 to 2048 potential and rotate at 20% speed
 
-Serial port sending example: FE FE 05 3A 05 08 00 14 FA
+Serial port sending example: FE FE 06 3A 05 08 00 14 FA
 
 Joint number range: 1~6
 
@@ -1176,7 +1176,7 @@ Return data structure
 | ------- | -------------- | ------------- |
 | Data[0] | Return identification frame | 0XFE |
 | Data[1] | Return identification frame | 0XFE |
-| Data[2] | Return data length frame | 0X03 |
+| Data[2] | Return data length frame | 0X04 |
 | Data[3] | Command frame | 0X50 |
 | Data[4] | Joint servo number | Joint_number |
 | Data[5] | Connected/unconnected | 0X01/0X00 |
@@ -1608,7 +1608,7 @@ No return value
 
 Set pin 2 to output high level
 
-Serial port sending example: FE FE 02 a0 02 01 FA
+Serial port sending example: FE FE 04 a0 02 01 FA
 
 ---
 
@@ -1760,7 +1760,7 @@ temp = x\_low + x_high\*256
 x coordinate = (temp \ 33000 ? (temp – 65536) : temp) / 10
 
 Calculation method: x coordinate value low + x coordinate value high multiplied by 256 First determine whether it is greater than 33000
-If it is greater than 33000, subtract 65536 and finally divide by 100. If it is less than 33000, directly divide by 10
+If it is greater than 33000, subtract 65536 and finally divide by 10. If it is less than 33000, directly divide by 10
 
 (The same applies to y coordinate and z coordinate)
 
@@ -1955,7 +1955,7 @@ Return data structure
 | Data[4] | Flange/Tool | 00/01 |
 | Data[4] | End frame | 0XFA |
 
-Serial port return example: FE FE 03 86 01 FA
+Serial port return example: FE FE 03 8a 01 FA
 
 ---
 
