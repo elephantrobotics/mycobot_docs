@@ -288,68 +288,210 @@ currently:      speed: 50       change percent 5
 + _change_percent：移动距离百分比。
 
 ### 视觉
->将相机安装在 mycobot 的末端。 本视觉部分使用 eye-in-hand 的方式。
+
+>将相机安装在 mycobot 的末端。 本视觉部分使用 eye-in-hand 的方式。重新安装相机之后，需进行一次手眼标定。
 
 <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/camera_connect-1.jpg
 width ="500"  align = "center">
 
-#### 识别并显示
-命令行运行：
-- mycobot 280-M5版本：
+#### 使用前提
+
+##### python依赖库
+
+使用pip安装以下python库
+
 ```bash
-roslaunch mycobot_280 detect_marker.launch
+pip install stag-python
+
+pip install opencv-python
+
+pip install scipy
+
+pip install numpy
+
+pip install pymycobot
 ```
-可选择参数：
-+ num：相机id， 默认为 0.
 
-启动后效果图：
+##### Stag码
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/vision-1.png
+本文使用stag码用作二维码跟踪，建议使用彩印，黑白打印识别率较低。
+
+<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/stag.png
 width ="500"  align = "center">
 
-识别二维码，获取与相机的相对位置关系。根据 rviz 中mycobot的末端位置，进行坐标转换，最后显示在 rviz 中。
+下载地址: [Stag码下载](https://drive.google.com/drive/folders/0ByNTNYCAhWbILXd2SE5FY1c3WXM?resourcekey=0-nWeENtNZql2j9AF32Ud8sQ)
 
-可以参考滑块控制使用 `slider_control.py` 来控制机械臂
+**注意**：stag码的左上角为编号，使用opencv的stag识别库可以识别该编号，你可以为不同编号设计不同的行为逻辑，比如00设为位置跟踪，01设为姿态跟踪，02设为回到观测点。
 
-#### 视觉追踪与抓取
->本部分需要使用垂直吸泵。
+##### 固件更新
+
+使用stag跟踪专用固件效果更佳，该固件会限制机械臂的姿态偏转，在刷新模式下使用send_coords接口会筛选掉角度偏差超过90°的相邻坐标。
+
+固件名为 `mycobot280_atom0926_vision.bin`, 位于本项目的 `~/mycobot_ros/mycobot_280/mycobot_280/config`文件夹下
+
+##### 相机初始化
+
+在本项目的`~/mycobot_ros/mycobot_280/mycobot_280/camera_calibration/camera_calibration.py`文件中定义了名为camera_detect的视觉识别类
+
+```bash
+class camera_detect:
+    #Camera parameter initialize
+    def __init__(self, camera_id, marker_size, mtx, dist):
+```
+
+其初始化的四个参数分别为：
+
+```bash
+camera_id 相机编号（范围一般是0~10，默认为0）
+marker_size Stag码的边长（mm）
+mtx, dist 相机参数
+```
+
+在程序中已经给了初始化的示例，用户仅需修改camera_id和marker_size即可
+
+```bash
+camera_params = np.load("camera_params.npz")  # 相机配置文件
+mtx, dist = camera_params["mtx"], camera_params["dist"]
+m = camera_detect(0, 32, mtx, dist)
+```
+
+**注意**: Linux系统下的camera_id一般默认是 0，如果错误，则修改成其他 0 ~ 10的参数。
+
+#### 手眼标定
+
+##### 手眼矩阵原理
+
+手眼标定是视觉跟踪必不可少的一环，其作用是求得机械臂坐标系（手）与相机坐标系（眼）之间的相对关系，我们把这种相对关系用一个4*4的手眼矩阵来表示，具体原理可以参考：[手眼矩阵原理](https://blog.csdn.net/weixin_45844515/article/details/125571550)
+
+##### 手眼标定方法
+
+> **注意：** 重新安装相机之后，需进行一次手眼标定。
+
+将相机装配到机械臂上（一般装配在机械臂末端），连接需要控制的机械臂
 
 命令行运行：
+
 - mycobot 280-M5版本：
+  
+```python
+cd ~/mycobot_ros/mycobot_280/mycobot_280/camera_calibration  # 终端切换到目标路径
+python3 camera_calibration.py  # 相机id， 默认为 0.
+```
+
+此时机械臂会先运动到观测姿态
+
+```python
+self.origin_mycbot_level = [0, 5, -104, 14, 0, 0]
+def Eyes_in_hand_calibration(self, ml):
+    ml.send_angles(self.origin_mycbot_level, 50)  # 移动到观测点
+```
+
+**注意**： 用户可自定义修改观测点位，比如旋转6关节使相机处于更合适的位置。
+
+1. 运动到观测姿态后，终端会弹出以下提示，将stag码置于相机视野内，输入任意键即可继续识别
+
 ```bash
+make sure camera can observe the stag, enter any key quit
+```
+
+2.若相机识别到stag码，则会自动进入下一步识别，机械臂移动并捕捉机械臂和相机的位置信息
+
+```bash
+Move the end of the robot arm to the calibration point, press any key to release servo
+```
+
+3. 贴紧后根据提示，输入任意键完成手眼标定
+
+```bash
+focus servo and get current coords
+```
+
+4. 此时会打印EyesInHand_matrix信息，视为标定完成，生成"EyesInHand_matrix.json配置文件，标定成功后无需重复操作！
+
+具体效果参考如下视频，效果与mycobot 280类似：
+
+<video id="my-video" class="video-js" controls preload="auto" width="100%"
+poster="" data-setup='{"aspectRatio":"16:9"}'>
+  <source src="../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/mycobot_hand_vision.mp4" type='video/mp4' >
+</video>
+
+**注意**：**手眼标定可能会由于操作不当、机器虚位等原因出现误差，当视觉跟踪效果不好时，需要重新手眼标定**
+
+#### 视觉跟踪
+
+>> 本案例机械臂的控制方式：使用ROS中的话题进行通信。
+USB相机启动方式：使用ROS中的相机usb_cam节点进行启动。
+
+usb_cam 安装命令：
+
+```bash
+# Ubuntu 20.04 
+sudo apt install ros-noetic-usb-cam   
+```
+
+主要涉及代码文件：
+
+[1. communication_topic.launch](https://github.com/elephantrobotics/mycobot_ros/blob/noetic/mycobot_communication/launch/communication_topic.launch)
+
+[2. mycobot_topics.py](https://github.com/elephantrobotics/mycobot_ros/blob/noetic/mycobot_communication/scripts/mycobot_topics.py)
+
+[3. open_camera.launch](https://github.com/elephantrobotics/mycobot_ros/blob/noetic/mycobot_280/mycobot_280/launch/open_camera.launch)
+
+[4. listen_real_of_topic.py](https://github.com/elephantrobotics/mycobot_ros/blob/noetic/mycobot_280/mycobot_280/scripts/listen_real_of_topic.py)
+
+[5. detect_marker_with_topic.launch](https://github.com/elephantrobotics/mycobot_ros/blob/noetic/mycobot_280/mycobot_280/launch/detect_marker_with_topic.launch)
+
+[6. detect_stag.py](https://github.com/elephantrobotics/mycobot_ros/blob/noetic/mycobot_280/mycobot_280/scripts/detect_stag.py)
+
+其中相机文件 `open_camera.launch` 中的相机设备参数默认为 `/dev/video0`.
+
+```bash
+<!-- //指定设备文件名，默认是/dev/video0 -->
+    <param name="video_device" value="/dev/video0" />
+```
+
+命令行运行：
+
+- mycobot 280-M5版本：
+  
+```bash
+cd ~/catkin_ws
+source devel/setup.bash
 # mycobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
 roslaunch mycobot_280 detect_marker_with_topic.launch port:=/dev/ttyUSB0 baud:=115200
 ```
-可选择参数：
 
-+ num： 相机id， 默认为 0.
 + port： 串口字符串
 + baud： 波特率
 
-
-启动后效果图：
-
 将实时显示 mycobot 的状态。
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/vision-2.gif
+<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/vision-5.png
 width ="500"  align = "center">
 
-紧接着运行，追踪和抓取的脚本。打开新的命令行：
+紧接着运行stag识别跟踪脚本。打开新的命令行：
 
 - mycobot 280-M5版本：
+
 ```bash
-rosrun mycobot_280 follow_and_pump.py
+cd ~/catkin_ws
+source devel/setup.bash
+rosrun mycobot_280 detect_stag.py
 ```
 
-启动后，mycobot 会去到它的初始位置
+启动后，机械臂会运动到观测点
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/vision-3.gif
-width ="500"  align = "center">
+```bash
+self.origin_mycbot_horizontal = [0,60,-60,0,0,0]
+ml.send_angles(self.origin_mycbot_horizontal, 50)  # 移动到观测点
+```
 
-当识别到 marker 后，跟随一段时间，然后尝试去吸取并结束程序。
+具体效果如下：
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/vision-4.png
-width ="500"  align = "center">
+<video id="my-video" class="video-js" controls preload="auto" width="100%"
+poster="" data-setup='{"aspectRatio":"16:9"}'>
+  <source src="../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/280_vision.mp4" type='video/mp4' >
+</video>
 
 ### 末端执行器
 
