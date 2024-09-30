@@ -288,67 +288,210 @@ Parameters supported by this script:
 + _change_percent: movement distance percentage.
 
 ### Vision
-> Install the camera at the end of mycobot. This vision part uses the eye-in-hand method.
+
+>Install the camera at the end of mycobot. This vision part uses the eye-in-hand method. After reinstalling the camera, a hand-eye calibration is required.
 
 <img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/camera_connect-1.jpg
-width ="500" align = "center">
+width ="500"  align = "center">
 
-#### Identify and display
-Command line operation:
-- mycobot 280-M5 version:
+#### Prerequisites for use
+
+##### Python dependency libraries
+
+Use pip to install the following Python libraries
+
 ```bash
-roslaunch mycobot_280 detect_marker.launch
+pip install stag-python
+
+pip install opencv-python
+
+pip install scipy
+
+pip install numpy
+
+pip install pymycobot
 ```
-Optional parameters:
-+ num: camera id, default is 0.
 
-After starting:
+##### Stag Code
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/vision-1.png
-width ="500" align = "center">
+This article uses stag code for QR code tracking. It is recommended to use color printing, as the recognition rate of black and white printing is low.
 
-Recognize the QR code and obtain the relative position relationship with the camera. According to the end position of mycobot in rviz, perform coordinate conversion and finally display it in rviz.
+<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/stag.png
+width ="500"  align = "center">
 
-You can refer to Slider Control and use `slider_control.py` to control the robot arm
+Download address: [Stag code download](https://drive.google.com/drive/folders/0ByNTNYCAhWbILXd2SE5FY1c3WXM?resourcekey=0-nWeENtNZql2j9AF32Ud8sQ)
 
-#### Visual Tracking and Grasping
->This section requires the use of a vertical suction pump.
+**Note**: The upper left corner of the stag code is a number, which can be identified by the stag recognition library of OpenCV. You can design different behavior logic for different numbers, such as 00 is set for position tracking, 01 is set for posture tracking, and 02 is set for returning to the observation point.
 
-Run from command line:
-- mycobot 280-M5 version:
+##### Firmware Update
+
+Using the stag tracking firmware will give better results. This firmware will limit the deflection of the robot arm. Using the send_coords interface in refresh mode will filter out adjacent coordinates with an angle deviation of more than 90°.
+
+The firmware is named `mycobot280_atom0926_vision.bin` and is located in the folder `~/mycobot_ros/mycobot_280/mycobot_280/config` of this project.
+
+##### Camera initialization
+
+In this project, the file `~/mycobot_ros/mycobot_280/mycobot_280/camera_calibration/camera_calibration.py` defines a visual recognition class called camera_detect.
+
 ```bash
-# The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
+class camera_detect:
+    #Camera parameter initialize
+    def __init__(self, camera_id, marker_size, mtx, dist):
+```
+
+The four parameters initialized are:
+
+```bash
+camera_id 相机编号（范围一般是0~10，默认为0）
+marker_size Stag码的边长（mm）
+mtx, dist 相机参数
+```
+
+An initialization example has been given in the program. The user only needs to modify camera_id and marker_size.
+
+```bash
+camera_params = np.load("camera_params.npz")  # Camera Profiles
+mtx, dist = camera_params["mtx"], camera_params["dist"]
+m = camera_detect(0, 32, mtx, dist)
+```
+
+**Note**: The default camera_id in Linux system is usually 0. If it is wrong, change it to other parameters from 0 to 10.
+
+#### Hand-eye calibration
+
+##### Hand-eye matrix principle
+
+Hand-eye calibration is an essential part of visual tracking. Its function is to obtain the relative relationship between the robot arm coordinate system (hand) and the camera coordinate system (eye). We use a 4*4 hand-eye matrix to represent this relative relationship. The specific principle can be referred to: [Hand-Eye Matrix Principle](https://blog.csdn.net/weixin_45844515/article/details/125571550)
+
+##### Hand-eye calibration method
+
+> **Note:** After reinstalling the camera, a hand-eye calibration is required.
+
+Install the camera on the robotic arm (usually at the end of the robotic arm) and connect the robotic arm to be controlled.
+
+Run the command line:
+
+- mycobot 280-M5版本：
+  
+```python
+cd ~/mycobot_ros/mycobot_280/mycobot_280/camera_calibration  # The terminal switches to the target path
+python3 camera_calibration.py  # Camera id, default is 0.
+```
+
+At this time, the robotic arm will first move to the observation posture.
+
+```python
+self.origin_mycbot_level = [0, 5, -104, 14, 0, 0]
+def Eyes_in_hand_calibration(self, ml):
+    ml.send_angles(self.origin_mycbot_level, 50)  # 移动到观测点
+```
+
+**Note**: Users can customize the observation points, such as rotating the 6 joints to put the camera in a more suitable position.
+
+1. After moving to the observation posture, the terminal will pop up the following prompt, place the stag code in the camera's field of view, and enter any key to continue recognition.
+
+```bash
+make sure camera can observe the stag, enter any key quit
+```
+
+2. If the camera recognizes the stag code, it will automatically enter the next step of recognition, the robot arm moves and captures the position information of the robot arm and camera.
+
+```bash
+Move the end of the robot arm to the calibration point, press any key to release servo
+```
+
+3. After attaching, follow the prompts and enter any key to complete the hand-eye calibration.
+
+```bash
+focus servo and get current coords
+```
+
+4. The EyesInHand_matrix information will be printed at this time, and the calibration is considered complete. The "EyesInHand_matrix.json configuration file is generated. After the calibration is successful, there is no need to repeat the operation!
+
+Please refer to the following video for specific effects, the effect is similar to mycobot 280:
+
+<video id="my-video" class="video-js" controls preload="auto" width="100%"
+poster="" data-setup='{"aspectRatio":"16:9"}'>
+  <source src="../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/mycobot_hand_vision.mp4" type='video/mp4' >
+</video>
+
+**Note**: **Hand-eye calibration may have errors due to improper operation, machine virtual position, etc. When the visual tracking effect is not good, hand-eye calibration needs to be re-performed**
+
+#### Visual Tracking
+
+>> The control method of the robot arm in this case: Use the topic in ROS for communication.
+USB camera startup method: Use the camera usb_cam node in ROS to start.
+
+usb_cam installation command:
+
+```bash
+# Ubuntu 20.04 
+sudo apt install ros-noetic-usb-cam   
+```
+
+Mainly involved code files:
+
+[1. communication_topic.launch](https://github.com/elephantrobotics/mycobot_ros/blob/noetic/mycobot_communication/launch/communication_topic.launch)
+
+[2. mycobot_topics.py](https://github.com/elephantrobotics/mycobot_ros/blob/noetic/mycobot_communication/scripts/mycobot_topics.py)
+
+[3. open_camera.launch](https://github.com/elephantrobotics/mycobot_ros/blob/noetic/mycobot_280/mycobot_280/launch/open_camera.launch)
+
+[4. listen_real_of_topic.py](https://github.com/elephantrobotics/mycobot_ros/blob/noetic/mycobot_280/mycobot_280/scripts/listen_real_of_topic.py)
+
+[5. detect_marker_with_topic.launch](https://github.com/elephantrobotics/mycobot_ros/blob/noetic/mycobot_280/mycobot_280/launch/detect_marker_with_topic.launch)
+
+[6. detect_stag.py](https://github.com/elephantrobotics/mycobot_ros/blob/noetic/mycobot_280/mycobot_280/scripts/detect_stag.py)
+
+The default camera device parameter in the camera file `open_camera.launch` is `/dev/video0`.
+
+```bash
+<!-- //Specify the device file name, the default is /dev/video0 -->
+    <param name="video_device" value="/dev/video0" />
+```
+
+Command line operation:
+
+- mycobot 280-M5 version:
+  
+```bash
+cd ~/catkin_ws
+source devel/setup.bash
+# The default serial port name of mycobot 280-M5 is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
 roslaunch mycobot_280 detect_marker_with_topic.launch port:=/dev/ttyUSB0 baud:=115200
 ```
-Optional parameters:
 
-+ num: Camera id, default is 0.
 + port: serial port string
 + baud: baud rate
 
-After startup:
-
 The status of mycobot will be displayed in real time.
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/vision-2.gif
-width ="500" align = "center">
+<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/vision-5.png
+width ="500"  align = "center">
 
-Then run the scripts for tracking and grabbing. Open a new command line:
+Then run the stag recognition and tracking script. Open a new command line:
 
 - mycobot 280-M5 version:
+
 ```bash
-rosrun mycobot_280 follow_and_pump.py
+cd ~/catkin_ws
+source devel/setup.bash
+rosrun mycobot_280 detect_stag.py
 ```
 
-After starting, mycobot will go to its initial position
+After starting, the robot arm will move to the observation point:
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/vision-3.gif
-width ="500" align = "center">
+```bash
+self.origin_mycbot_horizontal = [0,60,-60,0,0,0]
+ml.send_angles(self.origin_mycbot_horizontal, 50)  # 移动到观测点
+```
 
-After the marker is recognized, follow it for a while, then try to absorb and end the program.
+The specific effects are as follows:
 
-<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/vision-4.png
-width ="500" align = "center">
+<video id="my-video" class="video-js" controls preload="auto" width="100%"
+poster="" data-setup='{"aspectRatio":"16:9"}'>
+  <source src="../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1\rviz/rviz280/280_vision.mp4" type='video/mp4' >
+</video>
 
 ### End effector
 
