@@ -65,10 +65,10 @@ Under the mobile phone hotspot, after the robot arm successfully starts the TCP/
 Connect the PC to the same mobile phone hotspot as the robotic arm, call the python driver library, and you can connect to the robotic arm through the IP address of the robotic arm, so that you can remotely operate the robotic arm without connecting to the USB port.
 
 ```python
-from pymycobot import MyCobotSocket
+from pymycobot import MyCobot280Socket
 # Default port is 9000
 #"172.20.10.14" is the IP address of the robot arm. Please enter your own IP address of the robot arm
-mc = MyCobotSocket("172.20.10.14",9000)
+mc = MyCobot280Socket("172.20.10.14",9000)
 
 #If the connection is normal, you can control the robot arm
 mc.send_angles([0,0,0,0,0,0],20)

@@ -33,10 +33,10 @@ pip install pyserial pymycobot
 ```python
 # 将COM14修改为你的电脑检测到的实际端口号
 import time
-from pymycobot.mycobot import MyCobot  # import mycobot library,if don't have, first 'pip install pymycobot'
+from pymycobot.mycobot import MyCobot280  # import mycobot library,if don't have, first 'pip install pymycobot'
 
 # use PC and M5 control
-mc = MyCobot('COM14', 115200)  # WINDOWS use ，need check port number when you PC
+mc = MyCobot280('COM14', 115200)  # WINDOWS use ，need check port number when you PC
 # mc = MyCobot('/dev/ttyUSB0',115200)           # VM linux use
 time.sleep(0.5)
 ...

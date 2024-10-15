@@ -6,14 +6,11 @@
 
 
 
-##  控制RGB灯板
-
-### myCobot
+##  1 控制RGB灯板
 
 ```python
-from pymycobot.mycobot import MyCobot
+from pymycobot.mycobot280 import MyCobot280
 
-from pymycobot import PI_PORT, PI_BAUD  	# 当使用树莓派版本的mycobot时,可以引用这两个变量进行MyCobot初始化,如不是可不填该行代码
 import time
 #以上需写在代码开头,意为导入项目包
 
@@ -29,18 +26,16 @@ import time
 #              mc = MyCobot("/dev/ttyUSB0", 115200)
 #           windows:
 #              mc = MyCobot("COM3", 115200)
-#       mycobot-raspi:
-#           mc = MyCobot(PI_PORT, PI_BAUD)
-#
-# 初始化一个MyCobot对象
+
+# 初始化一个MyCobot280对象
 # 下面为 windows版本创建对象代码
-mc = MyCobot("COM3", 115200)
+mc = MyCobot280("COM3", 115200)
 
 i = 7
 #循环7次
-while i > 0:							
+while i > 0:
     mc.set_color(0,0,255) #蓝灯亮
-    time.sleep(2)	#等2秒				
+    time.sleep(2)	#等2秒
     mc.set_color(255,0,0) #红灯亮
     time.sleep(2)	#等2秒
     mc.set_color(0,255,0) #绿灯亮    time.sleep(2)	#等2秒
@@ -54,11 +49,10 @@ poster="" data-setup='{"aspectRatio":"16:9"}'>
   <source src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\example/2.1python控制RGB灯板01.mp4" type='video/mp4' >
 </video>
 
-## 控制机械回原点
+## 2 控制机械回原点
 
 ```python
-from pymycobot.mycobot import MyCobot
-from pymycobot import PI_PORT, PI_BAUD  # 当使用树莓派版本的mycobot时,可以引用这两个变量进行MyCobot初始化
+from pymycobot.mycobot280 import MyCobot280
 
 # MyCobot 类初始化需要两个参数：
 #   第一个是串口字符串, 如：
@@ -73,12 +67,10 @@ from pymycobot import PI_PORT, PI_BAUD  # 当使用树莓派版本的mycobot时,
 #              mc = MyCobot("/dev/ttyUSB0", 115200)
 #           windows:
 #              mc = MyCobot("COM3", 115200)
-#       mycobot-raspi:
-#           mc = MyCobot(PI_PORT, PI_BAUD)
 #
-# 初始化一个MyCobot对象
-# 下面为树莓派版本创建对象代码
-mc = MyCobot(PI_PORT, PI_BAUD)
+# 初始化一个MyCobot280对象
+# 下面为M5版本创建对象代码
+mc = MyCobot280("COM3", 115200)
 
 # 检测机械臂是否可烧入程序
 if mc.is_controller_connected() != 1:
@@ -106,87 +98,51 @@ poster="" data-setup='{"aspectRatio":"16:9"}'>
 ## 3 单关节运动
 
 ```python
-from pymycobot import MyCobot
-
-from pymycobot.genre import Angle
+from pymycobot import MyCobot280
 
 import time
 
-# MyCobot 类初始化需要两个参数：
-
+# MyCobot280 类初始化需要两个参数：
 #  第一个是串口字符串, 如：
-
 #    linux： "/dev/ttyUSB0"
-
 #    windows: "COM3"
-
 #  第二个是波特率：
-
 #    M5版本为： 115200
 
-#
-
 #  Example:
-
 #    mycobot-M5:
-
 #      linux:
-#        mc = MyCobot("/dev/ttyUSB0", 115200)
-
+#        mc = MyCobot280("/dev/ttyUSB0", 115200)
 #      windows:
+#        mc = MyCobot280("COM3", 115200)
 
-#        mc = MyCobot("COM3", 115200)
-
-#    mycobot-raspi:
-
-#      mc = MyCobot(PI_PORT, PI_BAUD)
-
-#
-
-# 初始化一个MyCobot对象
-
-# 下面为树莓派版本创建对象代码
-
-# mc = MyCobot(PI_PORT, PI_BAUD)
+# 初始化一个MyCobot280对象
 
 # 下面为M5版本创建对象代码
-
-mc=MyCobot('COM3',115200)
+mc=MyCobot280('COM3',115200)
 
 # 机械臂复原
-
 mc.send_angles([0, 0, 0, 0, 0, 0], 40)
-
 time.sleep(3)
 
 # 控制关节3运动70°
-
-mc.send_angle(Angle.J3.value,70,40)
-
+mc.send_angle(3,70,40)
 time.sleep(3)
 
 # 控制关节4运动-70°
-
-mc.send_angle(Angle.J4.value,-70,40)
-
+mc.send_angle(4,-70,40)
 time.sleep(3)
 
 # 控制关节1运动90°
-
-mc.send_angle(Angle.J1.value,90,40)
-
+mc.send_angle(1,90,40)
 time.sleep(3)
 
 # 控制关节5运动-90°
-
-mc.send_angle(Angle.J5.value,-90,40)
-
+mc.send_angle(5,-90,40)
 time.sleep(3)
 
 # 控制关节5运动90°
-
-mc.send_angle(Angle.J5.value,90,40)
-
+mc.send_angle(5,90,40)
 time.sleep(3)
 ```
 
@@ -198,11 +154,11 @@ poster="" data-setup='{"aspectRatio":"16:9"}'>
 
 
 
-## **4 多关节运动**
+## 4 多关节运动
 
 ```python
 import time
-from pymycobot import MyCobot
+from pymycobot import MyCobot280
 # MyCobot 类初始化需要两个参数：
 #   第一个是串口字符串, 如：
 #       linux： "/dev/ttyUSB0"
@@ -213,18 +169,13 @@ from pymycobot import MyCobot
 #   Example:
 #       mycobot-M5:
 #           linux:
-#              mc = MyCobot("/dev/ttyUSB0", 115200)
+#              mc = MyCobot280("/dev/ttyUSB0", 115200)
 #           windows:
-#              mc = MyCobot("COM3", 115200)
-#       mycobot-raspi:
-#           mc = MyCobot(PI_PORT, PI_BAUD)
-#
-# 初始化一个MyCobot对象
-# 下面为树莓派版本创建对象代码
-# mc = MyCobot(PI_PORT, PI_BAUD)
+#              mc = MyCobot280("COM3", 115200)
 
+# 初始化一个MyCobot280对象
 # 280-M5版本创建对象代码
-mc=MyCobot('COM3',115200)
+mc=MyCobot280('COM3',115200)
 # 机械臂复原归零
 mc.send_angles([0,0,0,0,0,0],50)
 time.sleep(2.5)
@@ -252,15 +203,11 @@ poster="" data-setup='{"aspectRatio":"16:9"}'>
 ## 5 控制机械臂左右摆动
 
 ```python
-from pymycobot.mycobot import MyCobot
-from pymycobot.genre import Angle
-from pymycobot import PI_PORT, PI_BAUD  # 当使用树莓派版本的mycobot时,可以引用这两个变量进行MyCobot初始化
+from pymycobot.mycobot280 import MyCobot280
 import time
-# 初始化一个MyCobot对象
-# Pi版本
-# mc = MyCobot(PI_PORT, PI_BAUD)
+# 初始化一个MyCobot280对象
 # M5版本
-mc = MyCobot("COM3", 115200)
+mc = MyCobot280("COM3", 115200)
 # 获得当前位置的坐标
 angle_datas = mc.get_angles()
 print(angle_datas)
@@ -273,7 +220,7 @@ print(mc.is_paused())
 time.sleep(2.5)
 
 # 让关节1移动到90这个位置
-mc.send_angle(Angle.J1.value, 90, 50)
+mc.send_angle(1, 90, 50)
 
 # 设置等待时间,确保机械臂已经到达指定位置
 time.sleep(2)
@@ -284,11 +231,11 @@ num = 5
 # 让机械臂左右摇摆
 while num > 0:
     # 让关节2移动到50这个位置
-    mc.send_angle(Angle.J2.value, 50, 50)
+    mc.send_angle(2, 50, 50)
     # 设置等待时间,确保机械臂已经到达指定位置
     time.sleep(1.5)
     # 让关节2移动到-50这个位置
-    mc.send_angle(Angle.J2.value, -50, 50)
+    mc.send_angle(2, -50, 50)
     # 设置等待时间,确保机械臂已经到达指定位置
     time.sleep(1.5)
     num -= 1
@@ -313,8 +260,7 @@ poster="" data-setup='{"aspectRatio":"16:9"}'>
 ## 6 控制机械臂跳舞
 
 ```python
-from pymycobot.mycobot import MyCobot
-from pymycobot import PI_PORT, PI_BAUD  # 当使用树莓派版本的mycobot时,可以引用这两个变量进行MyCobot初始化
+from pymycobot.mycobot280 import MyCobot280
 import time
 
 if __name__ == '__main__':
@@ -328,18 +274,13 @@ if __name__ == '__main__':
     #   Example:
     #       mycobot-M5:
     #           linux:
-    #              mc = MyCobot("/dev/ttyUSB0", 115200)
+    #              mc = MyCobot280("/dev/ttyUSB0", 115200)
     #           windows:
-    #              mc = MyCobot("COM3", 115200)
-    #       mycobot-raspi:
-    #           mc = MyCobot(PI_PORT, PI_BAUD)
-    #
-    # 初始化一个MyCobot对象
-    # 下面为树莓派版本创建对象代码
-    mc = MyCobot(PI_PORT, PI_BAUD)
-    # M5版本
-    # mc = MyCobot("COM3",115200)
+    #              mc = MyCobot280("COM3", 115200)
 
+    # 初始化一个MyCobot280对象
+    # M5版本
+    mc = MyCobot280("COM3",115200)
     # 设置开始开始时间
     start = time.time()
     # 让机械臂到达指定位置
@@ -384,8 +325,7 @@ poster="" data-setup='{"aspectRatio":"16:9"}'>
 ## 7 夹爪控制
 
 ```python
-from pymycobot import PI_PORT, PI_BAUD  # 当使用树莓派版本的mycobot时,可以引用这两个变量进行MyCobot初始化
-from pymycobot.mycobot import MyCobot
+from pymycobot.mycobot280 import MyCobot280
 import time
 def gripper_test(mc):
     print("Start check IO part of api\n")
@@ -450,17 +390,13 @@ if __name__ == "__main__":
     #   Example:
     #       mycobot-M5:
     #           linux:
-    #              mc = MyCobot("/dev/ttyUSB0", 115200)
+    #              mc = MyCobot280("/dev/ttyUSB0", 115200)
     #           windows:
-    #              mc = MyCobot("COM3", 115200)
-    #       mycobot-raspi:
-    #           mc = MyCobot(PI_PORT, PI_BAUD)
-    #
-    # 初始化一个MyCobot对象
-    # 下面为树莓派版本创建对象代码
-    # mc = MyCobot(PI_PORT, PI_BAUD)
+    #              mc = MyCobot280("COM3", 115200)
+ 
+    # 初始化一个MyCobot280对象
     # M5版本
-    mc = MyCobot('COM3', 115200)
+    mc = MyCobot280('COM3', 115200)
     # 让其移动到零位
 
     mc.set_encoders([2048, 2048, 2048, 2048, 2048, 2048], 20)
@@ -484,11 +420,10 @@ poster="" data-setup='{"aspectRatio":"16:9"}'>
 280-M5版本(下方视频以M5版本为例)：
 
 ```python
-from pymycobot.mycobot import MyCobot
-from pymycobot import PI_PORT, PI_BAUD  # 当使用树莓派版本的mycobot时,可以引用这两个变量进行MyCobot初始化
+from pymycobot.mycobot280 import MyCobot280
 import time
 
-# MyCobot 类初始化需要两个参数：
+# MyCobot280 类初始化需要两个参数：
 #   第一个是串口字符串, 如：
 #       linux： "/dev/ttyUSB0"
 #       windows: "COM3"
@@ -498,15 +433,13 @@ import time
 #   Example:
 #       mycobot-M5:
 #           linux:
-#              mc = MyCobot("/dev/ttyUSB0", 115200)
+#              mc = MyCobot280("/dev/ttyUSB0", 115200)
 #           windows:
-#              mc = MyCobot("COM3", 115200)
-#       mycobot-raspi:
-#           mc = MyCobot(PI_PORT, PI_BAUD)
-#
-# 初始化一个MyCobot对象
+#              mc = MyCobot280("COM3", 115200)
+
+# 初始化一个MyCobot280对象
 # 下面为M5版本创建对象代码
-mc =MyCobot('COM3',115200)
+mc =MyCobot280('COM3',115200)
 # 机械臂运动的位置
 angles = [
             [92.9, -10.1, -60, 5.8, -2.02, -37.7],
@@ -517,18 +450,20 @@ angles = [
 
 # 开启吸泵
 def pump_on():
-    # 让2号位工作
-    mc.set_basic_output(2, 0)
-    # 让5号位工作
-    mc.set_basic_output(5, 0)
+    # 打开电磁阀
+    mc.set_basic_output(5, 0)
+    time.sleep(0.05)
 
 # 停止吸泵
 def pump_off():
-    # 让2号位停止工作
-    mc.set_basic_output(2, 1)
-    # 让5号位停止工作
-    mc.set_basic_output(5, 1)
-
+    # 关闭电磁阀
+    mc.set_basic_output(5, 1)
+    time.sleep(0.05)
+    # 泄气阀门开始工作
+    mc.set_basic_output(2, 0)
+    time.sleep(1)
+    mc.set_basic_output(2, 1)
+    time.sleep(0.05)
 
 # 机械臂复原
 mc.send_angles([0, 0, 0, 0, 0, 0], 30)

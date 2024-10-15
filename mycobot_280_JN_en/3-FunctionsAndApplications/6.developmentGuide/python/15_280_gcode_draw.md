@@ -28,8 +28,6 @@ pip install pyserial pymycobot
 
 ### 3. Change the port number
 
-**The default serial port name of mycobot 280-JetsonNano version is "/dev/ttyTHS1" and the baud rate is 1000000，Note to change the serial port number and baud rate of the following program**.
-
 Edit the 280_draw_gcode.py file
 
 ```python
@@ -38,8 +36,11 @@ import time
 from pymycobot.mycobot import MyCobot # import mycobot library,if don't have, first 'pip install pymycobot'
 
 # use PC and M5 control
-mc = MyCobot('COM14', 115200) # WINDOWS use, need check port number when you PC
-# mc = MyCobot('/dev/ttyUSB0',115200) # VM linux use
+# mc = MyCobot280('COM14', 115200) # WINDOWS use, need check port number when you PC
+# mc = MyCobot280('/dev/ttyUSB0',115200) # VM linux use
+
+# JN version
+mc = MyCobot280('/dev/ttyTHS1', 1000000)
 time.sleep(0.5)
 ...
 ```
