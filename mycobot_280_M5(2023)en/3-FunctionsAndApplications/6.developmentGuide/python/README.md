@@ -1,6 +1,6 @@
 ## What is Python?
 
-**Our products are very friendly to Python, and the development of Python API library is also improving day by day. Through Python, the robot's joint angles, coordinates, grippers and other aspects can be controlled. There are many options. If you want to control our robot arm through Python programming, you can learn this chapter. **
+**Our products are very friendly to Python, and the development of Python API library is also improving day by day. Through Python, the robot's joint angles, coordinates, grippers and other aspects can be controlled. There are many options. If you want to control our robot arm through Python programming, you can learn this chapter.**
 
 ## ![README1](../../../resources/3-FunctionsAndApplications/6.developmentGuide/python/python.jpg)
 

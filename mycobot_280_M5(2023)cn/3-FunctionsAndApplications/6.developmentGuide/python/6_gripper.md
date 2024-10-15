@@ -1,4 +1,4 @@
-# 夹爪控制
+## 夹爪控制
 
 使用Python控制夹爪之前，需要先在机械臂上安装连接好夹爪。不同夹爪适配不同的机械臂（具体适配信息请参考**产品配件**。
 
@@ -8,13 +8,7 @@
 >
 > <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\Jaw/夹爪1.jpg" style="zoom: 67%;" />
 >
-> 电动夹爪插在顶端上的接口处，具体看下图：
->
-> <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\Jaw/夹爪2.jpg" style="zoom: 67%;" />
->
-> **myCobot 280-m5无电动夹爪，只有myCobot 320-m5有电动夹爪**
 
-## myCobot
 
 ### 夹爪控制
 
@@ -36,7 +30,7 @@
     - `1`: 自适应夹爪
     - `3`: 平行夹爪
     - `4`: 柔性夹爪
-- **返回值：** 无
+- **返回值：** 1
 
 **`get_gripper_value(gripper_type=None)`**
 
@@ -59,26 +53,7 @@
     - `2`: 五指灵巧手
     - `3`: 平行夹爪
     - `4`: 柔性夹爪
-- **返回值：** 无
-
-
-**`set_eletric_gripper(status)`**
-
-- **功能：** 设置夹爪模式(仅作用于350)
-- **参数说明：**  `status`：1 表示夹爪合拢状态，0 表示夹爪打开状态。
-- **返回值：** 无
-
-**`set_gripper_mode(status)`**
-
-- **功能：** 设置夹爪模式
-- **参数说明：**  `status`：1 透传模式，0 I/O模式
-- **返回值：** 无
-
-
-**`get_gripper_mode()`**
-
-- **功能：** 获取夹爪状态
-- **返回值：** `status(int)`：0 - 透传模式  1 - I/O模式
+- **返回值：** 1
 
 **`set_HTS_gripper_torque(torque)`**
 
@@ -112,8 +87,7 @@
 ### 案例
 
 ```python
-from pymycobot.mycobot import MyCobot		
-from pymycobot import PI_PORT, PI_BAUD  #当使用树莓派版本的mycobot时，可以引用这两个变量进行MyCobot初始化
+from pymycobot.mycobot280 import MyCobot280
 import time
 #输入以上代码导入工程所需要的包
 
@@ -159,7 +133,7 @@ def gripper_test(mc):
 if __name__ == "__main__":
     # MyCobot 类初始化需要两个参数：
     #   第一个是串口字符串， 如：
-    #       linux： "/dev/ttyAMA0"
+    #       linux： "/dev/ttyUSB0"
     #       windows: "COM3"
     #   第二个是波特率：
     #       M5版本为： 115200
@@ -167,15 +141,13 @@ if __name__ == "__main__":
     #   Example:
     #       mycobot-M5:
     #           linux:
-    #              mc = MyCobot("/dev/ttyAMA0", 1000000)
+    #              mc = MyCobot("/dev/ttyUSB0", 115200)
     #           windows:
     #              mc = MyCobot("COM3", 115200)
-    #       mycobot-raspi:
-    #           mc = MyCobot(PI_PORT, PI_BAUD)
-    #
-    # 初始化一个MyCobot对象
-    # 下面为树莓派版本创建对象代码
-    mc = MyCobot(PI_PORT, PI_BAUD)
+
+    # 初始化一个MyCobot280对象
+    # 下面为M5版本创建对象代码
+    mc = MyCobot280('COM3', 115200)
     # 让其移动到零位
     mc.set_encoders([2048, 2048, 2048, 2048, 2048, 2048], 20)
     time.sleep(3)

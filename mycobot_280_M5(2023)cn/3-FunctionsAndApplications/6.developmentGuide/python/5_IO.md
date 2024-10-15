@@ -1,11 +1,9 @@
-# IO控制
+## IO控制
 IO即数据的输入与输出，在我们的机械臂的Basic和Atom上有多个pin脚，通过以下函数接口可以对其设置其输入输出模式。
 
 * **myCobot：**
 
 <img src="../../../resources\3-FunctionsAndApplications\6.developmentGuide\python\io/mycobotIO.jpg" style="zoom: 67%;" />
-
-## myCobot
 
 
 ###  Basic IO
@@ -22,7 +20,7 @@ IO即数据的输入与输出，在我们的机械臂的Basic和Atom上有多个
 - **参数说明：**
   - `pin_no`( `int`) 设备底部标注的编号仅取数字部分
   - `pin_signal`( `int`)：输入0表示设置为运行状态，输入1表示停止状态
-- **返回值：** 无
+- **返回值：** 1
 
 **get_tof_distance()**
 
@@ -42,7 +40,7 @@ IO即数据的输入与输出，在我们的机械臂的Basic和Atom上有多个
     - 0设置为运行状态
     - 1设置为停止状态
     - 2设置为上拉模式
-- **返回值：** 无
+- **返回值：** 1
 
 **set_digital_output(pin_no, pin_signa)**
 
@@ -52,7 +50,7 @@ IO即数据的输入与输出，在我们的机械臂的Basic和Atom上有多个
   - `pin_no`( `int`) 设备末端标注的编号仅取数字部分
   - `pin_signal`( `int`): 输入0表示设置为运行状态，输入1表示停止状态
   
-- **返回值：** 无
+- **返回值：** 1
 
   **get_digital_input(self, pin_no)**
 
@@ -67,14 +65,13 @@ IO即数据的输入与输出，在我们的机械臂的Basic和Atom上有多个
 * **MyCobot 280-M5版本：**
 
 ```python
-from pymycobot.mycobot import MyCobot
-from pymycobot import PI_PORT, PI_BAUD  #当使用树莓派版本的mycobot时，可以引用这两个变量进行MyCobot初始化
+from pymycobot.mycobot280 import MyCobot280
 import time
 #输入以上代码导入工程所需要的包
 
 # MyCobot 类初始化需要两个参数：
 #   第一个是串口字符串， 如：
-#       linux： "/dev/ttyAMA0"
+#       linux： "/dev/ttyUSB0"
 #       windows: "COM3"
 #   第二个是波特率：
 #       M5版本为： 115200
@@ -82,15 +79,13 @@ import time
 #   如:
 #       mycobot-M5:
 #           linux:
-#              mc = MyCobot("/dev/ttyAMA0", 1000000)
+#              mc = MyCobot("/dev/ttyUSB0", 115200)
 #           windows:
 #              mc = MyCobot("COM3", 115200)
-#       mycobot-raspi:
-#           mc = MyCobot(PI_PORT, PI_BAUD)
-#
-# 初始化一个MyCobot对象
+
+# 初始化一个MyCobot280对象
 # 下面为 windows版本创建对象代码
-mc = MyCobot("COM3", 115200)
+mc = MyCobot280("COM3", 115200)
     
 for count in range(5):
 # 设置一个循环

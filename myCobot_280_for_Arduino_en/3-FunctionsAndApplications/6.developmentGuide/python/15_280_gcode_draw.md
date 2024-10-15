@@ -33,12 +33,12 @@ Edit the 280_draw_gcode.py file
 ```python
 # Change COM14 to the actual port number detected by your computer
 import time
-from pymycobot.mycobot import MyCobot # import mycobot library,if don't have, first 'pip install pymycobot'
+from pymycobot.mycobot280 import MyCobot280 # import mycobot library,if don't have, first 'pip install pymycobot'
 
-# use PC and M5 control
-mc = MyCobot('COM14', 115200) # WINDOWS use, need check port number when you PC
+# use PC and Arduino control
+mc = MyCobot280('COM14', 115200) # WINDOWS use, need check port number when you PC
 # mc = MyCobot('/dev/ttyUSB0',115200) # VM linux use
-time.sleep(0.5)
+time.sleep(2)
 ...
 ```
 Just run the program.

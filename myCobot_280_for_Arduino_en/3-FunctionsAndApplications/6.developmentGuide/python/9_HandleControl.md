@@ -4,7 +4,7 @@ You can use the game controller to control the movement of the machine and use t
 
 > Note: The handle needs to be purchased separately, please contact the official customer service for details
 
-> <img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\handle/7.8.1.jpg" alt="7.1.1-1" style="zoom: 80%;" />
+> <img src="../../../resource/3-FunctionsAndApplications/6.developmentGuide/python/handle/7.8.1.jpg" alt="7.1.1-1" style="zoom: 80%;" />
 
 ## The corresponding functions of the handle buttons are as follows:
 ### myCobot:
@@ -34,11 +34,11 @@ You can use the game controller to control the movement of the machine and use t
 
 # Instructions for use
 
-## 1. Connect the device
+## Connect the device
 
-Connect MyCobot and the handle to the computer.
+Connect MyCobot280 and the handle to the computer.
 
-## 2. Install the required packages
+## Install the required packages
 
 Download code: https://github.com/elephantrobotics/pymycobot
 
@@ -48,7 +48,7 @@ Open the terminal, switch the path to the `pymycobot/demo/handle_control` folder
 pip3 install -r requirements.txt
 ```
 
-## 3. Change the port number
+## Change the port number
 
 ### myCobot
 
@@ -57,17 +57,17 @@ Edit the handle_control.py file
 ```python
 import pygame
 import time
-from pymycobot import MyCobot
+from pymycobot import MyCobot280
 import threading
 # Change com7 to the actual port number detected by your computer
 
-mc = MyCobot("com7")
+mc = MyCobot280("com7")
 ...
 ```
 Run the program.
 
 ```bash
-python3 handle_control.py
+python3 myCobot280_handle_control.py
 ```
 
 > Note: After running the program, first click the **14** button to check the machine connection status. If the machine connection status is normal (if it is abnormal, other operations will not be possible. Please solve the abnormal connection problem first), then click the **Right 1** button. After the machine reaches the initial point, other operations can be performed.

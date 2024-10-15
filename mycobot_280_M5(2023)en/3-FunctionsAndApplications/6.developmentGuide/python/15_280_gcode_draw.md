@@ -12,7 +12,7 @@ You can control the movement of the robot arm and realize the drawing operation 
 
 ### 1. Connect the device
 
-Connect MyCobot to the computer, install the pen clip to the end of the robot arm, put the signature pen in the pen clip and tighten the screws to fix it.
+Connect MyCobot280 to the computer, install the pen clip to the end of the robot arm, put the signature pen in the pen clip and tighten the screws to fix it.
 
 > Note: Use the G-type base 2.0 to fix the robot arm on the desktop, and place the A4 white paper on the desktop for drawing patterns.
 
@@ -33,11 +33,11 @@ Edit the 280_draw_gcode.py file
 ```python
 # Change COM14 to the actual port number detected by your computer
 import time
-from pymycobot.mycobot import MyCobot # import mycobot library,if don't have, first 'pip install pymycobot'
+from pymycobot.mycobot import MyCobot280 # import mycobot library,if don't have, first 'pip install pymycobot'
 
 # use PC and M5 control
-mc = MyCobot('COM14', 115200) # WINDOWS use, need check port number when you PC
-# mc = MyCobot('/dev/ttyUSB0',115200) # VM linux use
+mc = MyCobot280('COM14', 115200) # WINDOWS use, need check port number when you PC
+# mc = MyCobot280('/dev/ttyUSB0',115200) # VM linux use
 time.sleep(0.5)
 ...
 ```

@@ -4,7 +4,7 @@ TCP/IP传输协议，即传输控制/网络协议，也叫作网络通讯协议�
 
 ## myCobot
 
-**在使用机械臂之前请确保Basic固件与Atom固件已经烧录（烧录详情请参考：5.2软件使用说明章节）
+**在使用机械臂之前请确保Basic固件与Atom固件已经烧录（烧录详情请参考：5.2软件使用说明章节）**
 
 ### 连接步骤
 
@@ -67,10 +67,10 @@ myCobot 280 m5 机械臂使用TCP/IP时，会用默认密码“mycobot123”去�
 PC电脑，连上跟机械臂同一个手机热点，调用python的驱动库，就可以通过机械臂的IP地址连接机械臂，达到无需连接USB端口也可以远程操作机械臂的效果。
 
 ```python
-from pymycobot import MyCobotSocket
+from pymycobot import MyCobot280Socket
 # 默认使用9000端口
 #其中"172.20.10.14"为机械臂IP，请自行输入你的机械臂IP
-mc = MyCobotSocket("172.20.10.14",9000)  
+mc = MyCobot280Socket("172.20.10.14",9000)  
 
 #连接正常就可以对机械臂进行控制操作
 mc.send_angles([0,0,0,0,0,0],20)

@@ -1,1177 +1,791 @@
-# API Description
+# MyCobot 280
 
-API (Application Programming Interface), that is, application program interface functions, are some predefined functions. When using the following function interfaces, please import our API library at the beginning, that is, enter the code below, otherwise it will not run successfully:
+[toc]
+
+## Python API usage instaructions
+
+API (Application Programming Interface), also known as Application Programming Interface functions, are predefined functions. When using the following function interfaces, please import our API library at the beginning by entering the following code, otherwise it will not run successfully:
 
 ```python
-#Applicable to myCobot, mechArm series
-from pymycobot.mycobot import MyCobot
+# Example
+from pymycobot import MyCobot280
+
+mc = MyCobot280('COM3')
+time.sleep(2)
+# Gets the current angle of all joints
+angles = mc.get_angles()
+print(angles)
+
+# Set 1 joint to move to 40 and speed to 20
+mc.send_angle(1, 40, 20)
 ```
 
-> **Note: **Some function interfaces have return values, but if you enter the code directly, the result returned is no return value. You need to use the `print` function to print out the result. For example, if you want to get the current speed value of the robot arm, you can use `get_speed()`, but directly entering the function will not result in any result. The correct way to write it is: `print(get_speed())` to print out the speed value. If the API description below states **no return value**, you do not need to use the `print` function. Otherwise, you need to use the `print` function to print the result.
+>>**Note:** Some function interfaces have return values, but if you enter the code directly, the result returned is no return value. You need to use the print function to print out the result. For example, if you want to get the current angle value of the robot arm, you can use get_angles(), but directly entering this function will not give you any result. The correct way to write it is: print(get_angles()) to print out the speed value. If the API description below indicates that there is no return value, you do not need to use the print function. Otherwise, you need to use the print function to print the result.
 
-## myCobot / myPalletizer / mechArm / myArm
+### 1. System Status
 
-### 1 Overall operation status of the robot
+#### 1.1 `get_system_version()`
 
-**1.1** `power_on()`
+- **function：** get system version
+- **Return value：** system version
 
-- **Function:** Power on the robot
+#### 1.2 `get_basic_version()`
 
-- **Return value:** None
+- **function：** Get basic firmware version for M5 version
+- **Return value：** `float` firmware version
 
-**1.2** `power_off()`
+#### 1.3 `get_error_information()`
 
-- **Function:** Power off the robot, all functions will be invalid
+- **function：** Obtaining robot error information
 
-- **Return value:** None
+- **Return value：** 
+    - 0: No error message.
+    - 1 ~ 6: The corresponding joint exceeds the limit position.
+    - 16 ~ 19: Collision protection.
+    - 32: Kinematics inverse solution has no solution.
+    - 33 ~ 34: Linear motion has no adjacent solution.
 
-**1.3** `is power on()`
+#### 1.4 `clear_error_information()`
 
-* **Function**: Determine whether the robot is powered on
+- **function:** Clear robot error message
 
-- **Return value:** 1- The robot is powered on 0 - The robot is powered off -1- Error
+### 2. Overall Status
 
-**1.4** `release_all_servos`
+#### 2.1 `power_on()`
 
-- **Function:** Set the robot to free movement mode (can swing the robot freely manually)
-
-- **Return value:** None
-
-**1.5** `is_controller_connected`
-
-- **Function:** Determine whether it is connected to Atom
-
-- **Return value:** 1- Connected 0 - Not connected -1- Error
-
-**1.6** `read_next_error()`
-
-- **Function:** Robotic arm error detection
-
-- **Return value:** 0- No abnormality 1 - Communication interruption 2 - Communication unstable 3 - Servo abnormality
-
-**1.7** `set_fresh_mode(mode)`
-
-- **Function:**: Set interpolation/refresh motion mode
-
-- **Parameter description:** mode: 0: Execute instructions in sequence 1: Execute the first instruction
-
-- **Return value:** 1- Robotic arm is powered on 0 - Robotic arm is powered off -1- Error
-
-**1.8** `get_fresh_mode()`
-
-- **Function:**: Query interpolation/refresh motion mode
-
-- **Return value:** 0: Execute instructions in sequence 1: Execute the first instruction
-
-### 2 Robotic arm operation status and settings
-
-**2.1** `pause()`
-
-- **Function:** Let the robot pause the current movement
-- **Return value:** None
-
-**2.2** `stop()`
-
-- **Function:** Let the robot stop all movements
-- **Return value:** None
-
-**2.3** `resume()`
-
-- **Function:** Let the robot resume the previously set movement
-- **Return value:** None
-
-**2.4** `is_paused()`
-
-- **Function:** Determine whether the robot is in a paused state
-- **Return value:** 1 - Paused 0 - Not paused -1 - Error
-
-**2.5** `get_speed()`
-
-- **Function:** Get the robot's movement speed
-- **Return value:** The robot's current set running speed, ranging from 1-100
-
-**2.6** `set_speed(speed)`
-
-- **Function:** Set the robot's movement speed
-- **Parameter description:** speed: Enter the speed range you want to set in 1-100, in mm/s
-- **Return value:** None
-
-**2.7** `get_joint_min_angle(joint_id)`
-
-- **Function:** Get the minimum angle that the specified joint can run to
-- **Parameter description:** `joint_id`: (`int`) The joint you specified, the range of mycobot series is 1~6, the range of mypalletizer series is 1-4, and the range of myArm series is 1-7
-- **Return value:** `angle`: The returned degree
-
-**2.8** `get_joint_max_angle(joint_id)`
-
-- **Function:** Get the maximum angle that the specified joint can run to
-- **Parameter description:** `joint_id`: (`int`) The range of the robot arm joint you specified, the range of mycobot series is 1~6, the range of mypalletizer series is 1-4, and the range of myArm series is 1-7
-- **Return value:** `angle`: (`float`) returned degrees
-
-**2.9** `is_servo_enable(servo id)`
-
-- **Function:** Determine whether the specified joint is connected
-- **Parameter description:** servo id: The joint you specified, the range of mycobot series is 1~6, the range of mypalletizer series is 1-4, and the range of myArm series is 1-7
-- **Return value:** (int) 1 - connected 0 - not connected -1 - error
-
-**2.10** `is_all_servo_enable()`
-
-- **Function:** Determine whether all joints of the robot are connected
-- **Return value:** (int) 1 - connected 0 - not connected -1 - error
-
-**2.11** `release_servo(servo_id)`
-
-- **Function:** Release the specified joint
-- **Parameter description:** servo id: (`int`) The specified joint of the robot arm, the range of mycobot series is 1~6, the range of mypalletizer series is 1-4, and the range of myArm series is 1-7
-- **Return value:** None
-
-**2.12** `get_tof_distance()`
-
-- **Function:** Get the detected distance (external distance detector is required)
-- **Return value:** The detected distance value in mm.
-
-**2.13** `get_error_information()`
-
-- **Function:** Get error information
+- **function:** atom open communication (default open)
 
 - **Return value:**
-- 0: No error information.
-- 1 ~ 6: The corresponding joint exceeds the limit.
-- 16 ~ 19: Collision protection.
-- 32: There is no solution for the inverse kinematics.
-- 33 ~ 34: There is no adjacent solution for linear motion.
+  - `1` - Power on completed.
 
-**2.14** `clear_error_information()`
+#### 2.2 `power_off()`
 
-- **Function:** Clear error information
-
-**2.15** `set_joint_min(id, angle)`
-
-- **Function:** Set the minimum angle that the specified joint can run to
-
-- **Parameter description:**
-- `id`: (`int`) The specified joint of the robot arm, ranging from 1 to 6
-- `angle`: The minimum angle that the joint can run to
-
-- **Return value:** None
-
-**2.16** `set_joint_max(id, angle)`
-
-- **Function:** Set the maximum angle that the specified joint can run to
-- **Parameter Description:**
-- `id`: (`int`) The specified joint of the robot arm, ranging from 1 to 6
-- `angle`: The maximum angle that the joint can run
-- **Return value:** None
-
-**2.17** `get_basic_version()`
-
-- **Function:** Get the firmware version
-- **Return value:** Firmware version (`float`)
-
-**2.18** `set_communicate_mode(mode)`
-
-- **Function:** Set the basic communication mode
-- **Parameter Description:** (`int`) 0 - Close 1- Open
-- **Return value:** None
-
-### 3 Enter program control mode (MDI mode)
-
-> **Note:** The limit of different series of robot arms is different, and the settable posture values ​​are also different. For details, please refer to the parameter introduction of the corresponding model
-
-**3.1** `get_angles()`
-
-- **Function:** Get all joint angles
-- **Return value:** `list` A list of floating point values ​​representing the angles of all joints
-
-**3.2** `send_angle(id, degree, speed)`
-
-- **Function:** Send the specified single joint movement to the specified angle
-- **Parameter description:**
-- `id`: Represents the joint of the robot arm. The six-axis has six joints and the four-axis has four joints. There is a specific representation method
-Representation of joint 1: `Angle.J1.value`. (Can also be represented by numbers 1-6)
-- `degree`: Indicates the angle of the joint
-- `speed`: Indicates the speed of the robot arm, ranging from 0 to 100
-- **Return value: ** None
-
-**3.3** `send_angles(degrees, speed)`
-
-- **Function: ** Send all angles to all joints of the robot arm
-- **Parameter description: **
-- `degrees`: (List[float]) Contains the angles of all joints. The six-axis robot has six joints, so the length is 6, and the four-axis length is 4. The representation method is: [20,20,20,20,20,20]
-- `speed`: Indicates the speed of the robot arm, ranging from 0 to 100
-- **Return value: ** None
-
-**3.4** `get_coords()`
-
-- **Function: ** Get the current coordinates and posture
-- **Return value: ** `list` Contains a list of coordinates and postures
-- Six-axis: The length is 6, in order of `[x, y, z, rx, ry, rz]`
-- Four-axis: length is 6, in order `[x, y, z, rx]`
-
-**3.5** `send_coord(id,coord,speed)`
-
-- **Function:** Send a single coordinate value to the robot for movement
-- **Parameter description:**
-- `id`: represents the coordinate of the robot, six-axis has six coordinates, four-axis has four coordinates, there is a specific representation method
-X coordinate representation: `Coord.X.value`, there is also a simple representation method: for example, X axis can be filled in 1, Y fill in 2, and so on
-- `coord`: Enter the coordinate value you want to reach
-- `speed`: Indicates the speed of the robot movement, the range is 0-100
-- **Return value:** None
-
-**3.6** `send_coords(coords, speed, mode)`
-
-- **Function:** Send the overall coordinates and posture to move the robot head from the original point to the specified point
-- **Parameter Description: **
-- `coords`:
-- Six-axis: [x,y,z,rx,ry,rz] coordinate value, length is 6
-- Four-axis: [x,y,z,rx] coordinate value, length is 4
-- `speed`: Indicates the speed of the robot movement, the range is 0-100
-- `mode`: ( `int`): The value is limited to 0 and 1
-- 0 means that the path of the robot head movement is nonlinear, that is, the route is randomly planned, as long as the robot head moves to the specified point while maintaining the specified posture.
-- 1 means that the path of the robot head movement is linear, that is, the intelligent planning route allows the robot head to move to the specified point in a straight line.
-- **Return value:** None
-
-**3.7** `get_encoders()`
-
-- **Function:** Get the potential values ​​of all joints of the robot
-
-- **Return value:** `list` contains the list of potential values ​​of all joints of the robot
-
-**3.8** `get_encoder(joint_id)`
-
-- **Function# API Description
-
-API (Application Programming Interface), that is, application program interface functions, are some predefined functions. When using the following function interfaces, please import our API library at the beginning, that is, enter the code below, otherwise it will not run successfully:
-
-```python
-#Applicable to myCobot, mechArm series
-from pymycobot.mycobot import MyCobot
-
-#Applicable to myPalletizer series
-from pymycobot.mypalletizer import MyPalletizer
-
-#Applicable to myBuddy series
-from pymycobot.mybuddy import MyBuddy
-
-#Applicable to myArm
-from pymycobot.myarm import MyArm
-```
-
-> **Note: **Some function interfaces have return values, but if you enter the code directly, the result returned is no return value. You need to use the `print` function to print out the result. For example, if you want to get the current speed value of the robot arm, you can use `get_speed()`, but directly entering the function will not result in any result. The correct way to write it is: `print(get_speed())` to print out the speed value. If the API description below states **no return value**, you do not need to use the `print` function. Otherwise, you need to use the `print` function to print the result.
-
-## myCobot / myPalletizer / mechArm / myArm
-
-### 1 Overall operation status of the robot
-
-**1.1** `power_on()`
-
-- **Function:** Power on the robot
-
-- **Return value:** None
-
-**1.2** `power_off()`
-
-- **Function:** Power off the robot, all functions will be invalid
-
-- **Return value:** None
-
-**1.3** `is power on()`
-
-* **Function**: Determine whether the robot is powered on
-
-- **Return value:** 1- The robot is powered on 0 - The robot is powered off -1- Error
-
-**1.4** `release_all_servos`
-
-- **Function:** Set the robot to free movement mode (can swing the robot freely manually)
-
-- **Return value:** None
-
-**1.5** `is_controller_connected`
-
-- **Function:** Determine whether it is connected to Atom
-
-- **Return value:** 1- Connected 0 - Not connected -1- Error
-
-**1.6** `read_next_error()`
-
-- **Function:** Robotic arm error detection
-
-- **Return value:** 0- No abnormality 1 - Communication interruption 2 - Communication unstable 3 - Servo abnormality
-
-**1.7** `set_fresh_mode(mode)`
-
-- **Function:**: Set interpolation/refresh motion mode
-
-- **Parameter description:** mode: 0: Execute instructions in sequence 1: Execute the first instruction
-
-- **Return value:** 1- Robotic arm is powered on 0 - Robotic arm is powered off -1- Error
-
-**1.8** `get_fresh_mode()`
-
-- **Function:**: Query interpolation/refresh motion mode
-
-- **Return value:** 0: Execute instructions in sequence 1: Execute the first instruction
-
-### 2 Robotic arm operation status and settings
-
-**2.1** `pause()`
-
-- **Function:** Let the robot pause the current movement
-- **Return value:** None
-
-**2.2** `stop()`
-
-- **Function:** Let the robot stop all movements
-- **Return value:** None
-
-**2.3** `resume()`
-
-- **Function:** Let the robot resume the previously set movement
-- **Return value:** None
-
-**2.4** `is_paused()`
-
-- **Function:** Determine whether the robot is in a paused state
-- **Return value:** 1 - Paused 0 - Not paused -1 - Error
-
-**2.5** `get_speed()`
-
-- **Function:** Get the robot's movement speed
-- **Return value:** The robot's current set running speed, ranging from 1-100
-
-**2.6** `set_speed(speed)`
-
-- **Function:** Set the robot's movement speed
-- **Parameter description:** speed: Enter the speed range you want to set in 1-100, in mm/s
-- **Return value:** None
-
-**2.7** `get_joint_min_angle(joint_id)`
-
-- **Function:** Get the minimum angle that the specified joint can run to
-- **Parameter description:** `joint_id`: (`int`) The joint you specified, the range of mycobot series is 1~6, the range of mypalletizer series is 1-4, and the range of myArm series is 1-7
-- **Return value:** `angle`: The returned degree
-
-**2.8** `get_joint_max_angle(joint_id)`
-
-- **Function:** Get the maximum angle that the specified joint can run to
-- **Parameter description:** `joint_id`: (`int`) The range of the robot arm joint you specified, the range of mycobot series is 1~6, the range of mypalletizer series is 1-4, and the range of myArm series is 1-7
-- **Return value:** `angle`: (`float`) returned degrees
-
-**2.9** `is_servo_enable(servo id)`
-
-- **Function:** Determine whether the specified joint is connected
-- **Parameter description:** servo id: The joint you specified, the range of mycobot series is 1~6, the range of mypalletizer series is 1-4, and the range of myArm series is 1-7
-- **Return value:** (int) 1 - connected 0 - not connected -1 - error
-
-**2.10** `is_all_servo_enable()`
-
-- **Function:** Determine whether all joints of the robot are connected
-- **Return value:** (int) 1 - connected 0 - not connected -1 - error
-
-**2.11** `release_servo(servo_id)`
-
-- **Function:** Release the specified joint
-- **Parameter description:** servo id: (`int`) The specified joint of the robot arm, the range of mycobot series is 1~6, the range of mypalletizer series is 1-4, and the range of myArm series is 1-7
-- **Return value:** None
-
-**2.12** `get_tof_distance()`
-
-- **Function:** Get the detected distance (external distance detector is required)
-- **Return value:** The detected distance value in mm.
-
-**2.13** `get_error_information()`
-
-- **Function:** Get error information
+- **function:** Power off of the robotic arm
 
 - **Return value:**
-- 0: No error information.
-- 1 ~ 6: The corresponding joint exceeds the limit.
-- 16 ~ 19: Collision protection.
-- 32: There is no solution for the inverse kinematics.
-- 33 ~ 34: There is no adjacent solution for linear motion.
+  - `1` - Power on completed.
 
-**2.14** `clear_error_information()`
+#### 2.3 `is_power_on()`
 
-- **Function:** Clear error information
-
-**2.15** `set_joint_min(id, angle)`
-
-- **Function:** Set the minimum angle that the specified joint can run to
-
-- **Parameter description:**
-- `id`: (`int`) The specified joint of the robot arm, ranging from 1 to 6
-- `angle`: The minimum angle that the joint can run to
-
-- **Return value:** None
-
-**2.16** `set_joint_max(id, angle)`
-
-- **Function:** Set the maximum angle that the specified joint can run to
-- **Parameter Description:**
-- `id`: (`int`) The specified joint of the robot arm, ranging from 1 to 6
-- `angle`: The maximum angle that the joint can run
-- **Return value:** None
-
-**2.17** `get_basic_version()`
-
-- **Function:** Get the firmware version
-- **Return value:** Firmware version (`float`)
-
-**2.18** `set_communicate_mode(mode)`
-
-- **Function:** Set the basic communication mode
-- **Parameter Description:** (`int`) 0 - Close 1- Open
-- **Return value:** None
-
-### 3 Enter program control mode (MDI mode)
-
-> **Note:** The limit of different series of robot arms is different, and the settable posture values ​​are also different. For details, please refer to the parameter introduction of the corresponding model
-
-**3.1** `get_angles()`
-
-- **Function:** Get all joint angles
-- **Return value:** `list` A list of floating point values ​​representing the angles of all joints
-
-**3.2** `send_angle(id, degree, speed)`
-
-- **Function:** Send the specified single joint movement to the specified angle
-- **Parameter description:**
-- `id`: Represents the joint of the robot arm. The six-axis has six joints and the four-axis has four joints. There is a specific representation method
-Representation of joint 1: `Angle.J1.value`. (Can also be represented by numbers 1-6)
-- `degree`: Indicates the angle of the joint
-- `speed`: Indicates the speed of the robot arm, ranging from 0 to 100
-- **Return value: ** None
-
-**3.3** `send_angles(degrees, speed)`
-
-- **Function: ** Send all angles to all joints of the robot arm
-- **Parameter description: **
-- `degrees`: (List[float]) Contains the angles of all joints. The six-axis robot has six joints, so the length is 6, and the four-axis length is 4. The representation method is: [20,20,20,20,20,20]
-- `speed`: Indicates the speed of the robot arm, ranging from 0 to 100
-- **Return value: ** None
-
-**3.4** `get_coords()`
-
-- **Function: ** Get the current coordinates and posture
-- **Return value: ** `list` Contains a list of coordinates and postures
-- Six-axis: The length is 6, in order of `[x, y, z, rx, ry, rz]`
-- Four-axis: length is 6, in order `[x, y, z, rx]`
-
-**3.5** `send_coord(id,coord,speed)`
-
-- **Function:** Send a single coordinate value to the robot for movement
-- **Parameter description:**
-- `id`: represents the coordinate of the robot, six-axis has six coordinates, four-axis has four coordinates, there is a specific representation method
-X coordinate representation: `Coord.X.value`, there is also a simple representation method: for example, X axis can be filled in 1, Y fill in 2, and so on
-- `coord`: Enter the coordinate value you want to reach
-- `speed`: Indicates the speed of the robot movement, the range is 0-100
-- **Return value:** None
-
-**3.6** `send_coords(coords, speed, mode)`
-
-- **Function:** Send the overall coordinates and posture to move the robot head from the original point to the specified point
-- **Parameter Description: **
-- `coords`:
-- Six-axis: [x,y,z,rx,ry,rz] coordinate value, length is 6
-- Four-axis: [x,y,z,rx] coordinate value, length is 4
-- `speed`: Indicates the speed of the robot movement, the range is 0-100
-- `mode`: ( `int`): The value is limited to 0 and 1
-- 0 means that the path of the robot head movement is nonlinear, that is, the route is randomly planned, as long as the robot head moves to the specified point while maintaining the specified posture.
-- 1 means that the path of the robot head movement is linear, that is, the intelligent planning route allows the robot head to move to the specified point in a straight line.
-- **Return value:** None
-
-**3.7** `get_encoders()`
-
-- **Function:** Get the potential values ​​of all joints of the robot
-
-- **Return value:** `list` contains the list of potential values ​​of all joints of the robot
-
-**3.8** `get_encoder(joint_id)`
-
-- **Function# API Description
-
-API (Application Programming Interface), that is, application program interface functions, are some predefined functions. When using the following function interfaces, please import our API library at the beginning, that is, enter the code below, otherwise it will not run successfully:
-
-```python
-#Applicable to myCobot, mechArm series
-from pymycobot.mycobot import MyCobot
-```
-
-> **Note: **Some function interfaces have return values, but if you enter the code directly, the result returned is no return value. You need to use the `print` function to print out the result. For example, if you want to get the current speed value of the robot arm, you can use `get_speed()`, but directly entering the function will not result in any result. The correct way to write it is: `print(get_speed())` to print out the speed value. If the API description below states **no return value**, you do not need to use the `print` function. Otherwise, you need to use the `print` function to print the result.
-
-## myCobot / myPalletizer / mechArm / myArm
-
-### 1 Overall operation status of the robot
-
-**1.1** `power_on()`
-
-- **Function:** Power on the robot
-
-- **Return value:** None
-
-**1.2** `power_off()`
-
-- **Function:** Power off the robot, all functions will be invalid
-
-- **Return value:** None
-
-**1.3** `is power on()`
-
-* **Function**: Determine whether the robot is powered on
-
-- **Return value:** 1- The robot is powered on 0 - The robot is powered off -1- Error
-
-**1.4** `release_all_servos`
-
-- **Function:** Set the robot to free movement mode (can swing the robot freely manually)
-
-- **Return value:** None
-
-**1.5** `is_controller_connected`
-
-- **Function:** Determine whether it is connected to Atom
-
-- **Return value:** 1- Connected 0 - Not connected -1- Error
-
-**1.6** `read_next_error()`
-
-- **Function:** Robotic arm error detection
-
-- **Return value:** 0- No abnormality 1 - Communication interruption 2 - Communication unstable 3 - Servo abnormality
-
-**1.7** `set_fresh_mode(mode)`
-
-- **Function:**: Set interpolation/refresh motion mode
-
-- **Parameter description:** mode: 0: Execute instructions in sequence 1: Execute the first instruction
-
-- **Return value:** 1- Robotic arm is powered on 0 - Robotic arm is powered off -1- Error
-
-**1.8** `get_fresh_mode()`
-
-- **Function:**: Query interpolation/refresh motion mode
-
-- **Return value:** 0: Execute instructions in sequence 1: Execute the first instruction
-
-### 2 Robotic arm operation status and settings
-
-**2.1** `pause()`
-
-- **Function:** Let the robot pause the current movement
-- **Return value:** None
-
-**2.2** `stop()`
-
-- **Function:** Let the robot stop all movements
-- **Return value:** None
-
-**2.3** `resume()`
-
-- **Function:** Let the robot resume the previously set movement
-- **Return value:** None
-
-**2.4** `is_paused()`
-
-- **Function:** Determine whether the robot is in a paused state
-- **Return value:** 1 - Paused 0 - Not paused -1 - Error
-
-**2.5** `get_speed()`
-
-- **Function:** Get the robot's movement speed
-- **Return value:** The robot's current set running speed, ranging from 1-100
-
-**2.6** `set_speed(speed)`
-
-- **Function:** Set the robot's movement speed
-- **Parameter description:** speed: Enter the speed range you want to set in 1-100, in mm/s
-- **Return value:** None
-
-**2.7** `get_joint_min_angle(joint_id)`
-
-- **Function:** Get the minimum angle that the specified joint can run to
-- **Parameter description:** `joint_id`: (`int`) The joint you specified, the range of mycobot series is 1~6, the range of mypalletizer series is 1-4, and the range of myArm series is 1-7
-- **Return value:** `angle`: The returned degree
-
-**2.8** `get_joint_max_angle(joint_id)`
-
-- **Function:** Get the maximum angle that the specified joint can run to
-- **Parameter description:** `joint_id`: (`int`) The range of the robot arm joint you specified, the range of mycobot series is 1~6, the range of mypalletizer series is 1-4, and the range of myArm series is 1-7
-- **Return value:** `angle`: (`float`) returned degrees
-
-**2.9** `is_servo_enable(servo id)`
-
-- **Function:** Determine whether the specified joint is connected
-- **Parameter description:** servo id: The joint you specified, the range of mycobot series is 1~6, the range of mypalletizer series is 1-4, and the range of myArm series is 1-7
-- **Return value:** (int) 1 - connected 0 - not connected -1 - error
-
-**2.10** `is_all_servo_enable()`
-
-- **Function:** Determine whether all joints of the robot are connected
-- **Return value:** (int) 1 - connected 0 - not connected -1 - error
-
-**2.11** `release_servo(servo_id)`
-
-- **Function:** Release the specified joint
-- **Parameter description:** servo id: (`int`) The specified joint of the robot arm, the range of mycobot series is 1~6, the range of mypalletizer series is 1-4, and the range of myArm series is 1-7
-- **Return value:** None
-
-**2.12** `get_tof_distance()`
-
-- **Function:** Get the detected distance (external distance detector is required)
-- **Return value:** The detected distance value in mm.
-
-**2.13** `get_error_information()`
-
-- **Function:** Get error information
+- **function:** judge whether robot arms is powered on or not
 
 - **Return value:**
-- 0: No error information.
-- 1 ~ 6: The corresponding joint exceeds the limit.
-- 16 ~ 19: Collision protection.
-- 32: There is no solution for the inverse kinematics.
-- 33 ~ 34: There is no adjacent solution for linear motion.
-
-**2.14** `clear_error_information()`
-
-- **Function:** Clear error information
-
-**2.15** `set_joint_min(id, angle)`
-
-- **Function:** Set the minimum angle that the specified joint can run to
-
-- **Parameter description:**
-- `id`: (`int`) The specified joint of the robot arm, ranging from 1 to 6
-- `angle`: The minimum angle that the joint can run to
-
-- **Return value:** None
-
-**2.16** `set_joint_max(id, angle)`
-
-- **Function:** Set the maximum angle that the specified joint can run to
-- **Parameter Description:**
-- `id`: (`int`) The specified joint of the robot arm, ranging from 1 to 6
-- `angle`: The maximum angle that the joint can run
-- **Return value:** None
-
-**2.17** `get_basic_version()`
-
-- **Function:** Get the firmware version
-- **Return value:** Firmware version (`float`)
-
-**2.18** `set_communicate_mode(mode)`
-
-- **Function:** Set the basic communication mode
-- **Parameter Description:** (`int`) 0 - Close 1- Open
-- **Return value:** None
-
-### 3 Enter program control mode (MDI mode)
-
-> **Note:** The limit of different series of robot arms is different, and the settable posture values ​​are also different. For details, please refer to the parameter introduction of the corresponding model
-
-**3.1** `get_angles()`
-
-- **Function:** Get all joint angles
-- **Return value:** `list` A list of floating point values ​​representing the angles of all joints
-
-**3.2** `send_angle(id, degree, speed)`
-
-- **Function:** Send the specified single joint movement to the specified angle
-- **Parameter description:**
-- `id`: Represents the joint of the robot arm. The six-axis has six joints and the four-axis has four joints. There is a specific representation method
-Representation of joint 1: `Angle.J1.value`. (Can also be represented by numbers 1-6)
-- `degree`: Indicates the angle of the joint
-- `speed`: Indicates the speed of the robot arm, ranging from 0 to 100
-- **Return value: ** None
-
-**3.3** `send_angles(degrees, speed)`
-
-- **Function: ** Send all angles to all joints of the robot arm
-- **Parameter description: **
-- `degrees`: (List[float]) Contains the angles of all joints. The six-axis robot has six joints, so the length is 6, and the four-axis length is 4. The representation method is: [20,20,20,20,20,20]
-- `speed`: Indicates the speed of the robot arm, ranging from 0 to 100
-- **Return value: ** None
-
-**3.4** `get_coords()`
-
-- **Function: ** Get the current coordinates and posture
-- **Return value: ** `list` Contains a list of coordinates and postures
-- Six-axis: The length is 6, in order of `[x, y, z, rx, ry, rz]`
-- Four-axis: length is 6, in order `[x, y, z, rx]`
-
-**3.5** `send_coord(id,coord,speed)`
-
-- **Function:** Send a single coordinate value to the robot for movement
-- **Parameter description:**
-- `id`: represents the coordinate of the robot, six-axis has six coordinates, four-axis has four coordinates, there is a specific representation method
-X coordinate representation: `Coord.X.value`, there is also a simple representation method: for example, X axis can be filled in 1, Y fill in 2, and so on
-- `coord`: Enter the coordinate value you want to reach
-- `speed`: Indicates the speed of the robot movement, the range is 0-100
-- **Return value:** None
-
-**3.6** `send_coords(coords, speed, mode)`
-
-- **Function:** Send the overall coordinates and posture to move the robot head from the original point to the specified point
-- **Parameter Description: **
-- `coords`:
-- Six-axis: [x,y,z,rx,ry,rz] coordinate value, length is 6
-- Four-axis: [x,y,z,rx] coordinate value, length is 4
-- `speed`: Indicates the speed of the robot movement, the range is 0-100
-- `mode`: ( `int`): The value is limited to 0 and 1
-- 0 means that the path of the robot head movement is nonlinear, that is, the route is randomly planned, as long as the robot head moves to the specified point while maintaining the specified posture.
-- 1 means that the path of the robot head movement is linear, that is, the intelligent planning route allows the robot head to move to the specified point in a straight line.
-- **Return value:** None
-
-**3.7** `get_encoders()`
-
-- **Function:** Get the potential values ​​of all joints of the robot
-
-- **Return value:** `list` contains the list of potential values ​​of all joints of the robot
-
-**3.8** `get_encoder(joint_id)`
-
-- **Function：** Get the potential value of a single joint specified by the robot
-- **Parameter Description:**
-- `joint_id`: Represents the joint of the robot. The six-axis robot has six joints, so the length is 6, and the four-axis length is 4. There is a specific representation method.
-Joint one representation: `Angle.J1.value` (can also be represented by numbers 1-6)
-- **Return value:** The potential value of the single joint you specified
-
-**3.9** `set_encoder(joint_id, encoder)`
-
-- **Function:** Send the specified single joint movement to the specified potential value
-- **Parameter Description:**
-- `joint_id`: Represents the joint of the robot. The six-axis robot has six joints, so the length is 6, and the four-axis length is 4. There is a specific representation method.
-Joint one representation: `Angle.J1.value` (can also be represented by numbers 1-6)
-- `encoder`: Represents the potential value of the robot, the value range is 0 ~ 4096
-- **Return value:** None
-
-**3.10** `set_encoders(encoders, sp)`
-
-- **Function:** Send potential value to all joints of the robot
-
-- **Parameter description:**
-- `encoder`: Indicates the potential value of the robot, the value range is 0 ~ 4096, the length of the six-axis is 6, the length of the four-axis is 4, the representation method is: [2048,2048,2048,2048,2048,2048]
-- `sp`: Indicates the speed of the robot movement, the value range is 0-100
-- **Return value:** None
-
-**3.11** `get_radians()`
-
-- **Function:** Get the radian of all joints
-
-- **Return value:** `list` contains a list of all joint radian values
-
-**3.12** `send_radians(radians, speed)`
-
-- **Function:** Send radian value to all joints of the robot
-- **Parameter description:**
-- `radians`: indicates the radian value of the robot arm
-- **Return value:** None
-
-**3.13** `sync_send_angles(degrees, speed, timeout=7)`
-
-- **Function:** Synchronously send angles and return when reaching the target point
-- **Parameter description:**
-- `degrees`: list of angle values ​​of each joint ( `List[float]`)
-- `speed`: ( `int`) speed of the robot arm movement, the value range is 0-100.
-- `timeout`: default time is 7s
-- **Return value: ** None
-
-**3.14** `sync_send_coords(coords, speed, mode)`
-
-- **Function: ** Synchronously send coordinates and return when reaching the target point
-- **Parameter description: **
-- `coords`: coordinate value list ( `List[float]`),
-- Six-axis: length is 6, in order `[x, y, z, rx, ry, rz]`
-- Four-axis: length is 6, in order `[x, y, z, rx]`
-- `speed`: ( `int`) speed of the robot movement, the value range is 0-100
-- **Return value: ** None
-
-**3.15** `is_in_position(data, flag)`
-
-- **Function: ** Determine whether the robot has reached the specified position
-- **Parameter description: **
-- `data`: The set of data you provide can be an angle or a coordinate value, such as: [10,20,20,10,20,10]
-- `flag`: data type (value range 0 or 1)
-- `0`: indicates that the value entered is an angle value
-- `1`: indicates that the value entered is a coordinate value
-- **Return value:** 1 - reached 0 - not reached -1 - error
-
-**3.16** `is_moving()`
-
-- **Function:** Determine whether the robot arm is moving
-- **Return value:** 1 - moving 0 - not moving -1 - error
-
-**3.17** `set_color(r, g, b)`
-
-- **Function:** Set the light color on the top of the robot arm (LED light control)
-- **Parameter description:** r, g, b indicate the light color value on the top of the robot
-- `r`: 0 ~ 255
-- `g`: 0 ~ 255
-- `b`: 0 ~ 255
-- **Return value: **None
-
-**3.18** `set_encoders_drag(encoders, speeds)`
-
-- **Function: **Send all potential values ​​and speeds
-- **Parameter description: **
-- `encoders`: Potential values ​​of all joints of the robot arm (list)
-- `speed`: Speed ​​of all joints of the robot arm
-- **Return value: **None
-
-**3.19** `get_solution_angles()`
-
-- **Function: **Get the deflection angle value (only for MyArm)
-- **Return value: **None
-
-**3.20** `set_solution_angles(angle, speed)`
-
-- **Function: **Set the deflection angle value (only for MyArm)
-- **Parameter description: **
-- `angle`: Angle of the first joint
-- `speed`: Speed ​​(0 - 100)
-- **Return value: **None
-
-**3.21** `set_solution_angles(angle, speed)`
-
-- **Function:** Set the deflection angle value (only for MyArm)
-- **Parameter description:**
-- `angle`: Angle of the first joint
-- `speed`: Speed ​​(0 - 100)
-- **Return value:** None
-
-**3.16** `set_solution_angles(angle, speed)`
-
-- **Function:** Set the deflection angle value (only for MyArm)
-- **Parameter description:**
-- `angle`: Angle of the first joint
-- `speed`: Speed ​​(0 - 100)
-- **Return value:** None
-
-**3.17** `get_transponder_mode()`
-
-- **Function:** Get the configuration information of serial port transmission (only for MyArm)
-- **Return value:** None
-- `0`: Turn off transparent transmission
-- `1`: Turn on transparent transmission and detect all data
-- `2`: turn on transparent transmission, only detect the configuration information of the communication forwarding mode (default is 0)
-
-**3.18** `set_transponder_mode(mode)`
-
-- **Function:** Set the serial port transmission mode (only for MyArm)
-
-- **Parameter description:**
-
-- `0`: turn off transparent transmission
-
-- `1`: turn on transparent transmission, detect all data
-
-- `2`: turn on transparent transmission, only detect the configuration information of the communication forwarding mode
-
-- **Return value:** None
-
-### 4 JOG mode and operation
-
-**4.1** `jog_angle(joint_id, direction, speed)`
-
-- **Function:** Control the robot to move continuously at the specified angle
-
-- **Parameter description:**
-
-- `joint_id`: represents the joint of the robot arm, enter 1~6 according to the joint id
-
-- `direction`: mainly controls the direction of movement of the robot arm, enter 0 for negative movement, enter 1 for positive movement
-
-- `speed`: speed 0 ~ 100
-- **Return value: **None
-
-**4.2** `jog_coord(coord_id, direction, speed)`
-
-- **Function: **Control the robot to move continuously according to the specified coordinate or posture value
-- **Parameter description: **
-- `coord_id`: Represents the joint of the robot arm, enter 1~6 according to the joint id
-- `direction`: Mainly controls the direction of movement of the robot arm, enter 0 for negative movement, and enter 1 for positive movement
-- `speed`: Speed ​​0 ~ 100
-- **Return value: **None
-
-**4.3** `jog_stop()`
-
-- **Function: **Stop continuous movement under jog control
-- **Return value: **None
-
-**4.4** `jog_absolute(joint_id, angle, speed)`
-
-- **Function: **Control a specific joint of the robot to move to a specified angle
-- **Parameter description: **
-- `joint_id`: represents the joint of the robot arm, enter 1~6 according to the joint id
-- `angle`: specifies the angle of joint movement
-- `speed`: speed 0 ~ 100
-- **Return value: ** None
-
-**4.5** `jog_increment(joint_id, angle, speed)`
-
-- **Function: ** Step mode, make the movement angle run at a given increment
-- **Parameter description: **
-- `joint_id`: represents the joint of the robot arm, enter 1~6 according to the joint id
-- `angle`: Increment range
-- `speed`: speed 0 ~ 100
-- **Return value: ** None
-
-### 5 Servo control and operation
-
-<!-- **5.1** `set_servo_data(servo_no, data_id, value)`
-
-- **Function: ** Set the data parameters of the specified address of the servo
-- **Parameter description: **
-- `servo_no`: servo serial number, enter 1 - 6 according to joint id
-- `data_id`: data address
-- `value`: value range 0 - 4096
-- **Return value:** None
-
-**5.2** `get_servo_data(servo_no, data_id)`
-
-- **Function:** Read the data parameters of the specified address of the servo.
-- **Parameter description:**
-- `servo_no`: the serial number of each servo, enter 1 - 6 according to the joint id
-- `data_id`: data address
-- **Return value:** data parameter value, range 0-4096 -->
-
-**5.1** `set_servo_calibration(servo_no)`
-
-- **Function:** Calibrate the specified joint, set the current position as the angle zero point, the corresponding potential value is 2048
-- **Parameter description:** servo_no:(`int`): the specified joint of the robot arm, the range of mycobot series is 1~6, the range of mypalletizer series is 1-4, and the range of myArm series is 1-7
-- **Return value:** None
-
-**5.2** `focus_servo(servo_id)`
-
-- **Function:** Power on the specified joint
-- **Parameter description:** servo id: (`int`): The specified joint of the robot arm, the range of mycobot series is 1~6, the range of mypalletizer series is 1-4, and the range of myArm series is 1-7
-- **Return value: ** None
-
-**5.3** `joint_brake(joint_id)`
-
-- **Function: ** Stop the joint from moving, the buffer distance is positively correlated with the current speed
-- **Parameter description: ** joint_id: (`int`): The specified joint of the robot arm, the range is 1~7
-- **Return value: ** None
-
-**5.4** `get_servo_speeds()`
-
-- **Function: ** Get the joint running speed
-- **Return value: ** (`list`) The running speed of each joint
-
-**5.5** `get_servo_currents()`
-
-- **Function: ** Get the current running speed of the joint
-- **Return value: ** (`list`) The speed of each joint
-
-**5.6** `get_servo_voltages()`
-
-- **Function: ** Get joint voltage
-- **Return value:** (`list`) Voltage of each joint
-
-**5.7** `get_servo_status()`
-
-- **Function:** Get joint status
-- **Return value:** (`list`) Status of each joint
-
-**5.8** `get_servo_temps()`
-
-- **Function:** Get joint temperature
-- **Return value:** (`list`) Temperature of each joint
-
-### 6 Atom terminal IO control
-
-**6.1** `set_pin_mode(pin_no, pin_mode)`
-
-- **Function:** Set the status mode of the specified pin in atom
-- **Parameter description:**
-
-- `pin_no` (int): The specific pin number on the top of the robot
-- `pin_mode` (int): Limited to 0~2
-- 0 is set to the running state
-- 1 is set to the stop state
-- 2 is set to the pull-up mode
-- **Return value: ** None
-
-**6.2** `set_digital_output(pin_no, pin_signa)`
-
-- **Function: ** Set the working state of the end pin number
-- **Parameter description: **
-- `pin_no`( `int`) The number marked at the end of the device only takes the digital part
-- `pin_signal`( `int`): Input 0 means set to the running state, input 1 means stop state
-- **Return value: ** None
-
-**6.3** `get_digital_input(self, pin_no):`
-
-- **Function: ** Get the working state of the end pin number
-- **Parameter description: ** `pin_no`: Indicates the specific pin number at the end of the robot
-- **Return value: ** `pin_signal`( `int`) When the returned value is 0, it means it is running in the working state, and 1 means it is stopped.
-
-**6.4** `set_pwm_output(channel, frequency, pin_val):`
-
-- **Function:** Pulse width modulation control
-- **Parameter description:**
-- `channel`(`int`): The specific pin number on the top of the robot
-- `frequency`(`int`): Clock frequency
-- `pin_val`(`int`): Duty cycle 0~256; 128 is 50%
-- **Return value:** None
-
-### 7 Gripper control
-
-**7.1** `is_gripper_moving()`
-
-- **Function:** Determine whether the gripper is running
+  - `1`: power on
+  - `0`: power off
+  - `-1`: error
+
+#### 2.4 `release_all_servos()`
+
+- **function:** release all robot arms
+  - Attentions：After the joint is disabled, it needs to be enabled to control within 1 second
+- **Parameters**：`data`（optional）：The way to relax the joints. The default is damping mode, and if the 'data' parameter is provided, it can be specified as non damping mode (1- Undamping).
 - **Return value:**
-- `0`: Indicates that the gripper of the robot arm is not running
-- `1`: Indicates that the gripper of the robot arm is running
-- `-1`: Indicates an error
+  - `1` - release completed.
 
-**7.2** `set_gripper_value(value, speed, gripper_type=None)`
+#### 2.5 `focus_servos(servo_id)`
 
-- **Function:** Let the gripper rotate to the specified position at the specified speed
-- **Parameter description:**
-- `value`: Indicates the position that the gripper is going to reach, with a value range of 0~100
-- `speed`: Indicates the speed at which the gripper rotates, with a value range of 0~100
-- `gripper_type`: Gripper type, the default is adaptive gripper
-- `1`: Adaptive gripper
-- `3`: Parallel gripper
-- `4`: Flexible gripper
-- **Return value:** None
+- **function:** Power on designated servo
 
-**7.3** `get_gripper_value(gripper_type=None)`
+- **Parameters:** 
+  - `servo_id:` int, 1-6
 
-- **Function:** Get the current position data information of the gripper
-- **Parameter description:**
-- `gripper_type`: Gripper type, the default is adaptive gripper
-- `1`: Adaptive gripper
-- `3`: Parallel gripper
-- `4`: Flexible gripper
-- **Return value:** Gripper data information
+- **Return value:**
+  - `1`: complete
 
-**7.4** `set_gripper_state(flag, speed， _type=None)`
+#### 2.6 `is_controller_connected()`
 
-- **Function:** Let the gripper enter the specified state at the specified speed
-- **Parameter description:**
-- `flag`: 1 indicates the gripper is closed, 0 indicates the gripper is open.
-- `speed`: indicates how fast to reach the specified state, the value range is 0~100
-- `_type`: Gripper type, the default is adaptive gripper
-- `1`: Adaptive gripper
-- `2`: Five-finger dexterous hand
-- `3`: Parallel gripper
-- `4`: Flexible gripper
-- **Return value: ** None
+- **function:** Wether connected with Atom
 
-**7.5** `move_round()`
+- **Return value:**
+  - `1`: succeed
+  - `0`: failed
+  - `-1`: error data
 
-- **Function:** Drive the four-piece chess servo to rotate counterclockwise, and it takes 1.5s to complete a circle
+#### 2.7 `read_next_error()`
 
-**7.6** `set_eletric_gripper(status)`
+- **function:** Robot Error Detection
 
-- **Function:** Set the gripper mode (only works on 350)
-- **Parameter description:** `status`: 1 indicates the gripper is closed, 0 indicates the gripper is open.
-- **Return value: **None
+- **Return value:** list len 6
+  - `0`: No abnormality
+  - `1`: Communication disconnected
+  - `2`: Unstable communication
+  - `3`: Servo abnormality
+  
+#### 2.8 `get_fresh_mode()`
 
-**7.7** `set_gripper_mode(status)`
+- **function:** Query sports mode
 
-- **Function: **Set gripper mode
+- **Return value:** 
+  - `0`: Interpolation mode
+  - `1`: Refresh mode
 
-- **Parameter description: ** `status`: 1 transparent mode, 0 I/O mode
+#### 2.9 `set_fresh_mode()`
 
-- **Return value: **None
+- **function:** Set command refresh mode
+  
+- **Parameters:**
+  - `1`: Always execute the latest command first.
+  - `0`: Execute instructions sequentially in the form of a queue.
 
-**7.8** `get_gripper_mode()`
+- **Return value:** 
+  - `1`: complete
 
-- **Function: **Get gripper status
+#### 2.10 `set_free_mode()`
 
-- **Return value: ** `status(int)`: 0 - transparent mode 1 - I/O mode
+- **function:** set to free mode
+  
+- **Parameters:**
+  - `1`: open free mode
+  - `0`: close free mode
 
-**7.9** `set_HTS_gripper_torque(torque)`
+- **Return value:** 
+  - `1`: complete
 
-- **Function: **Set adaptive gripper torque
+#### 2.11 `is_free_mode()`
 
-- **Parameter description: **
-- `torque`: 150 ~ 900
+- **function:** Check if it is free mode
 
-- **Return value: **0 - Setting failed; 1 - Setting successful
+- **Return value:** 
+  - `1`: free mode
+  - `0`: on-free mode
 
-**7.10** `get_HTS_gripper_torque()`
+### 3.MDI Mode and Operation
 
-- **Function: **Get adaptive gripper torque
+#### 3.1 `get_angles()`
 
-- **Return value: ** 150 ~ 900
+- **function:** get the degree of all joints
+- **Return value**: `list  `a float list of all degree
 
-**7.11** `get_gripper_protect_current()`
+#### 3.2 `send_angle(id, degree, speed)`
 
-- **Function:** Get the gripper protection current
+- **function:** send one degree of joint to robot arm
+- **Parameters:**
+  - `id`: Joint id(`genre.Angle`), range int 1-6
+  - `degree`: degree value(`float`)
+    | Joint Id | range |
+    | ---- | ---- |
+    | 1 | -168 ~ 168 |
+    | 2 | -135 ~ 135 |
+    | 3 | -150 ~ 150 |
+    | 4 | -145 ~ 145 |
+    | 5 | -165 ~ 165 |
+    | 6 | -180 ~ 180 |
 
-- **Return value:** 1 ~ 500
+  - `speed`：the speed and range of the robotic arm's movement 1~100
+- **Return value:** 
+  - `1`: complete
 
-**7.12** `init_gripper()`
+#### 3.3 `send_angles(angles, speed)`
 
-- **Function:** Initialize the gripper
+- **function：** Send all angles to all joints of the robotic arm
+- **Parameters:**
+  - `angles`: a list of degree value(`List[float]`), length 6
+  - `speed`: (`int`) 1 ~ 100
+- **Return value:** 
+  - `1`: complete
 
-- **Return value:** 0 - Initialization failed; 1 - Initialization successful
+#### 3.4 `get_coords()`
 
-**7.13** `set_gripper_protect_current(current)`
+- **function:** Obtain robot arm coordinates from a base based coordinate system
+- **Return value:** a float list of coord:[x, y, z, rx, ry, rz]
 
-- **Function:** Set the gripper protection current
+#### 3.5 `send_coord(id, coord, speed)`
 
-- **Parameter description:**
-- `current`: 1 ~ 500
-- **Return value:** 0 - Initialization failed; 1 - Initialization successful
+- **function:** send one coord to robot arm
+- **Parameters:**
+  - `id`:send one coord to robot arm, 1-6 corresponds to [x, y, z, rx, ry, rz]
+  - `coord`: coord value(`float`)
+    | Coord Id | range |
+    | ---- | ---- |
+    | x | -281.45 ~ 281.45 |
+    | y | -281.45 ~ 281.45 |
+    | z | -70 ~ 412.67 |
+    | rx | -180 ~ 180 |
+    | ry | -180 ~ 180 |
+    | rz | -180 ~ 180 |
+  - `speed`: (`int`) 1-100
+- **Return value:** 
+  - `1`: complete
 
-### 8 Base BasicIO control
+#### 3.6 `send_coords(coords, speed, mode)`
 
-**8.1** `get_basic_input(pin_no)`
+- **function:**: Send overall coordinates and posture to move the head of the robotic arm from its original point to your specified point
+- **Parameters:**
+  - coords: ： a list of coords value `[x,y,z,rx,ry,rz]`,length6
+  - speed`(int)`: 1 ~ 100
+  - mode: `(int)` 0 - angluar, 1 - linear
+- **Return value:** 
+  - `1`: complete
 
-- **Function:** Get the working status of the bottom pin number
-- **Parameter description:** `pin_no`: Indicates the specific pin number at the bottom of the robot.
-- **Return value:** `pin_signal`(`int`) When the returned value is 0, it means it is running in working state, and 1 means it is stopped.
+#### 3.7 `pause()`
 
-**8.2** `set_basic_output(pin_no, pin_signal)`
+- **function:** Control the instruction to pause the core and stop all movement instructions
+- **Return value**:
+  - `1` - stopped
+  - `0` - not stop
+  - `-1` - error
 
-- **Function:** Set the working state of the bottom pin number.
-- **Parameter description:**
-- `pin_no`( `int`) The number marked on the bottom of the device is only the digital part
-- `pin_signal`( `int`): Enter 0 to set it to running state, enter 1 to stop state
-- **Return value:** None
+#### 3.8 `sync_send_angles(angles, speed, timeout=15)`
 
-### 9 socket communication
+- **function：** Send the angle in synchronous state and return when the target point is reached
+- **Parameters:**
+  - `angles`: a list of degree value(`List[float]`), length 6
+  - `speed`: (`int`) 1 ~ 100
+  - `timeout`: default 15 seconds
+- **Return value:**
+  - `1`: complete
 
-> The robot arm needs to open the server, the server file is [here](https://github.com/elephantrobotics/pymycobot/blob/main/demo/Server.py).
+#### 3.9 `sync_send_coords(coords, speed, mode=0, timeout=15)`
 
-```python
-# for mycobot,mecharm
-from pymycobot import MyCobotSocket
+- **function：** Send the coord in synchronous state and return when the target point is reached
+- **Parameters:**
+  - `coords`: a list of coord value(`List[float]`), length 6
+  - `speed`: (`int`) 1 ~ 100
+  - `mode`: (`int`) 0 - angular（default）, 1 - linear
+  - `timeout`: default 15 seconds
+- **Return value:**
+  - `1`: complete
 
-mc = MyCobotSocket("192.168.1.10", 9000)
+#### 3.10 `get_angles_coords()`
 
-print(mc.get_angles())
+- **function：** Get joint angles and coordinates
 
-```
+- **Return value:** A list with a length of 12. The first six digits are angle information, and the last six digits are coordinate information. 
 
-### 10 TCPIP
+#### 3.11 `is_paused()`
 
-**10.1** `set_ssid_pwd(account, password)`
+- **function:** Check if the program has paused the move command
+- **Return value:**
+  - `1` - paused
+  - `0` - not paused
+  - `-1` - error
 
-- **Function:** Change the connected wifi (applicable to m5 or seed)
-- **Parameter description:**
-- `account`( `str`): new wifi account
-- `password`( `str`): new wifi password
-- **Return value:** None
+#### 3.12 `resume()`
 
-**10.2** `get_ssid_pwd()`
+- **function:** resume the robot movement and complete the previous command
+- **Return value:**
+  - `1` - complete
 
-- **Function:** Get the connected wifi account and password (applicable to m5 or seed)
-- **Return value:** The currently connected wifi account and password
+#### 3.13 `stop()`
 
-**10.3** `set_server_port(port)`
+- **function:** stop all movements of robot
+- **Return value**:
+  - `1` - stopped
+  - `0` - not stop
+  - `-1` - error
 
-- **Function:** Change the server connection port
-- **Parameter description:**
-- `port`( `int`) The new connection port of the server
-- **Return value:** None
+#### 3.14 `is_in_position(data, flag)`
 
-### 11 utils (module)
+- **function** : judge whether in the position.
+- **Parameters:**
+  - data: Provide a set of data that can be angles or coordinate values. If the input angle length range is 6, and if the input coordinate value length range is 6
+  - flag data type (value range 0 or 1)
+    - `0`: angle
+    - `1`: coord
+- **Return value**:
+  - `1` - true
+  - `0` - false
+  - `-1 ` - error
+
+#### 3.15 `is_moving()`
+
+- **function:** judge whether the robot is moving
+- **Return value:**
+  - `1` moving
+  - `0` not moving
+  - `-1` error
+
+### 4. JOG Mode and Operation
+
+#### 4.1 `jog_angle(joint_id, direction, speed)`
+
+- **function:** jog control angle
+- **Parameters**:
+  - `joint_id`: Represents the joints of the robotic arm, represented by joint IDs ranging from 1 to 6
+  - `direction(int)`: To control the direction of movement of the robotic arm, input `0` as negative value movement and input `1` as positive value movement
+  - `speed`: 1 ~ 100
+- **Return value:**
+  - `1`: complete
+
+#### 4.2 `jog_coord(coord_id, direction, speed)`
+
+- **function:** jog control coord.
+- **Parameters:**
+  - `coord_id`: (`int`) Coordinate range of the robotic arm: 1~6
+  - `direction`: (`int`) To control the direction of machine arm movement, `0` - negative value movement, `1` - positive value movement
+  - `speed`: 1 ~ 100
+- **Return value:**
+  - `1`: complete
+
+#### 4.3 `jog_rpy(end_direction, direction, speed)`
+
+- **function:** Rotate the end around a fixed axis in the base coordinate system
+- **Parameters:**
+  - `end_direction`: (`int`) Roll, Pitch, Yaw (1-3)
+  - `direction`: (`int`) To control the direction of machine arm movement, `1` - forward rotation, `0` - reverse rotation
+  - `speed`: (`int`) 1 ~ 100
+- **Return value:**
+  - `1`: complete
+
+#### 4.4 `jog_increment(joint_id, increment, speed)`
+
+- **function:** Single joint angle increment control
+- **Parameters**:
+  - `joint_id`: 1-6
+  - `increment`: Incremental movement based on the current position angle
+  - `speed`: 1 ~ 100
+
+#### 4.5 `set_encoder(joint_id, encoder, speed)`
+
+- **function**: Set a single joint rotation to the specified potential value
+
+- **Parameters**
+
+  - `joint_id`: (`int`) 1-6
+  - `encoder`: 0 ~ 4096
+  - `speed`: 1 ~ 100
+- **Return value:**
+  - `1`: complete
+
+#### 4.6 `get_encoder(joint_id)`
+
+- **function**: Set a single joint rotation to the specified potential value
+
+- **Parameters**
+
+  - `joint_id`: (`int`) 1-6
+
+- **Return value:** (`int`) Joint potential value
+
+#### 4.7 `set_encoders(encoders, speed)`
+
+- **function**: Set the six joints of the manipulator to execute synchronously to the specified position.
+
+- **Parameters**
+
+  - `joint_id`: (`int`) 1-6
+  - `encoder`: 0 ~ 4096
+  - `speed`: 1 ~ 100
+- **Return value:**
+  - `1`: complete
+
+#### 4.8 `get_encoders()`
+
+- **function**: Get the six joints of the manipulator.
+
+- **Return value:** (`list`) the list of encoders
+
+### 5. Running status and Settings
+
+#### 5.1 `get_joint_min_angle(joint_id)`
+
+- **function:** Gets the minimum movement angle of the specified joint
+- **Parameters:**
+  - ` joint_id` : Enter joint ID (range 1-6)
+- **Return value**：`float` Angle value
+
+#### 5.2 `get_joint_max_angle(joint_id)`
+
+- **function:** Gets the maximum movement angle of the specified joint
+- **Parameters:**
+  - ` joint_id` : Enter joint ID (range 1-6)
+- **Return value:** `float` Angle value
+
+#### 5.3 `set_joint_min(id, angle)`
+
+- **function:** Set minimum joint angle limit
+- **Parameters:**
+  - `id` : Enter joint ID (range 1-6)
+  - `angle`: Refer to the limit information of the corresponding joint in the [send_angle()](#32-send_angleid-degree-speed) interface, which must not be less than the minimum value
+- **Return value:**
+  - `1`: complete
+
+#### 5.4 `set_joint_max(id, angle)`
+
+- **function:** Set maximum joint angle limit
+- **Parameters:**
+  - `id` : Enter joint ID (range 1-6)
+  - `angle`: Refer to the limit information of the corresponding joint in the [send_angle()](#32-send_angleid-degree-speed) interface, which must not be greater than the maximum value
+- **Return value:**
+  - `1`: complete
+  
+### 6. Joint motor control
+
+#### 6.1 `is_servo_enable(servo_id)`
+
+- **function:** Detecting joint connection status
+- **Parameters:** `servo id` 1-6
+- **Return value:**
+  - `1`: Connection successful
+  - `0`: not connected
+  - `-1`: error
+
+#### 6.2 `is_all_servo_enable()`
+
+- **function:** Detect the status of all joint connections
+- **Return value:**
+  - `1`: Connection successful
+  - `0`: not connected
+  - `-1`: error
+
+#### 6.3 `set_servo_calibration(servo_id)`
+
+- **function:** The current position of the calibration joint actuator is the angle zero point
+- **Parameters**:
+  - `servo_id`: 1 - 6
+- **Return value:**
+  - `1`: complete
+
+#### 6.4 `release_servo(servo_id)`
+
+- **function:** Set the specified joint torque output to turn off
+- **Parameters**:
+  - `servo_id`: 1 ~ 6
+- **Return value:**
+  - `1`: release successful
+  - `0`: release failed
+  - `-1`: error
+
+#### 6.5 `focus_servo(servo_id)`
+
+- **function**: Set the specified joint torque output to turn on
+- **Parameters**: `servo_id`: 1 ~ 6
+- **Return value:**
+  - `1`: focus successful
+  - `0`: focus failed
+  - `-1`: error
+
+#### 6.6 `set_servo_data(servo_id, data_id,  value, mode=None）`
+
+- **function:** Set the data parameters of the specified address of the steering gear
+- **Parameters**：
+  - `servo_id`: (`int`) joint id 1 - 6
+  - `data_id`: (`int`) Data address
+  - `value`: (`int`) 0 - 4096
+  - `mode`: 0 - indicates that value is one byte(default), 1 - 1 represents a value of two bytes.
+- **Return value:** 
+  - `1`: complete
+
+#### 6.7 `get_servo_data(servo_id, data_id, mode=None）`
+
+- **function:** Read the data parameter of the specified address of the steering gear.
+- **Parameters**：
+  - `servo_id`: (`int`) joint id 1 - 6
+  - `data_id`: (`int`) Data address
+  - `mode`: 0 - indicates that value is one byte(default), 1 - 1 represents a value of two bytes.
+- **Return value:** 0 ~ 4096
+
+#### 6.8 `joint_brake(joint_id）`
+
+- **function:** Make it stop when the joint is in motion, and the buffer distance is positively related to the existing speed
+- **Parameters**：
+  - `joint_id`: (`int`) joint id 1 - 6
+
+- **Return value:**
+  - `1`: complete
+
+### 7. 9g Servo
+
+#### 7.1 `move_round()`
+
+- **function**：Drive the 9g steering gear clockwise for one revolution
+- **Return value**：
+  - `1`: complete
+
+#### 7.2 `set_four_pieces_zero()`
+
+- **function**：Set the zero position of the four-piece motor
+- **Return value**：
+  - `1`: success
+  - `0`: failed
+
+### 8. Servo state value
+
+#### 8.1 `get_servo_speeds()`
+
+- **function**：Get the movement speed of all joints
+- **Return value**： A list unit step/s
+
+#### 8.2 `get_servo_voltages()`
+
+- **function**：Get joint voltages
+- **Return value**： A list volts < 24 V
+
+#### 8.3 `get_servo_status()`
+
+- **function**：Get the movement status of all joints
+- **Return value**： A list,[voltage, sensor, temperature, current, angle, overload], a value of `0` means no error, a value of `1` indicates an error
+
+#### 8.4 `get_servo_temps()`
+
+- **function**：Get joint temperature
+- **Return value**： A list unit ℃
+
+### 9. Robotic arm end IO control
+
+#### 9.1 `set_color(r, g, b)`
+
+- **function**: Set the color of the end light of the robotic arm
+
+- **Parameters**:
+
+  - `r (int)`: 0 ~ 255
+
+  - `g (int)`: 0 ~ 255
+
+  - `b (int)`: 0 ~ 255
+- **Return value**：
+  - `1`: complete
+  
+#### 9.2 `set_digital_output(pin_no, pin_signal)`
+
+- **function:** set IO statue
+- **Parameters**
+  - `pin_no` (int): Pin number
+  - `pin_signal` (int): 0 / 1
+- **Return value**：
+  - `1`: complete
+
+#### 9.3 `get_digital_input(pin_no)`
+
+- **function:** read IO statue
+- **Parameters**: `pin_no` (int)
+- **Return value**: signal
+
+#### 9.4 `set_pin_mode(pin_no, pin_mode)`
+
+- **function:** Set the state mode of the specified pin in atom.
+- **Parameters**
+  - `pin_no` (int): Pin number
+  - `pin_mode` (int): 0 - input, 1 - output, 2 - input_pullup
+- **Return value**：
+  - `1`: complete
+
+### 10. Robotic arm end gripper control
+
+#### 10.1 `set_gripper_state(flag, speed, _type_1=None)`
+
+- **function**: Adaptive gripper enable
+
+- **Parameters**:
+
+  - `flag (int) `: 0 - open 1 - close, 254 - release
+
+  - `speed (int)`: 1 ~ 100
+
+  - `_type_1 (int)`:
+
+    - `1` : Adaptive gripper (default state is 1)
+
+    - `2` : A nimble hand with 5 fingers
+
+    - `3` : Parallel gripper
+
+    - `4` : Flexible gripper
+- **Return value**：
+  - `1`: complete
+
+#### 10.2 `set_gripper_value(gripper_value, speed, gripper_type=None)`
+
+- **function**: Set the gripper value
+
+- **Parameters**:
+
+  - `gripper_value (int) `: 0 ~ 100
+
+  - `speed (int)`: 1 ~ 100
+
+  - `gripper_type (int)`:
+
+    - `1` : Adaptive gripper (default state is 1)
+
+    - `2` : A nimble hand with 5 fingers
+
+    - `3` : Parallel gripper
+
+    - `4` : Flexible gripper
+- **Return value**：
+  - `1`: complete
+
+#### 10.3 `set_gripper_calibration()`
+
+- **function**: Set the current position of the gripper to zero
+- **Return value**：
+  - `1`: complete
+
+#### 10.4 `is_gripper_moving()`
+
+- **function**: Judge whether the gripper is moving or not
+- **Return value**：
+  - `0`: not moving
+  - `1`: is moving
+  - `-1`: error data
+
+#### 10.5 `get_gripper_value()`
+
+- **function**: Get the value of gripper
+- **Parameters**:
+  - `gripper_type`: (int) default 1
+    - 1: Adaptive gripper
+    - 3: Parallel gripper
+    - 4: Flexible gripper
+- **Return value**：gripper value (int)
+  
+#### 10.6 `set_pwm_output(channel, frequency, pin_val)`
+
+- **function**: PWM control
+- **Parameters**:
+  - `channel` : (int): IO number.
+  - `frequency`: (int): clock frequency
+  - `pin_val`: (int) Duty cycle 0 ~ 256; 128 means 50%
+- **Return value**：
+  - `1`: complete
+
+#### 10.7 `set_HTS_gripper_torque(torque)`
+
+- **function**: Set new adaptive gripper torque
+- **Parameters**: 
+  - `torque`: (int): 150 ~ 980
+- **Return value**:
+  - `0`: Set failed
+  - `1`: Set successful
+
+#### 10.8 `get_HTS_gripper_torque()`
+
+- **function**: Get gripper torque
+- **Return value**:  (int) 150 ~ 980
+
+#### 10.9 `get_gripper_protect_current()`
+
+- **function**: Get the gripper protection current
+- **Return value**:  (int) 1 ~ 500
+
+#### 10.10 `set_gripper_protect_current(current)`
+
+- **function**: Set the gripper protection current
+- **Parameters**: 
+  - `current`: (int): 1 ~ 500
+- **Return value**:
+  - `1`: complete
+
+#### 10.11 `init_gripper()`
+
+- **function**: Initialize gripper
+- **Return value**: 
+  - `1`: complete
+
+### 11. Set bottom IO input/output status
+
+#### 11.1 `set_basic_output(pin_no, pin_signal)`
+
+- **function**：Set Base IO Output
+- **Parameters**：
+  - `pin_no` (`int`) Pin port number
+  - `pin_signal` (`int`): 0 - low. 1 - high
+
+#### 11.2 `get_basic_input(pin_no)`
+
+- **function:** Read base IO input
+- **Parameters:**
+  - `pin_no` (`int`) pin number
+- **Return value:** 0 - low. 1 - high
+
+### 12. TOF
+
+#### 12.1 `get_tof_distance()`
+
+- **function:** Get the detected distance (Requires external distance detector)
+- **Return value:** (int) The unit is mm.
+
+### 13. Communication mode
+
+#### 13.1 `set_transponder_mode(mode)`
+
+- **function:** Set basic communication mode
+- **Parameters:**
+  - `mode` : 0 - Turn off transparent transmission，1 - Open transparent transmission
+- **Return value:**
+   - `1`: complete
+
+#### 13.2 `get_transponder_mode()`
+
+- **function:** Get basic communication mode
+- **Parameters:**
+- **Return value:**
+   - `1`: Open transparent 
+   - `0`: Turn off transparent transmission
+
+### 14. Cartesian space coordinate parameter setting
+
+#### 14.1 `set_tool_reference(coords)`
+
+- **function:** Set tool coordinate system.
+- **Parameters**：
+  - `coords`: (`list`) [x, y, z, rx, ry, rz].
+- **Return value:** 
+  - `1`: complete
+
+#### 14.2 `get_tool_reference(coords)`
+
+- **function:** Get tool coordinate system.
+- **Return value:** (`list`) [x, y, z, rx, ry, rz]
+
+#### 14.3 `set_world_reference(coords)`
+
+- **function:** Set world coordinate system.
+- **Parameters**：
+  - `coords`: (`list`) [x, y, z, rx, ry, rz].
+- **Return value:** 
+  - `1`: complete
+
+#### 14.4 `get_world_reference()`
+
+- **function:** Get world coordinate system.
+- **Return value:** `list` [x, y, z, rx, ry, rz].
+
+#### 14.5 `set_reference_frame(rftype)`
+
+- **function:** Set base coordinate system.
+- **Parameters：**`rftype`: 0 - base 1 - tool.
+- **Return value:**
+   - `1`: complete
+
+#### 14.6 `get_reference_frame()`
+
+- **function:** Get base coordinate system.
+- **Return value:** (`list`) [x, y, z, rx, ry, rz].
+
+#### 14.7 `set_movement_type(move_type)`
+
+- **function:** Set movement type.
+- **Parameters**：
+  - `move_type`: 1 - movel, 0 - moveJ.
+- **Return value:**
+   - `1`: complete
+
+#### 14.8 `get_movement_type()`
+
+- **function:** Get movement type.
+- **Return value:**
+  - `1` - movel
+  - `0` - moveJ
+
+#### 14.9 `set_end_type(end)`
+
+- **function:** Set end coordinate system
+- **Parameters:**
+  - `end (int)`: `0` - flange, `1` - tool
+- **Return value:**
+   - `1`: complete
+
+#### 14.10 `get_end_type()`
+
+- **function:** Obtain the end coordinate system
+- **Return value:**
+  - `0` - flange
+  - `1` - tool
+
+### 15. utils (module)
 
 This module supports some helper methods. Use the code entered at the beginning of the file to import the module:
 
@@ -1179,15 +793,14 @@ This module supports some helper methods. Use the code entered at the beginning 
 from pymycobot import utils
 ```
 
-**11.1** `utils.get_port_list()`
+#### 16.1 `utils.get_port_list()`
 
-- **Function:** Get the current list of all serial port numbers
+- **Function**: Get a list of all current serial port numbers
 
 - **Return value:** Serial port list (`list`)
 
-**11.2** `utils.detect_port_of_basic()`
+#### 16.2 `utils.detect_port_of_basic()`
 
-- **Function:** Return the first detected serial port number of M5 Basic. (Only one serial port number will be returned)
+- **Function**: Return the first detected serial port number of M5 Basic. (Only one serial port number will be returned)
 
-- **Return value:** Return the detected port number, if no serial port number is detected, return: `None`
-
+- **Return value:** Return the detected port number. If no serial port number is detected, it will return: None

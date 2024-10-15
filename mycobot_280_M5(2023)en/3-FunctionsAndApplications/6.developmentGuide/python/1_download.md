@@ -168,17 +168,17 @@ python3 setup.py install
 
 ## Simple use of Python
 
-After the above preparations are completed, start to control the robot arm through Python code. Here, the myPalletizer 260 M5 version is used as an example for demonstration.
+After the above preparations are completed, start to control the robot arm through Python code. Here, the MyCobot 280 M5 version is used as an example for demonstration.
 
 First, open the PyCharm you installed, create a new Python file, enter the following code, and import our library:
 
 ```python
-from pymycobot.mypalletizer import MyPalletizer
+from pymycobot.mycobot280 import MyCobot280
 ```
 
 **Note:**
 
-1. If you enter `from pymycobot.mypalletizer import MyPalletizer`, there is no red wavy line under the font, which proves that it has been successfully installed and can be used. If a red wavy line appears, you can refer to [**How ​​to install the API library** ](https://www.cnblogs.com/xiaoguan-bky/p/11184740.html), [**How ​​to call the API library**](https://jingyan.baidu.com/article/25648fc1e86917d191fd009d.html).
+1. If you enter `from pymycobot.mycobot280 import MyCobot280`, there is no red wavy line under the font, which proves that it has been successfully installed and can be used. If a red wavy line appears, you can refer to [**How ​​to install the API library** ](https://www.cnblogs.com/xiaoguan-bky/p/11184740.html), [**How ​​to call the API library**](https://jingyan.baidu.com/article/25648fc1e86917d191fd009d.html).
 
 2. If you do not want to install the API library through the above command, you can download the project to your local computer through the following github.
 
@@ -192,22 +192,20 @@ Create a new Python file in PyCharm and enter the following code to execute the 
 
 > **Note:** The corresponding baud rates of various devices are different. Please refer to the information to understand their baud rates when using them. The serial port number can be viewed through **[Calculator Device Manager](https://docs.elephantrobotics.com/docs/gitbook/4-BasicApplication/4.1-myStudio/4.1.1-myStudio_download_driverinstalled.html#4113-%E5%A6%82%E4%BD%95%E5%8C%BA%E5%88%86cp210x%E5%92%8Ccp34x%E8%8A%AF%E7%89%87)** or the serial port assistant.
 
-The following are the corresponding codes for myCobot and myPalletizer.
+The following are the corresponding codes for myCobot.
 
 * **myCobot**
 
 ```python
 # demo.py
-from pymycobot.mycobot import MyCobot
+from pymycobot.mycobot280 import MyCobot280
 
-from pymycobot import PI_PORT, PI_BAUD      # When using the Raspberry Pi version of mycobot, you can refer to these two variables to initialize MyCobot, if not, you can omit this line of code
 import time
 #The above codes are required to be written, which means importing the project package
 
-# MyCobot class initialization requires two parameters:
+# MyCobot280 class initialization requires two parameters:
 #   The first is the serial port string, such as:
 #       linux:  "/dev/ttyUSB0"
-#          or "/dev/ttyAMA0"
 #       windows: "COM3"
 #   The second is the baud rate:: 
 #       M5 version is:  115200
@@ -215,16 +213,13 @@ import time
 #    Example:
 #       mycobot-M5:
 #           linux:
-#              mc = MyCobot("/dev/ttyUSB0", 115200)
-#          or mc = MyCobot("/dev/ttyAMA0", 115200)
+#              mc = MyCobot280("/dev/ttyUSB0", 115200)
 #           windows:
-#              mc = MyCobot("COM3", 115200)
-#       mycobot-raspi:
-#           mc = MyCobot(PI_PORT, PI_BAUD)
-#
-# Initiate MyCobot
+#              mc = MyCobot280("COM3", 115200)
+
+# Initiate MyCobot280
 # Create object code here for windows version
-mc = MyCobot("COM3", 115200)
+mc = MyCobot280("COM3", 115200)
 
 i = 7
 #loop 7 times

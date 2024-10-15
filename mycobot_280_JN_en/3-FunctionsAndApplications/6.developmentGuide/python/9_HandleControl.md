@@ -52,22 +52,21 @@ pip3 install -r requirements.txt
 
 ### myCobot
 
-Edit the handle_control.py file
+Edit the myCobot280_handle_control.py file
 
 ```python
 import pygame
 import time
-from pymycobot import MyCobot
+from pymycobot import MyCobot280
 import threading
-# Change com7 to the actual port number detected by your computer
 
-mc = MyCobot("com7")
+mc = MyCobot280("/dev/ttyTHS1", 1000000)
 ...
 ```
 Run the program.
 
 ```bash
-python3 handle_control.py
+python3 myCobot280_handle_control.py
 ```
 
 > Note: After running the program, first click the **14** button to check the machine connection status. If the machine connection status is normal (if it is abnormal, other operations will not be possible. Please solve the abnormal connection problem first), then click the **Right 1** button. After the machine reaches the initial point, other operations can be performed.

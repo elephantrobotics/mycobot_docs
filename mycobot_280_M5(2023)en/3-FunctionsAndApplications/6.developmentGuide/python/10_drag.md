@@ -17,6 +17,7 @@ python drag_trial_teaching.py
 After the file is run:
 - 3.1 Select the robot port
 - 3.2 Enter the baud rate, the default is 1000000
+  
 | Machine model | Serial port number | Baud rate |
 |:---------:| :--------:|:--------:|
 |270 PI| /dev/ttyAMA0|1000000|
