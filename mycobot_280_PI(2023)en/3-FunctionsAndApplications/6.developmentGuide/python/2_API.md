@@ -162,8 +162,9 @@ mc.send_angle(1, 40, 20)
 - **Parameters:**
   - `id`: Joint id(`genre.Angle`), range int 1-6
   - `degree`: degree value(`float`)
+  
     | Joint Id | range |
-    | ---- | ---- |
+    | :---- | :---- |
     | 1 | -168 ~ 168 |
     | 2 | -135 ~ 135 |
     | 3 | -150 ~ 150 |
@@ -195,14 +196,16 @@ mc.send_angle(1, 40, 20)
 - **Parameters:**
   - `id`:send one coord to robot arm, 1-6 corresponds to [x, y, z, rx, ry, rz]
   - `coord`: coord value(`float`)
+
     | Coord Id | range |
-    | ---- | ---- |
+    | :---- | :---- |
     | x | -281.45 ~ 281.45 |
     | y | -281.45 ~ 281.45 |
     | z | -70 ~ 412.67 |
     | rx | -180 ~ 180 |
     | ry | -180 ~ 180 |
     | rz | -180 ~ 180 |
+
   - `speed`: (`int`) 1-100
 - **Return value:** 
   - `1`: complete
