@@ -82,7 +82,7 @@ mc.send_angle(1, 40, 20)
 - **Return value:**
   - `1` - release completed.
 
-#### 2.5 `focus_servos(servo_id)`
+#### 2.5 `focus_servo(servo_id)`
 
 - **function:** Power on designated servo
 
@@ -149,6 +149,24 @@ mc.send_angle(1, 40, 20)
   - `1`: free mode
   - `0`: on-free mode
 
+#### 2.12 `focus_all servos()`
+
+- **Function:** All servos are powered on
+
+- **Return value:**
+  - `1`: complete
+
+#### 2.13 `set_vision_mode()`
+
+- **Function:** Set the vision tracking mode, limit the attitude flip of send_coords in refresh mode. (Applicable only to vision tracking function)
+
+- **Parameter:**
+  - `1`: open
+  - `0`: close
+
+- **Return value:**
+  - `1`: complete
+
 ### 3.MDI Mode and Operation
 
 #### 3.1 `get_angles()`
@@ -160,17 +178,39 @@ mc.send_angle(1, 40, 20)
 
 - **function:** send one degree of joint to robot arm
 - **Parameters:**
-  - `id`: Joint id(`genre.Angle`), range int 1-6
+  - `id`: Joint id, range int 1-6
   - `degree`: degree value(`float`)
   
-    | Joint Id | range |
-    | :---- | :---- |
-    | 1 | -168 ~ 168 |
-    | 2 | -135 ~ 135 |
-    | 3 | -150 ~ 150 |
-    | 4 | -145 ~ 145 |
-    | 5 | -165 ~ 165 |
-    | 6 | -180 ~ 180 |
+<table>
+  <tr>
+         <th>Joint Id</th>
+         <th>Range</th>
+  </tr>
+  <tr>
+         <td text-align: center>1</td>
+         <td>-168 ~ 168</td>
+  </tr>
+  <tr>
+         <td>2</td>
+         <td>-135 ~ 135</td>
+  </tr>
+  <tr>
+         <td>3</td>
+         <td>-150 ~ 150</td>
+  </tr>
+    <tr>
+         <td>4</td>
+         <td> -145 ~ 145</td>
+  </tr>
+  <tr>
+         <td>5</td>
+         <td>-165 ~ 165</td>
+  </tr>
+  <tr>
+         <td>6</td>
+         <td>-180 ~ 180</td>
+  </tr>
+</table>
 
   - `speed`：the speed and range of the robotic arm's movement 1~100
 - **Return value:** 
@@ -197,14 +237,36 @@ mc.send_angle(1, 40, 20)
   - `id`:send one coord to robot arm, 1-6 corresponds to [x, y, z, rx, ry, rz]
   - `coord`: coord value(`float`)
   
-    | Coord Id | range |
-    | :---- | :---- |
-    | x | -281.45 ~ 281.45 |
-    | y | -281.45 ~ 281.45 |
-    | z | -70 ~ 412.67 |
-    | rx | -180 ~ 180 |
-    | ry | -180 ~ 180 |
-    | rz | -180 ~ 180 |
+<table>
+  <tr>
+         <th>Coord ID</th>
+         <th>Range</th>
+  </tr>
+  <tr>
+         <td text-align: center>x</td>
+         <td>-281.45 ~ 281.45</td>
+  </tr>
+  <tr>
+         <td>y</td>
+         <td>-281.45 ~ 281.45</td>
+  </tr>
+  <tr>
+         <td>z</td>
+         <td>-70 ~ 412.67</td>
+  </tr>
+    <tr>
+         <td>rx</td>
+         <td> -180 ~ 180</td>
+  </tr>
+  <tr>
+         <td>ry</td>
+         <td>-180 ~ 180</td>
+  </tr>
+  <tr>
+         <td>rz</td>
+         <td>-180 ~ 180</td>
+  </tr>
+</table>
 
   - `speed`: (`int`) 1-100
 - **Return value:** 
@@ -298,6 +360,21 @@ mc.send_angle(1, 40, 20)
   - `0` not moving
   - `-1` error
 
+#### 3.16 `angles_to_coords(angles)`
+
+- **Function** : Convert angles to coordinates.
+- **Parameters:**
+  - `angles`: `list` List of floating points for all angles.
+- **Return value**: `list` List of floating points for all coordinates.
+
+#### 3.17 `solve_inv_kinematics(target_coords, current_angles)`
+
+- **Function** : Convert coordinates to angles.
+- **Parameters:**
+  - `target_coords`: `list` List of floating points for all coordinates.
+  - `current_angles`: `list` List of floating points for all angles, current angles of the robot
+- **Return value**: `list` List of floating points for all angles.
+
 ### 4. JOG Mode and Operation
 
 #### 4.1 `jog_angle(joint_id, direction, speed)`
@@ -330,15 +407,27 @@ mc.send_angle(1, 40, 20)
 - **Return value:**
   - `1`: complete
 
-#### 4.4 `jog_increment(joint_id, increment, speed)`
+#### 4.4 `jog_increment_angle(joint_id, increment, speed)`
 
-- **function:** Single joint angle increment control
-- **Parameters**:
+- **Function**: Angle stepping, single joint angle increment control
+- **Parameter**:
   - `joint_id`: 1-6
   - `increment`: Incremental movement based on the current position angle
-  - `speed`: 1 ~ 100
+  - `speed`: 1~100
+- **Return value:**
+  - `1`: Completed
 
-#### 4.5 `set_encoder(joint_id, encoder, speed)`
+#### 4.5 `jog_increment_coord(id, increment, speed)`
+
+- **Function**: Coordinate stepping, single coordinate increment control
+- **Parameter**:
+  - `id`: Coordinate axis 1-6
+  - `increment`: Incremental movement based on the current position coordinate
+  - `speed`: 1~100
+- **Return value:**
+  - `1`: Completed
+
+#### 4.6 `set_encoder(joint_id, encoder, speed)`
 
 - **function**: Set a single joint rotation to the specified potential value
 
@@ -350,7 +439,7 @@ mc.send_angle(1, 40, 20)
 - **Return value:**
   - `1`: complete
 
-#### 4.6 `get_encoder(joint_id)`
+#### 4.7 `get_encoder(joint_id)`
 
 - **function**: Set a single joint rotation to the specified potential value
 
@@ -360,7 +449,7 @@ mc.send_angle(1, 40, 20)
 
 - **Return value:** (`int`) Joint potential value
 
-#### 4.7 `set_encoders(encoders, speed)`
+#### 4.8 `set_encoders(encoders, speed)`
 
 - **function**: Set the six joints of the manipulator to execute synchronously to the specified position.
 
@@ -372,7 +461,7 @@ mc.send_angle(1, 40, 20)
 - **Return value:**
   - `1`: complete
 
-#### 4.8 `get_encoders()`
+#### 4.9 `get_encoders()`
 
 - **function**: Get the six joints of the manipulator.
 
