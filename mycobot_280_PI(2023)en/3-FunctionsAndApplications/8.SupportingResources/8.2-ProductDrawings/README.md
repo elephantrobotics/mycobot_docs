@@ -12,6 +12,7 @@ The product drawings section provides detailed 3D and 2D drawings of the 280 pi 
 | Machine | Machine 2D Drawings |
 | :---------: | :--------------:|
 | myCobot 280 Atom | [Download](https://download.elephantrobotics.com/Product_3d_files/230918/myCobot_280_Atom_230918.PDF) |
+| myCobot 280PI Base | [Download](https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_3d_files/myArm300/280pi%E5%BA%95%E5%BA%A7-2d%E5%9B%BE%E7%BA%B8.pdf) |
 
 ### Accessory 3D Model
 
