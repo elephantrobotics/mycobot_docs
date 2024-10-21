@@ -12,6 +12,7 @@
 |  机器 | 机器2D图纸 |
 | :---------: | :--------------:|
 | myCobot 280 末端| [下载](https://download.elephantrobotics.com/Product_3d_files/230918/myCobot_280_Atom_230918.PDF) |
+| myCobot 280PI 底座| [下载](https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_3d_files/myArm300/280pi%E5%BA%95%E5%BA%A7-2d%E5%9B%BE%E7%BA%B8.pdf) |
 
 
 ### 配件3D模型
