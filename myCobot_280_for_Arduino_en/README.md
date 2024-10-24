@@ -5,10 +5,7 @@ Core Document
 ---
 
 This document contains comprehensive information from product introduction, detailed technical parameters to user instructions and product development guidance. The document will introduce the basic functions of the myCobot 280 For Arduino robot arm in depth, provide a software development guide, and show successful application cases to help you understand how to effectively integrate myCobot 280 For Arduino into various applications. In addition, we also provide a wealth of support and service information to ensure that you can get the necessary help when you encounter any technical challenges.
-### gitbook-en
-English version: https://docs.elephantrobotics.com/docs/mycobot-280-Arduino-en/
-### gitbook-cn
-Chinese version: https://docs.elephantrobotics.com/docs/mycobot-280-Arduino-cn/
+
 
 Document Description
 ---
