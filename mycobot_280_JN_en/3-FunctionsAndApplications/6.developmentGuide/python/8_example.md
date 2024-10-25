@@ -235,8 +235,8 @@ def gripper_test(mc):
     # Gripper has been initialized for a long time. Generally, there
     # is no need to change the method.
     # mc.set_gripper_ini()
-    # Set joint point 1 to rotate to position 2048
-    mc.set_encoder(1, 2048)
+    # Set joint point 1 to rotate to position 2048, speed 20
+    mc.set_encoder(1, 2048, 20)
     time.sleep(2)
     # Set six joint positions and let the robot arm rotate to the position at a speed of 20
 
@@ -246,11 +246,11 @@ def gripper_test(mc):
     time.sleep(3)
     # Get the position information of joint point 1
     print(mc.get_encoder(1))
-    # Set the gripper to rotate to the position of 2048
-    mc.set_encoder(7, 2048)
+    # Set the gripper to rotate to the position of 2048, speed 20
+    mc.set_encoder(7, 2048, 20)
     time.sleep(3)
-    # Set the gripper to rotate to the position of 1300
-    mc.set_encoder(7, 1300)
+    # Set the gripper to rotate to the position of 1300, speed 20
+    mc.set_encoder(7, 1300, 20)
     time.sleep(3)
 
     # Let the gripper reach the state of 2048 at a speed of 70. 2048 will report an error, so change it to 255

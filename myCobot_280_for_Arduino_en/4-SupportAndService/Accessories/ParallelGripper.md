@@ -85,7 +85,32 @@ mc.set_gripper_state(0, 80)
 time.sleep(3)
 mc.set_gripper_state(1, 80)
 time.sleep(3)
-mc.set_gripper_state(0, 80) time.sleep(3) # Method two: # mc.set_gripper_value(100, 80) # time.sleep(3) # mc.set_gripper_value(0, 80) # time.sleep(3) # mc.set_gripper_value(100, 80) # time.sleep(3) # Method three: # mc.set_encoder(7, 2048) # time.sleep(3) # mc.set_encoder(7, 1500) # time.sleep(3) # mc.set_encoder(7, 2048) # time.sleep(3) ```` - Pi version: ````python from pymycobot.mycobot import MyCobot from pymycobot import PI_PORT, PI_BAUD # When using the Raspberry Pi version of mycobot, you can reference these two variables to initialize MyCobot
+mc.set_gripper_state(0, 80) 
+time.sleep(3) 
+
+# Method two: 
+# mc.set_gripper_value(100, 80) 
+# time.sleep(3) 
+# mc.set_gripper_value(0, 80) 
+# time.sleep(3) 
+# mc.set_gripper_value(100, 80) 
+# time.sleep(3) 
+
+# Method three: 
+# mc.set_encoder(7, 2048, 20) 
+# time.sleep(3) 
+# mc.set_encoder(7, 1500, 20) 
+# time.sleep(3) 
+# mc.set_encoder(7, 2048, 20) 
+# time.sleep(3) 
+```
+
+- Pi version: 
+
+```python
+from pymycobot.mycobot import MyCobot 
+from pymycobot import PI_PORT, PI_BAUD 
+# When using the Raspberry Pi version of mycobot, you can reference these two variables to initialize MyCobot
 import time
 
 # Initialize a MyCobot object
@@ -109,12 +134,13 @@ time.sleep(3)
 # time.sleep(3)
 
 # Method 3:
-# mc.set_encoder(7, 2048)
+# mc.set_encoder(7, 2048, 20)
 # time.sleep(3)
-# mc.set_encoder(7, 1500)
+# mc.set_encoder(7, 1500, 20)
 # time.sleep(3)
-# mc.set_encoder(7, 2048)
+# mc.set_encoder(7, 2048, 20)
 # time.sleep(3)
+
 ```
 
 Save the file and close it, return to the command line terminal, and enter:

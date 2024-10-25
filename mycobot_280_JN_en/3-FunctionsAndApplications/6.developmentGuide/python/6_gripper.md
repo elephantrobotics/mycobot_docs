@@ -104,8 +104,8 @@ time.sleep(1)
 # Gripper has been initialized for a long time. Generally, there
 # is no need to change the method.
 # mc.set_gripper_ini()
-# Set joint point 1 and let it rotate to the position 2048
-mc.set_encoder(1, 2048)
+# Set joint point 1 and let it rotate to the position 2048, speed 20
+mc.set_encoder(1, 2048, 20)
 time.sleep(2)
 # Set six joint positions and let the robot arm rotate to this position at a speed of 20
 mc.set_encoders([1024, 1024, 1024, 1024, 1024, 1024], 20)

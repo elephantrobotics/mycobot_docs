@@ -93,11 +93,11 @@ time.sleep(3)
 # time.sleep(3)
 
 # 方式三：
-# mc.set_encoder(7, 2048)
+# mc.set_encoder(7, 2048, 20)
 # time.sleep(3)
-# mc.set_encoder(7, 1500)
+# mc.set_encoder(7, 1500, 20)
 # time.sleep(3)
-# mc.set_encoder(7, 2048)
+# mc.set_encoder(7, 2048, 20)
 # time.sleep(3)
 ```
 
@@ -129,11 +129,11 @@ time.sleep(3)
 # time.sleep(3)
 
 # 方式三：
-# mc.set_encoder(7, 2048)
+# mc.set_encoder(7, 2048, 20)
 # time.sleep(3)
-# mc.set_encoder(7, 1500)
+# mc.set_encoder(7, 1500, 20)
 # time.sleep(3)
-# mc.set_encoder(7, 2048)
+# mc.set_encoder(7, 2048, 20)
 # time.sleep(3)
 ```
 

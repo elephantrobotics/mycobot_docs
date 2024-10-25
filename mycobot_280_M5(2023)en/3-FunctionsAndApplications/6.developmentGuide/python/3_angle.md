@@ -21,7 +21,7 @@ For serial multi-joint robots, the control of joint space is to control the vari
 
 - **Return value:** 1
 
-**set_encoder(joint_id, encoder)**
+**set_encoder(joint_id, encoder, sp)**
 
 - **Function:** Send the specified single joint movement to the specified potential value
 
@@ -29,6 +29,7 @@ For serial multi-joint robots, the control of joint space is to control the vari
 
 - `joint_id`: Represents the joint of the robot arm. Use numbers 1-6 to represent it.
 - `encoder`: represents the potential value of the robot arm, the value range is 0 ~ 4096
+- `sp`: Indicates the speed of the robot arm movement, ranging from 1 to 100
 - **Return value:** 1
 
 ### Multi-joint control
