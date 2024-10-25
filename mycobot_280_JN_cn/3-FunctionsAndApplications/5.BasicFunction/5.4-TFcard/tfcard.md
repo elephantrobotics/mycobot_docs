@@ -83,13 +83,20 @@
     <td>下载链接</td>
     <td>SHA256 Hash</td>
 </tr>
+
 <tr>
-	<td>myCobot 280 JetsonNano</td>
-	<td>ubuntu 18.04</td>
-	<td>
-        <a href="https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_software/iMage-ISO/myCobot-280JetsonNano/myCobot_280_Jetsonnano_V221101-shrink.zip">点击下载</a>
-    </td>
-	<td>2f1e40c1480b077bcc83abd3b79ac175f25d21e9cc344a014636167ee2eb087c</td>
+        <td rowspan='2'>myCobot 280 JetsonNano</td>
+        <td>ubuntu 18.04</td>
+        <td>
+            <a href="https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_software/iMage-ISO/myCobot-280JetsonNano/myCobot_280_Jetsonnano_V221101-shrink.zip">点击下载</a>
+        </td>
+        <td>2f1e40c1480b077bcc83abd3b79ac175f25d21e9cc344a014636167ee2eb087c</td>
+    </tr>
+    <tr>
+        <td>ubuntu 20.04</td>
+        <td><a href="https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_software/iMage-ISO/myCobot-280JetsonNano/myCobot_280_ubuntu_V20231023_20.04JN_aarch64_shrunk.img.gz">点击下载</a>
+        </td>
+        <td></td>
 </tr>
 </table>
 

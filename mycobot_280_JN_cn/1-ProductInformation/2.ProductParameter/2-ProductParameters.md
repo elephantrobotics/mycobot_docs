@@ -241,7 +241,7 @@ A. 底座接口如下图1 所示：
 > 
 > 5. 如果某个GPIO被设置为输出模式时，输出高电平信号，电路连接如图 8 所示，LED灯将点亮。
 > 
-> <img src="../../resource/1-ProductInformation/2.ProductParameter/GPIO.PNG" style="zoom:100%;" /> 
+> <img src="../../resource/1-ProductInformation/2.ProductParameter/GPIO.png" style="zoom:100%;" /> 
 > 
 > 图 8
 

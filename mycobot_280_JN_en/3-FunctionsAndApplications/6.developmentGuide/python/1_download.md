@@ -23,7 +23,7 @@ in the terminal to query the python version currently used by the robot arm.
 
 Enter python in the terminal and press Enter. When `>>>` is displayed, it means that you have entered the python compilation environment. You can now use python to write code.
 
-<img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/4.PNG" style="zoom: 67%;" />
+<img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/4.png" style="zoom: 67%;" />
 
 You can also use the nano command to create a python file. First open the terminal, enter
 ```python
@@ -31,9 +31,9 @@ nano demo.py
 ```
 Then press Enter to create a python file named demo. Here demo is the file name of the created python file, you can change it to any name here. After pressing Enter, you will enter the code editing page, where you can write python program code.
 
-<img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/2.PNG" style="zoom: 67%;" />
+<img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/2.png" style="zoom: 67%;" />
 
-<img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/6.PNG" style="zoom: 67%;" />
+<img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/6.png" style="zoom: 67%;" />
 
 After writing the Python program, press `ctrl+s` to save the edited program, and then press `ctrl+x` to exit the editor.
 
@@ -43,7 +43,7 @@ python demo.py
 ```
 to run the Python program you just wrote.
 
-<img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/3.PNG" style="zoom: 67%;" />
+<img src="../../../resource\3-FunctionsAndApplications\6.developmentGuide\python\build/3.png" style="zoom: 67%;" />
 
 pymycobot is a Python package for serial communication with myCobot, supporting Python2, Python3.5 and later versions.
 

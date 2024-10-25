@@ -235,7 +235,7 @@ Figure 7 End of the robot
 >
 > 5. If a GPIO is set to output mode, it outputs a high-level signal, and the circuit connection is shown in Figure 8, and the LED light will light up.
 >
-> <img src="../../resource/1-ProductInformation/2.ProductParameter/GPIO.PNG" style="zoom:100%;" />
+> <img src="../../resource/1-ProductInformation/2.ProductParameter/GPIO.png" style="zoom:100%;" />
 >
 > Figure 8
 

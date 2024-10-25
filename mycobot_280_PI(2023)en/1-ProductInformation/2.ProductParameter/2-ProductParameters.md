@@ -191,7 +191,7 @@ Figure 2.1.5.2-8 End of the robot
 >
 > 5. If a GPIO is set to output mode, it outputs a high-level signal, and the circuit connection is shown in Figure 2.1.5.2-9, and the LED light will light up.
 >
-> <img src="../../resource/1-ProductInformation/2.ProductParameter/GPIO.PNG" style="zoom:100%;" />
+> <img src="../../resource/1-ProductInformation/2.ProductParameter/GPIO.png" style="zoom:100%;" />
 >
 > Figure 2.1.5.2-9
 
@@ -199,7 +199,7 @@ Figure 2.1.5.2-8 End of the robot
 
 * C. Grove: The definition is shown in Figure 2.1.5.2-10
 
-<img src="../../resource/1-ProductInformation/2.ProductParameter/port.PNG" style="zoom" style="zoom:60%;" />
+<img src="../../resource/1-ProductInformation/2.ProductParameter/port.png" style="zoom" style="zoom:60%;" />
 
 Figure 2.1.5.2-10 Grove
 
@@ -212,7 +212,7 @@ Figure 2.1.5.2-10 Grove
 
 SDH parameters are shown in the figure below
 
-![SDH parameters](../../resource/1-ProductInformation/2.ProductParameter/SDH.PNG)
+![SDH parameters](../../resource/1-ProductInformation/2.ProductParameter/SDH.png)
 
 ---
 

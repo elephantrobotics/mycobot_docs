@@ -65,7 +65,7 @@ ER myCobot 280 Jetson Nano 采用 NVIDIA® Jetson Nano™ 核心开发版作为�
 ---
 
 ## 3. 支持的扩展开发
-![拓展开发](../../resource/1-ProductInformation/1.ProductIntroduction/expand.PNG)
+![拓展开发](../../resource/1-ProductInformation/1.ProductIntroduction/expand.png)
 
 mycobot 系列机械臂在教育和科研领域中极具价值，特别是在 Python 和 ROS（Robot Operating System)这两个广泛使用的开发环境中。这些环境提供了强大的支持，使得 mycobot  系列产品能够广泛应用于机器学习、人工智能研究、复杂运动控制以及视觉处理任务中。同时搭配自适应夹爪、摄像头法兰、吸泵等数十种配件，可以尽情发挥myCobot的创意想法。移动底盘+机械手臂 搭配开发，低成本开始机器人协作、SLAM建图、自主导航、ROS开发环境、六轴协作机器人控制、视觉识别、设备间通信等多种开发内容。
 
