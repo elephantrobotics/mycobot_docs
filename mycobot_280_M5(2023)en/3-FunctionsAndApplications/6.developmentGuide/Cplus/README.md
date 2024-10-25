@@ -2,7 +2,7 @@
 
 **Using C++ language, you can freely develop (coordinate control, angle control, io control, gripper control, etc.) through the C++ dynamic library developed by our company, and control some robots that our company has developed. **<br>
 
-![pic](../../../resources/3-FunctionsAndApplications/6.developmentGuide/C++/C++.jpg)
+![pic](../../../resources/3-FunctionsAndApplications/6.developmentGuide/C%2B%2B/C%2B%2B.jpg)
 
 ## What is C++?
 
