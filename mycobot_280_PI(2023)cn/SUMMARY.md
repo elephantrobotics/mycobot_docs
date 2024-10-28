@@ -7,7 +7,6 @@
 
 * 基础设置
     * [3. 用户须知](2-BasicSettings/3.UserNotice/3-UserInstructions.md)
-    
     * [4. 首次安装](2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.md)
         * [4.1如何正确寻求帮助](4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.md)
         * [4.2常见的驱动问题以及解决方案](4-SupportAndService/9.Troubleshooting/9.1-driver.md)
