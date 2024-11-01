@@ -181,36 +181,36 @@ mc.send_angle(1, 40, 20)
   - `id`: Joint id, range int 1-6
   - `degree`: degree value(`float`)
   
-<table>
-  <tr>
-         <th>Joint Id</th>
-         <th>Range</th>
-  </tr>
-  <tr>
-         <td text-align: center>1</td>
-         <td>-168 ~ 168</td>
-  </tr>
-  <tr>
-         <td>2</td>
-         <td>-135 ~ 135</td>
-  </tr>
-  <tr>
-         <td>3</td>
-         <td>-150 ~ 150</td>
-  </tr>
-    <tr>
-         <td>4</td>
-         <td> -145 ~ 145</td>
-  </tr>
-  <tr>
-         <td>5</td>
-         <td>-165 ~ 165</td>
-  </tr>
-  <tr>
-         <td>6</td>
-         <td>-180 ~ 180</td>
-  </tr>
-</table>
+    <table>
+      <tr>
+             <th>Joint Id</th>
+             <th>Range</th>
+      </tr>
+      <tr>
+             <td text-align: center>1</td>
+             <td>-168 ~ 168</td>
+      </tr>
+      <tr>
+             <td>2</td>
+             <td>-135 ~ 135</td>
+      </tr>
+      <tr>
+             <td>3</td>
+             <td>-150 ~ 150</td>
+      </tr>
+        <tr>
+             <td>4</td>
+             <td> -145 ~ 145</td>
+      </tr>
+      <tr>
+             <td>5</td>
+             <td>-165 ~ 165</td>
+      </tr>
+      <tr>
+             <td>6</td>
+             <td>-180 ~ 180</td>
+      </tr>
+    </table>
 
   - `speed`：the speed and range of the robotic arm's movement 1~100
 - **Return value:** 
@@ -237,36 +237,36 @@ mc.send_angle(1, 40, 20)
   - `id`:send one coord to robot arm, 1-6 corresponds to [x, y, z, rx, ry, rz]
   - `coord`: coord value(`float`)
 
-<table>
-  <tr>
-         <th>Coord ID</th>
-         <th>Range</th>
-  </tr>
-  <tr>
-         <td text-align: center>x</td>
-         <td>-281.45 ~ 281.45</td>
-  </tr>
-  <tr>
-         <td>y</td>
-         <td>-281.45 ~ 281.45</td>
-  </tr>
-  <tr>
-         <td>z</td>
-         <td>-70 ~ 412.67</td>
-  </tr>
-    <tr>
-         <td>rx</td>
-         <td> -180 ~ 180</td>
-  </tr>
-  <tr>
-         <td>ry</td>
-         <td>-180 ~ 180</td>
-  </tr>
-  <tr>
-         <td>rz</td>
-         <td>-180 ~ 180</td>
-  </tr>
-</table>
+    <table>
+      <tr>
+             <th>Coord ID</th>
+             <th>Range</th>
+      </tr>
+      <tr>
+             <td text-align: center>x</td>
+             <td>-281.45 ~ 281.45</td>
+      </tr>
+      <tr>
+             <td>y</td>
+             <td>-281.45 ~ 281.45</td>
+      </tr>
+      <tr>
+             <td>z</td>
+             <td>-70 ~ 412.67</td>
+      </tr>
+        <tr>
+             <td>rx</td>
+             <td> -180 ~ 180</td>
+      </tr>
+      <tr>
+             <td>ry</td>
+             <td>-180 ~ 180</td>
+      </tr>
+      <tr>
+             <td>rz</td>
+             <td>-180 ~ 180</td>
+      </tr>
+    </table>
 
   - `speed`: (`int`) 1-100
 - **Return value:** 
