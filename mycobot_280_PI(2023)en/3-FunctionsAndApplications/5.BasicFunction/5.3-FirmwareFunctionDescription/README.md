@@ -183,11 +183,11 @@ Side of the base
 
 * D. USB3.0 interface (blue): an interface for data connection based on serial bus standard 3.0; users can use the USB interface to copy program files, or use the USB interface to connect peripherals such as mouse and keyboard.
 
-<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.3-FirmwareFunctionDescription/USB1.png" style="zoom:100%;" />
+<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.3-FirmwareFunctionDescription/usb1.png" style="zoom:100%;" />
 
 * E. Network port: a port for network data connection. Users can use the Ethernet interface for communication and interaction between the PC and the robot system, or for Ethernet communication with other devices.
 
-<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.3-FirmwareFunctionDescription/hdmi.png" style="zoom:100%;" />
+<img src="../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.3-FirmwareFunctionDescription/HDMI.png" style="zoom:100%;" />
 
 * F. HDMI interface: The interface is HDMI D-type interface, connected to the display. HDMI interface 2 has priority, and HDMI interface 1 is recommended.
 
