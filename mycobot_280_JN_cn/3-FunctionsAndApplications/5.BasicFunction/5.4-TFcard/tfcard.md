@@ -85,7 +85,7 @@
 </tr>
 
 <tr>
-        <td rowspan='2'>myCobot 280 JetsonNano</td>
+        <td rowspan='3'>myCobot 280 JetsonNano</td>
         <td>ubuntu 18.04</td>
         <td>
             <a href="https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_software/iMage-ISO/myCobot-280JetsonNano/myCobot_280_Jetsonnano_V221101-shrink.zip">点击下载</a>
@@ -97,6 +97,13 @@
         <td><a href="https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_software/iMage-ISO/myCobot-280JetsonNano/myCobot_280_ubuntu_V20231023_20.04JN_aarch64_shrunk.img.gz">点击下载</a>
         </td>
         <td></td>
+    <tr>
+        <td>ubuntu 20.04 V20241108</td>
+        <td><a href="https://download.elephantrobotics.com/Product_software/iMage-ISO/myCobot-280JetsonNano/myCobot_280_ubuntu_V20241108_20.04JN_aarch64.tar.gz">点击下载</a>
+        </td>
+        <td></td>
+        
+    
 </tr>
 </table>
 
