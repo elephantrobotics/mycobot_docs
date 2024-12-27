@@ -3,7 +3,7 @@
 ## 1.1 Product List Image
 > Thank you for choosing the Elephant Robot myCobot 280 JN robot arm. The content of this chapter is to help you easily get started with the Elephant Robot product and enjoy every wonderful moment brought by the product.
 
-![Unboxing Kit](../../resource/2-BasicSettings/4.FirstTimeInstallation/280PI.png)
+![Unboxing Kit](../../resource/2-BasicSettings/4.FirstTimeInstallation/280JN.png)
 
 ## 1.2 Product Standard List Comparison Table
 
@@ -14,6 +14,10 @@
 | 3 | myCobot Robot Arm-Matching Power Cable |
 | 4 | USB-Type C |
 | 5 | HDMI Cable |
+| 6 | myCobot camera flange |
+| 7 | LEGO plug-in pack     |
+| 8 | Dupont line*2         |
+| 9 | Allen wrench        |
 
 **Note:** After the packaging box arrives, please confirm that the robot packaging is intact. If there is any damage, please contact the logistics company and the supplier in your area in time. After unpacking, please check the actual items in the box according to the list of items.
 

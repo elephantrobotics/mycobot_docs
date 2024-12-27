@@ -1,6 +1,6 @@
 # myStudio
 
-![封面](../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.2-Softwarelnstructions/mystudioShow.jpg)
+![封面](../../../resource\3-FunctionsAndApplications\5.BasicFunction\5.2-Softwarelnstructions/mystudioshow.jpg)
 
 **[myStudio视频教程](https://www.bilibili.com/video/BV1Qr4y1N7B5/)**
 

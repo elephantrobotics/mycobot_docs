@@ -4,7 +4,7 @@
 > 感谢您选择大象机器人myCobot 280 JN机械臂，本章节内容旨在帮助您轻松上手大象机器人产品，享受产品带来的每一个精彩瞬间。
 
 
-![开箱套装](../../resource/2-BasicSettings/4.FirstTimeInstallation/280PI.png)
+![开箱套装](../../resource/2-BasicSettings/4.FirstTimeInstallation/280JN.png)
 
 ## 1.2产品标准清单对照表
 
@@ -15,6 +15,10 @@
 |   3    | myCobot机械臂-配套电源线            |
 |   4    | USB-Type C                          |
 |   5    | HDMI连接线                          |
+|   6    | myCobot摄像头法兰                    |
+|   7    | 乐高插件包                          |
+|   8    | 杜邦线*2                           |
+|   9    | 内六角扳手                          |
 
 **注：** 包装箱到位后，请确认机器人包装完好无损。如有损坏，请及时联系物流公司和您所在地区的供应商。开箱后，请根据物品清单检查箱内的实际物品。
 
