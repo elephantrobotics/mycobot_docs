@@ -26,11 +26,11 @@
 ## 3 吸泵测试
 运行下面程序，吸泵会重复2次打开关闭的动作
 ```python
-from pymycobot import MyCobot
+from pymycobot import MyCobot280
 import time
 import Jetson.GPIO as GPIO
 
-arm = MyCobot("/dev/ttyTHS1", 1000000)
+arm = MyCobot280("/dev/ttyTHS1", 1000000)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(20, GPIO.OUT)
 GPIO.setup(21, GPIO.OUT)
@@ -61,14 +61,14 @@ for i in range(2):
 
 ## 5 复合应用
 ```python
-from pymycobot import MyCobot
+from pymycobot import MyCobot280
 import time
 import Jetson.GPIO as GPIO
 init_angles=[18.36, 6.5, -124.45, 26.54, -1.84, -110.47]#初始位置的6个关节角度
 grab_point=[158.4, -66.9, 77.9, 179.01, 0.88, 52.41]#抓取点的坐标
 place_point=[158.4, 36.9, 77.9, 179.01, 0.88, 52.41]#放置点的坐标
 
-arm = MyCobot("/dev/ttyTHS1", 1000000)
+arm = MyCobot280("/dev/ttyTHS1", 1000000)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(20, GPIO.OUT)
 GPIO.setup(21, GPIO.OUT)

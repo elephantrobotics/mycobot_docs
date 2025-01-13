@@ -33,7 +33,7 @@ Edit the 280_draw_gcode.py file
 ```python
 # Change COM14 to the actual port number detected by your computer
 import time
-from pymycobot.mycobot import MyCobot280 # import mycobot library,if don't have, first 'pip install pymycobot'
+from pymycobot import MyCobot280 # import mycobot library,if don't have, first 'pip install pymycobot'
 
 # use PC and M5 control
 mc = MyCobot280('COM14', 115200) # WINDOWS use, need check port number when you PC

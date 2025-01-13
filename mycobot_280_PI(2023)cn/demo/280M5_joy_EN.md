@@ -23,9 +23,9 @@ Insert the robot arm control interface
 
 ## 2 Gripper test
 ```python
-from pymycobot import MyCobot,utils
+from pymycobot import MyCobot280,utils
 import time
-arm=MyCobot(utils.get_port_list()[0])
+arm=MyCobot280(utils.get_port_list()[0])
     for i in range(2):
     arm.set_gripper_state(1,100)#Gripper clamped
     time.sleep(1)
@@ -90,8 +90,8 @@ Note whether the MODE LED of the handle is on
 ```python
 import pygame
 import sys
-from pymycobot import MyCobot,utils
-mc=MyCobot(utils.get_port_list()[0])
+from pymycobot import MyCobot280,utils
+mc=MyCobot280(utils.get_port_list()[0])
 init_angles=[0, 0, -90, 0, 0, 0]
 mc.sync_send_angles(init_angles,50)
 pygame.init()

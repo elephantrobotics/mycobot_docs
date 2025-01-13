@@ -213,7 +213,7 @@ cd <your-path>/pymycobot
 首先，打开您安装好的PyCharm，新建一个Python文件，输入以下代码，导入我们的库：
 
 ```python
-from pymycobot.mycobot import MyCobot280
+from pymycobot import MyCobot280
 ```
 
 **注意：**

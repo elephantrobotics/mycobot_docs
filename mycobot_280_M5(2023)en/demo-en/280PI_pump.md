@@ -30,11 +30,11 @@ Then connect the wire to the base IO of the robot arm
 ## 3 Pump test
 Run the following program, the pump will repeat the opening and closing action twice
 ```python
-from pymycobot import MyCobot,PI_PORT,PI_BAUD
+from pymycobot import MyCobot280,PI_PORT,PI_BAUD
 import time
 import RPi.GPIO as GPIO
 
-arm = MyCobot(PI_PORT,PI_BAUD)
+arm = MyCobot280(PI_PORT,PI_BAUD)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(20, GPIO.OUT)
 GPIO.setup(21, GPIO.OUT)
@@ -65,14 +65,14 @@ Use the fast movement function of myblockly to teach the grabbing point and plac
 
 ## 5 Composite application
 ```python
-from pymycobot import MyCobot,PI_PORT,PI_BAUD
+from pymycobot import MyCobot280,PI_PORT,PI_BAUD
 import time
 import RPi.GPIO as GPIO
 init_angles=[-3.25, -2.46, -95.09, 9.22, 86.39, 93.33]#6 joint angles at the initial position
 grab_point=[196.9, -197.1, 124.5, -178.8, 1.25, 173.32]#Coordinates of the grab point
 place_point=[196.9, -97.1, 124.5, -178.8, 1.25, 173.32]#Coordinates of the placement point
 
-arm = MyCobot(PI_PORT,PI_BAUD)
+arm = MyCobot280(PI_PORT,PI_BAUD)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(20, GPIO.OUT)
 GPIO.setup(21, GPIO.OUT)

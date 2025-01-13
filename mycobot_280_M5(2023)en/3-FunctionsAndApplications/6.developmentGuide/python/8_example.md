@@ -7,7 +7,7 @@ The following are various use cases and operation result videos. You can copy th
 ## 1 Control RGB light board
 
 ```python
-from pymycobot.mycobot import MyCobot280
+from pymycobot import MyCobot280
 import time
 #The above needs to be written at the beginning of the code, which means importing the project package
 
@@ -43,7 +43,7 @@ i -= 1
 ## 2 Control the machine to return to the origin
 
 ```python
-from pymycobot.mycobot import MyCobot280
+from pymycobot import MyCobot280
 # MyCobot280 class initialization requires two parameters:
 # The first is the serial port string, such as:
         # linux: "/dev/ttyUSB0"
@@ -174,7 +174,7 @@ time.sleep(2.5)
 ##  5 Control the robot arm to swing left and right
 
 ```python
-from pymycobot.mycobot import MyCobot280
+from pymycobot import MyCobot280
 import time
 
 # M5 version
@@ -224,7 +224,7 @@ mc.release_all_servos()
 ## 6 Controlling the robotic arm to dances
 
 ```python
-from pymycobot.mycobot import MyCobot280
+from pymycobot import MyCobot280
 import time
 
 if __name__ == '__main__':
@@ -278,7 +278,7 @@ while time.time() - start < 30:
 ## 7 Gripper control
 
 ```python
-from pymycobot.mycobot import MyCobot280
+from pymycobot import MyCobot280
 import time
 def gripper_test(mc):
     print("Start check IO part of api\n")
@@ -362,7 +362,7 @@ gripper_test(mc)
 280-M5
 
 ```python
-from pymycobot.mycobot import MyCobot280
+from pymycobot import MyCobot280
 import time
 
 # The MyCobot280 class requires two parameters to initialize:

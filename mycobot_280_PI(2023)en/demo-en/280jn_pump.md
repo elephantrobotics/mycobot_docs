@@ -30,11 +30,11 @@ Then connect the wire to the base IO of the robot arm
 ## 3 Pump test
 Run the following program, the pump will repeat the opening and closing action twice
 ```python
-from pymycobot import MyCobot
+from pymycobot import MyCobot280
 import time
 import Jetson.GPIO as GPIO
 
-arm = MyCobot("/dev/ttyTHS1", 1000000)
+arm = MyCobot280("/dev/ttyTHS1", 1000000)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(20, GPIO.OUT)
 GPIO.setup(21, GPIO.OUT)
@@ -65,14 +65,14 @@ Use the fast movement function of myblockly to teach the grab point and placemen
 
 ## 5 Composite application
 ```python
-from pymycobot import MyCobot
+from pymycobot import MyCobot280
 import time
 import Jetson.GPIO as GPIO
 init_angles=[18.36, 6.5, -124.45, 26.54, -1.84, -110.47]#6 joint angles at the initial position
 grab_point=[158.4, -66.9, 77.9, 179.01, 0.88, 52.41]#Coordinates of the grab point
 place_point=[158.4, 36.9, 77.9, 179.01, 0.88, 52.41]#Coordinates of the placement point
 
-arm = MyCobot("/dev/ttyTHS1", 1000000)
+arm = MyCobot280("/dev/ttyTHS1", 1000000)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(20, GPIO.OUT)
 GPIO.setup(21, GPIO.OUT)

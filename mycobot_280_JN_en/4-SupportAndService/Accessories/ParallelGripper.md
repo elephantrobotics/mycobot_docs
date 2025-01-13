@@ -73,11 +73,11 @@ Insert the robot arm control interface:
 - M5 version:
 
 ```python
-from pymycobot.mycobot import MyCobot
+from pymycobot import MyCobot280
 import time
 
-# Initialize a MyCobot object
-mc = MyCobot("COM3", 115200)
+# Initialize a MyCobot280 object
+mc = MyCobot280("COM3", 115200)
 
 # The following three methods can control the gripper to open-close-open
 # Method 1:
@@ -109,11 +109,12 @@ mc.set_gripper_state(0, 80) time.sleep(3)
 
 
 ```python 
-from pymycobot.mycobot import MyCobot from pymycobot import PI_PORT, PI_BAUD # When using the Raspberry Pi version of mycobot, you can reference these two variables to initialize MyCobot
+from pymycobot import MyCobot280 
+from pymycobot import PI_PORT, PI_BAUD # When using the Raspberry Pi version of mycobot, you can reference these two variables to initialize MyCobot280
 import time
 
-# Initialize a MyCobot object
-mc = MyCobot(PI_PORT, PI_BAUD)
+# Initialize a MyCobot280 object
+mc = MyCobot280(PI_PORT, PI_BAUD)
 
 # The following three methods can control the gripper to open-close-open
 # Method 1:

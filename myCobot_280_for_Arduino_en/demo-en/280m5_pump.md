@@ -30,10 +30,10 @@ Then connect the wire to the base IO of the robot arm
 ## 3 Pump test
 Run the following program, the pump will repeat the opening and closing action twice
 ```python
-from pymycobot import MyCobot,utils
+from pymycobot import MyCobot280,utils
 import time
 
-arm = MyCobot(utils.get_port_list()[0])
+arm = MyCobot280(utils.get_port_list()[0])
 
 # Turn on the pump
 def pump_on():
@@ -62,13 +62,13 @@ Use the fast movement function of myblockly to teach the grab and place points o
 
 ## 5 Composite Application
 ```python
-from pymycobot import MyCobot,utils
+from pymycobot import MyCobot280,utils
 import time
 init_angles=[-3.25, -2.46, -95.09, 9.22, 86.39, 93.33]#6 joint angles at the initial position
 grab_point=[196.9, -197.1, 124.5, -178.8, 1.25, 173.32]#Coordinates of the grab point
 place_point=[196.9, -97.1, 124.5, -178.8, 1.25, 173.32]# Coordinates of the placement point
 
-arm = MyCobot(utils.get_port_list()[0])
+arm = MyCobot280(utils.get_port_list()[0])
 
 # Turn on the suction pump
 def pump_on():

@@ -55,11 +55,11 @@
 + M5 版本
 
 ```python
- from pymycobot.mycobot import MyCobot
+ from pymycobot import MyCobot280
  import time
 
- # 初始化一个MyCobot对象
- mc = MyCobot("COM3", 115200)
+ # 初始化一个MyCobot280对象
+ mc = MyCobot280("COM3", 115200)
 
  mc.set_encoder(7,2048,40)#张开
  time.sleep(2)
@@ -69,12 +69,12 @@
 ```
 + Pi 版本
 ```python
-     from pymycobot.mycobot import MyCobot
-     from pymycobot import PI_PORT, PI_BAUD  # 当使用树莓派版本的mycobot时可以引用这两个变量进行MyCobot初始化
+     from pymycobot import MyCobot280
+     from pymycobot import PI_PORT, PI_BAUD  # 当使用树莓派版本的mycobot时可以引用这两个变量进行MyCobot280初始化
      import time
         
-     # 初始化一个MyCobot对象
-     mc = MyCobot(PI_PORT, PI_BAUD)
+     # 初始化一个MyCobot280对象
+     mc = MyCobot280(PI_PORT, PI_BAUD)
      mc.set_encoder(7,2048,40)#张开
      time.sleep(2)
      mc.set_encoder(7,2300,40)#握紧

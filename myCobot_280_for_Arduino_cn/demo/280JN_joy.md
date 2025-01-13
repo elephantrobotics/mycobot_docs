@@ -28,9 +28,9 @@
 
 ## 2 夹爪测试
 ```python
-from pymycobot import MyCobot,utils
+from pymycobot import MyCobot280,utils
 import time
-arm=MyCobot(utils.get_port_list()[0])
+arm=MyCobot280(utils.get_port_list()[0])
 for i in range(2):
     arm.set_gripper_state(1,100)#夹爪夹紧
     time.sleep(1)
@@ -117,8 +117,8 @@ else:
 import pygame
 import sys
 import time
-from pymycobot import MyCobot,PI_BAUD
-mc=MyCobot("/dev/ttyTHS1",PI_BAUD)
+from pymycobot import MyCobot280,PI_BAUD
+mc=MyCobot280("/dev/ttyTHS1",PI_BAUD)
 time.sleep(1)
 init_angles=[0, 0, -90, 0, 0, 0]
 mc.sync_send_angles(init_angles,50)

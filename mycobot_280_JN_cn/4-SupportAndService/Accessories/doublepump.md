@@ -81,14 +81,14 @@
 
 > 代码如下：
 
-    - 280-M5 版本：
+- 280-M5 版本：
     
     ```python
-    from pymycobot.mycobot import MyCobot
+    from pymycobot import MyCobot280
     import time
     
-    # 初始化一个MyCobot对象
-    mc = MyCobot("COM3", 115200)
+    # 初始化一个MyCobot280对象
+    mc = MyCobot280("COM3", 115200)
     
     # 开启吸泵
     def pump_on():
@@ -120,13 +120,13 @@
     - 280-Pi 版本：
     
     ```python
-    from pymycobot.mycobot import MyCobot
-    from pymycobot import PI_PORT, PI_BAUD  # 当使用树莓派版本的mycobot时，可以引用这两个变量进行MyCobot初始化
+    from pymycobot import MyCobot280
+    from pymycobot import PI_PORT, PI_BAUD  # 当使用树莓派版本的mycobot时，可以引用这两个变量进行MyCobot280初始化
     import time
     import RPi.GPIO as GPIO
     
-    # 初始化一个MyCobot对象
-    mc = MyCobot(PI_PORT, PI_BAUD)
+    # 初始化一个MyCobot280对象
+    mc = MyCobot280(PI_PORT, PI_BAUD)
     
     # 初始化
     GPIO.setmode(GPIO.BCM)

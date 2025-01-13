@@ -54,11 +54,11 @@ Insert the gripper with the connector installed into the end of the robot arm
 + M5 Version
 
 ```python
-from pymycobot.mycobot import MyCobot
+from pymycobot import MyCobot280
 import time
 
-# Initialize a MyCobot object
-mc = MyCobot("COM3", 115200)
+# Initialize a MyCobot280 object
+mc = MyCobot280("COM3", 115200)
 
 mc.set_encoder(7,2048,40)#Open
 time.sleep(2)
@@ -68,12 +68,12 @@ mc.set_encoder(7,2048,40)#Hold
 ```
 + Pi version
 ```python
-from pymycobot.mycobot import MyCobot
+from pymycobot import MyCobot280
 from pymycobot import PI_PORT, PI_BAUD # When using the Raspberry Pi version of mycobot, you can reference these two variables to initialize MyCobot
 import time
 
-# Initialize a MyCobot object
-mc = MyCobot(PI_PORT, PI_BAUD)
+# Initialize a MyCobot280 object
+mc = MyCobot280(PI_PORT, PI_BAUD)
 mc.set_encoder(7,2048,40)#Open
 time.sleep(2)
 mc.set_encoder(7,2300,40)#Hold tight

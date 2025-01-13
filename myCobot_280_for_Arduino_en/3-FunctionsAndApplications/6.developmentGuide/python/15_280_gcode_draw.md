@@ -37,7 +37,7 @@ from pymycobot.mycobot280 import MyCobot280 # import mycobot library,if don't ha
 
 # use PC and Arduino control
 mc = MyCobot280('COM14', 115200) # WINDOWS use, need check port number when you PC
-# mc = MyCobot('/dev/ttyUSB0',115200) # VM linux use
+# mc = MyCobot280('/dev/ttyUSB0',115200) # VM linux use
 time.sleep(2)
 ...
 ```

@@ -25,10 +25,10 @@ Insert the robot arm control interface
 ## 3 Gripper test
 Run the following program, the gripper will repeat the closing and opening action twice
 ```python
-from pymycobot import MyCobot,utils
+from pymycobot import MyCobot280,utils
 import time
 
-arm=MyCobot(utils.get_port_list()[0])
+arm=MyCobot280(utils.get_port_list()[0])
 time.sleep(2)
 for i in range(2):
     arm.set_gripper_state(1,100)
@@ -42,14 +42,14 @@ Use the fast moving function of myblockly to teach the grabbing and placing poin
 
 ## 5 Composite application
 ```python
-from pymycobot import MyCobot,utils
+from pymycobot import MyCobot280,utils
 import time
 
 init_angles=[33.22, -15.55, -100.54, 25.48, 6.76, -13.35]#6 joint angles at the initial position
 grab_point=[189.9, 12.1, 82.5, -178.15, 6.89, -43.47]#Coordinates of the grab point
 place_point=[189.9, 120.1, 88.5, -178.15, 6.89, -43.47]#Coordinates of the placement point
 
-arm=MyCobot(utils.get_port_list()[0])
+arm=MyCobot280(utils.get_port_list()[0])
 time.sleep(2)
 if __name__=="__main__":
     arm.set_gripper_state(0,100)#Open the gripper first

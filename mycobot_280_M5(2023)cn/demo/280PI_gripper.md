@@ -23,10 +23,10 @@
 ## 3 夹爪测试
 运行下面程序，夹爪会重复2次闭合张开的动作
 ```python
-from pymycobot import MyCobot,PI_PORT,PI_BAUD
+from pymycobot import MyCobot280,PI_PORT,PI_BAUD
 import time
 
-arm=MyCobot(PI_PORT,PI_BAUD)
+arm=MyCobot280(PI_PORT,PI_BAUD)
 for i in range(2):
     arm.set_gripper_state(1,100)
     time.sleep(1)
@@ -39,14 +39,14 @@ for i in range(2):
 
 ## 5 复合应用
 ```python
-from pymycobot import MyCobot,PI_PORT,PI_BAUD
+from pymycobot import MyCobot280,PI_PORT,PI_BAUD
 import time
 
 init_angles=[-3.25, -2.46, -95.09, 9.22, 86.39, 93.33]#初始位置的6个关节角度
 grab_point=[214.5, -189.9, 185.5, -177.5, 1.91, 173.49]#抓取点的坐标
 place_point=[214.5, -50.9, 185.5, -177.5, 1.91, 173.49]#放置点的坐标
 
-arm=MyCobot(PI_PORT,PI_BAUD)
+arm=MyCobot280(PI_PORT,PI_BAUD)
 if __name__=="__main__":    
     arm.set_gripper_state(0,100)#夹爪先张开  
     time.sleep(1)  

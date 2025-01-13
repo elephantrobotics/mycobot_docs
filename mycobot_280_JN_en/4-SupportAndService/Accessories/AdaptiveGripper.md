@@ -76,11 +76,11 @@ Insert the robot control interface:
 - M5 version:
 
 ```python
-from pymycobot.mycobot import MyCobot
+from pymycobot import MyCobot280
 import time
 
-# Initialize a MyCobot object
-mc = MyCobot("COM3", 115200)
+# Initialize a MyCobot280 object
+mc = MyCobot280("COM3", 115200)
 
 # The following three methods can control the gripper to open-close-open
 # Method 1:

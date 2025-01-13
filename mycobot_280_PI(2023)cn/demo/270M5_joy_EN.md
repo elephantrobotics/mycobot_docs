@@ -91,8 +91,8 @@ Note whether the MODE LED of the handle is on
 import pygame
 import sys
 import time
-from pymycobot import MechArm,utils
-mc=MechArm(utils.get_port_list()[0])
+from pymycobot import MechArm270,utils
+mc=MechArm270(utils.get_port_list()[0])
 init_angles=[0, 0, 0, 0, 80, 0]
 mc.send_angles(init_angles,50)
 pygame.init()
