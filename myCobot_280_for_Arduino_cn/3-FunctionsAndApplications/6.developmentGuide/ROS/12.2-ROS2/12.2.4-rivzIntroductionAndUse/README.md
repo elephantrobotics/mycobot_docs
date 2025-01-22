@@ -29,30 +29,17 @@ width ="500"  align = "center">
 
 ## 3 mycobot_ros2安装与更新
 
-- **PI版本(Ubuntu 20.04)：**
-
 `mycobot_ros2` 是 ElephantRobotics 推出的，适配旗下各类型桌面型机械臂的 ROS 包。
 
 项目地址：https://github.com/elephantrobotics/mycobot_ros2
 
 官方默认的工作空间是`colcon_ws`。
 
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-12.png
-width ="500"  align = "center">
-
-然后输入以下指令：
+打开终端输入以下指令：
 
 ```bash
 cd ~/colcon_ws/src  # 进入工作区的src文件夹中
-# 克隆github上的代码
+# 克隆github上的代码，默认是humble分支
 git clone https://github.com/elephantrobotics/mycobot_ros2.git
 cd ..       # 返回工作区
 colcon build --symlink-install # 构建工作区中的代码, --symlink-install：避免每次调整 python 脚本时都需要重新编译
@@ -77,23 +64,18 @@ colcon build --symlink-install
 source install/setup.bash
 ```
 
-再输入：
-
-- mycobot 280-M5版本：
+再输入下面命令运行：
 
 ```bash
-ros2 launch mycobot_280 test.launch.py
+ros2 launch mycobot_280_arduino test.launch.py
 ```
-
-![image-20220519154315585](../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/ros2_open1.png)
 
 打开rviz2，并得到如下结果：
 
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/open-2.png
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/280ar.png
 width ="500"  align = "center">
 
 如果您想了解更多rviz的相关资料信息，您可以前往[官方文档](http://wiki.ros.org/rviz2)进行查看
-
 
 
 ## 机械臂的控制
@@ -101,55 +83,13 @@ width ="500"  align = "center">
 ### 1 滑块控制
 
 打开一个命令行，运行：
-
-- mycobot 280-M5版本：
   
 ```bash
-# mycobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
-ros2 launch mycobot_280 slider_control.launch.py
+# mycobot 280-Arduino版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
+ros2 launch mycobot_280_arduino slider_control.launch.py
 ```
 
-- mycobot 280-PI版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-# mycobot 280-PI版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-ros2 launch mycobot_280pi slider_control.launch.py
-```
-
-- mycobot 280-JetsonNano版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-# mycobot 280-JetsonNano版本默认串口名为"/dev/ttyTHS1"，波特率为1000000.
-ros2 launch mycobot_280jn slider_control.launch.py
-```
-
-它将**打开 rviz 和一个滑块组件**，你将看到如下画面（树莓派版本画面略有差异，不影响使用）：
+它将**打开 rviz 和一个滑块组件**，你将看到类似下面的画面：
 
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/caf-1.png
 width ="500"  align = "center">
@@ -163,54 +103,12 @@ width ="500"  align = "center">
 
 除了上面的控制，我们也可以**让模型跟随真实的机械臂运动**。打开一个命令行运行：
 
-- mycobot 280-M5版本：
-
 ```bash
-# mycobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
-ros2 launch mycobot_280 mycobot_follow.launch.py 
+# mycobot 280-Arduino版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
+ros2 launch mycobot_280_arduino mycobot_follow.launch.py 
 ```
 
-- mycobot 280-PI版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-# mycobot 280-PI版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-ros2 launch mycobot_280pi mycobot_follow.launch.py 
-```
-
-- mycobot 280-JetsonNano版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-# mycobot 280-JetsonNano版本默认串口名为"/dev/ttyTHS1"，波特率为1000000.
-ros2 launch mycobot_280jn mycobot_follow.launch.py
-```
-
-它将**打开 rviz 展示模型跟随效果**。
+它将**打开 rviz 展示模型跟随效果**。此时手动拖动真实机械臂，rviz中的模型将会跟随运动。
 
 ### 3 GUI 控制
 
@@ -218,51 +116,9 @@ ros2 launch mycobot_280jn mycobot_follow.launch.py
 
 打开命令行：
 
-- mycobot 280-M5版本：
-  
 ```bash
-# mycobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
-ros2 launch mycobot_280 simple_gui.launch.py
-```
-
-- mycobot 280-PI版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-# mycobot 280-PI版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-ros2 launch mycobot_280pi simple_gui.launch.py
-```
-
-- mycobot 280-JetsonNano版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-# mycobot 280-JetsonNano版本默认串口名为"/dev/ttyTHS1"，波特率为1000000.
-ros2 launch mycobot_280jn simple_gui.launch.py
+# mycobot 280-Arduino版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
+ros2 launch mycobot_280_arduino simple_gui.launch.py
 ```
 
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/gui-1.png
@@ -270,56 +126,13 @@ width ="500"  align = "center">
 
 ### 4 键盘控制
 
-在 `mycobot_280` 的包中**添加了键盘控制的功能**，并在 rviz 中实时同步。本功能依赖 pythonApi，所以确保与真实机械臂连接。
+在 `mycobot_280_arduino` 的包中**添加了键盘控制的功能**，并在 rviz 中实时同步。本功能依赖 python Api，所以确保与真实机械臂连接。
 
 打开一个命令行，运行：
-
-- mycobot 280-M5版本：
   
 ```bash
-# mycobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
-ros2 launch mycobot_280 teleop_keyboard.launch.py 
-```
-
-- mycobot 280-PI版本：
-  
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-# mycobot 280-PI版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-ros2 launch mycobot_280pi teleop_keyboard.launch.py 
-```
-
-- mycobot 280-JetsonNano版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-# mycobot 280-JetsonNano版本默认串口名为"/dev/ttyTHS1"，波特率为1000000.
-ros2 launch mycobot_280jn teleop_keyboard.launch.py
+# mycobot 280-arduino版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
+ros2 launch mycobot_280_arduino teleop_keyboard.launch.py 
 ```
 
 运行效果如下：
@@ -333,7 +146,6 @@ width ="500"  align = "center">
 [INFO] [launch]: Default logging verbosity is set to INFO
 [INFO] [robot_state_publisher-1]: process started with pid [19114]
 [INFO] [rviz2-2]: process started with pid [19116]
-[INFO] [follow_display-3]: process started with pid [19118]
 [robot_state_publisher-1] Parsing robot urdf xml string.
 [robot_state_publisher-1] Link joint2 had 1 children
 [robot_state_publisher-1] Link joint3 had 1 children
@@ -341,70 +153,29 @@ width ="500"  align = "center">
 [robot_state_publisher-1] Link joint5 had 1 children
 [robot_state_publisher-1] Link joint6 had 1 children
 [robot_state_publisher-1] Link joint6_flange had 0 children
-[robot_state_publisher-1] [INFO] [1652948746.290904045] [robot_state_publisher]: got segment joint1
-[robot_state_publisher-1] [INFO] [1652948746.290967253] [robot_state_publisher]: got segment joint2
-[robot_state_publisher-1] [INFO] [1652948746.290973124] [robot_state_publisher]: got segment joint3
-[robot_state_publisher-1] [INFO] [1652948746.290977490] [robot_state_publisher]: got segment joint4
-[robot_state_publisher-1] [INFO] [1652948746.290981670] [robot_state_publisher]: got segment joint5
-[robot_state_publisher-1] [INFO] [1652948746.290985737] [robot_state_publisher]: got segment joint6
-[robot_state_publisher-1] [INFO] [1652948746.290989943] [robot_state_publisher]: got segment joint6_flange
-[follow_display-3] [INFO] [1652948746.664601707] [follow_display]: port:/dev/ttyUSB0, baud:115200
-[rviz2-2] [INFO] [1652948746.828773551] [rviz2]: Stereo is NOT SUPPORTED
-[rviz2-2] [INFO] [1652948746.830452458] [rviz2]: OpenGl version: 4.1 (GLSL 4.1)
-[rviz2-2] [INFO] [1652948746.874021926] [rviz2]: Stereo is NOT SUPPORTED
+[robot_state_publisher-1] [INFO] [1737443676.433771864] [robot_state_publisher]: got segment joint1
+[robot_state_publisher-1] [INFO] [1737443676.433899995] [robot_state_publisher]: got segment joint2
+[robot_state_publisher-1] [INFO] [1737443676.433912168] [robot_state_publisher]: got segment joint3
+[robot_state_publisher-1] [INFO] [1737443676.433921515] [robot_state_publisher]: got segment joint4
+[robot_state_publisher-1] [INFO] [1737443676.433930673] [robot_state_publisher]: got segment joint5
+[robot_state_publisher-1] [INFO] [1737443676.433939720] [robot_state_publisher]: got segment joint6
+[robot_state_publisher-1] [INFO] [1737443676.433948907] [robot_state_publisher]: got segment joint6_flange
+[rviz2-2] [INFO] [1737443677.010176632] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-2] [INFO] [1737443677.010780016] [rviz2]: OpenGl version: 3.1 (GLSL 1.4)
+[rviz2-2] [INFO] [1737443677.134247803] [rviz2]: Stereo is NOT SUPPORTED
 [rviz2-2] Parsing robot urdf xml string.
+[listen_real-3] [INFO] [1737443677.525803631] [listen_real]: port:/dev/ttyUSB0, baud:115200
 
 ```
-
 
 接着，打开另一个命令行，运行：
 
-
-- mycobot 280-M5版本：
-
 ```bash
-ros2 run mycobot_280 teleop_keyboard
-```
-
-- mycobot 280-PI版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-ros2 run mycobot_280pi teleop_keyboard
-```
-
-- mycobot 280-JetsonNano版本：
-
-点击桌面上的`ROS2 Shell`图标或者桌面下方栏的对应图标，打开ROS2环境终端：
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-10.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-11.jpg
-width ="500"  align = "center">
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.7-12.png
-width ="500"  align = "center">
-
-然后运行命令：
-
-```bash
-ros2 run mycobot_280jn teleop_keyboard
+ros2 run mycobot_280_arduino teleop_keyboard
 ```
 
 你会在命令行中看到如下输出：
+
 ```bash
 Mycobot Teleop Keyboard Controller
 ---------------------------
@@ -428,7 +199,7 @@ Other:
     3 - Resave home pose
     q - Quit
 
-currently:	speed: 10	change percent: 2  
+currently:	speed: 50	change percent: 12  
 ```
 
 在该终端中，您可以通过命令行中的按键控制机械臂的状态和对机械臂进行移动操作。

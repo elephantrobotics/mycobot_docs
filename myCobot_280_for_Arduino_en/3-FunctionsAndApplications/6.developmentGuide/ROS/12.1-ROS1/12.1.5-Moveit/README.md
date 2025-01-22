@@ -30,26 +30,11 @@ move_group is a ROS node. It uses the ROS parameter server to get three kinds of
 
 ## How to use MoveIt
 
+>>**Note:** For better motion effects, the Atom firmware version of the end arm is 6.5, and the python driver library pymycobot version is 3.5.3
+
 `mycobot_ros` now has MoveIt integrated.
 
 Open the command line and run:
-- mycobot 280-M5 version:
-
-```bash
-roslaunch mycobot_280_moveit mycobot_moveit.launch
-```
-
-- mycobot 280-Pi version:
-
-```bash
-roslaunch mycobot_280pi_moveit mycobot_moveit.launch
-```
-
-- mycobot 280-JetsonNano version:
-
-```bash
-roslaunch mycobot_280jn_moveit mycobot_moveit.launch
-```
 
 - mycobot 280-Arduino version:
 
@@ -68,25 +53,6 @@ You can plan and execute, demonstration effect:
 width ="500" align = "center">
 
 If you need to let the real robot arm execute the plan synchronously, you need to open another command line and run:
-- mycobot 280-M5 version:
-
-```bash
-# The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0", and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0", if the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-rosrun mycobot_280_moveit sync_plan.py _port:=/dev/ttyUSB0 _baud:=115200
-```
-- mycobot 280-Pi version:
-
-```bash
-# The default serial port name of mycobot 280-Pi version is "/dev/ttyAMA0", and the baud rate is 1000000.
-rosrun mycobot_280pi_moveit sync_plan.py _port:=/dev/ttyAMA0 _baud:=1000000
-```
-
-- mycobot 280-JetsonNano version:
-
-```bash
-# mycobot The default serial port name of 280-JetsonNano version is "/dev/ttyTHS1" and the baud rate is 1000000.
-rosrun mycobot_280jn_moveit sync_plan.py _port:=/dev/ttyTHS1 _baud:=1000000
-```
 
 - mycobot 280-Arduino version:
 
