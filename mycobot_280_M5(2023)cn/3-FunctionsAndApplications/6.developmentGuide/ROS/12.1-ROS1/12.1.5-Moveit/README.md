@@ -29,6 +29,8 @@ move_group是一个 ROS 节点。它使用ROS参数服务器来获取三种信�
 
 ## 如何使用MoveIt
 
+>>**注意：** 为了更好的运动效果，端臂的Atom固件版本为6.5，python驱动库pymycobot版本为3.5.3
+
 `mycobot_ros` 现已集成了 MoveIt 部分。
 
 打开命令行运行：

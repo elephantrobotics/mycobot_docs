@@ -94,9 +94,9 @@ width ="500"  align = "center">
 
 如果您想了解更多rviz的相关资料信息，您可以前往[官方文档](http://wiki.ros.org/rviz2)进行查看
 
-
-
 ## 机械臂的控制
+
+>>**注意：** 为了更好的运动效果，端臂的Atom固件版本为6.5，python驱动库pymycobot版本为3.5.3
 
 ### 1 滑块控制
 

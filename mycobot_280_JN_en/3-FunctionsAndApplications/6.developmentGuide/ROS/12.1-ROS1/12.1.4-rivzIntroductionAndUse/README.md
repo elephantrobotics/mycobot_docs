@@ -118,7 +118,9 @@ If you want to learn more about rviz, you can go to the [official document](http
 
 ## Robot arm control
 
-### Slider control
+>>**Note:** For better motion effects, the Atom firmware version of the end arm is 6.5, and the python driver library pymycobot version is 3.5.3
+
+### 1 Slider control
 
 Open a command line and run:
 
@@ -146,7 +148,7 @@ rosrun mycobot_280jn slider_control.py _port:=/dev/ttyTHS1 _baud:=1000000
 **Please note: due to the commandThe robot arm will move to the current position of the model while inputting. Before you use the command, please make sure that the model in rviz does not have any penetration**
 **Do not drag the slider quickly after connecting the robot arm to prevent damage to the robot arm**
 
-### Model following
+### 2 Model following
 
 In addition to the above controls, we can also **let the model follow the real robot arm movement**. Open a command line and run:
 - mycobot 280-JetsonNano version:
@@ -163,7 +165,7 @@ roslaunch mycobot_280jn mycobot_follow.launch
 ```
 It will **open rviz to show the model following effect**.
 
-### GUI control
+### 3 GUI control
 
 Based on the previous, this package also **provides a simple Gui control interface**. This method is intended for real robotic arms to interact with each other, please connect mycobot.
 
@@ -178,7 +180,7 @@ roslaunch mycobot_280jn simple_gui.launch port:=/dev/ttyTHS1 baud:=1000000
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/gui-1.png
 width ="500" align = "center">
 
-### Keyboard control
+### 4 Keyboard control
 
 **Added the keyboard control function** in the `mycobot_280` package, and synchronized it in real time in rviz. This function depends on pythonApi, so make sure it is connected to the real robot arm.
 
@@ -295,70 +297,4 @@ Parameters supported by this script:
 + _speed: robot movement speed.
 
 + _change_percent: movement distance percentage.
-
-### Vision
-> Install the camera at the end of mycobot. This vision part uses the eye-in-hand method.
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/camera_connect-1.jpg
-width ="500" align = "center">
-
-####  Identify and display
-Command line operation:
-- mycobot 280-JetsonNano version:
-```bash
-roslaunch mycobot_280jn detect_marker.launch
-```
-
-Optional parameters:
-+ num: camera id, default is 0.
-
-After starting:
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/vision-1.png
-width ="500" align = "center">
-
-Recognize the QR code and obtain the relative position relationship with the camera. According to the end position of mycobot in rviz, perform coordinate conversion and finally display it in rviz.
-
-You can refer to [Slider Control](##1421-Slider Control) and use `slider_control.py` to control the robot arm
-
-####  Visual Tracking and Grasping
->This section requires the use of a vertical suction pump.
-
-Run from command line:
-- mycobot 280-JetsonNano version:
-
-```bash
-# mycobot 280-JetsonNano version default serial port name is "/dev/ttyTHS1", baud rate is 1000000.
-roslaunch mycobot_280jn detect_marker_with_topic.launch port:=/dev/ttyTHS1 baud:=1000000
-```
-
-Optional parameters:
-
-+ num: Camera id, default is 0.
-+ port: serial port string
-+ baud: baud rate
-
-After startup:
-
-The status of mycobot will be displayed in real time.
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/vision-2.gif
-width ="500" align = "center">
-
-Then run the scripts for tracking and grabbing. Open a new command line:
-
-- mycobot 280-JetsonNano version:
-```bash
-rosrun mycobot_280jn follow_and_pump.py
-```
-
-After starting, mycobot will go to its initial position
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/vision-3.gif
-width ="500" align = "center">
-
-After the marker is recognized, follow it for a while, then try to absorb and end the program.
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/vision-4.png
-width ="500" align = "center">
 

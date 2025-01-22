@@ -123,7 +123,9 @@ width ="500"  align = "center">
 
 # 机械臂的控制
 
-### 1 滑块控制
+>>**注意：** 为了更好的运动效果，端臂的Atom固件版本为6.5，python驱动库pymycobot版本为3.5.3
+
+## 1 滑块控制
 
 打开一个命令行，运行：
 
@@ -152,7 +154,7 @@ rosrun mycobot_280jn slider_control.py _port:=/dev/ttyTHS1 _baud:=1000000
 **请注意：由于在命令输入的同时机械臂会移动到模型目前的位置，在您使用命令之前请确保rviz中的模型没有出现穿模现象**
 **不要在连接机械臂后做出快速拖动滑块的行为，防止机械臂损坏**
 
-### 2 模型跟随
+## 2 模型跟随
 
 除了上面的控制，我们也可以**让模型跟随真实的机械臂运动**。打开一个命令行运行：
 
@@ -172,7 +174,7 @@ roslaunch mycobot_280jn mycobot_follow.launch
 
 它将**打开 rviz 展示模型跟随效果**。
 
-### 3 GUI 控制
+## 3 GUI 控制
 
 在前面的基础上，本包还**提供了简单的 Gui 控制界面**。 该方式意在于真实机械臂相互联动，请连接 mycobot。
 
@@ -187,7 +189,7 @@ roslaunch mycobot_280jn simple_gui.launch port:=/dev/ttyTHS1 baud:=1000000
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/gui-1.png
 width ="500"  align = "center">
 
-### 4 键盘控制
+## 4 键盘控制
 
 在 `mycobot_280` 的包中**添加了键盘控制的功能**，并在 rviz 中实时同步。本功能依赖 pythonApi，所以确保与真实机械臂连接。
 
@@ -304,71 +306,3 @@ currently:      speed: 50       change percent 5
 + _speed：机械臂移动速度。
 
 + _change_percent：移动距离百分比。
-
-### 5 视觉
->将相机安装在 mycobot 的末端。 本视觉部分使用 eye-in-hand 的方式。
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/camera_connect-1.jpg
-width ="500"  align = "center">
-
-#### 5.1识别并显示
-命令行运行：
-- mycobot 280-JetsonNano版本：
-```bash
-roslaunch mycobot_280jn detect_marker.launch
-```
-
-可选择参数：
-+ num：相机id， 默认为 0.
-
-启动后效果图：
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/vision-1.png
-width ="500"  align = "center">
-
-识别二维码，获取与相机的相对位置关系。根据 rviz 中mycobot的末端位置，进行坐标转换，最后显示在 rviz 中。
-
-可以参考滑块控制,使用 `slider_control.py` 来控制机械臂
-
-#### 5.2视觉追踪与抓取
->本部分需要使用垂直吸泵。
-
-命令行运行：
-- mycobot 280-JetsonNano版本：
-  
-```bash
-# mycobot 280-JetsonNano版本默认串口名为"/dev/ttyTHS1"，波特率为1000000.
-roslaunch mycobot_280jn detect_marker_with_topic.launch port:=/dev/ttyTHS1 baud:=1000000
-```
-
-可选择参数：
-
-+ num： 相机id， 默认为 0.
-+ port： 串口字符串
-+ baud： 波特率
-
-
-启动后效果图：
-
-将实时显示 mycobot 的状态。
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/vision-2.gif
-width ="500"  align = "center">
-
-紧接着运行，追踪和抓取的脚本。打开新的命令行：
-
-- mycobot 280-JetsonNano版本：
-```bash
-rosrun mycobot_280jn follow_and_pump.py
-```
-
-启动后，mycobot 会去到它的初始位置
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/vision-3.gif
-width ="500"  align = "center">
-
-当识别到 marker 后，跟随一段时间，然后尝试去吸取并结束程序。
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/vision-4.png
-width ="500"  align = "center">
-

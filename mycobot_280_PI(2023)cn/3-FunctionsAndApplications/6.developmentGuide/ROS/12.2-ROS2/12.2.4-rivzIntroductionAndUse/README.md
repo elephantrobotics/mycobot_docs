@@ -84,10 +84,10 @@ source install/setup.bash
 
 再输入：
 
-- mycobot 280-M5版本：
+- mycobot 280-Pi版本：
 
 ```bash
-ros2 launch mycobot_280 test.launch.py
+ros2 launch mycobot_280pi test.launch.py
 ```
 
 ![image-20220519154315585](../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/ros2_open1.png)
@@ -102,6 +102,8 @@ width ="500"  align = "center">
 
 
 ## 机械臂的控制
+
+>>**注意：**为了更好的运动效果，端臂的Atom固件版本为6.5，python驱动库pymycobot版本为3.5.3
 
 ### 滑块控制
 
@@ -376,16 +378,6 @@ width ="500"  align = "center">
 **请注意：由于在命令输入的同时机械臂会移动到模型目前的位置，在您使用命令之前请确保rviz中的模型没有出现穿模现象**
 **不要在连接机械臂后做出快速拖动滑块的行为，防止机械臂损坏**
 
-##### 3 GUI控制
-
-在前面的基础上，本包还**提供了简单的 Gui 控制界面**。 该方式意在于真实机械臂相互联动，请连接 mycobot。
-
-打开命令行：
-
-它将**打开rviz和一个GUI界面**，你将看到如下画面：
-
-<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.1.4-14.png
-width ="500"  align = "center">
 
 #### 摄像头法兰
 

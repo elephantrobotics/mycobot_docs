@@ -30,31 +30,16 @@ move_group is a ROS node. It uses the ROS parameter server to get three kinds of
 
 ## How to use MoveIt
 
+>>**Note:** For better motion effects, the Atom firmware version of the end arm is 6.5, and the python driver library pymycobot version is 3.5.3
+
 `mycobot_ros` now has MoveIt integrated.
 
 Open the command line and run:
-- mycobot 280-M5 version:
-
-```bash
-roslaunch mycobot_280_moveit mycobot_moveit.launch
-```
 
 - mycobot 280-Pi version:
 
 ```bash
 roslaunch mycobot_280pi_moveit mycobot_moveit.launch
-```
-
-- mycobot 280-JetsonNano version:
-
-```bash
-roslaunch mycobot_280jn_moveit mycobot_moveit.launch
-```
-
-- mycobot 280-Arduino version:
-
-```bash
-roslaunch mycobot_280arduino_moveit mycobot_moveit.launch
 ```
 
 The running effect is as follows:

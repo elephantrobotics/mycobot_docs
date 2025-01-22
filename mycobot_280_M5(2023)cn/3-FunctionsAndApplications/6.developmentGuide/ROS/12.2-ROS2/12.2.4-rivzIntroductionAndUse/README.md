@@ -92,6 +92,8 @@ sudo chmod 777 /dev/ttyACM0 # 新版本 myCobot280 M5
 
 ## 机械臂的控制
 
+>>**注意：** 为了更好的运动效果，端臂的Atom固件版本为6.5，python驱动库pymycobot版本为3.5.3
+
 ### 滑块控制
 
 打开一个命令行，运行：

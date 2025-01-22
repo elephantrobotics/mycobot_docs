@@ -113,6 +113,8 @@ Then enter the user password (**Note:** The password will not be displayed, just
 
 ## Robot arm control
 
+>>**Note:** For better motion effects, the Atom firmware version of the end arm is 6.5, and the python driver library pymycobot version is 3.5.3
+
 ### Slider control
 
 Open a command line and run:
