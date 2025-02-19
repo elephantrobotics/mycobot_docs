@@ -24,7 +24,7 @@
 ### 1.2工作空间
 ![工作空间](../../resource/1-ProductInformation/2.ProductParameter/工作范围.png)
 ### 1.3规格尺寸
-![工作空间](../../resource/1-ProductInformation/2.ProductParameter/280PI尺寸.png)
+![工作空间](./img/arduinosize.jpg)
 
 ### 1.4关节运动范围
 
@@ -42,7 +42,7 @@
 
 - 机器人底座安装法兰,底座同时兼容乐高科技件安装方式和M4螺丝安装方式。
 
-<img src="../../resource/1-ProductInformation/2.ProductParameter/孔位安装1.jpg" style="zoom:75%;" />
+<img src="./img/base1.jpg" style="zoom:75%;" />
 
 
 - 机器人末端安装法兰，机械臂末端同时兼容乐高科技件孔与螺丝螺纹孔。
@@ -53,12 +53,11 @@
 
 |  指标      | 参数 |
 | :---------: | :--------------:|
-| SOC        | Broadcom BCM2711     |
-| CPU        | 64位 1.5GHz四核      |
+| CPU        | 8x A55@1.5GHz      |
 | 蓝牙/无线  | 有                   |
-| USB        | USB3.0 x2; USB2.0 x2 |
+| USB        | USB3.0 x4 |
 | 显示屏幕   | 无                |
-| HDMI接口   | microHDMI x2         |
+| HDMI接口   | HDMI x1         |
 | 自定义按键 | 无                  |
 | IO接口    | 40                 |
 
@@ -68,27 +67,34 @@
 ### 3.1机械臂底座电气接口
 ### 底座介绍
 
-* A. 底座的正面如下图所示：
-  ![底座正面](../../resource/1-ProductInformation/2.ProductParameter/basefront.png)
+* A. 底座的左侧面如下图所示：
+  ![底座正面](./img/hadware1.png)
   - ① 开关按键
-  - ② 功能接口组一
-  - ③ USB2.0 , USB3.0
-  - ④ 电源DC接口
-  - ⑤ 网口
-* B. 底座的侧面如下图所示:
-  ![底座左侧](../../resource/1-ProductInformation/2.ProductParameter/BaseLeft.png)
-  - ① SD卡卡槽
-  - ② Type C
-  - ③ HDMI
-  - ④ 音频接口
+  - ② 耳机接口
+  - ③ SD卡卡槽
+  - ④ 电源DC12V接口
+  - ⑤ HDMI
+* B. 底座的右侧面如下图所示:
+  ![底座左侧](./img/hadware2.png)
+  - ① 网口
+  - ② USB3.0接口
+  - ③ IO接口
 
-### 3.2底座接口说明
+* C. 底座的俯视面如下图所示:
+  ![底座左侧](./img/hadware3.png)
+  - ① 供电Type -C接口
+  - ② Type -C接口
+  - ③ Micro USB接口
+  
+
+### 3.2 底部IO接口说明
 
 > **注意:** 功能接口组均为2.54mm杜邦接口，外部可使用2.54mm杜邦线。
 
-* A. 功能接口组一的各个接口定义如下表所示
+各个接口定义如下表所示
 
-| 标签 | 信号名 | 类型 | 功能 | 备注 |
+<img src="./img/io.png" style="zoom:100%;" />
+<!-- | 标签 | 信号名 | 类型 | 功能 | 备注 |
 | :---: | :----: | :--: | :------: | :----: |
 | 5V | 5V | P | DC 5V |  |
 | 5V | 5V | P | DC 5V |  |
@@ -129,9 +135,9 @@
 | 13 | GPIO13 | I/O | GPIO13 |  |
 | 19 | GPIO19 | I/O | GPIO19 |  |
 | 26 | GPIO26 | I/O | GPIO26 |  |
-| GND | GND  | p | GND |  |
+| GND | GND  | p | GND |  | -->
 
-> **注意:** 
+<!-- > **注意:** 
 > 1. I: 仅作为输入。
 > 
 > 2. I/O: 该功能信号包含输入和输出组合。
@@ -174,7 +180,7 @@
 
 * H. Type C接口：树莓派自身的供电口，仅给树莓派自身供电，无法给整个机器供电，所有电源DC接口可以正常使用的时候无需接此接口。
 
-* I. SD卡卡槽: SD卡可以插入和拔出。SD卡的大小是32mm×24mmx2.1mm
+* I. SD卡卡槽: SD卡可以插入和拔出。SD卡的大小是32mm×24mmx2.1mm -->
 
 ## 4.机械臂末端电气接口
 

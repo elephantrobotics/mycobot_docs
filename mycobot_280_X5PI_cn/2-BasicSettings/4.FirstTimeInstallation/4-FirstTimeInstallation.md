@@ -99,9 +99,9 @@ G型底座 适配型号：myCobot 280
 ## 5.上电与初步检测
 ## 机器人上电
 
-操作前，请确认已阅读并确保已遵循**第三章 安全须知**的内容，确保操作安全。同时将电源适配器连接上机械臂，并将机械臂底座固定在桌子上。连接方式如图 3-1 所示：
+操作前，请确认已阅读并确保已遵循**第三章 安全须知**的内容，确保操作安全。同时将电源适配器连接上机械臂DC接口上，并将机械臂底座固定在桌子上。连接方式如图 3-1 所示：
 
-<img src="../../resource/2-BasicSettings/4.FirstTimeInstallation/FristTimeUse.png" style="zoom:80%;" />
+<img src="./img/DC.png" style="zoom:80%;" />
 
 图 3-1
 
@@ -111,7 +111,6 @@ myCobot **必须使用外部电源**进行供电，以提供足够的电量：
 - Rated current: 3-5A
 - Plug Type: DC 5.5mm x 2.1
 
-注意，**不能仅仅使用插入M5Stack-basic的TypeC进行供电**。使用官方适配的电源，以免对机械臂造成损害。
 
 ## 连接外部设备
 
@@ -123,32 +122,32 @@ myCobot **必须使用外部电源**进行供电，以提供足够的电量：
 
 - 再将另一头插入机械臂的HDMI接口即可。
 
-  <img src="../../resource/2-BasicSettings/4.FirstTimeInstallation/FristTimeUse3.jpg" alt="img" style="zoom: 25%;" />
-
-  <img src="../../resource/2-BasicSettings/4.FirstTimeInstallation/FristTimeUse4.jpg" alt="img" style="zoom: 15%;" />
-
-  <img src="../../resource/2-BasicSettings/4.FirstTimeInstallation/FristTimeUse5.jpg" alt="img" style="zoom:15%;" />
+  <img src="./img/HDMI.png" style="zoom:40%;" />
+  
 
 - myCobot 280有4路USB接口,可以直接插入鼠标、键盘和其他外围设备使用。
 
-  <img src="../../resource/2-BasicSettings/4.FirstTimeInstallation/FristTimeUse6.png" style="zoom:80%;" />
+   <img src="./img/USB.png" style="zoom:40%;" />
+
 
 ## 上电
 
-连接所需的外部设备后,按下红色电源按钮启动机器
+连接所需的外部设备后,按下电源按钮启动机器
 
-<img src="../../resource/2-BasicSettings/4.FirstTimeInstallation/FristTimeUse7.png" alt="2.1.5.3-2-002" style="zoom:50%;" />
+<img src="./img/BT.png" style="zoom:40%;" />
 
-<img src="../../resource/2-BasicSettings/4.FirstTimeInstallation/FristTimeUse8.png" alt="2.1.5.3-2-00" style="zoom:50%;" />
+<!-- <img src="../../resource/2-BasicSettings/4.FirstTimeInstallation/FristTimeUse7.png" alt="2.1.5.3-2-002" style="zoom:50%;" /> -->
 
-[>>> 开箱视频](https://static.elephantrobotics.com/wp-content/uploads/2022/03/Pi%E5%BC%80%E7%AE%B1%E6%B5%8B%E8%AF%84%E6%9C%80%E7%BB%88%E7%89%88.mp4).
+<!-- <img src="../../resource/2-BasicSettings/4.FirstTimeInstallation/FristTimeUse8.png" alt="2.1.5.3-2-00" style="zoom:50%;" /> -->
+
+<!-- [>>> 开箱视频](https://static.elephantrobotics.com/wp-content/uploads/2022/03/Pi%E5%BC%80%E7%AE%B1%E6%B5%8B%E8%AF%84%E6%9C%80%E7%BB%88%E7%89%88.mp4).
 
 ## 产品首次使用指引视频
 
 <video id="my-video" class="video-js" controls preload="auto" width="100%" poster="" data-setup='{"aspectRatio":"16:9"}'>
   <source src="https://static.elephantrobotics.com/wp-content/uploads/2022/03/Pi%E5%BC%80%E7%AE%B1%E6%B5%8B%E8%AF%84%E6%9C%80%E7%BB%88%E7%89%88.mp4" type="video/mp4">
   Your browser does not support the video tag.
-</video>
+</video> -->
 
 ---
 
