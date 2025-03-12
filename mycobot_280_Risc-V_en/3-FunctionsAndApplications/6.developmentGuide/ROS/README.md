@@ -39,6 +39,7 @@ Compared with **ROS** that only supports Linux systems, **ROS2** also supports w
 - myCobot 280
 - myCobot 280 M5
 - myCobot 280 PI
+- **myCobot 280 Risc-V**
 - myCobot 280 Jetson Nano
 - myCobot 280 for Arduino <br>
 
@@ -48,26 +49,10 @@ Compared with **ROS** that only supports Linux systems, **ROS2** also supports w
 
 **Device description:**
 
-- Among the above devices, myCobot 280-Pi, myCobot 280-JetsonNano, myCobot 320-Pi, mechArm-270 PI and other versions come with Ubuntu (V-18.04) system, which has built-in development environment, so there is no need to build and manage, just use it directly.
+- Among the above devices, myCobot 280-Pi, myCobot 280 Risc-V, myCobot 280-JetsonNano, myCobot 320-Pi, mechArm-270 PI and other versions come with Ubuntu (V-18.04) system, which has built-in development environment, so there is no need to build and manage, just use it directly.
 
 - myCobot 280-M5, myCobot 320-M5, myCobot 280-Arduino, myPalletizer 260, mechArm-270-M5 and other versions need to build an environment for use, but in ROS/ROS2, you only need to build a ROS environment or a ROS2 environment.
 
 # MoveIt Introduction
 
 **MoveIt** is currently the most advanced software for robot arm mobile operations and has been used on more than 100 robots. It integrates the latest achievements in motion planning, control, 3D perception, control science, control and navigation, and provides an easy-to-use platform for developing advanced robot applications. It provides an integrated software platform for the design and integrated use evaluation of new robot products in the fields of industry, commerce and R&D.
-
-**MoveIt Icon** :
-
-![moveit Icon](../../../resource/3-FunctionsAndApplications/6.developmentGuide/ROS/moveiticon.png)
-
-**Applicable devices:**
-
-- myCobot 280
-- myCobot 280 M5
-- **myCobot 280 PI**
-- myCobot 280 Jetson Nano
-- myCobot 280 for Arduino <br>
-
-**Prerequisites:**
-
-- **Pi \ jetsonnano** series, **ATOM** burn the latest version of **atomMain** (factory default burned)

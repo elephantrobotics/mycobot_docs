@@ -52,11 +52,11 @@ source install/setup.bash # 添加环境变量
 colcon build --packages-select 包名
 ```
 
-例如只编译 `mycobot_280_risc_v`这个功能包：
+例如只编译 `mycobot_280_riscv`这个功能包：
 
 ```bash
 cd ~/colcon_ws
-colcon build --packages-select mycobot_280_risc_v
+colcon build --packages-select mycobot_280_riscv
 source install/setup.bash
 ```
 
@@ -78,7 +78,7 @@ source install/setup.bash
 再输入：
 
 ```bash
-ros2 launch mycobot_280_risc_v test.launch.py
+ros2 launch mycobot_280_riscv test.launch.py
 ```
 
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.1.png
@@ -99,7 +99,7 @@ width ="900"  align = "center">
 
 ```bash
 # mycobot_280 RISC-V 版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-ros2 launch mycobot_280_risc_v slider_control.launch.py
+ros2 launch mycobot_280_riscv slider_control.launch.py
 ```
 
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.3.png
@@ -116,7 +116,7 @@ width ="900"  align = "center">
 
 ```bash
 # mycobot_280 RISC-V 版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-ros2 launch mycobot_280_risc_v mycobot_follow.launch.py 
+ros2 launch mycobot_280_riscv mycobot_follow.launch.py 
 ```
 
 它将**打开 rviz 展示模型跟随效果**。
@@ -132,7 +132,7 @@ width ="900"  align = "center">
 
 ```bash
 # mycobot_280 RISC-V 版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-ros2 launch mycobot_280_risc_v simple_gui.launch.py
+ros2 launch mycobot_280_riscv simple_gui.launch.py
 ```
 
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.5.png
@@ -140,13 +140,13 @@ width ="900"  align = "center">
 
 ### 4 键盘控制
 
-在 `mycobot_280_risc_v` 的包中**添加了键盘控制的功能**，并在 rviz 中实时同步。本功能依赖 pythonApi，所以确保与真实机械臂连接。
+在 `mycobot_280_riscv` 的包中**添加了键盘控制的功能**，并在 rviz 中实时同步。本功能依赖 pythonApi，所以确保与真实机械臂连接。
 
 打开一个控制台终端(快捷键<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>)，然后运行命令：
 
 ```bash
 # myCobot 280 RISC-V 版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-ros2 launch mycobot_280_risc_v teleop_keyboard.launch.py 
+ros2 launch mycobot_280_riscv teleop_keyboard.launch.py 
 ```
 
 运行效果如下：
@@ -185,7 +185,7 @@ width ="900"  align = "center">
 接着，**打开另一个控制台终端**，运行：
 
 ```bash
-ros2 run mycobot_280_risc_v teleop_keyboard
+ros2 run mycobot_280_riscv teleop_keyboard
 ```
 
 你会在命令行中看到如下输出：

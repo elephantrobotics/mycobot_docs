@@ -54,11 +54,11 @@ To save compilation time, you can choose to compile a certain package separately
 colcon build --packages-select package name
 ```
 
-For example, only compile the `mycobot_280_risc_v` package:
+For example, only compile the `mycobot_280_riscv` package:
 
 ```bash
 cd ~/colcon_ws
-colcon build --packages-select mycobot_280_risc_v
+colcon build --packages-select mycobot_280_riscv
 source install/setup.bash
 ```
 
@@ -80,7 +80,7 @@ source install/setup.bash
 Enter again:
 
 ```bash
-ros2 launch mycobot_280_risc_v test.launch.py
+ros2 launch mycobot_280_riscv test.launch.py
 ```
 
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.1.png
@@ -101,7 +101,7 @@ Open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd
 
 ```bash
 # The default serial port name of mycobot 280 RISC-V version is "/dev/ttyAMA0" and the baud rate is 1000000.
-ros2 launch mycobot_280_risc_v slider_control.launch.py
+ros2 launch mycobot_280_riscv slider_control.launch.py
 ```
 
 It will **open rviz and a slider component**, and you will see the following screen:
@@ -120,7 +120,7 @@ In addition to the above control, we can also **let the model follow the movemen
 
 ```bash
 # The default serial port name of mycobot 280 RISC-V version is "/dev/ttyAMA0" and the baud rate is 1000000.
-ros2 launch mycobot_280_risc_v mycobot_follow.launch.py
+ros2 launch mycobot_280_riscv mycobot_follow.launch.py
 ```
 
 It will **open rviz to show the model following.**
@@ -136,7 +136,7 @@ Open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd
 
 ```bash
 # The default serial port name of mycobot 280 RISC-V version is "/dev/ttyAMA0" and the baud rate is 1000000.
-ros2 launch mycobot_280_risc_v simple_gui.launch.py
+ros2 launch mycobot_280_riscv simple_gui.launch.py
 ```
 
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/12.2.5.png
@@ -150,7 +150,7 @@ Open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd
 
 ```bash
 # The default serial port name of mycobot 280 RISC-V version is "/dev/ttyAMA0" and the baud rate is 1000000.
-ros2 launch mycobot_280_risc_v teleop_keyboard.launch.py ​​
+ros2 launch mycobot_280_riscv teleop_keyboard.launch.py ​​
 ```
 
 The running effect is as follows:
@@ -189,7 +189,7 @@ width ="900" align = "center">
 Next, **open another console terminal** and run:
 
 ```bash
-ros2 run mycobot_280_risc_v teleop_keyboard
+ros2 run mycobot_280_riscv teleop_keyboard
 ```
 
 You will see the following output in the command line:
