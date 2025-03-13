@@ -42,7 +42,7 @@ cd ~/colcon_ws/src  # 进入工作区的src文件夹中
 # 克隆github上的代码
 git clone --depth 1 https://github.com/elephantrobotics/mycobot_ros2.git
 cd ..       # 返回工作区
-colcon build --symlink-install # 构建工作区中的代码, --symlink-install：避免每次调整 python 脚本时都需要重新编译
+colcon build # 构建工作区中的代码
 source install/setup.bash # 添加环境变量
 ```
 
@@ -68,14 +68,6 @@ source install/setup.bash
 
 打开一个控制台终端(快捷键<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>)
 输入以下命令：
-
-```bash
-cd ~/colcon_ws
-colcon build --symlink-install
-source install/setup.bash
-```
-
-再输入：
 
 ```bash
 ros2 launch mycobot_280_riscv test.launch.py
