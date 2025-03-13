@@ -44,7 +44,7 @@ cd ~/colcon_ws/src # Enter the src folder in the workspace
 # Clone the code on github
 git clone https://github.com/elephantrobotics/mycobot_ros2.git
 cd .. # Return to the workspace
-colcon build --symlink-install # Build the code in the workspace, --symlink-install: Avoid recompiling every time you adjust the python script
+colcon build # Build the code in the workspace
 source install/setup.bash # Add environment variables
 ```
 
@@ -70,14 +70,6 @@ source install/setup.bash
 
 Open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>)
 Enter the following command:
-
-```bash
-cd ~/colcon_ws
-colcon build --symlink-install
-source install/setup.bash
-```
-
-Enter again:
 
 ```bash
 ros2 launch mycobot_280_rdkx5 test.launch.py
