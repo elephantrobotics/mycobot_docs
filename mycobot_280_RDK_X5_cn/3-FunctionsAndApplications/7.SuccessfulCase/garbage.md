@@ -148,7 +148,7 @@ class MinimalSubscriber(Node):
                             for i in range(3):
                                 self.cam_coords=self.mc.get_coords()
                         self.flag=0
-                        self.count=0
+                        self.count=1
 
                     
 
