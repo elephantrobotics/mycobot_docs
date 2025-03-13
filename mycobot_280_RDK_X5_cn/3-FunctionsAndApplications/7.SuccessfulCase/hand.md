@@ -188,7 +188,7 @@ class MinimalSubscriber(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    minimal_subscriber = MinimalSubscriber(
+    minimal_subscriber = MinimalSubscriber()
     rclpy.spin(minimal_subscriber)
     minimal_subscriber.destroy_node()
     rclpy.shutdown()
