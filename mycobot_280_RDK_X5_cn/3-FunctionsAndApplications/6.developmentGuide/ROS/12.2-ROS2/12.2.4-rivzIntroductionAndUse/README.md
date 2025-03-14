@@ -85,6 +85,11 @@ width ="900"  align = "center">
 
 ## 机械臂的控制
 
+<video id="my-video" class="video-js" controls preload="auto" width="100%"
+poster="" data-setup='{"aspectRatio":"16:9"}'>
+  <source src="../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/280_rdkx5_ros2_demo.mp4" type='video/mp4' >
+</video>
+
 ### 1 滑块控制
 
 打开一个控制台终端(快捷键<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>)，然后运行命令：

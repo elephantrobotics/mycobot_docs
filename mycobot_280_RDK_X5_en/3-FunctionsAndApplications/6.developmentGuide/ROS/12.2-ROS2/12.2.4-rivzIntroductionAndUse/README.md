@@ -87,6 +87,12 @@ If you want to learn more about rviz, you can go to the [official document](http
 
 ## Robot arm control
 
+<video id="my-video" class="video-js" controls preload="auto" width="100%"
+poster="" data-setup='{"aspectRatio":"16:9"}'>
+  <source src="../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.2-ROS2\rviz2/280_rdkx5_ros2_demo.mp4" type='video/mp4' >
+</video>
+
+
 ### 1 Slider control
 
 Open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>), then run the command:
