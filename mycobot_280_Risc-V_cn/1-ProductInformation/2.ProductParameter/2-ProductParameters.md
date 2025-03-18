@@ -10,7 +10,7 @@
 | 指标    | 参数  |
 | :-----------: | :---------: |
 | 名称	| 小象协作机械臂 |
-| 型号  | myCobot 280 Raspberry Pi 2023  |
+| 型号  | myCobot 280 RISC-V  |
 | 自由度  | 6          |
 | 有效负载  | 250g       |
 | 工作半径  | 280mm      |
@@ -53,12 +53,13 @@
 
 |  指标      | 参数 |
 | :---------: | :--------------:|
-| SOC        | Broadcom BCM2711     |
-| CPU        | 64位 1.5GHz四核      |
+| SOC        | Spacemit  K1 6370     |
+| CPU        | 八核64位RISC-V 1.6GHz      |
+| AI 能力     | 2.0TOPS   |
 | 蓝牙/无线  | 有                   |
-| USB        | USB3.0 x2; USB2.0 x2 |
+| USB        | USB3.0 x4 |
 | 显示屏幕   | 无                |
-| HDMI接口   | microHDMI x2         |
+| HDMI接口   | HDMI -mini x 1         |
 | 自定义按键 | 无                  |
 | IO接口    | 40                 |
 
