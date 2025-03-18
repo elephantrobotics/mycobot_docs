@@ -15,14 +15,15 @@
 **适用设备：**
 - myCobot 280
   - myCobot 280 M5
-  - **myCobot 280 PI**
+  - myCobot 280 PI
+  - **myCobot 280 RISC-V**
   - myCobot 280 Jetson Nano
   - myCobot 280 for Arduino
 
 
 **使用前提：**
 
-- **Pi \ jetsonnano** 系列，**ATOM** 烧录最新版的 **atomMain** (出厂默认已烧录)
+- **Pi \ jetsonnano \ RISC-V** 系列，**ATOM** 烧录最新版的 **atomMain** (出厂默认已烧录)
 
 - 配置 **Python 环境**，可参考 Python 章节
 
