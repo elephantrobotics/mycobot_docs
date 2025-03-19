@@ -15,7 +15,7 @@ import time
 # MyCobot280 class initialization requires two parameters: serial port and baud rate
 
 # Initialize a MyCobot280 object
-# The following is the object code for the PI version
+# The following is the object code for the RISC-V version
 mc = MyCobot280("/dev/ttyAMA0", 1000000)
 
 i = 7
@@ -37,7 +37,7 @@ from pymycobot.mycobot280 import MyCobot280
 # MyCobot280 class initialization requires two parameters: serial and baud rate
 
 # Initialize a MyCobot280 object
-# The following is the object code for PI version
+# The following is the object code for RISC-V version
 mc = MyCobot280("/dev/ttyAMA0", 1000000)
 
 # Check if the robot can be programmed
@@ -70,7 +70,7 @@ from pymycobot import MyCobot280
 import time
 
 # The MyCobot280 class requires two parameters to be initialized: serial and baud rate
-# Create object code for PI version
+# Create object code for RISC-V version
 mc=MyCobot280('/dev/ttyAMA0',1000000)
 
 # Robot arm recovery
@@ -107,7 +107,7 @@ import time
 from pymycobot import MyCobot280
 # The MyCobot280 class requires two parameters to be initialized: serial and baud rate
 # Initialize a MyCobot280 object
-# 280-PI version object code
+# 280-RISC-V version object code
 mc=MyCobot280('/dev/ttyAMA0',1000000)
 # Robot arm reset to zero
 mc.send_angles([0,0,0,0,0,0],50)
@@ -130,7 +130,7 @@ time.sleep(2.5)
 from pymycobot.mycobot280 import MyCobot280
 import time
 
-# PI version
+# RISC-V version
 mc = MyCobot280("/dev/ttyAMA0", 1000000)
 # Get the coordinates of the current position
 angle_datas = mc.get_angles()
@@ -184,7 +184,7 @@ if __name__ == '__main__':
 # MyCobot280 class initialization requires two parameters: serial and baud rate
 
 # Initialize a MyCobot280 object
-# PI version
+# RISC-V version
  mc = MyCobot280("/dev/ttyAMA0",1000000)
 # Set the start time
 start = time.time()
@@ -279,7 +279,7 @@ if __name__ == "__main__":
 # MyCobot280 class initialization requires two parameters: serial and baud rate
 
 # Initialize a MyCobot280 object
-# PI version
+# RISC-V version
 mc = MyCobot280('/dev/ttyAMA0', 1000000)
 # Move it to zero position
 mc.set_encoders([2048, 2048, 2048, 2048, 2048, 2048], 20)
@@ -289,17 +289,19 @@ gripper_test(mc)
 
 ## 8 Suction pump control
 
-280-PI
+280-RISC-V
 
 ```python
 from pymycobot.mycobot280 import MyCobot280
 import time
-import RPi.GPIO as GPIO
+from gpiozero.pins.lgpio import LGPIOFactory
+from gpiozero import Device
+from gpiozero import LED
 
 # The MyCobot280 class requires two parameters to initialize: serial and baud rate
 
 # Initialize a MyCobot280 object
-# The following is the object code for the PI version
+# The following is the object code for the RISC-V version
 mc = MyCobot280('/dev/ttyAMA0',1000000)
 # The position of the robot arm movement
 angles = [
@@ -308,26 +310,23 @@ angles = [
 [92.9, -10.1, -87.27, 5.8, -2.02, -37.7]
 ]
 
-# Initialization
-GPIO.setmode(GPIO.BCM)
-# Pin 20/21 controls the solenoid valve and the exhaust valve respectively
-GPIO.setup(20, GPIO.OUT)
-GPIO.setup(21, GPIO.OUT)
+Device.pin_factory = LGPIOFactory(chip=0) # Explicitly specify /dev/gpiochip0
+# Initialize the device controlled by GPIOZERO
+pump = LED(71) # Pump
+valve = LED(72) # Valve
+pump.on()
+time.sleep(0.05)
+valve.on()
+
 # Turn on the suction pump
 def pump_on():
-    # Open the solenoid valve
-    GPIO.output(20,0)
+    pump.on()
+    valve.off()
 
 # Stop the suction pump
 def pump_off():
-    # Close the solenoid valve
-    GPIO.output(20,1)
-    time.sleep(0.05)
-    # Open the exhaust valve
-    GPIO.output(21,0)
-    time.sleep(1)
-    GPIO.output(21,1)
-    time.sleep(0.05)
+    pump.off()
+    valve.on()
 
 # Robot arm recovery
 mc.send_angles([0, 0, 0, 0, 0, 0], 30)

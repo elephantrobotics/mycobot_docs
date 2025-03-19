@@ -26,7 +26,9 @@ The process of generating code into the text box is the process of the user drag
 
 - myCobot 280 M5
 
-- **myCobot 280 PI**
+- myCobot 280 PI
+
+- **myCobot 280 RISC-V**
 
 - myCobot 280 Jetson Nano
 
@@ -36,7 +38,7 @@ The process of generating code into the text box is the process of the user drag
 
 **Prerequisites:**
 
-- **Pi \ jetsonnano** series, **ATOM** burn the latest version of **atomMain** (factory default burned)
+- **Pi \ jetsonnano \ RISC-V** series, **ATOM** burn the latest version of **atomMain** (factory default burned)
 
 - Configure **Python environment**, please refer to the Python chapter
 
