@@ -84,83 +84,44 @@
 > 使用 python 对吸泵进行编程开发
 
 > 代码如下：
-
-  - 280-M5 版本：
     
-    ```python
-    from pymycobot import MyCobot280
-    import time
+- 280-RISC-V 版本：
     
-    # 初始化一个MyCobot280对象
-    mc = MyCobot280("COM3", 115200)
-    
-    # 开启吸泵
-    def pump_on():
-        # 打开电磁阀
-        mc.set_basic_output(5, 0)
-        time.sleep(0.05)
-    
-    # 停止吸泵
-    def pump_off():
-        # 关闭电磁阀
-        mc.set_basic_output(5, 1)
-        time.sleep(0.05)
-        # 泄气阀门开始工作
-        mc.set_basic_output(2, 0)
-        time.sleep(1)
-        mc.set_basic_output(2, 1)
-        time.sleep(0.05)
-    
-    pump_off()
-    time.sleep(3)
-    pump_on()
-    time.sleep(3)
-    pump_off()
-    time.sleep(3)
-    
-    GPIO.cleanup() # 释放 pin channel
-    ```
-    
-    - 280-Pi 版本：
-    
-    ```python
-    from pymycobot import MyCobot280
-    from pymycobot import PI_PORT, PI_BAUD  # 当使用树莓派版本的mycobot时，可以引用这两个变量进行MyCobot初始化
-    import time
-    import RPi.GPIO as GPIO
-    
-    # 初始化一个MyCobot280对象
-    mc = MyCobot280(PI_PORT, PI_BAUD)
-    
-    # 初始化
-    GPIO.setmode(GPIO.BCM)
-    # 引脚20/21分别控制电磁阀和泄气阀门
-    GPIO.setup(20, GPIO.OUT)
-    GPIO.setup(21, GPIO.OUT)
-    
-    # 开启吸泵
-    def pump_on():
-        # 打开电磁阀
-        GPIO.output(20，0)
-    
-    # 停止吸泵
-    def pump_off():
-        # 关闭电磁阀
-        GPIO.output(20，1)
-        time.sleep(0.05)
-        # 打开泄气阀门
-        GPIO.output(21，0)
-        time.sleep(1)
-        GPIO.output(21，1)
-        time.sleep(0.05)
-    
-    pump_off()
-    time.sleep(3)
-    pump_on()
-    time.sleep(3)
-    pump_off()
-    time.sleep(3)
-    
-    GPIO.cleanup() # 释放 pin channel
-    ```
+  ```python
+  from pymycobot import MyCobot280
+  from pymycobot import PI_PORT, PI_BAUD  # 当使用树莓派版本的mycobot时，可以引用这两个变量进行MyCobot初始化
+  import time
+  from gpiozero.pins.lgpio import LGPIOFactory
+  from gpiozero import Device
+  from gpiozero import LED
+  
+  # 初始化一个MyCobot280对象
+  mc = MyCobot280(PI_PORT, PI_BAUD)
+  
+  Device.pin_factory = LGPIOFactory(chip=0) # 显式指定/dev/gpiochip0
+  # 初始化 GPIOZERO 控制的设备
+  pump = LED(71)   # 气泵
+  valve = LED(72)  # 阀门
+  pump.on()
+  time.sleep(0.05)
+  valve.on()
+  
+  # 开启吸泵
+  def pump_on():
+      pump.on()
+      valve.off()
+  
+  # 停止吸泵
+  def pump_off():
+      pump.off()
+      valve.on()
+  
+  pump_off()
+  time.sleep(3)
+  pump_on()
+  time.sleep(3)
+  pump_off()
+  time.sleep(3)
+  
+  ```
 
