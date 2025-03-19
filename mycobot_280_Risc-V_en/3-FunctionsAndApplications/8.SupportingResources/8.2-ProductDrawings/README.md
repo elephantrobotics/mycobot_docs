@@ -1,18 +1,18 @@
 # Product Drawings
-The product drawings section provides detailed 3D and 2D drawings of the 280 pi robot arm. These drawings are particularly important for engineers who need to make customized designs or perform maintenance, and can help them better understand the structure of the robot arm.
+The product drawings section provides detailed 3D and 2D drawings of the 280 RISC-V robot arm. These drawings are particularly important for engineers who need to make customized designs or perform maintenance, and can help them better understand the structure of the robot arm.
 
 ### Machine 3D Model
 
 | Machine | 3D Model File |
 | :--------------: | :----------------------------------------------------------: |
-| myCobot 280 PI | [Download](https://download.elephantrobotics.com/Product_3d_files/myCobot_280_PI_230708.STEP) |
+| myCobot 280 RISC-V | [Download](https://download.elephantrobotics.com/Product_3d_files/myCobot_280_PI_230708.STEP) |
 
 ### Machine 2D Drawings
 
 | Machine | Machine 2D Drawings |
 | :---------: | :--------------:|
 | myCobot 280 Atom | [Download](https://download.elephantrobotics.com/Product_3d_files/230918/myCobot_280_Atom_230918.PDF) |
-| myCobot 280PI Base | [Download](https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_3d_files/myArm300/280pi%E5%BA%95%E5%BA%A7-2d%E5%9B%BE%E7%BA%B8.pdf) |
+| myCobot 280 RISC-V Base | [Download](https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_3d_files/myArm300/280pi%E5%BA%95%E5%BA%A7-2d%E5%9B%BE%E7%BA%B8.pdf) |
 
 ### Accessory 3D Model
 

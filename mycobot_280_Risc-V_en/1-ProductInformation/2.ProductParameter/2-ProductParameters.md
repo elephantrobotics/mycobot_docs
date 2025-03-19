@@ -49,12 +49,13 @@
 
 | Indicators | Parameters |
 | :---------: | :--------------:|
-| SOC | Broadcom BCM2711 |
-| CPU | 64-bit 1.5GHz quad-core |
+| SOC | Spacemit K1 6370 |
+| CPU | Octa-core 64-bit RISC-V 1.6GHz |
+| AI Capabilities | 2.0TOPS |
 | Bluetooth/wireless | Yes |
-| USB | USB3.0 x2; USB2.0 x2 |
+| USB | USB3.0 x4 |
 | Display screen | No |
-| HDMI interface | microHDMI x2 |
+| HDMI interface | HDMI -mini x 1 |
 | Custom buttons | No |
 | IO interface | 40 |
 

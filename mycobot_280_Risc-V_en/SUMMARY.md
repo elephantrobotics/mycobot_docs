@@ -4,6 +4,8 @@
 
   * [1. Product Introduction](1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.md)
   * [2. Product Parameters](1-ProductInformation/2.ProductParameter/2-ProductParameters.md)
+  
+* Hardware Information
 
 * Basic Settings
 
@@ -13,15 +15,16 @@
      * [4.2 Common Driver Problems and Solutions](4-SupportAndService/9.Troubleshooting/9.1-driver.md)
      * [4.3 Common software problems and solutions](4-SupportAndService/9.Troubleshooting/9.2-software.md)
      * [4.4 Common hardware problems and solutions](4-SupportAndService/9.Troubleshooting/9.3-hardware.md)
+     * [4.5 Common RISC-V platform development problems and solutions](4-SupportAndService/9.Troubleshooting/9.4-riscv.md)
 * Functions and applications
   * [5. Basic functions](3-FunctionsAndApplications/5.BasicFunction/README.md)
-    * [5.1 Introduction to pi version robot arm](3-FunctionsAndApplications/5.BasicFunction/5.1-Functionlnstruction/3.5.1-SW-description.md)
+    * [5.1 Introduction to RISC-V version robot arm](3-FunctionsAndApplications/5.BasicFunction/5.1-Functionlnstruction/3.5.1-SW-description.md)
     * [5.2 System basic function description](3-FunctionsAndApplications/5.BasicFunction/5.2-Softwarelnstructions/3.5.2-SW-detail-description.md)
     * [5.3 Firmware Function Description](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/README.md)
       * [5.3.1 Drag teaching](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.1-moving/4.2.1.2-micro_CPU.md)
       * [5.3.2 Robot arm calibration](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.2-calibration/4.2.2.2-micro_CPU.md)
       * [5.3.3 Link Check](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.4-connection/4.2.4.2-micro_CPU.md)
-      * [5.3.4 mystudio](3-FunctionsAndApplications/5.BasicFunction/5.2-Softwarelnstructions/README.md)
+      * [5.3.4 Titan Flash Tool](3-FunctionsAndApplications/5.BasicFunction/5.2-Softwarelnstructions/README.md)
   * [6. Software Development Guide](3-FunctionsAndApplications/6.developmentGuide/README.md)
     * [6.1 Development and Use Based on Python](3-FunctionsAndApplications/6.developmentGuide/python/README.md)
       * [6.1.1 Environment Construction](3-FunctionsAndApplications/6.developmentGuide/python/1_download.md)
@@ -57,9 +60,15 @@
       * [6.3.11 IO Test](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.14-ioTest.md)
       * [6.3.12 Q&A](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.md)
     * [6.4 Development and use based on serial communication protocol](3-FunctionsAndApplications/6.developmentGuide/CommunicationProtocolPackage/18-communication.md)
+    * [6.5 RISC-V software development and use](3-FunctionsAndApplications/6.developmentGuide/RISC-V)
+      - [6.5.1 Bianbu Robot firmware](3-FunctionsAndApplications/6.developmentGuide/RISC-V/1-BianbuRobotImage.md)
+      - [6.5.2 Titan flash tool](3-FunctionsAndApplications/6.developmentGuide/RISC-V/2-TitanFlasher.md)
+      - [6.5.3 ROS2 environment construction](3-FunctionsAndApplications/6.developmentGuide/RISC-V/3-ROS2Env.md)
+      - [6.5.4 Python environment and Pip source settings](3-FunctionsAndApplications/6.developmentGuide/RISC-V/4-PythonEnv.md)
+      - [6.5.5 gpiozero library](3-FunctionsAndApplications/6.developmentGuide/RISC-V/5-gpiozeroLib.md)
   * [7. Successful Cases](3-FunctionsAndApplications/7.SuccessfulCase/7-SuccessfulCases.md)
-    * [Robot gripper carrying wooden block example](demo-en/280PI_gripper.md)
-    * [Robot suction pump to carry wooden blocks](demo-en/280PI_pump.md)
+    * [Robot gripper carrying wooden block example](demo-en/280RISCV_gripper.md)
+    * [Robot suction pump to carry wooden blocks](demo-en/280RISCV_pump.md)
   * [8. Supporting Resources](3-FunctionsAndApplications/8.SupportingResources/README.md)
     * [8.1 Product Information](3-FunctionsAndApplications/8.SupportingResources/8.1-ProductInformation/README.md)
     * [8.2 Product Drawings](3-FunctionsAndApplications/8.SupportingResources/8.2-ProductDrawings/README.md)
