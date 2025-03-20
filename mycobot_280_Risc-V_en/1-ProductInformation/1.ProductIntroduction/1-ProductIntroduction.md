@@ -74,13 +74,4 @@ The mycobot series of robotic arms are extremely valuable in the fields of educa
 
 ---
 
-## 4.Where to buy
-
-If you are interested in purchasing the device, please click on the link below:
-Taobao: [https://shop504055678.taobao.com](https://shop504055678.taobao.com)<br>
-Shopify: [https://shop.elephantrobotics.com/](https://shop.elephantrobotics.com/)<br>
-AliExpress: [https://elephantrobotics.aliexpress.com/store/1101941423]<br>(https://elephantrobotics.aliexpress.com/store/1101941423)
-
----
-
 [Next Chapter →](../2.ProductParameter/2-ProductParameters.md)

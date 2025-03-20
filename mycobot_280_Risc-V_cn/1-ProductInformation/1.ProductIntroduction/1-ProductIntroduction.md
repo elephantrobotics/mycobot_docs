@@ -79,14 +79,4 @@ mycobot 系列机械臂在教育和科研领域中极具价值，特别是在 Py
 
 ---
 
-
-## 4.购买地址
-
-如果您有兴趣购买该设备，请点击下面的链接：  
-淘宝：[https://shop504055678.taobao.com](https://shop504055678.taobao.com)  
-Shopify：[https://shop.elephantrobotics.com/](https://shop.elephantrobotics.com/)  
-速卖通：[https://elephantrobotics.aliexpress.com/store/1101941423](https://elephantrobotics.aliexpress.com/store/1101941423)
-
----
-
 [下一章 →](../2.ProductParameter/2-ProductParameters.md)
