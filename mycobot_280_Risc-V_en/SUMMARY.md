@@ -60,7 +60,7 @@
       * [6.3.11 IO Test](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.14-ioTest.md)
       * [6.3.12 Q&A](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.md)
     * [6.4 Development and use based on serial communication protocol](3-FunctionsAndApplications/6.developmentGuide/CommunicationProtocolPackage/18-communication.md)
-    * [6.5 RISC-V software development and use](3-FunctionsAndApplications/6.developmentGuide/RISC-V)
+    * 6.5 RISC-V software development and use
       - [6.5.1 Bianbu Robot firmware](3-FunctionsAndApplications/6.developmentGuide/RISC-V/1-BianbuRobotImage.md)
       - [6.5.2 Titan flash tool](3-FunctionsAndApplications/6.developmentGuide/RISC-V/2-TitanFlasher.md)
       - [6.5.3 ROS2 environment construction](3-FunctionsAndApplications/6.developmentGuide/RISC-V/3-ROS2Env.md)

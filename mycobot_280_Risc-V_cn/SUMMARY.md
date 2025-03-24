@@ -54,7 +54,7 @@
            * [6.3.11 IO测试](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.14-ioTest.md)
            * [6.3.12 Q&A](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.md)
         * [6.4 基于串口通信协议开发使用](3-FunctionsAndApplications/6.developmentGuide/CommunicationProtocolPackage/18-communication.md)
-        * [6.5 RISC-V软件开发使用](3-FunctionsAndApplications/6.developmentGuide/RISC-V)
+        * 6.5 RISC-V软件开发使用
            - [6.5.1 Bianbu Robot固件](3-FunctionsAndApplications/6.developmentGuide/RISC-V/1-BianbuRobotImage.md)
            - [6.5.2 Titan刷机工具](3-FunctionsAndApplications/6.developmentGuide/RISC-V/2-TitanFlasher.md)
            - [6.5.3 ROS2环境搭建](3-FunctionsAndApplications/6.developmentGuide/RISC-V/3-ROS2Env.md)
