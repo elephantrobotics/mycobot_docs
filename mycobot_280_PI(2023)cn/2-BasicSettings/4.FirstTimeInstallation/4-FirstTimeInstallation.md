@@ -37,10 +37,11 @@
 
 ## 3.产品开箱视频引导
 
-<video controls>
-  <source src="https://download.elephantrobotics.com/video/myCobot%20280%20Pi%20%E4%BA%A7%E5%93%81%E5%BC%80%E7%AE%B1%200325.mp4" type="video/mp4">
-  您的浏览器不支持 HTML5 视频。
-</video>
+<video id="my-video" class="video-js" controls preload="auto" width="100%"
+poster="" data-setup='{"aspectRatio":"16:9"}'>
+  <source src="https://download.elephantrobotics.com/video/myCobot%20280%20Pi%20%E4%BA%A7%E5%93%81%E5%BC%80%E7%AE%B1%200325.mp4"></video>
+
+---
 
 ## 4.开机检测指南
 
