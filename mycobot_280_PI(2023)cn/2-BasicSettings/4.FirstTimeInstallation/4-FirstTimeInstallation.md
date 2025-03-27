@@ -38,7 +38,7 @@
 ## 3.产品开箱视频引导
 
 <video controls>
-  <source src="../../resource/2-BasicSettings/4.FirstTimeInstallation/OpenGuide.mp4" type="video/mp4">
+  <source src="https://download.elephantrobotics.com/video/myCobot%20280%20Pi%20%E4%BA%A7%E5%93%81%E5%BC%80%E7%AE%B1%200325.mp4" type="video/mp4">
   您的浏览器不支持 HTML5 视频。
 </video>
 
