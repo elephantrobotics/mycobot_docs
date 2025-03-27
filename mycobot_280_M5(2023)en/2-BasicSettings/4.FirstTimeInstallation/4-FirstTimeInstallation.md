@@ -37,7 +37,10 @@ In this section, we strongly recommend that you follow the specified steps to di
 
 ## 3.Product unboxing video guide
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Lwi8UoihzNc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<video id="my-video" class="video-js" controls preload="auto" width="100%"
+poster="" data-setup='{"aspectRatio":"16:9"}'>
+  <source src="https://download.elephantrobotics.com/video/myCobot%20280%20M5%20Unboxing%200319.mp4"></video>
+
 
 If the video above does not play, you can click the link below to view the unboxing video
 [unboxing video guide](https://www.youtube.com/embed/Lwi8UoihzNc)
