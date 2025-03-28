@@ -72,7 +72,7 @@ This chapter introduces the image download and burning steps. If you have downlo
         <td>SHA256 Hash</td>
     </tr>
     <tr>
-        <td rowspan='2'>myCobot 280 JetsonNano</td>
+        <td rowspan='3'>myCobot 280 JetsonNano</td>
         <td>ubuntu 18.04</td>
         <td>
             <a href="https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_software/iMage-ISO/myCobot-280JetsonNano/myCobot_280_Jetsonnano_V221101-shrink.zip">click to download</a>
@@ -80,10 +80,18 @@ This chapter introduces the image download and burning steps. If you have downlo
         <td>2f1e40c1480b077bcc83abd3b79ac175f25d21e9cc344a014636167ee2eb087c</td>
     </tr>
     <tr>
+        <td>ubuntu 20.04</td>
+        <td>
+            <a href="https://download.elephantrobotics.com/Product_software/iMage-ISO/myCobot-280JetsonNano/myCobot_280_ubuntu_V20250326_20.04JN_aarch64.zip">click to download</a>
+        </td>
+        <td>Please burn this image system for machines purchased before 2024/10/09</td>
+    </tr>
+    <tr>
         <td>ubuntu 20.04 V20241108</td>
         <td>
             <a href="https://download.elephantrobotics.com/Product_software/iMage-ISO/myCobot-280JetsonNano/myCobot_280_ubuntu_V20241108_20.04JN_aarch64.tar.gz">click to download</a>
         </td>
+        <td>Please burn this image system for machines purchased after 2024/10/09</td>
     </tr>
 </table>
 
