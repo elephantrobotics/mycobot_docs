@@ -5,7 +5,7 @@
 
 
 
-![开箱套装](../../resources/2-BasicSettings/4.FirstTimeInstallation/UnpackingSet.png)
+![开箱套装](../../resources/2-BasicSettings/4.FirstTimeInstallation/UnpackingSet2.png)
 
 ## 产品标准清单对照表
 
