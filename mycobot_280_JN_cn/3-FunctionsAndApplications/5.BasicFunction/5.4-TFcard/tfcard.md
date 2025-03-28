@@ -94,7 +94,7 @@
     <tr>
         <td>ubuntu 20.04</td>
         <td>
-            <a href="https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_software/iMage-ISO/myCobot-280JetsonNano/myCobot_280_ubuntu_V20231023_20.04JN_aarch64_shrunk.img.gz">点击下载</a>
+            <a href="https://download.elephantrobotics.com/Product_software/iMage-ISO/myCobot-280JetsonNano/myCobot_280_ubuntu_V20250326_20.04JN_aarch64.zip">点击下载</a>
         </td>
         <td>2024/10/09前购买的机器请烧录此镜像系统</td>
     </tr>
