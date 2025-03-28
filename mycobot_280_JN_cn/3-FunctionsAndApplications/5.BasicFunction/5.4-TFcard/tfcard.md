@@ -77,17 +77,15 @@
 ## 1.1 下载链接
 
 <table>
-<tr>
-	<td>产品名称</td>
-    <td>系统版本</td>
-    <td>下载链接</td>
-    <td>SHA256 Hash</td>
-</tr>
-
-<tr>
+    <tr>
+        <td>产品名称</td>
+        <td>系统版本</td>
+        <td>下载链接</td>
+        <td>SHA256 Hash</td>
+    </tr>
+    <tr>
         <td rowspan='3'>myCobot 280 JetsonNano</td>
         <td>ubuntu 18.04</td>
-        <td style="white-space: nowrap;">
         <td>
             <a href="https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_software/iMage-ISO/myCobot-280JetsonNano/myCobot_280_Jetsonnano_V221101-shrink.zip">点击下载</a>
         </td>
@@ -95,21 +93,18 @@
     </tr>
     <tr>
         <td>ubuntu 20.04</td>
-        <td style="white-space: nowrap;">
-        <td><a href="https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_software/iMage-ISO/myCobot-280JetsonNano/myCobot_280_ubuntu_V20231023_20.04JN_aarch64_shrunk.img.gz">点击下载</a>
+        <td>
+            <a href="https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_software/iMage-ISO/myCobot-280JetsonNano/myCobot_280_ubuntu_V20231023_20.04JN_aarch64_shrunk.img.gz">点击下载</a>
         </td>
         <td>2024/10/09前购买的机器请烧录此镜像系统</td>
     </tr>
     <tr>
         <td>ubuntu 20.04 V20241108</td>
-        <td style="white-space: nowrap;">
-        <td><a href="https://download.elephantrobotics.com/Product_software/iMage-ISO/myCobot-280JetsonNano/myCobot_280_ubuntu_V20241108_20.04JN_aarch64.tar.gz">点击下载</a>
+        <td>
+            <a href="https://download.elephantrobotics.com/Product_software/iMage-ISO/myCobot-280JetsonNano/myCobot_280_ubuntu_V20241108_20.04JN_aarch64.tar.gz">点击下载</a>
         </td>
         <td>2024/10/09后购买的机器请烧录此镜像系统</td>
-        <tr>
-        
-    
-</tr>
+    </tr>
 </table>
 
 
