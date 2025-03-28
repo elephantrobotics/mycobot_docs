@@ -3,7 +3,7 @@
 ## Product List Image
 > Thank you for choosing the Elephant Robot myCobot 280 M5 robot arm. This chapter is designed to help you easily get started with Elephant Robot products and enjoy every wonderful moment brought by the product.
 
-![Unpacking Set](../../resources/2-BasicSettings/4.FirstTimeInstallation/UnpackingSet.png)
+![Unpacking Set](../../resources/2-BasicSettings/4.FirstTimeInstallation/UnpackingSet2.png)
 
 ## Product Standard List Comparison Table
 
