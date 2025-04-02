@@ -9,7 +9,7 @@
 | 操作系统   | 下载链接 |
 |------------|----------|
 
-| Bianbu OS | [下载链接](https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_software/iMage-ISO/myCobot-280/myCobot_280_ubuntu_V20230222_20.04Pi_aarch64_shrunk.img.gz) |
+| Bianbu OS | [下载链接](https://archive.spacemit.com/ros2/bianbu-robot-1.0.zip) |
 
 ---
 

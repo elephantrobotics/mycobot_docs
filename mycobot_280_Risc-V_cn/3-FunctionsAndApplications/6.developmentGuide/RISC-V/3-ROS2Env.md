@@ -10,7 +10,7 @@ Bianbu OS 提供了对 ROS2 Humble 和 ROS2 Jazzy 两个版本的 deb 包支持�
 
 ### **Bianbu Robot 的 ROS2 环境**
 
-Bianbu Robot 已预先安装了 ROS2 Humble 及常见的功能包，开箱即用，无需额外配置。您可以立即开始 ROS2 相关的开发与调试工作。
+Bianbu Robot 已预先安装了 ROS2 Humble 及常见的功能包，开箱即用，无需额外配置。点击桌面的 `ROS2 Shell` 图标，您可以立即开始 ROS2 相关的开发与调试工作。
 
 ### **ROS2 使用指南**
 

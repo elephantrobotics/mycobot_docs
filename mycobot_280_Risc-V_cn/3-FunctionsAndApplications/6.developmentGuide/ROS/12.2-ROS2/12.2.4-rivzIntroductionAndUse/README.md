@@ -60,7 +60,7 @@ colcon build --packages-select mycobot_280_riscv
 source install/setup.bash
 ```
 
-**注意：** 若`/home/elephant/colcon_ws/src (等效于 ~/colcon_ws/src)`目录中已经存在`mycobot_ros2`文件夹，则需要先删除原有的 `mycobot_ros2`，再执行以上命令。
+**注意：** 若`/home/er/colcon_ws/src (等效于 ~/colcon_ws/src)`目录中已经存在`mycobot_ros2`文件夹，则需要先删除原有的 `mycobot_ros2`，再执行以上命令。
 
 ## 简单使用
 

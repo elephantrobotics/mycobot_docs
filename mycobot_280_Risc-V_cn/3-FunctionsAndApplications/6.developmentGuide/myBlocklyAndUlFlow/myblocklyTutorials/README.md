@@ -9,7 +9,6 @@
 ![](../../../../resource\3-FunctionsAndApplications\6.developmentGuide\myBlocklyAndUlFlow/myblockly下载.jpg)
 
 **myBlockly的下载地址：**
-- GitHub 地址：https://github.com/elephantrobotics/myblockly-package/releases
 - 官网地址：https://www.elephantrobotics.com/download/
 
 **适用设备：**
