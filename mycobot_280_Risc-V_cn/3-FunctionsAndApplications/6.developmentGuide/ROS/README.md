@@ -35,7 +35,7 @@
 - myCobot 280
   - myCobot 280 M5
   - myCobot 280 PI
-  - **myCobot 280 Risc-V**
+  - **myCobot 280 RISC-V**
   - myCobot 280 Jetson Nano
   - myCobot 280 for Arduino <br>
 
@@ -45,4 +45,4 @@
 
 **设备说明：**
 
-- 以上使用设备中，myCobot 280-Pi、myCobot 280 Risc-V、myCobot 280-JetsonNano、myCobot 320-Pi、mechArm-270 PI等版本自带Ubuntu（V-18.04）系统，已经内置了开发环境，所以无需搭建管理，直接使用即可。
+- 以上使用设备中，myCobot 280-Pi、myCobot 280 RISC-V、myCobot 280-JetsonNano、myCobot 320-Pi、mechArm-270 PI等版本自带Ubuntu（V-18.04）系统，已经内置了开发环境，所以无需搭建管理，直接使用即可。

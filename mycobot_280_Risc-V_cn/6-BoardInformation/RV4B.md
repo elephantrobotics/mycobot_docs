@@ -88,9 +88,7 @@ K1是一款高性能、超低功耗的SOC，集成了8核RISC-V CPU内核和Spac
 
 K1 RV4B 系统采用K1 的芯片，P1 PMIC+外挂DCDC的供电方案；DRAM采用LPDDR4X、eMMC5.1；包括USB3.0 TYPEA、WIFI/BT、TF Card、micro HDMI TX、MIPI DSI、MIPI CSI、TYPEC、RJ45 等外设接口，集成了一个稳定的可量产化的方案。参考方案框图如下：
 
-![img](resources/rv4b.png)
-
-#### **3.2 功能概述**
+![img](resources/rv4b.png)**3.2 功能概述**
 
 K1 RV4B包含的功能如下：
 
@@ -139,11 +137,11 @@ K1 RV4B包含的功能如下：
 
 #### 3.4 原理图
 
-[点击查看RV4B原理图](RVB4_V0.1_20250403.pdf)
+[点击查看RV4B原理图](./resources/RVB4_V0.1_20250403.pdf)
 
 #### 3.5 位号图
 
- [点击查看RV4B位号图](RV4B_V0.1_20250313.pdf)
+ [点击查看RV4B位号图](./resources/RV4B_V0.1_20250313.pdf)
 
 ## **硬件介绍**
 

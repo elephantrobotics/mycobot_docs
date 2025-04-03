@@ -8,7 +8,7 @@ M5版本机器是大象机器人和深圳市明栈科技有限公司 - M5STACK �
 
 **RISC-V 型号机器人就是电脑主机**
 
-RISC-V版本机器内Bianbu OS，1.6GHz 8核微处理器，运行Ubuntu平台，支持4路USB3.0，2路HDMI，标准化GPIO接口 TF卡可插拔。
+RISC-V版本机器搭载1.6GHz 8核RISC-V处理器、运行Bianbu OS（基于Ubuntu），配备4路USB3.0、2路HDMI和标准GPIO接口，TF卡可插拔。
 
 RISC-V版本机器的本质是带有独立系统的开发板，是可以看做一个微型的电脑主机，主机和主机之间无法简单的通过一根线构成通讯。它只能连接到一台独立显示器上，并搭配电源 鼠标 键盘，进入到开发板内置的系统后对其进行开发和操作。
 
@@ -25,7 +25,7 @@ RISC-V版本机器的本质是带有独立系统的开发板，是可以看做�
 
 - [Titan刷机⼯具](5.2-Softwarelnstructions/README.md)
   
-  myCobot 280 Risc-V 采用进迭时空科技有限公司自主研发的 Titan 刷机工具 来烧录固件。
+  myCobot 280 RISC-V 采用进迭时空科技有限公司自主研发的 Titan 刷机工具 来烧录固件。
 
 ---
 

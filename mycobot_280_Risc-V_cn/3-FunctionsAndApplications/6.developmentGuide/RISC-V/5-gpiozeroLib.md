@@ -1,6 +1,6 @@
 # gpiozero库使用
 
-myCobot 280 Risc-V 目前暂未适配 `RPi.GPIO` 库，因此对 GPIO 设备的控制需要使用 `gpiozero` 库。`gpiozero` 是一个简单易用的 GPIO 控制库，支持多种 GPIO 设备操作。
+myCobot 280 RISC-V 目前暂未适配 `RPi.GPIO` 库，对 GPIO 设备的控制需要使用 `gpiozero` 库。`gpiozero` 是一个简单易用的 GPIO 控制库，支持多种 GPIO 设备操作。
 
 ### **安装gpiozero库**
 
@@ -10,7 +10,7 @@ myCobot 280 Risc-V 目前暂未适配 `RPi.GPIO` 库，因此对 GPIO 设备的�
 pip install --index-url https://git.spacemit.com/api/v4/projects/33/packages/pypi/simple gpiozero==2.0.3
 ```
 
-- **`--index-url`**：指定从 Spacemit 的 pip 源下载预编译好的 Python 包。
+- `--index-url`：指定从 Spacemit 的 pip 源下载预编译好的 Python 包。
 
 ### **赋予GPIO设备读写权限**
 
@@ -25,6 +25,10 @@ sudo chmod a+rw /dev/gpiochip0
 关于 `gpiozero` 库的详细使用方法，请参考以下文档：
 
 **[从 Python 使用 GPIO](https://bianbu.spacemit.com/development/python#%E4%BB%8E-python-%E4%BD%BF%E7%94%A8-gpio)**
+
+[!NOTE]
+
+RV4B开发板的设备引脚布局参考"[《硬件信息》](../../../6-BoardInformation/RV4B.md#10-40pin接口) --> 模块简述 --> 40pin接口"。
 
 ### **测试代码**
 

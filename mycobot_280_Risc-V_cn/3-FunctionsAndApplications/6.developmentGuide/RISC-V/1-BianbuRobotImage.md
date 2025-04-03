@@ -1,6 +1,6 @@
 # Bianbu Robot固件
 
-Bianbu Robot 固件基于进迭时空科技有限公司自主研发的 [**Bianbu OS 系统**](https://bianbu.spacemit.com/)，并在此基础上预装了 ROS2、Myblockly 等适用于机器人开发的系统环境和应用组件。用户可基于 Bianbu Robot 快速进行机器人应用的开发与调试，尤其适用于 myCobot 280 Risc-V 等机器人平台。
+Bianbu Robot 固件基于进迭时空科技有限公司自主研发的 [**Bianbu OS 系统**](https://bianbu.spacemit.com/)，并在此基础上预装了 ROS2、Myblockly 等适用于机器人开发的系统环境和应用组件。用户可基于 Bianbu Robot 快速进行机器人应用的开发与调试，尤其适用于 myCobot 280 RISC-V 等机器人平台。
 
 Bianbu OS 的所有开发环境和软件使用指南均完全适用于 Bianbu Robot，为用户提供了无缝的开发体验。
 
