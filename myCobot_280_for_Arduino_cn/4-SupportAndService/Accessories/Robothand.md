@@ -4,7 +4,7 @@
 
 **产品图示**
 
-![pi](../../resource\4-SupportAndService\Accessories\others/h1.png)
+![pi](../../resource\4-SupportAndService\Accessories\others/h1.jpg)
 
 
 **规格说明：**

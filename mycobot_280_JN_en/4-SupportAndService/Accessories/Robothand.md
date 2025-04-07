@@ -4,7 +4,7 @@ Applicable models: myCobot 280, myPalletizer 260, mechArm 270
 
 **Product Image**
 
-![pi](../../resource\4-SupportAndService\Accessories\others/h1.png)
+![pi](../../resource\4-SupportAndService\Accessories\others/h1.jpg)
 
 **Specifications:**
 
