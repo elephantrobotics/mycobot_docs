@@ -23,6 +23,7 @@
              * [5.3.2校准](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.2-calibration/5.3.2.1-micro_controller.md)
              * [5.3.3电脑控制](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.3-transponder/5.3.3.1-micro_controller.md)
              * [5.3.4链接检测](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.4-connection/5.3.4.1-micro_controller.md)
+         * [5.4 PID控制](3-FunctionsAndApplications/5.BasicFunction/5.4-RobotPrecisionControl/README.md)
     * [6. 软件开发指南](3-FunctionsAndApplications/6.developmentGuide/README.md)
         * [6.1 基于python开发使用](3-FunctionsAndApplications/6.developmentGuide/python/README.md)
             * [6.1.1环境搭建](3-FunctionsAndApplications/6.developmentGuide/python/1_download.md)

@@ -15,6 +15,7 @@
         * [5.1 机械臂系统使用介绍](3-FunctionsAndApplications/5.BasicFunction/5.1-Functionlnstruction/DevelopmEntenvironment.md)
         * [5.2 myStudio说明](3-FunctionsAndApplications/5.BasicFunction/5.2-Softwarelnstructions/README.md)
         * [5.3 硬件接口](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/RoboticArmElectricalInterface.md)
+        * [5.4 PID控制](3-FunctionsAndApplications/5.BasicFunction/5.4-RobotPrecisionControl/README.md)
     * [6. 软件开发指南](3-FunctionsAndApplications/6.developmentGuide/README.md)
         * [6.1 基于Arduino开发使用](3-FunctionsAndApplications/6.developmentGuide/Arduino/README.md)
             * [6.1.1环境搭建](3-FunctionsAndApplications/6.developmentGuide/Arduino/10.1-arduino_download.md)

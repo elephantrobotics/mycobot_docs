@@ -19,6 +19,7 @@
       * [5.3 固件功能说明](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/3.5.3-HW-description-JN.md)
       * [5.4 myStudio介绍](3-FunctionsAndApplications/5.BasicFunction/5.2-Softwarelnstructions/README.md)
       * [5.5 TF卡更换教程以及烧录镜像](3-FunctionsAndApplications/5.BasicFunction/5.4-TFcard/tfcard.md)
+      * [5.6 PID控制](3-FunctionsAndApplications/5.BasicFunction/5.6-RobotPrecisionControl/README.md)
     * [6. 软件开发指南](3-FunctionsAndApplications/6.developmentGuide/README.md)
       * [6.1 基于python开发使用](3-FunctionsAndApplications/6.developmentGuide/python/README.md)
         * [6.1.1环境搭建](3-FunctionsAndApplications/6.developmentGuide/python/7.1_download.md)

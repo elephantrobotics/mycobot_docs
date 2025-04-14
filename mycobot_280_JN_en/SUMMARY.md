@@ -17,6 +17,7 @@
       * [5.3 Firmware Function Description](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/3.5.3-HW-description-JN.md)
       * [5.4 myStudio Introduction](3-FunctionsAndApplications/5.BasicFunction/5.2-Softwarelnstructions/README.md)
       * [5.5 TF card replacement tutorial and burning image](3-FunctionsAndApplications/5.BasicFunction/5.4-TFcard/tfcard.md)
+      * [5.6 PID control](3-FunctionsAndApplications/5.BasicFunction/5.6-RobotPrecisionControl/README.md)
    * [6. Software Development Guide](3-FunctionsAndApplications/6.developmentGuide/README.md)
       * [6.1 Development and use based on python](3-FunctionsAndApplications/6.developmentGuide/python/README.md)
         * [6.1.1 Environment Construction](3-FunctionsAndApplications/6.developmentGuide/python/1_download.md)

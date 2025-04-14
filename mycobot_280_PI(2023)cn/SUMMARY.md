@@ -21,6 +21,7 @@
             * [5.3.2机械臂校准](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.2-calibration/4.2.2.2-micro_CPU.md)
             * [5.3.3链接检查](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.4-connection/4.2.4.2-micro_CPU.md)
             * [5.3.4 mystudio](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/README.md)
+        * [5.4 PID控制](3-FunctionsAndApplications/5.BasicFunction/5.4-RobotPrecisionControl/README.md)
     * [6. 软件开发指南](3-FunctionsAndApplications/6.developmentGuide/README.md)
         * [6.1 基于python开发使用](3-FunctionsAndApplications/6.developmentGuide/python/README.md)
             * [6.1.1环境搭建](3-FunctionsAndApplications/6.developmentGuide/python/7.1_download.md)

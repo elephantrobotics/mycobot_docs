@@ -23,6 +23,7 @@
       * [5.3.2 Calibration](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.2-calibration/5.3.2.1-micro_controller.md)
       * [5.3.3 Computer control](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.3-transponder/5.3.3.1-micro_controller.md)
       * [5.3.4 Connection detection](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.4-connection/5.3.4.1-micro_controller.md)
+    * [5.4 PID control](3-FunctionsAndApplications/5.BasicFunction/5.4-RobotPrecisionControl/README.md)
   * [6. Software development guide](3-FunctionsAndApplications/6.developmentGuide/README.md)
     * [6.1 Development and use based on python](3-FunctionsAndApplications/6.developmentGuide/python/README.md)
       * [6.1.1 Environment Construction](3-FunctionsAndApplications/6.developmentGuide/python/1_download.md)

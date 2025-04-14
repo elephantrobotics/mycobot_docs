@@ -22,6 +22,7 @@
       * [5.3.2 Robot arm calibration](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.2-calibration/4.2.2.2-micro_CPU.md)
       * [5.3.3 Link Check](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.4-connection/4.2.4.2-micro_CPU.md)
       * [5.3.4 mystudio](3-FunctionsAndApplications/5.BasicFunction/5.2-Softwarelnstructions/README.md)
+    * [5.4 PID control](3-FunctionsAndApplications/5.BasicFunction/5.4-RobotPrecisionControl/README.md)
   * [6. Software Development Guide](3-FunctionsAndApplications/6.developmentGuide/README.md)
     * [6.1 Development and Use Based on Python](3-FunctionsAndApplications/6.developmentGuide/python/README.md)
       * [6.1.1 Environment Construction](3-FunctionsAndApplications/6.developmentGuide/python/1_download.md)
