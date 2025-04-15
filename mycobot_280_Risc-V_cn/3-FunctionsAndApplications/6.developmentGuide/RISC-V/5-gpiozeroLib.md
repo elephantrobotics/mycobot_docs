@@ -26,9 +26,9 @@ sudo chmod a+rw /dev/gpiochip0
 
 **[从 Python 使用 GPIO](https://bianbu.spacemit.com/development/python#%E4%BB%8E-python-%E4%BD%BF%E7%94%A8-gpio)**
 
-[!NOTE]
+注意：RV4B开发板的设备引脚布局参考下图。
 
-RV4B开发板的设备引脚布局参考"[《硬件信息》](../../../6-BoardInformation/RV4B.md#10-40pin接口) --> 模块简述 --> 40pin接口"。
+![](../../../6-BoardInformation/resources/40pins.PNG)
 
 ### **测试代码**
 
@@ -44,30 +44,20 @@ from gpiozero import LED
 Device.pin_factory = LGPIOFactory(chip=0)  # 使用 /dev/gpiochip0
 
 # 初始化 GPIO 控制的设备
-pump = LED(71)  # 使用 LED 类控制 GPIO 71（吸泵）
 valve = LED(72)  # 使用 LED 类控制 GPIO 72（泄气阀门）
 
-# 打开吸泵
-pump.on()
-print("吸泵已打开")
-
-# 等待 3 秒
-time.sleep(3)
-
-# 关闭吸泵
-pump.off()
-print("吸泵已关闭")
+# 打开吸泵，关闭泄气阀门
+valve.off()
+print("泄气阀门已关闭")
 time.sleep(0.05)
 
-# 打开泄气阀门
+time.sleep(4)
+
+# 关闭吸泵，打开泄气阀门
 valve.on()
 print("泄气阀门已打开")
 time.sleep(1)
 
-# 关闭泄气阀门
-valve.off()
-print("泄气阀门已关闭")
-time.sleep(0.05)
 ```
 
 测试过程中，注意以下几点：

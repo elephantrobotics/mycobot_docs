@@ -269,40 +269,9 @@ RV4B支持wifi/BT模组，支持无线上网和蓝牙功能
 
 ### **10. 40pin接口**
 
-RV4B支持40pin双排插针，线序如下：![img](resources/wpsai8BgI.jpg)
+RV4B支持40pin双排插针，线序如下：
 
-| **GPIO** | **Default** | **ALT0**   | **ALT1** | **ALT2**  | **ALT3**   | **ALT4**   | **ALT5**   |
-| -------- | :---------- | ---------- | -------- | --------- | ---------- | ---------- | ---------- |
-| 0        | High        | SDA0       | SA5      | PCLK      | SPI3 CE0 N | TXD2       | SDA6       |
-| 1        | High        | SCL0       | SA4      | DE        | SPI3 MISO  | RXD2       | SCL6       |
-| 2        | High        | SDA1       | SA3      | LCD VSYNC | SPI3 MOSI  | CTS2       | SDA3       |
-| 3        | High        | SCL1       | SA2      | LCD HSYNC | SPI3 SCLK  | RTS2       | SCL3       |
-| 4        | High        | GPCLK0     | SA1      | DPI D0    | SPI4 CE0 N | TXD3       | SDA3       |
-| 5        | High        | GPCLK1     | SA0      | DPI D1    | SPI4 MISO  | RXD3       | SCL3       |
-| 6        | High        | GPCLK2     | SOE N    | DPI D2    | SPI4 MOSI  | CTS3       | SDA4       |
-| 7        | High        | SPI0 CE1 N | SWE N    | DPI D3    | SPI4 SCLK  | RTS3       | SCL4       |
-| 8        | High        | SPI0 CE0 N | SD0      | DPI D4    | -          | TXD4       | SDA4       |
-| 9        | Low         | SPI0 MISO  | SD1      | DPI D5    | -          | RXD4       | SCL4       |
-| 10       | Low         | SPI0 MOSI  | SD2      | DPI D6    | -          | CTS4       | SDA5       |
-| 11       | Low         | SPI0 SCLK  | SD3      | DPI D7    | -          | RTS4       | SCL5       |
-| 12       | Low         | PWM0       | SD4      | DPI D8    | SPI5 CE0 N | TXD5       | SDA5       |
-| 13       | Low         | PWM1       | SD5      | DPI D9    | SPI5 MISO  | RXD5       | SCL5       |
-| 14       | Low         | TXD0       | SD6      | DPI D10   | SPI5 MOSI  | CTS5       | TXD1       |
-| 15       | Low         | RXD0       | SD7      | DPI D11   | SPI5 SCLK  | RTS5       | RXD1       |
-| 16       | Low         | FL0        | SD8      | DPI D12   | CTS0       | SPI1 CE2 N | CTS1       |
-| 17       | Low         | FL1        | SD9      | DPI D13   | RTS0       | SPI1 CE1 N | RTS1       |
-| 18       | Low         | PCM CLK    | SD10     | DPI D14   | SPI6 CE0 N | SPI1 CE0 N | PWM0       |
-| 19       | Low         | PCM FS     | SD11     | DPI D15   | SPI6 MISO  | SPI1 MISO  | PWM1       |
-| 20       | Low         | PCM DIN    | SD12     | DPI D16   | SPI6 MOSI  | SPI1 MOSI  | GPCLK0     |
-| 21       | Low         | PCM DOUT   | SD13     | DPI D17   | SPI6 SCLK  | SPI1 SCLK  | GPCLK1     |
-| 22       | Low         | SD0 CLK    | SD14     | DPI D18   | SD1 CLK    | ARM TRST   | SDA6       |
-| 23       | Low         | SD0 CMD    | SD15     | DPI D19   | SD1 CMD    | ARM RTCK   | SCL6       |
-| 24       | Low         | SD0 DAT0   | SD16     | DPI D20   | SD1 DAT0   | ARM TDO    | SPI3 CE1 N |
-| 25       | Low         | SD0 DAT1   | SD17     | DPI D21   | SD1 DAT1   | ARM TCK    | SPI4 CE1 N |
-| 26       | Low         | SD0 DAT2   | TE0      | DPI D22   | SD1 DAT2   | ARM TDI    | SPI5 CE1 N |
-| 27       | Low         | SD0 DAT3   | TE1      | DPI D23   | SD1 DAT3   | ARM TMS    | SPI6 CE1 N |
-
-![img](resources/wpsOT0JaR.jpg) 
+![40pin接口图](../6-BoardInformation/resources/40pins.PNG)
 
 ### **11. JTAG调试接口**
 

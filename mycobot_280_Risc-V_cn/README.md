@@ -92,6 +92,7 @@
            - [6.5.3 ROS2环境搭建](3-FunctionsAndApplications/6.developmentGuide/RISC-V/3-ROS2Env.md)
            - [6.5.4 Python环境和Pip源设置](3-FunctionsAndApplications/6.developmentGuide/RISC-V/4-PythonEnv.md)
            - [6.5.5 gpiozero库](3-FunctionsAndApplications/6.developmentGuide/RISC-V/5-gpiozeroLib.md)
+           - [6.5.6 远程连接设置](3-FunctionsAndApplications/6.developmentGuide/RISC-V/6-RemoteConnect.md)
     * [7. 成功案例](3-FunctionsAndApplications/7.SuccessfulCase/7-SuccessfulCases.md)
       * [机器人夹爪搬运木块案例](demo/280RISCV_gripper.md)
       * [280 RISC-V 手柄遥控案例](demo/280RISCV_joy.md)
