@@ -1,5 +1,5 @@
 # 产品资料下载
-产品资料包括280 x5pi机械臂的详细规格、技术参数和使用说明。此部分内容旨在帮助用户全面了解机械臂的性能和功能，确保在使用过程中获得最佳体验
+产品资料包括280 RDK X5 机械臂的详细规格、技术参数和使用说明。此部分内容旨在帮助用户全面了解机械臂的性能和功能，确保在使用过程中获得最佳体验
 
 ---
 
@@ -8,8 +8,7 @@
 
 | 操作系统   | 下载链接 |
 |------------|----------|
-| Ubuntu 18.04 | [下载链接](https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_software/iMage-ISO/myCobot-280/myCobot_280_ubuntu_V20221030-shrink.zip) |
-| ubuntu 20.04 | [下载链接](https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_software/iMage-ISO/myCobot-280/myCobot_280_ubuntu_V20230222_20.04Pi_aarch64_shrunk.img.gz) |
+| ubuntu 22.04 | [下载链接](http://192.168.1.20/18-OS-img/myCobot%20280%20RDK%20X5/myCobot280_RDK_X5_20250319.zip) |
 
 ---
 

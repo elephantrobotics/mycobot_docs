@@ -8,9 +8,9 @@ API (Application Programming Interface), also known as Application Programming I
 
 ```python
 # Example
-from pymycobot import MyCobot280
+from pymycobot import MyCobot280RDKX5
 
-mc = MyCobot280('/dev/ttyAMA0', 1000000)
+mc = MyCobot280RDKX5('/dev/ttyS1')
 
 # Gets the current angle of all joints
 angles = mc.get_angles()
@@ -929,9 +929,9 @@ Use TCP/IP to control the robotic arm
 
 ```python
 # demo
-from pymycobot import MyCobot280Socket
+from pymycobot import MyCobot280RDKX5Socket
 # Port 9000 is used by default
-mc = MyCobot280Socket("192.168.10.10",9000)
+mc = MyCobot280RDKX5Socket("192.168.10.10",9000)
 
 res = mc.get_angles()
 print(res)

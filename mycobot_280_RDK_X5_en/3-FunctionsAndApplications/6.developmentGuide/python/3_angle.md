@@ -79,14 +79,13 @@ For serial multi-joint robots, the control of joint space is to control the vari
 ### Example use
 
 ```python
-from pymycobot.mycobot280 import MyCobot280
+from pymycobot import MyCobot280RDKX5
 import time
 
-# MyCobot280 Class initialization requires two parameters: serial and baud rate
+# MyCobot280RDKX5 Class initialization requires two parameters: serial and baud rate
 
-# Initialize a MyCobot280 object
-# Here is the object code for the windows version
-mc = MyCobot280("/dev/ttyAMA0", 1000000)
+# Initialize a MyCobot280RDKX5 object
+mc = MyCobot280RDKX5("/dev/ttyS1", 1000000)
 # By passing the angle parameter, each joint of the robot arm moves to the corresponding position [0, 0, 0, 0, 0, 0]
 mc.send_angles([0, 0, 0, 0, 0, 0], 50)
 

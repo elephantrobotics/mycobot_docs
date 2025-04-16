@@ -1,6 +1,6 @@
 # 致谢
 
-我们在这里表达我们对所有参与开发、测试和完善 myCobot 系列产品（包括 myCobot 280 pi、myCobot 280 M5、myCobot 280 JN、myCobot 280 For Arduino以及套件）的人员的深深感激。每一个细节的打磨和每一个功能的创新都离不开背后团队的辛勤工作和献身精神。
+我们在这里表达我们对所有参与开发、测试和完善 myCobot 系列产品（包括 myCobot 280 RDK X5、myCobot 280 pi、myCobot 280 M5、myCobot 280 JN、myCobot 280 For Arduino以及套件）的人员的深深感激。每一个细节的打磨和每一个功能的创新都离不开背后团队的辛勤工作和献身精神。
 
 ### 特别感谢：
 

@@ -91,14 +91,14 @@ It is mainly used to realize intelligent route planning to let the robot arm mov
 ### Example use
 
 ```python
-from pymycobot.mycobot280 import MyCobot280
+from pymycobot import MyCobot280RDKX5
 import time
 
 # MyCobot280 class initialization requires two parameters: serial and buad rate
 
 # Initialize a MyCobot280 object
 # The following is the object code for the Windows version
-mc = MyCobot280("/dev/ttyAMA0", 1000000)
+mc = MyCobot280RDKX5("/dev/ttyS1", 1000000)
 # Get the current head coordinates and posture
 coords = mc.get_coords()
 print(coords)

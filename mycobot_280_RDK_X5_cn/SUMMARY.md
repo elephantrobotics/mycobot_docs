@@ -4,6 +4,8 @@
 * 产品信息
     * [1. 产品简介](1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.md)
     * [2. 产品参数](1-ProductInformation/2.ProductParameter/2-ProductParameters.md)
+  
+* [硬件信息](6-BoardInformation/RDKX5.md)
 
 * 基础设置
     * [3. 用户须知](2-BasicSettings/3.UserNotice/3-UserInstructions.md)
@@ -17,22 +19,22 @@
         <!-- * [5.1 pi版本机械臂入门](3-FunctionsAndApplications/5.BasicFunction/5.1-Functionlnstruction/3.5.1-SW-description.md) -->
         * [5.1 系统基础功能说明](3-FunctionsAndApplications/5.BasicFunction/5.2-Softwarelnstructions/3.5.2-SW-detail-description.md)
         * [5.2 固件功能说明]()
-            * [5.3.1拖动示教](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.1-moving/4.2.1.2-micro_CPU.md)
-            * [5.3.2机械臂校准](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.2-calibration/4.2.2.2-micro_CPU.md)
-            * [5.3.3链接检查](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.4-connection/4.2.4.2-micro_CPU.md)
+            * [5.3.1 拖动示教](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.1-moving/4.2.1.2-micro_CPU.md)
+            * [5.3.2 机械臂校准](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.2-calibration/4.2.2.2-micro_CPU.md)
+            * [5.3.3 连接检查](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.4-connection/4.2.4.2-micro_CPU.md)
             <!-- * [5.3.4 mystudio](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/README.md) -->
     * [6. 软件开发指南](3-FunctionsAndApplications/6.developmentGuide/README.md)
         * [6.1 基于python开发使用](3-FunctionsAndApplications/6.developmentGuide/python/README.md)
-            * [6.1.1环境搭建](3-FunctionsAndApplications/6.developmentGuide/python/7.1_download.md)
-        	* [6.1.2api说明](3-FunctionsAndApplications/6.developmentGuide/python/7.2_API.md)
+            * [6.1.1 环境搭建](3-FunctionsAndApplications/6.developmentGuide/python/7.1_new.md)
+        	* [6.1.2 api说明](3-FunctionsAndApplications/6.developmentGuide/python/7.2_API.md)
         	* [6.1.3关节控制](3-FunctionsAndApplications/6.developmentGuide/python/7.3_angle.md)
-        	* [6.1.4坐标控制](3-FunctionsAndApplications/6.developmentGuide/python/7.4_coord.md)
+        	* [6.1.4 坐标控制](3-FunctionsAndApplications/6.developmentGuide/python/7.4_coord.md)
         	* [6.1.5 IO控制](3-FunctionsAndApplications/6.developmentGuide/python/7.5_IO.md)
-        	* [6.1.6夹爪控制](3-FunctionsAndApplications/6.developmentGuide/python/7.6_gripper.md)
+        	* [6.1.6 夹爪控制](3-FunctionsAndApplications/6.developmentGuide/python/7.6_gripper.md)
         	<!-- * [6.1.7 TCP&IP](3-FunctionsAndApplications/6.developmentGuide/python/7.7_TCPIP.md)
         	* [6.1.8手柄控制](3-FunctionsAndApplications/6.developmentGuide/python/7.9_HandleControl.md)
         	* [6.1.9绘制图案](3-FunctionsAndApplications/6.developmentGuide/python/7.15_280_gcode_draw.md) -->
-        	* [6.1.7演示代码与视频](3-FunctionsAndApplications/6.developmentGuide/python/7.8_example.md)
+        	* [6.1.7 演示代码与视频](3-FunctionsAndApplications/6.developmentGuide/python/7.8_example.md)
         * [6.2 基于ROS2 开发使用](3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.3-ROS2Introduction.md)
             * [6.2.1 ROS2环境搭建](3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.1-InstallationOfROS2.md)
             * [6.2.2 ROS2基础](3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.2-BasicTutorial.md)
@@ -44,12 +46,12 @@
            * [6.3.4 控制单关节运动](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.4-ControlSingleJoint.md)
            * [6.3.5 控制多个关节](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.5-ControlSinglesJoint.md)
            * [6.3.6 控制机械臂左右摆动](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.6-ControlRoboticSwingLeft&Right.md)
-           * [6.3.7 控制机械臂跳舞](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.7-ControlRoboticArmDance.md)
-           * [6.3.8夹爪的使用](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.md)
-           * [6.3.9 吸泵的使用](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.md)
-           * [6.3.10 夹爪测试](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.md)
-           * [6.3.11 IO测试](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.14-ioTest.md)
-           * [6.3.12 Q&A](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.md)
+           <!-- * [6.3.7 控制机械臂跳舞](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.7-ControlRoboticArmDance.md) -->
+           * [6.3.7夹爪的使用](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.8-GripperUse.md)
+           * [6.3.8 吸泵的使用](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.9-PumpUse.md)
+           * [6.3.9 夹爪测试](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.13-gripperTest.md)
+           * [6.3.10 IO测试](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.14-ioTest.md)
+           * [6.3.11 Q&A](3-FunctionsAndApplications/6.developmentGuide/myBlocklyAndUlFlow/myblocklyTutorials/5.1.10Q&A.md)
         * [6.4 基于串口通信协议开发使用](3-FunctionsAndApplications/6.developmentGuide/CommunicationProtocolPackage/18-communication.md)
     * [7. 成功案例]()
       * [手势识别案例](3-FunctionsAndApplications/7.SuccessfulCase/hand.md)
