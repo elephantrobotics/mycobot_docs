@@ -1,22 +1,19 @@
 # Demonstration code 
 
-The following are various use cases and operation result videos. You can copy the code for use or modification (the robot arm model used in the following cases is MyCobot280 280. The parameters of different series of robot arms are different. Please pay attention to the modification).
+The following are various use cases and operation result videos. You can copy the code for use or modification (the robot arm model used in the following cases is MyCobot280RDKX5 280. The parameters of different series of robot arms are different. Please pay attention to the modification).
 
-**Note:** The corresponding baud rates of various devices are different. Please refer to the information to understand their baud rates when using them. The serial port number can be viewed through [Calculator Device Manager](https://docs.elephantrobotics.com/docs/gitbook/4-BasicApplication/4.1-myStudio/4.1.1-myStudio_download_driverinstalled.html#4113-%E5%A6%82%E4%BD%95%E5%8C%BA%E5%88%86cp210x%E5%92%8Ccp34x%E8%8A%AF%E7%89%87) or the serial port assistant.
+**Note:** The corresponding baud rates of various devices are different. Please refer to the information to understand their baud rates when using them. myCobot RDK X5 serial is `/dev/ttyS1`.
 
 ## 1 Control RGB light board
 
 ```python
-from pymycobot.mycobot280 import MyCobot280
+from pymycobot import MyCobot280RDKX5
 
 import time
 #The above needs to be written at the beginning of the code, which means importing the project package
 
-# MyCobot280 class initialization requires two parameters: serial port and baud rate
-
-# Initialize a MyCobot280 object
-# The following is the object code for the PI version
-mc = MyCobot280("/dev/ttyAMA0", 1000000)
+# MyCobot280RDKX5 class initialization requires two parameters: serial port and baud rate
+mc = MyCobot280RDKX5("/dev/ttyS1", 1000000)
 
 i = 7
 # Loop 7 times
@@ -33,12 +30,12 @@ i -= 1
 ## 2 Control the machine to return to the origin
 
 ```python
-from pymycobot.mycobot280 import MyCobot280
-# MyCobot280 class initialization requires two parameters: serial and baud rate
+from pymycobot import MyCobot280RDKX5
+# MyCobot280RDKX5 class initialization requires two parameters: serial and baud rate
 
-# Initialize a MyCobot280 object
+# Initialize a MyCobot280RDKX5 object
 # The following is the object code for PI version
-mc = MyCobot280("/dev/ttyAMA0", 1000000)
+mc = MyCobot280RDKX5("/dev/ttyS1", 1000000)
 
 # Check if the robot can be programmed
 
@@ -66,12 +63,12 @@ mc.send_angles([0, 0, 0, 0, 0, 0], 30)
 ## 3 Single joint movement
 
 ```python
-from pymycobot import MyCobot280
+from pymycobot import MyCobot280RDKX5
 import time
 
-# The MyCobot280 class requires two parameters to be initialized: serial and baud rate
+# The MyCobot280RDKX5 class requires two parameters to be initialized: serial and baud rate
 # Create object code for PI version
-mc=MyCobot280('/dev/ttyAMA0',1000000)
+mc=MyCobot280RDKX5('/dev/ttyS1',1000000)
 
 # Robot arm recovery
 mc.send_angles([0, 0, 0, 0, 0, 0], 40)
@@ -104,11 +101,11 @@ time.sleep(3)
 
 ```python
 import time
-from pymycobot import MyCobot280
-# The MyCobot280 class requires two parameters to be initialized: serial and baud rate
-# Initialize a MyCobot280 object
+from pymycobot import MyCobot280RDKX5
+# The MyCobot280RDKX5 class requires two parameters to be initialized: serial and baud rate
+# Initialize a MyCobot280RDKX5 object
 # 280-PI version object code
-mc=MyCobot280('/dev/ttyAMA0',1000000)
+mc=MyCobot280RDKX5('/dev/ttyS1',1000000)
 # Robot arm reset to zero
 mc.send_angles([0,0,0,0,0,0],50)
 time.sleep(2.5)
@@ -127,11 +124,11 @@ time.sleep(2.5)
 ##  5 Control the robot arm to swing left and right
 
 ```python
-from pymycobot.mycobot280 import MyCobot280
+from pymycobot import MyCobot280RDKX5
 import time
 
 # PI version
-mc = MyCobot280("/dev/ttyAMA0", 1000000)
+mc = MyCobot280RDKX5("/dev/ttyS1", 1000000)
 # Get the coordinates of the current position
 angle_datas = mc.get_angles()
 print(angle_datas)
@@ -174,53 +171,10 @@ mc.release_all_servos()
 
 ```
 
-## 6 Controlling the robotic arm to dances
+## 6 Gripper control
 
 ```python
-from pymycobot.mycobot280 import MyCobot280
-import time
-
-if __name__ == '__main__':
-# MyCobot280 class initialization requires two parameters: serial and baud rate
-
-# Initialize a MyCobot280 object
-# PI version
- mc = MyCobot280("/dev/ttyAMA0",1000000)
-# Set the start time
-start = time.time()
-# Let the robot reach the specified position
-mc.send_angles([-1.49, 115, -153.45, 30, -33.42, 137.9], 80)
-# Determine whether it has reached the specified position
-while not mc.is_in_position([-1.49, 115, -153.45, 30, -33.42, 137.9], 0):
-    # Let the robot resume movement
-    mc.resume()
-    # Let the robot move for 0.5s
-    time.sleep(0.5)
-    # Pause the movement of the robot
-    mc.pause()
-    # Determine whether the movement has timed out
-    if time.time() - start > 3:
-        break
-# Set the start time
-start = time.time()
-# Let the movement last for 30 seconds
-while time.time() - start < 30:
-    # Let the robot reach this position quickly
-    mc.send_angles([-1.49, 115, -153.45, 30, -33.42, 137.9], 80)
-    # Set the color of the light to [0,0,50]
-    mc.set_color(0, 0, 50)
-    time.sleep(0.7)
-    # Let the robot reach this position quickly
-    mc.send_angles([-1.49, 55, -153.45, 80, 33.42, 137.9], 80)
-    # Set the color of the light to [0,50,0]
-    mc.set_color(0, 50, 0) 
-    time.sleep(0.7)
-```
-
-## 7 Gripper control
-
-```python
-from pymycobot.mycobot280 import MyCobot280
+from pymycobot import MyCobot280RDKX5
 import time
 
 def gripper_test(mc):
@@ -276,31 +230,29 @@ def gripper_test(mc):
     # mc.release_all_servos()
 
 if __name__ == "__main__":
-# MyCobot280 class initialization requires two parameters: serial and baud rate
+# MyCobot280RDKX5 class initialization requires two parameters: serial and baud rate
 
-# Initialize a MyCobot280 object
-# PI version
-mc = MyCobot280('/dev/ttyAMA0', 1000000)
+# Initialize a MyCobot280RDKX5 object
+mc = MyCobot280RDKX5('/dev/ttyS1', 1000000)
 # Move it to zero position
 mc.set_encoders([2048, 2048, 2048, 2048, 2048, 2048], 20)
 time.sleep(3)
 gripper_test(mc)
 ```
 
-## 8 Suction pump control
+## 7 Suction pump control
 
-280-PI
 
 ```python
-from pymycobot.mycobot280 import MyCobot280
+from pymycobot import MyCobot280RDKX5
 import time
-import RPi.GPIO as GPIO
+import Hobot.GPIO as GPIO
 
-# The MyCobot280 class requires two parameters to initialize: serial and baud rate
+# The MyCobot280RDKX5 class requires two parameters to initialize: serial and baud rate
 
-# Initialize a MyCobot280 object
+# Initialize a MyCobot280RDKX5 object
 # The following is the object code for the PI version
-mc = MyCobot280('/dev/ttyAMA0',1000000)
+mc = MyCobot280RDKX5('/dev/ttyS1',1000000)
 # The position of the robot arm movement
 angles = [
 [92.9, -10.1, -60, 5.8, -2.02, -37.7],

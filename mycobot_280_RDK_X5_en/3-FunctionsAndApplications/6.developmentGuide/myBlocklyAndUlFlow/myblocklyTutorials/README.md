@@ -17,7 +17,6 @@ The process of generating code into the text box is the process of the user drag
 
 **myBlockly download address:**
 
-- GitHub address: https://github.com/elephantrobotics/myblockly-package/releases
 - Official website address: https://www.elephantrobotics.com/download/
 
 **Applicable devices:**
@@ -26,7 +25,7 @@ The process of generating code into the text box is the process of the user drag
 
 - myCobot 280 M5
 
-- **myCobot 280 PI**
+- **myCobot 280 RDK X5**
 
 - myCobot 280 Jetson Nano
 
@@ -56,14 +55,12 @@ You can use myBlockly to develop our robotic arm according to the following guid
 
 6.[Control the robot arm to swing left and right](5.1.6-ControlRoboticSwingLeft&Right.md)
 
-7.[Control the robot arm to dance](5.1.7-ControlRoboticArmDance.md)
+7.[Use of gripper](5.1.8-GripperUse.md)
 
-8.[Use of gripper](5.1.8-GripperUse.md)
+8.[Use of suction pump](5.1.9-PumpUse.md)
 
-9.[Use of suction pump](5.1.9-PumpUse.md)
+9.[Gripper test](5.13-gripperTest.md)
 
-10.[Gripper test](5.13-gripperTest.md)
+10.[IO test](5.14-ioTest.md)
 
-11.[IO test](5.14-ioTest.md)
-
-12.[Q&A](5.1.10Q&A.md)
+11.[Q&A](5.1.10Q&A.md)

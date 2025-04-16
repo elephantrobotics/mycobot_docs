@@ -4,10 +4,10 @@ TCP/IP transmission protocol, namely transmission control/network protocol, is a
 
 ## myCobot
 
-### myCobot Raspberry Pi system remote connection
+### myCobot RDK X5 system remote connection
 
-- When using Raspberry Pi remote connection, please note the following points
-1. Raspberry Pi and control end need to be in the same network
+- When using RDK X5 remote connection, please note the following points
+1. RDK X5 and control end need to be in the same network
 2. The server file(change to Server_280.py) needs to be executed in Raspberry Pi first (see the gif operation diagram below for specific operations)
 3. After the server file is executed, the prompts "Binding succeeded" and "waiting connect" indicate that the start is successful. The control end can refer to **Case** for control
 
@@ -17,9 +17,9 @@ TCP/IP transmission protocol, namely transmission control/network protocol, is a
 
 *Clone our project library:*`git clone https://github.com/elephantrobotics/pymycobot.git`
 
-*Found in the demo folder [Server_280.py](https://github.com/elephantrobotics/pymycobot/blob/main/demo/Server.py) file*
+*Found in the demo folder [Server_280.py](https://github.com/elephantrobotics/pymycobot/blob/main/demo/Server_280.py) file*
 
-Please change the parameters passed in the last line of MyCobotServer in the Server.py file according to your machine model.
+Please change the parameters passed in the last line of MyCobotServer in the Server_280.py file according to your machine model.
 
 - The default model is 280PI.
 - The default parameters are:
@@ -33,10 +33,10 @@ Use python to execute
 Run on the PC:
 
 ```python
-from pymycobot import MyCobot280Socket
+from pymycobot import MyCobot280RDKX5Socket
 # Default port is 9000
 #"172.20.10.14" is the IP of the robot arm, please enter your own IP of the robot arm
-mc = MyCobot280Socket("172.20.10.14",9000)
+mc = MyCobot280RDKX5Socket("172.20.10.14",9000)
 
 #If the connection is normal, you can control the robot arm
 mc.send_angles([0,0,0,0,0,0],20)

@@ -58,14 +58,14 @@ import rclpy
 from rclpy.node import Node
 from ai_msgs.msg import PerceptionTargets
 from sensor_msgs.msg import CompressedImage
-from pymycobot import MyCobot280,utils
+from pymycobot import MyCobot280RDKX5,utils
 import time
 import cv2
 import numpy as np
 import threading
 class MinimalSubscriber(Node):
     def __init__(self):
-        self.mc=MyCobot280("/dev/ttyS1",1000000)
+        self.mc=MyCobot280RDKX5("/dev/ttyS1",1000000)
         self.mc.set_fresh_mode(1)
         self.mc.sync_send_angles([0,0,-90,0,0,136.21],50)
         self.mc.set_gripper_state(1,100)

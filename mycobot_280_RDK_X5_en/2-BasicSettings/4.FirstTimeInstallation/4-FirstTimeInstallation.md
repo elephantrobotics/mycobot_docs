@@ -1,7 +1,7 @@
 # Product Standard List
 
 ## 1.Product List Image
-> Thank you for choosing the Elephant Robot myCobot 280 pi Robotic Arm. This chapter is designed to help you easily get started with the Elephant Robotic product and enjoy every wonderful moment brought by the product.
+> Thank you for choosing the Elephant Robot myCobot 280 RDK X5 Robotic Arm. This chapter is designed to help you easily get started with the Elephant Robotic product and enjoy every wonderful moment brought by the product.
 
 ![Unpacking Set](../../resource/2-BasicSettings/4.FirstTimeInstallation/UnpackingSet.png)
 
@@ -9,7 +9,7 @@
 
 | Serial Number | Product |
 | :----: | :------------------------------------ |
-| 1 | myCobot Robotic Arm (Model myCobot-280 pi) |
+| 1 | myCobot Robotic Arm (Model myCobot-280 RDK X5) |
 | 2 | myCobot Robotic Arm-Product Brochure |
 | 3 | myCobot Robotic Arm-Supporting Power Supply |
 | 4 | USB-Type C |

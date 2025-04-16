@@ -43,14 +43,14 @@
 
 6.[控制机械臂左右摆动](5.1.6-ControlRoboticSwingLeft&Right.md)
 
-7.[控制机械臂跳舞](5.1.7-ControlRoboticArmDance.md)
+<!-- 7.[控制机械臂跳舞](5.1.7-ControlRoboticArmDance.md) -->
 
-8.[夹爪的使用](5.1.8-GripperUse.md)
+7.[夹爪的使用](5.1.8-GripperUse.md)
 
-9.[吸泵的使用](5.1.9-PumpUse.md)
+8.[吸泵的使用](5.1.9-PumpUse.md)
 
-10.[夹爪测试](5.13-gripperTest.md)
+9.[夹爪测试](5.13-gripperTest.md)
 
-11.[IO测试](5.14-ioTest.md)
+10.[IO测试](5.14-ioTest.md)
 
-12.[Q&A](5.1.10Q&A.md)
+11.[Q&A](5.1.10Q&A.md)

@@ -18,33 +18,34 @@ myCobot 280 系列机械臂，支持十余种配件，包含底座、末端扩�
 ## 3.硬件链接
 
 **整体连接示意图**
-![](../../resources\3-FunctionsAndApplications\7.SuccessfulCase/PLC1.png)
+![](../resource/3-FunctionsAndApplications\7.SuccessfulCase/PLC1.png)
 
 **机械臂的输入与PLC的输出接线** 先给PLC接入24V电源
 
-![](../../resources\3-FunctionsAndApplications\7.SuccessfulCase/PLC2.jpg)
+![](../resource/3-FunctionsAndApplications\7.SuccessfulCase/PLC2.jpg)
 
 再将PLC的输出接到24V继电器线圈
 
-![](../../resources\3-FunctionsAndApplications\7.SuccessfulCase/PLC3.jpg)
+![](../resource/3-FunctionsAndApplications\7.SuccessfulCase/PLC3.jpg)
 
 将机械臂的GPIO2和3.3V接到24V继电器的常开触点上
 
-![](../../resources\3-FunctionsAndApplications\7.SuccessfulCase/PLC4.jpg)
+![](../resource/3-FunctionsAndApplications\7.SuccessfulCase/PLC4.jpg)
 
 **机械臂的输出与PLC的输入接线** 将机械臂的5v，GND和GPIO5接到5V继电器的线圈上
 
-![](../../resources\3-FunctionsAndApplications\7.SuccessfulCase/PLC5.jpg)
+![](../resource/3-FunctionsAndApplications\7.SuccessfulCase/PLC5.jpg)
 
 再将24V的正极接到5V继电器的COM端上，24V的负极接到PLC的1M端上,NO接到PLC的输入上
 
-![](../../resources\3-FunctionsAndApplications\7.SuccessfulCase/PLC6.jpg)
+![](../resource/3-FunctionsAndApplications\7.SuccessfulCase/PLC6.jpg)
 
 ## 4 软件编程
 机械臂程序
 ```python
 import time
-mc=MyCobot("COM6")
+from pymycobot import MyCobot280RDKX5
+mc=MyCobot280RDKX5("/dev/ttyS1")
 mc.set_basic_output(5,1)
 while 1:
     if mc.get_basic_input(2)==1:

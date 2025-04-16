@@ -1,18 +1,18 @@
 # 产品图纸
-产品图纸部分提供了280 x5pi机械臂的详细3D图和2D图。这些图纸对于需要进行定制化设计或进行维护的工程人员来说尤为重要，可以帮助他们更好地理解机械臂的构造。
+产品图纸部分提供了280 RDK X5 机械臂的详细3D图和2D图。这些图纸对于需要进行定制化设计或进行维护的工程人员来说尤为重要，可以帮助他们更好地理解机械臂的构造。
 
 ### 机器3D模型
 
 |       机器       |                          3D模型文件                          |
 | :--------------: | :----------------------------------------------------------: |
-| myCobot 280 PI | [下载](https://download.elephantrobotics.com/Product_3d_files/myCobot_280_PI_230708.STEP) |
+| myCobot 280 RDKX5 | [下载](https://download.elephantrobotics.com/Product_3d_files/myCobot_280_PI_230708.STEP) |
 
 ### 机器2D图纸
 
 |  机器 | 机器2D图纸 |
 | :---------: | :--------------:|
 | myCobot 280 末端| [下载](https://download.elephantrobotics.com/Product_3d_files/230918/myCobot_280_Atom_230918.PDF) |
-| myCobot 280PI 底座| [下载](https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_3d_files/myArm300/280pi%E5%BA%95%E5%BA%A7-2d%E5%9B%BE%E7%BA%B8.pdf) |
+| myCobot 280 RKD X5 底座| [下载](https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_3d_files/myArm300/280pi%E5%BA%95%E5%BA%A7-2d%E5%9B%BE%E7%BA%B8.pdf) |
 
 
 ### 配件3D模型

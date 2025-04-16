@@ -55,7 +55,7 @@ IO is the input and output of data. There are multiple pins on the Basic and Ato
 - **Parameter description:** `pin_no`: Indicates the specific pin number at the end of the robot
 - **Return value:** `pin_signal`( `int`) When the returned value is 0, it means running in working state, and 1 means stop state
 
-### Raspberry Pi - GPIO
+### RDK X5 - GPIO
 
 When your robot is a Raspberry Pi version, you can use the following API
 
@@ -65,7 +65,7 @@ Enter the code import at the beginning of the file:
 
 ```python
 from pymycobot import MyCobot280
-import RPi.GPIO as GPIO
+import Hobot.GPIO as GPIO
 ```
 
 **gpio_init()**
@@ -97,16 +97,14 @@ import RPi.GPIO as GPIO
 ### Case use
 
 ```python
-from pymycobot.mycobot import MyCobot280
+from pymycobot import MyCobot280RDKX5
 import time
-import RPi.GPIO as GPIO
+import Hobot.GPIO as GPIO
 #Enter the above code to import the packages required for the project
 
-# MyCobot class initialization requires two parameters: serial and baud rate
+# MyCobot280RDKX5 class initialization requires two parameters: serial and baud rate
 
-# Initialize a MyCobot object
-# Below is Raspberry Pi version of the object code
-mc = MyCobot("/dev/ttyAMA0", 1000000)
+mc = MyCobot280RDKX5("/dev/ttyS1", 1000000)
 
 # Initialization
 GPIO.setmode(GPIO.BCM)

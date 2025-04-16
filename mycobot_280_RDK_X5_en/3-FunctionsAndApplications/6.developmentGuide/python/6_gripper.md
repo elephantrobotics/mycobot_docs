@@ -89,7 +89,7 @@ Before using Python to control the gripper, you need to install and connect the 
 ### Example
 
 ```python
-from pymycobot.mycobot280 import MyCobot280
+from pymycobot import MyCobot280RDKX5
 import time
 #Enter the above code to import the packages required for the project
 
@@ -131,11 +131,10 @@ print("")
 print(mc.get_gripper_value())
 
 if __name__ == "__main__":
-# MyCobot280 class initialization requires two parameters: serial and baud rate
+# MyCobot280RDKX5 class initialization requires two parameters: serial and baud rate
 
-# Initialize a MyCobot280 object
-# Below is the object code for M5 version
-mc = MyCobot280('/dev/ttyAMA0', 1000000)
+# Initialize a MyCobot280RDKX5 object
+mc = MyCobot280RDKX5('/dev/ttyS1', 1000000)
 # Move it to zero
 mc.set_encoders([2048, 2048, 2048, 2048, 2048, 2048], 20)
 time.sleep(3) 
