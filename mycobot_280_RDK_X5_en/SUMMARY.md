@@ -54,6 +54,7 @@
     * [Gesture Recognition Case](3-FunctionsAndApplications/7.SuccessfulCase/hand.md)
     * [Spam detection case](3-FunctionsAndApplications/7.SuccessfulCase/garbage.md)
     * [Item Classification Example](3-FunctionsAndApplications/7.SuccessfulCase/yolo.md)
+    * [mycobot280RDKX5 Vision Kit](3-FunctionsAndApplications/7.SuccessfulCase/rdk_vison_en.md)
   * [8. Supporting Resources](3-FunctionsAndApplications/8.SupportingResources/README.md)
     * [8.1 Product Information](3-FunctionsAndApplications/8.SupportingResources/8.1-ProductInformation/README.md)
     * [8.2 Product Drawings](3-FunctionsAndApplications/8.SupportingResources/8.2-ProductDrawings/README.md)
