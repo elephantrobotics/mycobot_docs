@@ -157,7 +157,7 @@ ros2 launch dnn_node_example dnn_node_example.launch.py dnn_example_config_file:
 ```
 在RDKX5主控上的浏览器输入http://192.168.127.10:8000 即可查看图像和算法渲染效果：
 
-<img src="img/rdk_trash.jpg" width="60%">
+<img src="./rdk_kit_img/rdk_trash.jpg" width="60%">
 
 然后进入mycobot280RDKX5_vision_kit文件夹,在终端输入下面指令,按下键盘回车键后，识别成功后，机械臂就会开始抓取
 ```bash
