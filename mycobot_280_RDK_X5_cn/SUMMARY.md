@@ -57,6 +57,7 @@
       * [手势识别案例](3-FunctionsAndApplications/7.SuccessfulCase/hand.md)
       * [垃圾检测案例](3-FunctionsAndApplications/7.SuccessfulCase/garbage.md)
       * [物品分类案例](3-FunctionsAndApplications/7.SuccessfulCase/yolo.md)
+      * [mycobot280RDKX5视觉套装](3-FunctionsAndApplications/7.SuccessfulCase/rdk_vison.md)
     * [8. 配套资源](3-FunctionsAndApplications/8.SupportingResources/README.md)
         * [8.1 产品资料](3-FunctionsAndApplications/8.SupportingResources/8.1-ProductInformation/README.md)
         * [8.2 产品图纸](3-FunctionsAndApplications/8.SupportingResources/8.2-ProductDrawings/README.md)
