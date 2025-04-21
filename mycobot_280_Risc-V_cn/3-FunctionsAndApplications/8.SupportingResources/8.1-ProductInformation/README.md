@@ -8,8 +8,7 @@
 
 | 操作系统   | 下载链接 |
 |------------|----------|
-
-| Bianbu OS | [下载链接](https://archive.spacemit.com/ros2/bianbu-robot-1.0.zip) |
+| Bianbu OS | [下载链接](https://archive.spacemit.com/ros2/bianbu-robot-1.5.2.zip) |
 
 ---
 
