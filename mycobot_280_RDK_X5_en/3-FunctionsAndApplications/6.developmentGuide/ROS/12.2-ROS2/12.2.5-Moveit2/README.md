@@ -48,7 +48,7 @@ MoveIt 2 has a global developer community that continuously provides updates, fe
 
 ## How to use MoveIt2
 
->>**Note:** For better motion planning, the Atom firmware version of the end-arm is 6.5, and the python driver library pymycobot version is 3.5.3
+>>**Note:** python driver library pymycobot version is >= 3.8.0
 
 `mycobot_ros2` has now integrated the MoveIt2 part.
 
