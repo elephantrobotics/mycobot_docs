@@ -20,8 +20,7 @@
 > 左侧为吸泵引脚，右侧为机械臂引脚  
 > GND -> GND  
 > 5V -> 5V  
-> G2 -> 21  
-> G5 -> 20
+> G5 -> 72
 
 ## 3 吸泵测试
 运行下面程序，吸泵会打开关闭的动作
@@ -36,29 +35,18 @@ from gpiozero import LED
 Device.pin_factory = LGPIOFactory(chip=0)  # 使用 /dev/gpiochip0
 
 # 初始化 GPIO 控制的设备
-pump = LED(71)  # 使用 LED 类控制 GPIO 71（吸泵）
 valve = LED(72)  # 使用 LED 类控制 GPIO 72（泄气阀门）
 
-# 打开吸泵
-pump.on()
+# 打开吸泵, 关闭泄气阀门
+value.off()
 print("吸泵已打开")
 
 # 等待 3 秒
 time.sleep(3)
 
-# 关闭吸泵
-pump.off()
+# 关闭吸泵, 打开泄气阀门
+value.on()
 print("吸泵已关闭")
-time.sleep(0.05)
-
-# 打开泄气阀门
-valve.on()
-print("泄气阀门已打开")
-time.sleep(1)
-
-# 关闭泄气阀门
-valve.off()
-print("泄气阀门已关闭")
 time.sleep(0.05)
 
 ```
@@ -81,20 +69,15 @@ place_point=[196.9, -97.1, 124.5, -178.8, 1.25, 173.32]#放置点的坐标
 arm = MyCobot280(PI_PORT,PI_BAUD)
 Device.pin_factory = LGPIOFactory(chip=0) # 显式指定/dev/gpiochip0
 # 初始化 GPIOZERO 控制的设备
-pump = LED(71)   # 气泵
 valve = LED(72)  # 阀门
-pump.on()
-time.sleep(0.05)
 valve.on()
 
 # 开启吸泵
 def pump_on():
-    pump.on()
     valve.off()
 
 # 停止吸泵
 def pump_off():
-    pump.off()
     valve.on()
 
 if __name__=="__main__":

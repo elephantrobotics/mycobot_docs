@@ -79,15 +79,20 @@
 * B. 底座的侧面如下图所示:
   ![底座左侧](../../resource/1-ProductInformation/2.ProductParameter/BaseLeft.png)
   - ① SD卡卡槽
-  - ② Type C
-  - ③ HDMI
-  - ④ 音频接口
+  - ② Type C输入，仅用于开发板供电5V/3A
+  - ③ EMMC,开发板上存储类型为eMMC FLASH，默认使用的容量32GB
+  - ④ HDMI接口
+  - ⑤ 音频接口
 
 ### 3.2底座接口说明
 
 > **注意:** 功能接口组均为2.54mm杜邦接口，外部可使用2.54mm杜邦线。
 
-* A. 功能接口组一的各个接口定义如下表所示
+<!-- * A. 功能接口组一的各个接口定义如下表所示 -->
+
+* A. 功能接口组一的各个接口定义如下：
+
+  ![40pin接口图](../../6-BoardInformation/resources/40pins.PNG)
 
 | 标签 | 信号名 | 类型 | 功能 | 备注 |
 | :---: | :----: | :--: | :------: | :----: |
@@ -149,7 +154,7 @@
 > 
 > 6. 关于功能接口的其他功能表如图 2.1.5.2-4 所示,使用其他功能的情况下，IO功能不可用。
 > 
-> <img src="../../resource/1-ProductInformation/2.ProductParameter/Functionalinterface.png" style="zoom:50%;" />
+> <img src="../../6-BoardInformation/resources/40pins.PNG" style="zoom:50%;" />
 > 
 > 图 2.1.5.2-4
 
@@ -173,7 +178,7 @@
 
 * G. HDMI 接口: 接口为HDMI D型接口，连接显示器。HDMI接口2存在优先级，推荐使用HDMI接口1。
 
-* H. Type C接口：树莓派自身的供电口，仅给树莓派自身供电，无法给整个机器供电，所有电源DC接口可以正常使用的时候无需接此接口。
+* H. Type C接口：RV4B自身的供电口，仅给RV4B自身供电，无法给整个机器供电，所有电源DC接口可以正常使用的时候无需接此接口。
 
 * I. SD卡卡槽: SD卡可以插入和拔出。SD卡的大小是32mm×24mmx2.1mm
 

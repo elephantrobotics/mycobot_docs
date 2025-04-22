@@ -13,7 +13,7 @@ myCobot 280 RISC-V 六轴协作机器人自重**860g**，有效载荷**250g**，
 
 ### 设计理念
 
-![理念](../../resource/1-ProductInformation/1.ProductIntroduction/mycobot-280-pi-cn.jpg)
+![理念](../../resource/1-ProductInformation/1.ProductIntroduction/mycobot-280-riscv-cn.jpg)
 
 myCobot 280 RISC-V 机械臂是**大象机器人+进迭时空**专为：科研教育、创客应用、商业展示等场景开发的六自由度协作机器人。机械臂外观结构设计小巧精致，⼀体式全包裹的机身设计，无任何外漏线缆。内置大象机器人自主研发的机器⼈运动控制算法，支持角度、坐标、电位值、 弧度值多种控制模式，便于用户理解机器⼈复杂的⼯作原理和机器人应用原理。 采用进迭时空K1 RISC-V AI处理器，**内置Bianbu OS 操作系统，无需搭配PC主控，连接显示器、键盘、鼠标即可使用**，是快速构建机械臂 编程教育、控制逻辑开发、机器人应用、ROS仿真实验课堂的首选助手，帮助用户快速开始六轴机械臂学习与应用。
 
