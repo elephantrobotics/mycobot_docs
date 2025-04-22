@@ -17,6 +17,7 @@
 | Lens focal length | Standard 1.7mm |
 | Field of view | About 60° |
 | Supported systems | Win7/8/10, Linux, MAC |
+| Supported resolutions | 2592x1944, 2560x1440, 2048x1536, 1920x1080, 1280x72, 1024x768, 800x600, 640x480, 640x360, 352x288, 320x240, 176x144 |
 | Service life | Two years |
 | Fixing method | Lego connector |
 | Environment requirements | Normal temperature and pressure |
