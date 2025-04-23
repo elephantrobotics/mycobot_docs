@@ -17,9 +17,6 @@ RISC-V版本机器的本质是带有独立系统的开发板，是可以看做�
 - [RISC-V版本机械臂入门](5.1-Functionlnstruction/3.5.1-SW-description.md)  
   本部分将介绍如何快速入门RISC-V版本的机械臂以及如何对操作系统进行更新升级。
 
-- [系统基础功能说明](5.2-Softwarelnstructions/3.5.2-SW-detail-description.md)<br>
-  本部分会介绍Bianbu OS操作系统以及如何进行蓝牙配置、VNC配置、网络配置等操作以及Titan刷机⼯具的使用。
-
 - [固件说明](5.3-FirmwareFunctionDescription/README.md)  
   本部分会介绍RISC-V版本机器人的通用硬件接口，出厂固件以及使用Titan刷机⼯具。
 
