@@ -153,15 +153,17 @@ After connecting the required external devices, press the red power button to st
 </video>
 
 ## 5.Common Problem Solving
-This section aims to help users solve common problems encountered during use, covering hardware, software, drivers, and how to ask questions in the forum. If you encounter problems while using the robotic arm, please read the contents of this section first to find solutions. If the listed problems cannot help you solve and you have more after-sales questions to consult, please add the after-sales butler WeChat.
+This section aims to help users solve common problems encountered during use, covering hardware, software, accessories, and how to self-check for the first time. If you encounter problems while using the robot arm, please read the contents of this section first to find solutions. If the listed problems cannot help you solve and you have more after-sales questions to consult, please add the after-sales butler WeChat.
 
-[How to ask questions elegantly](../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.md)
-
-[Common driver problems and solutions](../../4-SupportAndService/9.Troubleshooting/9.1-driver.md)
+[First-time self-check](../../4-SupportAndService/9.Troubleshooting/9.4-first-time-self-check.md)
 
 [Common software problems and solutions](../../4-SupportAndService/9.Troubleshooting/9.2-software.md)
 
 [Common hardware problems and solutions](../../4-SupportAndService/9.Troubleshooting/9.3-hardware.md)
+
+[Common accessories problems and solutions](../../4-SupportAndService/9.Troubleshooting/9.1-accessories.md)
+
+[Other problems and solutions](../../4-SupportAndService/9.Troubleshooting/9.0-other.md)
 
 ---
 
