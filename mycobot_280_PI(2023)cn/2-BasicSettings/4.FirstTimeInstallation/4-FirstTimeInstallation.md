@@ -154,15 +154,17 @@ myCobot **必须使用外部电源**进行供电，以提供足够的电量：
 ---
 
 ## 6.常见问题解决
-本小节旨在帮助用户解决在使用过程中所遇到的常见问题，涵盖硬件、软件、驱动以及如何在论坛中提问这几个方面，如您在使用机械臂的过程中遇到问题，请首先阅读本小节的内容来寻求解决办法。如果列举出的问题无法帮助您解决并且您有更多售后问题想要咨询请添加售后小管家微信。
+本小节旨在帮助用户解决在使用过程中所遇到的常见问题，涵盖硬件、软件、配件以及如何首次使用自查这几个方面，如您在使用机械臂的过程中遇到问题，请首先阅读本小节的内容来寻求解决办法。如果列举出的问题无法帮助您解决并且您有更多售后问题想要咨询请添加售后小管家微信。
 
-[如何优雅的提问](../../4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.md)
-
-[常见的驱动问题以及解决方案](../../4-SupportAndService/9.Troubleshooting/9.1-driver.md)
+[首次使用自查](../../4-SupportAndService/9.Troubleshooting/9.4-first-time-self-check.md)
 
 [常见的软件问题以及解决方案](../../4-SupportAndService/9.Troubleshooting/9.2-software.md)
 
 [常见的硬件问题以及解决方案](../../4-SupportAndService/9.Troubleshooting/9.3-hardware.md)
+
+[常见的配件问题以及解决方案](../../4-SupportAndService/9.Troubleshooting/9.1-accessories.md)
+
+[其他问题以及解决方案](../../4-SupportAndService/9.Troubleshooting/9.0-other.md)
 
 ---
 

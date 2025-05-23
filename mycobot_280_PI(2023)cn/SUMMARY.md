@@ -8,10 +8,11 @@
 * 基础设置
     * [3. 用户须知](2-BasicSettings/3.UserNotice/3-UserInstructions.md)
     * [4. 首次安装](2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.md)
-        * [4.1如何正确寻求帮助](4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.md)
-        * [4.2常见的驱动问题以及解决方案](4-SupportAndService/9.Troubleshooting/9.1-driver.md)
-        * [4.3常见的软件问题以及解决方案](4-SupportAndService/9.Troubleshooting/9.2-software.md)
-        * [4.4常见的硬件问题以及解决方案](4-SupportAndService/9.Troubleshooting/9.3-hardware.md)
+      *  [4.1 首次使用自查](4-SupportAndService/9.Troubleshooting/9.4-first-time-self-check.md)
+      *  [4.2 软件问题](4-SupportAndService/9.Troubleshooting/9.2-software.md)
+      *  [4.3 硬件问题](4-SupportAndService/9.Troubleshooting/9.3-hardware.md)
+      *  [4.4 配件相关问题](4-SupportAndService/9.Troubleshooting/9.1-accessories.md)
+      *  [4.5 其他](4-SupportAndService/9.Troubleshooting/9.0-other.md)
 * 功能与应用
     * [5. 基础功能](3-FunctionsAndApplications/5.BasicFunction/README.md)
         * [5.1 pi版本机械臂入门](3-FunctionsAndApplications/5.BasicFunction/5.1-Functionlnstruction/3.5.1-SW-description.md)
