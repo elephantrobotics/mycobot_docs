@@ -40,13 +40,14 @@ Document Directory
 * [2. Product Parameters](1-ProductInformation/2.ProductParameter/2-ProductParameters.md)
 
 * Basic Settings
+  * [3. User Notice](2-BasicSettings/3.UserNotice/3-UserInstructions.md)
+  * [4. First Time Installation](2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.md)
+    * [4.1 First-time self-check](4-SupportAndService/9.Troubleshooting/9.4-first-time-self-check.md)
+    * [4.2 Software issues](4-SupportAndService/9.Troubleshooting/9.2-software.md)
+    * [4.3 Hardware issues](4-SupportAndService/9.Troubleshooting/9.3-hardware.md)
+    * [4.4 Accessories issues](4-SupportAndService/9.Troubleshooting/9.1-accessories.md)
+    * [4.5 Others](4-SupportAndService/9.Troubleshooting/9.0-other.md)
 
-* [3. User Notice](2-BasicSettings/3.UserNotice/3-UserInstructions.md)
-* [4. First Time Installation](2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.md)
-  * [4. 1 Problem Solving Ideas](4-SupportAndService/9.Troubleshooting/9.0-how_to_ask.md)
-  * [4. 2 Common Driver Problems](4-SupportAndService/9.Troubleshooting/9.1-driver.md)
-  * [4. 3 Common software problems](4-SupportAndService/9.Troubleshooting/9.2-software.md)
-  * [4. 4 Common hardware problems](4-SupportAndService/9.Troubleshooting/9.3-hardware.md)
 * Functions and applications
 * [5. Basic functions](3-FunctionsAndApplications/5.BasicFunction/README.md)
    * [5.1 System (function) instructions](3-FunctionsAndApplications/5.BasicFunction/5.1-Functionlnstruction/README.md)
