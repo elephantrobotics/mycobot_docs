@@ -12,11 +12,11 @@ It is mainly used to realize intelligent route planning to let the robot arm mov
 
 - **Function:** Send a single coordinate value to the robot for movement
 - **Parameter description:**
-- `id`: Represents the coordinate of the robot. Represented by numbers 1-6,for example, the X axis can be filled in 1, the Y can be filled in 2, and so on
+  - `id`: Represents the coordinate of the robot. Represented by numbers 1-6,for example, the X axis can be filled in 1, the Y can be filled in 2, and so on
 
-- `coord`: Enter the coordinate value you want to reach
+  - `coord`: Enter the coordinate value you want to reach
 
-- `speed`: Indicates the speed of the robot movement, the range is 1-100
+  - `speed`: Indicates the speed of the robot movement, the range is 1-100
 - **Return value:** 1
 
 ### Multi-parameter coordinates
@@ -30,20 +30,20 @@ It is mainly used to realize intelligent route planning to let the robot arm mov
 
 - **Function:** Send the overall coordinates and posture, and let the robot head move from the original point to the point you specify.
 - **Parameter description:**
-- `coords`: [x,y,z,rx,ry,rz] coordinate value, length is 6
+  - `coords`: [x,y,z,rx,ry,rz] coordinate value, length is 6
 
-- `speed`: Indicates the speed of the robot movement, the range is 1-100
-- `mode`: ( `int`): The value is limited to 0 and 1.
-- 0 means that the path of the robot head is nonlinear, that is, the route is randomly planned, as long as the robot head moves to the specified point while maintaining the specified posture.
-- 1 means that the path of the robot head is linear, that is, the intelligent planning route allows the robot head to move to the specified point in a straight line.
+  - `speed`: Indicates the speed of the robot movement, the range is 1-100
+  - `mode`: ( `int`): The value is limited to 0 and 1.
+    - 0 means that the path of the robot head is nonlinear, that is, the route is randomly planned, as long as the robot head moves to the specified point while maintaining the specified posture.
+    - 1 means that the path of the robot head is linear, that is, the intelligent planning route allows the robot head to move to the specified point in a straight line.
 - **Return value:** 1
 
 **set_tool_reference(coords)**
 
 - **Function:** Set the tool coordinate system.
 - **Parameter description:**
-- `coords`:
-- Six axes: [x,y,z,rx,ry,rz] coordinate values, length 6, x,y,z range -280 ~ 280, rx,ry,yz range -314 ~ 314
+  - `coords`:
+    - Six axes: [x,y,z,rx,ry,rz] coordinate values, length 6, x,y,z range -280 ~ 280, rx,ry,yz range -314 ~ 314
 - **Return value:** 1
 
 **get_tool_reference()**
@@ -60,15 +60,15 @@ It is mainly used to realize intelligent route planning to let the robot arm mov
 
 - **Function:** Set the world coordinate system.
 - **Parameter description:**
-- `coords`:
-- Six axes: [x,y,z,rx,ry,rz] coordinate values, length is 6, x,y,z range is -280 ~ 280, rx,ry,yz range is -314 ~ 314
+  - `coords`:
+    - Six axes: [x,y,z,rx,ry,rz] coordinate values, length is 6, x,y,z range is -280 ~ 280, rx,ry,yz range is -314 ~ 314
 - **Return value:** 1
 
 **set_reference_frame(rftype)**
 
 - **Function:** Set the base coordinate system.
 - **Parameter description:**
-- `rftype`: 0 - base coordinate system (default), 1 - world coordinate system
+  - `rftype`: 0 - base coordinate system (default), 1 - world coordinate system
 - **Return value:** 1
 
 **get_reference_frame()**
@@ -80,7 +80,7 @@ It is mainly used to realize intelligent route planning to let the robot arm mov
 
 - **Function:** Set the end coordinate system.
 - **Parameter description:**
-- `end`: 0 - flange (default), 1 - tool
+  - `end`: 0 - flange (default), 1 - tool
 - **Return value:** 1
 
 **get_end_type()**

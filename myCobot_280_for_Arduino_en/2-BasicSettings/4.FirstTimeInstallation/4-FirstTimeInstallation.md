@@ -121,6 +121,17 @@ Figure 3-2 USB interface connection diagram
 poster="" data-setup='{"aspectRatio":"16:9"}'>
 <source src="https://www.elephantrobotics.com/wp-content/uploads/2022/05/Arduino%E8%A7%86%E9%A2%91%E7%9A%84%E6%9B%B4%E6%8D%A2%E4%B8%AD.mp4#t=4"></video>
 
+## Hardware connection
+
+**Note:** The current 280AR serial port baud rate is changed to 1000000. The wiring of different development boards is different:
+
+| Development board type | Baud rate | Control method | Wiring method | Wiring diagram |
+| :------: | :----------------------: | :----------------------: | :-----------------: | :---------: |
+| mega2560 | 1000000 | python/MyBlockly |TX0-->RX、RX0-->TX、GND-->GND | ![](../../resource/4-SupportAndService/9.Troubleshooting/9.images/arduino_4.jpg) |
+| mega2560 | 1000000 | Arduino IDE |TX1-->RX、RX1-->TX、GND-->GND |![](../../resource/4-SupportAndService/9.Troubleshooting/9.images/arduino_5.jpg)|
+| UNO | 1000000 | Arduino IDE |tx-->tx RX-->RX, GND-->GND |![](../../resource/4-SupportAndService/9.Troubleshooting/9.images/arduino_6.jpg)|
+| mkrwifi1010 | 1000000 | None | None | None |
+
 ## How to perform zero calibration
 
 **Note: Please strictly follow the steps below**
@@ -161,19 +172,19 @@ import time
 # linux: "/dev/ttyUSB0"
 # windows: "COM6"
 # The second is the baud rate:
-# M5 version is: 115200
+# M5 version is: 1000000
 # The following is as follows:
 # mycobot-M5:
 # linux:
-# mc = MyCobot("/dev/ttyUSB0", 115200)
+# mc = MyCobot("/dev/ttyUSB0", 1000000)
 # windows:
-# mc = MyCobot("COM6", 115200)
+# mc = MyCobot("COM6", 1000000)
 # mycobot-raspi:
 # mc = MyCobot(PI_PORT, PI_BAUD)
 #
 # Initialize a MyCobot object
 # The following is the object code for the windows version
-mc = MyCobot("COM6", 115200)
+mc = MyCobot("COM6", 1000000)
 # Power off the robot and relax the joints
 time.sleep(2)
 mc.release_all_servos()

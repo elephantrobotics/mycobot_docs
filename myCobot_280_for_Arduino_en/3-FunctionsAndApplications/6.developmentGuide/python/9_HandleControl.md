@@ -61,7 +61,7 @@ from pymycobot import MyCobot280
 import threading
 # Change com7 to the actual port number detected by your computer
 
-mc = MyCobot280("com7")
+mc = MyCobot280("com7", 1000000)
 ...
 ```
 Run the program.

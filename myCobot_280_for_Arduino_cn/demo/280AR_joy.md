@@ -30,7 +30,7 @@
 ```python
 from pymycobot import MyCobot280,utils
 import time
-arm=MyCobot280(utils.get_port_list()[0])
+arm=MyCobot280(utils.get_port_list()[0], 1000000)
 for i in range(2):
     arm.set_gripper_state(1,100)#夹爪夹紧
     time.sleep(1)
@@ -96,7 +96,7 @@ import pygame
 import sys
 import time
 from pymycobot import MyCobot280,utils
-mc=MyCobot280(utils.get_port_list()[0])
+mc=MyCobot280(utils.get_port_list()[0], 1000000)
 time.sleep(1.5)
 init_angles=[0, 0, -90, 0, 0, 0]
 mc.sync_send_angles(init_angles,50)

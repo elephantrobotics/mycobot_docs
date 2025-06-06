@@ -115,6 +115,18 @@ myCobot **必须使用外部电源**进行供电，以提供足够的电量：
 poster="" data-setup='{"aspectRatio":"16:9"}'>
   <source src="https://www.elephantrobotics.com/wp-content/uploads/2022/05/Arduino%E8%A7%86%E9%A2%91%E7%9A%84%E6%9B%B4%E6%8D%A2%E4%B8%AD.mp4#t=4"></video>
 
+## 硬件连接
+
+**注意：** 目前的280AR串口波特率改为1000000，不同开发板的接线不同：
+
+|   开发板类型   |           波特率           |   控制方式   |  接线方式  |  接线图  |
+| :------: | :----------------------: | :----------------------: | :-----------------: | :---------: |
+|   mega2560   |      1000000      | python/MyBlockly |TX0-->RX、RX0-->TX、GND-->GND      | ![](../../resource/4-SupportAndService/9.Troubleshooting/9.images/arduino_4.jpg) |
+|   mega2560   |      1000000      | Arduino IDE |TX1-->RX、RX1-->TX、GND-->GND      |![](../../resource/4-SupportAndService/9.Troubleshooting/9.images/arduino_5.jpg)|
+|   UNO   |      1000000      | Arduino IDE |tx-->tx RX-->RX、GND-->GND      |![](../../resource/4-SupportAndService/9.Troubleshooting/9.images/arduino_6.jpg)|
+| mkrwifi1010 |           1000000           | 暂无    |  暂无| 暂无|
+
+
 ## 如何进行零位校准操作
 
 **注意：请严格按照以下步骤进行**

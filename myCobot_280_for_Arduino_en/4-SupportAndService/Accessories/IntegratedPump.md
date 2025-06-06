@@ -76,40 +76,34 @@ Insert the male end into the robot base pin according to the given correspondenc
 
 Programming development:
 
-280-M5 Version:
+280-AR Version:
 
 ```python
 from pymycobot import MyCobot280
 import time
 
 # Initialize a MyCobot280 object
-mc = MyCobot280("COM3", 115200)
+arm = MyCobot280('COM3', 1000000)
 
-# Turn on the suction pump
+# Turn on the pump
 def pump_on():
-# Open the solenoid valve
-mc.set_basic_output(5, 0)
-time.sleep(0.05)
+    arm.set_digital_output(33, 0)
+    time.sleep(0.05)
 
-# Stop the suction pump
+# Stop the pump
 def pump_off():
-# Close the solenoid valve
-mc.set_basic_output(5, 1)
-time.sleep(0.05)
-# The exhaust valve starts working
-mc.set_basic_output(2, 0)
-time.sleep(1)
-mc.set_basic_output(2, 1)
-time.sleep(0.05)
+    arm.set_digital_output(33, 1)
+    time.sleep(0.05)
+    arm.set_digital_output(23, 0)
+    time.sleep(1)
+    arm.set_digital_output(23, 1)
+    time.sleep(0.05)
 
-pump_off()
-time.sleep(3)
-pump_on()
-time.sleep(3)
-pump_off()
-time.sleep(3)
-
-GPIO.cleanup() # Release pin channel
+for i in range(2):
+    pump_on()
+    time.sleep(2)
+    pump_off()
+    time.sleep(2)
 ```
 
 - 280-Pi version:

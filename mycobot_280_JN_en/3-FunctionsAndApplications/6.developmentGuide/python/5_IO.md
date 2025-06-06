@@ -17,9 +17,9 @@ IO is the input and output of data. There are multiple pins on the Basic and Ato
 
 - **Function:** Set the working status of the bottom pin number
 - **Parameter description:**
-- `pin_no`( `int`) The number marked on the bottom of the device only takes the digital part
-- `pin_signal`( `int`): Input 0 means set to running state, input 1 means stop state
-- **Return value: ** None
+  - `pin_no`( `int`) The number marked on the bottom of the device only takes the digital part
+  - `pin_signal`( `int`): Input 0 means set to running state, input 1 means stop state
+- **Return value:** None
 
 **get_tof_distance()**
 
@@ -32,20 +32,20 @@ IO is the input and output of data. There are multiple pins on the Basic and Ato
 
 - **Function:** Set the state mode of the specified pin in atom
 - **Parameter description:**
-- `pin_no` (int): The specific pin number on the top of the robot
-- `pin_mode` (int): Limited to 0~2
-- 0 is set to running state
-- 1 is set to stop state
-- 2 is set to pull-up mode
+  - `pin_no` (int): The specific pin number on the top of the robot
+  - `pin_mode` (int): Limited to 0~2
+    - 0 is set to running state
+    - 1 is set to stop state
+    - 2 is set to pull-up mode
 - **Return value:** 1
 
 **set_digital_output(pin_no, pin_signa)**
 
 - **Function:** Set the working state of the end pin number
 
-- **Parameter description: **
-- `pin_no`( `int`) The number marked at the end of the device only takes the digital part
-- `pin_signal`( `int`): Enter 0 to set it to running state, enter 1 to stop state
+- **Parameter description:**
+  - `pin_no`( `int`) The number marked at the end of the device only takes the digital part
+  - `pin_signal`( `int`): Enter 0 to set it to running state, enter 1 to stop state
 
 - **Return value:** 1
 

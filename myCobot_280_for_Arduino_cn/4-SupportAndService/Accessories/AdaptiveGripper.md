@@ -84,7 +84,7 @@
   import time
   
   # 初始化一个MyCobot280对象
-  mc = MyCobot280("COM3", 115200)
+  mc = MyCobot280("COM3", 1000000)
   
   # 以下三种方式均可控制夹爪打开-关闭-打开
   # 方式一：

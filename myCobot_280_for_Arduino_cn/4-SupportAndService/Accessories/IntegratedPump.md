@@ -73,40 +73,34 @@
 
 编程开发：
 
-280-M5 版本：
+280-AR 版本：
 
 ```python
 from pymycobot import MyCobot280
 import time
 
 # 初始化一个MyCobot280对象
-mc = MyCobot280("COM3", 115200)
+arm = MyCobot280('COM3', 1000000)
 
 # 开启吸泵
 def pump_on():
-    # 打开电磁阀
-    mc.set_basic_output(5, 0)
-    time.sleep(0.05)
+  arm.set_digital_output(33, 0)
+  time.sleep(0.05)
 
 # 停止吸泵
 def pump_off():
-    # 关闭电磁阀
-    mc.set_basic_output(5, 1)
-    time.sleep(0.05)
-    # 泄气阀门开始工作
-    mc.set_basic_output(2, 0)
-    time.sleep(1)
-    mc.set_basic_output(2, 1)
-    time.sleep(0.05)
+  arm.set_digital_output(33, 1)
+  time.sleep(0.05)
+  arm.set_digital_output(23, 0)
+  time.sleep(1)
+  arm.set_digital_output(23, 1)
+  time.sleep(0.05)
 
-pump_off()
-time.sleep(3)
-pump_on()
-time.sleep(3)
-pump_off()
-time.sleep(3)
-
-GPIO.cleanup() # 释放 pin channel
+for i in range(2):
+  pump_on()
+  time.sleep(2)
+  pump_off()
+  time.sleep(2)
 ```
 
 - 280-Pi 版本：

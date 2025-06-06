@@ -83,7 +83,7 @@ Before using Python to control the gripper, you need to install and connect the 
 
 - **Function:** Set the gripper protection current
 - **Parameter description:**
-- `current`: 1 ~ 500
+  - `current`: 1 ~ 500
 - **Return value:** 0 - Initialization failed; 1 - Initialization successful
 
 ### Example
@@ -136,18 +136,18 @@ if __name__ == "__main__":
         # linux: "/dev/ttyUSB0"
         # windows: "COM3"
         # The second is the baud rate:
-        # Arduino version: 115200
+        # Arduino version: 1000000
 
     # Example:
         # mycobot-Arduino:
             # linux:
             # mc = MyCobot280("/dev/ttyAMA0", 1000000)
             # windows:
-            # mc = MyCobot280("COM3", 115200)
+            # mc = MyCobot280("COM3", 1000000)
 
 # Initialize a MyCobot280 object
 # Below is the object code for Arduino version
-mc = MyCobot280('COM3', 115200)
+mc = MyCobot280('COM3', 1000000)
 time.sleep(2)
 # Move it to zero
 mc.set_encoders([2048, 2048, 2048, 2048, 2048, 2048], 20)

@@ -17,8 +17,8 @@ IO is the input and output of data. There are multiple pins on the Basic and Ato
 
 - **Function:** Set the working status of the bottom pin number
 - **Parameter description:**
-- `pin_no`( `int`) The number marked on the bottom of the device only takes the digital part
-- `pin_signal`( `int`): Input 0 means set to running state, input 1 means stop state
+  - `pin_no`( `int`) The number marked on the bottom of the device only takes the digital part
+  - `pin_signal`( `int`): Input 0 means set to running state, input 1 means stop state
 - **Return value:** 1
 
 **get_tof_distance()**
@@ -32,20 +32,20 @@ IO is the input and output of data. There are multiple pins on the Basic and Ato
 
 - **Function:** Set the state mode of the specified pin in atom
 - **Parameter description:**
-- `pin_no` (int): The specific pin number on the top of the robot
-- `pin_mode` (int): Limited to 0~2
-- 0 is set to running state
-- 1 is set to stop state
-- 2 is set to pull-up mode
+  - `pin_no` (int): The specific pin number on the top of the robot
+  - `pin_mode` (int): Limited to 0~2
+    - 0 is set to running state
+    - 1 is set to stop state
+    - 2 is set to pull-up mode
 - **Return value:** 1
 
 **set_digital_output(pin_no, pin_signa)**
 
 - **Function:** Set the working state of the end pin number
 
-- **Parameter description: **
-- `pin_no`( `int`) The number marked at the end of the device only takes the digital part
-- `pin_signal`( `int`): Enter 0 to set it to running state, enter 1 to stop state
+- **Parameter description:**
+  - `pin_no`( `int`) The number marked at the end of the device only takes the digital part
+  - `pin_signal`( `int`): Enter 0 to set it to running state, enter 1 to stop state
 
 - **Return value:** 1
 
@@ -71,30 +71,36 @@ import time
         # linux: "/dev/ttyUSB0"
         # windows: "COM3"
         # The second is the baud rate:
-        # Arduino version: 115200
+        # Arduino version: 1000000
 
     # For example:
         # mycobot-Arduino:
             # linux:
             # mc = MyCobot280("/dev/ttyUSB0", 1000000)
             # windows:
-            # mc = MyCobot280("COM3", 115200)
+            # mc = MyCobot280("COM3", 1000000)
 
 # Initialize a MyCobo280 object
 # The following is the object creation code for the windows version
-mc = MyCobot280("COM3", 115200)
-time.sleep(2)
+arm = MyCobot280('COM3', 1000000)
 
-for count in range(5):
-# Set a loop
-mc.set_basic_output(2,0)
-# Put basic2 into working state
-mc.set_basic_output(5,0)
-# Put basic position 5 into working state
-time.sleep(2)
-# Wait for two seconds
-mc.set_basic_output(2,1)
-# Stop basic position 2 from working
-mc.set_basic_output(5,1)
-# Stop basic position 2 from working
+# Turn on the pump
+def pump_on():
+    arm.set_digital_output(33, 0)
+    time.sleep(0.05)
+
+# Stop the pump
+def pump_off():
+    arm.set_digital_output(33, 1)
+    time.sleep(0.05)
+    arm.set_digital_output(23, 0)
+    time.sleep(1)
+    arm.set_digital_output(23, 1)
+    time.sleep(0.05)
+
+for i in range(2):
+    pump_on()
+    time.sleep(2)
+    pump_off()
+    time.sleep(2)
 ```
