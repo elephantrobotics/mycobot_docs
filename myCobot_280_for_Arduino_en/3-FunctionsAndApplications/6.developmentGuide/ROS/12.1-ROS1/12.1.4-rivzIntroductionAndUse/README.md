@@ -135,8 +135,8 @@ Open a command line and run:
 - mycobot 280-Arduino version:
 
 ```bash
-# mycobot 280-Arduino version default serial port name is "/dev/ttyACM0", baud rate is 115200.
-roslaunch mycobot_280arduino slider_control.launch port:=/dev/ttyACM0 baud:=115200
+# mycobot 280-Arduino version default serial port name is "/dev/ttyACM0", baud rate is 1000000.
+roslaunch mycobot_280arduino slider_control.launch port:=/dev/ttyACM0 baud:=1000000
 ```
 
 It will **open rviz and a slider component**, you will see the following screen:
@@ -149,8 +149,8 @@ Then you can **control the movement of the model in rviz by dragging the slider*
 - mycobot 280-Arduino version:
 
 ```bash
-# mycobot 280-Arduino version default serial port name is "/dev/ttyACM0", baud rate is 115200.
-rosrun mycobot_280arduino slider_control.py _port:=/dev/ttyACM0 _baud:=115200
+# mycobot 280-Arduino version default serial port name is "/dev/ttyACM0", baud rate is 1000000.
+rosrun mycobot_280arduino slider_control.py _port:=/dev/ttyACM0 _baud:=1000000
 ```
 
 **Please note: due to the commandThe robot arm will move to the current position of the model while inputting. Before you use the command, please make sure that the model in rviz does not have any penetration**
@@ -163,8 +163,8 @@ In addition to the above controls, we can also **let the model follow the real r
 - mycobot 280-Arduino version:
 
 ```bash
-# mycobot 280-Arduino version default serial port name is "/dev/ttyACM0", baud rate is 115200.
-rosrun mycobot_280arduino follow_display.py _port:=/dev/ttyACM0 _baud:=115200
+# mycobot 280-Arduino version default serial port name is "/dev/ttyACM0", baud rate is 1000000.
+rosrun mycobot_280arduino follow_display.py _port:=/dev/ttyACM0 _baud:=1000000
 ```
 
 Then open another command line and run:
@@ -186,8 +186,8 @@ Open the command line:
 - mycobot 280-Arduino version:
 
 ```bash
-# mycobot 280-Arduino version default serial port name is "/dev/ttyACM0", baud rate is 115200.
-roslaunch mycobot_280arduino simple_gui.launch port:=/dev/ttyACM0 baud:=115200
+# mycobot 280-Arduino version default serial port name is "/dev/ttyACM0", baud rate is 1000000.
+roslaunch mycobot_280arduino simple_gui.launch port:=/dev/ttyACM0 baud:=1000000
 ```
 
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/gui-1.png
@@ -202,8 +202,8 @@ Open a command line and run:
 - mycobot 280-Arduino version:
 
 ```bash
-# mycobot 280-Arduino version default serial port name is "/dev/ttyACM0", baud rate is 115200.
-roslaunch mycobot_280arduino teleop_keyboard.launch port:=/dev/ttyACM0 baud:=115200
+# mycobot 280-Arduino version default serial port name is "/dev/ttyACM0", baud rate is 1000000.
+roslaunch mycobot_280arduino teleop_keyboard.launch port:=/dev/ttyACM0 baud:=1000000
 ```
 
 The running effect is as follows:
@@ -218,7 +218,7 @@ SUMMARY
 ========
 
 PARAMETERS
- * /mycobot_services/baud: 115200
+ * /mycobot_services/baud: 1000000
  * /mycobot_services/port: /dev/ttyUSB0
  * /robot_description: <?xml version="1....
  * /rosdistro: kinetic
@@ -243,7 +243,7 @@ process[rviz-3]: started with pid [1367]
 process[mycobot_services-4]: started with pid [1380]
 process[real_listener-5]: started with pid [1395]
 [INFO] [1620882819.196217]: start ...
-[INFO] [1620882819.205050]: /dev/ttyUSB0,115200
+[INFO] [1620882819.205050]: /dev/ttyUSB0,1000000
 
 MyCobot Status
 --------------------------------

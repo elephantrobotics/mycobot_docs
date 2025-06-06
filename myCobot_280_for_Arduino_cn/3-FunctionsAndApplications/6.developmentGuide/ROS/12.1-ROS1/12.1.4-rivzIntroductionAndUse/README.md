@@ -132,8 +132,8 @@ sudo chmod 777 /dev/ttyACM0 # 新版本 myCobot280 M5
 - mycobot 280-Arduino版本：
   
 ```bash
-# mycobot 280-Arduino版本默认串口名为"/dev/ttyACM0"，波特率为115200.
-roslaunch mycobot_280arduino slider_control.launch port:=/dev/ttyACM0 baud:=115200
+# mycobot 280-Arduino版本默认串口名为"/dev/ttyACM0"，波特率为1000000.
+roslaunch mycobot_280arduino slider_control.launch port:=/dev/ttyACM0 baud:=1000000
 ```
 
 它将**打开 rviz 和一个滑块组件**，你将看到如下画面：
@@ -146,8 +146,8 @@ width ="500"  align = "center">
 - mycobot 280-Arduino版本：
   
 ```bash
-# mycobot 280-Arduino版本默认串口名为"/dev/ttyACM0"，波特率为115200.
-rosrun mycobot_280arduino slider_control.py _port:=/dev/ttyACM0 _baud:=115200
+# mycobot 280-Arduino版本默认串口名为"/dev/ttyACM0"，波特率为1000000.
+rosrun mycobot_280arduino slider_control.py _port:=/dev/ttyACM0 _baud:=1000000
 ```
 
 **请注意：由于在命令输入的同时机械臂会移动到模型目前的位置，在您使用命令之前请确保rviz中的模型没有出现穿模现象**
@@ -160,8 +160,8 @@ rosrun mycobot_280arduino slider_control.py _port:=/dev/ttyACM0 _baud:=115200
 - mycobot 280-Arduino版本：
   
 ```bash
-# mycobot 280-Arduino版本默认串口名为"/dev/ttyACM0"，波特率为115200.
-rosrun mycobot_280arduino follow_display.py _port:=/dev/ttyACM0 _baud:=115200
+# mycobot 280-Arduino版本默认串口名为"/dev/ttyACM0"，波特率为1000000.
+rosrun mycobot_280arduino follow_display.py _port:=/dev/ttyACM0 _baud:=1000000
 ```
 
 然后打开另一个命令行，运行：
@@ -183,8 +183,8 @@ roslaunch mycobot_280arduino mycobot_follow.launch
 - mycobot 280-Arduino版本：
   
 ```bash
-# mycobot 280-Arduino版本默认串口名为"/dev/ttyACM0"，波特率为115200.
-roslaunch mycobot_280arduino simple_gui.launch port:=/dev/ttyACM0 baud:=115200
+# mycobot 280-Arduino版本默认串口名为"/dev/ttyACM0"，波特率为1000000.
+roslaunch mycobot_280arduino simple_gui.launch port:=/dev/ttyACM0 baud:=1000000
 ```
 
 <img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1\12.1.4-rivzIntroductionAndUse/gui-1.png
@@ -199,8 +199,8 @@ width ="500"  align = "center">
 - mycobot 280-Arduino版本：
   
 ```bash
-# mycobot 280-Arduino版本默认串口名为"/dev/ttyACM0"，波特率为115200.
-roslaunch mycobot_280arduino teleop_keyboard.launch port:=/dev/ttyACM0 baud:=115200
+# mycobot 280-Arduino版本默认串口名为"/dev/ttyACM0"，波特率为1000000.
+roslaunch mycobot_280arduino teleop_keyboard.launch port:=/dev/ttyACM0 baud:=1000000
 ```
 
 运行效果如下：
@@ -214,7 +214,7 @@ SUMMARY
 ========
 
 PARAMETERS
- * /mycobot_services/baud: 115200
+ * /mycobot_services/baud: 1000000
  * /mycobot_services/port: /dev/ttyUSB0
  * /robot_description: <?xml version="1....
  * /rosdistro: kinetic
@@ -239,7 +239,7 @@ process[rviz-3]: started with pid [1367]
 process[mycobot_services-4]: started with pid [1380]
 process[real_listener-5]: started with pid [1395]
 [INFO] [1620882819.196217]: start ...
-[INFO] [1620882819.205050]: /dev/ttyUSB0,115200
+[INFO] [1620882819.205050]: /dev/ttyUSB0,1000000
 
 MyCobot Status
 --------------------------------

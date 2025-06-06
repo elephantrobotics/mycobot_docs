@@ -85,7 +85,7 @@ width ="500"  align = "center">
 打开一个命令行，运行：
   
 ```bash
-# mycobot 280-Arduino版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
+# mycobot 280-Arduino版本默认串口名为"/dev/ttyUSB0"，波特率为1000000.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
 ros2 launch mycobot_280_arduino slider_control.launch.py
 ```
 
@@ -104,7 +104,7 @@ width ="500"  align = "center">
 除了上面的控制，我们也可以**让模型跟随真实的机械臂运动**。打开一个命令行运行：
 
 ```bash
-# mycobot 280-Arduino版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
+# mycobot 280-Arduino版本默认串口名为"/dev/ttyUSB0"，波特率为1000000.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
 ros2 launch mycobot_280_arduino mycobot_follow.launch.py 
 ```
 
@@ -117,7 +117,7 @@ ros2 launch mycobot_280_arduino mycobot_follow.launch.py
 打开命令行：
 
 ```bash
-# mycobot 280-Arduino版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
+# mycobot 280-Arduino版本默认串口名为"/dev/ttyUSB0"，波特率为1000000.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
 ros2 launch mycobot_280_arduino simple_gui.launch.py
 ```
 
@@ -131,7 +131,7 @@ width ="500"  align = "center">
 打开一个命令行，运行：
   
 ```bash
-# mycobot 280-arduino版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
+# mycobot 280-arduino版本默认串口名为"/dev/ttyUSB0"，波特率为1000000.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
 ros2 launch mycobot_280_arduino teleop_keyboard.launch.py 
 ```
 
@@ -164,7 +164,7 @@ width ="500"  align = "center">
 [rviz2-2] [INFO] [1737443677.010780016] [rviz2]: OpenGl version: 3.1 (GLSL 1.4)
 [rviz2-2] [INFO] [1737443677.134247803] [rviz2]: Stereo is NOT SUPPORTED
 [rviz2-2] Parsing robot urdf xml string.
-[listen_real-3] [INFO] [1737443677.525803631] [listen_real]: port:/dev/ttyUSB0, baud:115200
+[listen_real-3] [INFO] [1737443677.525803631] [listen_real]: port:/dev/ttyUSB0, baud:1000000
 
 ```
 

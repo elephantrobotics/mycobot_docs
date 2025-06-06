@@ -57,6 +57,6 @@ If you need to let the real robot arm execute the plan synchronously, you need t
 - mycobot 280-Arduino version:
 
 ```bash
-# The default serial port name of mycobot 280-Arduino version is "/dev/ttyACM0" and the baud rate is 115200.
-rosrun mycobot_280arduino_moveit sync_play.py _port:=/dev/ttyACM0 _baud:=115200
+# The default serial port name of mycobot 280-Arduino version is "/dev/ttyACM0" and the baud rate is 1000000.
+rosrun mycobot_280arduino_moveit sync_play.py _port:=/dev/ttyACM0 _baud:=1000000
 ```

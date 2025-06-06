@@ -110,7 +110,7 @@ Then enter the user password (**Note:** The password is not displayed, just ente
 Open a command line and run:
 
 ```bash
-# The default serial port name of mycobot 280-Arduino version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
+# The default serial port name of mycobot 280-Arduino version is "/dev/ttyUSB0" and the baud rate is 1000000. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
 ros2 launch mycobot_280_arduino slider_control.launch.py
 ```
 
@@ -129,7 +129,7 @@ Then you can **control the movement of the model in rviz by dragging the slider*
 In addition to the above control, we can also **let the model follow the movement of the real robot arm**. Open a command line and run:
 
 ```bash
-# The default serial port name of mycobot 280-Arduino version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
+# The default serial port name of mycobot 280-Arduino version is "/dev/ttyUSB0" and the baud rate is 1000000. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
 ros2 launch mycobot_280_arduino mycobot_follow.launch.py ​​
 ```
 
@@ -142,7 +142,7 @@ Based on the previous, this package also **provides a simple Gui control interfa
 Open the command line:
 
 ```bash
-# The default serial port name of mycobot 280-Arduino version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
+# The default serial port name of mycobot 280-Arduino version is "/dev/ttyUSB0" and the baud rate is 1000000. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
 ros2 launch mycobot_280_arduino simple_gui.launch.py
 ```
 
@@ -156,7 +156,7 @@ width ="500" align = "center">
 Open a command line and run:
 
 ```bash
-# The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
+# The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 1000000. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
 ros2 launch mycobot_280_arduino teleop_keyboard.launch.py
 ```
 
@@ -190,7 +190,7 @@ width ="500" align = "center">
 [rviz2-2] [INFO] [1737443677.010780016] [rviz2]: OpenGl version: 3.1 (GLSL 1.4)
 [rviz2-2] [INFO] [1737443677.134247803] [rviz2]: Stereo is NOT SUPPORTED
 [rviz2-2] Parsing robot urdf xml string.
-[listen_real-3] [INFO] [1737443677.525803631] [listen_real]: port:/dev/ttyUSB0, baud:115200
+[listen_real-3] [INFO] [1737443677.525803631] [listen_real]: port:/dev/ttyUSB0, baud:1000000
 ```
 
 Then run the command:

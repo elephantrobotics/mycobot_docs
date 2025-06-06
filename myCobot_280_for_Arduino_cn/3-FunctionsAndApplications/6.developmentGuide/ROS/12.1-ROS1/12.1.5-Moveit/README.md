@@ -55,6 +55,6 @@ width ="500"  align = "center">
 - mycobot 280-Arduino版本：
 
 ```bash
-# mycobot 280-Arduino版本默认串口名为"/dev/ttyACM0"，波特率为115200.
-rosrun mycobot_280arduino_moveit sync_play.py _port:=/dev/ttyACM0 _baud:=115200
+# mycobot 280-Arduino版本默认串口名为"/dev/ttyACM0"，波特率为1000000.
+rosrun mycobot_280arduino_moveit sync_play.py _port:=/dev/ttyACM0 _baud:=1000000
 ```

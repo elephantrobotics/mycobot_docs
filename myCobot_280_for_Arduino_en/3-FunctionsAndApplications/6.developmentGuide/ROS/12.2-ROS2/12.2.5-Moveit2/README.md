@@ -66,7 +66,7 @@ width ="500"  align = "center">
 If you need to let the real robot arm execute the plan synchronously, you need to open another command line and run:
   
 ```bash
-# The default serial port name of mycobot 280-Arduino version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
+# The default serial port name of mycobot 280-Arduino version is "/dev/ttyUSB0" and the baud rate is 1000000. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
 ros2 run mycobot_280_moveit2_control sync_plan_arduino
 ```
 
