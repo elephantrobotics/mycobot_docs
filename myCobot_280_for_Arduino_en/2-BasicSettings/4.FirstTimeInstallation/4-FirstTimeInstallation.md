@@ -159,7 +159,7 @@ Click this computer --> Right-click to manage --> Click Device Manager --> Click
 Calibration zero position example
 
 ```python
-from pymycobot.mycobot import MyCobot
+from pymycobot import MyCobot280
 
 from pymycobot import PI_PORT, PI_BAUD # When using the Raspberry Pi version of mycobot, you can reference these two variables to initialize MyCobot. If not, you can leave this line of code blank
 import time
@@ -184,7 +184,7 @@ import time
 #
 # Initialize a MyCobot object
 # The following is the object code for the windows version
-mc = MyCobot("COM6", 1000000)
+mc = MyCobot280("COM6", 1000000)
 # Power off the robot and relax the joints
 time.sleep(2)
 mc.release_all_servos()

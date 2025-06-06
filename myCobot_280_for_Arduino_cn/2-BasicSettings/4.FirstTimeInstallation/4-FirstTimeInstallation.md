@@ -160,7 +160,7 @@ poster="" data-setup='{"aspectRatio":"16:9"}'>
 校准零位案例
 
 ```python
-from pymycobot.mycobot import MyCobot
+from pymycobotimport MyCobot280
 
 from pymycobot import PI_PORT, PI_BAUD  # 当使用树莓派版本的mycobot时，可以引用这两个变量进行MyCobot初始化，如不是可不填该行代码
 import time
@@ -176,15 +176,15 @@ import time
 #   以下为如:
 #       mycobot-M5:
 #           linux:
-#              mc = MyCobot("/dev/ttyUSB0", 115200)
+#              mc = MyCobot280("/dev/ttyUSB0", 115200)
 #           windows:
-#              mc = MyCobot("COM6", 115200)
+#              mc = MyCobot280("COM6", 115200)
 #       mycobot-raspi:
-#           mc = MyCobot(PI_PORT, PI_BAUD)
+#           mc = MyCobot280(PI_PORT, PI_BAUD)
 #
 # 初始化一个MyCobot对象
 # 下面为 windows版本创建对象代码
-mc = MyCobot("COM6", 115200)
+mc = MyCobot280("COM6", 1000000)
 
 # 机械臂断电，放松关节
 time.sleep(2)
