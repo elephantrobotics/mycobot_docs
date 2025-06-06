@@ -4,7 +4,7 @@ TCP/IP transmission protocol, namely transmission control/network protocol, is a
 
 ## myCobot
 
-**Before using the robot arm, please make sure that the Basic firmware and Atom firmware have been burned. **
+**Before using the robot arm, please make sure that the Basic firmware and Atom firmware have been burned.**
 
 ### 1 Connection steps
 

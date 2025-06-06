@@ -17,7 +17,7 @@ For serial multi-joint robots, the control of joint space is to control the vari
 
 - `degree`: Represents the angle of the joint
 
-- `speed`: Represents the speed of the robot arm movement, ranging from 0 to 100
+- `speed`: Represents the speed of the robot arm movement, ranging from 1 to 100
 
 - **Return value:** 1
 
@@ -45,7 +45,7 @@ For serial multi-joint robots, the control of joint space is to control the vari
 - **Function:** Send all angles to all joints of the robot arm
 - **Parameter description:**
 - `degrees`: `(List[float])` contains the angles of all joints. the representation  is: `[20,20,20,20,20,20]`
-- `speed`: Indicates the speed of the robot arm, the value range is 0-100
+- `speed`: Indicates the speed of the robot arm, the value range is 1-100
 - **Return value:** 1
 
 **set_encoders(encoders, sp)**
@@ -53,7 +53,7 @@ For serial multi-joint robots, the control of joint space is to control the vari
 - **Function:** Send potential values ​​to all joints of the robot arm
 - **Parameter description:**
 - `encoder`: Indicates the potential value of the robot arm, the value range is 0 ~ 4096, the length is 6, representation method is: `[2048,2048,2048,2048,2048,2048]`
-- `sp`: Indicates the speed of the robot arm, the value range is 0-100
+- `sp`: Indicates the speed of the robot arm, the value range is 1-100
 - **Return value:** 1
 
 **sync_send_angles(degrees, speed, timeout=15)**
@@ -61,7 +61,7 @@ For serial multi-joint robots, the control of joint space is to control the vari
 - **Function:** Synchronously send angles and return when reaching the target point
 - **Parameter description:**
 - `degrees`: List of angle values ​​of each joint `List[float]`
-- `speed`: (`int`) The speed of the robot arm, the value range is 0-100
+- `speed`: (`int`) The speed of the robot arm, the value range is 1-100
 - `timeout`: The default time is 15s
 - **Return value:** 1
 

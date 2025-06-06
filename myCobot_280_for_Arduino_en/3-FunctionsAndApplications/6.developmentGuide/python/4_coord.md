@@ -17,7 +17,7 @@ It is mainly used to realize intelligent route planning to let the robot arm mov
 
 - `coord`: Enter the coordinate value you want to reach
 
-- `speed`: Indicates the speed of the robot movement, the range is 0-100
+- `speed`: Indicates the speed of the robot movement, the range is 1-100
 - **Return value:** 1
 
 ### Multi-parameter coordinates
@@ -33,7 +33,7 @@ It is mainly used to realize intelligent route planning to let the robot arm mov
 - **Parameter description:**
 - `coords`: [x,y,z,rx,ry,rz] coordinate value, length is 6
 
-- `speed`: Indicates the speed of the robot movement, the range is 0-100
+- `speed`: Indicates the speed of the robot movement, the range is 1-100
 - `mode`: ( `int`): The value is limited to 0 and 1.
 - 0 means that the path of the robot head is nonlinear, that is, the route is randomly planned, as long as the robot head moves to the specified point while maintaining the specified posture.
 - 1 means that the path of the robot head is linear, that is, the intelligent planning route allows the robot head to move to the specified point in a straight line.
