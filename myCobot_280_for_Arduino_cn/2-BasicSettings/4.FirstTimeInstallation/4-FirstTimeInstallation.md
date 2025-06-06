@@ -160,7 +160,7 @@ poster="" data-setup='{"aspectRatio":"16:9"}'>
 校准零位案例
 
 ```python
-from pymycobotimport MyCobot280
+from pymycobot import MyCobot280
 
 from pymycobot import PI_PORT, PI_BAUD  # 当使用树莓派版本的mycobot时，可以引用这两个变量进行MyCobot初始化，如不是可不填该行代码
 import time
