@@ -22,11 +22,11 @@ You can use the game controller to control the movement of the machine and use t
 - **11**: RZ coordinate value decreases
 - **12**: RZ Coordinate value increases
 - **13**: Wake up the handle. If the handle is not used for a long time after connection, it will enter sleep mode. You need to press this button to continue using it.
-- **14**: Detect the machine connection status. The atom LED flashes green three times to indicate that the machine is normal, and flashes red three times to indicate abnormal status.
-- **X**: Gripper cumulatively opens
-- **Y**: Gripper cumulatively closes
-- **X**: Turn on the suction pump
-- **X**: Turn off the suction pump
+<!-- - **14**: Detect the machine connection status. The atom LED flashes green three times to indicate that the machine is normal, and flashes red three times to indicate abnormal status. -->
+- **X**: Click the button to open the jaws
+- **Y**: Click the button to close the jaws
+- **A**: Click the button to turn on the suction pump
+- **B**: Click the button to turn off the suction pump
 - **Left 1**: Press and hold for 2s to initialize the robot to the joint zero position state.
 - **Left 2**: Press and hold for 2s, the robot stops torque output and relaxes all joints.
 - **Right 1**: Press and hold for 2s to initialize the robot to the initial point of movement.
@@ -59,9 +59,22 @@ import pygame
 import time
 from pymycobot import MyCobot280
 import threading
-# Change com7 to the actual port number detected by your computer
-
+# Change com7 to the actual port number detected by your computer, and modify the suction pump control logic
 mc = MyCobot280("com7", 1000000)
+
+# start pump
+def pump_on():
+    arm.set_digital_output(33, 0)
+    time.sleep(0.05)
+
+# stop pump
+def pump_off():
+    arm.set_digital_output(33, 1)
+    time.sleep(0.05)
+    arm.set_digital_output(23, 0)
+    time.sleep(1)
+    arm.set_digital_output(23, 1)
+    time.sleep(0.05)
 ...
 ```
 Run the program.
@@ -70,4 +83,4 @@ Run the program.
 python3 myCobot280_handle_control.py
 ```
 
-> Note: After running the program, first click the **14** button to check the machine connection status. If the machine connection status is normal (if it is abnormal, other operations will not be possible. Please solve the abnormal connection problem first), then click the **Right 1** button. After the machine reaches the initial point, other operations can be performed.
+> Note: After running the program, first click the **Right 1** button. After the machine reaches the initial point, other operations can be performed.
