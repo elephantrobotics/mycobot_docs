@@ -663,7 +663,7 @@ mc.send_angle(1, 40, 20)
 
   - `flag (int) `: 0 - open 1 - close, 254 - release
 
-  - `speed (int)`: 1 ~ 100
+  - `speed (int)`: 0 ~ 100
 
   - `_type_1 (int)`:
 
@@ -685,7 +685,7 @@ mc.send_angle(1, 40, 20)
 
   - `gripper_value (int) `: 0 ~ 100
 
-  - `speed (int)`: 1 ~ 100
+  - `speed (int)`: 0 ~ 100
 
   - `gripper_type (int)`:
 
@@ -765,6 +765,12 @@ mc.send_angle(1, 40, 20)
 - **function**: Initialize gripper
 - **Return value**: 
   - `1`: complete
+
+#### 10.12 `gripper_stop()`
+
+- **Function**: Stop gripper movement
+- **Return value**:
+  - `1`: Completed
 
 ### 11. Set bottom IO input/output status
 

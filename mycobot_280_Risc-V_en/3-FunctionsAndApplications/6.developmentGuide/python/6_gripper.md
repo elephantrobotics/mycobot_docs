@@ -43,10 +43,10 @@ Before using Python to control the gripper, you need to install and connect the 
 
 **`set_gripper_state(flag, speed, _type=None)`**
 
-- **Function: ** Let the gripper enter the specified state at the specified speed
+- **Function:** Let the gripper enter the specified state at the specified speed
 - **Parameter description:**
   - `flag`: 1 indicates the gripper is closed, 0 indicates the gripper is open.
-  - `speed`: indicates how fast the specified state is reached, the value range is 1~100
+  - `speed`: indicates how fast the specified state is reached, the value range is 0~100
   - `_type`: Gripper type, the default is adaptive gripper
     - `1`: Adaptive gripper
     - `2`: Five-finger dexterous hand

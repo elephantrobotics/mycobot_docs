@@ -658,7 +658,7 @@ mc.send_angle(1, 40, 20)
 
   - `flag (int) `: 0 - 打开 1 - 关闭, 254 - 释放
 
-  - `speed (int)`: 1 ~ 100
+  - `speed (int)`: 0 ~ 100
 
   - `_type_1 (int)`:
 
@@ -680,7 +680,7 @@ mc.send_angle(1, 40, 20)
 
   - `gripper_value (int) `: 0 ~ 100
 
-  - `speed (int)`: 1 ~ 100
+  - `speed (int)`: 0 ~ 100
 
   - `gripper_type (int)`:
 
@@ -759,6 +759,12 @@ mc.send_angle(1, 40, 20)
 
 - **功能**: 初始化夹爪
 - **返回值**: 
+  - `1`: 完成
+
+#### 10.12 `gripper_stop()`
+
+- **功能**: 停止夹爪运动
+- **返回值**：
   - `1`: 完成
 
 ### 11. 设置底部IO输入/输出状态

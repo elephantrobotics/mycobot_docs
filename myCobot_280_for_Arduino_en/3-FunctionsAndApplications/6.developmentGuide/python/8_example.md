@@ -316,11 +316,11 @@ def gripper_test(mc):
     mc.set_encoder(7, 1300, 20)
     time.sleep(3)
 
-    # Let the gripper reach the state of 2048 at a speed of 70. 2048 will report an error, so change it to 255
-    mc.set_gripper_value(255, 70)
+    # Set the state of the gripper to open the claw quickly at a speed of 70
+    mc.set_gripper_value(100, 70)
     time.sleep(3)
-    # Let the gripper reach the state of 1500 at a speed of 70. 1500 will report an error, so change it to 255
-    mc.set_gripper_value(255, 70)
+    # Set the state of the gripper to close the claw quickly at a speed of 70
+    mc.set_gripper_value(0, 70)
     time.sleep(3)
 
     num=5

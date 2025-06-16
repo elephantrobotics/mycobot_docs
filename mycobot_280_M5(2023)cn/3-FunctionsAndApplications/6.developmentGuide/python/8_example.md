@@ -357,11 +357,11 @@ def gripper_test(mc):
     mc.set_encoder(7, 1300, 20)
     time.sleep(3)
 
-    # 以70的速度让夹爪到达2048状态,2048会报错,故改成255
-    mc.set_gripper_value(255, 70)
+    # 以70的速度让夹爪到达100状态
+    mc.set_gripper_value(100, 70)
     time.sleep(3)
-    # 以70的速度让夹爪到达1500状态,1500会报错,故改成255
-    mc.set_gripper_value(255, 70)
+    # 以70的速度让夹爪到达0状态
+    mc.set_gripper_value(0, 70)
     time.sleep(3)
    
     num=5

@@ -24,7 +24,7 @@ Before using Python to control the gripper, you need to install and connect the 
 - **Function:** Let the gripper rotate to the specified position at the specified speed
 - **Parameter description:**
   - `value`: indicates the position the gripper is going to reach, with a range of 0~100
-  - `speed`: indicates the speed of rotation, with a range of 1~100
+  - `speed`: indicates the speed of rotation, with a range of 0~100
   - `gripper_type`: gripper type, the default is adaptive gripper
     - `1`: adaptive gripper
     - `3`: parallel gripper
