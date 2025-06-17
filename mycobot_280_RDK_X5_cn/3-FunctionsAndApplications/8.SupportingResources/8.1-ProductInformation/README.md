@@ -6,9 +6,8 @@
 ### 下载链接
 你可以通过以下链接下载所有相关的产品资料：[产品资料下载](https://www.elephantrobotics.com/support/)
 
-| 操作系统   | 下载链接 |
-|------------|----------|
-| ubuntu 22.04 | [下载链接](http://192.168.1.20/18-OS-img/myCobot%20280%20RDK%20X5/myCobot280_RDK_X5_20250319.zip) |
+| 操作系统   | 下载链接 |  SHA 256哈希  |
+|------------|----------|--------------|
+| ubuntu 22.04 | [点击下载](https://download.elephantrobotics.com/system_images/myCobot_280_RDK_X5/myCobot280_RDK_X5_v1.0.0_20250509.zip) | 6521d513b7754015351108ea70eb80120c0da40634ac63a91ed151978d07ace1  |
 
 ---
-
