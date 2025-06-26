@@ -31,7 +31,7 @@ In this section, we only give a rough introduction. If you want to know more det
 
 ## mycobot_ros2 installation and update
 
-- **M5 version: ** Please check the end of the [12.2.1 ROS2 installation](../12.2.1-ROS2 installation.md) section.
+- **M5 version:** Please check the end of the [12.2.1 ROS2 installation](../12.2.1-ROS2 installation.md) section.
 
 ## Simple use
 
@@ -92,8 +92,6 @@ Then enter the user password (**Note:** The password is not displayed, just ente
 
 ## Robot arm control
 
->>**Note:** For better motion effects, the Atom firmware version of the end arm is 6.5, and the python driver library pymycobot version is 3.5.3
-
 ### Slider control
 
 Open a command line and run:
@@ -102,7 +100,7 @@ Open a command line and run:
 
 ```bash
 # The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-ros2 launch mycobot_280 slider_control.launch.py
+ros2 launch mycobot_280 slider_control.launch.py port:=/dev/ttyUSB0 baud:=115200
 ```
 
 It will **open rviz and a slider component**, and you will see the following screen (the screen of the Raspberry Pi version is slightly different, which does not affect the use):
@@ -130,7 +128,7 @@ Open a command line and run:
 
 ```bash
 # The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, the serial port name can be changed to "/dev/ttyACM0".
-ros2 launch mycobot_280 slider_control_pump.launch.py
+ros2 launch mycobot_280 slider_control_pump.launch.py port:=/dev/ttyUSB0 baud:=115200
 ```
 
 It will **open rviz and a slider component**, and you will see the following screen (the screen of the Raspberry Pi version is slightly different, which does not affect the use):
@@ -154,7 +152,7 @@ Open the command line:
 
 ```bash
 # The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-ros2 launch mycobot_280 simple_gui.launch.py
+ros2 launch mycobot_280 simple_gui.launch.py port:=/dev/ttyUSB0 baud:=115200
 ```
 
 <img src =../.../../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS2/rviz2/rviz2-280/gui-1.png
@@ -170,7 +168,7 @@ Open a command line and run:
 
 ```bash
 # The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-ros2 launch mycobot_280 teleop_keyboard.launch.py
+ros2 launch mycobot_280 teleop_keyboard.launch.py port:=/dev/ttyUSB0 baud:=115200
 ```
 
 Then run the command:
@@ -277,7 +275,7 @@ Open a command line and run:
 
 ```bash
 # mycobot The default serial port name of the 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-ros2 launch mycobot_280 slider_control_pump.launch.py
+ros2 launch mycobot_280 slider_control_pump.launch.py port:=/dev/ttyUSB0 baud:=115200
 ```
 
 It will open rviz and a slider component, you will see the following screen (the Raspberry Pi version screen is slightly different, which does not affect the use):
@@ -300,7 +298,7 @@ Open the command line:
 
 ```bash
 # The default serial port name of mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0". If the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-ros2 launch mycobot_280 simple_gui_pump.launch.py
+ros2 launch mycobot_280 simple_gui_pump.launch.py port:=/dev/ttyUSB0 baud:=115200
 ```
 
 It will **open rviz and a GUI interface**, and you will see the following screen:
@@ -335,14 +333,7 @@ Open a command line and run:
 
 ```bash
 # The default serial port name of the mycobot 280-M5 version is "/dev/ttyUSB0" and the baud rate is 115200. The serial port name of some models is "dev/ttyACM0", if the default serial port name is wrong, you can change the serial port name to "/dev/ttyACM0".
-ros2 launch mycobot_280 slider_control_camera_flange.launch.py
-```
-
-Then run the command:
-
-```bash
-# The default serial port name of mycobot 280-PI version is "/dev/ttyAMA0" and the baud rate is 1000000.
-ros2 launch mycobot_280pi slider_control_camera_flange.launch.py
+ros2 launch mycobot_280 slider_control_camera_flange.launch.py port:=/dev/ttyUSB0 baud:=115200
 ```
 
 It will **open rviz and a slider component**, and you will see the following screen (the screen of the Raspberry Pi version is slightly different, which does not affect the use):

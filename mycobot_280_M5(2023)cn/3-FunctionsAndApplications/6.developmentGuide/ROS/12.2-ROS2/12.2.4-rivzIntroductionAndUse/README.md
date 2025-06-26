@@ -92,8 +92,6 @@ sudo chmod 777 /dev/ttyACM0 # 新版本 myCobot280 M5
 
 ## 机械臂的控制
 
->>**注意：** 为了更好的运动效果，端臂的Atom固件版本为6.5，python驱动库pymycobot版本为3.5.3
-
 ### 滑块控制
 
 打开一个命令行，运行：
@@ -102,7 +100,7 @@ sudo chmod 777 /dev/ttyACM0 # 新版本 myCobot280 M5
   
 ```bash
 # mycobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
-ros2 launch mycobot_280 slider_control.launch.py
+ros2 launch mycobot_280 slider_control.launch.py port:=/dev/ttyUSB0 baud:=115200
 ```
 
 它将**打开 rviz 和一个滑块组件**，你将看到如下画面（树莓派版本画面略有差异，不影响使用）：
@@ -123,7 +121,7 @@ width ="500"  align = "center">
 
 ```bash
 # mycobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
-ros2 launch mycobot_280 mycobot_follow.launch.py 
+ros2 launch mycobot_280 mycobot_follow.launch.py port:=/dev/ttyUSB0 baud:=115200
 ```
 
 它将**打开 rviz 展示模型跟随效果**。
@@ -140,7 +138,7 @@ ros2 launch mycobot_280 mycobot_follow.launch.py
   
 ```bash
 # mycobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
-ros2 launch mycobot_280 simple_gui.launch.py
+ros2 launch mycobot_280 simple_gui.launch.py port:=/dev/ttyUSB0 baud:=115200
 ```
 
 
@@ -158,7 +156,7 @@ width ="500"  align = "center">
   
 ```bash
 # mycobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
-ros2 launch mycobot_280 teleop_keyboard.launch.py 
+ros2 launch mycobot_280 teleop_keyboard.launch.py port:=/dev/ttyUSB0 baud:=115200
 ```
 
 运行效果如下：
@@ -266,7 +264,7 @@ width ="500"  align = "center">
   
 ```bash
 # mycobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
-ros2 launch mycobot_280 slider_control_pump.launch.py
+ros2 launch mycobot_280 slider_control_pump.launch.py port:=/dev/ttyUSB0 baud:=115200
 ```
 
 它将**打开 rviz 和一个滑块组件**，你将看到如下画面（树莓派版本画面略有差异，不影响使用）：
@@ -289,7 +287,7 @@ width ="500"  align = "center">
   
 ```bash
 # mycobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
-ros2 launch mycobot_280 simple_gui_pump.launch.py
+ros2 launch mycobot_280 simple_gui_pump.launch.py port:=/dev/ttyUSB0 baud:=115200
 ```
 
 它将**打开rviz和一个GUI界面**，你将看到如下画面：
@@ -324,14 +322,7 @@ width ="500"  align = "center">
   
 ```bash
 # mycobot 280-M5版本默认串口名为"/dev/ttyUSB0"，波特率为115200.部分机型的串口名为 "dev/ttyACM0",若默认串口名发生错误，可将串口名改为"/dev/ttyACM0".
-ros2 launch mycobot_280 slider_control_camera_flange.launch.py
-```
-
-然后运行命令：
-
-```bash
-# mycobot 280-PI版本默认串口名为"/dev/ttyAMA0"，波特率为1000000.
-ros2 launch mycobot_280pi slider_control_camera_flange.launch.py
+ros2 launch mycobot_280 slider_control_camera_flange.launch.py port:=/dev/ttyUSB0 baud:=115200
 ```
 
 它将**打开 rviz 和一个滑块组件**，你将看到如下画面（树莓派版本画面略有差异，不影响使用）：
