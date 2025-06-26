@@ -8,7 +8,9 @@ Bianbu OS 的所有开发环境和软件使用指南均完全适用于 Bianbu Ro
 
 为了简化开发流程，我们提供了预先编译好的固件，用户可以直接下载并使用：
 
-**[Bianbu Robot 预编译固件下载](https://archive.spacemit.com/ros2/bianbu-robot-2.1.zip)**
+<!-- **[Bianbu Robot 预编译固件下载](https://archive.spacemit.com/ros2/bianbu-robot-2.1.zip)** -->
+
+**[Bianbu Robot 系统镜像下载](https://download.elephantrobotics.com/Product_software/iMage-ISO/myCobot-280RISCV/myCobot_280_RISCV_V1.0.0_250625.zip)**
 
 > 用户名：er
 > 密码：Elephant

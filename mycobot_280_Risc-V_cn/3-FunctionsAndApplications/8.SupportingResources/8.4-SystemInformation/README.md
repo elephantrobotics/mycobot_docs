@@ -1,6 +1,9 @@
 # 系统资料
-系统资料提供了280 RISCV机械臂的系统架构和工作原理说明，涵盖硬件和软件的协同工作方式。此部分有助于用户在集成和调试过程中，快速定位和解决问题，确保系统稳定运行
-(资料有待更新)
+
+系统资料提供了280 RISCV 机械臂的系统镜像。
+
+| 操作系统   | 下载链接 |  SHA 256哈希  |
+|------------|----------|--------------|
+| Bianbu OS | [点击下载](https://download.elephantrobotics.com/Product_software/iMage-ISO/myCobot-280RISCV/myCobot_280_RISCV_V1.0.0_250625.zip) | 280028C7B35C7A5B01A8DB620ECB61B0A72B3F194F8FBC728221E8CDDB38211B  |
 
 ---
-
