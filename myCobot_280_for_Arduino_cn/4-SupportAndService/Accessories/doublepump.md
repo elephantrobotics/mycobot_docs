@@ -88,7 +88,7 @@ from pymycobot import MyCobot280
 import time
 
 # 初始化一个MyCobot280对象 
-arm = MyCobot280('COM3', 1000000)
+arm = MyCobot280('COM3', 115200) # 波特率默认是115200，部分板子是1000000，请根据实际进行修改
 
 # 开启吸泵
 def pump_on():

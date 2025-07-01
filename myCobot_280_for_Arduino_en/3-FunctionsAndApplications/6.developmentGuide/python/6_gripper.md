@@ -136,18 +136,18 @@ if __name__ == "__main__":
         # linux: "/dev/ttyUSB0"
         # windows: "COM3"
         # The second is the baud rate:
-        # Arduino version: 1000000
+        # Arduino version: 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 
     # Example:
         # mycobot-Arduino:
             # linux:
-            # mc = MyCobot280("/dev/ttyAMA0", 1000000)
+            # mc = MyCobot280("/dev/ttyUSB0", 115200)
             # windows:
-            # mc = MyCobot280("COM3", 1000000)
+            # mc = MyCobot280("COM3", 115200)
 
 # Initialize a MyCobot280 object
 # Below is the object code for Arduino version
-mc = MyCobot280('COM3', 1000000)
+mc = MyCobot280('COM3', 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 time.sleep(2)
 # Move it to zero
 mc.set_encoders([2048, 2048, 2048, 2048, 2048, 2048], 20)

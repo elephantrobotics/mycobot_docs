@@ -10,7 +10,7 @@ API (Application Programming Interface), also known as Application Programming I
 # Example
 from pymycobot import MyCobot280
 
-mc = MyCobot280('COM3', 1000000)
+mc = MyCobot280('COM3', 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 time.sleep(2)
 # Gets the current angle of all joints
 angles = mc.get_angles()

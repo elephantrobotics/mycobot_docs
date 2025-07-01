@@ -16,17 +16,17 @@ import time
         # linux: "/dev/ttyUSB0"
         # windows: "COM3"
         # The second is the baud rate:
-        # Arduino version: 1000000
+        # Arduino version: 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
     # The following is such as:
         # mycobot-Arduino:
             # linux:
-            # mc = MyCobot280("/dev/ttyUSB0", 1000000)
+            # mc = MyCobot280("/dev/ttyUSB0", 115200)
             # windows:
-            # mc = MyCobot280("COM3", 1000000)
+            # mc = MyCobot280("COM3", 115200)
 
 # Initialize a MyCobot280 object
 # The following is the object code for the Windows version
-mc = MyCobot280("COM3", 1000000)
+mc = MyCobot280("COM3", 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 time.sleep(2)
 
 i = 7
@@ -50,18 +50,18 @@ from pymycobot import MyCobot280
         # linux: "/dev/ttyUSB0"
         # windows: "COM3"
         # The second is the baud rate:
-        # Arduino version: 1000000
+        # Arduino version: 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
     # The following is such as:
         # mycobot-Arduino:
             # linux:
-            # mc = MyCobot280("/dev/ttyUSB0", 1000000)
+            # mc = MyCobot280("/dev/ttyUSB0", 115200)
             # windows:
-            # mc = MyCobot280("COM3", 1000000)
+            # mc = MyCobot280("COM3", 115200)
 
 
 # Initialize a MyCobot280 object
 # The following is the object code for Arduino version
-mc = MyCobot280("COM3", 1000000)
+mc = MyCobot280("COM3", 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 time.sleep(2)
 
 # Check if the robot can be programmed
@@ -98,16 +98,16 @@ import time
         # linux: "/dev/ttyUSB0"
         # windows: "COM3"
         # The second is the baud rate:
-        # Arduino version: 1000000
+        # Arduino version: 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
     # The following is such as:
         # mycobot-Arduino:
             # linux:
-            # mc = MyCobot280("/dev/ttyUSB0", 1000000)
+            # mc = MyCobot280("/dev/ttyUSB0", 115200)
             # windows:
-            # mc = MyCobot280("COM3", 1000000)
+            # mc = MyCobot280("COM3", 115200)
 
 # Create object code for Arduino version
-mc=MyCobot280('COM3',1000000)
+mc=MyCobot280('COM3',115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 time.sleep(2)
 
 # Robot arm recovery
@@ -147,18 +147,18 @@ from pymycobot import MyCobot280
 #       linux: "/dev/ttyUSB0"
 #       windows: "COM3"
 #   The second is the baud rate:
-#       Arduino version: 1000000
+#       Arduino version: 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 #
 #   Example:
 #       mycobot-Arduino:
 #           linux:
-#                mc = MyCobot280("/dev/ttyUSB0", 1000000)
+#                mc = MyCobot280("/dev/ttyUSB0", 115200)
 #           windows:
-#              mc = MyCobot280("COM3", 1000000)
+#              mc = MyCobot280("COM3", 115200)
 
 # Initialize a MyCobot280 object
 # 280-Arduino version object code
-mc=MyCobot280('COM3',1000000)
+mc=MyCobot280('COM3',115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 time.sleep(2)
 # Robot arm reset to zero
 mc.send_angles([0,0,0,0,0,0],50)
@@ -182,7 +182,7 @@ from pymycobot import MyCobot280
 import time
 
 # Arduino version
-mc = MyCobot280("COM3", 1000000)
+mc = MyCobot280("COM3", 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 time.sleep(2)
 # Get the coordinates of the current position
 angle_datas = mc.get_angles()
@@ -238,17 +238,17 @@ if __name__ == '__main__':
         # linux: "/dev/ttyUSB0"
         # windows: "COM3"
         # The second is the baud rate:
-        # Arduino version: 1000000
+        # Arduino version: 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
     # The following is such as:
         # mycobot-Arduino:
             # linux:
-            # mc = MyCobot280("/dev/ttyUSB0", 1000000)
+            # mc = MyCobot280("/dev/ttyUSB0", 115200)
             # windows:
-            # mc = MyCobot280("COM3", 1000000)
+            # mc = MyCobot280("COM3", 115200)
 
 # Initialize a MyCobot280 object
 # Arduino version
- mc = MyCobot280("COM3",1000000)
+ mc = MyCobot280("COM3",115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
  time.sleep(2)
 # Set the start time
 start = time.time()
@@ -344,18 +344,18 @@ if __name__ == "__main__":
 #       linux: "/dev/ttyUSB0"
 #windows: "COM3"
 #   The second is the baud rate:
-#       Arduino version is: 1000000
+#       Arduino version is: 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 #
 #   Example:
 #       mycobot-Arduino:
 #           linux:
-#              mc = MyCobot280("/dev/ttyUSB0", 1000000)
+#              mc = MyCobot280("/dev/ttyUSB0", 115200)
 #           windows:
-#              mc = MyCobot280("COM3", 1000000)
+#              mc = MyCobot280("COM3", 115200)
 
 # Initialize a MyCobot280 object
 # Arduino version
-mc = MyCobot280('COM3', 1000000)
+mc = MyCobot280('COM3', 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 time.sleep(2)
 # Move it to zero position
 
@@ -377,18 +377,18 @@ import time
 #       linux: "/dev/ttyUSB0"
 #       windows: "COM3"
 #   The second is the baud rate:
-#       Arduino version: 1000000
+#       Arduino version: 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 #
 #   Example:
 #       mycobot-Arduino:
 #           linux:
-#              mc = MyCobot280("/dev/ttyUSB0", 1000000)
+#              mc = MyCobot280("/dev/ttyUSB0", 115200)
 #           windows:
-#              mc = MyCobot280("COM3", 1000000)
+#              mc = MyCobot280("COM3", 115200)
 
 # Initialize a MyCobot280 object
 # The following is the object code for the Arduino version
-mc = MyCobot280('COM3',1000000)
+mc = MyCobot280('COM3',115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 time.sleep(2)
 # The position of the robot arm movement
 angles = [

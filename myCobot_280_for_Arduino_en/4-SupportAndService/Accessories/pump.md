@@ -92,7 +92,7 @@ from pymycobot import MyCobot280
 import time
 
 # Initialize a MyCobot280 object
-arm = MyCobot280('COM3', 1000000)
+arm = MyCobot280('COM3', 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 
 # Turn on the pump
 def pump_on():

@@ -223,7 +223,7 @@ import time
 
 # Initiate MyCobot280
 # Create object code here for windows version
-mc = MyCobot280("COM3", 115200)
+mc = MyCobot280("COM3", 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 time.sleep(2)
 
 i = 7

@@ -30,7 +30,7 @@
 ```python
 from pymycobot import MyCobot280,utils
 import time
-arm=MyCobot280(utils.get_port_list()[0], 1000000)
+arm=MyCobot280(utils.get_port_list()[0], 115200) # 波特率默认是115200，部分板子是1000000，请根据实际进行修改
 for i in range(2):
     arm.set_gripper_state(1,100)#夹爪夹紧
     time.sleep(1)
@@ -113,7 +113,7 @@ if "linux" in platform.platform().lower():
     GPIO.setup(21, GPIO.OUT)
 
 # Initialize MyCobot280 with serial port and baud rate
-mc = MyCobot280('com3', 1000000)
+mc = MyCobot280('com3', 115200) # 波特率默认是115200，部分板子是1000000，请根据实际进行修改
 
 init_angles = [0, 0, -90, 0, 0, 0]
 go_home = [0, 0, 0, 0, 0, 0]

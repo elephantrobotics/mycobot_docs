@@ -71,18 +71,18 @@ import time
         # linux: "/dev/ttyUSB0"
         # windows: "COM3"
         # The second is the baud rate:
-        # Arduino version: 1000000
+        # Arduino version: 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 
     # For example:
         # mycobot-Arduino:
             # linux:
-            # mc = MyCobot280("/dev/ttyUSB0", 1000000)
+            # mc = MyCobot280("/dev/ttyUSB0", 115200)
             # windows:
-            # mc = MyCobot280("COM3", 1000000)
+            # mc = MyCobot280("COM3", 115200)
 
 # Initialize a MyCobo280 object
 # The following is the object creation code for the windows version
-arm = MyCobot280('COM3', 1000000)
+arm = MyCobot280('COM3', 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 
 # Turn on the pump
 def pump_on():

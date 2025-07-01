@@ -25,7 +25,7 @@ Insert the robot arm control interface
 ```python
 from pymycobot import MyCobot280,utils
 import time
-arm=MyCobot280(utils.get_port_list()[0], 1000000)
+arm=MyCobot280(utils.get_port_list()[0], 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 time.sleep(1.5)
     for i in range(2):
     arm.set_gripper_state(1,100)#Gripper clamped
@@ -107,7 +107,7 @@ if "linux" in platform.platform().lower():
     GPIO.setup(21, GPIO.OUT)
 
 # Initialize MyCobot280 with serial port and baud rate
-mc = MyCobot280('com3', 1000000)
+mc = MyCobot280('com3', 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 
 init_angles = [0, 0, -90, 0, 0, 0]
 go_home = [0, 0, 0, 0, 0, 0]

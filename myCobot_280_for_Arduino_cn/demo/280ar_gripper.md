@@ -28,7 +28,7 @@
 from pymycobot import MyCobot280,utils
 import time
 
-arm=MyCobot280(utils.get_port_list()[0], 1000000)
+arm=MyCobot280(utils.get_port_list()[0], 115200) # 波特率默认是115200，部分板子是1000000，请根据实际进行修改
 time.sleep(2)
 for i in range(2):
     arm.set_gripper_state(1,100)
@@ -49,7 +49,7 @@ init_angles=[33.22, -15.55, -100.54, 25.48, 6.76, -13.35]#初始位置的6个关
 grab_point=[189.9, 12.1, 82.5, -178.15, 6.89, -43.47]#抓取点的坐标
 place_point=[189.9, 120.1, 88.5, -178.15, 6.89, -43.47]#放置点的坐标
 
-arm=MyCobot280(utils.get_port_list()[0], 1000000)
+arm=MyCobot280(utils.get_port_list()[0], 115200) # 波特率默认是115200，部分板子是1000000，请根据实际进行修改
 time.sleep(2)
 if __name__=="__main__":    
     arm.set_gripper_state(0,100)#夹爪先张开  

@@ -33,7 +33,7 @@ Run the following program, the pump will repeat the opening and closing action t
 from pymycobot import MyCobot280,utils
 import time
 
-arm = MyCobot280(utils.get_port_list()[0], 1000000)
+arm = MyCobot280(utils.get_port_list()[0], 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 time.sleep(2)
 # Turn on the pump
 def pump_on():
@@ -68,7 +68,7 @@ init_angles=[33.22, -15.55, -100.54, 25.48, 6.76, -13.35]#6 joint angles at the 
 grab_point=[189.9, 12.1, 54.5, -178.15, 6.89, -43.47]#Coordinates of the grab point
 place_point=[189.9, 120.1, 62.5, -178.15, 6.89, -43.47]# Coordinates of the placement point
 
-arm = MyCobot280(utils.get_port_list()[0], 1000000)
+arm = MyCobot280(utils.get_port_list()[0], 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 time.sleep(2)
 # Turn on the suction pump
 def pump_on():

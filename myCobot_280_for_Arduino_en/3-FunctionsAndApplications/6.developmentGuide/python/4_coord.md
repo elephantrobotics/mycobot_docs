@@ -100,17 +100,17 @@ import time
     # linux: "/dev/ttyUSB0"
     # windows: "COM3"
     # The second is the baud rate:
-    # Arduino version: 1000000
+    # Arduino version: 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
     # For example:
         # mycobot-Arduino:
             # linux:
-            # mc = MyCobot280("/dev/ttyUSB0", 1000000)
+            # mc = MyCobot280("/dev/ttyUSB0", 115200)
             # windows:
-            # mc = MyCobot280("COM3", 1000000)
+            # mc = MyCobot280("COM3", 115200)
 
 # Initialize a MyCobot280 object
 # The following is the object code for the Windows version
-mc = MyCobot280("COM3", 1000000)
+mc = MyCobot280("COM3", 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 # Get the current head coordinates and posture
 coords = mc.get_coords()
 print(coords)

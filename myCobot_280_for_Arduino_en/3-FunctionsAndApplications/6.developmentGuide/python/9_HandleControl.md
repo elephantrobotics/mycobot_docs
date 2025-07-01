@@ -60,7 +60,7 @@ import time
 from pymycobot import MyCobot280
 import threading
 # Change com7 to the actual port number detected by your computer, and modify the suction pump control logic
-mc = MyCobot280("com7", 1000000)
+mc = MyCobot280("com7", 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 
 # start pump
 def pump_on():

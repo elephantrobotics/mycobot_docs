@@ -181,7 +181,7 @@ width ="500"  align = "center">
 
 ## 4 键盘控制
 
-在 `mycobot_280` 的包中**添加了键盘控制的功能**，并在 rviz 中实时同步。本功能依赖 pythonApi，所以确保与真实机械臂连接。
+在 `mycobot_280pi` 的包中**添加了键盘控制的功能**，并在 rviz 中实时同步。本功能依赖 pythonApi，所以确保与真实机械臂连接。
 
 打开一个命令行，运行：
 
@@ -198,46 +198,49 @@ roslaunch mycobot_280pi teleop_keyboard.launch port:=/dev/ttyAMA0 baud:=1000000
 width ="500"  align = "center">
 
 命令行中将会输出 mycobot 信息，如下：
+
 ```bash
 SUMMARY
 ========
 
 PARAMETERS
- * /mycobot_services/baud: 115200
- * /mycobot_services/port: /dev/ttyUSB0
- * /robot_description: <?xml version="1....
- * /rosdistro: kinetic
- * /rosversion: 1.12.1.17
+    * /mycobot_services/baud: 1000000
+    * /mycobot_services/port: /dev/ttyAMA0
+    * /robot_description: <?xml version="1....
+    * /rosdistro: noetic
+    * /rosversion: 1.16.0
 
 NODES
   /
-    mycobot_services (mycobot_280/mycobot_services.py)
-    real_listener (mycobot_280/listen_real.py)
-    robot_state_publisher (robot_state_publisher/state_publisher)
+    mycobot_services (mycobot_communication/mycobot_topics.py)
+    real_listener (mycobot_280/listen_real_of_topic.py)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
     rviz (rviz/rviz)
 
 auto-starting new master
-process[master]: started with pid [1333]
+process[master]: started with pid [217714]
 ROS_MASTER_URI=http://localhost:11311
 
-setting /run_id to f977b3f4-b3a9-11eb-b0c8-d0c63728b379
-process[rosout-1]: started with pid [1349]
+setting /run_id to 01e863c8-5642-11f0-a2da-335dad9016e7
+process[rosout-1]: started with pid [217728]
 started core service [/rosout]
-process[robot_state_publisher-2]: started with pid [1357]
-process[rviz-3]: started with pid [1367]
-process[mycobot_services-4]: started with pid [1380]
-process[real_listener-5]: started with pid [1395]
-[INFO] [1620882819.196217]: start ...
-[INFO] [1620882819.205050]: /dev/ttyUSB0,115200
+process[robot_state_publisher-2]: started with pid [217731]
+process[rviz-3]: started with pid [217733]
+process[mycobot_services-4]: started with pid [217738]
+process[real_listener-5]: started with pid [217740]
+current pymycobot library version: 3.9.9
+pymycobot library version meets the requirements!
+ls: cannot access '/dev/ttyUSB*': No such file or directory
+[INFO] [1751350196.024298]: /dev/ttyAMA0,1000000
 
 MyCobot Status
 --------------------------------
 Joint Limit:
-    joint 1: -170 ~ +170
-    joint 2: -170 ~ +170
-    joint 3: -170 ~ +170
-    joint 4: -170 ~ +170
-    joint 5: -170 ~ +170
+    joint 1: -168 ~ +168
+    joint 2: -135 ~ +135
+    joint 3: -150 ~ +150
+    joint 4: -145 ~ +145
+    joint 5: -165 ~ +165
     joint 6: -180 ~ +180
 
 Connect Status: True
@@ -246,9 +249,7 @@ Servo Infomation: all connected
 
 Servo Temperature: unknown
 
-Atom Version: unknown
-
-[INFO] [1620882819.435778]: ready
+Atom Version: 7.2
 ```
 
 
@@ -257,7 +258,7 @@ Atom Version: unknown
 - mycobot 280-Pi版本：
 
 ```bash
-rosrun mycobot_280 teleop_keyboard.py
+rosrun mycobot_280pi teleop_keyboard.py
 #或者
 rosrun mycobot_280pi teleop_keyboard.py _speed:=70
 ```
@@ -265,29 +266,36 @@ rosrun mycobot_280pi teleop_keyboard.py _speed:=70
 
 你会在命令行中看到如下输出：
 ```bash
-Mycobot Teleop Keyboard Controller
----------------------------
-Movimg options(control coordinations [x,y,z,rx,ry,rz]):
-              w(x+)
+[INFO] [1751342043.889285]: Waiting to receive current coordinates...
+Mycobot Teleop Keyboard Controller (ROS1 - Topic Version)
+---------------------------------------------------------
+Movement (Cartesian):
+              w (x+)
+    a (y-)    s (x-)    d (y+)
+              z (z-)    x (z+)
 
-    a(y-)     s(x-)     d(y+)
+Rotation (Euler angles):
+    u (rx+)  i (ry+)  o (rz+)
+    j (rx-)  k (ry-)  l (rz-)
 
-    z(z-) x(z+)
+Movement Step:
+    + : Increase movement step size
+    - : Decrease movement step size
 
-u(rx+)   i(ry+)   o(rz+)
-j(rx-)   k(ry-)   l(rz-)
+Gripper:
+    g - open    h - close
 
-Gripper control:
-    g - open
-    h - close
+Pump:
+    b - open    m - close
 
 Other:
     1 - Go to init pose
     2 - Go to home pose
-    3 - Resave home pose
+    3 - Save current pose as home
     q - Quit
 
-currently:      speed: 50       change percent 5
+currently:	speed: 50	change percent: 5  
+[INFO] [1751342044.199244]: Current moving step: position 12.5 mm, angle attitude 9.0°
 ```
 
 在该终端中，您可以通过命令行中的按键控制机械臂的状态和对机械臂进行移动操作。
@@ -383,33 +391,36 @@ rosrun mycobot_280 teleop_keyboard.py
 你会在命令行中看到如下输出：
 
 ```bash
-Mycobot Teleop Keyboard Controller
----------------------------
-Movimg options(control coordinations [x,y,z,rx,ry,rz]):
-              w(x+)
+[INFO] [1751342043.889285]: Waiting to receive current coordinates...
+Mycobot Teleop Keyboard Controller (ROS1 - Topic Version)
+---------------------------------------------------------
+Movement (Cartesian):
+              w (x+)
+    a (y-)    s (x-)    d (y+)
+              z (z-)    x (z+)
 
-    a(y-)     s(x-)     d(y+)
+Rotation (Euler angles):
+    u (rx+)  i (ry+)  o (rz+)
+    j (rx-)  k (ry-)  l (rz-)
 
-    z(z-) x(z+)
+Movement Step:
+    + : Increase movement step size
+    - : Decrease movement step size
 
-u(rx+)   i(ry+)   o(rz+)
-j(rx-)   k(ry-)   l(rz-)
+Gripper:
+    g - open    h - close
 
-Gripper control:
-    g - open
-    h - close
+Pump:
+    b - open    m - close
 
-Pump control:
-    b - open
-    m - close
-    
 Other:
     1 - Go to init pose
     2 - Go to home pose
-    3 - Resave home pose
+    3 - Save current pose as home
     q - Quit
 
-currently:      speed: 50       change percent 5
+currently:	speed: 50	change percent: 5  
+[INFO] [1751342044.199244]: Current moving step: position 12.5 mm, angle attitude 9.0°
 ```
 
 在该终端中，您可以通过命令行中的按键控制机械臂的状态和对机械臂进行移动操作。

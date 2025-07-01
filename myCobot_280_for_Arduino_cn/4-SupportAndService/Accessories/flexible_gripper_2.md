@@ -73,7 +73,7 @@ from pymycobot import MyCobot280
 import time
 
 # 初始化一个MyCobot280对象
-mc = MyCobot280("COM3", 1000000)
+mc = MyCobot280("COM3", 115200) # 波特率默认是115200，部分板子是1000000，请根据实际进行修改
 
 # 以下三种方式均可控制夹爪打开-关闭-打开
 # 方式一：

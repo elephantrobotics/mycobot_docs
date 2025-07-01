@@ -88,17 +88,17 @@ import time
     # linux: "/dev/ttyUSB0"
     # windows: "COM3"
     # The second is the baud rate:
-    # Arduino version: 1000000
+    # Arduino version: 115200 # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
     # For example:
         # mycobot-Arduino:
             # linux:
-            # mc = MyCobot280("/dev/ttyUSB0", 1000000)
+            # mc = MyCobot280("/dev/ttyUSB0", 115200)
             # windows:
-            # mc = MyCobot280("COM3", 1000000)
+            # mc = MyCobot280("COM3", 115200)
 
 # Initialize a MyCobot280 object
 # Here is the object code for the windows version
-mc = MyCobot280("COM3", 1000000)
+mc = MyCobot280("COM3", 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 time.sleep(2)
 # By passing the angle parameter, each joint of the robot arm moves to the corresponding position [0, 0, 0, 0, 0, 0]
 mc.send_angles([0, 0, 0, 0, 0, 0], 50)

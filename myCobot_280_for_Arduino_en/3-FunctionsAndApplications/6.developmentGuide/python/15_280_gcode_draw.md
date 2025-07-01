@@ -36,8 +36,8 @@ import time
 from pymycobot.mycobot280 import MyCobot280 # import mycobot library,if don't have, first 'pip install pymycobot'
 
 # use PC and Arduino control
-mc = MyCobot280('COM14', 1000000) # WINDOWS use, need check port number when you PC
-# mc = MyCobot280('/dev/ttyUSB0',1000000) # VM linux use
+mc = MyCobot280('COM14', 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation； WINDOWS use, need check port number when you PC
+# mc = MyCobot280('/dev/ttyUSB0',115200) # VM linux use
 time.sleep(2)
 ...
 ```
