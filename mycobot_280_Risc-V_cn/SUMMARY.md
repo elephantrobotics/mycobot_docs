@@ -18,7 +18,7 @@
 * 功能与应用
     * [5. 基础功能](3-FunctionsAndApplications/5.BasicFunction/README.md)
         * [5.1 RISC-V版本机械臂入门](3-FunctionsAndApplications/5.BasicFunction/5.1-Functionlnstruction/3.5.1-SW-description.md)
-        * [5.2 系统基础功能说明](3-FunctionsAndApplications/5.BasicFunction/5.2-Softwarelnstructions/3.5.2-SW-detail-description.md) 
+        * [5.2 系统基础功能说明](3-FunctionsAndApplications/5.BasicFunction/5.2-Softwarelnstructions/3.5.2-SW-detail-description.md)
         * [5.3 固件功能说明](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/README.md)
             * [5.3.1 拖动示教](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.1-moving/4.2.1.2-micro_CPU.md)
             * [5.3.2 机械臂校准](3-FunctionsAndApplications/5.BasicFunction/5.3-FirmwareFunctionDescription/5.3.2-calibration/4.2.2.2-micro_CPU.md)
