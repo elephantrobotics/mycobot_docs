@@ -11,14 +11,14 @@ You can use the game controller to control the movement of the machine and use t
 
 - **1**: RX coordinate value increases
 - **2**: RX coordinate value decreases
-- **3**: RY coordinate value decreases
-- **4**: RY coordinate value increases
+- **3**: RY coordinate value increases
+- **4**: RY coordinate value decreases
 - **5**: X coordinate value increases
 - **6**: X coordinate value decreases
 - **7**: Y coordinate value decreases
 - **8**: Y coordinate value increases
-- **9**: Z coordinate value increases
-- **10**: Z coordinate value decreases
+- **9**: Z coordinate value decreases
+- **10**: Z coordinate value increases
 - **11**: RZ coordinate value decreases
 - **12**: RZ Coordinate value increases
 - **13**: Wake up the handle. If the handle is not used for a long time after connection, it will enter sleep mode. You need to press this button to continue using it.
@@ -61,7 +61,7 @@ from pymycobot import MyCobot280
 import threading
 # Change com7 to the actual port number detected by your computer, and modify the suction pump control logic
 mc = MyCobot280("com7", 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
-
+time.sleep(1)
 # start pump
 def pump_on():
     arm.set_digital_output(33, 0)

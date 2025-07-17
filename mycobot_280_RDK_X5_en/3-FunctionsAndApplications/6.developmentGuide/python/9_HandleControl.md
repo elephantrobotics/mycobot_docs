@@ -11,14 +11,14 @@ You can use the game controller to control the movement of the machine and use t
 
 - **1**: RX coordinate value increases
 - **2**: RX coordinate value decreases
-- **3**: RY coordinate value decreases
-- **4**: RY coordinate value increases
+- **3**: RY coordinate value increases
+- **4**: RY coordinate value decreases
 - **5**: X coordinate value increases
 - **6**: X coordinate value decreases
 - **7**: Y coordinate value decreases
 - **8**: Y coordinate value increases
-- **9**: Z coordinate value increases
-- **10**: Z coordinate value decreases
+- **9**: Z coordinate value decreases
+- **10**: Z coordinate value increases
 - **11**: RZ coordinate value decreases
 - **12**: RZ Coordinate value increases
 - **13**: Wake up the handle. If the handle is not used for a long time after connection, it will enter sleep mode. You need to press this button to continue using it.
@@ -60,7 +60,7 @@ import time
 from pymycobot import MyCobot280
 import threading
 
-mc = MyCobot280("/dev/ttyAMA0", 1000000)
+mc = MyCobot280("/dev/ttyS1", 1000000)
 ...
 ```
 Run the program.
