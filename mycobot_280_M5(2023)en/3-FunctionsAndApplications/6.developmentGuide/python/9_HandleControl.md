@@ -52,7 +52,7 @@ pip3 install -r requirements.txt
 
 ### myCobot
 
-Edit the handle_control.py file
+Edit the myCobot280_handle_control.py file
 
 ```python
 import pygame
