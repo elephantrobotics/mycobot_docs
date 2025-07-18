@@ -113,6 +113,9 @@ import time
 # 下面为 windows版本创建对象代码
 mc = MyCobot280("COM3", 115200)
 
+if mc.get_fresh_mode() != 1:
+  mc.set_fresh_mode(1)
+  
 # 获取当前头部的坐标以及姿态
 coords = mc.get_coords()
 print(coords)

@@ -99,6 +99,10 @@ import time
 # Initialize a MyCobot280 object
 # The following is the object code for the Windows version
 mc = MyCobot280("/dev/ttyAMA0", 1000000)
+
+if mc.get_fresh_mode() != 1:
+  mc.set_fresh_mode(1)
+  
 # Get the current head coordinates and posture
 coords = mc.get_coords()
 print(coords)

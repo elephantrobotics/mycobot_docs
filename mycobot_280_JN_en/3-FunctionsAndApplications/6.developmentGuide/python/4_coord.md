@@ -100,6 +100,10 @@ import time
 # The following is the object code for the JN version
 mc = MyCobot280("/dev/ttyTHS1", 1000000)
 # Get the current head coordinates and posture
+
+if mc.get_fresh_mode() != 1:
+  mc.set_fresh_mode(1)
+  
 coords = mc.get_coords()
 print(coords)
 # # Intelligently plan the route, so that the head reaches the coordinates [57.0, -107.4, 316.3] in a linear manner, and maintains the posture [-93.81, -12.71, -163.49], with a speed of 80mm/s
