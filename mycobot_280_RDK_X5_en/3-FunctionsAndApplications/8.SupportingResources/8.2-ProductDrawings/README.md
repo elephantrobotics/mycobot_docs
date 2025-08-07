@@ -5,7 +5,7 @@ The product drawings section provides detailed 3D and 2D drawings of the 280 RDK
 
 | Machine | 3D Model File |
 | :--------------: | :----------------------------------------------------------: |
-| myCobot 280 RDK X5 | [Download](https://download.elephantrobotics.com/Product_3d_files/myCobot_280_PI_230708.STEP) |
+| myCobot 280 RDK X5 | [Download](https://download.elephantrobotics.com/Product_3d_files/280RDK-X5.STEP) |
 
 ### Machine 2D Drawings
 

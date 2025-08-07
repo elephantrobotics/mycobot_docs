@@ -5,7 +5,7 @@
 
 |       机器       |                          3D模型文件                          |
 | :--------------: | :----------------------------------------------------------: |
-| myCobot 280 RDKX5 | [下载](https://download.elephantrobotics.com/Product_3d_files/myCobot_280_PI_230708.STEP) |
+| myCobot 280 RDKX5 | [下载](https://download.elephantrobotics.com/Product_3d_files/280RDK-X5.STEP) |
 
 ### 机器2D图纸
 
