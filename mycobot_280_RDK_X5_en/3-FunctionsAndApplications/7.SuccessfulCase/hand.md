@@ -16,6 +16,9 @@ export CAM_TYPE=usb
 ```
 Then enter the following command to start the camera recognition node
 ```bash
+# Change to the home directory
+cd ~
+# Run the program again
 ros2 launch hand_gesture_detection hand_gesture_detection.launch.py
 ```
 

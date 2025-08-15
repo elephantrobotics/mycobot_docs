@@ -18,6 +18,9 @@ export CAM_TYPE=usb
 ```
 然后再输入下面命令，启动相机识别节点
 ```bash
+# 切换到主目录
+cd ~
+# 再运行程序
 ros2 launch hand_gesture_detection hand_gesture_detection.launch.py
 ```
 
