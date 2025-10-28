@@ -212,7 +212,7 @@ Figure 2.1.5.2-10 Grove
 
 SDH parameters are shown in the figure below
 
-![SDH parameters](../../resource/1-ProductInformation/2.ProductParameter/SDH.png)
+![SDH parameters](../../resource/1-ProductInformation/2.ProductParameter/file-read-5923.png)
 
 ---
 
