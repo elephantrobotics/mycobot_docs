@@ -242,7 +242,7 @@
 
 SDH参数如下图所示
 
-![SDH参数](../../resource/1-ProductInformation/2.ProductParameter/SDH.png)
+![SDH参数](../../resource/1-ProductInformation/2.ProductParameter/file-read-5923.png)
 
 ---
 
