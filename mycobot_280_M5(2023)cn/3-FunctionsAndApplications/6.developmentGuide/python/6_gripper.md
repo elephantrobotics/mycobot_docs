@@ -20,7 +20,7 @@
   - `1` ：表示机械臂的夹爪正在运行
   - `-1`：表示出错
 
-**`set_gripper_value(gripper_value, speed, gripper_type=None， is_torque=None)`**
+**`set_gripper_value(gripper_value, speed, gripper_type=None, is_torque=None)`**
 
 - **功能**: 让夹爪以指定的速度转动到指定的位置
 

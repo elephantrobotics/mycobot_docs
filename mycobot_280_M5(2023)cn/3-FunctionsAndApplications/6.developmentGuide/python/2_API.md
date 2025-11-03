@@ -676,7 +676,7 @@ mc.send_angle(1, 40, 20)
 - **返回值**：
   - `1`: 完成
 
-#### 10.2 `set_gripper_value(gripper_value, speed, gripper_type=None， is_torque=None)`
+#### 10.2 `set_gripper_value(gripper_value, speed, gripper_type=None, is_torque=None)`
 
 - **功能**: 让夹爪以指定的速度转动到指定的位置
 

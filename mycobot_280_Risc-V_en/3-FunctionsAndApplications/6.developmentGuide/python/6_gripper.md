@@ -19,17 +19,55 @@ Before using Python to control the gripper, you need to install and connect the 
   - `1`: Indicates that the gripper of the robot arm is running
   - `-1`: Indicates an error
 
-**`set_gripper_value(value, speed, gripper_type=None)`**
+**`set_gripper_state(flag, speed, _type_1=None, is_torque=None)`**
 
-- **Function:** Let the gripper rotate to the specified position at the specified speed
-- **Parameter description:**
-  - `value`: indicates the position the gripper is going to reach, with a range of 0~100
-  - `speed`: indicates the speed of rotation, with a range of 1~100
-  - `gripper_type`: gripper type, the default is adaptive gripper
-    - `1`: adaptive gripper
-    - `3`: parallel gripper
-    - `4`: flexible gripper
-- **Return value:** 1
+- **function**: Adaptive gripper enable
+
+- **Parameters**:
+
+  - `flag (int) `: 0 - open 1 - close, 254 - release
+
+  - `speed (int)`: 0 ~ 100
+
+  - `_type_1 (int)`:
+
+    - `1` : Adaptive gripper (default state is 1)
+
+    - `2` : A nimble hand with 5 fingers
+
+    - `3` : Parallel gripper
+
+    - `4` : Flexible gripper
+  - `is_torque (int)`: Whether the gripper is force-controlled. This parameter can be omitted if no type parameter is specified. (**Note: This parameter is only supported when the end-end Atom firmware version is ≥ 6.5**)
+
+    - `0`: Non-force-controlled gripper
+
+    - `1`: Force-controlled gripper
+- **Return value**：
+  - `1`: complete
+
+**`set_gripper_value(gripper_value, speed, gripper_type=None, is_torque=None)`**
+
+- **function**: Set the gripper value
+
+- **Parameters**:
+
+  - `gripper_value (int) `: 0 ~ 100
+
+  - `speed (int)`: 0 ~ 100
+
+  - `gripper_type (int)`:
+
+    - `1` : Adaptive gripper (default state is 1)
+
+    - `3` : Parallel gripper
+
+    - `4` : Flexible gripper
+  - `is_torque (int)`: Whether the gripper is force-controlled. This parameter can be omitted if no type parameter is specified. (**Note: This parameter is only supported when the end-end Atom firmware version is ≥ 6.5**)
+
+    - `0`: Non-force-controlled gripper
+
+    - `1`: Force-controlled gripper
 
 **`get_gripper_value(gripper_type=None)`**
 
@@ -40,19 +78,6 @@ Before using Python to control the gripper, you need to install and connect the 
     - `3`: parallel gripper
     - `4`: flexible gripper
 - **Return value:** Gripper data information
-
-**`set_gripper_state(flag, speed, _type=None)`**
-
-- **Function:** Let the gripper enter the specified state at the specified speed
-- **Parameter description:**
-  - `flag`: 1 indicates the gripper is closed, 0 indicates the gripper is open.
-  - `speed`: indicates how fast the specified state is reached, the value range is 0~100
-  - `_type`: Gripper type, the default is adaptive gripper
-    - `1`: Adaptive gripper
-    - `2`: Five-finger dexterous hand
-    - `3`: Parallel gripper
-    - `4`: Flexible gripper
-- **Return value:** 1
 
 **`set_HTS_gripper_torque(torque)`**
 
