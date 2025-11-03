@@ -770,7 +770,17 @@ mc.send_angle(1, 40, 20)
 
 - **Function**: Stop gripper movement
 - **Return value**:
-- `1`: Completed
+  - `1`: Completed
+
+#### 10.13 `is_torque_gripper()`
+
+- **Function**: Determines if the gripper is a force-controlled gripper type
+
+- **Return Value**:
+
+  - `40`: Force-controlled gripper
+
+  - `9`: Non-force-controlled gripper
 
 ### 11. Set bottom IO input/output status
 

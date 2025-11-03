@@ -655,7 +655,7 @@ mc.send_angle(1, 40, 20)
 
 ### 10. Robotic arm end gripper control
 
-#### 10.1 `set_gripper_state(flag, speed, _type_1=None)`
+#### 10.1 `set_gripper_state(flag, speed, _type_1=None, is_torque=None)`
 
 - **function**: Adaptive gripper enable
 
@@ -663,7 +663,7 @@ mc.send_angle(1, 40, 20)
 
   - `flag (int) `: 0 - open 1 - close, 254 - release
 
-  - `speed (int)`: 1 ~ 100
+  - `speed (int)`: 0 ~ 100
 
   - `_type_1 (int)`:
 
@@ -674,10 +674,15 @@ mc.send_angle(1, 40, 20)
     - `3` : Parallel gripper
 
     - `4` : Flexible gripper
+  - `is_torque (int)`: Whether the gripper is force-controlled. This parameter can be omitted if no type parameter is specified. (**Note: This parameter is only supported when the end-end Atom firmware version is ≥ 6.5**)
+
+    - `0`: Non-force-controlled gripper
+
+    - `1`: Force-controlled gripper
 - **Return value**：
   - `1`: complete
 
-#### 10.2 `set_gripper_value(gripper_value, speed, gripper_type=None)`
+#### 10.2 `set_gripper_value(gripper_value, speed, gripper_type=None, is_torque=None)`
 
 - **function**: Set the gripper value
 
@@ -685,17 +690,20 @@ mc.send_angle(1, 40, 20)
 
   - `gripper_value (int) `: 0 ~ 100
 
-  - `speed (int)`: 1 ~ 100
+  - `speed (int)`: 0 ~ 100
 
   - `gripper_type (int)`:
 
     - `1` : Adaptive gripper (default state is 1)
 
-    - `2` : A nimble hand with 5 fingers
-
     - `3` : Parallel gripper
 
     - `4` : Flexible gripper
+  - `is_torque (int)`: Whether the gripper is force-controlled. This parameter can be omitted if no type parameter is specified. (**Note: This parameter is only supported when the end-end Atom firmware version is ≥ 6.5**)
+
+    - `0`: Non-force-controlled gripper
+
+    - `1`: Force-controlled gripper
 - **Return value**：
   - `1`: complete
 
