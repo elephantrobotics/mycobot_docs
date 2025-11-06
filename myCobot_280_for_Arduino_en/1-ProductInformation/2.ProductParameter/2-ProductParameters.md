@@ -44,13 +44,15 @@
 
 ### 3.3 Joint motion range
 
+>> **Note:** ⚠ This joint limit information function is only available on Atom firmware ≥ 7.3 and pymycobot library ≥ 4.0.2.
+
 | Joint | Range |
 | :--------: | :----------:|
 | J1 | -168 ~ +168 |
-| J2 | -135 ~ +135 |
+| J2 | -140 ~ +140 |
 | J3 | -150 ~ +150 |
-| J4 | -145 ~ +145 |
-| J5 | -165 ~ +165 |
+| J4 | -150 ~ +150 |
+| J5 | -155 ~ +160 |
 | J6 | -180 ~ +180 |
 
 ### 3.4 Hole Installation

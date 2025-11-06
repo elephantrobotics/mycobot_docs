@@ -181,6 +181,8 @@ mc.send_angle(1, 40, 20)
   - `id`: Joint id, range int 1-6
   - `degree`: degree value(`float`)
   
+  >> **Note:** ⚠ This joint limit information function is only available on Atom firmware ≥ 7.3 and pymycobot library ≥ 4.0.2.
+  
     <table>
       <tr>
              <th>Joint Id</th>
@@ -192,7 +194,7 @@ mc.send_angle(1, 40, 20)
       </tr>
       <tr>
              <td>2</td>
-             <td>-135 ~ 135</td>
+             <td>-140 ~ 140</td>
       </tr>
       <tr>
              <td>3</td>
@@ -200,11 +202,11 @@ mc.send_angle(1, 40, 20)
       </tr>
         <tr>
              <td>4</td>
-             <td> -145 ~ 145</td>
+             <td> -150 ~ 150</td>
       </tr>
       <tr>
              <td>5</td>
-             <td>-165 ~ 165</td>
+             <td>-155 ~ 160</td>
       </tr>
       <tr>
              <td>6</td>
