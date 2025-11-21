@@ -74,6 +74,7 @@ Document Directory
       * [6.2.2 ROS1 Basics](3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.3-ROS_Basics.md)
       * [6.2.3 rivz Introduction and Use](3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.4-rivzIntroductionAndUse/README.md)
       * [6.2.4 Moveit Introduction and Use](3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.5-Moveit/README.md)
+      * [6.2.5 GazeboIntroduction and Use](3-FunctionsAndApplications/6.developmentGuide/ROS/12.1-ROS1/12.1.6-Gazebo/README.md)
    * [6.3 Development and use based on ROS2](3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.3-ROS2Introduction.md)
      * [6.3.1 ROS2 environment construction](3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.1-InstallationOfROS2.md)
      * [6.3.2 ROS2 basics](3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.2-BasicTutorial.md)
