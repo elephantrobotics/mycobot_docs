@@ -778,6 +778,8 @@ mc.send_angle(1, 40, 20)
 
 #### 10.12 `gripper_stop()`
 
+>> **Note:** Atom firmware version 7.3 or higher is required.
+
 - **Function**: Stop gripper movement
 - **Return value**:
   - `1`: Completed
