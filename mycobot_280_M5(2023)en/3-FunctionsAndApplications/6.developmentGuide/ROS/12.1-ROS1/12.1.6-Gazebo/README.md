@@ -1,16 +1,23 @@
-### 本地 1.操作流程
-#### 1.1 安装前提
+# MyCobot 280 M5 Gazebo Usage Guide
 
-要使用此包，需先安装[Python api](https://github.com/elephantrobotics/pymycobot.git)库。
+## Local Setup
+
+### 1. Operation Process
+
+#### 1.1 Prerequisites
+
+To use this package, you need to install the [Python API](https://github.com/elephantrobotics/pymycobot.git) library first.
 
 ```bash
 pip install pymycobot --user
+
+# Environment:
 ros1 noetic
 ```
 
-#### 1.2 包的下载与安装
+#### 1.2 Package Download and Installation
 
-下载包到你的ros工作空间中
+Download the package to your ROS workspace:
 
 ```bash
 $ cd ~/catkin_ws/src
@@ -19,17 +26,23 @@ $ cd ~/catkin_ws
 $ catkin_make
 $ source devel/setup.bash
 ```
-MyCobot_280_m5-Gazebo使用说明
-1. 滑块控制
-现已实现通过joint_state_publisher_gui的滑块控制机械臂模型在Gazebo中的位姿
-确认将真实的机械臂连接到电脑以后，查看机械臂连接的端口：
+
+---
+
+## MyCobot_280_m5-Gazebo Usage Instructions
+
+### 1. Slider Control
+
+Slider control through joint_state_publisher_gui is now implemented to control the robot arm model pose in Gazebo.
+
+After connecting the real robot arm to the computer, check the port the robot arm is connected to:
 
 ```bash
 ls /dev/tty*
-/dev/ttyACM0 or /dev/ttyUSB0
+# /dev/ttyACM0 or /dev/ttyUSB0
 ```
 
-得到如下的输出结果：
+You will get output similar to:
 
 ```bash
 /dev/tty    /dev/tty26  /dev/tty44  /dev/tty62      /dev/ttyS20
@@ -54,87 +67,96 @@ ls /dev/tty*
 /dev/tty25  /dev/tty43  /dev/tty61  /dev/ttyS2
 ```
 
-打开通信，给脚本添加执行权限
+Enable communication and add execution permissions to the scripts:
 
 ```bash
-sudo chmod -R 777 /dev/ttyACM0  or sudo chmod -r 777 /dev/ttyUSB0
+sudo chmod -R 777 /dev/ttyACM0  # or sudo chmod -R 777 /dev/ttyUSB0
 sudo chmod -R 777 mycobot_280/mycobot_280m5_gazebo_gripper/scripts/follow_display_gazebo.py
 sudo chmod -R 777 mycobot_280/mycobot_280m5_gazebo_gripper/scripts/slider_control_gazebo.py
 sudo chmod -R 777 mycobot_280/mycobot_280m5_gazebo_gripper/scripts/teleop_keyboard_gazebo.py
-roscor
+roscore
 ```
 
-确认好端口后，打开一个终端输入以下命令，注意port改成上一步查询到的值
+After confirming the port, open a terminal and enter the following command (remember to change the port to the value found in the previous step):
 
 ```bash
 source devel/setup.bash
 roslaunch mycobot_280m5_gazebo_gripper slider.launch _port:=/dev/ttyACM0 _baud:=115200
 ```
 
-接着打开另外一个终端，输入如下命令：
+Then open another terminal and enter:
 
 ```bash
 source devel/setup.bash
 rosrun mycobot_280m5_gazebo_gripper slider_control_gazebo.py _port:=/dev/ttyACM0 _baud:=115200
 ```
 
-同样记得把端口号修改成上一步查询到的端口号。如果运行成功将会看到如下的终端提示：
+Remember to modify the port number to the one found in the previous step. If successful, you will see the following terminal prompt:
 
 ```bash
 ('/dev/ttyACM0', 115200)
 spin ...
 ```
 
-此时便可通过操控joint_state_publisher_gui的滑块来操控Gazebo或者机械臂模型的位姿了。
+Now you can control the Gazebo or robot arm model pose by manipulating the joint_state_publisher_gui sliders.
 
-2. Gazebo模型跟随
-通过如下的命令可以实现Gazebo中的模型跟随实际机械臂的运动而发生位姿的改变，首先运行launch文件：
+---
+
+### 2. Gazebo Model Following
+
+The following commands allow the Gazebo model to follow the actual robot arm's movements. First, run the launch file:
 
 ```bash
 source devel/setup.bash
 roslaunch mycobot_280m5_gazebo_gripper follower.launch _port:=/dev/ttyACM0
 ```
 
-如果程序运行成功，Gazebo界面将成功加载机械臂模型，机械臂模型的所有关节都处于原始位姿，即[0,0,0,0,0,0]. 此后我们打开第二个终端并运行：
+If the program runs successfully, the Gazebo interface will load the robot arm model with all joints at their original pose, i.e., [0,0,0,0,0,0]. Then open a second terminal and run:
 
 ```bash
 source devel/setup.bash
 rosrun mycobot_280m5_gazebo_gripper follow_display_gazebo.py _port:=/dev/ttyACM0 _baud:=115200
 ```
 
-现在当我们操控实际机械臂的位姿，我们可以看到Gazebo中的机械臂也会跟着一起运动到相同的位姿。
+Now when you manipulate the actual robot arm's pose, you can see the robot arm in Gazebo moving to the same pose.
 
-3. 键盘控制
-我们还可以使用键盘输入的方式同时操控Gazebo中机械臂模型与实际机械臂的位姿，首先打开一个终端并输入：
+---
+
+### 3. Keyboard Control
+
+You can also use keyboard input to control both the Gazebo robot arm model and the actual robot arm simultaneously. First, open a terminal and enter:
 
 ```bash
 source devel/setup.bash
 roslaunch mycobot_280m5_gazebo_gripper teleop_keyboard.launch _port:=/dev/ttyACM0 _baud:=115200
 ```
 
-同上一部分相同，我们会看到机械臂模型被加载到Gazebo中，并且所有关节都在初始的位姿上，紧接着我们打开另外一个终端并输入：
+As in the previous section, you will see the robot arm model loaded in Gazebo with all joints at their initial pose. Then open another terminal and enter:
 
 ```bash
 source devel/setup.bash
 rosrun mycobot_280m5_gazebo_gripper teleop_keyboard_gazebo.py _port:=/dev/ttyACM0 _baud:=115200
 ```
 
-如果运行成功，我们将在终端看到如下的输出信息：
+If successful, you will see the following output in the terminal:
 
 ```shell
 Mycobot_280_m5_gripper Teleop Keyboard Controller
 ---------------------------
-Movimg options (control the angle of each joint):
+Moving options (control the angle of each joint):
+
 w: joint2_to_joint1++   s: joint2_to_joint1--
 e: joint3_to_joint2++   d: joint3_to_joint2--
 r: joint4_to_joint3++   f: joint4_to_joint3--
 t: joint5_to_joint4++   g: joint5_to_joint4--
 y: joint6_to_joint5++   h: joint6_to_joint5--
 u: joint6output_to_joint6++ j: joint6output_to_joint6--
-o:open gripper          p:close gripper
+
+o: open gripper          p: close gripper
+
 Other:
 1 - Go to home pose
 q - Quit
 ```
 
-根据上面的提示我们可以知道如何操控机械臂运动了，这里我设置每点击一下机械臂与Gazebo中的机械臂模型会运动1角度，可以尝试长按上述键位中的其中一个键来到达某一位姿。
+Based on the prompts above, you can learn how to control the robot arm. Each key press moves the robot arm and the Gazebo model by 1 degree. You can try holding down one of the keys to reach a certain pose.
