@@ -91,7 +91,8 @@ spin ...
 ```
 
 此时便可通过操控joint_state_publisher_gui的滑块来操控Gazebo或者机械臂模型的位姿了。
-
+<img src =../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/moveit/slide.png
+width ="500"  align = "center">
 2. Gazebo模型跟随
 通过如下的命令可以实现Gazebo中的模型跟随实际机械臂的运动而发生位姿的改变，首先运行launch文件：
 
@@ -108,7 +109,8 @@ rosrun mycobot_280m5_gazebo_gripper follow_display_gazebo.py _port:=/dev/ttyACM0
 ```
 
 现在当我们操控实际机械臂的位姿，我们可以看到Gazebo中的机械臂也会跟着一起运动到相同的位姿。
-
+<img src =../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/moveit/follower.png
+width ="500"  align = "center">
 3. 键盘控制
 我们还可以使用键盘输入的方式同时操控Gazebo中机械臂模型与实际机械臂的位姿，首先打开一个终端并输入：
 
@@ -143,4 +145,6 @@ q - Quit
 ```
 
 根据上面的提示我们可以知道如何操控机械臂运动了，这里我设置每点击一下机械臂与Gazebo中的机械臂模型会运动1角度，可以尝试长按上述键位中的其中一个键来到达某一位姿。
+<img src =../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/moveit/keyboardd.png
+width ="500"  align = "center">
 
