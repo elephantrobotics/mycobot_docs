@@ -103,6 +103,9 @@ Now you can control the Gazebo or robot arm model pose by manipulating the joint
 
 ---
 
+<img src =../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/moveit/slide.png
+width ="500"  align = "center">
+
 ### 2. Gazebo Model Following
 
 The following commands allow the Gazebo model to follow the actual robot arm's movements. First, run the launch file:
@@ -122,6 +125,10 @@ rosrun mycobot_280m5_gazebo_gripper follow_display_gazebo.py _port:=/dev/ttyACM0
 Now when you manipulate the actual robot arm's pose, you can see the robot arm in Gazebo moving to the same pose.
 
 ---
+
+
+<img src =../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/moveit/follower.png
+width ="500"  align = "center">
 
 ### 3. Keyboard Control
 
@@ -161,4 +168,7 @@ q - Quit
 ```
 
 Based on the prompts above, you can learn how to control the robot arm. Each key press moves the robot arm and the Gazebo model by 1 degree. You can try holding down one of the keys to reach a certain pose.
+
+<img src =../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/moveit/keyboardd.png
+width ="500"  align = "center">
 
