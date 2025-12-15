@@ -1,5 +1,6 @@
-# MyCobot 280 M5 Gazebo Usage Guide
-
+## Gazebo
+### Gazebo 简介
+Gazebo is an integrated development platform in ROS, consisting of various functional packages for manipulating robotic arms, including motion planning, operation, control, inverse kinematics, 3D perception, and collision detection. It features a realistic world simulation platform and can be used in conjunction with Moveit
 ## Local Setup
 
 ### 1. Operation Process
@@ -160,3 +161,4 @@ q - Quit
 ```
 
 Based on the prompts above, you can learn how to control the robot arm. Each key press moves the robot arm and the Gazebo model by 1 degree. You can try holding down one of the keys to reach a certain pose.
+
