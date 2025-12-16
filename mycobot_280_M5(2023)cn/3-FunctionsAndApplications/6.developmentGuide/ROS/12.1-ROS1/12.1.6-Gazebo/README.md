@@ -19,7 +19,7 @@ ros1 noetic
 
 ```bash
 $ cd ~/catkin_ws/src
-$ git clone https://github.com/jiaweilong66/280m5_gripper_gazebo.git
+$ git clone https://github.com/elephantrobotics/mycobot_ros.git
 $ cd ~/catkin_ws
 $ catkin_make
 $ source devel/setup.bash
@@ -152,3 +152,4 @@ q - Quit
 
 <img src =../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/moveit/keyboardd.png
 width ="500"  align = "center">
+
