@@ -1,5 +1,5 @@
 ## Gazebo
-### Gazebo 简介
+### Gazebo Introduction
 Gazebo is an integrated development platform in ROS, consisting of various functional packages for manipulating robotic arms, including motion planning, operation, control, inverse kinematics, 3D perception, and collision detection. It features a realistic world simulation platform and can be used in conjunction with Moveit
 ## Local Setup
 
@@ -171,5 +171,6 @@ Based on the prompts above, you can learn how to control the robot arm. Each key
 
 <img src =../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/moveit/keyboardd.png
 width ="500"  align = "center">
+
 
 
