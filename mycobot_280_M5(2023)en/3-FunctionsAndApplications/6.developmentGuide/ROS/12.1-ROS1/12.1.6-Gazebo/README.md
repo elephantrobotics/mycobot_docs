@@ -22,7 +22,7 @@ Download the package to your ROS workspace:
 
 ```bash
 $ cd ~/catkin_ws/src
-$ git clone https://github.com/jiaweilong66/280m5_gripper_gazebo.git
+$ git clone https://github.com/elephantrobotics/mycobot_ros.git
 $ cd ~/catkin_ws
 $ catkin_make
 $ source devel/setup.bash
@@ -171,4 +171,5 @@ Based on the prompts above, you can learn how to control the robot arm. Each key
 
 <img src =../../../../../resources/3-FunctionsAndApplications/6.developmentGuide/ROS/ROS1/moveit/keyboardd.png
 width ="500"  align = "center">
+
 
