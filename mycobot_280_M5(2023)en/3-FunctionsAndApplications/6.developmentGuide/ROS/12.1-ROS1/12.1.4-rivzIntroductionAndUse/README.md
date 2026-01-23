@@ -7,14 +7,6 @@ rviz is a 3D visualization platform in ROS. On the one hand, it can realize the 
 When installing ros, if you perform a complete installation, rviz has been installed, and you can try to run it directly; if it is not fully installed, you can install rviz separately:
 
 ```bash
-# Ubuntu16.04
-sudo apt-get install ros-kinetic-rviz
-```
-``` bash
-# Ubuntu18.04
-sudo apt-get install ros-melodic-rviz
-```
-```bash
 # Ubuntu20.04
 sudo apt-get install ros-noetic-rviz
 ```
@@ -88,6 +80,11 @@ If you want to learn more about rviz, you can go to the [official document](http
 
 ## M5 version prerequisites
 
+- Device connection: Select **Device** -> **USB** -> **Check the device serial port name**
+
+<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1/device_conect_1.png
+width ="500"  align = "center">
+
 - Open the console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>), open the terminal window to view the device name:
 
 ```bash
@@ -97,6 +94,9 @@ ls /dev/ttyUSB* # Old version myCobot280 M5
 # If the terminal does not display the /dev/ttyUSB related name, you need to use the following command
 ls /dev/ttyACM* # New version myCobot280 M5
 ```
+
+<img src =../../../../../resources\3-FunctionsAndApplications\6.developmentGuide\ROS\ROS1/device_conect_2.png
+width ="500"  align = "center">
 
 - Grant serial port permissions to the robot:
 
@@ -113,7 +113,14 @@ Then enter the user password (**Note:** The password will not be displayed, just
 
 ## Robot arm control
 
->>**Note:** For better motion effects, the Atom firmware version of the end arm is 6.5, and the python driver library pymycobot version is 3.5.3
+>> **Note:** Before using the following example, you need to configure the ROS package environment after opening the terminal command line:
+
+```bash
+cd ~/catkin_ws/ 
+source devel/setup.bash
+```
+
+Then proceed with using the example.
 
 ### Slider control
 

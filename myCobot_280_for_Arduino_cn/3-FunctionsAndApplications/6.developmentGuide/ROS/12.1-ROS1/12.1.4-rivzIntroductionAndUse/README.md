@@ -7,14 +7,6 @@ rviz是ROS中一款三维可视化平台，一方面能够实现对外部信息�
 在安装ros时，如果执行的完全安装，rviz已经安装好了,您可以直接尝试运行；如果没有完全安装，可单独安装rviz:
 
 ```bash
-# Ubuntu16.04
-sudo apt-get install ros-kinetic-rviz  
-```
-``` bash
-# Ubuntu18.04
-sudo apt-get install ros-melodic-rviz   
-```
-```bash
 # Ubuntu20.04
 sudo apt-get install ros-noetic-rviz    
 ```
@@ -97,6 +89,11 @@ width ="500"  align = "center">
 
 ## M5/Arduino版本前提条件
 
+- 设备连接，选择 **设备** ——> **USB** ——> **勾选设备串口名称**
+
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1/device_conect_1.png
+width ="500"  align = "center">
+
 - 打开控制台终端（ 快捷键 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd> )，打开终端窗口查看设备名称：
 
 ```bash
@@ -106,6 +103,9 @@ ls /dev/ttyUSB* # 旧版本 myCobot280 M5
 # 如果终端没有显示/dev/ttyUSB相关名称，需要使用如下命令
 ls /dev/ttyACM* # 新版本 myCobot280 M5
 ```
+
+<img src =../../../../../resource\3-FunctionsAndApplications\6.developmentGuide\ROS\12.1-ROS1/device_conect_2.png
+width ="500"  align = "center">
 
 - 授予机械臂串口权限：
 
@@ -123,7 +123,14 @@ sudo chmod 777 /dev/ttyACM0 # 新版本 myCobot280 M5
 
 # 机械臂的控制
 
->>**注意：** 为了更好的运动效果，机械臂末端Atom固件版本为6.5，python驱动库pymycobot版本为3.5.3
+>> **注意：** 使用下面案例之前，打开终端命令行之后，需要设置ROS功能包环境配置：
+
+```bash
+cd ~/catkin_ws/
+source devel/setup.bash
+```
+
+然后再进行案例的使用。
 
 ## 1 滑块控制
 

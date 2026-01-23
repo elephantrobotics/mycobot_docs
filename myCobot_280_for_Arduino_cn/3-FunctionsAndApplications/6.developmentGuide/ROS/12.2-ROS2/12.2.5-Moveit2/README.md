@@ -55,7 +55,7 @@ MoveIt2 是ROS2中的一个集成开发平台，由多种用于操纵机械臂�
 打开命令行运行：
   
 ```bash
-ros2 lanuch mycobot_280arduino_moveit2 demo.launch.py
+ros2 launch mycobot_280arduino_moveit2 demo.launch.py
 ```
 
 运行效果如下：  

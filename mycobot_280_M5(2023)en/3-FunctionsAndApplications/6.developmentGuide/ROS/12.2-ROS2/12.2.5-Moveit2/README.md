@@ -55,7 +55,7 @@ MoveIt 2 has a global developer community that continuously provides updates, fe
 Open the command line and run:
   
 ```bash
-ros2 lanuch mycobot_280_moveit2 demo.launch.py
+ros2 launch mycobot_280_moveit2 demo.launch.py
 ```
 
 The operation effect is as follows:
