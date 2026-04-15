@@ -132,6 +132,7 @@ python ocr_demo.py
 
 ### Garbage detection
 Gripper available as an optional add-on
+
 First remove the end suction cup from the end of the robot arm, connect the suction pump box to the main control, enter the mycobot280RDKX5_vision_kit folder, enter the following command in the terminal, press the Enter key on the keyboard, and the joints of the robot arm will return to zero position
 ```bash
 python robot_test.py
