@@ -69,7 +69,7 @@
             * [7.2.7 综合演示案例](3-FunctionsAndApplications/7.UNOQDevelopmentBoard/python/7.2.7-Examples.md)
         * [7.3 TCP Socket 远程控制](3-FunctionsAndApplications/7.UNOQDevelopmentBoard/7.3-TCPSocket.md)
         * [7.4 SBC 手柄控制](3-FunctionsAndApplications/7.UNOQDevelopmentBoard/7.4-Joystick.md)
-        * [7.5 性能、日志与故障排查](3-FunctionsAndApplications/7.UNOQDevelopmentBoard/7.5-Troubleshooting.md)
+        * [7.5 日志与故障排查](3-FunctionsAndApplications/7.UNOQDevelopmentBoard/7.5-Troubleshooting.md)
     * [8. 成功案例](3-FunctionsAndApplications/8.SuccessfulCase/8-SuccessfulCases.md)
       * [机器人夹爪搬运木块案例](demo/280ar_gripper.md)
       * [280Arduino 手柄遥控案例](demo/280AR_joy.md)

@@ -68,7 +68,7 @@
        * [7.2.7 Integrated Examples](3-FunctionsAndApplications/7.UNOQDevelopmentBoard/python/7.2.7-Examples.md)
      * [7.3 TCP Socket Remote Control](3-FunctionsAndApplications/7.UNOQDevelopmentBoard/7.3-TCPSocket.md)
      * [7.4 SBC Gamepad Control](3-FunctionsAndApplications/7.UNOQDevelopmentBoard/7.4-Joystick.md)
-     * [7.5 Performance, Logs and Troubleshooting](3-FunctionsAndApplications/7.UNOQDevelopmentBoard/7.5-Troubleshooting.md)
+     * [7.5 Logs and Troubleshooting](3-FunctionsAndApplications/7.UNOQDevelopmentBoard/7.5-Troubleshooting.md)
    * [8. Successful Cases](3-FunctionsAndApplications/8.SuccessfulCase/8-SuccessfulCases.md)
      * [Robot gripper carrying wooden block example](demo-en/280ar_gripper.md)
      * [280Arduino handle remote control box](./demo-en/280AR_joy_EN.md)

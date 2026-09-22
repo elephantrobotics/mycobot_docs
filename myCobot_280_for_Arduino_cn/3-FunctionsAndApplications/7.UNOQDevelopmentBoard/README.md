@@ -15,7 +15,7 @@ Arduino UNO Q 同时包含运行 Debian Linux 的 MPU 和运行 Arduino Sketch �
   - [7.2.7 综合演示案例](python/7.2.7-Examples.md)
 - [7.3 TCP Socket 远程控制](7.3-TCPSocket.md)
 - [7.4 SBC 手柄控制](7.4-Joystick.md)
-- [7.5 性能、日志与故障排查](7.5-Troubleshooting.md)
+- [7.5 日志与故障排查](7.5-Troubleshooting.md)
 
 > 使用运动案例前，请固定机械臂并清空工作区域。同一时刻只能由一个程序发送运动指令。
 

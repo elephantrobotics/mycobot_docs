@@ -15,7 +15,7 @@ This chapter covers:
   - [7.2.7 Integrated Examples](python/7.2.7-Examples.md)
 - [7.3 TCP Socket Remote Control](7.3-TCPSocket.md)
 - [7.4 SBC Gamepad Control](7.4-Joystick.md)
-- [7.5 Performance, Logs and Troubleshooting](7.5-Troubleshooting.md)
+- [7.5 Logs and Troubleshooting](7.5-Troubleshooting.md)
 
 > Before running any motion example, fix the robot arm securely and clear the working area. Use only one control entry at a time.
 
