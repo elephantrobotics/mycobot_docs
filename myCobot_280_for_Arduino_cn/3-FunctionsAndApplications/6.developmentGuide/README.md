@@ -27,4 +27,4 @@ Arduino 是一款简单易用、便于上手的开源电子原型平台，使用
 
 ---
 
-[← 上一章](../5.BasicFunction/README.md) | [下一章 →](../7.SuccessfulCase/7-SuccessfulCases.md)
+[← 上一章](../5.BasicFunction/README.md) | [下一章 →](../7.UNOQDevelopmentBoard/README.md)

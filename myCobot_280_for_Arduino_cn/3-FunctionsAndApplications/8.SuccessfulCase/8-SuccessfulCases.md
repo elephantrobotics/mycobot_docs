@@ -1,5 +1,5 @@
 
-# 第七章 成功案例
+# 第八章 成功案例
 
 myCobot 280 系列机械臂，支持十余种配件，包含底座、末端扩展、周边产品等，多配件叠加可以完成复杂项目应用，满足商业化展会展示，如机器人应用模型展示、教育教学套装展示、工业4.0的应用场景展示等需求。支持python、C++等多种主流编程语言，满足开发者的多样化需求。
 
@@ -18,27 +18,27 @@ myCobot 280 系列机械臂，支持十余种配件，包含底座、末端扩�
 ## 3.硬件链接
 
 **整体连接示意图**
-![](../../resource\3-FunctionsAndApplications\7.SuccessfulCase/PLC1.png)
+![](../../resource\3-FunctionsAndApplications\8.SuccessfulCase/PLC1.png)
 
 **机械臂的输入与PLC的输出接线** 先给PLC接入24V电源
 
-![](../../resource\3-FunctionsAndApplications\7.SuccessfulCase/PLC2.jpg)
+![](../../resource\3-FunctionsAndApplications\8.SuccessfulCase/PLC2.jpg)
 
 再将PLC的输出接到24V继电器线圈
 
-![](../../resource\3-FunctionsAndApplications\7.SuccessfulCase/PLC3.jpg)
+![](../../resource\3-FunctionsAndApplications\8.SuccessfulCase/PLC3.jpg)
 
 将机械臂的GPIO2和3.3V接到24V继电器的常开触点上
 
-![](../../resource\3-FunctionsAndApplications\7.SuccessfulCase/PLC4.jpg)
+![](../../resource\3-FunctionsAndApplications\8.SuccessfulCase/PLC4.jpg)
 
 **机械臂的输出与PLC的输入接线** 将机械臂的5v，GND和GPIO5接到5V继电器的线圈上
 
-![](../../resource\3-FunctionsAndApplications\7.SuccessfulCase/PLC5.jpg)
+![](../../resource\3-FunctionsAndApplications\8.SuccessfulCase/PLC5.jpg)
 
 再将24V的正极接到5V继电器的COM端上，24V的负极接到PLC的1M端上,NO接到PLC的输入上
 
-![](../../resource\3-FunctionsAndApplications\7.SuccessfulCase/PLC6.jpg)
+![](../../resource\3-FunctionsAndApplications\8.SuccessfulCase/PLC6.jpg)
 
 ## 4 软件编程
 机械臂程序
@@ -55,10 +55,10 @@ while 1:
 mc.set_basic_output(5,0)
 ```
 **PLC程序**
-![](../../resource\3-FunctionsAndApplications\7.SuccessfulCase/PLC7.png)
+![](../../resource\3-FunctionsAndApplications\8.SuccessfulCase/PLC7.png)
 
 ## 5.效果展示
-![](../../resource\3-FunctionsAndApplications\7.SuccessfulCase/PLC8.gif)
+![](../../resource\3-FunctionsAndApplications\8.SuccessfulCase/PLC8.gif)
 
 
-[← 上一章](../6.developmentGuide/README.md) | [下一章 →](../8.SupportingResources/README.md)
+[← 上一章](../7.UNOQDevelopmentBoard/README.md) | [下一章 →](../9.SupportingResources/README.md)

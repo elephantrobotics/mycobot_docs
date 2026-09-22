@@ -1,4 +1,4 @@
-# Chapter 7 Successful Cases
+# Chapter 8 Successful Cases
 
 myCobot 280 series robot arms support more than ten kinds of accessories, including bases, end extensions, peripheral products, etc. Multiple accessories can be stacked to complete complex project applications and meet the needs of commercial exhibitions, such as robot application model display, educational teaching package display, and industrial 4.0 application scenario display. Supports multiple mainstream programming languages ​​such as python and C++ to meet the diverse needs of developers.
 
@@ -59,4 +59,4 @@ mc.set_basic_output(5,0)
 ## 5. Effect display
 ![](../../resource\3-FunctionsAndApplications\7.SuccessfulCase/PLC8.gif)
 
-[← Previous chapter](../6.developmentGuide/README.md) | [Next chapter →](../8.SupportingResources/README.md)
+[← Previous chapter](../6.developmentGuide/README.md) | [Next chapter →](../9.SupportingResources/README.md)

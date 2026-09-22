@@ -10,8 +10,8 @@ API (Application Programming Interface), also known as Application Programming I
 # Example
 from pymycobot import MyCobot280
 
-mc = MyCobot280('COM3', 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
-time.sleep(2)
+mc = MyCobot280('COM3')
+
 # Gets the current angle of all joints
 angles = mc.get_angles()
 print(angles)
@@ -20,21 +20,92 @@ print(angles)
 mc.send_angle(1, 40, 20)
 ```
 
->>**Note:** Some function interfaces have return values, but if you enter the code directly, the result returned is no return value. You need to use the print function to print out the result. For example, if you want to get the current angle value of the robot arm, you can use get_angles(), but directly entering this function will not give you any result. The correct way to write it is: print(get_angles()) to print out the speed value. If the API description below indicates that there is no return value, you do not need to use the print function. Otherwise, you need to use the print function to print the result.
+### Arduino UNO Q Connection Modes
+
+When using myCobot 280 with Arduino UNO Q, choose the initialization method according to where the Python program runs.
+
+| Python Runtime Location | Recommended Class | Communication Path |
+| --- | --- | --- |
+| PC / host computer | `MyCobot280Socket` | PC TCP -> UNO Q socket server -> `XferBridgeMsg` -> firmware |
+| UNO Q Debian / App Lab | `MyCobot280` | Python Bridge RPC -> `XferBridgeMsg` -> firmware |
+
+The UNO Q firmware side does not instantiate `pymycobot` directly. The firmware only needs to provide `XferBridgeMsg`; the Python program runs on either the PC or the UNO Q Linux/App Lab environment.
+
+#### Local Control on UNO Q Debian / App Lab
+
+When the Python program runs in the UNO Q Debian or App Lab environment, use Bridge RPC mode:
+
+```python
+from pymycobot import MyCobot280
+
+mc = MyCobot280(unoq_bridge=True)
+
+print(mc.get_system_version())
+print(mc.get_angles())
+mc.send_angle(5, 0, 60)
+```
+
+- When `unoq_bridge=True`, the library does not open or check the `/dev/mycobot` serial device.
+- `baudrate` is optional and defaults to `1000000`; pass it explicitly only when overriding the default.
+- `timeout` is specified in seconds and is converted to milliseconds for Bridge RPC.
+- This mode requires `arduino.app_utils.Bridge` in the UNO Q environment. Do not enable it on a normal PC environment where this module is not installed.
+- The firmware must provide `XferBridgeMsg(frame_hex, timeout_ms, baudrate)` and transparently pass through myCobot protocol frames.
+- Firmware response `FE FE 03 5B 01 FA` means timeout, and `FE FE 03 5B 02 FA` means partial frame. When `debug=True` is enabled, `_bridge_error` and the raw frame are written to the log.
+
+Normally, only `unoq_bridge=True` is required for initialization. In Bridge mode, the `port` argument is kept only for compatibility with existing code and is not used to access a serial device.
+
+#### Remote TCP Control from a PC
+
+When the Python program runs on a PC and the robot is connected to UNO Q, start the socket server on UNO Q and use `MyCobot280Socket` on the PC:
+
+```python
+from pymycobot import MyCobot280Socket
+
+mc = MyCobot280Socket("192.168.1.218", 9000, timeout=1.0)
+
+print(mc.get_angles())
+mc.send_angle(5, 0, 60)
+```
+
+The UNO Q socket server example is `Server_280_UNOQ.py`. It uses `XferBridgeMsg` internally to communicate with the firmware. The PC client still sends and receives the original myCobot protocol frames, so the upper-level API remains the same as normal `MyCobot280Socket` usage.
+
+In TCP mode, firmware timeout or partial-frame responses are also logged by the UNO Q socket server as `_bridge_error` with the raw error frame for field diagnostics.
 
 ### 1. System Status
 
-#### 1.1 `get_system_version()`
+#### `get_modify_version()`
+
+- **Function:** Check the robot correction version
+
+- **Return value:** Corrected version number
+
+#### `clear_queue()`
+
+- **Function:** Clear the queue data
+
+- **Return value:** 1
+
+#### `check_async_or_sync()`
+
+- **Function:** Check whether it is synchronous or asynchronous
+
+- **Return value:**
+
+  - `1`: synchronous
+
+  - `0`: asynchronous
+
+#### `get_system_version()`
 
 - **function：** get system version
 - **Return value：** system version
 
-#### 1.2 `get_basic_version()`
+#### `get_basic_version()`
 
 - **function：** Get basic firmware version for M5 version
 - **Return value：** `float` firmware version
 
-#### 1.3 `get_error_information()`
+#### `get_error_information()`
 
 - **function：** Obtaining robot error information
 
@@ -45,27 +116,32 @@ mc.send_angle(1, 40, 20)
     - 32: Kinematics inverse solution has no solution.
     - 33 ~ 34: Linear motion has no adjacent solution.
 
-#### 1.4 `clear_error_information()`
+#### `clear_error_information()`
 
 - **function:** Clear robot error message
 
+#### `get_reboot_count()`
+
+- **function:** Get the number of times the machine has been restarted (calculated from the time the firmware is burned)
+- **Return value:** `int` Number of restarts
+
 ### 2. Overall Status
 
-#### 2.1 `power_on()`
+#### `power_on()`
 
 - **function:** atom open communication (default open)
 
 - **Return value:**
   - `1` - Power on completed.
 
-#### 2.2 `power_off()`
+#### `power_off()`
 
 - **function:** Power off of the robotic arm
 
 - **Return value:**
   - `1` - Power on completed.
 
-#### 2.3 `is_power_on()`
+#### `is_power_on()`
 
 - **function:** judge whether robot arms is powered on or not
 
@@ -74,7 +150,7 @@ mc.send_angle(1, 40, 20)
   - `0`: power off
   - `-1`: error
 
-#### 2.4 `release_all_servos()`
+#### `release_all_servos()`
 
 - **function:** release all robot arms
   - Attentions：After the joint is disabled, it needs to be enabled to control within 1 second
@@ -82,7 +158,7 @@ mc.send_angle(1, 40, 20)
 - **Return value:**
   - `1` - release completed.
 
-#### 2.5 `focus_servo(servo_id)`
+#### `focus_servo(servo_id)`
 
 - **function:** Power on designated servo
 
@@ -92,7 +168,7 @@ mc.send_angle(1, 40, 20)
 - **Return value:**
   - `1`: complete
 
-#### 2.6 `is_controller_connected()`
+#### `is_controller_connected()`
 
 - **function:** Wether connected with Atom
 
@@ -101,7 +177,7 @@ mc.send_angle(1, 40, 20)
   - `0`: failed
   - `-1`: error data
 
-#### 2.7 `read_next_error()`
+#### `read_next_error()`
 
 - **function:** Robot Error Detection
 
@@ -111,7 +187,7 @@ mc.send_angle(1, 40, 20)
   - `2`: Unstable communication
   - `3`: Servo abnormality
   
-#### 2.8 `get_fresh_mode()`
+#### `get_fresh_mode()`
 
 - **function:** Query sports mode
 
@@ -119,7 +195,7 @@ mc.send_angle(1, 40, 20)
   - `0`: Interpolation mode
   - `1`: Refresh mode
 
-#### 2.9 `set_fresh_mode()`
+#### `set_fresh_mode()`
 
 - **function:** Set command refresh mode
   
@@ -130,7 +206,7 @@ mc.send_angle(1, 40, 20)
 - **Return value:** 
   - `1`: complete
 
-#### 2.10 `set_free_mode()`
+#### `set_free_mode()`
 
 - **function:** set to free mode
   
@@ -141,7 +217,7 @@ mc.send_angle(1, 40, 20)
 - **Return value:** 
   - `1`: complete
 
-#### 2.11 `is_free_mode()`
+#### `is_free_mode()`
 
 - **function:** Check if it is free mode
 
@@ -149,16 +225,16 @@ mc.send_angle(1, 40, 20)
   - `1`: free mode
   - `0`: on-free mode
 
-#### 2.12 `focus_all servos()`
+#### `focus_all_servos()`
 
 - **Function:** All servos are powered on
 
 - **Return value:**
-  - `1`: complete
+- `1`: complete
 
-#### 2.13 `set_vision_mode()`
+#### `set_vision_mode()`
 
-- **Function:** Set the vision tracking mode, limit the attitude flip of send_coords in refresh mode. (Applicable only to vision tracking function)
+- **Function:** Set the vision tracking mode, limit the posture flipping of send_coords in refresh mode. (Applicable only to vision tracking function)
 
 - **Parameter:**
   - `1`: open
@@ -169,56 +245,37 @@ mc.send_angle(1, 40, 20)
 
 ### 3.MDI Mode and Operation
 
-#### 3.1 `get_angles()`
+#### `get_angles()`
 
 - **function:** get the degree of all joints
 - **Return value**: `list  `a float list of all degree
 
-#### 3.2 `send_angle(id, degree, speed)`
+#### `get_angles_plan()`
+
+- **Function:** Get the planned angles of all joints
+
+- **Return value**: `list` List of floating points of all degrees
+
+#### `send_angle(id, degree, speed)`
 
 - **function:** send one degree of joint to robot arm
 - **Parameters:**
-  - `id`: Joint id, range int 1-6
+  - `id`: Joint id(`genre.Angle`), range int 1-6
   - `degree`: degree value(`float`)
-  
-  >> **Note:** ⚠ This joint limit information function is only available on Atom firmware ≥ 7.3 and pymycobot library ≥ 4.0.2.
-  
-    <table>
-      <tr>
-             <th>Joint Id</th>
-             <th>Range</th>
-      </tr>
-      <tr>
-             <td text-align: center>1</td>
-             <td>-168 ~ 168</td>
-      </tr>
-      <tr>
-             <td>2</td>
-             <td>-140 ~ 140</td>
-      </tr>
-      <tr>
-             <td>3</td>
-             <td>-150 ~ 150</td>
-      </tr>
-        <tr>
-             <td>4</td>
-             <td> -150 ~ 150</td>
-      </tr>
-      <tr>
-             <td>5</td>
-             <td>-155 ~ 160</td>
-      </tr>
-      <tr>
-             <td>6</td>
-             <td>-180 ~ 180</td>
-      </tr>
-    </table>
+    | Joint Id | range |
+    | ---- | ---- |
+    | 1 | -168 ~ 168 |
+    | 2 | -135 ~ 135 |
+    | 3 | -150 ~ 150 |
+    | 4 | -145 ~ 145 |
+    | 5 | -155 ~ 160 |
+    | 6 | -180 ~ 180 |
 
   - `speed`：the speed and range of the robotic arm's movement 1~100
 - **Return value:** 
   - `1`: complete
 
-#### 3.3 `send_angles(angles, speed)`
+#### `send_angles(angles, speed)`
 
 - **function：** Send all angles to all joints of the robotic arm
 - **Parameters:**
@@ -227,54 +284,35 @@ mc.send_angle(1, 40, 20)
 - **Return value:** 
   - `1`: complete
 
-#### 3.4 `get_coords()`
+#### `get_coords()`
 
 - **function:** Obtain robot arm coordinates from a base based coordinate system
 - **Return value:** a float list of coord:[x, y, z, rx, ry, rz]
 
-#### 3.5 `send_coord(id, coord, speed)`
+#### `get_coords_plan()`
+
+- **Function:** Get the planned coordinates of the robot arm from the reference-based coordinate system
+- **Return value:** List of floating point coordinates: [x, y, z, rx, ry, rz]
+
+#### `send_coord(id, coord, speed)`
 
 - **function:** send one coord to robot arm
 - **Parameters:**
   - `id`:send one coord to robot arm, 1-6 corresponds to [x, y, z, rx, ry, rz]
   - `coord`: coord value(`float`)
-  
-    <table>
-      <tr>
-             <th>Coord ID</th>
-             <th>Range</th>
-      </tr>
-      <tr>
-             <td text-align: center>x</td>
-             <td>-281.45 ~ 281.45</td>
-      </tr>
-      <tr>
-             <td>y</td>
-             <td>-281.45 ~ 281.45</td>
-      </tr>
-      <tr>
-             <td>z</td>
-             <td>-70 ~ 412.67</td>
-      </tr>
-        <tr>
-             <td>rx</td>
-             <td> -180 ~ 180</td>
-      </tr>
-      <tr>
-             <td>ry</td>
-             <td>-180 ~ 180</td>
-      </tr>
-      <tr>
-             <td>rz</td>
-             <td>-180 ~ 180</td>
-      </tr>
-    </table>
-
+    | Coord Id | range |
+    | ---- | ---- |
+    | x | -281.45 ~ 281.45 |
+    | y | -281.45 ~ 281.45 |
+    | z | -70 ~ 412.67 |
+    | rx | -180 ~ 180 |
+    | ry | -180 ~ 180 |
+    | rz | -180 ~ 180 |
   - `speed`: (`int`) 1-100
 - **Return value:** 
   - `1`: complete
 
-#### 3.6 `send_coords(coords, speed, mode)`
+#### `send_coords(coords, speed, mode)`
 
 - **function:**: Send overall coordinates and posture to move the head of the robotic arm from its original point to your specified point
 - **Parameters:**
@@ -284,7 +322,7 @@ mc.send_angle(1, 40, 20)
 - **Return value:** 
   - `1`: complete
 
-#### 3.7 `pause()`
+#### `pause()`
 
 - **function:** Control the instruction to pause the core and stop all movement instructions
 - **Return value**:
@@ -292,34 +330,34 @@ mc.send_angle(1, 40, 20)
   - `0` - not stop
   - `-1` - error
 
-#### 3.8 `sync_send_angles(angles, speed, timeout=15)`
+#### `sync_send_angles(angles, speed, timeout=15)`
 
 - **function：** Send the angle in synchronous state and return when the target point is reached
 - **Parameters:**
   - `angles`: a list of degree value(`List[float]`), length 6
   - `speed`: (`int`) 1 ~ 100
-  - `timeout`: default 15 seconds
+  - `timeout`: default 15 s
 - **Return value:**
-  - `1`: complete
+  - `1` - complete
 
-#### 3.9 `sync_send_coords(coords, speed, mode=0, timeout=15)`
+#### `sync_send_coords(coords, speed, mode=0, timeout=15)`
 
 - **function：** Send the coord in synchronous state and return when the target point is reached
 - **Parameters:**
   - `coords`: a list of coord value(`List[float]`), length 6
   - `speed`: (`int`) 1 ~ 100
   - `mode`: (`int`) 0 - angular（default）, 1 - linear
-  - `timeout`: default 15 seconds
+  - `timeout`: default 15 s
 - **Return value:**
-  - `1`: complete
+  - `1` - complete
 
-#### 3.10 `get_angles_coords()`
+#### `get_angles_coords()`
 
 - **function：** Get joint angles and coordinates
 
 - **Return value:** A list with a length of 12. The first six digits are angle information, and the last six digits are coordinate information. 
 
-#### 3.11 `is_paused()`
+#### `is_paused()`
 
 - **function:** Check if the program has paused the move command
 - **Return value:**
@@ -327,13 +365,13 @@ mc.send_angle(1, 40, 20)
   - `0` - not paused
   - `-1` - error
 
-#### 3.12 `resume()`
+#### `resume()`
 
 - **function:** resume the robot movement and complete the previous command
 - **Return value:**
   - `1` - complete
 
-#### 3.13 `stop()`
+#### `stop()`
 
 - **function:** stop all movements of robot
 - **Return value**:
@@ -341,7 +379,7 @@ mc.send_angle(1, 40, 20)
   - `0` - not stop
   - `-1` - error
 
-#### 3.14 `is_in_position(data, flag)`
+#### `is_in_position(data, flag)`
 
 - **function** : judge whether in the position.
 - **Parameters:**
@@ -354,7 +392,7 @@ mc.send_angle(1, 40, 20)
   - `0` - false
   - `-1 ` - error
 
-#### 3.15 `is_moving()`
+#### `is_moving()`
 
 - **function:** judge whether the robot is moving
 - **Return value:**
@@ -362,14 +400,14 @@ mc.send_angle(1, 40, 20)
   - `0` not moving
   - `-1` error
 
-#### 3.16 `angles_to_coords(angles)`
+#### `angles_to_coords(angles)`
 
 - **Function** : Convert angles to coordinates.
 - **Parameters:**
   - `angles`: `list` List of floating points for all angles.
 - **Return value**: `list` List of floating points for all coordinates.
 
-#### 3.17 `solve_inv_kinematics(target_coords, current_angles)`
+#### `solve_inv_kinematics(target_coords, current_angles)`
 
 - **Function** : Convert coordinates to angles.
 - **Parameters:**
@@ -377,9 +415,39 @@ mc.send_angle(1, 40, 20)
   - `current_angles`: `list` List of floating points for all angles, current angles of the robot
 - **Return value**: `list` List of floating points for all angles.
 
+#### `drag_start_record()`
+
+- **Function** : Start trajectory recording.
+
+- **Return value**: `int` Recording queue length.
+
+#### `drag_end_record()`
+
+- **Function** : End trajectory recording.
+
+- **Return value**: `int` Recording queue length.
+
+#### `drag_get_record_data()`
+
+- **Function** : Get the recorded trajectory. This interface can be used with the `drag_get_record_len` interface. If the queue length is 0, it returns -1.
+
+- **Return value**: `list` List of potential values ​​(encoder values) and motion speeds of each joint. eg: `[[J1_encoder,J2_encoder,J3_encoder,J4_encoder, J5_encoder, J6_encoder],[J1_run_speed, J2_run_speed, J3_run_speed, J4_run_speed, J5_run_speed, J6_run_speed]]`
+
+#### `drag_get_record_len()`
+
+- **Function** : Get the total number of recording points.
+
+- **Return value**: `int` Recording queue length.
+
+#### `drag_clear_record_data()`
+
+- **Function** : Clear the recording track.
+
+- **Return value**: `int` Recording queue length.
+
 ### 4. JOG Mode and Operation
 
-#### 4.1 `jog_angle(joint_id, direction, speed)`
+#### `jog_angle(joint_id, direction, speed)`
 
 - **function:** jog control angle
 - **Parameters**:
@@ -389,7 +457,7 @@ mc.send_angle(1, 40, 20)
 - **Return value:**
   - `1`: complete
 
-#### 4.2 `jog_coord(coord_id, direction, speed)`
+#### `jog_coord(coord_id, direction, speed)`
 
 - **function:** jog control coord.
 - **Parameters:**
@@ -399,7 +467,7 @@ mc.send_angle(1, 40, 20)
 - **Return value:**
   - `1`: complete
 
-#### 4.3 `jog_rpy(end_direction, direction, speed)`
+#### `jog_rpy(end_direction, direction, speed)`
 
 - **function:** Rotate the end around a fixed axis in the base coordinate system
 - **Parameters:**
@@ -409,27 +477,27 @@ mc.send_angle(1, 40, 20)
 - **Return value:**
   - `1`: complete
 
-#### 4.4 `jog_increment_angle(joint_id, increment, speed)`
+#### `jog_increment_angle(joint_id, increment, speed)`
 
-- **Function**: Angle stepping, single joint angle increment control
-- **Parameter**:
+- **function:** Angle step, single joint angle increment control
+- **Parameters**:
   - `joint_id`: 1-6
   - `increment`: Incremental movement based on the current position angle
-  - `speed`: 1~100
+  - `speed`: 1 ~ 100
 - **Return value:**
-  - `1`: Completed
+  - `1`: completed
 
-#### 4.5 `jog_increment_coord(id, increment, speed)`
+#### `jog_increment_coord(id, increment, speed)`
 
-- **Function**: Coordinate stepping, single coordinate increment control
-- **Parameter**:
-  - `id`: Coordinate axis 1-6
-  - `increment`: Incremental movement based on the current position coordinate
-  - `speed`: 1~100
+- **function:** Coord step, single coord increment control
+- **Parameters**:
+  - `id`: axis 1-6
+  - `increment`: Incremental movement based on the current position coord
+  - `speed`: 1 ~ 100
 - **Return value:**
-  - `1`: Completed
+  - `1`: completed
 
-#### 4.6 `set_encoder(joint_id, encoder, speed)`
+#### `set_encoder(joint_id, encoder, speed)`
 
 - **function**: Set a single joint rotation to the specified potential value
 
@@ -441,7 +509,7 @@ mc.send_angle(1, 40, 20)
 - **Return value:**
   - `1`: complete
 
-#### 4.7 `get_encoder(joint_id)`
+#### `get_encoder(joint_id)`
 
 - **function**: Set a single joint rotation to the specified potential value
 
@@ -451,7 +519,7 @@ mc.send_angle(1, 40, 20)
 
 - **Return value:** (`int`) Joint potential value
 
-#### 4.8 `set_encoders(encoders, speed)`
+#### `set_encoders(encoders, speed)`
 
 - **function**: Set the six joints of the manipulator to execute synchronously to the specified position.
 
@@ -463,7 +531,7 @@ mc.send_angle(1, 40, 20)
 - **Return value:**
   - `1`: complete
 
-#### 4.9 `get_encoders()`
+#### `get_encoders()`
 
 - **function**: Get the six joints of the manipulator.
 
@@ -471,41 +539,41 @@ mc.send_angle(1, 40, 20)
 
 ### 5. Running status and Settings
 
-#### 5.1 `get_joint_min_angle(joint_id)`
+#### `get_joint_min_angle(joint_id)`
 
 - **function:** Gets the minimum movement angle of the specified joint
 - **Parameters:**
   - ` joint_id` : Enter joint ID (range 1-6)
 - **Return value**：`float` Angle value
 
-#### 5.2 `get_joint_max_angle(joint_id)`
+#### `get_joint_max_angle(joint_id)`
 
 - **function:** Gets the maximum movement angle of the specified joint
 - **Parameters:**
   - ` joint_id` : Enter joint ID (range 1-6)
 - **Return value:** `float` Angle value
 
-#### 5.3 `set_joint_min(id, angle)`
+#### `set_joint_min(id, angle)`
 
 - **function:** Set minimum joint angle limit
 - **Parameters:**
   - `id` : Enter joint ID (range 1-6)
-  - `angle`: Refer to the limit information of the corresponding joint in the [send_angle()](#32-send_angleid-degree-speed) interface, which must not be less than the minimum value
+  - `angle`: Refer to the limit information of the corresponding joint in the [send_angle()](#send_angleid-degree-speed) interface, which must not be less than the minimum value
 - **Return value:**
   - `1`: complete
 
-#### 5.4 `set_joint_max(id, angle)`
+#### `set_joint_max(id, angle)`
 
 - **function:** Set maximum joint angle limit
 - **Parameters:**
   - `id` : Enter joint ID (range 1-6)
-  - `angle`: Refer to the limit information of the corresponding joint in the [send_angle()](#32-send_angleid-degree-speed) interface, which must not be greater than the maximum value
+  - `angle`: Refer to the limit information of the corresponding joint in the [send_angle()](#send_angleid-degree-speed) interface, which must not be greater than the maximum value
 - **Return value:**
   - `1`: complete
   
 ### 6. Joint motor control
 
-#### 6.1 `is_servo_enable(servo_id)`
+#### `is_servo_enable(servo_id)`
 
 - **function:** Detecting joint connection status
 - **Parameters:** `servo id` 1-6
@@ -514,7 +582,7 @@ mc.send_angle(1, 40, 20)
   - `0`: not connected
   - `-1`: error
 
-#### 6.2 `is_all_servo_enable()`
+#### `is_all_servo_enable()`
 
 - **function:** Detect the status of all joint connections
 - **Return value:**
@@ -522,7 +590,7 @@ mc.send_angle(1, 40, 20)
   - `0`: not connected
   - `-1`: error
 
-#### 6.3 `set_servo_calibration(servo_id)`
+#### `set_servo_calibration(servo_id)`
 
 - **function:** The current position of the calibration joint actuator is the angle zero point
 - **Parameters**:
@@ -530,7 +598,7 @@ mc.send_angle(1, 40, 20)
 - **Return value:**
   - `1`: complete
 
-#### 6.4 `release_servo(servo_id)`
+#### `release_servo(servo_id)`
 
 - **function:** Set the specified joint torque output to turn off
 - **Parameters**:
@@ -540,7 +608,7 @@ mc.send_angle(1, 40, 20)
   - `0`: release failed
   - `-1`: error
 
-#### 6.5 `focus_servo(servo_id)`
+#### `focus_servo(servo_id)`
 
 - **function**: Set the specified joint torque output to turn on
 - **Parameters**: `servo_id`: 1 ~ 6
@@ -549,7 +617,7 @@ mc.send_angle(1, 40, 20)
   - `0`: focus failed
   - `-1`: error
 
-#### 6.6 `set_servo_data(servo_id, data_id,  value, mode=None）`
+#### `set_servo_data(servo_id, data_id,  value, mode=None）`
 
 - **function:** Set the data parameters of the specified address of the steering gear
 - **Parameters**：
@@ -560,7 +628,7 @@ mc.send_angle(1, 40, 20)
 - **Return value:** 
   - `1`: complete
 
-#### 6.7 `get_servo_data(servo_id, data_id, mode=None）`
+#### `get_servo_data(servo_id, data_id, mode=None）`
 
 - **function:** Read the data parameter of the specified address of the steering gear.
 - **Parameters**：
@@ -569,7 +637,7 @@ mc.send_angle(1, 40, 20)
   - `mode`: 0 - indicates that value is one byte(default), 1 - 1 represents a value of two bytes.
 - **Return value:** 0 ~ 4096
 
-#### 6.8 `joint_brake(joint_id）`
+#### `joint_brake(joint_id）`
 
 - **function:** Make it stop when the joint is in motion, and the buffer distance is positively related to the existing speed
 - **Parameters**：
@@ -580,13 +648,13 @@ mc.send_angle(1, 40, 20)
 
 ### 7. 9g Servo
 
-#### 7.1 `move_round()`
+#### `move_round()`
 
 - **function**：Drive the 9g steering gear clockwise for one revolution
 - **Return value**：
   - `1`: complete
 
-#### 7.2 `set_four_pieces_zero()`
+#### `set_four_pieces_zero()`
 
 - **function**：Set the zero position of the four-piece motor
 - **Return value**：
@@ -595,29 +663,49 @@ mc.send_angle(1, 40, 20)
 
 ### 8. Servo state value
 
-#### 8.1 `get_servo_speeds()`
+#### `get_servo_speeds()`
 
 - **function**：Get the movement speed of all joints
 - **Return value**： A list unit step/s
 
-#### 8.2 `get_servo_voltages()`
+#### `get_servo_voltages()`
 
 - **function**：Get joint voltages
 - **Return value**： A list volts < 24 V
 
-#### 8.3 `get_servo_status()`
+#### `get_servo_status()`
 
 - **function**：Get the movement status of all joints
 - **Return value**： A list,[voltage, sensor, temperature, current, angle, overload], a value of `0` means no error, a value of `1` indicates an error
 
-#### 8.4 `get_servo_temps()`
+#### `get_servo_temps()`
 
 - **function**：Get joint temperature
 - **Return value**： A list unit ℃
 
+#### `backup_servo_params(servo_id)`
+
+- **Function**: Backs up servo parameters. Requires firmware version 7.4.0 or higher. (Confirms the use of existing parameters.)
+- **Parameters**:
+
+  - `servo_id (int)`: Servo ID; range: 1 ~ 6; 254 - all servos.
+
+- **Return Value**:
+  - `1`: Complete.
+
+#### `restore_servo_params(servo_id)`
+
+- **Function**: Restores servo parameters. Requires firmware version 7.4.0 or higher. (Effective only if a parameter backup has previously been performed.)
+- **Parameters**:
+
+  - `servo_id (int)`: Servo ID; range: 1 ~ 6; 254 - all servos.
+
+- **Return Value**:
+  - `1`: Complete.
+
 ### 9. Robotic arm end IO control
 
-#### 9.1 `set_color(r, g, b)`
+#### `set_color(r, g, b)`
 
 - **function**: Set the color of the end light of the robotic arm
 
@@ -631,7 +719,7 @@ mc.send_angle(1, 40, 20)
 - **Return value**：
   - `1`: complete
   
-#### 9.2 `set_digital_output(pin_no, pin_signal)`
+#### `set_digital_output(pin_no, pin_signal)`
 
 - **function:** set IO statue
 - **Parameters**
@@ -640,13 +728,13 @@ mc.send_angle(1, 40, 20)
 - **Return value**：
   - `1`: complete
 
-#### 9.3 `get_digital_input(pin_no)`
+#### `get_digital_input(pin_no)`
 
 - **function:** read IO statue
 - **Parameters**: `pin_no` (int)
 - **Return value**: signal
 
-#### 9.4 `set_pin_mode(pin_no, pin_mode)`
+#### `set_pin_mode(pin_no, pin_mode)`
 
 - **function:** Set the state mode of the specified pin in atom.
 - **Parameters**
@@ -657,7 +745,7 @@ mc.send_angle(1, 40, 20)
 
 ### 10. Robotic arm end gripper control
 
-#### 10.1 `set_gripper_state(flag, speed, _type_1=None, is_torque=None)`
+#### `set_gripper_state(flag, speed, _type_1=None)`
 
 - **function**: Adaptive gripper enable
 
@@ -676,15 +764,10 @@ mc.send_angle(1, 40, 20)
     - `3` : Parallel gripper
 
     - `4` : Flexible gripper
-  - `is_torque (int)`: Whether the gripper is force-controlled. This parameter can be omitted if no type parameter is specified. (**Note: This parameter is only supported when the end-end Atom firmware version is ≥ 6.5**)
-
-    - `0`: Non-force-controlled gripper
-
-    - `1`: Force-controlled gripper
 - **Return value**：
   - `1`: complete
 
-#### 10.2 `set_gripper_value(gripper_value, speed, gripper_type=None, is_torque=None)`
+#### `set_gripper_value(gripper_value, speed, gripper_type=None)`
 
 - **function**: Set the gripper value
 
@@ -698,24 +781,27 @@ mc.send_angle(1, 40, 20)
 
     - `1` : Adaptive gripper (default state is 1)
 
+    - `2` : A nimble hand with 5 fingers
+
     - `3` : Parallel gripper
 
     - `4` : Flexible gripper
-  - `is_torque (int)`: Whether the gripper is force-controlled. This parameter can be omitted if no type parameter is specified. (**Note: This parameter is only supported when the end-end Atom firmware version is ≥ 6.5**)
-
-    - `0`: Non-force-controlled gripper
-
-    - `1`: Force-controlled gripper
 - **Return value**：
   - `1`: complete
 
-#### 10.3 `set_gripper_calibration()`
+#### `gripper_stop()`
+
+- **Function**: Stop gripper movement
+- **Return value**:
+  - `1`: Completed
+
+#### `set_gripper_calibration()`
 
 - **function**: Set the current position of the gripper to zero
 - **Return value**：
   - `1`: complete
 
-#### 10.4 `is_gripper_moving()`
+#### `is_gripper_moving()`
 
 - **function**: Judge whether the gripper is moving or not
 - **Return value**：
@@ -723,7 +809,7 @@ mc.send_angle(1, 40, 20)
   - `1`: is moving
   - `-1`: error data
 
-#### 10.5 `get_gripper_value()`
+#### `get_gripper_value()`
 
 - **function**: Get the value of gripper
 - **Parameters**:
@@ -733,7 +819,7 @@ mc.send_angle(1, 40, 20)
     - 4: Flexible gripper
 - **Return value**：gripper value (int)
   
-#### 10.6 `set_pwm_output(channel, frequency, pin_val)`
+#### `set_pwm_output(channel, frequency, pin_val)`
 
 - **function**: PWM control
 - **Parameters**:
@@ -743,7 +829,7 @@ mc.send_angle(1, 40, 20)
 - **Return value**：
   - `1`: complete
 
-#### 10.7 `set_HTS_gripper_torque(torque)`
+#### `set_HTS_gripper_torque(torque)`
 
 - **function**: Set new adaptive gripper torque
 - **Parameters**: 
@@ -752,17 +838,17 @@ mc.send_angle(1, 40, 20)
   - `0`: Set failed
   - `1`: Set successful
 
-#### 10.8 `get_HTS_gripper_torque()`
+#### `get_HTS_gripper_torque()`
 
 - **function**: Get gripper torque
 - **Return value**:  (int) 150 ~ 980
 
-#### 10.9 `get_gripper_protect_current()`
+#### `get_gripper_protect_current()`
 
 - **function**: Get the gripper protection current
 - **Return value**:  (int) 1 ~ 500
 
-#### 10.10 `set_gripper_protect_current(current)`
+#### `set_gripper_protect_current(current)`
 
 - **function**: Set the gripper protection current
 - **Parameters**: 
@@ -770,56 +856,62 @@ mc.send_angle(1, 40, 20)
 - **Return value**:
   - `1`: complete
 
-#### 10.11 `init_gripper()`
+#### `init_gripper()`
 
 - **function**: Initialize gripper
 - **Return value**: 
   - `1`: complete
 
-#### 10.12 `gripper_stop()`
-
->> **Note:** Atom firmware version 7.3 or higher is required.
-
-- **Function**: Stop gripper movement
-- **Return value**:
-  - `1`: Completed
-
-#### 10.13 `is_torque_gripper()`
-
-- **Function**: Determines if the gripper is a force-controlled gripper type
-
-- **Return Value**:
-
-  - `40`: Force-controlled gripper
-
-  - `9`: Non-force-controlled gripper
-
 ### 11. Set bottom IO input/output status
 
-#### 11.1 `set_basic_output(pin_no, pin_signal)`
+#### `set_basic_output(pin_no, pin_signal)`
 
 - **function**：Set Base IO Output
 - **Parameters**：
   - `pin_no` (`int`) Pin port number
   - `pin_signal` (`int`): 0 - low. 1 - high
 
-#### 11.2 `get_basic_input(pin_no)`
+#### `get_basic_input(pin_no)`
 
 - **function:** Read base IO input
 - **Parameters:**
   - `pin_no` (`int`) pin number
 - **Return value:** 0 - low. 1 - high
 
-### 12. TOF
+### 12. WLAN Setting
 
-#### 12.1 `get_tof_distance()`
+#### `set_ssid_pwd(account, password)`
+
+- **function:** Change connected wifi. (Apply to m5)
+- **Parameters:**
+  - `account` (`str`) new wifi account
+  - `password` (`str`) new wifi password
+- **Return value:**
+   - `1`: complete
+
+#### `get_ssid_pwd()`
+
+- **function:** Get connected wifi account and password. (Apply to m5)
+- **Return value:** (account, password)
+
+#### `set_server_port(port)`
+
+- **function:** Change the connection port of the server
+- **Parameters:**
+  - `port` (`int`) The new connection port of the server.
+- **Return value:**
+   - `1`: complete
+
+### 13. TOF
+
+#### `get_tof_distance()`
 
 - **function:** Get the detected distance (Requires external distance detector)
 - **Return value:** (int) The unit is mm.
 
-### 13. Communication mode
+### 14. Communication mode
 
-#### 13.1 `set_transponder_mode(mode)`
+#### `set_transponder_mode(mode)`
 
 - **function:** Set basic communication mode
 - **Parameters:**
@@ -827,7 +919,7 @@ mc.send_angle(1, 40, 20)
 - **Return value:**
    - `1`: complete
 
-#### 13.2 `get_transponder_mode()`
+#### `get_transponder_mode()`
 
 - **function:** Get basic communication mode
 - **Parameters:**
@@ -835,9 +927,9 @@ mc.send_angle(1, 40, 20)
    - `1`: Open transparent 
    - `0`: Turn off transparent transmission
 
-### 14. Cartesian space coordinate parameter setting
+### 15. Cartesian space coordinate parameter setting
 
-#### 14.1 `set_tool_reference(coords)`
+#### `set_tool_reference(coords)`
 
 - **function:** Set tool coordinate system.
 - **Parameters**：
@@ -845,12 +937,12 @@ mc.send_angle(1, 40, 20)
 - **Return value:** 
   - `1`: complete
 
-#### 14.2 `get_tool_reference(coords)`
+#### `get_tool_reference(coords)`
 
 - **function:** Get tool coordinate system.
 - **Return value:** (`list`) [x, y, z, rx, ry, rz]
 
-#### 14.3 `set_world_reference(coords)`
+#### `set_world_reference(coords)`
 
 - **function:** Set world coordinate system.
 - **Parameters**：
@@ -858,24 +950,24 @@ mc.send_angle(1, 40, 20)
 - **Return value:** 
   - `1`: complete
 
-#### 14.4 `get_world_reference()`
+#### `get_world_reference()`
 
 - **function:** Get world coordinate system.
 - **Return value:** `list` [x, y, z, rx, ry, rz].
 
-#### 14.5 `set_reference_frame(rftype)`
+#### `set_reference_frame(rftype)`
 
 - **function:** Set base coordinate system.
 - **Parameters：**`rftype`: 0 - base 1 - tool.
 - **Return value:**
    - `1`: complete
 
-#### 14.6 `get_reference_frame()`
+#### `get_reference_frame()`
 
 - **function:** Get base coordinate system.
 - **Return value:** (`list`) [x, y, z, rx, ry, rz].
 
-#### 14.7 `set_movement_type(move_type)`
+#### `set_movement_type(move_type)`
 
 - **function:** Set movement type.
 - **Parameters**：
@@ -883,14 +975,14 @@ mc.send_angle(1, 40, 20)
 - **Return value:**
    - `1`: complete
 
-#### 14.8 `get_movement_type()`
+#### `get_movement_type()`
 
 - **function:** Get movement type.
 - **Return value:**
   - `1` - movel
   - `0` - moveJ
 
-#### 14.9 `set_end_type(end)`
+#### `set_end_type(end)`
 
 - **function:** Set end coordinate system
 - **Parameters:**
@@ -898,14 +990,34 @@ mc.send_angle(1, 40, 20)
 - **Return value:**
    - `1`: complete
 
-#### 14.10 `get_end_type()`
+#### `get_end_type()`
 
 - **function:** Obtain the end coordinate system
 - **Return value:**
   - `0` - flange
   - `1` - tool
 
-### 15. utils (module)
+
+### 16. Raspberry pi -- GPIO
+
+#### `gpio_init()`
+
+- **function**: Init GPIO module, and set BCM mode.
+- **Return value:**
+   - `1`: complete
+
+#### `gpio_output(pin, v)`
+
+- **function**: Set GPIO port output value.
+
+- **Parameters**
+
+  - `pin` (`int`) Pin number.
+  - `v` (`int`): 0 / 1
+- **Return value:**
+   - `1`: complete
+
+### 17. utils (module)
 
 This module supports some helper methods. Use the code entered at the beginning of the file to import the module:
 
@@ -913,14 +1025,84 @@ This module supports some helper methods. Use the code entered at the beginning 
 from pymycobot import utils
 ```
 
-#### 16.1 `utils.get_port_list()`
+#### `utils.get_port_list()`
 
 - **Function**: Get a list of all current serial port numbers
 
 - **Return value:** Serial port list (`list`)
 
-#### 16.2 `utils.detect_port_of_basic()`
+#### `utils.detect_port_of_basic()`
 
 - **Function**: Return the first detected serial port number of M5 Basic. (Only one serial port number will be returned)
 
 - **Return value:** Return the detected port number. If no serial port number is detected, it will return: None
+
+## MyCobot 280 Socket
+
+> Note:
+> raspberryPi version Only supports python3
+> The robotic arm that uses this class of premise has a server and has been turned on.
+
+Use TCP/IP to control the robotic arm
+
+### Client
+
+```python
+# demo
+from pymycobot import MyCobot280Socket
+# Port 9000 is used by default
+mc = MyCobot280Socket("192.168.10.10", 9000, timeout=1.0)
+
+res = mc.get_angles()
+print(res)
+
+mc.send_angles([0,0,0,0,0,0],20)
+...
+```
+
+### Server
+
+Server file is in the `demo folder`,For details, please check the `Server_280.py` file in the demo folder
+
+For Arduino UNO Q with the Bridge RPC socket server, use `Server_280_UNOQ.py`. This server calls `XferBridgeMsg` internally and does not depend on the `/dev/mycobot` serial device. The client still uses `MyCobot280Socket(ip, 9000)`, and the socket read timeout can be configured with the `timeout` parameter when needed.
+
+### socket control
+
+> Note:
+> Most of the methods are the same as the class MyCobot280, only the new methods are listed here.
+
+
+#### `set_gpio_mode(mode)`
+
+- **function**: Set pin coding method.
+
+- **Parameters**
+
+  - `mode` (`str`) "BCM" or "BOARD".
+
+#### `set_gpio_out(pin_no, mode)`
+
+- **function**: Set the pin as input or output.
+
+- **Parameters**
+
+  - `pin_no` (`int`) pin id.
+  - `mode` (`str`) "in" or "out"
+
+#### `set_gpio_output(pin_no, state)`
+
+- **function**: Set the pin to high or low level.
+
+- **Parameters**
+
+  - `pin_no` (`int`) pin id.
+  - `state` (`int`) 0 or 1
+
+#### `get_gpio_in(pin_no)`
+
+- **function**: Get pin level status.
+
+- **Parameters**
+
+  - `pin_no` (`int`) pin id.
+- **Return value:** `0` is low level `1` is high level
