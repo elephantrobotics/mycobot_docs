@@ -22,4 +22,4 @@ If you have a certain understanding of information theory, coding, and robot com
 
 ---
 
-[← Previous Chapter](../5.BasicFunction/README.md) | [Next Chapter →](../7.SuccessfulCase/7-SuccessfulCases.md)
+[← Previous Chapter](../5.BasicFunction/README.md) | [Next Chapter →](../8.SuccessfulCase/8-SuccessfulCases.md)
