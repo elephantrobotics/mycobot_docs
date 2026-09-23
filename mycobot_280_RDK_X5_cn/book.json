@@ -10,22 +10,25 @@
     "theme-fexa",
     "splitter",
     "-sharing",
-	"klipse"
+    "klipse"
   ],
   "variables": {
-        "themeFexa":{
-            "showHome": false,
-            "showNavigator": false
-        }
-    },
-   "pluginsConfig": {
-    "theme-fexa":{
-      "search-placeholder":"输入关键字搜索", 
-      "logo":"/photo/logo.png",
-      "logoLink":"https://www.elephantrobotics.com",
+    "themeFexa": {
+      "showHome": false,
+      "showNavigator": false
+    }
+  },
+  "pluginsConfig": {
+    "theme-fexa": {
+      "search-placeholder": "输入关键字搜索",
+      "logo": "/photo/logo.png",
+      "logoLink": "https://www.elephantrobotics.com",
       "favicon": "./favicon.ico"
     },
-    "password": {
-    }
+    "password": {}
+  },
+  "styles": {
+    "ebook": "styles/ebook.css",
+    "pdf": "styles/pdf.css"
   }
 }
