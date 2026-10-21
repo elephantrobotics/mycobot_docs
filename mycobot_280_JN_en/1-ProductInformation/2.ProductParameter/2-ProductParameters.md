@@ -40,7 +40,7 @@
 | Core wireless | 802.11ac |
 | Core video interface | HDMI×1 |
 | Audio interface | 3.5mm interface |
-| USB | USB 3.0×1<br/>USB 2.0×2 |
+| USB | USB 3.0×2<br/>USB 2.0×2 |
 | IO interface | 2,3,4,5,6,7,9,11,12,13,16,17,18,19,20,21,22,23,24,25,26,27 |
 
 ## 3. Structural size parameters
@@ -57,13 +57,13 @@
 >> **Note:** ⚠ This joint limit information function is only available on Atom firmware ≥ 7.3 and pymycobot library ≥ 4.0.2.
 
 | Joint | Range |
-| :--------: | :----------:|
-| J1 | -168 ~ +168 |
-| J2 | -140 ~ +140 |
-| J3 | -150 ~ +150 |
-| J4 | -150 ~ +150 |
-| J5 | -155 ~ +160 |
-| J6 | -180 ~ +180 |
+| ------ | -------------- |
+| J1     | -165° \~ +165° |
+| J2     | -165° \~ +165° |
+| J3     | -165° \~ +165° |
+| J4     | -165° \~ +165° |
+| J5     | -165° \~ +165° |
+| J6     | -175° \~ +175° |
 
 ### 3.4 Hole installation
 
