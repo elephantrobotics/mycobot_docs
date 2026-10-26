@@ -59,4 +59,4 @@ mc.set_basic_output(5,0)
 ## 5. Effect display
 ![](../../resource\3-FunctionsAndApplications\7.SuccessfulCase/PLC8.gif)
 
-[← Previous chapter](../6.developmentGuide/README.md) | [Next chapter →](../9.SupportingResources/README.md)
+[← Previous chapter](../6.developmentGuide/README.md) | [Next chapter →](../8.SupportingResources/README.md)
