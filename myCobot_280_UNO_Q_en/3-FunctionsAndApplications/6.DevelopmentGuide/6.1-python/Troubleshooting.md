@@ -1,0 +1,45 @@
+# 7.5 Logs and Troubleshooting
+
+## 1. Logs and Error Frames
+
+Temporarily enable debug=True during troubleshooting and collect App Lab Console or service logs:
+
+```bash
+journalctl -u mycobot-server.service -n 100 --no-pager
+```
+
+The following Bridge responses are communication errors, not valid robot data:
+
+| Response frame | Meaning |
+| --- | --- |
+| FE FE 03 5B 01 FA | Communication timeout |
+| FE FE 03 5B 02 FA | Partial frame received |
+
+Keep complete send/receive logs, the occurrence time, the control entry point, and reproduction steps.
+
+## 2. Troubleshooting
+
+| Symptom | Check first | Recommended action |
+| --- | --- | --- |
+| ModuleNotFoundError: pymycobot | Whether this runs on the board, in App Lab, or on the PC | Check the delivered board package; check App Lab wheel and requirements; check the PC client environment. |
+| method XferBridgeMsg not available | Complete App structure and Sketch deployment logs | Re-import the complete ZIP and review Start-up and Sketch logs. |
+| Version or angle read timeout | Robot power, D0/D1 wiring, and other control programs | Stop other entries, repeat a read-only test, and save logs. |
+| App Lab cannot recognize UNO Q | USB-C data cable, board startup, and system authorization | Use a data-capable cable, wait for startup, then select the device again. |
+| App starts but robot does not move | Main/Python logs, Sketch logs, and project structure | Run RGB first, then check Bridge method and wiring. |
+| TCP connection refused or timed out | UNO Q IP, same subnet, service state, and port listener | Use the actual IP and check systemctl, ss, and journalctl. |
+| Second TCP client does not respond | Previous client still occupies the connection | Close the old client normally; do not control concurrently. |
+| Gamepad not recognized in SBC mode | Hub power, driver, input device, and project dependency | Run the mapping test first; obtain a matching driver if the kernel differs. |
+| Gripper or pump does not respond | Accessory model, cable, IO, and example command | Check installation and wiring; do not repeat a command on an unknown configuration. |
+
+## 3. Information to Provide When Reporting a Problem
+
+- Device model and the time when the problem occurred.
+- Wiring photo and control entry point used.
+- UNO Q kernel, App Lab, and pymycobot versions.
+- Complete reproduction steps, expected result, and actual result.
+- App Lab Console or journalctl logs.
+- A safely recorded video of abnormal robot motion.
+
+Remove passwords, network credentials, and other sensitive information before sharing logs or screenshots.
+
+[← Previous Section](./6.1.9-Examples.md)
