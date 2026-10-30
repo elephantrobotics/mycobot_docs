@@ -32,7 +32,7 @@
 ---
 
 # Summary
-* [Introduction](README.md)
+* [介绍](README.md)
 * 产品信息
     * [1. 产品简介](1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.md)
     * [2. 产品参数](1-ProductInformation/2.ProductParameter/2-ProductParameters.md)
@@ -68,14 +68,13 @@
         * [6.2.1 App Lab 基础使用](3-FunctionsAndApplications/6.DevelopmentGuide/6.2-applab/6.2.1-GettingStarted.md)
         * [6.2.2 手柄控制](3-FunctionsAndApplications/6.DevelopmentGuide/6.2-applab/6.2.2-Joystick.md)
 
-     
     * [7. 成功案例](3-FunctionsAndApplications/7.SuccessfulCase/7-SuccessfulCases.md)
-      * [机器人夹爪搬运木块案例](demo/280ar_gripper.md)
-      * [280Arduino 手柄遥控案例](demo/280AR_joy.md)
-      * [机器人吸泵搬运木块案例](demo/280ar_pump.md)
-      * [Mega2560-夹爪搬运木块](demo/280ar_mega2560_gripper.md)
-      * [树莓派4B-Stag码视觉跟踪](demo/280ar_raspi4B_camera_flange.md)
-      * [Jetson Xavier NX-物品分类案例](demo/280ar_jetsonxavier_pump.md)
+        * [机器人夹爪搬运木块案例](demo/280ar_gripper.md)
+        * [280Arduino 手柄遥控案例](demo/280AR_joy.md)
+        * [机器人吸泵搬运木块案例](demo/280ar_pump.md)
+        * [Mega2560-夹爪搬运木块](demo/280ar_mega2560_gripper.md)
+        * [树莓派4B-Stag码视觉跟踪](demo/280ar_raspi4B_camera_flange.md)
+        * [Jetson Xavier NX-物品分类案例](demo/280ar_jetsonxavier_pump.md)
     * [8. 配套资源](3-FunctionsAndApplications/8.SupportingResources/README.md)
         * [8.1 产品资料](3-FunctionsAndApplications/8.SupportingResources/8.1-ProductInformation/README.md)
         * [8.2 产品图纸](3-FunctionsAndApplications/8.SupportingResources/8.2-ProductDrawings/README.md)
