@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+  <rect x="0" y="0" width="880" height="430" fill="#ffffff"/>
+
+  <!-- ============ PC ============ -->
+  <rect x="50" y="80" width="190" height="122" rx="7" fill="#ffffff" stroke="#5b6b7c" stroke-width="2.2"/>
+  <rect x="64" y="94" width="162" height="94" rx="4" fill="#eaf1f8" stroke="#5b6b7c" stroke-width="1.8"/>
+  <circle cx="145" cy="141" r="5" fill="#1f5fa8"/>
+  <path d="M40 202 h210 l-16 22 H56 Z" fill="#ffffff" stroke="#5b6b7c" stroke-width="2.2" stroke-linejoin="round"/>
+  <text x="145" y="262" text-anchor="middle" font-size="19" font-weight="700" fill="#1f5fa8">PC</text>
+
+  <!-- PC -> R4 -->
+  <path d="M262 175 C 300 175, 305 200, 344 200" fill="none" stroke="#5b6b7c" stroke-width="2.4"/>
+  <text x="303" y="165" text-anchor="middle" font-size="13" fill="#333333">USB-C</text>
+
+  <!-- ============ UNO R4 ============ -->
+  <rect x="344" y="164" width="128" height="76" rx="6" fill="#ffffff" stroke="#5b6b7c" stroke-width="2.2"/>
+  <rect x="354" y="174" width="108" height="10" rx="2" fill="#dfe7ef" stroke="#5b6b7c" stroke-width="1.2"/>
+  <rect x="354" y="220" width="108" height="10" rx="2" fill="#dfe7ef" stroke="#5b6b7c" stroke-width="1.2"/>
+  <circle cx="408" cy="202" r="5" fill="#1f5fa8"/>
+  <text x="408" y="272" text-anchor="middle" font-size="19" font-weight="700" fill="#1f5fa8">UNO R4</text>
+
+  <!-- R4 -> base, three signal lines -->
+  <path d="M472 186 H 566" fill="none" stroke="#5b6b7c" stroke-width="2.4"/>
+  <path d="M472 202 H 566" fill="none" stroke="#5b6b7c" stroke-width="2.4"/>
+  <path d="M472 218 H 566" fill="none" stroke="#5b6b7c" stroke-width="2.4"/>
+  <text x="519" y="176" text-anchor="middle" font-size="13" fill="#333333">TX · RX · GND</text>
+
+  <!-- ============ arm ============ -->
+  <!-- upper arm / forearm, drawn as open strokes -->
+  <path d="M628 250 v-46 a24 24 0 0 1 24-24 h26 a24 24 0 0 1 24 24 v20"
+        fill="none" stroke="#5b6b7c" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M702 224 a26 26 0 0 0 24-26 v-44 a22 22 0 0 0 -22-22 h-22"
+        fill="none" stroke="#5b6b7c" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M628 250 v-46 a24 24 0 0 1 24-24 h26 a24 24 0 0 1 24 24 v20"
+        fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M702 224 a26 26 0 0 0 24-26 v-44 a22 22 0 0 0 -22-22 h-22"
+        fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- base -->
+  <path d="M566 250 h140 v54 a10 10 0 0 1 -10 10 H576 a10 10 0 0 1 -10 -10 Z"
+        fill="#ffffff" stroke="#5b6b7c" stroke-width="2.2" stroke-linejoin="round"/>
+  <rect x="578" y="262" width="116" height="9" rx="2" fill="#dfe7ef" stroke="#5b6b7c" stroke-width="1.2"/>
+  <rect x="578" y="278" width="116" height="9" rx="2" fill="#dfe7ef" stroke="#5b6b7c" stroke-width="1.2"/>
+
+  <!-- atom head -->
+  <rect x="662" y="88" width="42" height="42" rx="9" fill="#ffffff" stroke="#5b6b7c" stroke-width="2.2"/>
+  <rect x="672" y="98" width="22" height="22" rx="3" fill="#eaf1f8" stroke="#5b6b7c" stroke-width="1.8"/>
+
+  <text x="636" y="346" text-anchor="middle" font-size="19" font-weight="700" fill="#1f5fa8">myCobot 280</text>
+
+  <!-- ATOM callout -->
+  <path d="M710 104 H 772" fill="none" stroke="#5b6b7c" stroke-width="1.6" stroke-dasharray="5 4"/>
+  <text x="782" y="109" font-size="17" font-weight="700" fill="#1f5fa8">ATOM</text>
+
+  <!-- ============ legend ============ -->
+  <line x1="50" y1="374" x2="830" y2="374" stroke="#c9d3dd" stroke-width="1.4"/>
+  <text x="50"  y="398" font-size="13" font-weight="600" fill="#333333">PC</text>
+  <text x="50"  y="417" font-size="13" fill="#333333">Arduino IDE + MyCobotBasic library</text>
+  <text x="344" y="398" font-size="13" font-weight="600" fill="#333333">UNO R4</text>
+  <text x="344" y="417" font-size="13" fill="#333333">AnglesControl · CoordsControl · Transponder</text>
+  <text x="662" y="398" font-size="13" font-weight="600" fill="#333333">ATOM</text>
+  <text x="662" y="417" font-size="13" fill="#333333">atomMain firmware</text>
+</svg>
