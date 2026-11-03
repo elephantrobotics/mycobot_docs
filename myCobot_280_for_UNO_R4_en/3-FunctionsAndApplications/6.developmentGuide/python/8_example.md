@@ -64,14 +64,6 @@ from pymycobot import MyCobot280
 mc = MyCobot280("COM3", 115200) # The baud rate is 115200 by default, and some boards are 1000000, please modify it according to the actual situation
 time.sleep(2)
 
-# Check if the robot can be programmed
-
-if mc.is_controller_connected() != 1:
-
-print("Please connect the robot correctly to write the program")
-
-exit(0)
-
 # Fine-tune the robot to ensure that all the ports are aligned
 
 # The alignment of the robot port is the standard. This is just an example
@@ -217,7 +209,7 @@ while num > 0:
     num -= 1
 # Retract the robot arm. You can swing the robot arm manually, and then use the get_angles() function to get the coordinate sequence.
 # Use this function to make the robot arm reach the position you want.
-mc.send_angles([88.68, -138.51, 155.65, -128.05, -9.93, -15.29], 50)
+mc.send_angles([88.68, -138.51, 145.65, -128.05, -9.93, -15.29], 50)
 
 # Set the waiting time to ensure that the robot arm has reached the specified position
 time.sleep(2.5)
@@ -253,9 +245,9 @@ if __name__ == '__main__':
 # Set the start time
 start = time.time()
 # Let the robot reach the specified position
-mc.send_angles([-1.49, 115, -153.45, 30, -33.42, 137.9], 80)
+mc.send_angles([-1.49, 115, -143.45, 30, -33.42, 137.9], 80)
 # Determine whether it has reached the specified position
-while not mc.is_in_position([-1.49, 115, -153.45, 30, -33.42, 137.9], 0):
+while not mc.is_in_position([-1.49, 115, -143.45, 30, -33.42, 137.9], 0):
     # Let the robot resume movement
     mc.resume()
     # Let the robot move for 0.5s
@@ -270,12 +262,12 @@ start = time.time()
 # Let the movement last for 30 seconds
 while time.time() - start < 30:
     # Let the robot reach this position quickly
-    mc.send_angles([-1.49, 115, -153.45, 30, -33.42, 137.9], 80)
+    mc.send_angles([-1.49, 115, -143.45, 30, -33.42, 137.9], 80)
     # Set the color of the light to [0,0,50]
     mc.set_color(0, 0, 50)
     time.sleep(0.7)
     # Let the robot reach this position quickly
-    mc.send_angles([-1.49, 55, -153.45, 80, 33.42, 137.9], 80)
+    mc.send_angles([-1.49, 55, -143.45, 80, 33.42, 137.9], 80)
     # Set the color of the light to [0,50,0]
     mc.set_color(0, 50, 0) 
     time.sleep(0.7)

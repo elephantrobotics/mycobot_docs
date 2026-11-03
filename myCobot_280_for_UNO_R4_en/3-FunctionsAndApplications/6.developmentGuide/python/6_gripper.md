@@ -71,7 +71,7 @@ Before using Python to control the gripper, you need to install and connect the 
 - **Return value**：
   - `1`: complete
 
-**`get_gripper_value(gripper_type=None)`**
+**`get_gripper_value(gripper_type=1)`**
 
 - **Function:** Get the current position data information of the gripper
 - **Parameter description:**

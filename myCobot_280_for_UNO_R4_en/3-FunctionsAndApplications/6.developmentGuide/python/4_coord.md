@@ -44,7 +44,7 @@ It is mainly used to realize intelligent route planning to let the robot arm mov
 - **Function:** Set the tool coordinate system.
 - **Parameter description:**
   - `coords`:
-    - Six axes: [x,y,z,rx,ry,rz] coordinate values, length 6, x,y,z range -280 ~ 280, rx,ry,yz range -314 ~ 314
+    - Six axes: [x,y,z,rx,ry,rz] coordinate values, length 6, x,y,z range -280 ~ 280, rx,ry,yz range -180 ~ 180
 - **Return value:** 1
 
 **get_tool_reference()**
@@ -62,7 +62,7 @@ It is mainly used to realize intelligent route planning to let the robot arm mov
 - **Function:** Set the world coordinate system.
 - **Parameter description:**
   - `coords`:
-    - Six axes: [x,y,z,rx,ry,rz] coordinate values, length is 6, x,y,z range is -280 ~ 280, rx,ry,yz range is -314 ~ 314
+    - Six axes: [x,y,z,rx,ry,rz] coordinate values, length is 6, x,y,z range is -280 ~ 280, rx,ry,yz range is -3.14 ~ 3.14
 - **Return value:** 1
 
 **set_reference_frame(rftype)**

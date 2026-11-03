@@ -1,6 +1,6 @@
 # Chapter 5 Basic Functions
 
-**This chapter mainly explains the basic functions and usage of the product and the use of basic software. This chapter is very important and should be read carefully in order. Before actually applying the robot, please make sure you understand the described operations correctly. **
+**This chapter mainly explains the basic functions and usage of the product and the use of basic software. This chapter is very important and should be read carefully in order. Before actually applying the robot, please make sure you understand the described operations correctly.**
 
 **The myCobot 280 for Arduino version is developed and used based on PC and development board. There is no built-in system inside the robot arm, so the robot arm, PC and development board need to be combined during use. So please prepare a PC and development board before use**
 

@@ -43,7 +43,8 @@ Then connect the positive pole of 24V to the COM terminal of the 5V relay, the n
 Robot Program
 ```python
 import time
-mc=MyCobot("COM6")
+from pymycobot import MyCobot280
+mc=MyCobot280("COM6")
 mc.set_basic_output(5,1)
 while 1:
 if mc.get_basic_input(2)==1:

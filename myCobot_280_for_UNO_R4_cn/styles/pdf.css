@@ -1,0 +1,7 @@
+/* Keep long source lines visible when GitBook renders PDF/ePub. */
+pre,
+pre code {
+  white-space: pre-wrap !important;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}

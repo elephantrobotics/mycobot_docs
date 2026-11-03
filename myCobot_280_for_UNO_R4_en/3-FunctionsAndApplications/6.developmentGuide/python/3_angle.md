@@ -65,18 +65,6 @@ For serial multi-joint robots, the control of joint space is to control the vari
   - `timeout`: The default time is 15s
 - **Return value:** 1
 
-**get_radians()**
-
-- **Function:** Get the radians of all joints
-- **Return value:** `list` contains a list of all joint radian values
-
-**send_radians(radians, speed)**
-
-- **Function:** Send radian values ​​to all joints of the robot arm
-- **Parameter description:**
-  - `radians`: `list` Indicates the radian value of the robot arm, the value range is -5~5
-- **Return value:** 1
-
 ### Example use
 
 ```python
@@ -132,7 +120,7 @@ while num > 0:
 
 # Retract the robot arm. You can swing the robot arm manually, and then use the get_angles() function to get the coordinate sequence.
 # Use this function to make the robot arm reach the position you want.
-mc.send_angles([88.68, -138.51, 155.65, -128.05, -9.93, -15.29], 50)
+mc.send_angles([88.68, -138.51, 145.65, -128.05, -9.93, -15.29], 50)
 
 # Set the waiting time to ensure that the robot arm has reached the specified position
 time.sleep(2.5)
