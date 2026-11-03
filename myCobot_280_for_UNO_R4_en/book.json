@@ -1,0 +1,10 @@
+{
+    "title": "myCobot 280 for Arduino UNO R4",
+    "description": "Driving a myCobot 280 from an Arduino UNO R4 in place of the M5Stack Basic",
+    "language": "en",
+    "structure": {
+        "readme": "README.md",
+        "summary": "SUMMARY.md"
+    },
+    "plugins": ["highlight", "search"]
+}
