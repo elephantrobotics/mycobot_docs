@@ -1,11 +1,11 @@
 # 产品图纸
-产品图纸部分提供了280 For Arduino机械臂的详细3D图和2D图。这些图纸对于需要进行定制化设计或进行维护的工程人员来说尤为重要，可以帮助他们更好地理解机械臂的构造。
+产品图纸部分提供了myCobot 280 UNO Q机械臂的详细3D图和2D图。这些图纸对于需要进行定制化设计或进行维护的工程人员来说尤为重要，可以帮助他们更好地理解机械臂的构造。
 
 ### 机器3D模型
 
 |       机器       |                          3D模型文件                          |
 | :--------------: | :----------------------------------------------------------: |
-| myCobot 280 Arduino | [下载](https://download.elephantrobotics.com/Product_3d_files/230918/myCobot_280_Arduino_230918.STEP) |
+| myCobot 280 UNO Q | [下载](https://download.elephantrobotics.com/Product_3d_files/230918/myCobot_280_Arduino_230918.STEP) |
 
 ### 机器2D图纸
 

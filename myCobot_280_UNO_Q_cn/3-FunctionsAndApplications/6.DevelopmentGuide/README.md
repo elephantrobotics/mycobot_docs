@@ -6,7 +6,7 @@ myCobot 280 UNO Q 版本以 **Arduino UNO Q** 作为控制器，与机械臂本�
 
 使用前请准备：
 
-- myCobot 280 for Arduino 及电源
+- myCobot 280 UNO Q 及电源
 - Arduino UNO Q，并按交付方式连接通信线（通常为 `5V` / `GND` / `TX` / `RX`）
 - 按所选方式准备 PC（USB-C 数据线）或显示器、键鼠、带外部供电的 USB Hub 等
 

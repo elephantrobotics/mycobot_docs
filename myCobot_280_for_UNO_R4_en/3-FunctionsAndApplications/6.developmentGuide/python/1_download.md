@@ -9,10 +9,10 @@ Before using pymycobot to control the robot arm, you need to build a Python envi
 **Applicable devices:**
 
 * myCobot 280:
-* myCobot 280 Arduino
+* myCobot 280 UNO R4
 * myCobot 280 PI
 * myCobot 280 Jetson Nano
-* myCobot 280 Arduino
+* myCobot 280 UNO R4
 
 Currently, there are two versions of Python, one is `2.x` version and the other is `3.x` version. These two versions are incompatible. As `3.x` version is becoming more and more popular, our tutorial will take the latest `3.10.7` version as an example.
 
@@ -177,7 +177,7 @@ python3 setup.py install
 
 ## Simple use of Python
 
-After the above preparations are completed, start to control the robot arm through Python code. Here, the MyCobot 280 Arduino version is used as an example for demonstration.
+After the above preparations are completed, start to control the robot arm through Python code. Here, the myCobot 280 UNO R4 version is used as an example for demonstration.
 
 First, open the PyCharm you installed, create a new Python file, enter the following code, and import our library:
 

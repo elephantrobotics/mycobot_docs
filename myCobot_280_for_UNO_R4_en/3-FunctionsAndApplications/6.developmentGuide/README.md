@@ -2,7 +2,7 @@
 
 ## 1 Usage Environment
 
-The myCobot 280 for Arduino version is developed and used based on PC and development board. There is no built-in system inside the robot arm, so the robot arm, PC and development board need to be combined during use. Please prepare a PC and development board before use. At the same time, the myCobot 280 for Arduino version does not have a built-in development environment, so you need to use a PC to install the development environment for the robot arm.
+The myCobot 280 UNO R4 version is developed and used based on PC and development board. There is no built-in system inside the robot arm, so the robot arm, PC and development board need to be combined during use. Please prepare a PC and development board before use. At the same time, the myCobot 280 UNO R4 version does not have a built-in development environment, so you need to use a PC to install the development environment for the robot arm.
 
 ## 2 Development Environment
 

@@ -1,5 +1,5 @@
 # Summary
-* [Introduction](README.md)
+* [介绍](README.md)
 * 产品信息
     * [1. 产品简介](1-ProductInformation/1.ProductIntroduction/1-ProductIntroduction.md)
     * [2. 产品参数](1-ProductInformation/2.ProductParameter/2-ProductParameters.md)
@@ -57,7 +57,7 @@
         * [6.6 基于串口通信协议开发使用](3-FunctionsAndApplications/6.developmentGuide/CommunicationProtocolPackage/18-communication.md)
     * [7. 成功案例](3-FunctionsAndApplications/7.SuccessfulCase/7-SuccessfulCases.md)
       * [机器人夹爪搬运木块案例](demo/280ar_gripper.md)
-      * [280Arduino 手柄遥控案例](demo/280AR_joy.md)
+      * [myCobot 280 UNO R4 手柄遥控案例](demo/280AR_joy.md)
       * [机器人吸泵搬运木块案例](demo/280ar_pump.md)
     * [8. 配套资源](3-FunctionsAndApplications/8.SupportingResources/README.md)
         * [8.1 产品资料](3-FunctionsAndApplications/8.SupportingResources/8.1-ProductInformation/README.md)

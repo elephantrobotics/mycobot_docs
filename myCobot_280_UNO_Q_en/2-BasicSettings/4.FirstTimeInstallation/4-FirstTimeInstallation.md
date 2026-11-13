@@ -1,7 +1,7 @@
 # Chapter 4 First Use
 ## 1. Product Standard List
 ## 1.1 Product List Image
-> Thank you for choosing the Elephant Robot myCobot 280 For Arduino Robotic Arm. This chapter is designed to help you easily get started with the Elephant Robotic product and enjoy every wonderful moment brought by the product.
+> Thank you for choosing the Elephant Robot myCobot 280 UNO Q Robotic Arm. This chapter is designed to help you easily get started with the Elephant Robotic product and enjoy every wonderful moment brought by the product.
 
 ![Unboxing Kit](../../resource/2-BasicSettings/4.FirstTimeInstallation/280PI.png)
 
@@ -9,7 +9,7 @@
 
 | Serial Number | Product |
 | :----: | :------------------------------------------- |
-| 1 | myCobot Robotic Arm (Model myCobot 280 For Arduino) |
+| 1 | myCobot Robotic Arm (Model myCobot 280 UNO Q) |
 | 2 | myCobot Robotic Arm-Product Brochure |
 | 3 | myCobot Robotic Arm-Matching Power Cord |
 | 4 | USB-Type C |
@@ -119,11 +119,11 @@ Figure 3-2 USB interface connection diagram
 
 <video id="my-video" class="video-js" controls preload="auto" width="100%"
 poster="" data-setup='{"aspectRatio":"16:9"}'>
-<source src="https://www.elephantrobotics.com/wp-content/uploads/2022/05/Arduino%E8%A7%86%E9%A2%91%E7%9A%84%E6%9B%B4%E6%8D%A2%E4%B8%AD.mp4#t=4"></video>
+<source src="@@KEEP15@@"></video>
 
 ## Hardware connection
 
-**Note:** The current 280AR serial port baud rate is changed to 1000000. The wiring of different development boards is different:
+**Note:** The current myCobot 280 UNO Q serial port baud rate is changed to 1000000. The wiring of different development boards is different:
 
 | Development board type | Baud rate | Control method | Wiring method | Wiring diagram |
 | :------: | :----------------------: | :----------------------: | :-----------------: | :---------: |

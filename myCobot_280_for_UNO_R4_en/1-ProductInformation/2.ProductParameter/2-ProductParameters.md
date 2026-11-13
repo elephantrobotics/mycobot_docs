@@ -11,7 +11,7 @@
 | Indicators | Parameters |
 | :------: | :----------------------: |
 | Name | Little Elephant Collaborative Robot Arm |
-| Model | myCobot 280 Arduino 2023 |
+| Model | myCobot 280 UNO R4 |
 | Degrees of Freedom | 6 |
 | Payload | 250g |
 | Working Radius | 280mm |

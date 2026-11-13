@@ -1,9 +1,9 @@
 # Promotional Materials
-The promotional materials section includes the product brochure, demonstration video and customer cases of the 280 For Arduino robotic arm. These materials not only demonstrate the core advantages and application scenarios of the robotic arm, but also provide successful cases in actual applications to help potential customers understand the value of the product more intuitively.
+The promotional materials section includes the product brochure, demonstration video and customer cases of the myCobot 280 UNO R4 robotic arm. These materials not only demonstrate the core advantages and application scenarios of the robotic arm, but also provide successful cases in actual applications to help potential customers understand the value of the product more intuitively.
 
 | Machine | Product Brochure |
 | :------------: | :----------------------------------------------------------: |
-| myCobot 280 AR | [Download](https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_software/myCobot/brochure/myCobot280AN-brochure-2023031.pdf) |
+| myCobot 280 UNO R4 | [Download](https://download-elephantrobotics.oss-cn-shenzhen.aliyuncs.com/Product_software/myCobot/brochure/myCobot280AN-brochure-2023031.pdf) |
 
 **Product unboxing video**
 [Product unboxing video](https://www.bilibili.com/video/BV1fb4y1C71s/?spm_id_from=333.999.0.0&vd_source=94a06b98b9af0077c365ec65d59de69f)

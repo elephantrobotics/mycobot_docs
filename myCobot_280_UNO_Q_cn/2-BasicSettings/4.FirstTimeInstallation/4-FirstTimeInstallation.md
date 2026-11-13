@@ -1,7 +1,7 @@
 # 第四章 首次使用
 ## 1.产品标准清单
 ## 1.1产品列表图片
-> 感谢您选择大象机器人myCobot 280 For Arduino机械臂，本章节内容旨在帮助您轻松上手大象机器人产品，享受产品带来的每一个精彩瞬间。
+> 感谢您选择大象机器人myCobot 280 UNO Q机械臂，本章节内容旨在帮助您轻松上手大象机器人产品，享受产品带来的每一个精彩瞬间。
 
 
 ![开箱套装](../../resource/2-BasicSettings/4.FirstTimeInstallation/280PI.png)
@@ -10,7 +10,7 @@
 
 | 序列号 | 产品                                         |
 | :----: | :------------------------------------------- |
-|   1    | myCobot机械臂（型号myCobot 280 For Arduino） |
+|   1    | myCobot机械臂（型号myCobot 280 UNO Q） |
 |   2    | myCobot机械臂-产品画册                       |
 |   3    | myCobot机械臂-配套电源线                     |
 |   4    | USB-Type C                                   |
@@ -113,17 +113,17 @@ myCobot **必须使用外部电源**进行供电，以提供足够的电量：
 
 <video id="my-video" class="video-js" controls preload="auto" width="100%"
 poster="" data-setup='{"aspectRatio":"16:9"}'>
-  <source src="https://www.elephantrobotics.com/wp-content/uploads/2022/05/Arduino%E8%A7%86%E9%A2%91%E7%9A%84%E6%9B%B4%E6%8D%A2%E4%B8%AD.mp4#t=4"></video>
+  <source src="@@KEEP15@@"></video>
 
 ## 硬件连接
 
-**注意：** 目前的280AR串口波特率改为1000000，不同开发板的接线不同：
+**注意：** 不同开发板的接线不同：
 
 |   开发板类型   |           波特率           |   控制方式   |  接线方式  |  接线图  |
 | :------: | :----------------------: | :----------------------: | :-----------------: | :---------: |
 |   mega2560   |      1000000      | python/MyBlockly |TX0-->RX、RX0-->TX、GND-->GND      | ![](../../resource/4-SupportAndService/9.Troubleshooting/9.images/arduino_4.jpg) |
 |   mega2560   |      1000000      | Arduino IDE |TX1-->RX、RX1-->TX、GND-->GND      |![](../../resource/4-SupportAndService/9.Troubleshooting/9.images/arduino_5.jpg)|
-|   UNO   |      1000000      | Arduino IDE |tx-->tx RX-->RX、GND-->GND      |![](../../resource/4-SupportAndService/9.Troubleshooting/9.images/arduino_6.jpg)|
+|   UNO   |      /      | Arduino IDE |tx-->tx RX-->RX、GND-->GND      |![](../../resource/4-SupportAndService/9.Troubleshooting/9.images/arduino_6.jpg)|
 | mkrwifi1010 |           1000000           | 暂无    |  暂无| 暂无|
 
 
@@ -165,26 +165,7 @@ from pymycobot import MyCobot280
 from pymycobot import PI_PORT, PI_BAUD  # 当使用树莓派版本的mycobot时，可以引用这两个变量进行MyCobot初始化，如不是可不填该行代码
 import time
 
-# 以上需写在代码开头，意为导入项目包
-
-# MyCobot 类初始化需要两个参数：串口和波特率
-#   第一个是串口字符串， 如：
-#       linux： "/dev/ttyUSB0"
-#       windows: "COM6"
-#   第二个是波特率：
-#       M5版本为： 115200
-#   以下为如:
-#       mycobot-M5:
-#           linux:
-#              mc = MyCobot280("/dev/ttyUSB0", 115200)
-#           windows:
-#              mc = MyCobot280("COM6", 115200)
-#       mycobot-raspi:
-#           mc = MyCobot280(PI_PORT, PI_BAUD)
-#
-# 初始化一个MyCobot对象
-# 下面为 windows版本创建对象代码
-mc = MyCobot280("COM6", 1000000)
+mc = MyCobot280(bridge=True)
 
 # 机械臂断电，放松关节
 time.sleep(2)

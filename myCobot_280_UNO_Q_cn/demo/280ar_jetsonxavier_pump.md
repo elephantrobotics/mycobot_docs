@@ -2,7 +2,7 @@
 
 ## 1 设备说明
 
-myCobot 280 Arduino + Jetson Xavier NX开发板 + myCobot 垂直吸泵2.0 + myCobot 摄像头模组
+myCobot 280 UNO Q + Jetson Xavier NX开发板 + myCobot 垂直吸泵2.0 + myCobot 摄像头模组
 
 ## 2 硬件安装
 

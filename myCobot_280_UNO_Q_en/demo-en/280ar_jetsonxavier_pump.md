@@ -2,7 +2,7 @@
 
 ## 1 Equipment Description
 
-myCobot 280 Arduino + Jetson Xavier NX Development Board + myCobot Vertical Suction Pump 2.0 + myCobot Camera Module
+myCobot 280 UNO Q + Jetson Xavier NX Development Board + myCobot Vertical Suction Pump 2.0 + myCobot Camera Module
 
 ## 2 Hardware Installation
 

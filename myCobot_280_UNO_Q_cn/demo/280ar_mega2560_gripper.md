@@ -2,7 +2,7 @@
 
 ## 1 设备说明
 
-myCobot 280 Arduino + MEGA 2560开发板 + myCobot 自适应夹爪
+myCobot 280 UNO Q + MEGA 2560开发板 + myCobot 自适应夹爪
 
 ## 2 功能说明
 
@@ -35,7 +35,7 @@ for i in range(2):
 
 ## 5 原理说明
 
-使用MEGA 2560开发板控制一个 MyCobot 280 Arduino 机械臂，配合夹爪（Gripper）完成如下操作流程：
+使用MEGA 2560开发板控制一个 myCobot 280 UNO Q 机械臂，配合夹爪（Gripper）完成如下操作流程：
 
 1. **初始化和回零：**
 

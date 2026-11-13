@@ -15,7 +15,7 @@ MyCobotBasic库是我们公司开发的一款开源机器人控制库，需要�
 
 - myCobot 280
   - myCobot 280 M5
-  - **myCobot 280 for Arduino** <br>
+  - **myCobot 280 UNO R4** <br>
 
 ## Arduino开发使用引导
 
@@ -25,7 +25,7 @@ MyCobotBasic库是我们公司开发的一款开源机器人控制库，需要�
 2.[API说明](10.3-api.md)
 
 ## Arduino开发板连接指引
-myCobot 280 for Arduino版本是基于PC和开发板进行开发和使用的，**机械臂内部无任何内置系统**，所以在使用过程中是需要机械臂、PC以及开发板相结合，所以在使用之前请准备好一台PC电脑以及开发板。**开发前请先连接好PC和开发板**。
+myCobot 280 UNO R4版本是基于PC和开发板进行开发和使用的，**机械臂内部无任何内置系统**，所以在使用过程中是需要机械臂、PC以及开发板相结合，所以在使用之前请准备好一台PC电脑以及开发板。**开发前请先连接好PC和开发板**。
 
 关于设备上电、接线及端口检查，请参阅
 [4. 首次使用 — 硬件连接](../../../2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.md)。

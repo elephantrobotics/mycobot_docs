@@ -1,11 +1,11 @@
 # Product Drawings
-The product drawings section provides detailed 3D and 2D drawings of the 280 For Arduino robotic arm. These drawings are particularly important for engineers who need to make customized designs or perform maintenance, and can help them better understand the structure of the robotic arm.
+The product drawings section provides detailed 3D and 2D drawings of the myCobot 280 UNO Q robotic arm. These drawings are particularly important for engineers who need to make customized designs or perform maintenance, and can help them better understand the structure of the robotic arm.
 
 ### Machine 3D Model
 
 | Machine | 3D Model File |
 | :--------------: | :----------------------------------------------------------: |
-| myCobot 280 Arduino | [Download](https://download.elephantrobotics.com/Product_3d_files/230918/myCobot_280_Arduino_230918.STEP) |
+| myCobot 280 UNO Q | [Download](https://download.elephantrobotics.com/Product_3d_files/230918/myCobot_280_Arduino_230918.STEP) |
 
 ### Machine 2D Drawings
 
