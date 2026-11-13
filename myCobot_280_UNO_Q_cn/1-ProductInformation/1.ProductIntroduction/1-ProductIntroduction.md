@@ -3,7 +3,7 @@
 
 ##### myCobot 280 UNO Q
 
-![封面](../../resource/1-ProductInformation/1.ProductIntroduction/280arduino.png)
+![封面](../../resource/1-ProductInformation/1.ProductIntroduction/pic2.png)
 ##### 算法验证实践教学
 
 ### 产品简介
@@ -13,7 +13,7 @@ myCobot 280 UNO Q 机械臂基于 mycobot 280 协作机械臂系列开发使用 
 myCobot 自重**860g**，有效载荷**250g**，有效工作半径**280mm**；体积小巧但功能强大，可搭配多种末端执行器适配多种应用场景，支持多平台软件的二次开发，满足**科研教育、智能家居，商业探索**等各种场景需求
 
 ### 设计理念
-![理念](../../resource/1-ProductInformation/1.ProductIntroduction/280-ad-2023-cn_.jpg)
+![理念](../../resource/1-ProductInformation/1.ProductIntroduction/280UNOQ.png)
 myCobot 280 UNO Q 采用 ATOM Matrix ESP32 Development Kit 核心开发板作为主控。搭载大象机器人自主研发的机器人运动控制操作系统固件，内置运动学正逆解。支持搭配多种Arduino开发版，进行扩展应用开发。使用Arduino开发板搭配多种Arduino官方支持的传感器，可以快速构建机械臂 机器视觉与机器人应用、控制逻辑开发、机器人融合开发、ROS仿真实验课堂的首选助手，帮助您快速开始六轴机械臂学习与应用。
 
 ### 设计目标
@@ -27,7 +27,8 @@ myCobot 280 UNO Q 采用 ATOM Matrix ESP32 Development Kit 核心开发板作为
 
 ### 产品特点
 
-![特点](../../resource/1-ProductInformation/1.ProductIntroduction/pic5-2.jpg)
+![特点](../../resource/1-ProductInformation/1.ProductIntroduction/pic5-2.png
+)
 
 |                                    |                                                              |
 | ---------------------------------- | ------------------------------------------------------------ |
@@ -69,7 +70,7 @@ myCobot 280 UNO Q 采用 ATOM Matrix ESP32 Development Kit 核心开发板作为
 
 mycobot 系列机械臂在教育和科研领域中极具价值，特别是在 Python 和 ROS（Robot Operating System)这两个广泛使用的开发环境中。这些环境提供了强大的支持，使得 mycobot  系列产品能够广泛应用于机器学习、人工智能研究、复杂运动控制以及视觉处理任务中。同时搭配自适应夹爪、摄像头法兰、吸泵等数十种配件，可以尽情发挥myCobot的创意想法。移动底盘+机械手臂 搭配开发，低成本开始机器人协作、SLAM建图、自主导航、ROS开发环境、六轴协作机器人控制、视觉识别、设备间通信等多种开发内容。
 
-![拓展开发2](../../resource/1-ProductInformation/1.ProductIntroduction/agv.jpg)
+![拓展开发2](../../resource/1-ProductInformation/1.ProductIntroduction/agv.png)
 
 |  |  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |

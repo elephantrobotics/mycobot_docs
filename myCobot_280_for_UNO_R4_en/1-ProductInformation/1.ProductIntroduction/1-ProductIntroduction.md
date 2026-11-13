@@ -3,7 +3,7 @@
 
 ##### myCobot 280 UNO R4
 
-![Cover](../../resource/1-ProductInformation/1.ProductIntroduction/280arduino.png)
+![Cover](../../resource/1-ProductInformation/1.ProductIntroduction/pic2.png)
 ##### Algorithm Verification Practice Teaching
 
 ### Product Introduction
@@ -13,7 +13,7 @@ The myCobot 280 UNO R4 robot arm is based on the mycobot 280 collaborative robot
 myCobot weighs **860g**, has a payload of **250g**, and an effective working radius of **280mm**; it is small in size but powerful in function. It can be matched with a variety of end effectors to adapt to a variety of application scenarios, supports secondary development of multi-platform software, and meets the needs of **scientific research and education, smart home, commercial exploration** and other scenarios
 
 ### Design concept
-![Concept](../../resource/1-ProductInformation/1.ProductIntroduction/280main.jpg)
+![Concept](../../resource/1-ProductInformation/1.ProductIntroduction/280UNOR4.png)
 myCobot 280 UNO R4 uses ATOM Matrix ESP32 Development Kit core development board as the main control. It is equipped with the robot motion control operating system firmware independently developed by Elephant Robotics, with built-in kinematic forward and inverse solutions. It supports matching with a variety of Arduino development boards for extended application development. Using the Arduino development board with a variety of sensors officially supported by Arduino, you can quickly build a robotic arm. It is the preferred assistant for machine vision and robot applications, control logic development, robot fusion development, and ROS simulation experiment classrooms, helping you quickly start learning and applying six-axis robotic arms.
 
 ### Design Goal
@@ -27,7 +27,7 @@ myCobot 280 UNO R4 uses ATOM Matrix ESP32 Development Kit core development board
 
 ### Product Features
 
-![Features](../../resource/1-ProductInformation/1.ProductIntroduction/pic-1-5.jpg)
+![Features](../../resource/1-ProductInformation/1.ProductIntroduction/config.png)
 
 | | |
 | ---------------------------------- | ------------------------------------------------------------ |
@@ -51,7 +51,7 @@ myCobot 280 UNO R4 uses ATOM Matrix ESP32 Development Kit core development board
 | **Geek development enthusiasts** | myCobot 280 UNO R4 is based on the Arduino ecosystem and supports a large number of development boards and expansion components, which can greatly meet the development needs of geek enthusiasts. |
 
 ### Application scenarios
-![Application scenarios](../../resource/1-ProductInformation/1.ProductIntroduction/webpic.jpg)
+![Application scenarios](../../resource/1-ProductInformation/1.ProductIntroduction/kit.png)
 
 | **User groups** | **Application scenarios** | **Advantage targets** |
 | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
