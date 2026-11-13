@@ -1,7 +1,7 @@
 # 第四章 首次使用
 ## 1.产品标准清单
 ## 1.1产品列表图片
-> 感谢您选择大象机器人myCobot 280 For UNO R4机械臂，本章节内容旨在帮助您轻松上手大象机器人产品，享受产品带来的每一个精彩瞬间。
+> 感谢您选择大象机器人myCobot 280 UNO R4机械臂，本章节内容旨在帮助您轻松上手大象机器人产品，享受产品带来的每一个精彩瞬间。
 
 
 ![开箱套装](../../resource/2-BasicSettings/4.FirstTimeInstallation/280PI.png)
@@ -10,7 +10,7 @@
 
 | 序列号 | 产品                                         |
 | :----: | :------------------------------------------- |
-|   1    | myCobot机械臂（型号myCobot 280 For UNO R4） |
+|   1    | myCobot机械臂（型号myCobot 280 UNO R4） |
 |   2    | myCobot机械臂-产品画册                       |
 |   3    | myCobot机械臂-配套电源线                     |
 |   4    | USB-Type C                                   |
@@ -113,11 +113,11 @@ myCobot **必须使用外部电源**进行供电，以提供足够的电量：
 
 <video id="my-video" class="video-js" controls preload="auto" width="100%"
 poster="" data-setup='{"aspectRatio":"16:9"}'>
-  <source src="https://www.elephantrobotics.com/wp-content/uploads/2022/05/Arduino%E8%A7%86%E9%A2%91%E7%9A%84%E6%9B%B4%E6%8D%A2%E4%B8%AD.mp4#t=4"></video>
+  <source src="@@KEEP15@@"></video>
 
 ## 硬件连接
 
-**注意：** 目前的280AR串口波特率改为1000000，不同开发板的接线不同：
+**注意：** 目前的myCobot 280 UNO R4串口波特率改为1000000，不同开发板的接线不同：
 
 |   开发板类型   |           波特率           |   控制方式   |  接线方式  |  接线图  |
 | :------: | :----------------------: | :----------------------: | :-----------------: | :---------: |

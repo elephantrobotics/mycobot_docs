@@ -17,8 +17,8 @@
   - myCobot 280 M5
   - myCobot 280 PI
   - myCobot 280 Jetson Nano
-  - myCobot 280 for Arduino
-  - **myCobot 280 for UNO R4**
+  - myCobot 280 UNO R4
+  - **myCobot 280 UNO R4**
 - myCobot 320
   - myCobot 320 M5
   - myCobot 320 PI

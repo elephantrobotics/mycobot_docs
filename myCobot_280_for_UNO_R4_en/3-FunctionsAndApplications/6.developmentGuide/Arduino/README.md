@@ -15,7 +15,7 @@ MyCobotBasic library is an open source robot control library developed by our co
 
 - myCobot 280
 - myCobot 280 M5
-- myCobot 280 for Arduino <br>
+- myCobot 280 UNO R4 <br>
 
 ## Arduino development guide
 
@@ -25,7 +25,7 @@ You can use it according to the following instructions Arduino develops our robo
 
 ## Arduino development board connection guide
 
-The myCobot 280 for Arduino version is developed and used based on PC and development board. **There is no built-in system inside the robot**, so the robot, PC and development board need to be combined during use, so please prepare a PC and development board before use. **Please connect the PC and development board before development**.
+The myCobot 280 UNO R4 version is developed and used based on PC and development board. **There is no built-in system inside the robot**, so the robot, PC and development board need to be combined during use, so please prepare a PC and development board before use. **Please connect the PC and development board before development**.
 
 For powering on, wiring and checking the port, see
 [4. First Use — Hardware connection](../../../2-BasicSettings/4.FirstTimeInstallation/4-FirstTimeInstallation.md).
