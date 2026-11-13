@@ -2,7 +2,7 @@
 
 ## 1 Equipment description
 
-myCobot 280 Arduino + MEGA 2560 development board + myCobot adaptive gripper
+myCobot 280 UNO Q + MEGA 2560 development board + myCobot adaptive gripper
 
 ## 2 Functional description
 
@@ -35,7 +35,7 @@ time.sleep(2)
 
 ## 5 Principle description
 
-Use MEGA 2560 development board to control a MyCobot 280 Arduino robot arm, and complete the following operation process with the gripper:
+Use MEGA 2560 development board to control a myCobot 280 UNO Q robot arm, and complete the following operation process with the gripper:
 
 1. **Initialization and return to zero:**
 

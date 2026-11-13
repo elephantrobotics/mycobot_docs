@@ -1,4 +1,4 @@
-# myCobot 280 UNO Q(2023)
+# myCobot 280 UNO Q
 算法验证实践教学
 
 核心文档
@@ -70,7 +70,7 @@
 
     * [7. 成功案例](3-FunctionsAndApplications/7.SuccessfulCase/7-SuccessfulCases.md)
         * [机器人夹爪搬运木块案例](demo/280ar_gripper.md)
-        * [280Arduino 手柄遥控案例](demo/280AR_joy.md)
+        * [myCobot 280 UNO Q 手柄遥控案例](demo/280AR_joy.md)
         * [机器人吸泵搬运木块案例](demo/280ar_pump.md)
         * [Mega2560-夹爪搬运木块](demo/280ar_mega2560_gripper.md)
         * [树莓派4B-Stag码视觉跟踪](demo/280ar_raspi4B_camera_flange.md)

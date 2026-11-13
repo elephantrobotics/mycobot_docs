@@ -34,7 +34,7 @@
        * [6.2.2 Joystick Control](3-FunctionsAndApplications/6.DevelopmentGuide/6.2-applab/6.2.2-Joystick.md)
    * [7. Successful Cases](3-FunctionsAndApplications/7.SuccessfulCase/7-SuccessfulCases.md)
      * [Robot gripper carrying wooden block example](demo-en/280ar_gripper.md)
-     * [280Arduino handle remote control box](demo-en/280AR_joy_EN.md)
+     * [myCobot 280 UNO Q handle remote control box](demo-en/280AR_joy_EN.md)
      * [Robot suction pump to carry wooden blocks](demo-en/280ar_pump.md)
      * [Mega2560-gripper to carry wood blocks](demo-en/280ar_mega2560_gripper.md)
      * [Raspberry Pi 4B-Stag code visual tracking](demo-en/280ar_raspi4B_camera_flange.md)

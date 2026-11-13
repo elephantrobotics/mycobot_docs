@@ -28,7 +28,7 @@
 - myCobot 280 M5
 - myCobot 280 PI
 - myCobot 280 Jetson Nano
-- **myCobot 280 for Arduino**
+- **myCobot 280 UNO Q**
 
 ## 5 Firmware version recommendation
 

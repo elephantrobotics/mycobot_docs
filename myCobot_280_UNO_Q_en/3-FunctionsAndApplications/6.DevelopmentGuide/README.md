@@ -6,7 +6,7 @@ The myCobot 280 UNO Q edition uses an **Arduino UNO Q** as the controller togeth
 
 Before you start, prepare:
 
-- myCobot 280 for Arduino and its power supply
+- myCobot 280 UNO Q and its power supply
 - Arduino UNO Q, wired for communication as delivered (typically `5V` / `GND` / `TX` / `RX`)
 - A PC with a USB-C data cable, or a monitor, keyboard, mouse, and an externally powered USB hub, depending on the mode you use
 

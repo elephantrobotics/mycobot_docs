@@ -1,4 +1,4 @@
-# 280AR remote control case
+# myCobot 280 UNO Q remote control case
 
 **Function description**: Use the game controller to control the robot to move coordinates and open and close the gripper
 

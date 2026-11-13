@@ -2,7 +2,7 @@
 
 ## 1 设备环境说明
 
-myCobot 280 Arduino + 树莓派4B开发板 + myCobot 摄像头模组 + ROS Noetic
+myCobot 280 UNO Q + 树莓派4B开发板 + myCobot 摄像头模组 + ROS Noetic
 
 ## 2 硬件安装
 

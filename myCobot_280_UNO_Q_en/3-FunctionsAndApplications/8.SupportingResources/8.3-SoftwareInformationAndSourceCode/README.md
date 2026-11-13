@@ -1,5 +1,5 @@
 # Software information and source code
-The software information and source code section includes the software installation package that is compatible with the 280 For Arduino robotic arm. Users can use these materials to install, upgrade and perform secondary development of the software to enhance the functions and application scenarios of the robotic arm
+The software information and source code section includes the software installation package that is compatible with the myCobot 280 UNO Q robotic arm. Users can use these materials to install, upgrade and perform secondary development of the software to enhance the functions and application scenarios of the robotic arm
 
 You can download all relevant product information through the following link: [Software Information Download](https://www.elephantrobotics.com/support/)
 

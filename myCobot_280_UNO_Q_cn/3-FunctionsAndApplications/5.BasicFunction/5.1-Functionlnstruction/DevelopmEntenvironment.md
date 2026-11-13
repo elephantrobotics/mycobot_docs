@@ -65,7 +65,7 @@
 **注意：** 请下载最新的库，第一版为v0.0.1。
 
   * 点击下载相关依赖库
-    - [**MycobotBasic**](https://github.com/elephantrobotics/MyCobotBasic/tags)(Mycobot280-Arduino机型导入后可以参考**Arduino简单使用**章节进行使用)。具体请看下图，.zip适用于Windows系统，.tar.gz适用于Linux系统：<br>
+    - [**MycobotBasic**](https://github.com/elephantrobotics/MyCobotBasic/tags)(myCobot 280 UNO Q机型导入后可以参考**Arduino简单使用**章节进行使用)。具体请看下图，.zip适用于Windows系统，.tar.gz适用于Linux系统：<br>
 
 <img src="../../../resource/3-FunctionsAndApplications/5.BasicFunction/5.1-Functionlnstruction/10-1-4.2-001.png" alt="10-1-4-001" width="50%"><br>
 

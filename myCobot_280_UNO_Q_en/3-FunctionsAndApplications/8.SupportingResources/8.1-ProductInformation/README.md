@@ -1,5 +1,5 @@
 # Product Information Download
-The product information includes detailed specifications, technical parameters and instructions for use of the 280 For Arduino robotic arm. This section is designed to help users fully understand the performance and functions of the robotic arm and ensure the best experience during use
+The product information includes detailed specifications, technical parameters and instructions for use of the myCobot 280 UNO Q robotic arm. This section is designed to help users fully understand the performance and functions of the robotic arm and ensure the best experience during use
 
 ---
 
